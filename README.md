@@ -1,3 +1,1 @@
-# Sam Liu
-
-https://ontouchstart.github.io
+# I am working on private business projects.
