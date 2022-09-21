@@ -1,6 +1,9 @@
 name: make
 
 on: push
+  paths-ignore:
+    - 'ontouchstart.github.io'
+    - '.github'
 
 jobs:
   make:
