@@ -7,3 +7,16 @@ env:
 	env | grep TOKEN | cut -f1 -d= | cat -n
 
 
+up: 	busybox-httpd-docker
+	docker run --rm -p 8080:80 -d -v `pwd`/ontouchstart.github.io:/var/www/html --name basic-http-server -it basic-http-server
+
+down:
+	docker rm -f basic-http-server
+
+busybox-httpd-docker:
+	git clone https://github.com/stephenc/busybox-httpd-docker.git
+	cd  busybox-httpd-docker && make image
+
+clean:
+	-docker rmi -f basic-http-server
+	rm -rf busybox-httpd-docker
