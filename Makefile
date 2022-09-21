@@ -12,16 +12,12 @@ env:
 test:
 	make -C httpd test
 
-up: 	busybox-httpd-docker
-	docker run --rm -p 8080:80 -d -v `pwd`/ontouchstart.github.io:/var/www/html --name basic-http-server -it basic-http-server
+up: 	
+	make -C httpd image	
+	docker run --rm -p 8080:80 -d -v `pwd`/ontouchstart.github.io:/var/www/html --name httpd -it httpd
 
 down:
-	docker rm -f basic-http-server
-
-busybox-httpd-docker:
-	git clone https://github.com/stephenc/busybox-httpd-docker.git
-	cd  busybox-httpd-docker && make image
+	docker rm -f httpd
 
 clean:
-	-docker rmi -f basic-http-server
-	rm -rf busybox-httpd-docker
+	make -C httpd clean
