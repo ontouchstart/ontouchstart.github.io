@@ -4,7 +4,7 @@ on:
   push:
     paths-ignore:
       - 'ontouchstart.github.io'
-      - '.github'
+      - '.github/workflows/*'
 
 jobs:
   make:
