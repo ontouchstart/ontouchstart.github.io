@@ -11,6 +11,10 @@ env:
 
 test:
 	make -C httpd test
+	make up
+	curl -i http://localhost:8080
+	make down
+
 
 up: 	
 	make -C httpd image	
