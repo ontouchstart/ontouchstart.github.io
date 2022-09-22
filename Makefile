@@ -11,6 +11,7 @@ env:
 
 test:
 	make -C httpd test
+	make -C mvp/hello-react test
 	make up
 	curl -i http://localhost:8080
 	make down
