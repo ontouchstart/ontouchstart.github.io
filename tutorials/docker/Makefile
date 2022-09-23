@@ -21,8 +21,8 @@ down:
 	docker rm -f docker-tutorial
 
 getting-started:
-	docker inspect alpine/git
 	docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+	docker inspect alpine/git
 	docker inspect repo
 	docker cp repo:/git/getting-started .
 	docker rm -f repo
