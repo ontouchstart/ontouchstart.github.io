@@ -24,6 +24,8 @@ jobs:
         run: make env | tee ontouchstart.github.io/env.log
       - name: tutorials/docker
         run: make -C tutorials/docker 
+      - name: devconainers
+        run: make -C devcontainers
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
