@@ -22,10 +22,8 @@ jobs:
         uses: actions/checkout@v3
       - name: make env
         run: make env | tee ontouchstart.github.io/env.log
-      - name: tutorials/docker
-        run: make -C tutorials/docker 
-      - name: devconainers
-        run: make -C devcontainers
+      - name: test
+        run: make test | tee ontouchstart.github.io/test.log
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact

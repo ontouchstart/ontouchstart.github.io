@@ -9,3 +9,6 @@ all:	vscode-remote-try-rust
 
 vscode-remote-try-rust:
 	git clone https://github.com/microsoft/vscode-remote-try-rust
+
+clean: 
+	rm -rf vscode-remote-try-rust

@@ -7,6 +7,7 @@ test:
 	make up
 	curl -i http://localhost:8080
 	make down
+	make -C devcontainers
 
 up: 	
 	make -C httpd image	
