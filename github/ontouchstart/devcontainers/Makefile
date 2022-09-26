@@ -1,8 +1,12 @@
 test:	test-images test-containers test-devcontainers-cli
 
-test-containers: devcontainers-cli test-dotnet test-typescript-node 
+test-containers: devcontainers-cli devcontainers-images 
+	make test-dotnet 
+	make test-go 
+	make test-typescript-node 
 
-test-images: devcontainers-cli
+
+test-images: devcontainers-cli devcontainers-images
 	./devcontainers-cli/devcontainer.js read-configuration --workspace-folder devcontainers-images/src/dotnet| jq .
 	./devcontainers-cli/devcontainer.js read-configuration --workspace-folder devcontainers-images/src/go| jq .
 	./devcontainers-cli/devcontainer.js read-configuration --workspace-folder devcontainers-images/src/rust| jq .
