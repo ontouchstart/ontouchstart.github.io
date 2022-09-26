@@ -2,7 +2,7 @@ env:
 	make -C environment
 
 test:
-	make -C github/ontouchstart test
+	make -C github test
 
 up: 	
 	make -C httpd image	
