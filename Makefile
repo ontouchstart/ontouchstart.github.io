@@ -2,12 +2,7 @@ env:
 	make -C environment
 
 test:
-	make -C httpd test
-	make -C mvp/hello-react test
-	make up
-	curl -i http://localhost:8080
-	make down
-	make -C devcontainers
+	make -C github/ontouchstart test
 
 up: 	
 	make -C httpd image	
