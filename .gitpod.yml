@@ -4,5 +4,5 @@
 
 tasks:
   - init: make
-    command: make -C devcontainers
+    command: make up
 
