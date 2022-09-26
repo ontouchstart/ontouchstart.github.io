@@ -1,27 +1,30 @@
-DEVCONTAINER=./devcontainers-cli/devcontainer.js --workspace-folder devcontainers-images/src
-test:	test-devcontainers-images
+test:	test-images test-containers test-devcontainers-cli
 
-test-devcontainers-images: test-devcontainers-images-configuration
+test-containers: devcontainers-cli test-dotnet test-typescript-node 
 
-test-devcontainers-images-configuration: devcontainers-cli devcontainers-images
-	$(DEVCONTAINER)/anaconda read-configuration | jq .
-	$(DEVCONTAINER)/base-alpine read-configuration | jq .
-	$(DEVCONTAINER)/base-debian read-configuration | jq .
-	$(DEVCONTAINER)/base-ubuntu read-configuration | jq .
-	$(DEVCONTAINER)/cpp read-configuration | jq .
-	$(DEVCONTAINER)/dotnet read-configuration | jq .
-	$(DEVCONTAINER)/go read-configuration | jq .
-	$(DEVCONTAINER)/java read-configuration | jq .
-	$(DEVCONTAINER)/java-8 read-configuration | jq .
-	$(DEVCONTAINER)/javascript-node read-configuration | jq .
-	$(DEVCONTAINER)/jekyll read-configuration | jq .
-	$(DEVCONTAINER)/miniconda read-configuration | jq .
-	$(DEVCONTAINER)/php read-configuration | jq .
-	$(DEVCONTAINER)/python read-configuration | jq .
-	$(DEVCONTAINER)/ruby read-configuration | jq .
-	$(DEVCONTAINER)/rust read-configuration | jq .
-	$(DEVCONTAINER)/typescript-node read-configuration | jq .
-	$(DEVCONTAINER)/universal read-configuration | jq .
+test-images: devcontainers-cli
+	./devcontainers-cli/devcontainer.js read-configuration --workspace-folder devcontainers-images/src/dotnet| jq .
+	./devcontainers-cli/devcontainer.js read-configuration --workspace-folder devcontainers-images/src/go| jq .
+	./devcontainers-cli/devcontainer.js read-configuration --workspace-folder devcontainers-images/src/rust| jq .
+
+test-dotnet:
+	./devcontainers-cli/devcontainer.js up --workspace-folder devcontainers-images/src/dotnet
+	-./devcontainers-cli/devcontainer.js exec --workspace-folder devcontainers-images/src/dotnet bash -c "cd test-project && bash test.sh"
+	docker rm -f `docker ps | awk '/vsc-dotnet-/ { print $$1 }'`
+	docker rmi -f `docker images | awk '/vsc-dotnet-/ { print $$3 }'`
+
+test-go:
+	./devcontainers-cli/devcontainer.js up --workspace-folder devcontainers-images/src/go
+	-./devcontainers-cli/devcontainer.js exec --workspace-folder devcontainers-images/src/go bash -c "cd test-project && bash test.sh"
+	docker rm -f `docker ps | awk '/vsc-go-/ { print $$1 }'`
+	docker rmi -f `docker images | awk '/vsc-go-/ { print $$3 }'`
+
+test-typescript-node:
+	./devcontainers-cli/devcontainer.js up --workspace-folder devcontainers-images/src/typescript-node
+	-./devcontainers-cli/devcontainer.js exec --workspace-folder devcontainers-images/src/typescript-node bash -c "cd test-project && bash test.sh"
+	docker rm -f `docker ps | awk '/vsc-typescript-node-/ { print $$1 }'`
+	docker rmi -f `docker images | awk '/vsc-typescript-node-/ { print $$3 }'`
+
 
 test-devcontainers-cli:	devcontainers-cli devcontainers-images
 	cd devcontainers-cli && yarn test
@@ -36,3 +39,7 @@ devcontainers-images:
 clean:
 	rm -rf devcontainers-cli
 	rm -rf devcontainers-images
+
+clean-images:
+	-docker rm -f `docker ps -qa`
+	-docker rmi -f `docker images -qa`
