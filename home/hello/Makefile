@@ -1,7 +1,4 @@
 all:
-	gcc main.c
-	file a.out
-	./a.out
+	node main.js
 
 clean:
-	rm -rf a.out

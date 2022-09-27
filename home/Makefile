@@ -3,7 +3,7 @@ all:	version
 
 
 version:
-	gcc -v
+	node -v
 
 clean:
 	make -C hello clean
