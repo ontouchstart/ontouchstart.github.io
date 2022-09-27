@@ -1,6 +1,5 @@
-all:	version
+all:
 	make -C hello
-
 
 version:
 	node -v
