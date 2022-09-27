@@ -1,5 +1,8 @@
-all:
+all:	
 	docker compose run --rm dev dotnet run --project hello
+
+build:
+	docker compose build
 
 version:
 	docker compose run --rm dev dotnet --version
