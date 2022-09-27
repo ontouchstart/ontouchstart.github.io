@@ -1,15 +1,16 @@
-env: 	
-	make -C environment
+all:	 devcontainers-cli devcontainers-images devcontainers-features
 
-test:
-	make -C github test
+devcontainers-cli:
+	git clone https://github.com/ontouchstart/devcontainers-cli.git
+	cd devcontainers-cli && yarn && yarn compile && yarn package 
 
-up: 	
-	make -C httpd image	
-	docker run --rm -p 8080:80 -d -v `pwd`:/var/www/html --name httpd -it httpd
+devcontainers-images:
+	git clone https://github.com/ontouchstart/devcontainers-images.git
 
-down:
-	docker rm -f httpd
+devcontainers-features:
+	git clone https://github.com/ontouchstart/devcontainers-features.git
 
 clean:
-	make -C httpd clean
+	rm -rf devcontainers-cli
+	rm -rf devcontainers-images
+	rm -rf devcontainers-features
