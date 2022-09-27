@@ -1,8 +1,10 @@
 all:	
-	make -C hello
+	cd hello && cargo run
 
 version:
-	go version
+	rustup --version
+	rustc --version
+	cargo --version
 
 clean:
-	make -C hello clean
+	rm -rf hello/target
