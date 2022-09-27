@@ -1,2 +1,2 @@
 all:
-	python main.py
+	ruby main.rb

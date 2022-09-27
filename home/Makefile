@@ -2,7 +2,7 @@ all:
 	make -C hello
 
 version:
-	python --version
-	pip --version
+	ruby --version
+	gem --version
 
 clean:
