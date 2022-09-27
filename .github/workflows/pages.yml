@@ -21,9 +21,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: make env
-        run: make env | tee ontouchstart.github.io/env.log
+        run: make env | tee output/env.log
       - name: test
-        run: make test | tee ontouchstart.github.io/test.log
+        run: make test | tee output/test.log
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
