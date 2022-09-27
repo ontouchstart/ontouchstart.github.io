@@ -1,10 +1,8 @@
 all:	
-	cd hello && cargo run
+	make -C hello
 
 version:
-	rustup --version
-	rustc --version
-	cargo --version
+	python --version
+	pip --version
 
 clean:
-	rm -rf hello/target

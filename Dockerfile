@@ -1,1 +1,1 @@
-FROM rust
+FROM python
