@@ -1,7 +1,5 @@
 all:
-	gcc main.c
-	file a.out
-	./a.out
+	gofmt -w main.go
+	go run main.go
 
 clean:
-	rm -rf a.out

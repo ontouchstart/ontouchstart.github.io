@@ -1,9 +1,8 @@
 all:	version
 	make -C hello
 
-
 version:
-	gcc -v
+	go version
 
 clean:
 	make -C hello clean
