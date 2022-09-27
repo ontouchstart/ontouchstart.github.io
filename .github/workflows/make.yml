@@ -11,6 +11,6 @@ jobs:
       - name: make build
         run: make build
       - name: make version
-      - name: make version
-        run: make 
+        run: make version
+      - name: make 
         run: make 
