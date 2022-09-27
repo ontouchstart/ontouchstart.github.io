@@ -1,9 +1,15 @@
-all:	version
-	make -C hello
+all:
 
-
+# https://hub.docker.com/r/jsii/superchain
 version:
-	gcc -v
+	node --version
+	yarn --version
+	python3 --version
+	aws --version
+	sam --version
+	docker --version
+	make --version
+	rsync --version
+	gh --version
 
 clean:
-	make -C hello clean
