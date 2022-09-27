@@ -1,4 +1,4 @@
-all:	version
+all:	
 	make -C hello
 
 version:
