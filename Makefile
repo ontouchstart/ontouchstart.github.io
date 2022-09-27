@@ -1,15 +1,13 @@
 all:
-	docker compose run --rm dev make 
 
 build:
 	docker compose build
 
 version:
-	docker compose run --rm dev make version
+	docker compose run --rm dev version
 
 bash:
-	docker compose run --rm -it dev bash
+	docker compose run --rm --interactive --entrypoint=/bin/bash dev
 
 clean:
-	docker compose run --rm dev make clean
 

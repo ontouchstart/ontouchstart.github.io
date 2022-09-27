@@ -1,2 +1,2 @@
-FROM node
-RUN npm install -g npm@latest typescript@latest
+# https://bazel.build/install/docker-container
+FROM l.gcr.io/google/bazel:latest
