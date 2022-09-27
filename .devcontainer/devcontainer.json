@@ -1,37 +1,44 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/typescript-node
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 {
-	"name": "Node.js & TypeScript",
+	"name": "Dev Containers CLI",
 	"build": {
 		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
-		// Append -bullseye or -buster to pin to an OS version.
-		// Use -bullseye variants on local on arm64/Apple Silicon.
 		"args": { 
-			"VARIANT": "18-bullseye"
+			"VARIANT": "16-bullseye"
 		}
 	},
+	"mounts": [
+		// Keep command history across instances
+		"source=dev-containers-cli-bashhistory,target=/home/node/commandhistory"
+	],
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"dbaeumer.vscode-eslint"
-			]
-		}
-	},
+	"postCreateCommand": "yarn install",
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
-
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node",
+	
 	"features": {
-		"docker-in-docker": "20.10"
+		"ghcr.io/devcontainers/features/docker-in-docker:1": {}
+	},
+	
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"GitHub.vscode-pull-request-github"
+			]
+		},
+		"codespaces": {
+			"repositories": {
+				"devcontainers/features": {
+					"permissions": {
+						"contents": "write",
+						"workflows": "write"
+					}
+				}
+			}
+		}
 	}
 }
