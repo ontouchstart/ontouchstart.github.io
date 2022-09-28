@@ -3,4 +3,4 @@ all:
 	java Hello
 
 clean:
-	rm Hello.class
+	rm -f Hello.class
