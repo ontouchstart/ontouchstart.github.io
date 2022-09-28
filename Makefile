@@ -3,6 +3,7 @@ all:
 
 build:
 	docker compose build
+	docker images
 
 version:
 	docker compose run --rm -it dev make version
