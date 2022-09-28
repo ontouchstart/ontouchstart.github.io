@@ -1,1 +1,1 @@
-FROM gcc
+FROM amazoncorretto:8
