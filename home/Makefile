@@ -1,6 +1,13 @@
-all:	
-	make -C hello
-	cd java-tutorial && bazel build //:ProjectRunner && bazel-bin/ProjectRunner
+all:	build
+	cpp-tutorial/stage1/bazel-bin/main/hello-world
+	cpp-tutorial/stage2/bazel-bin/main/hello-world
+	cpp-tutorial/stage3/bazel-bin/main/hello-world
+
+build:
+	cd cpp-tutorial/stage1 && bazel build //main:hello-world
+	cd cpp-tutorial/stage2 && bazel build //main:hello-world
+	cd cpp-tutorial/stage3 && bazel build //main:hello-world
+
 
 version:
 	cat /etc/os-release 
@@ -8,5 +15,4 @@ version:
 	bazel --version
 
 clean:
-	make -C hello clean
-	cd java-tutorial && rm -rf bazel-*
+	rm -rf cpp-tutorial/step?/bazel-*
