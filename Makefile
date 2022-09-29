@@ -1,13 +1,14 @@
 all:
+	build test
 
 build:
 	docker compose build
 
-version:
-	docker compose run --rm dev version
+test:
+	docker compose run --rm dev /test.sh
 
 bash:
-	docker compose run --rm --interactive --entrypoint=/bin/bash dev
+	docker compose run --rm -it dev bash
 
 clean:
 

@@ -1,2 +1,1 @@
-# https://bazel.build/install/docker-container
-FROM l.gcr.io/google/bazel:latest
+FROM ghcr.io/ontouchstart/packages:container-bazelisk
