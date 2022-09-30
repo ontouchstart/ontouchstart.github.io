@@ -1,1 +1,1 @@
-FROM ghcr.io/ontouchstart/packages:container-bazelisk
+FROM ghcr.io/ontouchstart/packages:container-bazelisk-no-cache
