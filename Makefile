@@ -2,11 +2,13 @@ all:
 	cat -n /etc/os-release 
 	dpkg --list --no-pager 
 
-pyodide-pyodide:
-	git clone https://github.com/ontouchstart/pyodide-pyodide.git
+supabase:
+	git clone --depth 1 https://github.com/supabase/supabase
 
-dev:	pyodide-pyodide
-	pyodide-pyodide/run_docker
+# https://supabase.com/docs/guides/hosting/docker
+dev:	supabase
+	cp .env supabase/docker
+	cd supabase/docker && docker-compose up
 
 clean:
-	rm -rf pyodide-pyodide
+	rm -rf supabase
