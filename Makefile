@@ -1,3 +1,3 @@
 all:
 	cat -n /etc/os-release 
-	apt list --installed | grep '[installed]' | cat -n 
+	dpkg --list --no-pager | grep ^ii | cat -n
