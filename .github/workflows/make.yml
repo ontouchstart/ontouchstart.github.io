@@ -1,9 +1,9 @@
-name: pages
+name: make
 
 on: push
 
 jobs:
-  deploy:
+  make:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
