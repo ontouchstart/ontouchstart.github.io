@@ -1,5 +1,5 @@
 all:	
-	cd hello && cargo run
+	cd hello && cargo check && cargo build && cargo test && cargo run
 
 version:
 	rustup --version
