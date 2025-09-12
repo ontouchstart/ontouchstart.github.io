@@ -9,3 +9,8 @@ I start to write something on my phone. You can call it a blog, a page, a scroll
 Anyway. I stop here on Flight AA1936 to Chicago.
 
 ![IMG_4104](https://github.com/user-attachments/assets/024e4c11-3247-4f95-9eb1-f51744d99809)
+
+# 2025/09/12
+Evanston, IL
+
+Reading stories about Alan Turing, Kurt Gödel and Princeton. Thinking about the "usefulness of useless knowledge", medical schools and mathematic, M.D and Ph.D. Money and material world v.s. the world of the mind: ideas, concepts, theories.
