@@ -13,4 +13,7 @@ Anyway. I stop here on Flight AA1936 to Chicago.
 # 2025/09/12
 Evanston, IL
 
-Reading stories about Alan Turing, Kurt Gödel and Princeton. Thinking about the "usefulness of useless knowledge", medical schools and mathematic, M.D and Ph.D. Money and material world v.s. the world of the mind: ideas, concepts, theories.
+Reading stories about Alan Turing, Kurt Gödel and Princeton. Thinking about the "usefulness of useless knowledge", medical schools and mathematic, M.D and Ph.D., money and material world v.s. the world of the mind: ideas, concepts, theories.
+
+![IMG_4139](https://github.com/user-attachments/assets/376eb143-e34a-41d4-b09b-a689b8331c81)
+
