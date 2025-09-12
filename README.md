@@ -17,3 +17,9 @@ Reading stories about Alan Turing, Kurt Gödel and Princeton. Thinking about the
 
 ![IMG_4139](https://github.com/user-attachments/assets/376eb143-e34a-41d4-b09b-a689b8331c81)
 
+#### Context
+
+![IMG_4209](https://github.com/user-attachments/assets/567503cb-e714-4bb1-9141-68d43692c36c)
+
+What is the context of this picture? How might it change in the future?
+Would LLM help or would it just give bullshit word salad based on whatever data it was trained on?
