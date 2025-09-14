@@ -30,3 +30,10 @@ Did a barefoot trail walk in Ramapo. Thinking about formal logic vs informal log
 
 <img width="601" height="1067" alt="IMG_4272" src="https://github.com/user-attachments/assets/51ecdca2-1ae4-48a8-ab3a-c04bf0ff003a" />
 
+# 2025/09/14
+
+🦶2025 Bronx 10 Mile+ 🦶
+
+I have run Bronx 10 Mile race officially three times (2021, 2022, 2023). It is my favorite course. Today I ran from Fort Lee across GW Bridge, Washington Hights, Harlem, High Bridge, Yankee Stadium and joined the race unofficially, then ran back to Fort Lee to cover 20.25 miles (number game is fun.)
+
+<img width="601" height="1067" alt="IMG_4340" src="https://github.com/user-attachments/assets/0f4a81e2-3cdd-4a37-835f-70c8ce928523" />
