@@ -23,3 +23,10 @@ Reading stories about Alan Turing, Kurt Gödel and Princeton. Thinking about the
 
 What is the context of this picture? How might it change in the future?
 Would LLM help or would it just give bullshit word salad based on whatever data it was trained on?
+
+# 2025/09/13
+
+Did a barefoot trail walk in Ramapo. Thinking about formal logic vs informal logic. 科學 vs 玄學. Physics vs Metaphysics. (This Meta is not that Meta). 道可道非常道, 名可名非常名. 
+
+<img width="601" height="1067" alt="IMG_4272" src="https://github.com/user-attachments/assets/51ecdca2-1ae4-48a8-ab3a-c04bf0ff003a" />
+
