@@ -10,7 +10,7 @@ Anyway. I stop here on Flight AA1936 to Chicago.
 
 ![IMG_4104](https://github.com/user-attachments/assets/024e4c11-3247-4f95-9eb1-f51744d99809)
 
-# 2025/09/12
+## 2025/09/12
 Evanston, IL
 
 Reading stories about Alan Turing, Kurt Gödel and Princeton. Thinking about the "usefulness of useless knowledge", medical schools and mathematic, M.D and Ph.D., money and material world v.s. the world of the mind: ideas, concepts, theories.
@@ -24,13 +24,13 @@ Reading stories about Alan Turing, Kurt Gödel and Princeton. Thinking about the
 What is the context of this picture? How might it change in the future?
 Would LLM help or would it just give bullshit word salad based on whatever data it was trained on?
 
-# 2025/09/13
+## 2025/09/13
 
 Did a barefoot trail walk in Ramapo. Thinking about formal logic vs informal logic. 科學 vs 玄學. Physics vs Metaphysics. (This Meta is not that Meta). 道可道非常道, 名可名非常名. 
 
 <img width="601" height="1067" alt="IMG_4272" src="https://github.com/user-attachments/assets/51ecdca2-1ae4-48a8-ab3a-c04bf0ff003a" />
 
-# 2025/09/14
+## 2025/09/14
 
 🦶2025 Bronx 10 Mile+ 🦶
 
