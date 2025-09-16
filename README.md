@@ -54,3 +54,13 @@ I have run Bronx 10 Mile race officially three times (2021, 2022, 2023). It is m
 ![IMG_4309](https://github.com/user-attachments/assets/e85a816c-b146-4376-bf4a-0753f36d4a2c)
 ![IMG_4310](https://github.com/user-attachments/assets/e91eaf46-a39a-440a-93a5-cb32d8a4c34a)
 ![IMG_4311](https://github.com/user-attachments/assets/93b9d017-03ab-4ba5-8f9d-33a929afb2dc)
+
+## 2025/09/15
+
+Attended a workshop on AI coding agent. Only time will tell us if we are wasting our time producing more illusions and junk data for future garbage collectors. 
+
+Running an easy 5K in Central Park is more rewarding.
+
+<img width="601" height="1067" alt="IMG_4386" src="https://github.com/user-attachments/assets/62057f1d-cb24-4d95-b086-a3b75f68a97d" />
+<img width="1200" height="2134" alt="IMG_4388" src="https://github.com/user-attachments/assets/72c78ba9-887e-4aeb-89c0-222ac17ee3dd" />
+
