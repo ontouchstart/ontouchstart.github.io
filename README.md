@@ -74,7 +74,6 @@ It is just like writing, *Je n’ai fait celle-ci plus longue que parce que je n
 
 The age of left-right-left-right
 
-<img width="2532" height="1170" alt="IMG_4404" src="https://github.com/user-attachments/assets/754c0e8e-1423-496c-92c1-5f5e70086d0e" />
-<img width="2532" height="1170" alt="IMG_4405" src="https://github.com/user-attachments/assets/9ca81097-6b1b-4368-b64d-0c638e9e55be" />
-<img width="2532" height="1170" alt="IMG_4406" src="https://github.com/user-attachments/assets/f94a378b-1784-45ed-bc52-44082784b075" />
-![IMG_4407](https://github.com/user-attachments/assets/9acad946-2c4d-4b8f-a7e3-0152ee891ad1)
+![IMG_4404](https://github.com/user-attachments/assets/754c0e8e-1423-496c-92c1-5f5e70086d0e)
+![IMG_4405](https://github.com/user-attachments/assets/9ca81097-6b1b-4368-b64d-0c638e9e55be)
+![IMG_440](https://github.com/user-attachments/assets/f94a378b-1784-45ed-bc52-44082784b075)
