@@ -61,8 +61,9 @@ Attended a workshop on AI coding agent. Only time will tell us if we are wasting
 
 Running an easy 5K in Central Park is more rewarding.
 
-<img width="601" height="1067" alt="IMG_4386" src="https://github.com/user-attachments/assets/62057f1d-cb24-4d95-b086-a3b75f68a97d" />
-<img width="1200" height="2134" alt="IMG_4388" src="https://github.com/user-attachments/assets/72c78ba9-887e-4aeb-89c0-222ac17ee3dd" />
+![IMG_4386](https://github.com/user-attachments/assets/62057f1d-cb24-4d95-b086-a3b75f68a97d)
+
+![IMG_4388](https://github.com/user-attachments/assets/72c78ba9-887e-4aeb-89c0-222ac17ee3dd)
 
 ## 2025/09/16
 
