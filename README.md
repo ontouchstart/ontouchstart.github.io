@@ -28,7 +28,7 @@ Would LLM help or would it just give bullshit word salad based on whatever data 
 
 Did a barefoot trail walk in Ramapo. Thinking about formal logic vs informal logic. 科學 vs 玄學. Physics vs Metaphysics. (This Meta is not that Meta). 道可道非常道, 名可名非常名. 
 
-<img width="601" height="1067" alt="IMG_4272" src="https://github.com/user-attachments/assets/51ecdca2-1ae4-48a8-ab3a-c04bf0ff003a" />
+![IMG_4272](https://github.com/user-attachments/assets/51ecdca2-1ae4-48a8-ab3a-c04bf0ff003a)
 
 ## 2025/09/14
 
@@ -36,7 +36,7 @@ Did a barefoot trail walk in Ramapo. Thinking about formal logic vs informal log
 
 I have run Bronx 10 Mile race officially three times (2021, 2022, 2023). It is my favorite course. Today I ran from Fort Lee across GW Bridge, Washington Hights, Harlem, High Bridge, Yankee Stadium and joined the race unofficially, then ran back to Fort Lee to cover 20.25 miles (number game is fun.)
 
-<img width="601" height="1067" alt="IMG_4340" src="https://github.com/user-attachments/assets/0f4a81e2-3cdd-4a37-835f-70c8ce928523" />
+![IMG_4340](https://github.com/user-attachments/assets/0f4a81e2-3cdd-4a37-835f-70c8ce928523)
 
 ![IMG_4275](https://github.com/user-attachments/assets/dc822bee-a02e-4654-98ea-b40ea79021c7)
 ![IMG_4276](https://github.com/user-attachments/assets/5827b561-891c-4b21-b1f1-3845a5fc4fb5)
