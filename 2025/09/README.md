@@ -90,3 +90,16 @@ The age of left-right-left-right
 
 ![IMG_4470](https://github.com/user-attachments/assets/e2f5e2db-1dc6-4f5b-9766-2cb753a6236a)
 
+## 2025/09/19
+
+![IMG_4492](https://github.com/user-attachments/assets/b502919f-3d57-4c4c-98e7-27eec85a2994)
+
+![IMG_4493](https://github.com/user-attachments/assets/1c1d9970-4df0-4ab0-8d5f-91b2d28c1e3e)
+
+![IMG_4494](https://github.com/user-attachments/assets/d75b82c5-cdad-44f3-b466-d0a0324982d0)
+
+![IMG_4495](https://github.com/user-attachments/assets/96937905-0eef-4f5e-9d1d-0ba355d754ff)
+
+![IMG_4496](https://github.com/user-attachments/assets/cefe5dd3-8e2c-477d-9bed-2092ef2274d8)
+
+![IMG_4497](https://github.com/user-attachments/assets/06f0ac6b-cba5-416c-8a4f-4a0028983531)
