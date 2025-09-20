@@ -103,3 +103,25 @@ The age of left-right-left-right
 ![IMG_4496](https://github.com/user-attachments/assets/cefe5dd3-8e2c-477d-9bed-2092ef2274d8)
 
 ![IMG_4497](https://github.com/user-attachments/assets/06f0ac6b-cba5-416c-8a4f-4a0028983531)
+
+## 2025/09/20 
+
+Humanism
+
+... something that had seemed alive was really dead.
+
+It was better not to pretend any longer but to acknowledge that there was no continuity.
+
+The object of recovery was fundamentally cultural and secular.
+
+![IMG_4502](https://github.com/user-attachments/assets/249816e9-2cea-4256-aa7c-a73721d94b8d)
+![IMG_4503](https://github.com/user-attachments/assets/b7f4e816-63c2-442c-8818-3ebb6abf1d3e)
+![IMG_4504](https://github.com/user-attachments/assets/3e14055f-470f-4504-a74e-728b39ed0afa)
+![IMG_4505](https://github.com/user-attachments/assets/c1ae90fb-6dcd-47f1-8a53-a1d6827e69b8)
+![IMG_4506](https://github.com/user-attachments/assets/cf179c8d-99e9-455b-a33d-0fb9f6f4e528)
+![IMG_4507](https://github.com/user-attachments/assets/cc7b0e43-480f-442e-93f5-50c02b40f0a5)
+
+
+
+
+
