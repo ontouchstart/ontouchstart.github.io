@@ -126,5 +126,13 @@ The object of recovery was fundamentally cultural and secular.
 
 ![IMG_4590](https://github.com/user-attachments/assets/6814ee7e-4a5c-4ad5-ac9c-231143da1650)
 
+![IMG_4555](https://github.com/user-attachments/assets/2428241b-1e86-4f8f-9732-aa25f8e1a849)
+![IMG_4553](https://github.com/user-attachments/assets/cc801ed8-915b-4153-8c59-3cba7dbc8f4f)
+![IMG_4554](https://github.com/user-attachments/assets/31737a7d-dc3a-40f3-a0d8-b03f7bb8f72a)
+![IMG_4552](https://github.com/user-attachments/assets/193f438d-0bb0-4374-8da6-533e74bbb374)
+![IMG_4547](https://github.com/user-attachments/assets/f5312b3b-593a-4077-8d02-08668f17a962)
+![IMG_4537](https://github.com/user-attachments/assets/13cdbf40-8600-4d49-a2fe-9dc3b069cde3)
+![IMG_4535](https://github.com/user-attachments/assets/97540e1a-f88d-48c7-9afc-5897d91eca1e)
+
 
 
