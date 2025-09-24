@@ -145,4 +145,15 @@ The object of recovery was fundamentally cultural and secular.
 ![IMG_4607](https://github.com/user-attachments/assets/9c5129cd-b959-4e90-b74c-589880b0fb01)
 ![IMG_4602](https://github.com/user-attachments/assets/e58de8c2-50cf-40b6-8ae6-68a6075221db)
 
+## 2025/09/23
+
+Gödel was right ...
+
+![IMG_4616](https://github.com/user-attachments/assets/bdb23b68-9f2b-49d4-b73f-56b3b9a88c1a)
+![IMG_4617](https://github.com/user-attachments/assets/de5a3321-4335-4782-8c02-b2f037ddad98)
+![IMG_4618](https://github.com/user-attachments/assets/6a7b52b4-e497-4836-8639-f84c1468b562)
+![IMG_4619](https://github.com/user-attachments/assets/a67191ea-68d2-4508-b1af-a8b5436ceaeb)
+![IMG_4621](https://github.com/user-attachments/assets/a89a9c8c-2069-471c-ac76-baeae5e46640)
+![IMG_4622](https://github.com/user-attachments/assets/c79159df-9b4c-4b03-ae3e-e86a274ac5f6)
+
 
