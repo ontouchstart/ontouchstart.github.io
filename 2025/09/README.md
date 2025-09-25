@@ -156,4 +156,9 @@ Gödel was right ...
 ![IMG_4621](https://github.com/user-attachments/assets/a89a9c8c-2069-471c-ac76-baeae5e46640)
 ![IMG_4622](https://github.com/user-attachments/assets/c79159df-9b4c-4b03-ae3e-e86a274ac5f6)
 
+## 2025/09/24
+
+![IMG_4640](https://github.com/user-attachments/assets/8d4399f6-4307-4828-b194-2165f92616a6)
+
+![IMG_4641](https://github.com/user-attachments/assets/54610e85-96e0-4d62-a5dd-4a4e3fcdf4a8)
 
