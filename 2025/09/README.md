@@ -162,3 +162,29 @@ Gödel was right ...
 
 ![IMG_4641](https://github.com/user-attachments/assets/54610e85-96e0-4d62-a5dd-4a4e3fcdf4a8)
 
+## 2025/09/25
+
+![IMG_4642](https://github.com/user-attachments/assets/321f1f63-479b-4c36-a979-68c2a2ea661a)
+![IMG_4643](https://github.com/user-attachments/assets/8b417875-8948-40bb-8010-13fe633299b0)
+![IMG_4644](https://github.com/user-attachments/assets/56f43b8f-ed55-40ff-a025-c5df5e73d049)
+![IMG_4645](https://github.com/user-attachments/assets/0665b55d-e9d6-4631-ad08-824c0c52a61f)
+![IMG_4646](https://github.com/user-attachments/assets/8018b097-4f98-4bff-97d1-0c0630be91ed)
+![IMG_4647](https://github.com/user-attachments/assets/74cad2c7-f47a-4ffe-aa88-b76737ef0967)
+![IMG_4649](https://github.com/user-attachments/assets/dae77b4d-ffe1-4d9f-ab36-69dc377759e8)
+![IMG_4650](https://github.com/user-attachments/assets/133f3931-9fa0-4f22-bd55-49f854de6fd1)
+![IMG_4651](https://github.com/user-attachments/assets/f1c62f17-ce4b-42e8-bb34-264bf6e41fc0)
+![IMG_4652](https://github.com/user-attachments/assets/a40bfcd2-6826-4697-a6ec-ac16d5f5a3ff)
+![IMG_4653](https://github.com/user-attachments/assets/510321bf-0f7c-49ff-ae94-93b5405cf452)
+![IMG_4654](https://github.com/user-attachments/assets/b9d49165-6f5b-4e0a-ac76-7fe06a23959e)
+![IMG_4655](https://github.com/user-attachments/assets/fd5abbe9-27a6-4024-a2fa-6e3632e0bc4a)
+![IMG_4656](https://github.com/user-attachments/assets/52dd204d-d66c-4b7f-91e6-581e3229dea1)
+![IMG_4657](https://github.com/user-attachments/assets/ecfcded0-b7dc-46bc-8c77-75044b1d6383)
+![IMG_4658](https://github.com/user-attachments/assets/f9ec75aa-51e7-4c82-be03-21bb2c462dd4)
+![4857D098-D467-426E-93BC-A02C4A707871](https://github.com/user-attachments/assets/ab99a283-5a66-46d1-bf00-1e697dea61cb)
+![IMG_4660](https://github.com/user-attachments/assets/84e31171-3160-4f5a-96de-2950d1d3bde1)
+![IMG_4664](https://github.com/user-attachments/assets/0eef1769-4a61-4e74-8463-aa72896190aa)
+![IMG_4666](https://github.com/user-attachments/assets/976a8e2b-cbfc-40ce-bb04-69c443685504)
+![IMG_4667](https://github.com/user-attachments/assets/497a9d83-d95d-41c1-83b3-b08786ccbc3e)
+![IMG_4668](https://github.com/user-attachments/assets/75648f9a-2fa0-43ac-a6bc-daebf267e1a0)
+![IMG_4669](https://github.com/user-attachments/assets/f75c2971-79e6-4c33-b170-16e0b0b0e78b)
+
