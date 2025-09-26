@@ -188,3 +188,18 @@ Gödel was right ...
 ![IMG_4668](https://github.com/user-attachments/assets/75648f9a-2fa0-43ac-a6bc-daebf267e1a0)
 ![IMG_4669](https://github.com/user-attachments/assets/f75c2971-79e6-4c33-b170-16e0b0b0e78b)
 
+## 2025/09/26
+
+![IMG_4675](https://github.com/user-attachments/assets/2cbefb03-3c10-465d-8a12-86e9a64728ce)
+![IMG_4676](https://github.com/user-attachments/assets/9cb02899-b4a6-4b86-96de-c97edba3c616)
+![IMG_4677](https://github.com/user-attachments/assets/4276dc45-000e-4715-8afe-409a4af81d9d)
+![IMG_4678](https://github.com/user-attachments/assets/36aee39c-de20-4866-bf29-b519c4bf0598)
+![IMG_4679](https://github.com/user-attachments/assets/1fcab6d5-d827-43b4-8792-48c38ffb950b)
+![IMG_4680](https://github.com/user-attachments/assets/c706c419-e40c-48de-ae06-55ad494caa9b)
+![IMG_4681](https://github.com/user-attachments/assets/0b44146a-776e-4e41-9154-9d67a4fcf90a)
+![IMG_4682](https://github.com/user-attachments/assets/f7ddf746-cfc1-412b-ad69-9a4dbd0133c0)
+![IMG_4683](https://github.com/user-attachments/assets/23c461fa-c357-4f31-a967-e665e73ef094)
+![IMG_4684](https://github.com/user-attachments/assets/a99e5b23-506e-47f3-81d9-d893e4f93beb)
+![IMG_4685](https://github.com/user-attachments/assets/bd02016c-7e21-4d24-8940-372e79cb19de)
+![IMG_4686](https://github.com/user-attachments/assets/888f0016-7bf8-45a6-9144-698224c82978)
+
