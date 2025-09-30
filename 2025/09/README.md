@@ -209,4 +209,9 @@ Gödel was right ...
 ## 2025/09/28
 ![IMG_4964](https://github.com/user-attachments/assets/8518b0af-967b-42bd-96e4-002bb9d1d648)
 
+## 2025/09/29
+![IMG_4978](https://github.com/user-attachments/assets/c1e9103c-6fa4-43c6-b8aa-12e89a36bae7)
+![IMG_4976](https://github.com/user-attachments/assets/c98f9dd8-74d0-4be7-8b02-4000fcbfc2ce)
+![IMG_4975](https://github.com/user-attachments/assets/ecb8d776-d8ba-485a-8b62-65fc41b93da5)
+![IMG_4974](https://github.com/user-attachments/assets/09f89456-8d32-4ffd-9ee0-370f422998d3)
 
