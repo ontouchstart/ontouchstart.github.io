@@ -20,11 +20,10 @@ Read about Gödel, Turing and Church in several fascinating books.
 
 > ... the only way to break a cipher created by a machine would be with machine.
 > 
-![IMG_5019](https://github.com/user-attachments/assets/14484940-5df0-4a08-b248-6ec56a5e7a41)
-
-![IMG_5018](https://github.com/user-attachments/assets/84fea7c4-bbf4-437d-b25c-00e9ede57df0)
-
-this mechanical behemoth simulated the efforts of thirty Enigma machines working at once. The rotors—ninety of them—were mounted on the face of the immense cabinet, a glance at the back of which revealed more than ten miles of wire connected to contact points on the rotors.
+> ![IMG_5019](https://github.com/user-attachments/assets/14484940-5df0-4a08-b248-6ec56a5e7a41)
+>
+> ![IMG_5018](https://github.com/user-attachments/assets/84fea7c4-bbf4-437d-b25c-00e9ede57df0)
+> ... this mechanical behemoth simulated the efforts of thirty Enigma machines working at once. The rotors—ninety of them—were mounted on the face of the immense cabinet, a glance at the back of which revealed more than ten miles of wire connected to contact points on the rotors.
 
 
 
