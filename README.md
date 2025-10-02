@@ -16,7 +16,14 @@ Read about Gödel, Turing and Church in several fascinating books.
 
 ```
 Incompleteness: The Proof and Paradox of Kurt Gödel
+
 Rebecca Goldstein
+```
+
+```
+The Man Who Knew Too Much: Alan Turing and the Invention of the Computer
+
+David Leavitt
 ```
 
 
