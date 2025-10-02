@@ -12,7 +12,7 @@ Ladder of abstraction:
 - Physics
 - Engineering (most useful?)
 
-Read about Gödel, Turing and Church in several fascinating books.
+Read about Gödel and  Turing in three fascinating books.
 
 - Stephen Budiansky. _JOURNEY to the EDGE of REASON: The Life of Kurt Gödel_
 - Rebecca Goldstein. _Incompleteness: The Proof and Paradox of Kurt Gödel_
