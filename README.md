@@ -14,9 +14,9 @@ Ladder of abstraction:
 
 Read about Gödel, Turing and Church in several fascinating books.
 
-- Budiansky. JOURNEY to the EDGE of REASON: The Life of Kurt Gödel Stephen
-- Rebecca Goldstein. Incompleteness: The Proof and Paradox of Kurt Gödel
-- David Leavitt. The Man Who Knew Too Much: Alan Turing and the Invention of the Computer
+- Stephen Budiansky. _JOURNEY to the EDGE of REASON: The Life of Kurt Gödel_
+- Rebecca Goldstein. _Incompleteness: The Proof and Paradox of Kurt Gödel_
+- David Leavitt. _The Man Who Knew Too Much: Alan Turing and the Invention of the Computer_
 
 
 
