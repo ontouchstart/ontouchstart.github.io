@@ -15,6 +15,13 @@ Ladder of abstraction:
 Read about Gödel, Turing and Church in several fascinating books.
 
 ```
+JOURNEY to the EDGE of REASON
+The Life of Kurt Gödel Stephen
+
+Budiansky
+```
+
+```
 Incompleteness: The Proof and Paradox of Kurt Gödel
 
 Rebecca Goldstein
