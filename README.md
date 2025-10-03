@@ -33,5 +33,11 @@ Hobby: continue to read Turing. He is also a long distance runner. This feels li
 
 > For Turing the 1940s was an era defined more by beginnings than by culminations. Ideas would come to him, he would throw himself into them, and then, before he had brought them to fruition, he would drift away, either because circumstances compelled him to or because some other idea had seized his attention.
 
+## 2025/10/03
 
+(Birthday) Hobby: Reading Turing on Kindle Scribe.
+
+"American tradition of solving one's difficulties by means of much equipment rather than thought."
+
+![IMG_5040](https://github.com/user-attachments/assets/d2626145-0f68-489c-a81f-6ed716997bf1)
 
