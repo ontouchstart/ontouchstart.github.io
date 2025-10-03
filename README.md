@@ -25,9 +25,13 @@ Read about Gödel and  Turing in three fascinating books.
 > ![IMG_5018](https://github.com/user-attachments/assets/84fea7c4-bbf4-437d-b25c-00e9ede57df0)
 > ... this mechanical behemoth simulated the efforts of thirty Enigma machines working at once. The rotors—ninety of them—were mounted on the face of the immense cabinet, a glance at the back of which revealed more than ten miles of wire connected to contact points on the rotors.
 
+## 2025/10/02
 
+Day job: finally wrapped up a feature with good performance. Need to add more test coverage and make a clean package. Didn't write a single line of code by hand. Feel like a professor advises a group of LLM graduate students. (The future is here.)
 
+Hobby: continue to read Turing. He is also a long distance runner. This feels like trail running. 
 
+> For Turing the 1940s was an era defined more by beginnings than by culminations. Ideas would come to him, he would throw himself into them, and then, before he had brought them to fruition, he would drift away, either because circumstances compelled him to or because some other idea had seized his attention.
 
 
 
