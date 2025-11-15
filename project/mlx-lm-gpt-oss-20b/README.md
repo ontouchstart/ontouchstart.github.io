@@ -20,6 +20,8 @@ Peak memory: 14.611 GB
 uv run hello-world-c.py 
 Fetching 12 files: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 12/12 [00:00<00:00, 235194.62it/s]
 ==========
+```
+
 <|channel|>analysis<|message|>The user asks: "Write a c program to print Hello world in Chinese". They want a C program that prints "Hello world" in Chinese. The Chinese translation of "Hello world" is "你好，世界" or "你好世界". So we can write a simple C program that prints that string. We need to consider encoding: use UTF-8. The program should include proper headers, main function, and print the string. We can use printf with a UTF-8 string literal. Also mention that the source file should be saved in UTF-8. Provide code. Also maybe mention that the console must support UTF-8. Provide a minimal program. Also mention that if using older compilers, you might need to set locale. But simplest: #include <stdio.h> int main() { printf("你好，世界\n"); return 0; }.
 
 We can also mention that if you want to use wide characters: #include <wchar.h> and set locale. But simplest is fine.
