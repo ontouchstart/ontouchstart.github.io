@@ -77,8 +77,6 @@ Prompt: 77 tokens, 171.353 tokens-per-sec
 Generation: 714 tokens, 32.347 tokens-per-sec
 Peak memory: 14.611 GB
 
-``` 
-
 ```
 make test
 gcc -o hello_chinese hello_chinese.c
