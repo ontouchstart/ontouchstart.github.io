@@ -66,3 +66,10 @@ If your terminal doesn’t show the characters correctly, ensure that:
 
 Happy coding!
 
+
+```
+make test
+gcc -o hello_chinese hello_chinese.c
+./hello_chinese
+你好，世界
+```
