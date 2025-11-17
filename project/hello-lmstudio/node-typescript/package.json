@@ -1,0 +1,22 @@
+{
+  "name": "node-typescript",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsc && node --enable-source-maps dist/index.js",
+    "build": "tsc"
+  },
+  "author": "Your Name",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@lmstudio/sdk": "^1.5.0"
+  },
+  "gitHead": "d95ce2feb067b4eec446c673155631ee1734e982",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.2"
+  }
+}
