@@ -11,3 +11,5 @@ free 0x1022195d0
 python allocate 0x1022195d0
 Rust says: Hello, world!
 ```
+
+ref: https://docs.python.org/3/library/ctypes.html#c-char-p
