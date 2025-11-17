@@ -6,7 +6,6 @@ uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
 curl -X POST http://127.0.0.1:8000/chat \
      -H "Content-Type: application/json" \
      -d '{"messages": ["My hovercraft is full of eels!", "I will not buy this record, it is scratched."]}'
-```
 
 sam@Sams-MacBook-Pro ai-gateway % curl -X POST http://127.0.0.1:8000/chat \
      -H "Content-Type: application/json" \
@@ -38,3 +37,4 @@ sam@Sams-MacBook-Pro ai-gateway % curl -X POST http://127.0.0.1:8000/chat \
 
 {"reply":"<|channel|>analysis<|message|>Need to respond as shopkeeper helping foreign traveller, maybe ask clarifying questions.<|end|><|start|>assistant<|channel|>final<|message|>Ah, I see you’re looking for something a bit… unusual! Let me help you sort this out.\n\n1. **The “hovercraft full of eels”** – If you’re actually carrying a hovercraft, that’s quite the mode of transport! Eels can be a bit slippery, but if you’re looking for something to help keep them contained or maybe even a snack for your trip, we have a few options:  \n   - **Seaweed snacks** (the natural diet of eels) – great for a quick bite.  \n   - **Compact fish‑tanks** or small aquarium kits – if you’d prefer to keep them alive during travel.  \n   - **Eel‑friendly nets** – handy if you need to release them safely later.\n\n2. **The scratched record** – I’m sorry to hear it’s in poor condition. If you’d like, we can:\n   - **Check the disc** for deeper scratches or warps and offer a quick cleaning kit.  \n   - **Swap it out** for a new copy or a refurbished version that’s in better shape.  \n   - **Offer a discount** if you’d like to buy another record instead.\n\nCould you let me know which of these options (or anything else) would best suit your needs? I’m happy to help you find the perfect solution."}
 
+```
