@@ -24,6 +24,6 @@ def test_content(page: Page):
     print(prompt)
     print("\n# prompt (decoded)\n")
     print([(id, tokenizer.decode([id])) for id in prompt])
+    print("\nresponse")
     response = generate( model=model, tokenizer=tokenizer, prompt=prompt, max_tokens=1024*16,verbose=True)
-    print("\n# response\n")
     print(response)

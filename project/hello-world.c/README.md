@@ -28,6 +28,8 @@ int main(void) {
 # prompt (decoded)
 
 [(200006, '<|start|>'), (17360, 'system'), (200008, '<|message|>'), (3575, 'You'), (553, ' are'), (17554, ' Chat'), (162016, 'GPT'), (11, ','), (261, ' a'), (4410, ' large'), (6439, ' language'), (2359, ' model'), (22203, ' trained'), (656, ' by'), (7788, ' Open'), (17527, 'AI'), (558, '.\n'), (87447, 'Knowledge'), (100594, ' cutoff'), (25, ':'), (220, ' '), (1323, '202'), (19, '4'), (12, '-'), (3218, '06'), (198, '\n'), (6576, 'Current'), (3521, ' date'), (25, ':'), (220, ' '), (1323, '202'), (20, '5'), (12, '-'), (994, '11'), (12, '-'), (1157, '18'), (279, '\n\n'), (30377, 'Reason'), (289, 'ing'), (25, ':'), (14093, ' medium'), (279, '\n\n'), (2, '#'), (13888, ' Valid'), (18403, ' channels'), (25, ':'), (8450, ' analysis'), (11, ','), (49159, ' commentary'), (11, ','), (1721, ' final'), (13, '.'), (21030, ' Channel'), (2804, ' must'), (413, ' be'), (7360, ' included'), (395, ' for'), (1753, ' every'), (3176, ' message'), (13, '.'), (200007, '<|end|>'), (200006, '<|start|>'), (1428, 'user'), (200008, '<|message|>'), (26285, 'convert'), (3992, ' following'), (3490, ' code'), (316, ' to'), (22752, ' python'), (25, ':'), (793, ' \n'), (2165, '#include'), (464, ' <'), (24708, 'stdio'), (1508, '.h'), (3037, '>\n\n'), (491, 'int'), (2758, ' main'), (10218, '(void'), (8, ')'), (405, ' {\n'), (271, '   '), (9421, ' printf'), (568, '("'), (177519, '你好'), (979, '，'), (28428, '世界'), (3392, '\\n'), (1171, '");\n'), (271, '   '), (622, ' return'), (220, ' '), (15, '0'), (307, ';\n'), (92, '}'), (200007, '<|end|>'), (200006, '<|start|>'), (173781, 'assistant')]
+
+response
 ==========
 <|channel|>analysis<|message|>The user wants to convert the given C code to Python. The C code prints "你好，世界" (Hello, world in Chinese). So the Python equivalent would be:
 
@@ -59,12 +61,9 @@ Running this script will output:
 
 just like the original C program.
 ==========
-Prompt: 98 tokens, 67.536 tokens-per-sec
-Generation: 281 tokens, 32.839 tokens-per-sec
+Prompt: 98 tokens, 76.319 tokens-per-sec
+Generation: 281 tokens, 33.082 tokens-per-sec
 Peak memory: 14.611 GB
-
-# response
-
 <|channel|>analysis<|message|>The user wants to convert the given C code to Python. The C code prints "你好，世界" (Hello, world in Chinese). So the Python equivalent would be:
 
 print("你好，世界")
@@ -96,9 +95,11 @@ Running this script will output:
 just like the original C program.
 .
 
-============================== 1 passed in 14.08s ==============================
+============================== 1 passed in 13.92s ==============================
+```
 uv run hello.py
 你好，世界
 gcc -o hello hello.c
 ./hello
 你好，世界
+```
