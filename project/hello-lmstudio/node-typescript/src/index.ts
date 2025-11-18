@@ -41,9 +41,9 @@ async function printLoadedModels() {
 
 async function predictWithAnyModel() {
   const model = await client.llm.model();
-  const prompt = "The meaning of life is";
+  const prompt = "Write a story about Issac Newton and AI";
   const prediction = model.complete(prompt, {
-    maxTokens: 100,
+    maxTokens: 1024*16,
     temperature: 0.7,
   });
   process.stdout.write(prompt); // Print the prompt
