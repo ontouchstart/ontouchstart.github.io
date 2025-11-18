@@ -14,6 +14,12 @@ def test_content(page: Page):
     content = page.locator("body").text_content()
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(conversation=conversation, add_generation_prompt=True)
+    print("\n# conversation\n")
     print(conversation)
+    print("\n# prompt (token)\n")
+    print(prompt)
+    print("\n# prompt (decoded)\n")
+    print(tokenizer.decode(prompt))
     response = generate( model=model, tokenizer=tokenizer, prompt=prompt, max_tokens=1024*16,verbose=True)
+    print("\# response\n")
     print(response)
