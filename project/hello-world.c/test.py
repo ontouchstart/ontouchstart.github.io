@@ -11,7 +11,8 @@ url = "https://gist.githubusercontent.com/ontouchstart/5f666f201fc8126b887a1b82f
 def test_content(page: Page):
     page.goto(url);
 
-    content = page.locator("body").text_content()
+    code = page.locator("body").text_content()
+    content = "convert following code to python: \n" + code 
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(conversation=conversation, add_generation_prompt=True)
     print("\n# conversation\n")
@@ -19,7 +20,7 @@ def test_content(page: Page):
     print("\n# prompt (token)\n")
     print(prompt)
     print("\n# prompt (decoded)\n")
-    print(tokenizer.decode(prompt))
+    print([(id, tokenizer.decode([id])) for id in prompt])
     response = generate( model=model, tokenizer=tokenizer, prompt=prompt, max_tokens=1024*16,verbose=True)
-    print("\# response\n")
+    print("\n# response\n")
     print(response)
