@@ -59,8 +59,8 @@ Running this script will output:
 
 just like the original C program.
 ==========
-Prompt: 98 tokens, 68.674 tokens-per-sec
-Generation: 281 tokens, 32.844 tokens-per-sec
+Prompt: 98 tokens, 67.536 tokens-per-sec
+Generation: 281 tokens, 32.839 tokens-per-sec
 Peak memory: 14.611 GB
 
 # response
@@ -96,4 +96,9 @@ Running this script will output:
 just like the original C program.
 .
 
-============================== 1 passed in 14.19s ==============================
+============================== 1 passed in 14.08s ==============================
+uv run hello.py
+你好，世界
+gcc -o hello hello.c
+./hello
+你好，世界
