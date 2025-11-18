@@ -6,7 +6,8 @@ configfile: pyproject.toml
 plugins: base-url-2.1.0, playwright-0.7.1
 collected 1 item
 
-test.py ```
+test.py 
+```
 
 #include <stdio.h>
 
@@ -58,8 +59,8 @@ Running this script will output:
 
 just like the original C program.
 ==========
-Prompt: 98 tokens, 73.981 tokens-per-sec
-Generation: 281 tokens, 33.074 tokens-per-sec
+Prompt: 98 tokens, 68.674 tokens-per-sec
+Generation: 281 tokens, 32.844 tokens-per-sec
 Peak memory: 14.611 GB
 
 # response
@@ -95,4 +96,4 @@ Running this script will output:
 just like the original C program.
 .
 
-============================== 1 passed in 14.03s ==============================
+============================== 1 passed in 14.19s ==============================

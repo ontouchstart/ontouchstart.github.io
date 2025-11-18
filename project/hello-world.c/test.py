@@ -12,7 +12,7 @@ def test_content(page: Page):
     page.goto(url);
 
     code = page.locator("body").text_content()
-    print("```\n")
+    print("\n```\n")
     print(code)
     print("```")
     content = "convert following code to python: \n" + code 
