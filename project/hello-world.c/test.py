@@ -12,6 +12,9 @@ def test_content(page: Page):
     page.goto(url);
 
     code = page.locator("body").text_content()
+    print("```")
+    print(code)
+    print("```")
     content = "convert following code to python: \n" + code 
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(conversation=conversation, add_generation_prompt=True)

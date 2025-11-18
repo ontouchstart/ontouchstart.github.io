@@ -6,7 +6,15 @@ configfile: pyproject.toml
 plugins: base-url-2.1.0, playwright-0.7.1
 collected 1 item
 
-test.py 
+test.py ```
+#include <stdio.h>
+
+int main(void) {
+    printf("你好，世界\n");
+    return 0;
+}
+```
+
 # conversation
 
 ```
@@ -55,8 +63,8 @@ Running this script will output:
 
 just like the original C program.
 ==========
-Prompt: 98 tokens, 65.216 tokens-per-sec
-Generation: 281 tokens, 33.060 tokens-per-sec
+Prompt: 98 tokens, 69.528 tokens-per-sec
+Generation: 281 tokens, 32.579 tokens-per-sec
 Peak memory: 14.611 GB
 
 # response
@@ -94,4 +102,4 @@ just like the original C program.
 ```
 .
 
-============================== 1 passed in 14.09s ==============================
+============================== 1 passed in 14.18s ==============================
