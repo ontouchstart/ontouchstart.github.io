@@ -5,4 +5,8 @@ Every pothole has a rabbit hole underneath.
 - Read books and research papers on Kindle Scribe
 - Research in minimalist AI & ML on a MacBook M5
 
-
+```
+uv init
+uv add
+uv run
+```
