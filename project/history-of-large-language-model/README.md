@@ -1,4 +1,39 @@
 # History of large language model
+## mlx-community/Llama-3.2-3B-Instruct-4bit
+
+Here's a high-level overview of the history of large language models:
+
+**Early Beginnings (1950s-1980s)**
+
+* The concept of natural language processing (NLP) dates back to the 1950s, with the development of the first computer-based language translation systems.
+* In the 1960s and 1970s, researchers like Noam Chomsky and Marvin Minsky explored the idea of machine learning and language understanding.
+
+**Rule-Based Systems (1980s-1990s)**
+
+* In the 1980s and 1990s, rule-based systems became popular, which relied on hand-crafted rules to process and generate human-like language.
+* These systems were often used in applications like text summarization, sentiment analysis, and machine translation.
+
+**Statistical Models (1990s-2000s)**
+
+* In the 1990s and 2000s, statistical models like n-gram models and hidden Markov models became popular, which used statistical techniques to predict language patterns.
+* These models were often used in applications like language translation, speech recognition, and text classification.
+
+**Deep Learning (2000s-2010s)**
+
+* In the 2000s and 2010s, deep learning techniques like recurrent neural networks (RNNs) and long short-term memory (LSTM) networks became popular, which enabled the model to learn complex patterns in language.
+* This led to the development of more sophisticated language models, like sequence-to-sequence models and attention-based models.
+
+**Large Language Models (2010s-present)**
+
+* In the 2010s, large language models like BERT, RoBERTa, and XLNet were developed, which used transformer architectures and massive amounts of data to learn complex language representations.
+* These models have achieved state-of-the-art results in various NLP tasks, such as language translation, text classification, and question answering.
+
+**Recent Advances (2020s)**
+
+* In recent years, there has been a surge in the development of large language models, with the introduction of models like BART, T5, and Longformer.
+* These models have achieved even better results than their predecessors, and have opened up new possibilities for NLP applications, such as conversational AI and language generation.
+
+Overall, the history of large language models has been marked by a series of innovations and advancements, from the early days of rule-based systems to the current era of transformer-based models.
 ## mlx-community/Mistral-7B-Instruct-v0.3-4bit
 
 The history of large language models can be traced back to the early days of artificial intelligence (AI) research, but significant progress has been made in the last few decades, particularly with the advent of deep learning techniques. Here's a high-level overview:

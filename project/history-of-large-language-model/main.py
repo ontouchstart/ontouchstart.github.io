@@ -18,6 +18,7 @@ def main():
     print("# History of large language model")
 
     repos = [
+        "mlx-community/Llama-3.2-3B-Instruct-4bit",
         "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
         "openai/gpt-oss-20b"
     ]
