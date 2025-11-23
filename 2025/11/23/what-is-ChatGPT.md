@@ -1,5 +1,5 @@
 # What is ChatGPT?
-### user
+### User
 What is ChatGPT?
 ### openai/gpt-oss-20b
 
@@ -107,7 +107,8 @@ final
 | *Can it think?* | It doesn’t have consciousness; it predicts text based on patterns. |
 | *Is it free?* | OpenAI offers free tiers and paid plans; usage limits vary. |
 | *Can it learn from my conversations?* | Not in real
-### user
+
+### User
 Translate it into Chinese.
 ### openai/gpt-oss-20b
 
@@ -213,3 +214,4 @@ final
 |------|------|
 | *ChatGPT 是真人吗？* | 不是，它是模拟对话的软体模型。 |
 | *它能思考吗？* | 它没有意识；只是根据模式
+

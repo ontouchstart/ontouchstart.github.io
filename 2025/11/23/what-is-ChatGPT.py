@@ -12,7 +12,7 @@ for content in [
     "What is ChatGPT?",
     "Translate it into Chinese."
     ]:
-    print("### user")
+    print("### User")
     print(content)
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(conversation=conversation, add_generation_prompt=True)
@@ -22,3 +22,4 @@ for content in [
         result = result.replace("<|", "\n\n<|")
         result = result.replace("|>", "|>\n\n")
         print(result)
+        print()
