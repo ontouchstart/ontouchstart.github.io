@@ -13,14 +13,14 @@ print("# Wang Hao and computer assisted proof on an IBM 704")
 
 for content in [
     "Find more information about \"In 1959, Wang Hao wrote on an IBM 704 computer a program that in only 9 minutes mechanically proved several hundred mathematical logic theorems in Whitehead and Russell's Principia Mathematica.\"",
+    "Translate what you have learnd into Chinese.",
     "You have made up a lot of fabricated information. Why do you do it?",
-    "Translate what you have learnd into Chinese."
     ]:
     print("### User")
     print(content)
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(conversation=conversation, add_generation_prompt=True)
-    results = generate(model=model, tokenizer=tokenizer, prompt=prompt, max_tokens=4028, prompt_cache=prompt_cache),
+    results = generate(model=model, tokenizer=tokenizer, prompt=prompt, max_tokens=1024*6, prompt_cache=prompt_cache),
     print("### " + model_name)
     for result in results:
         result = result.replace("<|", "\n\n<|")
