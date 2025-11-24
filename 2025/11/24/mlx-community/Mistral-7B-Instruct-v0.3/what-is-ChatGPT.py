@@ -22,7 +22,5 @@ for content in [
     results = generate(model=model, tokenizer=tokenizer, prompt=prompt, max_tokens=1024, prompt_cache=prompt_cache),
     print("### " + model_name)
     for result in results:
-        result = result.replace("<|", "\n\n<|")
-        result = result.replace("|>", "|>\n\n")
         print(result)
         print()
