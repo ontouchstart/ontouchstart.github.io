@@ -6,7 +6,7 @@ model_name = "openai/gpt-oss-20b"
 model, tokenizer = load(model_name)
 prompt_cache = make_prompt_cache(model)
 
-print("# Wang Hao and computer assisted proof on an IMB 740")
+print("# Wang Hao and computer assisted proof on an IBM 740")
 
 for content in [
     "Find more information about Wang Hao wrote on an IBM 704 computer a program that in only 9 minutes mechanically proved several hundred mathematical logic theorems in Whitehead and Russell's Principia Mathematica.",
