@@ -1,0 +1,10 @@
+[project]
+name = "gpt-oss-20b"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.122.0",
+    "mlx-lm>=0.28.3",
+]
