@@ -1,6 +1,7 @@
 # 2025/11/25
 ## Tokenizer matters
 `FastAPI/mlx-community/Mistral-7B-Instruct-v0.3/what-is-ChatGPT-tokens.json`
+
 ```
      1	{
      2	  "raw_tokens": [
@@ -58,6 +59,7 @@
     54	}
 ```
 `FastAPI/Qwen/Qwen3-30B-A3B-MLX-4bit/what-is-ChatGPT-tokens.json`
+
 ```
      1	{
      2	  "raw_tokens": [
@@ -127,6 +129,7 @@
     66	}
 ```
 `FastAPI/openai/gpt-oss-20b/what-is-ChatGPT-tokens.json`
+
 ```
      1	{
      2	  "raw_tokens": [
@@ -365,3 +368,4 @@
    235	    }
    236	  ]
    237	}
+```
