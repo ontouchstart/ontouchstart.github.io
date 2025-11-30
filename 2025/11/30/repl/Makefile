@@ -4,3 +4,7 @@ repl:
 
 log:
 	uv run python main.py | tee main.log
+	echo '`main.log`' > main.md
+	echo '```' >> main.md
+	cat -n main.log >> main.md
+	echo '```' >> main.md
