@@ -301,23 +301,20 @@ int main()
 
 ```cmake
 # CMakeLists.txt
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.14)          # Pick a version you know is present
 
-# Project name & language
-project(PrimeNumbers LANGUAGES CXX)
+project(PrimeSum LANGUAGES CXX)               # Project name & language
 
-# Require C++17
+# Set the C++ standard to C++17 (or newer if you prefer)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)                 # Don’t enable compiler‑specific extensions
 
-# Add the executable
-add_executable(primes main.cpp)
+# Add an executable target called "prime_sum" built from main.cpp
+add_executable(prime_sum main.cpp)
 
-# (Optional) Enable compiler warnings
-target_compile_options(primes PRIVATE
-    $<$<CXX_COMPILER_ID:MSVC>:/W4>
-    $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -pedantic>
-)
+# Optional: give the build a custom install path
+install(TARGETS prime_sum DESTINATION bin)
 ```
 
 **What this does**
@@ -333,10 +330,10 @@ target_compile_options(primes PRIVATE
 ## 3. Build & Run
 
 ```bash
-$ mkdir build && cd build
+$ mkdir -p build && cd build
 $ cmake ..          # configure
 $ cmake --build .   # build
-$ ./primes          # run
+$ ./prime_sum          # run
 ```
 
 You should see the list of prime numbers less than 1024 printed to the console, one per line.

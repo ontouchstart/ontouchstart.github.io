@@ -1,5 +1,5 @@
 # CMakeLists.txt
-cmake_minimum_required(VERSION 3.10)          # Pick a version you know is present
+cmake_minimum_required(VERSION 3.14)          # Pick a version you know is present
 
 project(PrimeSum LANGUAGES CXX)               # Project name & language
 
