@@ -536,14 +536,16 @@ Embedding Metal library
 ./llama.cpp/build/bin/llama-server -m ~/gguf/gpt-oss-20b-mxfp4.gguf --ctx-size 0 --jinja -ub 2048 -b 2048
 ```
 
-# upload a pdf to test
+# upload a [pdf](1706.03762v7.pdf) to test
+
+llama.cpp web UI (math rendered)
 
 ![Screenshot%202025-12-01%20at%206.20.53%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.20.53%E2%80%AFPM.png)
-![Screenshot%202025-12-01%20at%206.39.33%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.39.33%E2%80%AFPM.png)
 ![Screenshot%202025-12-01%20at%206.40.43%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.40.43%E2%80%AFPM.png)
 ![Screenshot%202025-12-01%20at%206.40.54%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.40.54%E2%80%AFPM.png)
 ![Screenshot%202025-12-01%20at%206.41.06%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.41.06%E2%80%AFPM.png)
 ![Screenshot%202025-12-01%20at%206.21.12%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.21.12%E2%80%AFPM.png)
+
 
 **“Attention Is All You Need” – Summary**
 
