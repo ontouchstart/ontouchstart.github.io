@@ -539,6 +539,10 @@ Embedding Metal library
 # upload a pdf to test
 
 ![Screenshot%202025-12-01%20at%206.20.53%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.20.53%E2%80%AFPM.png)
+![Screenshot%202025-12-01%20at%206.39.33%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.39.33%E2%80%AFPM.png)
+![Screenshot%202025-12-01%20at%206.40.43%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.40.43%E2%80%AFPM.png)
+![Screenshot%202025-12-01%20at%206.40.54%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.40.54%E2%80%AFPM.png)
+![Screenshot%202025-12-01%20at%206.41.06%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.41.06%E2%80%AFPM.png)
 ![Screenshot%202025-12-01%20at%206.21.12%E2%80%AFPM.png](Screenshot%202025-12-01%20at%206.21.12%E2%80%AFPM.png)
 
 **“Attention Is All You Need” – Summary**
