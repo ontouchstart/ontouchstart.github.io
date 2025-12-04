@@ -1,0 +1,9 @@
+[project]
+name = "what-time-is-it-now"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "mlx-lm>=0.28.4",
+]
