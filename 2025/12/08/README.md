@@ -1,4 +1,4 @@
-# 2025/11/08
+# 2025/12/08 What does this Makefile do?
 
 ```
 % uv run explain_Makefile.py
