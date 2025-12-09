@@ -227,9 +227,6 @@ POST http://localhost:8000/generate
 ```
 
 That’s all there is to it!
-```
-
-
 
 ```
 % uv run explain_test.py  
