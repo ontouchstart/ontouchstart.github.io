@@ -375,4 +375,3 @@ Identical to `test_post_tokens`, but for the **POST /generate** endpoint.  Scree
 ### Bottom line
 
 `test.py` is a small, self‑contained Playwright test suite that automates the Swagger UI of a FastAPI app, exercises four endpoints, and captures screenshots of both the request payload and the response body. It’s useful for quick visual regression checks, documentation, or as part of a larger automated test pipeline
-```
