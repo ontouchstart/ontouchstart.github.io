@@ -122,3 +122,23 @@ make ruff
 
 Feel free to add more targets (e.g., `make docs`, `make clean`) as your project grows. The Makefile keeps the command line short and consistent across developers.
 
+
+## Screenshots from `make test`
+
+![](get_tokens-request.png)
+![](get_tokens-response.png)	
+
+---
+
+![](get_generate-request.png)
+![](get_generate-response.png)
+
+---
+
+![](post_tokens-request.png)
+![](post_tokens-response.png)
+
+---
+
+![](post_generate-request.png)	
+![](post_generate-response.png)
