@@ -1,0 +1,12 @@
+[project]
+name = "10"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "ipython>=9.8.0",
+    "mlx-lm>=0.28.4",
+    "ruff>=0.14.8",
+]
