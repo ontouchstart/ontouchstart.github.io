@@ -1,5 +1,7 @@
 import json
+import os
 import requests
+import sys
 
 from mlx_lm import generate, load
 from mlx_lm.models.cache import make_prompt_cache
@@ -116,7 +118,7 @@ def gist(id: str):
     Args:
         id: id of the gist
     """
-    url = f"https://gist.github.com/ontouchstart/{id}"
+    url = f"https://gist.github.com/{id}"
     text = requests.get(url).text
     print("gist")
     print(url)
@@ -135,7 +137,7 @@ tools = {"gist": gist}
 
 
 def gist_review(id: str):
-    prompt = f"Review the gist from {id} and detect if there are any computer code in the body. If the gist has comments, list the comments and authors."
+    prompt = f"Review and print the files in gist {id}, including markdown files. If the gist has comments, list the comments and authors."
     messages = [{"role": "user", "content": prompt}]
 
     prompt = tokenizer.apply_chat_template(
@@ -180,5 +182,26 @@ def gist_review(id: str):
 
 
 if __name__ == "__main__":
-    id = "602d20c876c9d7dfc07f2ab05c725754"
-    print(gist_review(id))
+    if len(sys.argv) > 1:
+        id = sys.argv[1]
+    else:
+        id = "awni/ab251213217adf3798d1b6852bbd9d01"
+    source = f"https://gist.github.com/{id}\n\n"
+    content = source + gist_review(id)
+    GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
+    url = "https://api.github.com/gists"
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json",
+    }
+    data = {
+        "description": f"gist_review for {id}",
+        "public": False,
+        "files": {"Review.md": {"content": content}},
+    }
+    print(headers)
+
+    print(json.dumps(data))
+
+    response = requests.post(url, headers=headers, data=json.dumps(data))
+    print(response)
