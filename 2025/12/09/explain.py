@@ -13,12 +13,14 @@ def explain(file_name: str):
         conversation = [
             {
                 "role": "user",
-                "content": f"Explain program {file_name} line by line\n {content}",
+                "content": f"Print out {file_name} line by line with comments to explain each of them.\n {content}",
             }
         ]
         print(conversation)
         prompt = tokenizer.apply_chat_template(
-            conversation=conversation, add_generation_prompt=True
+            conversation=conversation,
+            add_generation_prompt=True,
+            reasoning_effort="low",
         )
         print(prompt)
 
