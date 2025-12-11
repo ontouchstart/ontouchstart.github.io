@@ -85,7 +85,7 @@ print("Current time:", current_time.strftime("%H:%M:%S"))
 ```python
 import datetime
 
-utc_now = datetime.datetime.utcnow()
+utc_now = datetime.datetime.now(datetime.UTC)
 print("UTC time:", utc_now.strftime("%Y-%m-%d %H:%M:%S"))
 ```
 
