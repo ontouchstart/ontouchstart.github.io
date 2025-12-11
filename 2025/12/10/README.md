@@ -1,6 +1,9 @@
 `uv run ask.py`
+
 <|channel|>analysis<|message|>User asks "What time is it?" We don't have real-time. We can say we don't have current time.<|end|><|start|>assistant<|channel|>final<|message|>I’m sorry, but I don’t have access to real‑time data, so I can’t tell you the current time. You can check a clock, your phone, or a computer for the most accurate time.
+
 `uv run main.py`
+
 Hello from 10!
 <|channel|>analysis<|message|>Need to explain extraction and running. Provide steps, maybe using regex or markdown parsing. Provide example.<|end|><|start|>assistant<|channel|>final<|message|>Below is a quick‑start guide that shows you how to:
 
@@ -157,6 +160,7 @@ Just paste the Markdown, hit the EOF key, and the REPL will execute all Python b
 
 That’s it! You can now pull Python code out of any Markdown document and run it directly in your REPL or script. Happy coding!
 `uv run extract_and_run_python_blocks.py`
+
 ## input (datetime.md)
 print(ask("How to tell time in python, make it simple?"))
 <|channel|>analysis<|message|>Need simple answer.<|end|><|start|>assistant<|channel|>final<|message|>### Quick & Simple: How to Tell the Current Time in Python
@@ -262,12 +266,12 @@ That’s all you need to “tell time” in Python. Happy coding!
 
 ## output
 ```
-Current time: 2025-12-10 20:49:04
-Current time: 20:49:04
-UTC time: 2025-12-11 01:49:04
-2025-12-10 20:49:04
-Current time: 2025-12-10 20:49:04
-Current time: 20:49:04
-UTC time: 2025-12-11 01:49:04
-2025-12-10 20:49:04
+Current time: 2025-12-10 20:52:39
+Current time: 20:52:39
+UTC time: 2025-12-11 01:52:39
+2025-12-10 20:52:39
+Current time: 2025-12-10 20:52:39
+Current time: 20:52:39
+UTC time: 2025-12-11 01:52:39
+2025-12-10 20:52:39
 ```
