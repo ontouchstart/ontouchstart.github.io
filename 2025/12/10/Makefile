@@ -10,3 +10,10 @@ ruff:
 	uv run ruff check
 	uv run ruff format
 
+test:
+	echo '`uv run ask.py`' > README.md
+	uv run ask.py >> README.md
+	echo '`uv run main.py`' >> README.md
+	uv run main.py >> README.md
+	echo '`uv run extract_and_run_python_blocks.py`' >> README.md
+	uv run extract_and_run_python_blocks.py >> README.md
