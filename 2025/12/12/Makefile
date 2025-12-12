@@ -1,6 +1,7 @@
 all:
 	uv add ipython ruff
 	uv add requests
+	uv add mlx_lm
 	uv run ruff check 
 	uv run ruff format 
 	echo '# 2025/12/12' > README.md
@@ -22,5 +23,10 @@ all:
 	echo '% uv run math.py' >> README.md
 	echo '```' >> README.md
 	uv run math.py >> README.md
+
+	echo '```' >> README.md
+	echo '% uv run history-of-LLM.py' >> README.md
+	echo '```' >> README.md
+	uv run history-of-LLM.py >> README.md
 
 	uv run ipython -i main.py
