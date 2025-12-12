@@ -1,5 +1,6 @@
 all:
 	uv add ipython ruff
+	uv add requests
 	uv run ruff check 
 	uv run ruff format 
 	echo '# 2025/12/12' > README.md
