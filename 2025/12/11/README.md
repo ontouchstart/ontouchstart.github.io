@@ -1,11 +1,14 @@
 # 2025/12/11 The Zen of Python
 `uv run main.py`
 
-Hello from 11!
 `create_github_gist(file_name, file_content, description)`
-[gist](https://gist.github.com/325d376e4efa29922cd3383497124b5c)
 
-`run_python_blocks_from_gist(325d376e4efa29922cd3383497124b5c)`
+
+[gist](https://gist.github.com/f79c1fcefb4874332f72da515688c814)
+
+
+`run_python_blocks_from_gist(f79c1fcefb4874332f72da515688c814)`
+
 
 `zen.md`
 
