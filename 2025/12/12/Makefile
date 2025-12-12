@@ -1,7 +1,9 @@
-all:
+install:
 	uv add ipython ruff
 	uv add requests
 	uv add mlx_lm
+
+build:
 	uv run ruff check 
 	uv run ruff format 
 	echo '# 2025/12/12' > README.md
@@ -29,4 +31,6 @@ all:
 	echo '```' >> README.md
 	uv run history-of-LLM.py >> README.md
 
+
+repl:
 	uv run ipython -i main.py
