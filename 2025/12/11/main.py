@@ -20,8 +20,8 @@ import this
 
 """
     description = "Zen"
-    print("create_github_gist(file_name, file_content, description)")
+    print("`create_github_gist(file_name, file_content, description)`")
     id = create_github_gist(file_name, file_content, description)
-    print(f"https://gist.github.com/{id}")
-    print(f"run_python_blocks_from_gist({id})")
+    print(f"[gist](https://gist.github.com/{id})\n")
+    print(f"`run_python_blocks_from_gist({id})`\n")
     run_python_blocks_from_gist(id)

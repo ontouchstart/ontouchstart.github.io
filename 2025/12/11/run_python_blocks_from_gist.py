@@ -24,7 +24,6 @@ def run_python_blocks_from_gist(id):
     files = data["files"]
     for file in files:
         md_text = files[file]["content"]
-        print(url)
         print(f"`{file}`")
         print(md_text)
         print("## output")

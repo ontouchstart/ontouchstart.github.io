@@ -2,10 +2,11 @@
 `uv run main.py`
 
 Hello from 11!
-create_github_gist(file_name, file_content, description)
-https://gist.github.com/74510ea0eb58201141b83d03b4c2ea7b
-run_python_blocks_from_gist(74510ea0eb58201141b83d03b4c2ea7b)
-https://api.github.com/gists/74510ea0eb58201141b83d03b4c2ea7b
+`create_github_gist(file_name, file_content, description)`
+[gist](https://gist.github.com/325d376e4efa29922cd3383497124b5c)
+
+`run_python_blocks_from_gist(325d376e4efa29922cd3383497124b5c)`
+
 `zen.md`
 
 # The Zen of Python
