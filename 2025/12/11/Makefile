@@ -11,7 +11,7 @@ ruff:
 	uv run ruff format
 
 test:
-	echo '# 2025/12/11' > README.md
+	echo '# 2025/12/11 The Zen of Python' > README.md
 	echo '`uv run main.py`' >> README.md
 	echo >> README.md
 	uv run main.py >> README.md
