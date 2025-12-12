@@ -12,4 +12,15 @@ all:
 	echo '% uv run ipython main.py' >> README.md
 	uv run ipython main.py >> README.md
 	echo '```' >> README.md
+
+	echo '```' >> README.md
+	echo '% uv run mermaid.py' >> README.md
+	echo '```' >> README.md
+	uv run mermaid.py >> README.md
+
+	echo '```' >> README.md
+	echo '% uv run math.py' >> README.md
+	echo '```' >> README.md
+	uv run math.py >> README.md
+
 	uv run ipython -i main.py
