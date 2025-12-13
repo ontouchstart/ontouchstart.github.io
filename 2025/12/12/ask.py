@@ -1,11 +1,7 @@
 from mlx_lm import generate, load
 
-organization_name = "openai"
-model_name = "gpt-oss-20b"
-model, tokenizer = load(f"{organization_name}/{model_name}")
 
-
-def ask(question: str):
+def ask(question: str, model, tokenizer):
     content = f"Please answer this question?\n{question}"
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(
@@ -17,4 +13,8 @@ def ask(question: str):
 
 if __name__ == "__main__":
     question = "What time is it?"
-    ask(question)
+    organization_name = "openai"
+    model_name = "gpt-oss-20b"
+    model, tokenizer = load(f"{organization_name}/{model_name}")
+    result = ask(question, model=model, tokenizer=tokenizer)
+    print(result)

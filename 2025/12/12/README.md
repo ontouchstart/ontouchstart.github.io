@@ -20,17 +20,17 @@ Hello from 12!
 Not in iPython 
 % uv run ipython main.py
 Hello from 12!
-<IPython.terminal.interactiveshell.TerminalInteractiveShell object at 0x109ebd160>
+<IPython.terminal.interactiveshell.TerminalInteractiveShell object at 0x109551d30>
 ```
 ```
 % uv run mermaid.py
 ```
-[gist](https://gist.github.com/2467c4b709cefeebc8e4fac8d7b014db)
+[gist](https://gist.github.com/e65190b485cfdf2a13d7e5c0c2cf82d5)
 ```
 % uv run math.py
 ```
-[gist](https://gist.github.com/4569434d2453e4deb7a96b315d6f4d30)
+[gist](https://gist.github.com/e79378752910216a335944422e019efd)
 ```
 % uv run history-of-LLM.py
 ```
-[gist](https://gist.github.com/9d157d6c713121fd3d60f0023516baf9)
+[gist](https://gist.github.com/c6cc53bf4c6b5991b5ad294351ffdc57)
