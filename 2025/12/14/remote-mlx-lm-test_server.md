@@ -1,4 +1,4 @@
-...## [code](https://raw.githubusercontent.com/ml-explore/mlx-lm/refs/heads/main/tests/test_server.py)
+## [code](https://raw.githubusercontent.com/ml-explore/mlx-lm/refs/heads/main/tests/test_server.py)
 ```python
 # Copyright © 2024 Apple Inc.
 
