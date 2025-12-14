@@ -1,5 +1,4 @@
-from mlx_lm import generate, load
-from mlx_lm.models.cache import make_prompt_cache
+from mlx_lm import load
 from extract_and_run_python_blocks import run_python_blocks, extract_python_blocks
 from ask import ask
 
