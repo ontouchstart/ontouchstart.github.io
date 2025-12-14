@@ -18,6 +18,10 @@ def ask(questions, model, tokenizer):
             max_tokens=4096,
             prompt_cache=prompt_cache,
         )
+        print("## conversation")
+        print(conversation)
+        print("## result")
+        print(result)
     return result
 
 
