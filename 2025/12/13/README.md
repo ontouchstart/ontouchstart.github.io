@@ -30,5 +30,8 @@ print(get_current_time("%I:%M %p"))  # 12‑hour clock with AM/PM
 ```
 
 You can import `get_current_time` wherever you need it without turning the script into a standalone executable.
-2025-12-13 20:19:01
-08:19 PM
+
+```run_python_blocks(extract_python_blocks(md))```
+
+2025-12-13 20:26:41
+08:26 PM

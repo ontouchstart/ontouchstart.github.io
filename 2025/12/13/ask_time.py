@@ -14,4 +14,5 @@ if __name__ == "__main__":
     model, tokenizer = load(f"{organization_name}/{model_name}")
     md = ask(questions, model=model, tokenizer=tokenizer)
     print(md)
+    print("\n```run_python_blocks(extract_python_blocks(md))```\n")
     run_python_blocks(extract_python_blocks(md))
