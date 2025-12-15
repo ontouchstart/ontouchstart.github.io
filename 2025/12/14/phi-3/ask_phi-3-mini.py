@@ -7,5 +7,4 @@ if __name__ == "__main__":
         "Okay now more serious answer, and note that this was achieved solely by changing the training data.",
     ]
     model, tokenizer = load("mlx-community/Phi-3.5-mini-instruct-4bit")
-    md = ask(questions, model=model, tokenizer=tokenizer)
-    print(md)
+    ask(questions, model=model, tokenizer=tokenizer)
