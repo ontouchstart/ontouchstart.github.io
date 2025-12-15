@@ -1,8 +1,8 @@
 ==========
 The square root of 20 is approximately 5.646.
 ==========
-Prompt: 28 tokens, 655.259 tokens-per-sec
-Generation: 17 tokens, 406.288 tokens-per-sec
+Prompt: 28 tokens, 604.330 tokens-per-sec
+Generation: 17 tokens, 415.131 tokens-per-sec
 Peak memory: 0.309 GB
 ## conversation
 [{'role': 'user', 'content': 'What is the square root of 20?'}]
@@ -20,9 +20,9 @@ print("The square root of 20 is:", sqrt_20)
 
 When you run this program, it will output the result of 5.646.
 ==========
-Prompt: 32 tokens, 1887.799 tokens-per-sec
-Generation: 85 tokens, 284.211 tokens-per-sec
-Peak memory: 0.309 GB
+Prompt: 32 tokens, 757.192 tokens-per-sec
+Generation: 85 tokens, 331.912 tokens-per-sec
+Peak memory: 0.314 GB
 ## conversation
 [{'role': 'user', 'content': 'Write a python program to compute the square root of 20.'}]
 ## result
@@ -49,9 +49,9 @@ print("The square root of 20 is:", sqrt_20)
 
 When you run this program, it will output the result of 5.646.
 ==========
-Prompt: 24 tokens, 1361.007 tokens-per-sec
-Generation: 180 tokens, 259.293 tokens-per-sec
-Peak memory: 0.336 GB
+Prompt: 24 tokens, 1386.161 tokens-per-sec
+Generation: 180 tokens, 291.549 tokens-per-sec
+Peak memory: 0.322 GB
 ## conversation
 [{'role': 'user', 'content': 'Your answer is made up.'}]
 ## result
@@ -79,9 +79,9 @@ print("The square root of 20 is:", sqrt_20)
 
 When you run this program, it will output the result of 5.646.
 ==========
-Prompt: 28 tokens, 1328.252 tokens-per-sec
-Generation: 177 tokens, 249.830 tokens-per-sec
-Peak memory: 0.349 GB
+Prompt: 28 tokens, 489.963 tokens-per-sec
+Generation: 177 tokens, 279.269 tokens-per-sec
+Peak memory: 0.361 GB
 ## conversation
 [{'role': 'user', 'content': 'How did you get the answer without using tools?'}]
 ## result
@@ -109,9 +109,9 @@ print("The square root of 20 is:", sqrt_20)
 
 When you run this program, it will output the result of 5.646.
 ==========
-Prompt: 33 tokens, 1499.316 tokens-per-sec
-Generation: 177 tokens, 236.012 tokens-per-sec
-Peak memory: 0.402 GB
+Prompt: 33 tokens, 586.185 tokens-per-sec
+Generation: 177 tokens, 260.724 tokens-per-sec
+Peak memory: 0.377 GB
 ## conversation
 [{'role': 'user', 'content': "If you do not know the answer, just say you don't know."}]
 ## result

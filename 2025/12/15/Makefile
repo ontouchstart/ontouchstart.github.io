@@ -21,4 +21,11 @@ build:
 	echo "- [ask_openai_gpt-oss-20b_math](ask_openai_gpt-oss-20b_math)" >> README.md
 	uv run ask_openai_gpt-oss-20b_math.py > ask_openai_gpt-oss-20b_math.md
 
-	echo "It is intentional to keep these scripts self contained without shared lib." >> README.md
+	echo "\n\nIt is intentional to keep these scripts self contained without shared lib because we can run the script remotely like this:\n" >> README.md
+
+	echo '```uv run remote-ask_mlx-community_Qwen3-4B-4bit_math.py```' >> README.md
+	uv run remote-ask_mlx-community_Qwen3-4B-4bit_math.py >> README.md
+
+	echo '```uv run remote-ask_openai_gpt-oss-20b_math.py```' >> README.md
+	uv run remote-ask_openai_gpt-oss-20b_math.py >> README.md
+

@@ -1,8 +1,8 @@
 ==========
 The square root of 20 is approximately 4.47213595499958. However, since 20 is not a perfect square, the square root is an irrational number, meaning it cannot be exactly expressed as a finite decimal or a fraction. It will continue indefinitely without repeating.
 ==========
-Prompt: 13 tokens, 6.919 tokens-per-sec
-Generation: 73 tokens, 7.619 tokens-per-sec
+Prompt: 13 tokens, 5.405 tokens-per-sec
+Generation: 73 tokens, 8.713 tokens-per-sec
 Peak memory: 14.630 GB
 ## conversation
 [{'role': 'user', 'content': 'What is the square root of 20?'}]
@@ -31,8 +31,8 @@ print(root)
 
 This will output the square root of 20 with 10 decimal places of precision.
 ==========
-Prompt: 17 tokens, 27.685 tokens-per-sec
-Generation: 184 tokens, 7.570 tokens-per-sec
+Prompt: 17 tokens, 29.913 tokens-per-sec
+Generation: 184 tokens, 8.657 tokens-per-sec
 Peak memory: 14.630 GB
 ## conversation
 [{'role': 'user', 'content': 'Write a python program to compute the square root of 20.'}]
@@ -71,8 +71,8 @@ print(root)
 
 This will output the square root of 20 with 10 decimal places of precision. You can adjust the precision by changing the value of `getcontext().prec`.
 ==========
-Prompt: 9 tokens, 20.210 tokens-per-sec
-Generation: 145 tokens, 7.502 tokens-per-sec
+Prompt: 9 tokens, 22.078 tokens-per-sec
+Generation: 145 tokens, 8.615 tokens-per-sec
 Peak memory: 14.631 GB
 ## conversation
 [{'role': 'user', 'content': 'Your answer is made up.'}]
@@ -113,8 +113,8 @@ print(sqrt(20))
 
 This code will output the square root of 20 with a tolerance of 0.000001. You can adjust the tolerance to get a more or less accurate result.
 ==========
-Prompt: 13 tokens, 28.475 tokens-per-sec
-Generation: 300 tokens, 7.415 tokens-per-sec
+Prompt: 13 tokens, 30.199 tokens-per-sec
+Generation: 300 tokens, 8.562 tokens-per-sec
 Peak memory: 14.664 GB
 ## conversation
 [{'role': 'user', 'content': 'How did you get the answer without using tools?'}]
@@ -167,8 +167,8 @@ print(sqrt(20))
 
 This code will output the square root of 20 with a tolerance of 0.000001. You can adjust the tolerance to get a more or less accurate result.
 ==========
-Prompt: 19 tokens, 30.281 tokens-per-sec
-Generation: 358 tokens, 7.337 tokens-per-sec
+Prompt: 19 tokens, 32.643 tokens-per-sec
+Generation: 358 tokens, 8.485 tokens-per-sec
 Peak memory: 14.679 GB
 ## conversation
 [{'role': 'user', 'content': "If you do not know the answer, just say you don't know."}]

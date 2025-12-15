@@ -5,9 +5,9 @@
 \sqrt{20}=2\sqrt{5}\approx 4.47213595499958.
 \]
 ==========
-Prompt: 76 tokens, 47.407 tokens-per-sec
-Generation: 61 tokens, 24.303 tokens-per-sec
-Peak memory: 14.611 GB
+Prompt: 76 tokens, 27.127 tokens-per-sec
+Generation: 61 tokens, 27.729 tokens-per-sec
+Peak memory: 14.893 GB
 ## conversation
 [{'role': 'user', 'content': 'What is the square root of 20?'}]
 ## result
@@ -50,9 +50,9 @@ The square root of 20 is 4.47213595499958
 
 Feel free to adjust the formatting or use `**0.5` instead of `math.sqrt` if you prefer.
 ==========
-Prompt: 80 tokens, 144.195 tokens-per-sec
-Generation: 218 tokens, 24.524 tokens-per-sec
-Peak memory: 14.611 GB
+Prompt: 80 tokens, 153.945 tokens-per-sec
+Generation: 218 tokens, 27.734 tokens-per-sec
+Peak memory: 14.893 GB
 ## conversation
 [{'role': 'user', 'content': 'Write a python program to compute the square root of 20.'}]
 ## result
@@ -93,9 +93,9 @@ Feel free to adjust the formatting or use `**0.5` instead of `math.sqrt` if you 
 The square root of 20 is **exactly** \(2\sqrt{5}\), which is approximately **4.47213595499958**.  
 If you need a program to compute it, the code I provided earlier will give that value. Let me know if you’d like a different approach or further clarification.
 ==========
-Prompt: 73 tokens, 151.557 tokens-per-sec
-Generation: 90 tokens, 24.425 tokens-per-sec
-Peak memory: 14.611 GB
+Prompt: 73 tokens, 154.298 tokens-per-sec
+Generation: 90 tokens, 28.435 tokens-per-sec
+Peak memory: 14.893 GB
 ## conversation
 [{'role': 'user', 'content': 'Your answer is made up.'}]
 ## result
@@ -122,9 +122,9 @@ If you need a program to compute it, the code I provided earlier will give that 
 So the exact answer is \(2\sqrt{5}\).  
 If you want a decimal approximation, you can remember that \(\sqrt{5}\) is about 2.2360679, and multiplying by 2 gives roughly 4.4721359. This is how I arrived at the value without any external tools.
 ==========
-Prompt: 77 tokens, 137.941 tokens-per-sec
-Generation: 250 tokens, 24.026 tokens-per-sec
-Peak memory: 14.611 GB
+Prompt: 77 tokens, 158.025 tokens-per-sec
+Generation: 250 tokens, 27.440 tokens-per-sec
+Peak memory: 14.893 GB
 ## conversation
 [{'role': 'user', 'content': 'How did you get the answer without using tools?'}]
 ## result
@@ -149,9 +149,9 @@ If you want a decimal approximation, you can remember that \(\sqrt{5}\) is about
 ==========
 <|channel|>analysis<|message|>Follow instruction.<|end|><|start|>assistant<|channel|>final<|message|>I don’t know.
 ==========
-Prompt: 81 tokens, 161.574 tokens-per-sec
-Generation: 18 tokens, 25.842 tokens-per-sec
-Peak memory: 14.611 GB
+Prompt: 81 tokens, 164.203 tokens-per-sec
+Generation: 18 tokens, 29.173 tokens-per-sec
+Peak memory: 14.893 GB
 ## conversation
 [{'role': 'user', 'content': "If you do not know the answer, just say you don't know."}]
 ## result
