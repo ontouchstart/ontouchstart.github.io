@@ -2,6 +2,7 @@ install:
 	uv add ipython ruff
 	uv add requests
 	uv add mlx_lm
+	uv add openai
 
 build:
 	uv run ruff check
@@ -28,4 +29,13 @@ build:
 
 	echo '```uv run remote-ask_openai_gpt-oss-20b_math.py```' >> README.md
 	uv run remote-ask_openai_gpt-oss-20b_math.py >> README.md
+
+server:
+	uv run mlx_lm.server
+
+openai_tests:
+	uv run openai-client-mlx-community_Mistral-7B-Instruct-v0.3.py
+	uv run openai-client-mlx-community_Qwen1.5-0.5B-Chat-4bit.py
+	uv run openai-client-mlx-community_Qwen3-4B-4bit.py
+	uv run openai-client-openai_gpt-oss-20b.py
 
