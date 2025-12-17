@@ -1,10 +1,7 @@
-from openai import OpenAI
+from mlx_lm import generate, load
+from mlx_lm.models.cache import make_prompt_cache
 
-client = OpenAI(
-    base_url="http://localhost:8080/v1",  # The address of our mlx_lm.server
-    api_key="not-needed",  # No API key is needed for local inference
-)
-
+model, tokenizer = load("openai/gpt-oss-20b")
 
 questions = [
     "What is your name? What is my name?",
@@ -13,10 +10,18 @@ questions = [
     "How do you know?",
 ]
 
-messages = [{"role": "user", "content": content} for content in questions]
-completion = client.chat.completions.create(
-    messages=messages, model="openai/gpt-oss-20b"
-)
-
-for choice in completion.choices:
-    print(choice.message.content)
+prompt_cache = make_prompt_cache(model)
+for content in questions:
+  conversation = [{"role": "user", "content": content}]
+  prompt = tokenizer.apply_chat_template(
+    conversation=conversation,
+    add_generation_prompt=True,
+    reasoning_effort="low",
+  )
+  result = generate(
+     model=model,
+     tokenizer=tokenizer,
+     prompt=prompt,
+     prompt_cache=prompt_cache,
+  )
+  print(result)
