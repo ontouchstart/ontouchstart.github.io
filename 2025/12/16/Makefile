@@ -1,4 +1,5 @@
 install:
+	uv add ipython
 	uv add ruff
 	uv add mlx_lm
 	uv add openai
@@ -29,3 +30,12 @@ build:
 	echo '```' >> README.md
 	uv run learn-names-openai.py >> README.md
 	echo '```' >> README.md
+
+review:
+	echo '```uv run review-learn-names.py > review-learn-names.md```' >> README.md
+	echo '[review-learn-names](review-learn-names)' >> README.md
+	uv run review-learn-names.py > review-learn-names.md
+
+	echo '```uv run review-learn-names-openai.py > review-learn-names-openai.md```' >> README.md
+	echo '[review-learn-names-openai](review-learn-names-openai)' >> README.md
+	uv run review-learn-names-openai.py > review-learn-names-openai.md

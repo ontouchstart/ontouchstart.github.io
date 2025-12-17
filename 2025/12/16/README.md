@@ -66,3 +66,7 @@
 <|channel|>analysis<|message|>The user says: "What is your name? What is my name?" Then user says "My name is Sam." Then user repeats: "What is your name? What is your name?" Actually they wrote: "What is your name? What is my name?" again. Then "How do you know?" So the user is asking how I know their name. I should respond that I know because they told me. Also answer my name: I am ChatGPT. So respond: "I'm ChatGPT, and you told me your name is Sam." Also mention that I don't have memory beyond the conversation. So answer accordingly.<|end|><|start|>assistant<|channel|>final<|message|>I’m ChatGPT, the AI assistant you’re chatting with.  
 You told me your name is Sam, so that’s what I know. I don’t “remember” anything beyond this conversation, so I only know your name because you just shared it with me.<|return|>
 ```
+```uv run review-learn-names.py > review-learn-names.md```
+[review-learn-names](review-learn-names)
+```uv run review-learn-names-openai.py > review-learn-names-openai.md```
+[review-learn-names-openai](review-learn-names-openai)
