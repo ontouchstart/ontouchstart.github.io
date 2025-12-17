@@ -14,22 +14,22 @@ questions = [
 
 prompt_cache = make_prompt_cache(model)
 for content in questions:
-  conversation = [{"role": "user", "content": content}]
-  prompt = tokenizer.apply_chat_template(
-    conversation=conversation,
-    add_generation_prompt=True,
-    reasoning_effort="low",
-  )
-  result = generate(
-     model=model,
-     tokenizer=tokenizer,
-     prompt=prompt,
-     prompt_cache=prompt_cache,
-  )
-  print(result)
+    conversation = [{"role": "user", "content": content}]
+    prompt = tokenizer.apply_chat_template(
+        conversation=conversation,
+        add_generation_prompt=True,
+        reasoning_effort="low",
+    )
+    result = generate(
+        model=model,
+        tokenizer=tokenizer,
+        prompt=prompt,
+        prompt_cache=prompt_cache,
+    )
+    print(result)
 
 ```
-<|channel|>analysis<|message|>Explain code: loading model, tokenizer, prompt cache, loop over questions, build conversation, apply chat template, generate, print. Mention caching, reasoning_effort param.<|end|><|start|>assistant<|channel|>final<|message|>Below is a line‑by‑line walk‑through of what the script does, followed by a short “big picture” explanation of the key concepts (model loading, tokenization, prompt caching, and generation).
+<|channel|>analysis<|message|>Explain code, steps, prompt cache, tokenizer, generate, etc.<|end|><|start|>assistant<|channel|>final<|message|>Below is a line‑by‑line walk‑through of what the script does, why each piece is there, and how the pieces fit together to produce a short “chat” with a large language model (LLM) that lives locally on your machine.
 
 ---
 
@@ -40,27 +40,28 @@ from mlx_lm import generate, load
 from mlx_lm.models.cache import make_prompt_cache
 ```
 
-* `mlx_lm` is a lightweight inference library that ships with a handful of pre‑trained LLMs (e.g., GPT‑OSS‑20B).  
-* `load` pulls a model and its tokenizer from the local cache or downloads it if it’s not present.  
-* `generate` is the inference routine that turns a prompt into a text completion.  
-* `make_prompt_cache` creates a small in‑memory cache that stores the tokenized prompt so that the same prompt doesn’t have to be re‑tokenized on every call.
+| Symbol | What it is | Why we need it |
+|--------|------------|----------------|
+| `load` | A helper that downloads (or loads from disk) a pre‑trained model and its tokenizer. | Gives us a ready‑to‑use `model` and `tokenizer`. |
+| `generate` | The inference routine that runs the model on a prompt and returns the generated text. | The core function that actually produces the answer. |
+| `make_prompt_cache` | Builds a small in‑memory cache that stores the tokenized prompt and the hidden states that the model has already computed for that prompt. | Speeds up repeated calls that share the same prompt prefix (e.g., a conversation that keeps growing). |
 
 ---
 
-## 2. Load the model and tokenizer
+## 2. Load the model
 
 ```python
 model, tokenizer = load("openai/gpt-oss-20b")
 ```
 
-* The string `"openai/gpt-oss-20b"` identifies the checkpoint.  
-* `load` returns two objects:
-  * `model` – a PyTorch‑like `nn.Module` that can be called to produce logits.
+* `load` pulls the **GPT‑OSS‑20B** checkpoint (20 billion parameters) from the Hugging‑Face hub (or from a local cache if you’ve already downloaded it).  
+* It returns two objects:
+  * `model` – a `mlx`‑compatible neural network that can be executed on CPU or GPU.
   * `tokenizer` – a tokenizer that knows how to turn text into token IDs and back.
 
 ---
 
-## 3. Prepare a list of “questions”
+## 3. Prepare a list of “user” messages
 
 ```python
 questions = [
@@ -71,8 +72,8 @@ questions = [
 ]
 ```
 
-These strings will be fed to the model one at a time.  
-Notice that the first and third strings are identical – that’s intentional so we can see the benefit of the prompt cache.
+These strings will be fed one by one to the model as if they were spoken by a user in a chat.  
+Notice that the third string repeats the first question – this is intentional so we can see how the cache works.
 
 ---
 
@@ -82,8 +83,11 @@ Notice that the first and third strings are identical – that’s intentional s
 prompt_cache = make_prompt_cache(model)
 ```
 
-* The cache is keyed by the *tokenized* prompt.  
-* When the same prompt is requested again, the cached token IDs are reused, saving the cost of re‑tokenizing and re‑computing the attention masks.
+* The cache is a lightweight data structure that stores:
+  * The **tokenized prompt** (a list of token IDs).
+  * The **hidden states** that the model has already produced for that prompt.
+* When you generate a continuation for a prompt that is a prefix of a previously cached prompt, the cache lets you skip re‑computing the prefix.  
+* In this script the cache is reused for every call to `generate`, so the repeated question in the third item will be answered faster.
 
 ---
 
@@ -94,8 +98,8 @@ for content in questions:
     conversation = [{"role": "user", "content": content}]
 ```
 
-* Each iteration builds a minimal “conversation” list that mimics the format expected by the tokenizer’s chat template.  
-* The list contains a single message from the user.
+* Each iteration builds a **conversation** list that contains a single message from the user.  
+* The format `{"role": "user", "content": ...}` is the standard format used by many chat‑style tokenizers (e.g., the one used by OpenAI’s ChatGPT).
 
 ---
 
@@ -109,10 +113,11 @@ prompt = tokenizer.apply_chat_template(
 )
 ```
 
-* `apply_chat_template` turns the conversation list into a single string that follows the model’s chat format (e.g., `<|im_start|>user\n…<|im_end|>`).  
-* `add_generation_prompt=True` appends the special token that tells the model it should start generating a reply.  
-* `reasoning_effort="low"` is a custom flag that the tokenizer can use to decide how much “thinking” the model should do before answering (some models expose a “reasoning” mode).  
-* The resulting `prompt` is a plain Python string.
+* `apply_chat_template` turns the conversation list into a single string that the model can understand.  
+  * It inserts the special system/user/assistant tokens that the model was trained on.  
+  * It also adds a **generation prompt** (e.g., “Assistant:”) so the model knows it should start generating an answer.  
+* `reasoning_effort="low"` is a flag that tells the tokenizer to keep the prompt short (e.g., by trimming or summarizing the conversation).  
+  * This is useful when you have a long chat history but only want the model to focus on the most recent part.
 
 ---
 
@@ -127,36 +132,60 @@ result = generate(
 )
 ```
 
-* `generate` internally:
-  1. **Tokenizes** the prompt (or pulls the token IDs from `prompt_cache` if the same prompt was seen before).
-  2. **Runs the model** forward to produce logits for the next token.
-  3. **Samples** or greedily selects the next token (the default strategy in `mlx_lm` is greedy).
-  4. **Repeats** until an end‑of‑sequence token or a length limit is reached.
-  5. **Decodes** the token IDs back into a string.
+* `generate` runs the model on the tokenized prompt and produces a continuation.  
+* Because we passed `prompt_cache`, the function will:
+  1. Check if the current prompt is a prefix of a cached prompt.
+  2. If so, reuse the cached hidden states and only compute the new tokens.
+  3. If not, compute everything from scratch and store the new prompt in the cache.
 
-* Because the first and third questions are identical, the second time the same prompt is used the tokenizer will fetch the cached token IDs, skipping the expensive tokenization step.
+* The function returns the **generated text** as a plain string (the assistant’s answer).
 
 ---
 
-## 8. Print the result
+## 8. Print the answer
 
 ```python
 print(result)
 ```
 
-The output will be the model’s reply to each question, printed one after another.
+Each iteration prints the assistant’s reply to the user’s question.
 
 ---
 
-## Big‑Picture Summary
+## What you’ll see
 
-| Step | What happens | Why it matters |
-|------|--------------|----------------|
-| Load model & tokenizer | Pulls a 20‑B GPT‑OSS checkpoint | Gives you a ready‑to‑use LLM |
-| Build conversation | Wraps user text in a chat‑style dict | Matches the tokenizer’s expected format |
-| Apply chat template | Converts dict → prompt string | Adds system/user delimiters |
-| Prompt cache | Stores tokenized prompts | Avoids re‑tokenizing identical prompts |
-| Generate | Runs inference, decodes output | Produces the model’s answer |
-| Print | Shows the answer | Lets you see the result |
+Running the script will produce something like:
 
-The key takeaway is that the **prompt cache** is a lightweight optimization that can noticeably speed up repeated calls with the same prompt, especially for large models where tokenization and attention mask construction are non‑trivial.
+```
+My name is GPT‑OSS‑20B. I am a large language model trained by OpenAI.
+Sam, nice to meet you!
+My name is GPT‑OSS‑20B. I am a large language model trained by OpenAI.
+I don’t have a way to “know” things in the human sense; I generate responses based on patterns in the data I was trained on.
+```
+
+* The first answer explains the model’s identity.  
+* The second answer acknowledges the user’s name.  
+* The third answer repeats the first question (because the prompt was the same) and re‑uses the cached computation.  
+* The fourth answer addresses the user’s follow‑up.
+
+---
+
+## Why this is useful
+
+* **Local inference** – No API calls, no internet required.  
+* **Speed** – The prompt cache dramatically reduces latency for long or repeated conversations.  
+* **Flexibility** – You can plug in any `mlx`‑compatible model, change the tokenizer, or tweak the `reasoning_effort` flag to balance speed vs. fidelity.
+
+---
+
+### Quick recap of the flow
+
+1. Load model & tokenizer.  
+2. Create a prompt cache.  
+3. For each user message:
+   * Build a conversation object.  
+   * Convert it to a prompt string.  
+   * Generate a response (re‑using cached hidden states if possible).  
+   * Print the response.
+
+That’s all there is to it!

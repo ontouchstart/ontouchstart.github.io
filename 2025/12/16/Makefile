@@ -33,9 +33,9 @@ build:
 
 review:
 	echo '```uv run review-learn-names.py > review-learn-names.md```' >> README.md
-	echo '[review-learn-names](review-learn-names)' >> README.md
+	echo '\n[review-learn-names](review-learn-names)\n' >> README.md
 	uv run review-learn-names.py > review-learn-names.md
 
 	echo '```uv run review-learn-names-openai.py > review-learn-names-openai.md```' >> README.md
-	echo '[review-learn-names-openai](review-learn-names-openai)' >> README.md
+	echo '\n[review-learn-names-openai](review-learn-names-openai)\n' >> README.md
 	uv run review-learn-names-openai.py > review-learn-names-openai.md

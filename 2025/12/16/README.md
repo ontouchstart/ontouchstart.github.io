@@ -15,19 +15,19 @@
     12	
     13	prompt_cache = make_prompt_cache(model)
     14	for content in questions:
-    15	  conversation = [{"role": "user", "content": content}]
-    16	  prompt = tokenizer.apply_chat_template(
-    17	    conversation=conversation,
-    18	    add_generation_prompt=True,
-    19	    reasoning_effort="low",
-    20	  )
-    21	  result = generate(
-    22	     model=model,
-    23	     tokenizer=tokenizer,
-    24	     prompt=prompt,
-    25	     prompt_cache=prompt_cache,
-    26	  )
-    27	  print(result)
+    15	    conversation = [{"role": "user", "content": content}]
+    16	    prompt = tokenizer.apply_chat_template(
+    17	        conversation=conversation,
+    18	        add_generation_prompt=True,
+    19	        reasoning_effort="low",
+    20	    )
+    21	    result = generate(
+    22	        model=model,
+    23	        tokenizer=tokenizer,
+    24	        prompt=prompt,
+    25	        prompt_cache=prompt_cache,
+    26	    )
+    27	    print(result)
 ```
 ```uv run learn-names.py```
 ```
@@ -67,6 +67,10 @@
 You told me your name is Sam, so that’s what I know. I don’t “remember” anything beyond this conversation, so I only know your name because you just shared it with me.<|return|>
 ```
 ```uv run review-learn-names.py > review-learn-names.md```
+
 [review-learn-names](review-learn-names)
+
 ```uv run review-learn-names-openai.py > review-learn-names-openai.md```
+
 [review-learn-names-openai](review-learn-names-openai)
+
