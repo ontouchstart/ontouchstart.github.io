@@ -8,7 +8,6 @@
 ```
 % uv run joke.py > joke.md
 ```
-- [joke](joke)
 - [joke.py](joke.py)
 - [joke.md](joke.md)
 - [server.log](https://gist.githubusercontent.com/ontouchstart/cbbde6fcb9ebd61bc4dc0c08a892ebdf/raw/9ce2f09c2084bc4f8ede6f4eefb57011991d1cb7/server.log)
