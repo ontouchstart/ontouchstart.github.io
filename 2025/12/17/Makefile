@@ -1,7 +1,7 @@
 install:
 	uv add ipython
 	uv add ruff
-	uv add openai
+	uv add mlx_lm openai
 
 ruff:
 	uv run ruff check
