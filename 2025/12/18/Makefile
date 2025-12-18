@@ -3,6 +3,7 @@ install:
 	uv add ruff
 	uv add "git+https://github.com/ontouchstart/mlx-lm@main"
 	uv add "git+https://github.com/ontouchstart/openai-python"
+	uv add "git+https://github.com/ontouchstart/theoretical-and-practical-ml-ideas"
 
 ruff:
 	uv run ruff check
