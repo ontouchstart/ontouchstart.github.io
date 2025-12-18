@@ -1,9 +1,8 @@
 install:
 	uv add ipython
 	uv add ruff
-	uv add "git+https://github.com/ontouchstart/mlx-lm@main"
-	uv add "git+https://github.com/ontouchstart/openai-python"
-	uv add "git+https://github.com/ontouchstart/theoretical-and-practical-ml-ideas"
+	uv add "git+https://github.com/ontouchstart/openai-python" --no-cache
+	uv add "git+https://github.com/ontouchstart/theoretical-and-practical-ml-ideas" --no-cache
 
 ruff:
 	uv run ruff check
@@ -17,3 +16,6 @@ repl:
 
 joke.md: joke.py
 	uv run joke.py > joke.md
+
+learn-names.md: learn-names.py
+	uv run learn-names.py > learn-names.md

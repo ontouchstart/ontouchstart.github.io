@@ -1,7 +1,5 @@
-import ontouchstart
 def main():
-    print("Hello from 18!")
-    print(ontouchstart.hello())
+    print("Hello from tmp2!")
 
 
 if __name__ == "__main__":
