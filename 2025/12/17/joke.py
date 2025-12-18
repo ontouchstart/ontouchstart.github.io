@@ -17,4 +17,7 @@ completion = client.chat.completions.create(
 )
 
 for choice in completion.choices:
-    print(choice.message.content)
+    content = choice.message.content
+    content = content.replace("<|", "\n\n<|")
+    content = content.replace("|>", "|>\n\n")
+    print(content)

@@ -13,5 +13,5 @@ server:
 repl:
 	uv run ipython
 
-joke.md:
+joke.md: joke.py
 	uv run joke.py > joke.md

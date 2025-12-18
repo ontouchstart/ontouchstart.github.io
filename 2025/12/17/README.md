@@ -1,4 +1,4 @@
-# 2025/12/17
+# 2025/12/17 OpenAI client with mlx_lm.server (DEBUG)
 
 ```
 % make server 
