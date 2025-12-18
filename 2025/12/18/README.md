@@ -1,9 +1,11 @@
-# 2025/12/18 import wrapped python packages from github repo
+# 2025/12/18 Having fun with python packages
+
 
 ```Makefile
 install:
 	uv add ipython
 	uv add ruff
+        # import python packages from github repo
 	uv add "git+https://github.com/ontouchstart/openai-python" --no-cache
 	uv add "git+https://github.com/ontouchstart/theoretical-and-practical-ml-ideas" --no-cache
 
@@ -26,6 +28,5 @@ learn-names.md: learn-names.py
 
 - [joke.py](joke.py)
 - [joke](joke)
-
 - [learn-names.py](learn-names.py)
 - [learn-names](learn-names)
