@@ -1,4 +1,100 @@
-<|channel|>analysis<|message|>We need to answer. Probably say name is ChatGPT, I don't know user's name.<|end|><|start|>assistant<|channel|>final<|message|>I’m ChatGPT, the AI assistant. I don’t actually know your name—unless you tell me!
-<|channel|>analysis<|message|>We respond acknowledging.<|end|><|start|>assistant<|channel|>final<|message|>Nice to meet you, Sam! How can I help you today?
-<|channel|>analysis<|message|>We answer: ChatGPT, Sam.<|end|><|start|>assistant<|channel|>final<|message|>I’m ChatGPT, the AI assistant. Your name is Sam.
-<|channel|>analysis<|message|>Explain we learned from user.<|end|><|start|>assistant<|channel|>final<|message|>I learned it from what you just told me. When you said, “My name is Sam,” that’s the information I have about you. I don’t have any other way of knowing your name unless you share it with me.
+
+
+<|channel|>
+
+analysis
+
+<|message|>
+
+We need to answer. Probably say name is ChatGPT, I don't know user's name.
+
+<|end|>
+
+
+
+<|start|>
+
+assistant
+
+<|channel|>
+
+final
+
+<|message|>
+
+I’m ChatGPT, the AI assistant. I don’t actually know your name—unless you tell me!
+
+
+<|channel|>
+
+analysis
+
+<|message|>
+
+We respond acknowledging.
+
+<|end|>
+
+
+
+<|start|>
+
+assistant
+
+<|channel|>
+
+final
+
+<|message|>
+
+Nice to meet you, Sam! How can I help you today?
+
+
+<|channel|>
+
+analysis
+
+<|message|>
+
+We answer: ChatGPT, Sam.
+
+<|end|>
+
+
+
+<|start|>
+
+assistant
+
+<|channel|>
+
+final
+
+<|message|>
+
+I’m ChatGPT, the AI assistant. Your name is Sam.
+
+
+<|channel|>
+
+analysis
+
+<|message|>
+
+Explain we learned from user.
+
+<|end|>
+
+
+
+<|start|>
+
+assistant
+
+<|channel|>
+
+final
+
+<|message|>
+
+I learned it from what you just told me. When you said, “My name is Sam,” that’s the information I have about you. I don’t have any other way of knowing your name unless you share it with me.

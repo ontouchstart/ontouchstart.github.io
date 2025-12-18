@@ -23,4 +23,6 @@ for content in questions:
         prompt=prompt,
         prompt_cache=prompt_cache,
     )
+    result = result.replace("<|", "\n\n<|")
+    result = result.replace("|>", "|>\n\n")
     print(result)

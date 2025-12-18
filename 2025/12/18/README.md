@@ -24,4 +24,8 @@ learn-names.md: learn-names.py
 	uv run learn-names.py > learn-names.md
 ```
 
+- [joke.py](joke.py)
+- [joke](joke)
+
 - [learn-names.py](learn-names.py)
+- [learn-names](learn-names)
