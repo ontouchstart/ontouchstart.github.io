@@ -1,0 +1,11 @@
+exclude:
+  - node_modules
+  - script
+
+markdown: kramdown
+
+sass:
+  style: :compressed
+
+theme: jekyll-theme-primer
+
