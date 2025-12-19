@@ -5,7 +5,7 @@ def main():
 
 ## Literate Programming with Python Modules and Packages
 
-## Markdown as input and output format
+## Markdown as I/O
 
 ## Probalistic and Heuristic Learning
 
