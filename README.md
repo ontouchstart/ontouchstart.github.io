@@ -3,8 +3,16 @@
      1	# main.py
      2	import this
      3	import subprocess
-     4	print()
-     5	print(subprocess.run(["system_profiler", "Hardware", "SPDisplaysDataType"], capture_output=True, text=True, check=True).stdout)
+     4	
+     5	print()
+     6	print(
+     7	    subprocess.run(
+     8	        ["system_profiler", "Hardware", "SPDisplaysDataType"],
+     9	        capture_output=True,
+    10	        text=True,
+    11	        check=True,
+    12	    ).stdout
+    13	)
 ```
 ```
 sam@Sams-MacBook-Pro ontouchstart.github.io % uv run main.py
