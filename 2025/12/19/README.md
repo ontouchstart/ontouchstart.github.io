@@ -14,7 +14,7 @@
 
 ## MathJaX
 
-This is math in TeX: $$x+1\over x-1$$
+This is math in $$\LaTeX$$: $$x+1\over x-1$$
 
 $$
 \begin{align*}
