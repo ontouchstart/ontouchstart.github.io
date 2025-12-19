@@ -4,7 +4,7 @@
 
 ## Literate Programming with Python Modules and Packages
 
-## Markdown as I/O
+## Markdown as I/O Format
 
 ## Probalistic and Heuristic Learning
 
