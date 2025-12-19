@@ -1,5 +1,5 @@
 def main():
-    content = """# 2025/12/19 Random Ideas
+    content = r"""# 2025/12/19 Random Ideas
 
 ## Human Learning in the Age of Machine Learning
 
@@ -13,6 +13,9 @@ def main():
 
 ## Layers, Stacks and Graphs
 
+## MathJaX
+
+This is math in TeX: $$x+1\over x-1$$
 
 """
     with open("README.md", "w") as file:

@@ -12,4 +12,7 @@
 
 ## Layers, Stacks and Graphs
 
+## MathJaX
+
+This is math in TeX: $$x+1\over x-1$$
 
