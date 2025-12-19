@@ -4,6 +4,9 @@ exclude:
 
 markdown: kramdown
 
+mathjax: true 
+mathjax_autoNumber: true 
+
 sass:
   style: :compressed
 
