@@ -1,9 +1,11 @@
-Every pothole has a rabbit hole underneath.
-- Live a healthy life
-- Stay away from social media
-- Read books and long form articles
-- Learn by doing
 
+```python
+     1	# main.py
+     2	import this
+     3	import subprocess
+     4	print()
+     5	print(subprocess.run(["system_profiler", "Hardware", "SPDisplaysDataType"], capture_output=True, text=True, check=True).stdout)
+```
 ```
 sam@Sams-MacBook-Pro ontouchstart.github.io % uv run main.py
 The Zen of Python, by Tim Peters
