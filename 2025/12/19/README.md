@@ -12,9 +12,13 @@
 
 ## Layers, Stacks and Graphs
 
-## MathJaX
+## MathJax
 
-This is math in $$\LaTeX$$: $$x+1\over x-1$$
+Here are some MathJax samples from Internet, see if they render on this page.
+
+### Complicated Math
+
+[https://lyk6756.github.io/2016/11/25/write_latex_equations.html](https://lyk6756.github.io/2016/11/25/write_latex_equations.html)
 
 $$
 \begin{align*}
@@ -34,24 +38,35 @@ $$
 $$
 
 
+### Box and Pointer Diagram
+
+[https://codereview.meta.stackexchange.com/questions/1828/how-do-i-draw-box-and-pointer-diagrams/1829](https://codereview.meta.stackexchange.com/questions/1828/how-do-i-draw-box-and-pointer-diagrams/1829#1829)
+
 $$
 \newcommand{ptr}[1]{\overset{\mathtt{#1}}{\longrightarrow}}
 \begin{align*}
-&\mathtt{newNode} \\
-&\quad\downarrow  \\
+                                             &\mathtt{newNode} \\
+                                             &\quad\downarrow  \\
 \mathtt{head} \ptr{} \fbox{first} \ptr{next} &\fbox{another} \ptr{next} \mathtt{null} \\
-&\fbox{second}  \ptr{next}
-\fbox{rest}    \ptr{next}
-\fbox{of}      \ptr{next}
-\fbox{list}    \ptr{next} \mathtt{null}
+                                             &\fbox{second}  \ptr{next}
+                                              \fbox{rest}    \ptr{next}
+                                              \fbox{of}      \ptr{next}
+                                              \fbox{list}    \ptr{next} \mathtt{null}
 \end{align*}
 $$
 
+### Commutative Diagram
 
-$$\require{AMScd}
+[https://math.meta.stackexchange.com/questions/2324/how-to-draw-a-commutative-diagram](https://math.meta.stackexchange.com/questions/2324/how-to-draw-a-commutative-diagram)
+
+$$
+\require{AMScd}
 \begin{CD}
 K(X) @>{ch}>> H(X;\mathbb Q);\\
 @VVV @VVV \\
 K(Y) @>{ch}>> H(Y;\mathbb Q);
-\end{CD}$$
+\end{CD}
+$$
+
+
 
