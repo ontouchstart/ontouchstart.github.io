@@ -1,4 +1,4 @@
-from ontouchstart import mlx_lm
+from ontouchstart import create_github_gist, mlx_lm
 
 model, tokenizer = mlx_lm.load("openai/gpt-oss-20b")
 
@@ -10,7 +10,10 @@ questions = [
 ]
 
 prompt_cache = mlx_lm.models.cache.make_prompt_cache(model)
+gist_content = "# Learn names"
+
 for content in questions:
+    gist_content += f"\n---\n👤\n---\n{content}\n\n"
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(
         conversation=conversation,
@@ -25,4 +28,6 @@ for content in questions:
     )
     result = result.replace("<|", "\n\n<|")
     result = result.replace("|>", "|>\n\n")
-    print(result)
+    gist_content += f"\n---\n🤖\n---\n {result}\n\n"
+
+print(f"[learn-names](https://gist.github.com/{create_github_gist('learn-names.md', gist_content)})")

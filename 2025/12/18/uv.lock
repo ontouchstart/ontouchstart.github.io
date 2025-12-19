@@ -444,7 +444,7 @@ wheels = [
 [[package]]
 name = "ontouchstart"
 version = "0.1.0"
-source = { git = "https://github.com/ontouchstart/theoretical-and-practical-ml-ideas?subdirectory=ontouchstart#ea341ddabfca9a46e7b9a67a9ff2884fb5f6d871" }
+source = { git = "https://github.com/ontouchstart/theoretical-and-practical-ml-ideas?subdirectory=ontouchstart#02caa3244dbceff2adde8bbfedce5707bebbc8c3" }
 dependencies = [
     { name = "mlx" },
     { name = "mlx-lm" },
@@ -787,7 +787,7 @@ wheels = [
 [[package]]
 name = "theoretical-and-practical-ml-ideas"
 version = "0.1.0"
-source = { git = "https://github.com/ontouchstart/theoretical-and-practical-ml-ideas#ea341ddabfca9a46e7b9a67a9ff2884fb5f6d871" }
+source = { git = "https://github.com/ontouchstart/theoretical-and-practical-ml-ideas#02caa3244dbceff2adde8bbfedce5707bebbc8c3" }
 dependencies = [
     { name = "ontouchstart" },
 ]
