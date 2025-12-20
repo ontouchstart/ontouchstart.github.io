@@ -7,8 +7,4 @@ markdown: kramdown
 mathjax: true 
 mathjax_autoNumber: true 
 
-sass:
-  style: :compressed
-
-theme: jekyll-theme-primer
 
