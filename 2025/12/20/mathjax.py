@@ -11,7 +11,7 @@ prompt_cache = mlx_lm.models.cache.make_prompt_cache(model)
 
 chat = "# Fun with MathJax"
 for content in questions:
-    chat += rf"> {content}"
+    chat += rf"## {content}"
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(
         conversation=conversation,

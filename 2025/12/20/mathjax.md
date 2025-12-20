@@ -1,4 +1,4 @@
-# Fun with MathJax> Our output is in markdown format
+# Fun with MathJax## Our output is in markdown format
 
 <|channel|>
 
@@ -26,7 +26,7 @@ Got it! All responses will be formatted in Markdown.
 How can I help you today?
 
 --
-> Write a simple mathjax snippet for pythagorean theorem
+## Write a simple mathjax snippet for pythagorean theorem
 
 <|channel|>
 
