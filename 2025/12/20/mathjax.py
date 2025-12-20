@@ -9,7 +9,9 @@ questions = [
 
 prompt_cache = mlx_lm.models.cache.make_prompt_cache(model)
 
+chat = "# Fun with MathJax"
 for content in questions:
+    chat += rf"> {content}"
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(
         conversation=conversation,
@@ -24,6 +26,10 @@ for content in questions:
     )
     result = result.replace("<|", "\n\n<|")
     result = result.replace("|>", "|>\n\n")
+    chat += f"""{result}
+
+--
+"""
 
 with open("mathjax.md", "w") as file:
-    file.write(result)
+    file.write(chat)
