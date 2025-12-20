@@ -5,14 +5,14 @@ model, tokenizer = mlx_lm.load("openai/gpt-oss-20b")
 questions = [
     "Our output is in markdown format",
     "Write a simple mathjax snippet for pythagorean theorem",
-    "What are Maxwell equations?",
+    "Write Maxwell equations in mathjax, do not use table, make it simple.",
 ]
 
 prompt_cache = mlx_lm.models.cache.make_prompt_cache(model)
 
 chat = "# Fun with MathJax"
 for content in questions:
-    chat += rf"\n## {content}"
+    chat += f"\n## {content}"
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(
         conversation=conversation,
@@ -23,13 +23,14 @@ for content in questions:
         model=model,
         tokenizer=tokenizer,
         prompt=prompt,
+        max_tokens=1024,
         prompt_cache=prompt_cache,
     )
     result = result.replace("<|", "\n\n<|")
     result = result.replace("|>", "|>\n\n")
     chat += f"""{result}
 
---
+---
 """
 
 with open("mathjax.md", "w") as file:
