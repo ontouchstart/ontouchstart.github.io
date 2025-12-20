@@ -5,13 +5,14 @@ model, tokenizer = mlx_lm.load("openai/gpt-oss-20b")
 questions = [
     "Our output is in markdown format",
     "Write a simple mathjax snippet for pythagorean theorem",
+    "What are Maxwell equations?",
 ]
 
 prompt_cache = mlx_lm.models.cache.make_prompt_cache(model)
 
 chat = "# Fun with MathJax"
 for content in questions:
-    chat += rf"## {content}"
+    chat += rf"\n## {content}"
     conversation = [{"role": "user", "content": content}]
     prompt = tokenizer.apply_chat_template(
         conversation=conversation,
