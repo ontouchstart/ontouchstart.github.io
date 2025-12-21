@@ -6,6 +6,7 @@ questions = [
     "Our output is in markdown format",
     "Write a simple mathjax snippet for pythagorean theorem",
     "Write Maxwell equations in mathjax, do not use table, make it simple.",
+    "Write them in integral form",
 ]
 
 prompt_cache = mlx_lm.models.cache.make_prompt_cache(model)

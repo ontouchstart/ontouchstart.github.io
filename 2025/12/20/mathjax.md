@@ -135,3 +135,79 @@ $$
 Feel free to copy the MathJax code into your document or web page!
 
 ---
+
+## Write them in integral form
+
+<|channel|>
+
+analysis
+
+<|message|>
+
+Provide integral forms.
+
+<|end|>
+
+
+
+<|start|>
+
+assistant
+
+<|channel|>
+
+final
+
+<|message|>
+
+Here are the four Maxwell equations expressed in their integral (global) form, using MathJax:
+
+```markdown
+$$
+\oint_{\partial V} \mathbf{E}\!\cdot d\mathbf{l}
+   \;=\; -\,\frac{d}{dt}\!\int_{S}\mathbf{B}\!\cdot d\mathbf{S}
+$$
+
+$$
+\oint_{\partial V} \mathbf{B}\!\cdot d\mathbf{l}
+   \;=\; \mu_0\,\int_{S}\mathbf{J}\!\cdot d\mathbf{S}
+      \;+\;\mu_0\varepsilon_0\,\frac{d}{dt}\!\int_{S}\mathbf{E}\!\cdot d\mathbf{S}
+$$
+
+$$
+\oint_{\partial V} \mathbf{E}\!\cdot d\mathbf{S}
+   \;=\; \frac{1}{\varepsilon_0}\int_{V}\rho\,dV
+$$
+
+$$
+\oint_{\partial V} \mathbf{B}\!\cdot d\mathbf{S}
+   \;=\; 0
+$$
+```
+
+When rendered, they appear as:
+
+$$
+\oint_{\partial V} \mathbf{E}\!\cdot d\mathbf{l}
+   \;=\; -\,\frac{d}{dt}\!\int_{S}\mathbf{B}\!\cdot d\mathbf{S}
+$$
+
+$$
+\oint_{\partial V} \mathbf{B}\!\cdot d\mathbf{l}
+   \;=\; \mu_0\,\int_{S}\mathbf{J}\!\cdot d\mathbf{S}
+      \;+\;\mu_0\varepsilon_0\,\frac{d}{dt}\!\int_{S}\mathbf{E}\!\cdot d\mathbf{S}
+$$
+
+$$
+\oint_{\partial V} \mathbf{E}\!\cdot d\mathbf{S}
+   \;=\; \frac{1}{\varepsilon_0}\int_{V}\rho\,dV
+$$
+
+$$
+\oint_{\partial V} \mathbf{B}\!\cdot d\mathbf{S}
+   \;=\; 0
+$$
+
+These are the integral forms of Faraday’s law, Ampère–Maxwell law, Gauss’s law for electricity, and Gauss’s law for magnetism, respectively.
+
+---
