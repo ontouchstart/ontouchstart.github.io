@@ -1,0 +1,16 @@
+[project]
+name = "26"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "hello",
+    "ipython>=9.8.0",
+    "maturin>=1.10.2",
+    "pytest>=9.0.2",
+]
+
+[tool.uv.sources]
+hello = { path = "hello/target/wheels/hello-0.1.0-cp314-cp314-macosx_11_0_arm64.whl" }
+
