@@ -1,8 +1,9 @@
 install:
 	uv add ipython
 	uv add ruff
-	uv add "git+https://github.com/ontouchstart/openai-python" --no-cache
-	uv add "git+https://github.com/ontouchstart/theoretical-and-practical-ml-ideas" --no-cache
+	uv add "git+https://github.com/ontouchstart/ontouchstart.github.io@gist" --no-cache
+	uv add "git+https://github.com/ontouchstart/ontouchstart.github.io@ask_mlx_lm" --no-cache
+
 
 ruff:
 	uv run ruff check

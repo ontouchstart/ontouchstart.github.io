@@ -6,11 +6,11 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "ipython>=9.8.0",
-    "openai",
     "ruff>=0.14.10",
-    "theoretical-and-practical-ml-ideas",
+    "gist",
+    "ask-mlx-lm",
 ]
 
 [tool.uv.sources]
-openai = { git = "https://github.com/ontouchstart/openai-python" }
-theoretical-and-practical-ml-ideas = { git = "https://github.com/ontouchstart/theoretical-and-practical-ml-ideas" }
+gist = { git = "https://github.com/ontouchstart/ontouchstart.github.io", rev = "gist" }
+ask-mlx-lm = { git = "https://github.com/ontouchstart/ontouchstart.github.io", rev = "ask_mlx_lm" }

@@ -1,4 +1,5 @@
-from ontouchstart import create_github_gist, mlx_lm
+from gist import create_github_gist
+from ask_mlx_lm import mlx_lm
 
 model, tokenizer = mlx_lm.load("openai/gpt-oss-20b")
 
@@ -30,4 +31,6 @@ for content in questions:
     result = result.replace("|>", "|>\n\n")
     gist_content += f"\n---\n🤖\n---\n {result}\n\n"
 
-print(f"[learn-names](https://gist.github.com/{create_github_gist('learn-names.md', gist_content)})")
+print(
+    f"[learn-names](https://gist.github.com/{create_github_gist('learn-names.md', gist_content)})"
+)
