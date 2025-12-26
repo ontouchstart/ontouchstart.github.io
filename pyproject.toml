@@ -1,0 +1,22 @@
+[project]
+name = "ask-mlx-lm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sam Liu", email = "ontouchstart@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "mlx>=0.30.1",
+    "mlx-lm>=0.29.1",
+    "pytest>=9.0.2",
+    "ruff>=0.14.10",
+]
+
+[project.scripts]
+ask-mlx-lm = "ask_mlx_lm:main"
+
+[build-system]
+requires = ["uv_build>=0.9.17,<0.10.0"]
+build-backend = "uv_build"
