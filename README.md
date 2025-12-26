@@ -1,2 +1,1 @@
-# ontouchstart.github.io
-https://ontouchstart.github.io
+# gist: private gist utilities for ontouchstart

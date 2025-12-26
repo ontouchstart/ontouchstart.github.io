@@ -1,0 +1,20 @@
+[project]
+name = "gist"
+version = "0.1.0"
+description = "Private gist utilities for ontouchstart"
+readme = "README.md"
+authors = [
+    { name = "Sam Liu", email = "ontouchstart@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pytest>=9.0.2",
+    "ruff>=0.14.10",
+]
+
+[project.scripts]
+gist = "gist:main"
+
+[build-system]
+requires = ["uv_build>=0.9.17,<0.10.0"]
+build-backend = "uv_build"
