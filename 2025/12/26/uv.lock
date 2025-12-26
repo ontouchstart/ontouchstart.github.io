@@ -11,6 +11,7 @@ dependencies = [
     { name = "ipython" },
     { name = "maturin" },
     { name = "pytest" },
+    { name = "ruff" },
 ]
 
 [package.metadata]
@@ -19,6 +20,7 @@ requires-dist = [
     { name = "ipython", specifier = ">=9.8.0" },
     { name = "maturin", specifier = ">=1.10.2" },
     { name = "pytest", specifier = ">=9.0.2" },
+    { name = "ruff", specifier = ">=0.14.10" },
 ]
 
 [[package]]
@@ -67,7 +69,7 @@ dependencies = [
     { name = "ruff" },
 ]
 wheels = [
-    { filename = "hello-0.1.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:3cba38c4f92e8f48256ca9e8bf35f732d44b3103793cfbddcbc0a1cdf5e4be31" },
+    { filename = "hello-0.1.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:020cff1ab684226b373485ae85aed4e80e406feed06fff3696102e46bc5076bb" },
 ]
 
 [package.metadata]

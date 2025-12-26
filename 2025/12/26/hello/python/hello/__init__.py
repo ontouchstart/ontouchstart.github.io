@@ -1,5 +1,5 @@
-from .hello import *
+from .hello import *  # noqa: F403
 
-__doc__ = hello.__doc__
-if hasattr(hello, "__all__"):
-    __all__ = hello.__all__
+__doc__ = hello.__doc__  # noqa: F405
+if hasattr(hello, "__all__"):  # noqa: F405
+    __all__ = hello.__all__  # noqa: F405
