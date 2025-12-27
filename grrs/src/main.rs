@@ -9,13 +9,17 @@ struct Cli {
     path: std::path::PathBuf,
 }
 
+fn find_matches(content: &str, pattern: &str) {
+    for line in content.lines() {
+        if line.contains(pattern) {
+            println!("{}", line);
+        }
+    }
+}
+
 fn main() {
     let args = Cli::parse();
     let content = std::fs::read_to_string(&args.path).expect("could not read file");
 
-    for line in content.lines() {
-        if line.contains(&args.pattern) {
-            println!("{}", line);
-        }
-    }
+    find_matches(&content, &args.pattern)
 }
