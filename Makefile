@@ -4,6 +4,8 @@ all: 	clean test build
 pyproject.toml:
 	uvx maturin init --mixed --bindings pyo3 --name hello_maturin .
 	uv add maturin pytest ruff
+	uv run ruff check
+	uv run ruff format
 
 build:  Cargo.toml 
 	uv run maturin build
