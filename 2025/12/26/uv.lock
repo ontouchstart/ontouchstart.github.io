@@ -28,7 +28,7 @@ requires-dist = [
 [[package]]
 name = "ask-mlx-lm"
 version = "0.1.0"
-source = { git = "https://github.com/ontouchstart/ontouchstart.github.io?rev=ask_mlx_lm#9d9e0aeaf3c8d2c6b3c504e96bb862b7013f56c3" }
+source = { git = "https://github.com/ontouchstart/ontouchstart.github.io?rev=ask_mlx_lm#0add53371a1d38bac5a7d331ab478f92e79e43b2" }
 dependencies = [
     { name = "mlx" },
     { name = "mlx-lm" },
