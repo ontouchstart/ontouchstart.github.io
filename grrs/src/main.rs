@@ -1,4 +1,5 @@
 use clap::Parser;
+use find_matches::find_matches;
 
 /// Search for a pattern in a file and display the lines that contain it.
 #[derive(Parser)]
@@ -13,5 +14,5 @@ fn main() {
     let args = Cli::parse();
     let content = std::fs::read_to_string(&args.path).expect("could not read file");
 
-    grrs::find_matches(&content, &args.pattern, &mut std::io::stdout())
+    find_matches(&content, &args.pattern, &mut std::io::stdout())
 }
