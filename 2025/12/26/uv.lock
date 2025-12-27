@@ -62,7 +62,7 @@ wheels = [
 [[package]]
 name = "hello-maturin"
 version = "0.1.0"
-source = { git = "https://github.com/ontouchstart/ontouchstart.github.io?rev=hello_maturin#69e6e1c396cb6a45a93d9a01522558b80aa4c270" }
+source = { git = "https://github.com/ontouchstart/ontouchstart.github.io?rev=hello_maturin#ae06645377873a7609fa0a86d4c5abcaf96d9712" }
 dependencies = [
     { name = "maturin" },
     { name = "pytest" },

@@ -7,4 +7,3 @@ all:
 	uv run main.py
 	uv run pytest  -v
 	
-
