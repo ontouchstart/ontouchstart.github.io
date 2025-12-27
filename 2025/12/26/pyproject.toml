@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "ask-mlx-lm",
     "hello-maturin",
     "ipython>=9.8.0",
     "maturin>=1.10.2",
@@ -13,5 +14,6 @@ dependencies = [
 ]
 
 [tool.uv.sources]
+ask-mlx-lm = { git = "https://github.com/ontouchstart/ontouchstart.github.io", rev = "ask_mlx_lm" }
 hello-maturin = { git = "https://github.com/ontouchstart/ontouchstart.github.io", rev = "hello_maturin" }
 
