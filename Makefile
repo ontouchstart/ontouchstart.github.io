@@ -12,4 +12,4 @@ test:	pyproject.toml
 	uv run pytest -v
 
 clean:
-	rm -rf *.toml target dist
+	rm -rf *.toml target dist .venv
