@@ -1,7 +1,7 @@
 import mlx_lm
 
 
-def review(model_name, code, max_tokens=1024 * 10):
+def review(model_name, code, max_tokens=1024 * 10, reasoning_effort="low"):
     model, tokenizer = mlx_lm.load(model_name)
 
     prompt_cache = mlx_lm.models.cache.make_prompt_cache(model)
@@ -20,7 +20,7 @@ def review(model_name, code, max_tokens=1024 * 10):
         prompt = tokenizer.apply_chat_template(
             conversation=conversation,
             add_generation_prompt=True,
-            reasoning_effort="high",
+            reasoning_effort=reasoning_effort,
         )
         result = mlx_lm.generate(
             model=model,
