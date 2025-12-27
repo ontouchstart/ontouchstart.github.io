@@ -4,7 +4,7 @@ all:
 	-cd grrs && cargo run -- 
 	-cd grrs && cargo run -- some-pattern 
 	-cd grrs && cargo run -- some-pattern some-file
-	-cd grrs && cargo run -- some-pattern Makefile
+	-cd grrs && cargo run -- some-pattern ../Makefile
 	-cd grrs && cargo build --release
 	-./grrs/target/release/grrs
 	-./grrs/target/release/grrs some-pattern
