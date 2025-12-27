@@ -20,7 +20,7 @@ def review(model_name, code, max_tokens=1024 * 10):
         prompt = tokenizer.apply_chat_template(
             conversation=conversation,
             add_generation_prompt=True,
-            reasoning_effort="low",
+            reasoning_effort="high",
         )
         result = mlx_lm.generate(
             model=model,
