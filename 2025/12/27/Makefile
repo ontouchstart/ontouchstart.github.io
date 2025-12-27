@@ -8,13 +8,13 @@ all:
 	uv run ruff check
 	uv run ruff format
 	@echo '```'
+	@echo '% make'
+	make grrs
+	@echo '```'
 
 grrs: export RUST_BACKTRACE=full
 grrs:
 	cargo install --git https://github.com/ontouchstart/ontouchstart.github.io --branch grrs grrs --root .cargo
-	-.cargo/bin/grrs 
-	-.cargo/bin/grrs some-pattern 
-	-.cargo/bin/grrs some-pattern some-file
 	-.cargo/bin/grrs some-pattern Makefile
 	rm -rf .cargo
 
