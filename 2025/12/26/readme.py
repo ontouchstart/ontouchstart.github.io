@@ -1,14 +1,4 @@
-from hello_maturin import sum_as_string
-
-
-def main():
-    x = 1
-    y = 2
-    print(f"sum_as_string({x}, {y}) = {sum_as_string(x, y)}")
-
-
-if __name__ == "__main__":
-    readme = """
+readme = """
 # 2025/12/26
 Adventure in the world of python and rust with maturin and pytest
 
@@ -17,5 +7,4 @@ Adventure in the world of python and rust with maturin and pytest
 - [https://docs.pytest.org](https://docs.pytest.org)
 
 """
-    print(readme)
-    main()
+print(readme)
