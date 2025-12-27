@@ -4,6 +4,7 @@
 - [code_review_medium](code_review_medium)
 
 
+```
 % make
 rm -rf uv.lock .venv
 uv add ruff pytest 

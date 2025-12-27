@@ -1,5 +1,6 @@
 all:
 	@uv run readme.py
+	@echo '```'
 	@echo '% make'
 	rm -rf uv.lock .venv
 	uv add ruff pytest 
