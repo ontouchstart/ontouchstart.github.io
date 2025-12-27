@@ -7,7 +7,7 @@ mod hello_maturin {
 
     /// Formats the sum of two numbers as string.
     #[pyfunction]
-    fn sum_as_string(a: i32, b: i32) -> PyResult<String> {
+    fn sum_as_string(a: f32, b: f32) -> PyResult<String> {
         Ok((a + b).to_string())
     }
 }
