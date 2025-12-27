@@ -7,7 +7,7 @@ name = "26"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "hello" },
+    { name = "hello-maturin" },
     { name = "ipython" },
     { name = "maturin" },
     { name = "pytest" },
@@ -16,7 +16,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "hello", path = "hello/target/wheels/hello-0.1.0-cp314-cp314-macosx_11_0_arm64.whl" },
+    { name = "hello-maturin", git = "https://github.com/ontouchstart/ontouchstart.github.io?rev=hello_maturin" },
     { name = "ipython", specifier = ">=9.8.0" },
     { name = "maturin", specifier = ">=1.10.2" },
     { name = "pytest", specifier = ">=9.0.2" },
@@ -60,26 +60,14 @@ wheels = [
 ]
 
 [[package]]
-name = "hello"
+name = "hello-maturin"
 version = "0.1.0"
-source = { path = "hello/target/wheels/hello-0.1.0-cp314-cp314-macosx_11_0_arm64.whl" }
+source = { git = "https://github.com/ontouchstart/ontouchstart.github.io?rev=hello_maturin#69e6e1c396cb6a45a93d9a01522558b80aa4c270" }
 dependencies = [
     { name = "maturin" },
     { name = "pytest" },
     { name = "ruff" },
 ]
-wheels = [
-    { filename = "hello-0.1.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:020cff1ab684226b373485ae85aed4e80e406feed06fff3696102e46bc5076bb" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "maturin", specifier = ">=1.10.2" },
-    { name = "pytest", specifier = ">=8.3.5" },
-    { name = "pytest", marker = "extra == 'tests'" },
-    { name = "ruff", specifier = ">=0.14.10" },
-]
-provides-extras = ["tests"]
 
 [[package]]
 name = "iniconfig"
