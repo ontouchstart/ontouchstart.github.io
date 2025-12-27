@@ -1,0 +1,14 @@
+[project]
+name = "27"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "ask-mlx-lm",
+    "pytest>=9.0.2",
+    "ruff>=0.14.10",
+]
+
+[tool.uv.sources]
+ask-mlx-lm = { git = "https://github.com/ontouchstart/ontouchstart.github.io", rev = "ask_mlx_lm" }
