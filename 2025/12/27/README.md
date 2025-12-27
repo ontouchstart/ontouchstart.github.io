@@ -10,8 +10,8 @@ rm -rf uv.lock .venv
 uv add ruff pytest 
 Using CPython 3.14.2
 Creating virtual environment at: .venv
-Resolved 33 packages in 226ms
-Installed 31 packages in 101ms
+Resolved 33 packages in 377ms
+Installed 31 packages in 91ms
  + ask-mlx-lm==0.1.0 (from git+https://github.com/ontouchstart/ontouchstart.github.io@0add53371a1d38bac5a7d331ab478f92e79e43b2)
  + certifi==2025.11.12
  + charset-normalizer==3.4.4
@@ -45,7 +45,7 @@ Installed 31 packages in 101ms
  + urllib3==2.6.2
 uv add "git+https://github.com/ontouchstart/ontouchstart.github.io@ask_mlx_lm" --no-cache
 Resolved 33 packages in 1ms
-Audited 31 packages in 7ms
+Audited 31 packages in 9ms
 uv run ruff check
 All checks passed!
 uv run ruff format
@@ -60,25 +60,55 @@ cargo install --git https://github.com/ontouchstart/ontouchstart.github.io --bra
    Compiling unicode-ident v1.0.22
    Compiling quote v1.0.42
    Compiling utf8parse v0.2.2
-   Compiling anstyle v1.0.13
-   Compiling anstyle-query v1.1.5
-   Compiling is_terminal_polyfill v1.70.2
    Compiling colorchoice v1.0.4
+   Compiling anstyle-query v1.1.5
+   Compiling anstyle v1.0.13
+   Compiling is_terminal_polyfill v1.70.2
    Compiling strsim v0.11.1
-   Compiling heck v0.5.0
    Compiling clap_lex v0.7.6
    Compiling anstyle-parse v0.2.7
+   Compiling heck v0.5.0
    Compiling anstream v0.6.21
    Compiling clap_builder v4.5.53
    Compiling syn v2.0.111
    Compiling clap_derive v4.5.49
    Compiling clap v4.5.53
    Compiling grrs v0.1.0 (/Users/sam/.cargo/git/checkouts/ontouchstart.github.io-f66ada82c79ac682/f792186/grrs)
-    Finished `release` profile [optimized] target(s) in 4.98s
+    Finished `release` profile [optimized] target(s) in 4.69s
   Installing .cargo/bin/grrs
    Installed package `grrs v0.1.0 (https://github.com/ontouchstart/ontouchstart.github.io?branch=grrs#f7921861)` (executable `grrs`)
 warning: be sure to add `.cargo/bin` to your PATH to be able to run the installed binaries
+.cargo/bin/grrs 
+error: the following required arguments were not provided:
+  <PATTERN>
+  <PATH>
+
+Usage: grrs <PATTERN> <PATH>
+
+For more information, try '--help'.
+make[1]: [grrs] Error 2 (ignored)
+.cargo/bin/grrs some-pattern
+error: the following required arguments were not provided:
+  <PATH>
+
+Usage: grrs <PATTERN> <PATH>
+
+For more information, try '--help'.
+make[1]: [grrs] Error 2 (ignored)
 .cargo/bin/grrs some-pattern Makefile
+	-.cargo/bin/grrs some-pattern
 	-.cargo/bin/grrs some-pattern Makefile
+.cargo/bin/grrs cargo Makefile
+	cargo install --git https://github.com/ontouchstart/ontouchstart.github.io --branch grrs grrs --root .cargo
+	-.cargo/bin/grrs 
+	-.cargo/bin/grrs some-pattern
+	-.cargo/bin/grrs some-pattern Makefile
+	-.cargo/bin/grrs cargo Makefile
+	-.cargo/bin/grrs github Makefile
+	rm -rf .cargo
+.cargo/bin/grrs github Makefile
+	uv add "git+https://github.com/ontouchstart/ontouchstart.github.io@ask_mlx_lm" --no-cache
+	cargo install --git https://github.com/ontouchstart/ontouchstart.github.io --branch grrs grrs --root .cargo
+	-.cargo/bin/grrs github Makefile
 rm -rf .cargo
 ```

@@ -13,6 +13,10 @@ all:
 grrs: export RUST_BACKTRACE=full
 grrs:
 	cargo install --git https://github.com/ontouchstart/ontouchstart.github.io --branch grrs grrs --root .cargo
+	-.cargo/bin/grrs 
+	-.cargo/bin/grrs some-pattern
 	-.cargo/bin/grrs some-pattern Makefile
+	-.cargo/bin/grrs cargo Makefile
+	-.cargo/bin/grrs github Makefile
 	rm -rf .cargo
 
