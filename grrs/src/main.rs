@@ -23,3 +23,10 @@ fn main() {
 
     find_matches(&content, &args.pattern, &mut std::io::stdout())
 }
+
+#[test]
+fn find_a_match() {
+    let mut result = Vec::new();
+    find_matches("lorem ipsum\ndolor sit amet", "lorem", &mut result);
+    assert_eq!(result, b"lorem ipsum\n");
+}
