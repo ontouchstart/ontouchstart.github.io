@@ -25,15 +25,18 @@ Adventure in the world of python and rust with maturin and pytest
 
 
 sum_as_string(1, 2) = 3
+sum_as_string(1.5, 2.5) = 4
+sum_as_string(1.5, 2.4) = 3.9
 uv run pytest  -v
 ============================= test session starts ==============================
 platform darwin -- Python 3.14.2, pytest-9.0.2, pluggy-1.6.0 -- /Users/sam/github/ontouchstart.github.io/2025/12/26/.venv/bin/python
 cachedir: .pytest_cache
 rootdir: /Users/sam/github/ontouchstart.github.io/2025/12/26
 configfile: pyproject.toml
-collecting ... collected 1 item
+collecting ... collected 2 items
 
-test_sum_as_string.py::test_int_sum_as_string PASSED                     [100%]
+test_sum_as_string.py::test_int_sum_as_string PASSED                     [ 50%]
+test_sum_as_string.py::test_float_sum_as_string PASSED                   [100%]
 
-============================== 1 passed in 0.00s ===============================
+============================== 2 passed in 0.00s ===============================
 ```
