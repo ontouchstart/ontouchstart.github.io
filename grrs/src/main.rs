@@ -1,3 +1,4 @@
+use anyhow::{Context, Result};
 use clap::Parser;
 use find_matches::find_matches;
 
@@ -10,9 +11,12 @@ struct Cli {
     path: std::path::PathBuf,
 }
 
-fn main() {
+fn main() -> Result<()> {
     let args = Cli::parse();
-    let content = std::fs::read_to_string(&args.path).expect("could not read file");
+    let content = std::fs::read_to_string(&args.path)
+        .with_context(|| format!("could not read file `{}`", args.path.display()))?;
 
-    find_matches(&content, &args.pattern, &mut std::io::stdout())
+    find_matches(&content, &args.pattern, &mut std::io::stdout());
+
+    Ok(())
 }

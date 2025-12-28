@@ -8,6 +8,7 @@ name = "grrs"
 path = "src/main.rs"
 
 [dependencies]
+anyhow = "1.0.100"
 clap = { version = "4.5.53", features = ["derive"]}
 find_matches = { git = "https://github.com/ontouchstart/ontouchstart.github.io.git", branch = "find_matches" }
 
