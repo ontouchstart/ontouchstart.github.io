@@ -3,7 +3,15 @@ name = "grrs"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "grrs"
+path = "src/main.rs"
+
 [dependencies]
 clap = { version = "4.5.53", features = ["derive"]}
 find_matches = { git = "https://github.com/ontouchstart/ontouchstart.github.io.git", branch = "find_matches" }
 
+[dev-dependencies]
+assert_cmd = "2.0.14"
+predicates = "3.1.0"
+assert_fs = "1.1.1"
