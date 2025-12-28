@@ -10,8 +10,8 @@ rm -rf uv.lock .venv
 uv add ruff pytest 
 Using CPython 3.14.2
 Creating virtual environment at: .venv
-Resolved 33 packages in 409ms
-Installed 31 packages in 105ms
+Resolved 33 packages in 352ms
+Installed 31 packages in 92ms
  + ask-mlx-lm==0.1.0 (from git+https://github.com/ontouchstart/ontouchstart.github.io@0add53371a1d38bac5a7d331ab478f92e79e43b2)
  + certifi==2025.11.12
  + charset-normalizer==3.4.4
@@ -53,32 +53,33 @@ uv run ruff format
 make grrs
 cargo install --git https://github.com/ontouchstart/ontouchstart.github.io --branch grrs grrs --root .cargo
     Updating git repository `https://github.com/ontouchstart/ontouchstart.github.io`
-  Installing grrs v0.1.0 (https://github.com/ontouchstart/ontouchstart.github.io?branch=grrs#68f77639)
+  Installing grrs v0.1.0 (https://github.com/ontouchstart/ontouchstart.github.io?branch=grrs#9eeb8b0c)
     Updating crates.io index
     Updating git repository `https://github.com/ontouchstart/ontouchstart.github.io.git`
-     Locking 22 packages to latest Rust 1.91.1 compatible versions
+     Locking 23 packages to latest Rust 1.91.1 compatible versions
    Compiling proc-macro2 v1.0.104
-   Compiling unicode-ident v1.0.22
    Compiling quote v1.0.42
+   Compiling unicode-ident v1.0.22
    Compiling utf8parse v0.2.2
    Compiling anstyle-query v1.1.5
    Compiling is_terminal_polyfill v1.70.2
-   Compiling colorchoice v1.0.4
    Compiling anstyle v1.0.13
+   Compiling colorchoice v1.0.4
+   Compiling anyhow v1.0.100
+   Compiling strsim v0.11.1
+   Compiling anstyle-parse v0.2.7
    Compiling heck v0.5.0
    Compiling clap_lex v0.7.6
-   Compiling anstyle-parse v0.2.7
-   Compiling strsim v0.11.1
    Compiling find_matches v0.1.0 (https://github.com/ontouchstart/ontouchstart.github.io.git?branch=find_matches#1737e2c3)
    Compiling anstream v0.6.21
    Compiling clap_builder v4.5.53
    Compiling syn v2.0.111
    Compiling clap_derive v4.5.49
    Compiling clap v4.5.53
-   Compiling grrs v0.1.0 (/Users/sam/.cargo/git/checkouts/ontouchstart.github.io-f66ada82c79ac682/68f7763/grrs)
-    Finished `release` profile [optimized] target(s) in 5.29s
+   Compiling grrs v0.1.0 (/Users/sam/.cargo/git/checkouts/ontouchstart.github.io-f66ada82c79ac682/9eeb8b0/grrs)
+    Finished `release` profile [optimized] target(s) in 5.37s
   Installing .cargo/bin/grrs
-   Installed package `grrs v0.1.0 (https://github.com/ontouchstart/ontouchstart.github.io?branch=grrs#68f77639)` (executable `grrs`)
+   Installed package `grrs v0.1.0 (https://github.com/ontouchstart/ontouchstart.github.io?branch=grrs#9eeb8b0c)` (executable `grrs`)
 warning: be sure to add `.cargo/bin` to your PATH to be able to run the installed binaries
 .cargo/bin/grrs 
 error: the following required arguments were not provided:
