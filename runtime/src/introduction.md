@@ -4,7 +4,7 @@ This is a book about _runtime_, a term that might have different meanings to dif
 or what they are doing. 
 
 To a runner, it means time spent on running. To a software engineer, it means the state 
-of a running software. 
+of running software. 
 
 How would a software engineer who is also a runner understand runtime? 
 This is a question I asked myself when I spent hours on running or running software. 
