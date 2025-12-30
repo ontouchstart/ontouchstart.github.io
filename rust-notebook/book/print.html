@@ -38,7 +38,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-b42cae2e.js";
+            window.path_to_searchindex_js = "searchindex-dc1f42c4.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-4f03ba89.js"></script>
@@ -201,7 +201,31 @@
 }</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="mathjax"><a class="header" href="#mathjax">MathJax</a></h1>
-<p>\[ \mu = \frac{1}{N} \sum_{i=0} x_i \]</p>
+<p>\[ \mu = \frac{1}{N} \sum_{i=0}^{N-1} x_i \]</p>
+<h2 id="maxwells-equations"><a class="header" href="#maxwells-equations">Maxwell’s equations</a></h2>
+<p>\[\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} \]
+\[\nabla \cdot \mathbf{B} = 0 \]
+\[\nabla \times \mathbf{E} = -\,\frac{\partial \mathbf{B}}{\partial t} \]
+\[\nabla \times \mathbf{B} = \mu_0\,\mathbf{J} + \mu_0\varepsilon_0\,\frac{\partial \mathbf{E}}{\partial t}\]</p>
+<h2 id="integral-form"><a class="header" href="#integral-form">Integral form</a></h2>
+<p>\[
+\oint_{\partial V} \mathbf{E}\!\cdot d\mathbf{l}
+\;=\; -\,\frac{d}{dt}\!\int_{S}\mathbf{B}\!\cdot d\mathbf{S}
+\]</p>
+<p>\[
+\oint_{\partial V} \mathbf{B}\!\cdot d\mathbf{l}
+\;=\; \mu_0\,\int_{S}\mathbf{J}\!\cdot d\mathbf{S}
+\;+\;\mu_0\varepsilon_0\,\frac{d}{dt}\!\int_{S}\mathbf{E}\!\cdot d\mathbf{S}
+\]</p>
+<p>\[
+$$
+\oint_{\partial V} \mathbf{E}\!\cdot d\mathbf{S}
+\;=\; \frac{1}{\varepsilon_0}\int_{V}\rho\,dV
+\]</p>
+<p>\[
+\oint_{\partial V} \mathbf{B}\!\cdot d\mathbf{S}
+\;=\; 0
+\]</p>
 
                     </main>
 
