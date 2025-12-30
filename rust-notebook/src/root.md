@@ -15,4 +15,12 @@
 {{#include ../Cargo.toml}}
 ```
 
+`pyproject.toml`
+```toml 
+{{#include ../pyproject.toml}}
+```
 
+`main.py`
+```py 
+{{#include ../main.py}}
+```
