@@ -1,4 +1,4 @@
-# Root level
+# rust-notebook
 
 `Makefile`
 ```Makefile 
