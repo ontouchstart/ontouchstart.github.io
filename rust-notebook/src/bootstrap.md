@@ -2,7 +2,7 @@
 
 ## Install mdbook locally
 
-```
+```sh
 cargo install mdbook --root .cargo
 ```
 
@@ -12,18 +12,19 @@ cargo install mdbook --root .cargo
 
 
 ### Initializing a book
-```
+
+```sh
 .cargo/bin/mdbook init rust-notebook
 ```
 
 ### Start a local webserver
-```
+```sh
 cd rust-notebook
 ../.cargo/bin/mdbook serve --open
 ```
 
 ### Publishing a book
-```
+```sh
 cd rust-notebook
 ../.cargo/bin/mdbook build
 ```

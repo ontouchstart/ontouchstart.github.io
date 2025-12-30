@@ -4,3 +4,6 @@ build:
 	
 serve:
 	../.cargo/bin/mdbook serve
+
+test:
+	../.cargo/bin/mdbook test
