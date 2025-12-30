@@ -1,3 +1,4 @@
 # Summary
 
-- [Bootstrap](./bootstrap.md)
+- [Bootstrap](bootstrap.md)
+- [MathJax](mathjax.md)

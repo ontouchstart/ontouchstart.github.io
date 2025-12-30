@@ -2,3 +2,6 @@
 title = "Rust Notebook"
 authors = ["Sam Liu"]
 language = "en"
+
+[output.html]
+mathjax-support = true
