@@ -1,6 +1,6 @@
 # Summary
 
 - [Bootstrap](bootstrap.md)
-- [/](root.md)
-- [/src](src.md)
+- [rust-notebook/](root.md)
+- [rust-notebook/src](src.md)
 - [MathJax Support](mathjax.md)
