@@ -1,7 +1,7 @@
 # Tests
 
 ```rust
-{{#include hello.rs}}
+{{#include main.rs}}
 ```
 
 
