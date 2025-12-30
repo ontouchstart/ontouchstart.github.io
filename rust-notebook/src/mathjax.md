@@ -1,4 +1,4 @@
-# MathJax
+# MathJax Support
 
 \\[ \mu = \frac{1}{N} \sum_{i=0}^{N-1} x_i \\]
 

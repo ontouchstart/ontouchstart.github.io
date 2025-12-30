@@ -1,5 +1,6 @@
 # Summary
 
 - [Bootstrap](bootstrap.md)
-- [Tests](tests.md)
-- [MathJax](mathjax.md)
+- [/](root.md)
+- [/src](src.md)
+- [MathJax Support](mathjax.md)

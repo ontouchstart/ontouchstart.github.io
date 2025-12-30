@@ -38,10 +38,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-dc1f42c4.js";
+            window.path_to_searchindex_js = "searchindex-264a74f3.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-4f03ba89.js"></script>
+        <script src="toc-1afc6d1f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -195,12 +195,46 @@
 ../.cargo/bin/mdbook build
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="tests"><a class="header" href="#tests">Tests</a></h1>
+<h1 id="root-level"><a class="header" href="#root-level">Root level</a></h1>
+<p><code>Makefile</code></p>
+<pre><code class="language-Makefile">build:
+	../.cargo/bin/mdbook clean
+	../.cargo/bin/mdbook build
+	
+serve:
+	../.cargo/bin/mdbook serve
+
+test:
+	../.cargo/bin/mdbook test
+</code></pre>
+<p><code>book.toml</code></p>
+<pre><code class="language-toml">[book]
+title = "Rust Notebook"
+authors = ["Sam Liu"]
+language = "en"
+
+[output.html]
+mathjax-support = true
+
+[output.html.playground]
+runnable = false
+</code></pre>
+<p><code>Cargo.toml</code></p>
+<pre><code class="language-toml">[package]
+name = "rust-notebook"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="src"><a class="header" href="#src">src</a></h1>
+<p><code>main.rs</code></p>
 <pre><code class="language-rust">fn main() {
     println!("Hello, world!");
 }</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="mathjax"><a class="header" href="#mathjax">MathJax</a></h1>
+<h1 id="mathjax-support"><a class="header" href="#mathjax-support">MathJax Support</a></h1>
 <p>\[ \mu = \frac{1}{N} \sum_{i=0}^{N-1} x_i \]</p>
 <h2 id="maxwells-equations"><a class="header" href="#maxwells-equations">Maxwell’s equations</a></h2>
 <p>\[\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} \]
