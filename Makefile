@@ -1,6 +1,6 @@
 all:
 	
-	@echo "# 👨🏻‍✈️🤖💻🐇🕳️🐍🦀🤔"
+	@echo "# 👨🏻‍✈️🤖💻🐢🐇🕳️🐍🦀🤔"
 	@echo "Every pothole has a rabbit hole underneath." 
 	@echo '```bash' 
 	uv run main.py
