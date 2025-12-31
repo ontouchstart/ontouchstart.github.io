@@ -1,6 +1,6 @@
 # 👨🏻‍✈️🤖💻🐢🐇🕳️🐍🦀🤔
 Every pothole has a rabbit hole underneath.
-```bash
+```
 uv run main.py
 The Zen of Python, by Tim Peters
 
@@ -62,3 +62,4 @@ Removed 37 files, 870.55KiB total
  INFO Running the html backend
  INFO HTML book written to `/Users/sam/github/ontouchstart.github.io/runtime/book`
 ```
+© 2026  [Sam Liu](https://github.com/ontouchstart)
