@@ -1,7 +1,6 @@
-# 👨🏻‍✈️🤖💻🐇🕳️🐍🦀🤔
+# 👨🏻‍✈️🤖💻🐢🐇🕳️🐍🦀🤔
 Every pothole has a rabbit hole underneath.
-```
-sam@Sams-MacBook-Pro ontouchstart.github.io % uv run main.py
+```bash
 uv run main.py
 The Zen of Python, by Tim Peters
 
