@@ -1,24 +1,8 @@
 # 👨🏻‍✈️🤖💻🐇🕳️🐍🦀🤔
-
-Every pothole has a rabbit hole underneath. 
-
-```python
-     1	# main.py
-     2	import this
-     3	import subprocess
-     4	
-     5	print()
-     6	print(
-     7	    subprocess.run(
-     8	        ["system_profiler", "Hardware", "SPDisplaysDataType"],
-     9	        capture_output=True,
-    10	        text=True,
-    11	        check=True,
-    12	    ).stdout
-    13	)
-```
+Every pothole has a rabbit hole underneath.
 ```
 sam@Sams-MacBook-Pro ontouchstart.github.io % uv run main.py
+uv run main.py
 The Zen of Python, by Tim Peters
 
 Beautiful is better than ugly.
@@ -62,4 +46,20 @@ Graphics/Displays:
           Connection Type: Internal
 
 
+make -C rust-notebook 
+../.cargo/bin/mdbook clean
+Removed 45 files, 1.51MiB total
+../.cargo/bin/mdbook build
+ INFO Book building has started
+ INFO Running the html backend
+ WARN unclosed HTML tag `<pyo3metadata>` found in `code_review.md` while exiting Paragraph
+HTML tags must be closed before exiting a markdown element.
+ INFO HTML book written to `/Users/sam/github/ontouchstart.github.io/rust-notebook/book`
+make -C runtime
+../.cargo/bin/mdbook clean
+Removed 37 files, 870.55KiB total
+../.cargo/bin/mdbook build
+ INFO Book building has started
+ INFO Running the html backend
+ INFO HTML book written to `/Users/sam/github/ontouchstart.github.io/runtime/book`
 ```
