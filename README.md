@@ -45,21 +45,5 @@ Graphics/Displays:
           Connection Type: Internal
 
 
-make -C rust-notebook 
-../.cargo/bin/mdbook clean
-Removed 45 files, 1.51MiB total
-../.cargo/bin/mdbook build
- INFO Book building has started
- INFO Running the html backend
- WARN unclosed HTML tag `<pyo3metadata>` found in `code_review.md` while exiting Paragraph
-HTML tags must be closed before exiting a markdown element.
- INFO HTML book written to `/Users/sam/github/ontouchstart.github.io/rust-notebook/book`
-make -C runtime
-../.cargo/bin/mdbook clean
-Removed 37 files, 870.55KiB total
-../.cargo/bin/mdbook build
- INFO Book building has started
- INFO Running the html backend
- INFO HTML book written to `/Users/sam/github/ontouchstart.github.io/runtime/book`
 ```
 © 2026  [Sam Liu](https://github.com/ontouchstart)
