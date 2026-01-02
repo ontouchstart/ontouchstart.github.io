@@ -4,7 +4,7 @@ all:	Cargo.toml pyproject.toml
 	uv run main.py
 	uv run resume.py
 	cargo fmt -v
-	cargo run
+	cargo run --bin resume
 
 Cargo.toml:
 	cargo init .
