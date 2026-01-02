@@ -1,0 +1,15 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "ontouchstart-dev" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+    - name: Make
+      run: make
