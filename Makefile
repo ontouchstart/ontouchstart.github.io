@@ -1,6 +1,8 @@
 all:	Cargo.toml pyproject.toml
 	uv run ruff check
 	uv run ruff format
+	uv run -m ontouchstart
+	uv run -m ontouchstart.resume
 	uv run main.py
 	cargo fmt -v
 	cargo run --bin resume
