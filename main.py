@@ -1,5 +1,8 @@
+import ontouchstart
+
+
 def main():
-    print("Hello from ontouchstart-dev!")
+    print(ontouchstart.url())
 
 
 if __name__ == "__main__":
