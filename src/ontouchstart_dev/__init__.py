@@ -1,4 +1,4 @@
-from resume import resume
+from .resume import resume
 
 __all__ = [
     "__version__",
