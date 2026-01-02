@@ -1,0 +1,14 @@
+[project]
+name = "02"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "ontouchstart",
+    "ruff>=0.14.10",
+]
+
+[tool.uv.sources]
+ontouchstart = { git = "https://github.com/ontouchstart/ontouchstart.github.io", rev = "2026_01_02" }
+
