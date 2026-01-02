@@ -2,6 +2,7 @@ all:	Cargo.toml pyproject.toml
 	uv run ruff check
 	uv run ruff format
 	uv run main.py
+	uv run resume.py
 	cargo fmt -v
 	cargo run
 
