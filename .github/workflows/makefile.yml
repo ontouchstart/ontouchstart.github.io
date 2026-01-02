@@ -2,7 +2,7 @@ name: Makefile CI
 
 on:
   push:
-    branches: [ "ontouchstart-dev" ]
+    branches: [ "2026_01_01" ]
 
 jobs:
   build:
