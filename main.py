@@ -1,5 +1,4 @@
 import ontouchstart
-from ontouchstart_dev import resume
 
 
 def main():
