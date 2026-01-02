@@ -1,6 +1,10 @@
 from docx import Document
 
-resume = Document("resume.docx")
 
-for p in resume.paragraphs:
-    print(p.text)
+def resume():
+    return Document("resume.docx").paragraphs
+
+
+if __name__ == "__main__":
+    for p in resume():
+        print(p.text)
