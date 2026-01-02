@@ -1,5 +1,8 @@
 all:	Cargo.toml pyproject.toml
+	uv run ruff check
+	uv run ruff format
 	uv run main.py
+	cargo fmt -v
 	cargo run
 
 Cargo.toml:
@@ -7,6 +10,7 @@ Cargo.toml:
 
 pyproject.toml:
 	uv init .
+	uv add ruff
 
 .gitignore:
 	curl -sL https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Python.gitignore > .gitignore
