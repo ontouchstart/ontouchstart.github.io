@@ -82,7 +82,7 @@ wheels = [
 [[package]]
 name = "ontouchstart"
 version = "0.1.0"
-source = { git = "https://github.com/ontouchstart/ontouchstart.github.io?rev=2026_01_02#512ccff7412142b7c14423af42557fa1fce714ec" }
+source = { git = "https://github.com/ontouchstart/ontouchstart.github.io?rev=2026_01_02#7fcc6e4cce392da38812d4b26d8a6eab02d6a866" }
 dependencies = [
     { name = "pytest" },
     { name = "python-docx" },
