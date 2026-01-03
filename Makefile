@@ -6,4 +6,6 @@ all:
 	uv run maturin build
 	uv run pytest -v
 	uv run main.py
+	uv run python -m ontouchstart 
+	uv run python -m ontouchstart.resume
 
