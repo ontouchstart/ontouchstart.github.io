@@ -5,9 +5,11 @@ all:
 	uv add "ontouchstart @ git+https://github.com/ontouchstart/ontouchstart.github.io.git@2026_01_03"
 	uv run main.py
 	uv run python -m ontouchstart
-	uv run python -m ontouchstart.resume
+	uv run python -m ontouchstart.resume > resume.md
+	uv run python -m ontouchstart.ask &> ask.md
 	@echo '```'
-	@echo '`uv run python -m ontouchstart.ask`'
-	@uv run python -m ontouchstart.ask
+	@echo "[resume.md](resume)" 
+	@echo
+	@echo "[ask.md](ask)" 
 
 
