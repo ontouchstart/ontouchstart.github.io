@@ -32,6 +32,7 @@ if __name__ == "__main__":
         "mlx-community/Llama-3.2-3B-Instruct-4bit",
         "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
         "openai/gpt-oss-20b",
+        "Qwen/Qwen3-14B-MLX-4bit",
     ]
     for model_name in models:
         print(f"# Model: {model_name}\n")
