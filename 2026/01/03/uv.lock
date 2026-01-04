@@ -313,7 +313,7 @@ wheels = [
 [[package]]
 name = "ontouchstart"
 version = "0.1.0"
-source = { git = "https://github.com/ontouchstart/ontouchstart.github.io.git?rev=2026_01_03#5b256f4a71d8682d471cb35e7e012fb7123582ad" }
+source = { git = "https://github.com/ontouchstart/ontouchstart.github.io.git?rev=2026_01_03#15f2a2b25709bb5ce6a2d210e006cdf059ee85ff" }
 dependencies = [
     { name = "maturin" },
     { name = "mlx-lm" },
