@@ -8,13 +8,13 @@ all:
 	uv run main.py >> main.md
 	@echo '```' >> main.md
 	uv run python -m ontouchstart
-	uv run python -m ontouchstart.resume > resume.md
+	uv run python -m ontouchstart.resume > resume.txt
 	uv run python -m ontouchstart.ask &> ask.md
 	@echo '```'
 	@echo
 	@echo "[main.md](main)" 
 	@echo
-	@echo "[resume.md](resume)" 
+	@echo "[resume.txt](resume.txt)" 
 	@echo
 	@echo "[ask.md](ask)" 
 
