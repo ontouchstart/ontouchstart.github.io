@@ -27,7 +27,11 @@ def ask(model_name, questions, max_tokens=1024):
 
 
 if __name__ == "__main__":
-    questions = ["Tell me an LLM joke.", "Why is it funny?"]
+    questions = [
+        "Tell me an LLM joke.",
+        "Why is it funny?",
+        "Tell a different LLM joke in Chinese, explain why it is funny.",
+    ]
     models = [
         "mlx-community/Llama-3.2-3B-Instruct-4bit",
         "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
