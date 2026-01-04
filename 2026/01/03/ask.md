@@ -1,6 +1,6 @@
 # Model: mlx-community/Llama-3.2-3B-Instruct-4bit
 
-Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]Fetching 6 files: 100%|██████████| 6/6 [00:00<00:00, 95325.09it/s]
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]Fetching 6 files: 100%|██████████| 6/6 [00:00<00:00, 41391.16it/s]
 ## Question
 Tell me an LLM joke.
 
@@ -20,7 +20,7 @@ The joke is funny because it's a play on words. "Process" has a double meaning h
 The joke is funny because it takes the literal meaning of "process" in the context of language models and gives it a figurative meaning, implying that the language model is struggling to emotionally process its feelings. It's a clever and unexpected twist on the usual meaning of the word, which creates the humor.
 # Model: mlx-community/Mistral-7B-Instruct-v0.3-4bit
 
-Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 44018.18it/s]
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 26715.31it/s]
 ## Question
 Tell me an LLM joke.
 
@@ -39,7 +39,7 @@ Why is it funny?
 The humor in this joke comes from the unexpected connection between the action of bringing a ladder to court and the concept of a "high legal matter." In a courtroom setting, one would not typically associate a ladder with legal proceedings, so the punchline creates a humorous contrast between the two. The joke also plays with the idea that lawyers spend a lot of time reading and researching in their extensive law books, which are often kept on high shelves.
 # Model: openai/gpt-oss-20b
 
-Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 255490.60it/s]
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 41221.66it/s]
 ## Question
 Tell me an LLM joke.
 

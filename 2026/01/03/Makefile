@@ -3,7 +3,10 @@ all:
 	@echo '```'
 	rm uv.lock
 	uv add "ontouchstart @ git+https://github.com/ontouchstart/ontouchstart.github.io.git@2026_01_03"
-	uv run main.py > main.md
+	@echo '`uv run main.py`' > main.md
+	@echo '```' >> main.md
+	uv run main.py >> main.md
+	@echo '```' >> main.md
 	uv run python -m ontouchstart
 	uv run python -m ontouchstart.resume > resume.md
 	uv run python -m ontouchstart.ask &> ask.md
