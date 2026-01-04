@@ -7,5 +7,7 @@ all:
 	uv run python -m ontouchstart
 	uv run python -m ontouchstart.resume
 	@echo '```'
+	@echo '`uv run python -m ontouchstart.ask`'
+	@uv run python -m ontouchstart.ask
 
 
