@@ -38,7 +38,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-42e12c4b.js";
+            window.path_to_searchindex_js = "searchindex-4e24b725.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-36b17ac9.js"></script>
@@ -1776,10 +1776,15 @@ mod tests {
 <p>Apply these changes and the module will be more reliable, easier to read, and far less likely to produce incorrect compatibility information.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="20260105"><a class="header" href="#20260105">2026/01/05</a></h1>
-<pre><code>cargo update
+<p><code>src/main.rs</code></p>
+<pre><code class="language-rust">fn main() {
+    println!("Hello, world!");
+    ontouchstart::url();
+}</code></pre>
+<pre><code class="language-bash">cargo update
     Updating git repository `https://github.com/ontouchstart/ontouchstart.github.io.git`
      Locking 0 packages to latest Rust 1.91.1 compatible versions
-cargo fmt
+cargo fmt 
 cargo build
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
 cargo run
