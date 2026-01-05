@@ -3,13 +3,13 @@
 version = 4
 
 [[package]]
-name = "ontouchstart"
-version = "0.1.0"
-source = "git+https://github.com/ontouchstart/ontouchstart.github.io.git?branch=2026_01_05#23711eca60011a7a722118d0269485cb79df24bb"
-
-[[package]]
-name = "ontouchstart-2026-01-05"
+name = "notebook_2026_01_05"
 version = "0.1.0"
 dependencies = [
- "ontouchstart",
+ "ontouchstart_2026_01_05",
 ]
+
+[[package]]
+name = "ontouchstart_2026_01_05"
+version = "0.1.0"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io.git?branch=2026_01_05#625184af6cee812504bcb6a2cf76c02789f81dac"

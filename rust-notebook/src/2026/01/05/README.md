@@ -12,12 +12,12 @@ cargo build
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
 cargo run
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
-     Running `target/debug/ontouchstart-2026-01-05`
+     Running `target/debug/notebook_2026_01_05`
 Hello, world!
 https://github.com/ontouchstart
 cargo run --release
     Finished `release` profile [optimized] target(s) in 0.00s
-     Running `target/release/ontouchstart-2026-01-05`
+     Running `target/release/notebook_2026_01_05`
 Hello, world!
 https://github.com/ontouchstart
 ```
