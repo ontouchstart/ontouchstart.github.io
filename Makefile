@@ -9,3 +9,8 @@ all:
 	uv run python -m ontouchstart 
 	uv run python -m ontouchstart.resume
 
+clean:
+	rm -rf uv.lock target .venv .ruff_cache .pytest_cache __pycache__ Cargo.lock
+
+du:
+	du -hsc * .*
