@@ -1,5 +1,4 @@
 all:
-all:
 	cargo update
 	cargo fmt
 	cargo build
