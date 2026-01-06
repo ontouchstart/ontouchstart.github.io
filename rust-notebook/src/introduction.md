@@ -6,8 +6,8 @@ Back in 2021 I had a Rust notebook built with [mdBook](https://rust-lang.github.
 (They are all permanently gone now.)
 
 It was a cool notebook and blew the mind of the hiring manager of a tech consulting company. That was how I got back to 
-professional softwared development and stopped hacking openly on GitHub. I deleted all my repositories except for 
-five public archives that I did in 2019. I haven't looked at them since the 2019 New York City Marathon.
+professional softwared development, stopped hacking openly on GitHub and deleted all my repositories except 
+following public archives. I haven't looked at them since the 2019 New York City Marathon.
 
 - <https://github.com/mocaspike150/api>
 - <https://github.com/mocaspike150/lab>
