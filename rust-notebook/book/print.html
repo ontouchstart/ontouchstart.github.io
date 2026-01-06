@@ -38,7 +38,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-836acccb.js";
+            window.path_to_searchindex_js = "searchindex-0e7299d9.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-9a7fd0a9.js"></script>
@@ -884,48 +884,35 @@ https://github.com/ontouchstart
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="notebook_2026_01_06"><a class="header" href="#notebook_2026_01_06">notebook_2026_01_06</a></h1>
-<p><code>Cargo.toml</code></p>
-<pre><code class="language-toml">[package]
-name = "notebook_2026_01_06"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-</code></pre>
-<p><code>pyproject.toml</code></p>
-<pre><code class="language-toml">[project]
-name = "notebook-2026-01-06"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = "&gt;=3.14"
-dependencies = [
-    "mlx-lm&gt;=0.29.1",
-    "pytest&gt;=9.0.2",
-]
-</code></pre>
+<h2 id="make"><a class="header" href="#make">make</a></h2>
 <p><code>Makefile</code></p>
 <pre><code class="language-Makefile">NAME=notebook_2026_01_06
 
-all:	Cargo.toml pyproject.toml
-	@echo '`Cargo.toml`' &gt; make.md
-	@echo '```toml' &gt;&gt; make.md
-	@cat Cargo.toml &gt;&gt; make.md
-	@echo '```' &gt;&gt; make.md
+all:	make.md Cargo.md pyproject.md test.md run.md
 
-	@echo '`pyproject.toml`' &gt;&gt; make.md
-	@echo '```toml' &gt;&gt; make.md
-	@cat pyproject.toml &gt;&gt; make.md
-	@echo '```' &gt;&gt; make.md
+make.md:	Makefile
+	echo '`Makefile`' &gt; make.md
+	echo '```Makefile' &gt;&gt; make.md
+	cat Makefile &gt;&gt; make.md
+	echo '```' &gt;&gt; make.md
 
-	@echo '`Makefile`' &gt;&gt; make.md
-	@echo '```Makefile' &gt;&gt; make.md
-	@cat Makefile &gt;&gt; make.md
-	@echo '```' &gt;&gt; make.md
+Cargo.md:	Cargo.toml
+	echo '`Cargo.toml`' &gt; Cargo.md
+	echo '```toml' &gt;&gt; Cargo.md
+	cat Cargo.toml &gt;&gt; Cargo.md
+	echo '```' &gt;&gt; Cargo.md
 
-	@make test &gt;&gt; make.md
+pyproject.md:	pyproject.toml
+	echo '`pyproject.toml`' &gt; pyproject.md
+	echo '```toml' &gt;&gt; pyproject.md
+	cat pyproject.toml &gt;&gt; pyproject.md
+	echo '```' &gt;&gt; pyproject.md
 
-	@make run &gt;&gt; make.md
+test.md:
+	make test &gt; test.md
+
+run.md:
+	make run &gt; run.md
 
 Cargo.toml:
 	cargo init --name $(NAME) .
@@ -986,6 +973,29 @@ format:
 clean:
 	rm *.toml
 </code></pre>
+<h2 id="cargo"><a class="header" href="#cargo">cargo</a></h2>
+<p><code>Cargo.toml</code></p>
+<pre><code class="language-toml">[package]
+name = "notebook_2026_01_06"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+</code></pre>
+<h2 id="pyproject"><a class="header" href="#pyproject">pyproject</a></h2>
+<p><code>pyproject.toml</code></p>
+<pre><code class="language-toml">[project]
+name = "notebook-2026-01-06"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "&gt;=3.14"
+dependencies = [
+    "mlx-lm&gt;=0.29.1",
+    "pytest&gt;=9.0.2",
+]
+</code></pre>
+<h2 id="test"><a class="header" href="#test">test</a></h2>
 <p><code>make test</code></p>
 <p><code>main.py</code></p>
 <pre><code class="language-python">name = "notebook-2026-01-06"
@@ -1045,6 +1055,7 @@ test test_url ... ok
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
 </code></pre>
+<h2 id="run"><a class="header" href="#run">run</a></h2>
 <p><code>make run</code></p>
 <p><code>src/main.rs</code></p>
 <pre><code class="language-rust">cat src/main.rs 
@@ -1099,10 +1110,56 @@ Brown M&amp;M's are a unique and interesting variation of the classic candy. The
 
 Interestingly, the brown M&amp;M's were not an instant success. In fact, they were met with skepticism by many people, who were used to the traditional milk chocolate and colorful candy shell of the classic M&amp;M's.
 ==========
-Prompt: 43 tokens, 286.711 tokens-per-sec
-Generation: 100 tokens, 47.782 tokens-per-sec
-Peak memory: 1.918 GB
+Prompt: 43 tokens, 347.386 tokens-per-sec
+Generation: 100 tokens, 47.532 tokens-per-sec
+Peak memory: 1.911 GB
 </code></pre>
+<h2 id="python-and-rust"><a class="header" href="#python-and-rust">Python and Rust</a></h2>
+<h3 id="a-hypothetical-story"><a class="header" href="#a-hypothetical-story">A hypothetical story</a></h3>
+<p>An experienced engineer with solid background in mathematics and physics slept through the first 25 years
+of the 21st Century. He knows everything about Unix up to 1999 but nothing after
+<a href="https://en.wikipedia.org/wiki/Year_2000_problem">Y2K</a>.</p>
+<p>Python 2.0 was released on <a href="https://en.wikipedia.org/wiki/History_of_Python">October 16, 2000</a>, so he wouldn’t have
+much serious experience with it.</p>
+<p>He bought a latest model of 14-in MacBook Pro M5 from the nearest Apple Store and decided to catch up.
+What language do you think he should to learn from scratch?
+<a href="https://www.python.org/doc">Python</a> or <a href="https://rust-lang.org/learn">Rust</a>?</p>
+<p>He also heard about something called AI and decided to learn AI along the wauy as well.</p>
+<p>Should he start with Python or Rust? Or both?</p>
+<ul>
+<li><a href="https://users.rust-lang.org/t/rust-vs-python-which-language-will-win-in-ai-race/124696">https://users.rust-lang.org/t/rust-vs-python-which-language-will-win-in-ai-race/124696</a></li>
+<li><a href="https://users.rust-lang.org/t/why-isn-t-rust-more-common-in-ai/132224">https://users.rust-lang.org/t/why-isn-t-rust-more-common-in-ai/132224</a></li>
+</ul>
+<p>Or he can dive deep himself to see how people are using Python and Rust right now.</p>
+<h3 id="the-real-story"><a class="header" href="#the-real-story">The real story</a></h3>
+<p>I didn’t sleep through the first 25 years of the 21st Century. Instead, I tool a detour in the land of <a href="https://en.wikipedia.org/wiki/Web_development">Web Development</a> and wrote tons of <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>.</p>
+<p>I miss my <a href="https://en.wikipedia.org/wiki/Unix_philosophy">UNIX Philosophy</a>.</p>
+<p>So I am going to pick up both Python and Rust in my own way with my favorite <a href="https://en.wikipedia.org/wiki/Make_(software)">Makefile</a>.</p>
+<p>Since <a href="https://en.wikipedia.org/wiki/Ed_(text_editor)">ed</a> is preinstalled</p>
+<pre><code>sam@Sams-MacBook-Pro 06 % which ed 
+/bin/ed
+sam@Sams-MacBook-Pro 06 % man ed 
+ED(1)                                             General Commands Manual                                            ED(1)
+
+NAME
+     ed, red – text editor
+
+SYNOPSIS
+     ed [-] [-s] [-p string] [file]
+     red [-] [-s] [-p string] [file]
+
+DESCRIPTION
+     The ed utility is a line-oriented text editor.  It is used to create, display, modify and otherwise manipulate text
+     files.  When invoked as red, the editor runs in "restricted" mode, in which the only difference is that the editor
+     restricts the use of filenames which start with ‘!’ (interpreted as shell commands by ed) or contain a ‘/’.  Note
+     that editing outside of the current directory is only prohibited if the user does not have write access to the
+     current directory.  If a user has write access to the current directory, then symbolic links can be created in the
+     current directory, in which case red will not stop the user from editing the file that the symbolic link points to.
+
+...
+</code></pre>
+<p>I might skip <a href="https://en.wikipedia.org/wiki/Vi_(text_editor)">vi</a> at some point in the future and think in buffers.</p>
+<p>Let the fun begin.</p>
 
                     </main>
 
@@ -1127,22 +1184,6 @@ Peak memory: 1.918 GB
         <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
         <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
         <script>
