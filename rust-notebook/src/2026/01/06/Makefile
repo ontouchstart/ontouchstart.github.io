@@ -70,5 +70,8 @@ run:	Cargo.toml pyproject.toml
 	uv run main.py
 	@echo '```'
 
+format:
+	uv run ruff format
+	cargo fmt
 clean:
 	rm *.toml

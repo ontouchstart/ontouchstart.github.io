@@ -1,12 +1,15 @@
-build:	output/code_review_medium.md output/code_review.md
-	../.cargo/bin/mdbook clean
-	../.cargo/bin/mdbook build
+build:	.cargo/bin/mdbook output/code_review_medium.md output/code_review.md
+	.cargo/bin/mdbook clean
+	.cargo/bin/mdbook build
 	
-serve:
-	../.cargo/bin/mdbook serve
+.cargo/bin/mdbook:
+	cargo install mdbook --root .cargo
 
-test:
-	../.cargo/bin/mdbook test
+serve:	.cargo/bin/mdbook
+	.cargo/bin/mdbook serve
+
+test:	.cargo/bin/mdbook
+	.cargo/bin/mdbook test
 
 output/code_review_medium.md: python/code_review_medium.py
 	uv run python/code_review_medium.py > output/code_review_medium.md	

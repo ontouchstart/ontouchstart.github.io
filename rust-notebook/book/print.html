@@ -38,10 +38,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-0563ffb9.js";
+            window.path_to_searchindex_js = "searchindex-cefd064b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-de9d4f61.js"></script>
+        <script src="toc-6a58c5c0.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -177,7 +177,55 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="bootstrap"><a class="header" href="#bootstrap">Bootstrap</a></h1>
+                        <h1 id="introduction-or-how-i-get-here"><a class="header" href="#introduction-or-how-i-get-here">Introduction (or how I get here)</a></h1>
+<p>Back in 2021 I had a Rust notebook built with <a href="https://rust-lang.github.io/mdBook">mdBook</a> to explore
+<a href="https://rust-lang.org/what/wasm/">WASM</a>. It was generated and maintained as a public GitHub repo and hosted on both
+<a href="https://docs.github.com/en/pages">GitHub</a> and <a href="https://pages.cloudflare.com">Cloudflare</a>.
+(They are all permanently gone now.)</p>
+<p>It was a cool notebook and blew the mind of the hiring manager of a tech consulting company. That was how I got back to
+professional softwared development and stopped hacking openly on GitHub. I deleted all my repositories except for
+five public archives that I did in 2019. I haven’t looked at them since the 2019 New York City Marathon.</p>
+<ul>
+<li><a href="https://github.com/mocaspike150/api">https://github.com/mocaspike150/api</a></li>
+<li><a href="https://github.com/mocaspike150/lab">https://github.com/mocaspike150/lab</a></li>
+<li><a href="https://github.com/mocaspike150/donation">https://github.com/mocaspike150/donation</a></li>
+<li><a href="https://github.com/mocaspike150/leaderboard">https://github.com/mocaspike150/leaderboard</a></li>
+<li><a href="https://github.com/mocaspike150/mocaspike150.github.io">https://github.com/mocaspike150/mocaspike150.github.io</a></li>
+</ul>
+<p>Going forward more years. I was doing some STEM education for kids and had some Python, Jupyter Notebook stuff that can
+drive <a href="https://en.wikipedia.org/wiki/Lego_Mindstorms">Lego Mindstorms</a>. I even had some Jupyter Notebooks running
+pre-2.0 <a href="https://en.wikipedia.org/wiki/TensorFlow">TensorFlow</a>.</p>
+<p>Those are fun projects but I have deleted them all from GitHub.</p>
+<p>The user name <a href="https://github.com/ontouchstart">ontouchstart</a> was created about the time when I was doing Mobile HTML5 work
+on first generation iPhone and Andriod. The name <em>ontouchstart</em> is just an <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/touchstart_event">event handler</a> that only exists on mobile devices.</p>
+<p>I had another GitHub account before <a href="https://github.com/ontouchstart">ontouchstart</a> but forgot its name.</p>
+<p>I was into git before there was a GitHub. And I still remember this <a href="https://tom.preston-werner.com/2008/10/18/how-i-turned-down-300k">famous blog</a> by <a href="https://en.wikipedia.org/wiki/Tom_Preston-Werner">Tom Preston-Werner</a> when it first came out.</p>
+<p>I was using SVN and CVS then and was super excited about
+<a href="https://youtu.be/4XpnKHJAok8">Tech Talk: Linus Torvalds on git</a> when it came out 18 years ago.</p>
+<p>I have done tons of projects in
+<a href="https://en.wikipedia.org/wiki/PHP">PHP</a>,
+<a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>,
+<a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a>,
+<a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP</a>,
+<a href="https://en.wikipedia.org/wiki/Perl,">Perl</a>
+<a href="https://en.wikipedia.org/wiki/Wolfram_Mathematica">Mathematica</a>,
+<a href="https://en.wikipedia.org/wiki/MATLAB">MATAB</a>,
+<a href="https://en.wikipedia.org/wiki/C_(programming_language)">C/C++</a>,
+<a href="https://en.wikipedia.org/wiki/Fortran">Fortan</a>.</p>
+<p>They are all gone (or stuck somewhere in some old hard drives).</p>
+<h2 id="what-is-this-notebook-then"><a class="header" href="#what-is-this-notebook-then">What is this notebook then?</a></h2>
+<p>This notebook is my resumed exploration of the process of software development with modern toolchains in
+<a href="https://docs.astral.sh/uv">Python</a> and <a href="https://doc.rust-lang.org/cargo">Rust</a>.</p>
+<p>The investigation in this notebook will be more on <strong>how</strong> to do things with these tools other than <strong>what</strong> to do.
+If I am hired to do things professionally, it would be more about <strong>what</strong> than <strong>how</strong>.</p>
+<p>This is notebook of ideas, not a product.
+I will not maintain it professionally because it is not worth it.
+<strong>Please do not use any part of it as a dependency in your project</strong>.</p>
+<p>This is not an educational or promotional (portfolio) web site either. I have no interest to teach anyone or explain
+what I did, how I did it and why I did it. Every page, module and line of code has its purpose I might or might not explain.</p>
+<p>Feel free to poke around and <a href="mailto:ontouchstart@gmail.com">contact me</a> if you want to.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="bootstrap"><a class="header" href="#bootstrap">Bootstrap</a></h1>
 <h2 id="install-mdbook-locally"><a class="header" href="#install-mdbook-locally">Install mdbook locally</a></h2>
 <pre><code class="language-sh">cargo install mdbook --root .cargo
 </code></pre>
@@ -197,15 +245,18 @@
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="rust-notebook"><a class="header" href="#rust-notebook">rust-notebook</a></h1>
 <p><code>Makefile</code></p>
-<pre><code class="language-Makefile">build:	output/code_review_medium.md output/code_review.md
-	../.cargo/bin/mdbook clean
-	../.cargo/bin/mdbook build
+<pre><code class="language-Makefile">build:	.cargo/bin/mdbook output/code_review_medium.md output/code_review.md
+	.cargo/bin/mdbook clean
+	.cargo/bin/mdbook build
 	
-serve:
-	../.cargo/bin/mdbook serve
+.cargo/bin/mdbook:
+	cargo install mdbook --root .cargo
 
-test:
-	../.cargo/bin/mdbook test
+serve:	.cargo/bin/mdbook
+	.cargo/bin/mdbook serve
+
+test:	.cargo/bin/mdbook
+	.cargo/bin/mdbook test
 
 output/code_review_medium.md: python/code_review_medium.py
 	uv run python/code_review_medium.py &gt; output/code_review_medium.md	
@@ -2022,22 +2073,6 @@ https://ontouchstart.github.io/rust-notebook/book/2026/01/06
         <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
         <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
         <script>

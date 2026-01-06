@@ -8,7 +8,7 @@ pub fn url() -> String {
 }
 
 #[test]
-fn it_works() {
+fn test_url() {
     assert_eq!(
         url(),
         String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")

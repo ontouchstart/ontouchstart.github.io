@@ -1,4 +1,6 @@
 # Summary
+[Introduction](introduction.md)
+
 # 2025
 - [Bootstrap](bootstrap.md)
 - [rust-notebook/](root.md)
