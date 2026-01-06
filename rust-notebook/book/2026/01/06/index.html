@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>2026/01/05 - Rust Notebook</title>
+        <title>2026/01/06 - Rust Notebook</title>
 
 
         <!-- Custom HTML head -->
@@ -176,41 +176,209 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="20260105"><a class="header" href="#20260105">2026/01/05</a></h1>
+                        <h1 id="notebook_2026_01_06"><a class="header" href="#notebook_2026_01_06">notebook_2026_01_06</a></h1>
+<p><code>Cargo.toml</code></p>
+<pre><code class="language-toml">[package]
+name = "notebook_2026_01_06"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+</code></pre>
+<p><code>pyproject.toml</code></p>
+<pre><code class="language-toml">[project]
+name = "notebook-2026-01-06"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "&gt;=3.14"
+dependencies = [
+    "pytest&gt;=9.0.2",
+]
+</code></pre>
+<p><code>Makefile</code></p>
+<pre><code class="language-Makefile">NAME=notebook_2026_01_06
+
+all:	Cargo.toml pyproject.toml
+	@echo "# $(NAME)" &gt; README.md
+
+	@echo '`Cargo.toml`' &gt;&gt; README.md
+	@echo '```toml' &gt;&gt; README.md
+	@cat Cargo.toml &gt;&gt; README.md
+	@echo '```' &gt;&gt; README.md
+
+	@echo '`pyproject.toml`' &gt;&gt; README.md
+	@echo '```toml' &gt;&gt; README.md
+	@cat pyproject.toml &gt;&gt; README.md
+	@echo '```' &gt;&gt; README.md
+
+	@echo '`Makefile`' &gt;&gt; README.md
+	@echo '```Makefile' &gt;&gt; README.md
+	@cat Makefile &gt;&gt; README.md
+	@echo '```' &gt;&gt; README.md
+
+	@make test &gt;&gt; README.md
+
+	@make run &gt;&gt; README.md
+
+Cargo.toml:
+	cargo init --name $(NAME) .
+
+pyproject.toml:
+	uv init --name $(NAME) .
+	uv add pytest
+
+test:	Cargo.toml pyproject.toml
+	@echo '`make test`'
+	@echo
+	@echo '`main.py`'
+	@echo '```python'
+	@cat main.py
+	@echo '```'
+
+	@echo '```bash'
+	uv run pytest main.py -v
+	@echo '```'
+
+	@echo
+	@echo '`src/main.rs`'
+	@echo '```rust'
+	cat src/main.rs 
+	@echo '```'
+
+	@echo '```bash'
+	cargo test
+	@echo '```'
+
+run:	Cargo.toml pyproject.toml
+	@echo '`make run`'
+	@echo
+	@echo '`src/main.rs`'
+	@echo '```rust'
+	cat src/main.rs 
+	@echo '```'
+	@echo '```bash'
+	cargo run
+	@echo '```'
+
+	@echo '`main.py`'
+	@echo '```python'
+	@cat main.py
+	@echo '```'
+	@echo '```bash'
+	uv run main.py
+	@echo '```'
+
+clean:
+	rm *.toml
+</code></pre>
+<p><code>make test</code></p>
+<p><code>main.py</code></p>
+<pre><code class="language-python">name = "notebook-2026-01-06"
+def url():
+    return "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
+
+def test_url():
+    assert url() == "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
+
+def main():
+    print("Hello, world!")
+    print(url())
+
+if __name__ == "__main__":
+    main()
+
+</code></pre>
+<pre><code class="language-bash">uv run pytest main.py -v
+============================= test session starts ==============================
+platform darwin -- Python 3.14.2, pytest-9.0.2, pluggy-1.6.0 -- /Users/sam/github/ontouchstart.github.io/rust-notebook/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/sam/github/ontouchstart.github.io/rust-notebook/src/2026/01/06
+configfile: pyproject.toml
+collecting ... collected 1 item
+
+main.py::test_url PASSED                                                 [100%]
+
+============================== 1 passed in 0.00s ===============================
+</code></pre>
 <p><code>src/main.rs</code></p>
-<pre><code class="language-rust">fn main() {
+<pre><code class="language-rust">cat src/main.rs 
+fn main() {
     println!("Hello, world!");
-    ontouchstart_2026_01_05::url();
+    println!("{}", url());
+}
+
+pub fn url() -&gt; String {
+    String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+}
+
+#[test]
+fn it_works() {
+    assert_eq!(
+        url(),
+        String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+    )
 }</code></pre>
-<pre><code class="language-bash">cargo update
-    Updating git repository `https://github.com/ontouchstart/ontouchstart.github.io.git`
-     Locking 0 packages to latest Rust 1.91.1 compatible versions
-cargo fmt 
-cargo build
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
-cargo run
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
-     Running `target/debug/notebook_2026_01_05`
+<pre><code class="language-bash">cargo test
+
+running 1 test
+test it_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+</code></pre>
+<p><code>make run</code></p>
+<p><code>src/main.rs</code></p>
+<pre><code class="language-rust">cat src/main.rs 
+fn main() {
+    println!("Hello, world!");
+    println!("{}", url());
+}
+
+pub fn url() -&gt; String {
+    String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+}
+
+#[test]
+fn it_works() {
+    assert_eq!(
+        url(),
+        String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+    )
+}</code></pre>
+<pre><code class="language-bash">cargo run
 Hello, world!
-https://github.com/ontouchstart
-cargo run --release
-    Finished `release` profile [optimized] target(s) in 0.01s
-     Running `target/release/notebook_2026_01_05`
+https://ontouchstart.github.io/rust-notebook/book/2026/01/06
+</code></pre>
+<p><code>main.py</code></p>
+<pre><code class="language-python">name = "notebook-2026-01-06"
+def url():
+    return "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
+
+def test_url():
+    assert url() == "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
+
+def main():
+    print("Hello, world!")
+    print(url())
+
+if __name__ == "__main__":
+    main()
+
+</code></pre>
+<pre><code class="language-bash">uv run main.py
 Hello, world!
-https://github.com/ontouchstart
+https://ontouchstart.github.io/rust-notebook/book/2026/01/06
 </code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../code_review_medium.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../2026/01/05/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../../2026/01/06/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -218,13 +386,10 @@ https://github.com/ontouchstart
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../code_review_medium.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../2026/01/05/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../../2026/01/06/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>

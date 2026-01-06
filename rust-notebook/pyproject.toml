@@ -13,3 +13,8 @@ dependencies = [
 [tool.uv.sources]
 ask-mlx-lm = { git = "https://github.com/ontouchstart/ontouchstart.github.io", rev = "ask_mlx_lm" }
 
+[tool.uv.workspace]
+members = [
+    "src/2026/01/06",
+]
+
