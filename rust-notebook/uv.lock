@@ -229,11 +229,15 @@ name = "notebook-2026-01-06"
 version = "0.1.0"
 source = { virtual = "src/2026/01/06" }
 dependencies = [
+    { name = "mlx-lm" },
     { name = "pytest" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pytest", specifier = ">=9.0.2" }]
+requires-dist = [
+    { name = "mlx-lm", specifier = ">=0.29.1" },
+    { name = "pytest", specifier = ">=9.0.2" },
+]
 
 [[package]]
 name = "numpy"

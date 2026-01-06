@@ -17,6 +17,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "mlx-lm>=0.29.1",
     "pytest>=9.0.2",
 ]
 ```
@@ -94,6 +95,13 @@ run:	Cargo.toml pyproject.toml
 	uv run main.py
 	@echo '```'
 
+	@echo '```bash'
+	uv run mlx_lm.generate --prompt "Tell me something about brown M&Ms"
+	@echo '```'
+
+format:
+	uv run ruff format
+	cargo fmt
 clean:
 	rm *.toml
 ```
@@ -102,19 +110,23 @@ clean:
 `main.py`
 ```python
 name = "notebook-2026-01-06"
+
+
 def url():
     return "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
 
+
 def test_url():
     assert url() == "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
+
 
 def main():
     print("Hello, world!")
     print(url())
 
+
 if __name__ == "__main__":
     main()
-
 ```
 ```bash
 uv run pytest main.py -v
@@ -143,7 +155,7 @@ pub fn url() -> String {
 }
 
 #[test]
-fn it_works() {
+fn test_url() {
     assert_eq!(
         url(),
         String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
@@ -154,7 +166,7 @@ fn it_works() {
 cargo test
 
 running 1 test
-test it_works ... ok
+test test_url ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
@@ -174,7 +186,7 @@ pub fn url() -> String {
 }
 
 #[test]
-fn it_works() {
+fn test_url() {
     assert_eq!(
         url(),
         String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
@@ -189,22 +201,37 @@ https://ontouchstart.github.io/rust-notebook/book/2026/01/06
 `main.py`
 ```python
 name = "notebook-2026-01-06"
+
+
 def url():
     return "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
 
+
 def test_url():
     assert url() == "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
+
 
 def main():
     print("Hello, world!")
     print(url())
 
+
 if __name__ == "__main__":
     main()
-
 ```
 ```bash
 uv run main.py
 Hello, world!
 https://ontouchstart.github.io/rust-notebook/book/2026/01/06
+```
+```bash
+uv run mlx_lm.generate --prompt "Tell me something about brown M&Ms"
+==========
+Brown M&M's are a unique and interesting variation of the classic candy. They were first introduced in the United States in 1995 as a limited-edition flavor. The brown M&M's were made with a caramel-like coating, which gave them a distinct taste and texture.
+
+Interestingly, the brown M&M's were not an instant success. In fact, they were met with skepticism by many people, who were used to the traditional milk chocolate and colorful candy shell of the classic M&M's.
+==========
+Prompt: 43 tokens, 393.854 tokens-per-sec
+Generation: 100 tokens, 50.894 tokens-per-sec
+Peak memory: 1.925 GB
 ```

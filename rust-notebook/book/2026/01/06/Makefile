@@ -70,6 +70,10 @@ run:	Cargo.toml pyproject.toml
 	uv run main.py
 	@echo '```'
 
+	@echo '```bash'
+	uv run mlx_lm.generate --prompt "Tell me something about brown M&Ms"
+	@echo '```'
+
 format:
 	uv run ruff format
 	cargo fmt
