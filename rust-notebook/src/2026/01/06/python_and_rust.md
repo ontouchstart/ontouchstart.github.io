@@ -11,14 +11,14 @@ He bought a latest model of 14-in MacBook Pro M5 from the nearest Apple Store an
 What language do you think he should to learn from scratch? 
 [Python](https://www.python.org/doc) or [Rust](https://rust-lang.org/learn)?
 
-He also heard about something called AI and decided to learn AI along the wauy as well. 
+He also heard about something called AI and decided to learn AI along the way. 
 
 Should he start with Python or Rust? Or both?
 
 - <https://users.rust-lang.org/t/rust-vs-python-which-language-will-win-in-ai-race/124696>
 - <https://users.rust-lang.org/t/why-isn-t-rust-more-common-in-ai/132224>
 
-Or he can dive deep himself to see how people are using Python and Rust right now.
+Or he can dive deep himself to see how people are using Python and Rust in real world.
 
 ### The real story
 
