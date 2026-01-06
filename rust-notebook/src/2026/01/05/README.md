@@ -16,7 +16,7 @@ cargo run
 Hello, world!
 https://github.com/ontouchstart
 cargo run --release
-    Finished `release` profile [optimized] target(s) in 0.00s
+    Finished `release` profile [optimized] target(s) in 0.01s
      Running `target/release/notebook_2026_01_05`
 Hello, world!
 https://github.com/ontouchstart

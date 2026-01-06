@@ -12,4 +12,4 @@ dependencies = [
 [[package]]
 name = "ontouchstart_2026_01_05"
 version = "0.1.0"
-source = "git+https://github.com/ontouchstart/ontouchstart.github.io.git?branch=2026_01_05#625184af6cee812504bcb6a2cf76c02789f81dac"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io.git?branch=2026_01_05#0aeadf3fd8e91fc70df5903e50db20f4b49282ea"
