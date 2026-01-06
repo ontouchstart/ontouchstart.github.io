@@ -71,6 +71,7 @@ run:	Cargo.toml pyproject.toml
 	@echo '```'
 
 	@echo '```bash'
+	@echo '# someone will get the joke, I would not explain'
 	uv run mlx_lm.generate --prompt "Tell me something about brown M&Ms"
 	@echo '```'
 
