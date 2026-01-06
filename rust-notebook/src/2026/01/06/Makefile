@@ -1,26 +1,24 @@
 NAME=notebook_2026_01_06
 
 all:	Cargo.toml pyproject.toml
-	@echo "# $(NAME)" > README.md
+	@echo '`Cargo.toml`' > make.md
+	@echo '```toml' >> make.md
+	@cat Cargo.toml >> make.md
+	@echo '```' >> make.md
 
-	@echo '`Cargo.toml`' >> README.md
-	@echo '```toml' >> README.md
-	@cat Cargo.toml >> README.md
-	@echo '```' >> README.md
+	@echo '`pyproject.toml`' >> make.md
+	@echo '```toml' >> make.md
+	@cat pyproject.toml >> make.md
+	@echo '```' >> make.md
 
-	@echo '`pyproject.toml`' >> README.md
-	@echo '```toml' >> README.md
-	@cat pyproject.toml >> README.md
-	@echo '```' >> README.md
+	@echo '`Makefile`' >> make.md
+	@echo '```Makefile' >> make.md
+	@cat Makefile >> make.md
+	@echo '```' >> make.md
 
-	@echo '`Makefile`' >> README.md
-	@echo '```Makefile' >> README.md
-	@cat Makefile >> README.md
-	@echo '```' >> README.md
+	@make test >> make.md
 
-	@make test >> README.md
-
-	@make run >> README.md
+	@make run >> make.md
 
 Cargo.toml:
 	cargo init --name $(NAME) .
