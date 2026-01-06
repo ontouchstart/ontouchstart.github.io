@@ -59,4 +59,17 @@ I might skip [vi](https://en.wikipedia.org/wiki/Vi_(text_editor)) at some point 
 
 Let the fun begin. 
 
-
+```sh
+sam@Sams-MacBook-Pro 06 % ed
+a
+# This file is created by ed
+.
+,l
+# This file is created by ed$
+w ed.md
+29
+q
+sam@Sams-MacBook-Pro 06 % cat ed.md 
+# This file is created by ed
+```
+{{#include ed.md}}

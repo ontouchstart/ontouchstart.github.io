@@ -37,7 +37,7 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-3e2aa785.js";
+            window.path_to_searchindex_js = "../../../searchindex-c2a3f856.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../../../toc-9a7fd0a9.js"></script>
@@ -453,6 +453,19 @@ DESCRIPTION
 </code></pre>
 <p>I might skip <a href="https://en.wikipedia.org/wiki/Vi_(text_editor)">vi</a> at some point in the future and think in buffers.</p>
 <p>Let the fun begin.</p>
+<pre><code class="language-sh">sam@Sams-MacBook-Pro 06 % ed
+a
+# This file is created by ed
+.
+,l
+# This file is created by ed$
+w ed.md
+29
+q
+sam@Sams-MacBook-Pro 06 % cat ed.md 
+# This file is created by ed
+</code></pre>
+<h1 id="this-file-is-created-by-ed"><a class="header" href="#this-file-is-created-by-ed">This file is created by ed</a></h1>
 
                     </main>
 
