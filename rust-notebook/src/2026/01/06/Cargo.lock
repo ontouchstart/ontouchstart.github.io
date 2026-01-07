@@ -5,3 +5,11 @@ version = 4
 [[package]]
 name = "notebook_2026_01_06"
 version = "0.1.0"
+dependencies = [
+ "ontouchstart_2026_01_06_rs",
+]
+
+[[package]]
+name = "ontouchstart_2026_01_06_rs"
+version = "0.1.0"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io.git?branch=2026_01_06_rs#5e2cda2166a0ee6e35cbed6570e71ebc4a38939e"

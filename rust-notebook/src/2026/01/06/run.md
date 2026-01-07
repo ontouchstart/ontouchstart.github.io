@@ -1,4 +1,5 @@
 `make run`
+# rust
 
 `src/main.rs`
 ```rust
@@ -6,6 +7,7 @@ cat src/main.rs
 fn main() {
     println!("Hello, world!");
     println!("{}", url());
+    println!("{}", ontouchstart_2026_01_06_rs::url());
 }
 
 pub fn url() -> String {
@@ -19,12 +21,22 @@ fn test_url() {
         String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
     )
 }
+
+#[test]
+fn test_ontouchstart_url() {
+    assert_eq!(
+        ontouchstart_2026_01_06_rs::url(),
+        String::from("https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_rs")
+    )
+}
 ```
 ```bash
 cargo run
 Hello, world!
 https://ontouchstart.github.io/rust-notebook/book/2026/01/06
+https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_rs
 ```
+# python
 `main.py`
 ```python
 import ontouchstart
@@ -62,6 +74,7 @@ Hello, world!
 https://ontouchstart.github.io/rust-notebook/book/2026/01/06
 https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_py
 ```
+# mlx_lm
 ```bash
 # someone will get the joke, I would not explain
 uv run mlx_lm.generate --prompt "Tell me something about brown M&Ms"
@@ -70,7 +83,7 @@ Brown M&M's are a unique and interesting variation of the classic candy. They we
 
 Interestingly, the brown M&M's were not an instant success. In fact, they were met with skepticism by many people, who were used to the traditional milk chocolate and colorful candy shell of the classic M&M's.
 ==========
-Prompt: 43 tokens, 416.440 tokens-per-sec
-Generation: 100 tokens, 47.365 tokens-per-sec
-Peak memory: 1.922 GB
+Prompt: 43 tokens, 441.629 tokens-per-sec
+Generation: 100 tokens, 48.253 tokens-per-sec
+Peak memory: 1.924 GB
 ```

@@ -6,4 +6,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+ontouchstart_2026_01_06_rs = { git = "https://github.com/ontouchstart/ontouchstart.github.io.git", branch = "2026_01_06_rs", version = "0.1.0" }
 ```

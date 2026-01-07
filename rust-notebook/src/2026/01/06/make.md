@@ -30,6 +30,7 @@ run.md:
 
 Cargo.toml:
 	cargo init --name $(NAME) .
+	cargo add --git https://github.com/ontouchstart/ontouchstart.github.io.git  --branch 2026_01_06_rs ontouchstart_2026_01_06_rs
 
 pyproject.toml:
 	uv init --name $(NAME) .
@@ -39,16 +40,8 @@ pyproject.toml:
 
 test:	Cargo.toml pyproject.toml
 	@echo '`make test`'
-	@echo
-	@echo '`main.py`'
-	@echo '```python'
-	@cat main.py
-	@echo '```'
 
-	@echo '```bash'
-	uv run pytest main.py -v
-	@echo '```'
-
+	# rust
 	@echo
 	@echo '`src/main.rs`'
 	@echo '```rust'
@@ -59,8 +52,21 @@ test:	Cargo.toml pyproject.toml
 	cargo test
 	@echo '```'
 
+	# python
+	@echo
+	@echo '`main.py`'
+	@echo '```python'
+	@cat main.py
+	@echo '```'
+
+	@echo '```bash'
+	uv run pytest main.py -v
+	@echo '```'
+
 run:	Cargo.toml pyproject.toml
 	@echo '`make run`'
+
+	# rust
 	@echo
 	@echo '`src/main.rs`'
 	@echo '```rust'
@@ -70,6 +76,7 @@ run:	Cargo.toml pyproject.toml
 	cargo run
 	@echo '```'
 
+	# python
 	@echo '`main.py`'
 	@echo '```python'
 	@cat main.py
@@ -78,6 +85,7 @@ run:	Cargo.toml pyproject.toml
 	uv run main.py
 	@echo '```'
 
+	# mlx_lm
 	@echo '```bash'
 	@echo '# someone will get the joke, I would not explain'
 	uv run mlx_lm.generate --prompt "Tell me something about brown M&Ms"

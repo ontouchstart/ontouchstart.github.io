@@ -189,6 +189,7 @@ run.md:
 
 Cargo.toml:
 	cargo init --name $(NAME) .
+	cargo add --git https://github.com/ontouchstart/ontouchstart.github.io.git  --branch 2026_01_06_rs ontouchstart_2026_01_06_rs
 
 pyproject.toml:
 	uv init --name $(NAME) .
@@ -198,16 +199,8 @@ pyproject.toml:
 
 test:	Cargo.toml pyproject.toml
 	@echo '`make test`'
-	@echo
-	@echo '`main.py`'
-	@echo '```python'
-	@cat main.py
-	@echo '```'
 
-	@echo '```bash'
-	uv run pytest main.py -v
-	@echo '```'
-
+	# rust
 	@echo
 	@echo '`src/main.rs`'
 	@echo '```rust'
@@ -218,8 +211,21 @@ test:	Cargo.toml pyproject.toml
 	cargo test
 	@echo '```'
 
+	# python
+	@echo
+	@echo '`main.py`'
+	@echo '```python'
+	@cat main.py
+	@echo '```'
+
+	@echo '```bash'
+	uv run pytest main.py -v
+	@echo '```'
+
 run:	Cargo.toml pyproject.toml
 	@echo '`make run`'
+
+	# rust
 	@echo
 	@echo '`src/main.rs`'
 	@echo '```rust'
@@ -229,6 +235,7 @@ run:	Cargo.toml pyproject.toml
 	cargo run
 	@echo '```'
 
+	# python
 	@echo '`main.py`'
 	@echo '```python'
 	@cat main.py
@@ -237,6 +244,7 @@ run:	Cargo.toml pyproject.toml
 	uv run main.py
 	@echo '```'
 
+	# mlx_lm
 	@echo '```bash'
 	@echo '# someone will get the joke, I would not explain'
 	uv run mlx_lm.generate --prompt "Tell me something about brown M&amp;Ms"
@@ -256,6 +264,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+ontouchstart_2026_01_06_rs = { git = "https://github.com/ontouchstart/ontouchstart.github.io.git", branch = "2026_01_06_rs", version = "0.1.0" }
 </code></pre>
 <h2 id="pyproject"><a class="header" href="#pyproject">pyproject</a></h2>
 <p><code>pyproject.toml</code></p>
@@ -276,6 +285,44 @@ ontouchstart-2026-01-06-py = { git = "https://github.com/ontouchstart/ontouchsta
 </code></pre>
 <h2 id="test"><a class="header" href="#test">test</a></h2>
 <p><code>make test</code></p>
+<h1 id="rust"><a class="header" href="#rust">rust</a></h1>
+<p><code>src/main.rs</code></p>
+<pre><code class="language-rust">cat src/main.rs 
+fn main() {
+    println!("Hello, world!");
+    println!("{}", url());
+    println!("{}", ontouchstart_2026_01_06_rs::url());
+}
+
+pub fn url() -&gt; String {
+    String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+}
+
+#[test]
+fn test_url() {
+    assert_eq!(
+        url(),
+        String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+    )
+}
+
+#[test]
+fn test_ontouchstart_url() {
+    assert_eq!(
+        ontouchstart_2026_01_06_rs::url(),
+        String::from("https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_rs")
+    )
+}</code></pre>
+<pre><code class="language-bash">cargo test
+
+running 2 tests
+test test_ontouchstart_url ... ok
+test test_url ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+</code></pre>
+<h1 id="python"><a class="header" href="#python">python</a></h1>
 <p><code>main.py</code></p>
 <pre><code class="language-python">import ontouchstart
 
@@ -319,11 +366,15 @@ main.py::test_ontouchstart_url PASSED                                    [100%]
 
 ============================== 2 passed in 0.00s ===============================
 </code></pre>
+<h2 id="run"><a class="header" href="#run">run</a></h2>
+<p><code>make run</code></p>
+<h1 id="rust-1"><a class="header" href="#rust-1">rust</a></h1>
 <p><code>src/main.rs</code></p>
 <pre><code class="language-rust">cat src/main.rs 
 fn main() {
     println!("Hello, world!");
     println!("{}", url());
+    println!("{}", ontouchstart_2026_01_06_rs::url());
 }
 
 pub fn url() -&gt; String {
@@ -336,39 +387,21 @@ fn test_url() {
         url(),
         String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
     )
-}</code></pre>
-<pre><code class="language-bash">cargo test
-
-running 1 test
-test test_url ... ok
-
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-</code></pre>
-<h2 id="run"><a class="header" href="#run">run</a></h2>
-<p><code>make run</code></p>
-<p><code>src/main.rs</code></p>
-<pre><code class="language-rust">cat src/main.rs 
-fn main() {
-    println!("Hello, world!");
-    println!("{}", url());
-}
-
-pub fn url() -&gt; String {
-    String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
 }
 
 #[test]
-fn test_url() {
+fn test_ontouchstart_url() {
     assert_eq!(
-        url(),
-        String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+        ontouchstart_2026_01_06_rs::url(),
+        String::from("https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_rs")
     )
 }</code></pre>
 <pre><code class="language-bash">cargo run
 Hello, world!
 https://ontouchstart.github.io/rust-notebook/book/2026/01/06
+https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_rs
 </code></pre>
+<h1 id="python-1"><a class="header" href="#python-1">python</a></h1>
 <p><code>main.py</code></p>
 <pre><code class="language-python">import ontouchstart
 
@@ -404,6 +437,7 @@ Hello, world!
 https://ontouchstart.github.io/rust-notebook/book/2026/01/06
 https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_py
 </code></pre>
+<h1 id="mlx_lm"><a class="header" href="#mlx_lm">mlx_lm</a></h1>
 <pre><code class="language-bash"># someone will get the joke, I would not explain
 uv run mlx_lm.generate --prompt "Tell me something about brown M&amp;Ms"
 ==========
@@ -411,9 +445,9 @@ Brown M&amp;M's are a unique and interesting variation of the classic candy. The
 
 Interestingly, the brown M&amp;M's were not an instant success. In fact, they were met with skepticism by many people, who were used to the traditional milk chocolate and colorful candy shell of the classic M&amp;M's.
 ==========
-Prompt: 43 tokens, 416.440 tokens-per-sec
-Generation: 100 tokens, 47.365 tokens-per-sec
-Peak memory: 1.922 GB
+Prompt: 43 tokens, 441.629 tokens-per-sec
+Generation: 100 tokens, 48.253 tokens-per-sec
+Peak memory: 1.924 GB
 </code></pre>
 <h2 id="python-and-rust"><a class="header" href="#python-and-rust">Python and Rust</a></h2>
 <h3 id="a-hypothetical-story"><a class="header" href="#a-hypothetical-story">A hypothetical story</a></h3>

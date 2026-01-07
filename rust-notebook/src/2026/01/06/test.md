@@ -1,4 +1,46 @@
 `make test`
+# rust
+
+`src/main.rs`
+```rust
+cat src/main.rs 
+fn main() {
+    println!("Hello, world!");
+    println!("{}", url());
+    println!("{}", ontouchstart_2026_01_06_rs::url());
+}
+
+pub fn url() -> String {
+    String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+}
+
+#[test]
+fn test_url() {
+    assert_eq!(
+        url(),
+        String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
+    )
+}
+
+#[test]
+fn test_ontouchstart_url() {
+    assert_eq!(
+        ontouchstart_2026_01_06_rs::url(),
+        String::from("https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_rs")
+    )
+}
+```
+```bash
+cargo test
+
+running 2 tests
+test test_ontouchstart_url ... ok
+test test_url ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+```
+# python
 
 `main.py`
 ```python
@@ -44,34 +86,4 @@ main.py::test_url PASSED                                                 [ 50%]
 main.py::test_ontouchstart_url PASSED                                    [100%]
 
 ============================== 2 passed in 0.00s ===============================
-```
-
-`src/main.rs`
-```rust
-cat src/main.rs 
-fn main() {
-    println!("Hello, world!");
-    println!("{}", url());
-}
-
-pub fn url() -> String {
-    String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
-}
-
-#[test]
-fn test_url() {
-    assert_eq!(
-        url(),
-        String::from("https://ontouchstart.github.io/rust-notebook/book/2026/01/06")
-    )
-}
-```
-```bash
-cargo test
-
-running 1 test
-test test_url ... ok
-
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
 ```
