@@ -71,5 +71,7 @@ w ed.md
 q
 sam@Sams-MacBook-Pro 06 % cat ed.md 
 # This file is created by ed
+sam@Sams-MacBook-Pro 06 % wc ed.md 
+       1       7      29 ed.md
 ```
 {{#include ed.md}}
