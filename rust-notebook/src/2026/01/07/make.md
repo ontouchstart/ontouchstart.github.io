@@ -17,7 +17,7 @@ Cargo.md:	Cargo.toml
 	echo '```' >> Cargo.md
 
 test.md:
-	make test > test.md
+	make test &> test.md
 
 Cargo.toml:
 	cargo init --name $(NAME) .

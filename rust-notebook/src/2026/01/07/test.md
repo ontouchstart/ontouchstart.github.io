@@ -77,21 +77,47 @@ fn example_searching_multiple_sets_efficiently() -> Result<(), Box<dyn std::erro
 ```
 ```bash
 cargo test
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.01s
+     Running unittests src/lib.rs (target/debug/deps/notebook_2026_01_07-92c4db99aab404bc)
 
-running 0 tests
+running 1 test
+test tests::internal ... ok
 
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running unittests src/main.rs (target/debug/deps/notebook_2026_01_07-53c4b8ffd2738b9e)
+
+running 1 test
+test test_main ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/example-fuzzy-query.rs (target/debug/deps/example_fuzzy_query-9913658f3eefeec9)
 
 running 1 test
 test example_fuzzy_query ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running tests/example-searching-multiple-sets-efficiently.rs (target/debug/deps/example_searching_multiple_sets_efficiently-df86a94400e22778)
 
 running 1 test
 test example_searching_multiple_sets_efficiently ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/integration_test.rs (target/debug/deps/integration_test-1dd791e0f222d3ee)
+
+running 1 test
+test it_adds_two ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests notebook_2026_01_07
+
+running 1 test
+test src/lib.rs - add_two (line 3) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
 ```

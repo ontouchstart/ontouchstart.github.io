@@ -1,7 +1,7 @@
 ## Introduction
 
 This page is to learn Rust from existing rust crate via writing 
-[integration tests](https://doc.rust-lang.org/rust-by-example/testing/integration_testing.html) 
+[tests](https://doc.rust-lang.org/book/ch11-00-testing.html)
 based on the examples, documentation and the source code. 
 
 In this case, we use <https://docs.rs/fst> as an example. 
