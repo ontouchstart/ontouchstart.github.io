@@ -904,6 +904,7 @@ pyproject.toml:
 	uv init --name $(NAME) .
 	uv add pytest
 	uv add mlx-lm
+	uv add "ontouchstart_2026_01_06_py @ git+https://github.com/ontouchstart/ontouchstart.github.io.git@2026_01_06_py"
 
 test:	Cargo.toml pyproject.toml
 	@echo '`make test`'
@@ -955,7 +956,7 @@ format:
 	uv run ruff format
 	cargo fmt
 clean:
-	rm *.toml
+	rm -f *.toml run.md test.md
 </code></pre>
 <h2 id="cargo"><a class="header" href="#cargo">cargo</a></h2>
 <p><code>Cargo.toml</code></p>
@@ -976,14 +977,19 @@ readme = "README.md"
 requires-python = "&gt;=3.14"
 dependencies = [
     "mlx-lm&gt;=0.29.1",
+    "ontouchstart-2026-01-06-py",
     "pytest&gt;=9.0.2",
 ]
+
+[tool.uv.sources]
+ontouchstart-2026-01-06-py = { git = "https://github.com/ontouchstart/ontouchstart.github.io.git", rev = "2026_01_06_py" }
 </code></pre>
 <h2 id="test"><a class="header" href="#test">test</a></h2>
 <p><code>make test</code></p>
 <p><code>main.py</code></p>
-<pre><code class="language-python">name = "notebook-2026-01-06"
+<pre><code class="language-python">import ontouchstart
 
+name = "notebook-2026-01-06"
 
 def url():
     return "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
@@ -992,10 +998,16 @@ def url():
 def test_url():
     assert url() == "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
 
+def test_ontouchstart_url():
+    assert ontouchstart.url() == "https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_py"
+
+
+
 
 def main():
     print("Hello, world!")
     print(url())
+    print(ontouchstart.url())
 
 
 if __name__ == "__main__":
@@ -1007,11 +1019,12 @@ platform darwin -- Python 3.14.2, pytest-9.0.2, pluggy-1.6.0 -- /Users/sam/githu
 cachedir: .pytest_cache
 rootdir: /Users/sam/github/ontouchstart.github.io/rust-notebook/src/2026/01/06
 configfile: pyproject.toml
-collecting ... collected 1 item
+collecting ... collected 2 items
 
-main.py::test_url PASSED                                                 [100%]
+main.py::test_url PASSED                                                 [ 50%]
+main.py::test_ontouchstart_url PASSED                                    [100%]
 
-============================== 1 passed in 0.00s ===============================
+============================== 2 passed in 0.00s ===============================
 </code></pre>
 <p><code>src/main.rs</code></p>
 <pre><code class="language-rust">cat src/main.rs 
@@ -1064,8 +1077,9 @@ Hello, world!
 https://ontouchstart.github.io/rust-notebook/book/2026/01/06
 </code></pre>
 <p><code>main.py</code></p>
-<pre><code class="language-python">name = "notebook-2026-01-06"
+<pre><code class="language-python">import ontouchstart
 
+name = "notebook-2026-01-06"
 
 def url():
     return "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
@@ -1074,10 +1088,16 @@ def url():
 def test_url():
     assert url() == "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
 
+def test_ontouchstart_url():
+    assert ontouchstart.url() == "https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_py"
+
+
+
 
 def main():
     print("Hello, world!")
     print(url())
+    print(ontouchstart.url())
 
 
 if __name__ == "__main__":
@@ -1086,6 +1106,7 @@ if __name__ == "__main__":
 <pre><code class="language-bash">uv run main.py
 Hello, world!
 https://ontouchstart.github.io/rust-notebook/book/2026/01/06
+https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_py
 </code></pre>
 <pre><code class="language-bash"># someone will get the joke, I would not explain
 uv run mlx_lm.generate --prompt "Tell me something about brown M&amp;Ms"
@@ -1094,9 +1115,9 @@ Brown M&amp;M's are a unique and interesting variation of the classic candy. The
 
 Interestingly, the brown M&amp;M's were not an instant success. In fact, they were met with skepticism by many people, who were used to the traditional milk chocolate and colorful candy shell of the classic M&amp;M's.
 ==========
-Prompt: 43 tokens, 347.386 tokens-per-sec
-Generation: 100 tokens, 47.532 tokens-per-sec
-Peak memory: 1.911 GB
+Prompt: 43 tokens, 434.829 tokens-per-sec
+Generation: 100 tokens, 48.433 tokens-per-sec
+Peak memory: 1.925 GB
 </code></pre>
 <h2 id="python-and-rust"><a class="header" href="#python-and-rust">Python and Rust</a></h2>
 <h3 id="a-hypothetical-story"><a class="header" href="#a-hypothetical-story">A hypothetical story</a></h3>

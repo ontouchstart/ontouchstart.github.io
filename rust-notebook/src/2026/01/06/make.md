@@ -35,6 +35,7 @@ pyproject.toml:
 	uv init --name $(NAME) .
 	uv add pytest
 	uv add mlx-lm
+	uv add "ontouchstart_2026_01_06_py @ git+https://github.com/ontouchstart/ontouchstart.github.io.git@2026_01_06_py"
 
 test:	Cargo.toml pyproject.toml
 	@echo '`make test`'
@@ -86,5 +87,5 @@ format:
 	uv run ruff format
 	cargo fmt
 clean:
-	rm *.toml
+	rm -f *.toml run.md test.md
 ```

@@ -8,6 +8,10 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "mlx-lm>=0.29.1",
+    "ontouchstart-2026-01-06-py",
     "pytest>=9.0.2",
 ]
+
+[tool.uv.sources]
+ontouchstart-2026-01-06-py = { git = "https://github.com/ontouchstart/ontouchstart.github.io.git", rev = "2026_01_06_py" }
 ```
