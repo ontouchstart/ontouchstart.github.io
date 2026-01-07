@@ -1,1 +1,1 @@
-# This file is created by ed
+This file is created by ed

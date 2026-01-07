@@ -73,5 +73,18 @@ sam@Sams-MacBook-Pro 06 % cat ed.md
 # This file is created by ed
 sam@Sams-MacBook-Pro 06 % wc ed.md 
        1       7      29 ed.md
+sam@Sams-MacBook-Pro 06 % ed -p: ed.md
+29
+:n
+1	# This file is created by ed
+:s/# //
+:n
+1	This file is created by ed
+:wq
+27
+sam@Sams-MacBook-Pro 06 % cat ed.md 
+This file is created by ed
+sam@Sams-MacBook-Pro 06 % wc ed.md 
+       1       6      27 ed.md
 ```
 {{#include ed.md}}
