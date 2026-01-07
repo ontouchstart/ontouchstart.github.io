@@ -1,4 +1,4 @@
-from url import url
+from ontouchstart import url
 
 
 def test_url():
