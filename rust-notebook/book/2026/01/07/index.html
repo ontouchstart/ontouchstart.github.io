@@ -177,9 +177,7 @@ fn test_main() {
     assert_eq!(1, 1);
 }</code></pre>
 <p><code>src/lib.rs</code></p>
-<pre><code class="language-rust">///
-///
-/// ```
+<pre><code class="language-rust">/// ```
 ///  let result = notebook_2026_01_07::add_two(2);
 ///  assert_eq!(result, 4);
 /// ```
@@ -455,7 +453,8 @@ fn example_searching_multiple_sets_efficiently() -&gt; Result&lt;(), Box&lt;dyn 
     Ok(())
 }</code></pre>
 <pre><code class="language-bash">cargo test
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.01s
+   Compiling notebook_2026_01_07 v0.1.0 (/Users/sam/github/ontouchstart.github.io/rust-notebook/src/2026/01/07)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.33s
      Running unittests src/lib.rs (target/debug/deps/notebook_2026_01_07-92c4db99aab404bc)
 
 running 1 test
@@ -487,10 +486,10 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
      Running tests/fst-test.rs (target/debug/deps/fst_test-e526e6ea798b23a5)
 
 running 11 tests
-test intersection_small ... ok
-test levenshtein_simple ... ok
-test startswith_small ... ok
 test complement_small ... ok
+test intersection_small ... ok
+test startswith_small ... ok
+test levenshtein_simple ... ok
 test implements_default ... ok
 test union_small ... ok
 test levenshtein_unicode ... ok
@@ -499,7 +498,7 @@ test intersection_large ... ok
 test union_large ... ok
 test subsequence ... ok
 
-test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
 
      Running tests/integration_test.rs (target/debug/deps/integration_test-1dd791e0f222d3ee)
 
@@ -511,7 +510,7 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
    Doc-tests notebook_2026_01_07
 
 running 1 test
-test src/lib.rs - add_two (line 3) ... ok
+test src/lib.rs - add_two (line 1) ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
