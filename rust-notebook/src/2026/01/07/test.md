@@ -1,3 +1,4 @@
+cargo fmt
 `make test`
 
 `tests/example-fuzzy-query.rs`
@@ -93,32 +94,4 @@ test example_searching_multiple_sets_efficiently ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
 
-```
-# python
-
-`main.py`
-```python
-def main():
-    print("Hello from notebook-2026-01-07!")
-
-
-def test_main():
-    assert True
-
-
-if __name__ == "__main__":
-    main()
-```
-```bash
-uv run pytest main.py -v
-============================= test session starts ==============================
-platform darwin -- Python 3.14.2, pytest-9.0.2, pluggy-1.6.0 -- /Users/sam/github/ontouchstart.github.io/rust-notebook/.venv/bin/python3
-cachedir: .pytest_cache
-rootdir: /Users/sam/github/ontouchstart.github.io/rust-notebook/src/2026/01/07
-configfile: pyproject.toml
-collecting ... collected 1 item
-
-main.py::test_main PASSED                                                [100%]
-
-============================== 1 passed in 0.00s ===============================
 ```

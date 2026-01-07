@@ -7,9 +7,6 @@
 
 ## make
  {{#include make.md}}
+
 ## cargo
  {{#include Cargo.md}}
-## pyproject
- {{#include pyproject.md}}
-## run
- {{#include run.md}}
