@@ -34,6 +34,7 @@ Cargo.toml:
 pyproject.toml:
 	uv init --name $(NAME) .
 	uv add pytest
+	uv add mlx-lm
 
 test:	Cargo.toml pyproject.toml
 	@echo '`make test`'
