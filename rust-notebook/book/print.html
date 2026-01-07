@@ -40,7 +40,7 @@
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-9a7fd0a9.js"></script>
+        <script src="toc-de5c52b3.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -286,6 +286,7 @@ ask-mlx-lm = { git = "https://github.com/ontouchstart/ontouchstart.github.io", r
 [tool.uv.workspace]
 members = [
     "src/2026/01/06",
+    "src/2026/01/07",
 ]
 
 </code></pre>
@@ -1243,6 +1244,272 @@ sam@Sams-MacBook-Pro 06 % wc ed.md
        1       6      28 ed.md
 </code></pre>
 <p>This file is created by ed.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="notebook_2026_01_07"><a class="header" href="#notebook_2026_01_07">notebook_2026_01_07</a></h1>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>This page is to learn about some existing rust crate via writing tests based on
+the examples or the source code itself.</p>
+<p>In this case, we use <a href="https://docs.rs/fst">https://docs.rs/fst</a> as an example.
+The library itself is not important at this point.
+We are learning about <strong>how</strong> to do thing.</p>
+<h2 id="test-1"><a class="header" href="#test-1">test</a></h2>
+<p><code>make test</code></p>
+<p><code>tests/example-fuzzy-query.rs</code></p>
+<pre><code class="language-rust">/// https://docs.rs/fst/latest/fst/#example-fuzzy-query
+///
+use fst::automaton::Levenshtein;
+use fst::{IntoStreamer, Set};
+
+#[test]
+fn example_fuzzy_query() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+    // A convenient way to create sets in memory.
+    let keys = vec!["fa", "fo", "fob", "focus", "foo", "food", "foul"];
+    let set = Set::from_iter(keys)?;
+
+    // Build our fuzzy query.
+    let lev = Levenshtein::new("foo", 1)?;
+
+    // Apply our fuzzy query to the set we built.
+    let stream = set.search(lev).into_stream();
+
+    let keys = stream.into_strs()?;
+    assert_eq!(keys, vec!["fo", "fob", "foo", "food"]);
+    Ok(())
+}</code></pre>
+<p><code>tests/example-searching-multiple-sets-efficiently.rs</code></p>
+<pre><code class="language-rust">/// https://docs.rs/fst/latest/fst/#example-searching-multiple-sets-efficiently
+use fst::automaton::{Automaton, Str};
+use fst::set;
+use fst::{Set, Streamer};
+
+#[test]
+fn example_searching_multiple_sets_efficiently() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+    let set1 = Set::from_iter(&amp;["AC/DC", "Aerosmith"])?;
+    let set2 = Set::from_iter(&amp;["Bob Seger", "Bruce Springsteen"])?;
+    let set3 = Set::from_iter(&amp;["George Thorogood", "Golden Earring"])?;
+    let set4 = Set::from_iter(&amp;["Kansas"])?;
+    let set5 = Set::from_iter(&amp;["Metallica"])?;
+
+    // Create the matcher. We can reuse it to search all of the sets.
+    let matcher = Str::new("B")
+        .starts_with()
+        .union(Str::new("G").starts_with());
+
+    // Build a set operation. All we need to do is add a search result stream
+    // for each set and ask for the union. (Other operations, like intersection
+    // and difference are also available.)
+    let mut stream = set::OpBuilder::new()
+        .add(set1.search(&amp;matcher))
+        .add(set2.search(&amp;matcher))
+        .add(set3.search(&amp;matcher))
+        .add(set4.search(&amp;matcher))
+        .add(set5.search(&amp;matcher))
+        .union();
+
+    // Now collect all of the keys. Alternatively, you could build another set
+    // here using `SetBuilder::extend_stream`.
+    let mut keys = vec![];
+    while let Some(key) = stream.next() {
+        keys.push(String::from_utf8(key.to_vec())?);
+    }
+    assert_eq!(
+        keys,
+        vec![
+            "Bob Seger",
+            "Bruce Springsteen",
+            "George Thorogood",
+            "Golden Earring",
+        ]
+    );
+    Ok(())
+}
+```bash
+cargo test
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 1 test
+test example_fuzzy_query ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 1 test
+test example_searching_multiple_sets_efficiently ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+</code></pre>
+<h1 id="python-2"><a class="header" href="#python-2">python</a></h1>
+<p><code>main.py</code></p>
+<pre><code class="language-python">def main():
+    print("Hello from notebook-2026-01-07!")
+
+
+def test_main():
+    assert True
+
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+<pre><code class="language-bash">uv run pytest main.py -v
+============================= test session starts ==============================
+platform darwin -- Python 3.14.2, pytest-9.0.2, pluggy-1.6.0 -- /Users/sam/github/ontouchstart.github.io/rust-notebook/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/sam/github/ontouchstart.github.io/rust-notebook/src/2026/01/07
+configfile: pyproject.toml
+collecting ... collected 1 item
+
+main.py::test_main PASSED                                                [100%]
+
+============================== 1 passed in 0.00s ===============================
+</code></pre>
+<h2 id="make-1"><a class="header" href="#make-1">make</a></h2>
+<p><code>Makefile</code></p>
+<pre><code class="language-Makefile">NAME=notebook_2026_01_07
+
+all:	make.md Cargo.md pyproject.md test.md run.md
+
+make.md:	Makefile
+	echo '`Makefile`' &gt; make.md
+	echo '```Makefile' &gt;&gt; make.md
+	cat Makefile &gt;&gt; make.md
+	echo '```' &gt;&gt; make.md
+
+Cargo.md:	Cargo.toml
+	echo '`Cargo.toml`' &gt; Cargo.md
+	echo '```toml' &gt;&gt; Cargo.md
+	cat Cargo.toml &gt;&gt; Cargo.md
+	echo '```' &gt;&gt; Cargo.md
+
+pyproject.md:	pyproject.toml
+	echo '`pyproject.toml`' &gt; pyproject.md
+	echo '```toml' &gt;&gt; pyproject.md
+	cat pyproject.toml &gt;&gt; pyproject.md
+	echo '```' &gt;&gt; pyproject.md
+
+test.md:
+	make test &gt; test.md
+
+run.md:
+	make run &gt; run.md
+
+Cargo.toml:
+	cargo init --name $(NAME) .
+	cargo add fst --features levenshtein
+
+pyproject.toml:
+	uv init --name $(NAME) .
+	uv add pytest
+
+test:	Cargo.toml pyproject.toml
+	@echo '`make test`'
+
+	@echo
+	@echo '`tests/example-fuzzy-query.rs`'
+	@echo '```rust'
+	@cat tests/example-fuzzy-query.rs
+	@echo '```'
+
+	@echo
+	@echo '`tests/example-searching-multiple-sets-efficiently.rs`'
+	@echo '```rust'
+	@cat tests/example-searching-multiple-sets-efficiently.rs
+
+	@echo '```bash'
+	cargo test
+	@echo '```'
+
+	# python
+	@echo
+	@echo '`main.py`'
+	@echo '```python'
+	@cat main.py
+	@echo '```'
+
+	@echo '```bash'
+	uv run pytest main.py -v
+	@echo '```'
+
+run:	Cargo.toml pyproject.toml
+	@echo '`make run`'
+
+	# rust
+	@echo
+	@echo '`src/main.rs`'
+	@echo '```rust'
+	@cat src/main.rs 
+	@echo '```'
+	@echo '```bash'
+	cargo run
+	@echo '```'
+
+	# python
+	@echo '`main.py`'
+	@echo '```python'
+	@cat main.py
+	@echo '```'
+	@echo '```bash'
+	uv run main.py
+	@echo '```'
+
+format:
+	uv run ruff format
+	cargo fmt
+clean:
+	rm -f *.toml run.md test.md
+</code></pre>
+<h2 id="cargo-1"><a class="header" href="#cargo-1">cargo</a></h2>
+<p><code>Cargo.toml</code></p>
+<pre><code class="language-toml">[package]
+name = "notebook_2026_01_07"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+fst = { version = "0.4.7", features = ["levenshtein"] }
+</code></pre>
+<h2 id="pyproject-1"><a class="header" href="#pyproject-1">pyproject</a></h2>
+<p><code>pyproject.toml</code></p>
+<pre><code class="language-toml">[project]
+name = "notebook-2026-01-07"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "&gt;=3.14"
+dependencies = [
+    "pytest&gt;=9.0.2",
+]
+</code></pre>
+<h2 id="run-1"><a class="header" href="#run-1">run</a></h2>
+<p><code>make run</code></p>
+<h1 id="rust-2"><a class="header" href="#rust-2">rust</a></h1>
+<p><code>src/main.rs</code></p>
+<pre><code class="language-rust">fn main() {
+    println!("Hello, world!");
+}</code></pre>
+<pre><code class="language-bash">cargo run
+Hello, world!
+</code></pre>
+<h1 id="python-1-1"><a class="header" href="#python-1-1">python</a></h1>
+<p><code>main.py</code></p>
+<pre><code class="language-python">def main():
+    print("Hello from notebook-2026-01-07!")
+
+
+def test_main():
+    assert True
+
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+<pre><code class="language-bash">uv run main.py
+Hello from notebook-2026-01-07!
+</code></pre>
 
                     </main>
 
