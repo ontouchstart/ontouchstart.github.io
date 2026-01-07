@@ -73,6 +73,7 @@ fn example_searching_multiple_sets_efficiently() -> Result<(), Box<dyn std::erro
     );
     Ok(())
 }
+```
 ```bash
 cargo test
 

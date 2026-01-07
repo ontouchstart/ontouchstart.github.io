@@ -49,6 +49,7 @@ test:	Cargo.toml pyproject.toml
 	@echo '`tests/example-searching-multiple-sets-efficiently.rs`'
 	@echo '```rust'
 	@cat tests/example-searching-multiple-sets-efficiently.rs
+	@echo '```'
 
 	@echo '```bash'
 	cargo test
