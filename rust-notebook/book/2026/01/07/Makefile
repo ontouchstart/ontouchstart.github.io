@@ -46,6 +46,12 @@ test:	Cargo.toml fmt
 	@echo '```'
 
 	@echo
+	@echo '`tests/fst-test.rs`'
+	@echo '```rust'
+	@cat tests/fst-test.rs
+	@echo '```'
+
+	@echo
 	@echo '`tests/example-fuzzy-query.rs`'
 	@echo '```rust'
 	@cat tests/example-fuzzy-query.rs
