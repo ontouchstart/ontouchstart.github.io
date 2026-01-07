@@ -2,7 +2,7 @@ name: Makefile CI
 
 on:
   push:
-    branches: [ "2026_01_05" ]
+    branches: [ "2026_01_07_rs" ]
 
 jobs:
   build:
