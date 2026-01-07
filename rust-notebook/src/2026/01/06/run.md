@@ -31,6 +31,7 @@ import ontouchstart
 
 name = "notebook-2026-01-06"
 
+
 def url():
     return "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
 
@@ -38,10 +39,12 @@ def url():
 def test_url():
     assert url() == "https://ontouchstart.github.io/rust-notebook/book/2026/01/06"
 
+
 def test_ontouchstart_url():
-    assert ontouchstart.url() == "https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_py"
-
-
+    assert (
+        ontouchstart.url()
+        == "https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_06_py"
+    )
 
 
 def main():
@@ -67,7 +70,7 @@ Brown M&M's are a unique and interesting variation of the classic candy. They we
 
 Interestingly, the brown M&M's were not an instant success. In fact, they were met with skepticism by many people, who were used to the traditional milk chocolate and colorful candy shell of the classic M&M's.
 ==========
-Prompt: 43 tokens, 434.829 tokens-per-sec
-Generation: 100 tokens, 48.433 tokens-per-sec
-Peak memory: 1.925 GB
+Prompt: 43 tokens, 416.440 tokens-per-sec
+Generation: 100 tokens, 47.365 tokens-per-sec
+Peak memory: 1.922 GB
 ```
