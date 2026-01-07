@@ -8,3 +8,6 @@ mathjax-support = true
 
 [output.html.playground]
 runnable = false
+
+[output.html.search]
+enable = false
