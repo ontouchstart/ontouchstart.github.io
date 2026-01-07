@@ -38,7 +38,7 @@ I have done tons of projects in
 [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)),
 [Perl](https://en.wikipedia.org/wiki/Perl,)
 [Mathematica](https://en.wikipedia.org/wiki/Wolfram_Mathematica),
-[MATAB](https://en.wikipedia.org/wiki/MATLAB), 
+[MATLAB](https://en.wikipedia.org/wiki/MATLAB), 
 [C/C++](https://en.wikipedia.org/wiki/C_(programming_language)),
 [Fortran](https://en.wikipedia.org/wiki/Fortran).
 
