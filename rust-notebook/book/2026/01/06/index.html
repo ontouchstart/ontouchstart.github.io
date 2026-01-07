@@ -37,7 +37,7 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-4382a1ee.js";
+            window.path_to_searchindex_js = "../../../searchindex-03b21eae.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../../../toc-9a7fd0a9.js"></script>
@@ -479,8 +479,19 @@ sam@Sams-MacBook-Pro 06 % cat ed.md
 This file is created by ed
 sam@Sams-MacBook-Pro 06 % wc ed.md 
        1       6      27 ed.md
+sam@Sams-MacBook-Pro 06 % ed -p: ed.md         
+27
+:n
+1	This file is created by ed
+:s/ed$/ed./
+:n
+1	This file is created by ed.
+:wq
+28
+sam@Sams-MacBook-Pro 06 % wc ed.md 
+       1       6      28 ed.md
 </code></pre>
-<p>This file is created by ed</p>
+<p>This file is created by ed.</p>
 
                     </main>
 
