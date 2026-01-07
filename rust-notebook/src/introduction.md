@@ -40,7 +40,7 @@ I have done tons of projects in
 [Mathematica](https://en.wikipedia.org/wiki/Wolfram_Mathematica),
 [MATAB](https://en.wikipedia.org/wiki/MATLAB), 
 [C/C++](https://en.wikipedia.org/wiki/C_(programming_language)),
-[Fortan](https://en.wikipedia.org/wiki/Fortran).
+[Fortran](https://en.wikipedia.org/wiki/Fortran).
 
 They are all gone (or stuck somewhere in some old hard drives).
 

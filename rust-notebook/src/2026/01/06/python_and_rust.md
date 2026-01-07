@@ -22,14 +22,14 @@ Or he can dive deep himself to see how people are using Python and Rust in real 
 
 ### The real story
 
-I didn't sleep through the first 25 years of the 21st Century. Instead, I tool a detour in the land of [Web Development](https://en.wikipedia.org/wiki/Web_development) and wrote tons of [JavaScript](https://en.wikipedia.org/wiki/JavaScript).
+I didn't sleep through the first 25 years of the 21st Century. Instead, I took a detour in the land of [Web Development](https://en.wikipedia.org/wiki/Web_development) and wrote tons of [JavaScript](https://en.wikipedia.org/wiki/JavaScript).
 
 I miss my [UNIX Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy).
 
 
 So I am going to pick up both Python and Rust in my own way with my favorite [Makefile](https://en.wikipedia.org/wiki/Make_(software)).
 
-Since [ed](https://en.wikipedia.org/wiki/Ed_(text_editor)) is preinstalled 
+Since [ed](https://en.wikipedia.org/wiki/Ed_(text_editor)) is preinstalled on MacOS, I might skip [vi](https://en.wikipedia.org/wiki/Vi_(text_editor)) at some point in the future and think in buffers.
 
 ```
 sam@Sams-MacBook-Pro 06 % which ed 
@@ -55,7 +55,6 @@ DESCRIPTION
 ...
 ```
 
-I might skip [vi](https://en.wikipedia.org/wiki/Vi_(text_editor)) at some point in the future and think in buffers.
 
 Let the fun begin. 
 
