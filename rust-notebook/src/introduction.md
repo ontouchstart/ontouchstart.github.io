@@ -15,9 +15,9 @@ following public archives. I haven't looked at them since the 2019 New York City
 - <https://github.com/mocaspike150/leaderboard>
 - <https://github.com/mocaspike150/mocaspike150.github.io>
 
-Going forward more years. I was doing some STEM education for kids and had some Python, Jupyter Notebook stuff that can
-drive [Lego Mindstorms](https://en.wikipedia.org/wiki/Lego_Mindstorms). I even had some Jupyter Notebooks running 
-pre-2.0 [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow).
+Going backwards a few more years, I was doing STEM education for kids and had some Python, Jupyter Notebook stuff such as 
+driving [Lego Mindstorms](https://en.wikipedia.org/wiki/Lego_Mindstorms). I even had some [Codelab](https://colab.google) 
+Jupyter Notooks running pre-2.0 [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow).
 
 Those are fun projects but I have deleted them all from GitHub.
 
