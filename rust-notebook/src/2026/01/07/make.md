@@ -30,6 +30,24 @@ test:	Cargo.toml fmt
 	@echo '`make test`'
 
 	@echo
+	@echo '`src/main.rs`'
+	@echo '```rust'
+	@cat src/main.rs
+	@echo '```'
+
+	@echo
+	@echo '`src/lib.rs`'
+	@echo '```rust'
+	@cat src/lib.rs
+	@echo '```'
+
+	@echo
+	@echo '`tests/integration_test.rs`'
+	@echo '```rust'
+	@cat tests/integration_test.rs
+	@echo '```'
+
+	@echo
 	@echo '`tests/example-fuzzy-query.rs`'
 	@echo '```rust'
 	@cat tests/example-fuzzy-query.rs

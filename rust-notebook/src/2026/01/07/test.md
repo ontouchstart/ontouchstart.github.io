@@ -1,6 +1,56 @@
 cargo fmt
 `make test`
 
+`src/main.rs`
+```rust
+fn main() {
+    println!("Hello, world!");
+}
+
+#[test]
+fn test_main() {
+    assert_eq!(1, 1);
+}
+```
+
+`src/lib.rs`
+```rust
+///
+///
+/// ```
+///  let result = notebook_2026_01_07::add_two(2);
+///  assert_eq!(result, 4);
+/// ```
+
+pub fn add_two(a: u64) -> u64 {
+    internal_adder(a, 2)
+}
+
+fn internal_adder(left: u64, right: u64) -> u64 {
+    left + right
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn internal() {
+        let result = internal_adder(2, 2);
+        assert_eq!(result, 4);
+    }
+}
+```
+
+`tests/integration_test.rs`
+```rust
+#[test]
+fn it_adds_two() {
+    let result = notebook_2026_01_07::add_two(2);
+    assert_eq!(result, 4);
+}
+```
+
 `tests/example-fuzzy-query.rs`
 ```rust
 /// https://docs.rs/fst/latest/fst/#example-fuzzy-query

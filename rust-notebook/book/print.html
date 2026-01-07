@@ -1255,6 +1255,47 @@ We are learning about <strong>how</strong> to do thing.</p>
 <h2 id="test-1"><a class="header" href="#test-1">test</a></h2>
 <p>cargo fmt
 <code>make test</code></p>
+<p><code>src/main.rs</code></p>
+<pre><code class="language-rust">fn main() {
+    println!("Hello, world!");
+}
+
+#[test]
+fn test_main() {
+    assert_eq!(1, 1);
+}</code></pre>
+<p><code>src/lib.rs</code></p>
+<pre><code class="language-rust">///
+///
+/// ```
+///  let result = notebook_2026_01_07::add_two(2);
+///  assert_eq!(result, 4);
+/// ```
+
+pub fn add_two(a: u64) -&gt; u64 {
+    internal_adder(a, 2)
+}
+
+fn internal_adder(left: u64, right: u64) -&gt; u64 {
+    left + right
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn internal() {
+        let result = internal_adder(2, 2);
+        assert_eq!(result, 4);
+    }
+}</code></pre>
+<p><code>tests/integration_test.rs</code></p>
+<pre><code class="language-rust">#[test]
+fn it_adds_two() {
+    let result = notebook_2026_01_07::add_two(2);
+    assert_eq!(result, 4);
+}</code></pre>
 <p><code>tests/example-fuzzy-query.rs</code></p>
 <pre><code class="language-rust">/// https://docs.rs/fst/latest/fst/#example-fuzzy-query
 ///
@@ -1399,6 +1440,24 @@ fmt:
 
 test:	Cargo.toml fmt
 	@echo '`make test`'
+
+	@echo
+	@echo '`src/main.rs`'
+	@echo '```rust'
+	@cat src/main.rs
+	@echo '```'
+
+	@echo
+	@echo '`src/lib.rs`'
+	@echo '```rust'
+	@cat src/lib.rs
+	@echo '```'
+
+	@echo
+	@echo '`tests/integration_test.rs`'
+	@echo '```rust'
+	@cat tests/integration_test.rs
+	@echo '```'
 
 	@echo
 	@echo '`tests/example-fuzzy-query.rs`'
