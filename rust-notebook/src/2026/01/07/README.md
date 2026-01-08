@@ -13,6 +13,7 @@
 
 ## mlx_lm.server
 
+
 ```
 sam@Sams-MacBook-Pro % make server
 uv run mlx_lm.server
@@ -25,6 +26,16 @@ Fetching 6 files: 100%|███████████████████
 2026-01-07 21:03:01,887 - INFO - Prompt processing progress: 42/43
 
 
+```
+
+`src/bin/models.rs`
+```rust
+{{#include src/bin/models.rs}}
+```
+
+`src/bin/brown_mm.rs`
+```rust
+{{#include src/bin/brown_mm.rs}}
 ```
 
 ```
