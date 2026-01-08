@@ -1,3 +1,4 @@
+/// https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html#shadowing
 #[test]
 fn shadowing() {
     let x = 5;

@@ -223,8 +223,10 @@ fn string_parse() {
     let x: u32 = "42".parse().expect("Not a number!");
     assert_eq!(x, 42);
 }</code></pre>
+<p><a href="https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html#shadowing">https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html#shadowing</a></p>
 <p><code>tests/shadowing.rs</code></p>
-<pre><code class="language-rust">#[test]
+<pre><code class="language-rust">/// https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html#shadowing
+#[test]
 fn shadowing() {
     let x = 5;
 
@@ -246,7 +248,7 @@ fn shadowing() {
 cargo fmt
 cargo test
    Compiling rust-tests v0.1.0 (/Users/sam/github/ontouchstart.github.io/rust-notebook/src/2026/01/08/rust-tests)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.14s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.13s
      Running unittests src/lib.rs (target/debug/deps/rust_tests-a2ef2605ab53aace)
 
 running 1 test

@@ -28,6 +28,8 @@ cargo new --lib rust-tests
 {{#include tests/string_parse.rs}}
 ```
 
+<https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html#shadowing>
+
 `tests/shadowing.rs`
 ```rust
 {{#include tests/shadowing.rs}}

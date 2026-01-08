@@ -1,7 +1,7 @@
 cargo fmt
 cargo test
    Compiling rust-tests v0.1.0 (/Users/sam/github/ontouchstart.github.io/rust-notebook/src/2026/01/08/rust-tests)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.14s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.13s
      Running unittests src/lib.rs (target/debug/deps/rust_tests-a2ef2605ab53aace)
 
 running 1 test
