@@ -15,6 +15,13 @@ test tests::it_works ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running tests/mut_test.rs (target/debug/deps/mut_test-6c622bd242f2f290)
+
+running 1 test
+test mut_test ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
    Doc-tests rust_tests
 
 running 1 test

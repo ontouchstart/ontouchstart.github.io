@@ -1,6 +1,6 @@
 # notebook_2026_01_08
 
-For an experienced software to learn a new programming language like [rust](https://doc.rust-lang.org) 
+For an experienced software engineer to learn a new programming language like [rust](https://doc.rust-lang.org) 
 and its ecosystem, before rushing into <https://crates.io> to grab anything that might get the job done, 
 it would be a good idea to build a solid foundation by reading every page of
 [The Rust Programming Language Book](https://doc.rust-lang.org/stable/book) and taking notes in the form of 
