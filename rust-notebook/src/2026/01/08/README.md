@@ -15,7 +15,7 @@ in the way we want to explore.
 [Integration tests](https://doc.rust-lang.org/stable/book/ch11-03-test-organization.html#integration-tests) 
 is a great tool for this purpose.
 
-A command way to start a new crate for this purpose is something like
+A command to bootstrap a library crate without `src/main.rs` for this purpose is something like
 
 ```
 cargo new --lib rust-tests
