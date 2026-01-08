@@ -1,1 +1,1 @@
-# rust-notebook
+# [📓](book)

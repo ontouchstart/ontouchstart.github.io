@@ -1,5 +1,8 @@
 # 👨🏻‍✈️🤖💻🐢🐇🕳️🐍🦀🤔
 Every pothole has a rabbit hole underneath.
+
+[📓](rust-notebook/book)
+
 ```
 uv run main.py
 The Zen of Python, by Tim Peters
