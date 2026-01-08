@@ -1901,11 +1901,17 @@ sam@Sams-MacBook-Pro % tail -1 brown_mm.txt| jq . &gt; brown_mm.md
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="notebook_2026_01_08"><a class="header" href="#notebook_2026_01_08">notebook_2026_01_08</a></h1>
 <p>For an experienced software to learn a new programming language like <a href="https://doc.rust-lang.org">rust</a>
-and its ecosystem, before dive deep into <a href="https://crates.io">https://crates.io</a>, it might be  a good idea to go through
-<a href="https://doc.rust-lang.org/stable/book">The Rust Programming Language Book</a> by taking notes as
-<a href="https://doc.rust-lang.org/stable/book/ch11-00-testing.html">tests</a>.</p>
-<p>One of the advantages of this approach is that tests can save us a lot of effort to deal with UI and io
-so we can focus studying rust as libraries.</p>
+and its ecosystem, before rushing into <a href="https://crates.io">https://crates.io</a> to grab anything that might get the job done,
+it would be a good idea to build a solid foundation by reading every page of
+<a href="https://doc.rust-lang.org/stable/book">The Rust Programming Language Book</a> and taking notes in the form of
+<a href="https://doc.rust-lang.org/stable/book/ch11-00-testing.html">test programs</a> along the way.</p>
+<p>One of the advantages of this approach is that tests can save us a lot of effort to deal with UI and io issues
+such as in production software (that is why we get paid, for our effort)
+so we can focus on studying the rust ecosystem of
+<a href="https://doc.rust-lang.org/stable/book/ch07-01-packages-and-crates.html">packages and crates</a>
+in the way we want to explore.</p>
+<p><a href="https://doc.rust-lang.org/stable/book/ch11-03-test-organization.html#integration-tests">Integration tests</a>
+is a great tool for this purpose.</p>
 <p>A command way to start a new crate for this purpose is something like</p>
 <pre><code>cargo new --lib rust-tests
 </code></pre>
