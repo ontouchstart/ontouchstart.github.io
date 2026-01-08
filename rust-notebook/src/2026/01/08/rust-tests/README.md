@@ -14,6 +14,12 @@ cargo new --lib rust-tests
 ```rust
 {{#include tests/it_works.rs}}
 ```
+<https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html>
+
+`tests/mut_test.rs`
+```rust
+{{#include tests/mut_test.rs}}
+```
 
 `Makefile`
 ```Makefile

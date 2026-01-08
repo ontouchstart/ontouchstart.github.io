@@ -1948,6 +1948,16 @@ mod tests {
         assert_eq!(result, 4);
     }
 }</code></pre>
+<p><a href="https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html">https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html</a></p>
+<p><code>tests/mut_test.rs</code></p>
+<pre><code class="language-rust">/// https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html
+#[test]
+fn mut_test() {
+    let mut x = 5;
+    assert_eq!(x, 5);
+    x = 6;
+    assert_eq!(x, 6);
+}</code></pre>
 <p><code>Makefile</code></p>
 <pre><code class="language-Makefile">all:
 	cargo fmt
