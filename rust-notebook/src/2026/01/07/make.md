@@ -4,6 +4,9 @@ NAME=notebook_2026_01_07
 
 all:	make.md Cargo.md test.md 
 
+server:
+	uv run mlx_lm.server
+
 make.md:	Makefile
 	echo '`Makefile`' > make.md
 	echo '```Makefile' >> make.md

@@ -7,4 +7,5 @@ edition = "2024"
 
 [dependencies]
 fst = { version = "0.4.7", features = ["levenshtein"] }
+ureq = "3.1.4"
 ```
