@@ -16,16 +16,21 @@ cargo new --lib rust-tests
 ```
 <https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html>
 
-`tests/mut_test.rs`
+`tests/mutable.rs`
 ```rust
-{{#include tests/mut_test.rs}}
+{{#include tests/mutable.rs}}
 ```
 
 <https://doc.rust-lang.org/stable/book/ch03-02-data-types.html>
 
-`tests/string_parse_test.rs`
+`tests/string_parse.rs`
 ```rust
-{{#include tests/string_parse_test.rs}}
+{{#include tests/string_parse.rs}}
+```
+
+`tests/shadowing.rs`
+```rust
+{{#include tests/shadowing.rs}}
 ```
 
 `Makefile`
