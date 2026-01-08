@@ -215,6 +215,14 @@ fn mut_test() {
     x = 6;
     assert_eq!(x, 6);
 }</code></pre>
+<p><a href="https://doc.rust-lang.org/stable/book/ch03-02-data-types.html">https://doc.rust-lang.org/stable/book/ch03-02-data-types.html</a></p>
+<p><code>tests/string_parse_test.rs</code></p>
+<pre><code class="language-rust">/// https://doc.rust-lang.org/stable/book/ch03-02-data-types.html
+#[test]
+fn string_parse_test() {
+    let x: u32 = "42".parse().expect("Not a number!");
+    assert_eq!(x, 42);
+}</code></pre>
 <p><code>Makefile</code></p>
 <pre><code class="language-Makefile">all:
 	cargo fmt
@@ -242,6 +250,13 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 running 1 test
 test mut_test ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/string_parse_test.rs (target/debug/deps/string_parse_test-412a3f872bd047b0)
+
+running 1 test
+test string_parse_test ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 

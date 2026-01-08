@@ -1,25 +1,12 @@
 cargo fmt
 cargo test
    Compiling rust-tests v0.1.0 (/Users/sam/github/ontouchstart.github.io/rust-notebook/src/2026/01/08/rust-tests)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.11s
-     Running unittests src/lib.rs (target/debug/deps/rust_tests-a2ef2605ab53aace)
+error[E0308]: mismatched types
+ --> tests/string_parse_test.rs:5:27
+  |
+5 |     assert_eq!(forty_two, "forty two");
+  |                           ^^^^^^^^^^^ expected `u32`, found `&str`
 
-running 1 test
-test tests::it_works ... ok
-
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-     Running tests/it_works.rs (target/debug/deps/it_works-a46149a8ba9ba6df)
-
-running 1 test
-test tests::it_works ... ok
-
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-   Doc-tests rust_tests
-
-running 1 test
-test src/lib.rs - add (line 1) ... ok
-
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `rust-tests` (test "string_parse_test") due to 1 previous error
+make: *** [all] Error 101

@@ -22,6 +22,13 @@ test mut_test ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
+     Running tests/string_parse_test.rs (target/debug/deps/string_parse_test-412a3f872bd047b0)
+
+running 1 test
+test string_parse_test ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
    Doc-tests rust_tests
 
 running 1 test

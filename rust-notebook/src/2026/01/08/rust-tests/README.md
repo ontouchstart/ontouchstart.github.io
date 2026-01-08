@@ -21,6 +21,13 @@ cargo new --lib rust-tests
 {{#include tests/mut_test.rs}}
 ```
 
+<https://doc.rust-lang.org/stable/book/ch03-02-data-types.html>
+
+`tests/string_parse_test.rs`
+```rust
+{{#include tests/string_parse_test.rs}}
+```
+
 `Makefile`
 ```Makefile
 {{#include Makefile}}
