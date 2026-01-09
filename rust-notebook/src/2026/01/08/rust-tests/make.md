@@ -55,9 +55,9 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
    Doc-tests rust_tests
 
 running 2 tests
-test src/lib.rs - add (line 1) ... ok
 test src/largest.rs - largest::largest (line 2) ... ok
+test src/lib.rs - add (line 1) ... ok
 
 test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
-all doctests ran in 0.46s; merged doctests compilation took 0.21s
+all doctests ran in 0.51s; merged doctests compilation took 0.22s
