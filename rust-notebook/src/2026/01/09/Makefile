@@ -3,6 +3,6 @@ test:
 	cargo --version
 	cargo update
 	cargo fmt
-	cargo expand -p github_url_2026_01_09_rs
+	cargo expand -p github_url_2026_01_09_rs --lib --tests
 	cargo test -p github_url_2026_01_09_rs
 
