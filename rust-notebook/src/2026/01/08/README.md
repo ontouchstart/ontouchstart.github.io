@@ -26,3 +26,33 @@ The actually learning will be much deeper in the coming days.
 
 {{#include rust-tests/README.md}}
 
+This can be run in CI as well:
+`Makefile`
+```Makefile
+{{#include Makefile}}
+```
+
+`.github/workflows/makefile.yml`
+
+```yaml
+name: Makefile CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+    - uses: astral-sh/setup-uv@v7
+    - uses: dtolnay/rust-toolchain@stable
+
+    - name: rust-notebook/src/2026/01/08 test
+      run: make -C rust-notebook/src/2026/01/08 test
+```
+
+{{#include CI.md}}
