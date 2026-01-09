@@ -1196,30 +1196,27 @@ Fetching 6 files: 100%|███████████████████
 </code></pre>
 <p><code>src/bin/models.rs</code></p>
 <pre><code class="language-rust">fn main() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
-
-// localhost:8080/v1/models -H "Content-Type: application/json"
-   let body: String = ureq::get("http://localhost:8080/v1/models")
-    .header("Content-Type", "application/json")
-    .call()?
-    .body_mut()
-    .read_to_string()?;
+    // localhost:8080/v1/models -H "Content-Type: application/json"
+    let body: String = ureq::get("http://localhost:8080/v1/models")
+        .header("Content-Type", "application/json")
+        .call()?
+        .body_mut()
+        .read_to_string()?;
     println!("{}", body);
-Ok(())
-}
-</code></pre>
+    Ok(())
+}</code></pre>
 <p><code>src/bin/brown_mm.rs</code></p>
 <pre><code class="language-rust">fn main() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
-   let send_body = "{\"model\": \"mlx-community/Llama-3.2-3B-Instruct-4bit\",\"messages\": [{\"role\": \"user\", \"content\": \"Tell me something about brown M&amp;Ms\"}]}";
+    let send_body = "{\"model\": \"mlx-community/Llama-3.2-3B-Instruct-4bit\",\"messages\": [{\"role\": \"user\", \"content\": \"Tell me something about brown M&amp;Ms\"}]}";
 
-   let body: String = ureq::post("http://localhost:8080/v1/chat/completions")
-    .header("Content-Type", "application/json")
-    .send(send_body)?
-    .body_mut()
-    .read_to_string()?;
+    let body: String = ureq::post("http://localhost:8080/v1/chat/completions")
+        .header("Content-Type", "application/json")
+        .send(send_body)?
+        .body_mut()
+        .read_to_string()?;
     println!("{}", body);
-Ok(())
-}
-</code></pre>
+    Ok(())
+}</code></pre>
 <pre><code>sam@Sams-MacBook-Pro % cargo run --bin models &amp;&gt; models.txt
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.02s
      Running `target/debug/models`
@@ -2066,16 +2063,16 @@ cargo test
      Running unittests src/lib.rs (target/debug/deps/rust_tests-3e3048b9c970152c)
 
 running 3 tests
-test largest::tests::test_largest ... ok
-test tests::it_works ... ok
-test tests::test_largest ... ok
+test it_works ... ok
+test largest::test_largest ... ok
+test test_largest ... ok
 
 test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
      Running tests/it_works.rs (target/debug/deps/it_works-d4c68a38f9f77de0)
 
 running 1 test
-test tests::it_works ... ok
+test it_works ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
@@ -2122,7 +2119,7 @@ test src/lib.rs - add (line 1) ... ok
 
 test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
-all doctests ran in 0.51s; merged doctests compilation took 0.22s
+all doctests ran in 0.49s; merged doctests compilation took 0.22s
 </code></pre>
 
                     </main>
