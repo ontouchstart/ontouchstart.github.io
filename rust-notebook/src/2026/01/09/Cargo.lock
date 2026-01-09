@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "branch"
 version = "0.1.0"
-source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=2026_01_09_rs#4b0216b76afe6a07ef4c43791503dc8a4141c25d"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=2026_01_09_rs#b4e8447795322c4ffe27d16843e34cbebff5fe82"
 
 [[package]]
 name = "github_url_2026_01_09_rs"
@@ -17,7 +17,7 @@ dependencies = [
 [[package]]
 name = "url"
 version = "0.1.0"
-source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=2026_01_09_rs#4b0216b76afe6a07ef4c43791503dc8a4141c25d"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=2026_01_09_rs#b4e8447795322c4ffe27d16843e34cbebff5fe82"
 dependencies = [
  "branch",
 ]
