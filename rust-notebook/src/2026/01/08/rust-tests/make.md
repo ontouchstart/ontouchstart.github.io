@@ -3,11 +3,12 @@ cargo test
     Finished `test` profile [unoptimized + debuginfo] target(s) in 0.00s
      Running unittests src/lib.rs (target/debug/deps/rust_tests-3e3048b9c970152c)
 
-running 2 tests
+running 3 tests
+test largest::tests::test_largest ... ok
 test tests::it_works ... ok
 test tests::test_largest ... ok
 
-test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
      Running tests/it_works.rs (target/debug/deps/it_works-d4c68a38f9f77de0)
 
@@ -55,8 +56,8 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 running 2 tests
 test src/lib.rs - add (line 1) ... ok
-test src/lib.rs - largest (line 9) ... ok
+test src/largest.rs - largest::largest (line 2) ... ok
 
 test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
-all doctests ran in 0.48s; merged doctests compilation took 0.21s
+all doctests ran in 0.46s; merged doctests compilation took 0.21s
