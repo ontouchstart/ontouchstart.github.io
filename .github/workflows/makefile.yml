@@ -1,0 +1,26 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+    - uses: dtolnay/rust-toolchain@stable
+
+    - name: rust-notebook/src/2026/01/05
+      run: make -C rust-notebook/src/2026/01/05
+
+    - name: rust-notebook/src/2026/01/06 test
+      run: make -C rust-notebook/src/2026/01/06 test
+
+    - name: rust-notebook/src/2026/01/07 test
+      run: make -C rust-notebook/src/2026/01/07 test
+
+    - name: rust-notebook/src/2026/01/08 test
+      run: make -C rust-notebook/src/2026/01/08 test
