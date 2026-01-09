@@ -3,5 +3,7 @@ all:
 	cargo --version
 	cargo update
 	cargo fmt
-	cargo test
-	cargo expand
+	cargo expand -p url
+	cargo test -p url
+	cargo expand -p branch
+	cargo test -p branch

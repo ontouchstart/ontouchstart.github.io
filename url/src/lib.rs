@@ -1,5 +1,3 @@
-mod branch;
-
 pub fn url() -> String {
     format!(
         "{}/{}",
