@@ -1,0 +1,3 @@
+[workspace]
+resolver = "3"
+members = ["github_url_2026_01_09_rs"]

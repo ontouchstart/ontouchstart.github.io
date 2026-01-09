@@ -25,3 +25,6 @@ jobs:
 
     - name: rust-notebook/src/2026/01/08 test
       run: make -C rust-notebook/src/2026/01/08 test
+
+    - name: rust-notebook/src/2026/01/09 test
+      run: make -C rust-notebook/src/2026/01/09 test
