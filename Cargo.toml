@@ -1,0 +1,7 @@
+[package]
+name = "ontouchstart_2026_01_07_rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cargo = "0.93.0"
