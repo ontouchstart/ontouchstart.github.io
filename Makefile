@@ -4,9 +4,10 @@ all:
 	rustup --version --verbose
 	rustc --version --verbose
 	cargo --version --verbose
-	cargo update --verbose
 
-	make test
+	make ./bin/cargo
+	make compare_cargo_versions
+	make check build test
 
 ./bin/cargo:
 	cargo check --verbose
@@ -14,13 +15,20 @@ all:
 	cat -n .crates.toml 
 	cat .crates2.json | jq .
 	
+compare_cargo_versions: ./bin/cargo
+	cargo --version --verbose > default-cargo-version-verbos.log
+	./bin/cargo --version --verbose > local-cargo-version-verbos.log
+	-diff default-cargo-version-verbos.log local-cargo-version-verbos.log
+
 check:	./bin/cargo
 	./bin/cargo check --verbose
 
-fmt:	check
-	./bin/cargo fmt
+build:	./bin/cargo
+	cargo build
+	./bin/cargo build
 
-test:	fmt
+test:	./bin/cargo
+	cargo test
 	./bin/cargo test
 
 clean:
@@ -28,5 +36,4 @@ clean:
 	rm -rf .crates2.json
 	rm -rf *.log
 	rm -rf bin target
-	rm 
 	ls -a
