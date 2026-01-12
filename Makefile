@@ -21,12 +21,15 @@ compare_cargo_versions: ./bin/cargo
 	-diff default-cargo-version-verbos.log local-cargo-version-verbos.log
 
 check:	./bin/cargo
+	cargo check
 	./bin/cargo check
 
 build:	./bin/cargo
+	cargo build
 	./bin/cargo build
 
 test:	./bin/cargo
+	cargo test
 	./bin/cargo test
 
 clean:
