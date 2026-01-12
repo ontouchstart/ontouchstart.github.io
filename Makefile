@@ -20,7 +20,7 @@ compare_cargo_versions: ./bin/cargo
 
 check:	./bin/cargo
 	# cargo check
-	./bin/cargo check
+	./bin/cargo check -v
 
 build:	./bin/cargo
 	cargo build
