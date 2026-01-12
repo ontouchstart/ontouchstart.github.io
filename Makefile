@@ -6,7 +6,6 @@ all:
 	cargo --version --verbose
 
 	make ./bin/cargo
-	make compare_cargo_versions
 	make check build test
 
 ./bin/cargo:
@@ -15,11 +14,6 @@ all:
 	cat -n .crates.toml 
 	cat .crates2.json | jq .
 	
-compare_cargo_versions: ./bin/cargo
-	cargo --version --verbose > default-cargo-version-verbos.log
-	./bin/cargo --version --verbose > local-cargo-version-verbos.log
-	-diff default-cargo-version-verbos.log local-cargo-version-verbos.log
-
 check:	./bin/cargo
 	./bin/cargo check --verbose
 
