@@ -1,4 +1,4 @@
-name: Makefile CI (Ubuntu)
+name: Makefile CI (macos-26)
 
 on:
   push:
