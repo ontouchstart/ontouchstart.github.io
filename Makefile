@@ -19,7 +19,7 @@ compare_cargo_versions: ./bin/cargo
 	-diff default-cargo-version-verbos.log local-cargo-version-verbos.log
 
 check:	./bin/cargo
-	cargo check
+	# cargo check
 	./bin/cargo check
 
 build:	./bin/cargo
