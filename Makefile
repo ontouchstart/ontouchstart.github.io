@@ -7,13 +7,16 @@ all:
 
 	make ./bin/cargo
 	make compare_cargo_versions
-	make check build test
+	make test
 
 ./bin/cargo:
 	cargo check --verbose
 	cargo install cargo --root .
 	cat -n .crates.toml 
 	cat .crates2.json | jq .
+
+./bin/cargo-examples: ./bin/cargo
+	./bin/cargo install cargo-examples --root .
 	
 compare_cargo_versions: ./bin/cargo
 	cargo --version --verbose > default-cargo-version-verbos.log
@@ -23,13 +26,14 @@ compare_cargo_versions: ./bin/cargo
 check:	./bin/cargo
 	./bin/cargo check --verbose
 
-build:	./bin/cargo
-	cargo build
+build:	check
 	./bin/cargo build
 
-test:	./bin/cargo
-	cargo test
-	./bin/cargo test
+fmt: 	check
+	./bin/cargo fmt --verbose
+
+test:	fmt
+	./bin/cargo test --verbose
 
 clean:
 	rm -rf .crates.toml
