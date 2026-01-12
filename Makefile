@@ -1,6 +1,7 @@
 all:
 	ls -a
 
+	rustup --version --verbose
 	rustc --version --verbose
 	cargo --version --verbose
 
