@@ -12,5 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v5
     - uses: dtolnay/rust-toolchain@stable
+    - name: Remove conflicting rust-src Cargo.lock (Windows)
+      shell: pwsh
+      run: |
+        $sysroot = (& rustc --print sysroot).Trim()
+        $path = Join-Path $sysroot 'lib\rustlib\src\rust\library\Cargo.lock'
+        if (Test-Path $path) { Remove-Item -Force $path; Write-Host "Removed $path" } else { Write-Host "No conflicting Cargo.lock found" }
     - name: Make
       run: make

@@ -116,3 +116,100 @@ Optional: Longer-term hygiene
 
 If you want, I can:
 - Propose an exact patch for .github/workflows/windows-makefile.yml (ref: c28391da9a0a942a406e22c3c3ffaedfafad9081) showing where to insert the PowerShell snippet.
+
+## @ontouchstart
+
+patch
+
+## Copilot
+
+``yaml name=.github/workflows/windows-makefile.yml url=https://github.com/ontouchstart/ontouchstart.github.io/blob/c28391da9a0a942a406e22c3c3ffaedfafad9081/.github/workflows/windows-makefile.yml
+name: Makefile CI (windows-2025)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-windows:
+    name: Makefile CI (windows-2025)
+    runs-on: windows-2025
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # --- existing setup steps (tooling, caching, etc.) go here ---
+      # Insert the following step before any rustup component add / rustup install steps
+      - name: Ensure rust-src available on Windows (avoid rustup conflict)
+        shell: pwsh
+        run: |
+          $toolchain = "stable-x86_64-pc-windows-msvc"
+
+          Write-Host "Checking installed components for toolchain: $toolchain"
+          $installed = (& rustup component list --installed --toolchain $toolchain) -join "`n"
+
+          if ($installed -notmatch "rust-src") {
+            Write-Host "rust-src is not installed for $toolchain — preparing to add it."
+
+            # Compute sysroot and the path that previously caused the conflict
+            $sysroot = (& rustc --print sysroot).Trim()
+            $conflictPath = Join-Path $sysroot 'lib\rustlib\src\rust\library\Cargo.lock'
+
+            if (Test-Path $conflictPath) {
+              Write-Host "Found conflicting file at $conflictPath — removing it to allow rustup to install rust-src."
+              Remove-Item -Force $conflictPath
+            } else {
+              Write-Host "No conflicting Cargo.lock found at $conflictPath"
+            }
+
+            # Add rust-src for the toolchain (will succeed now that conflict is removed)
+            rustup component add rust-src --toolchain $toolchain
+          } else {
+            Write-Host "rust-src already installed for $toolchain — skipping installation."
+          }
+
+      # --- the rest of your build steps: build, make, tests, etc. ---
+      - name: Run Makefile (build & test)
+        shell: bash
+        run: |
+          # Invoke the same commands your workflow previously ran
+          make check build test
+```
+
+What changed and why
+- I added a Windows-only step (PowerShell) that:
+  - Checks whether rust-src is already installed for the Windows toolchain.
+  - If rust-src is missing, computes rustc's sysroot and removes the specific conflicting file detected in your logs: lib\rustlib\src\rust\library\Cargo.lock.
+  - Then runs `rustup component add rust-src` (safe because the conflict was removed).
+- This addresses the error in the logs: "failed to install component: 'rust-src', detected conflict: 'lib\rustlib\src\rust\library\Cargo.lock'".
+
+Notes
+- Place this step immediately before any step that runs rustup to add components or that triggers builds which cause rustup to install components automatically.
+- I used PowerShell (`pwsh`) because the job runs on a Windows runner. If your Windows job uses `bash` steps instead, use the earlier bash snippet:
+  sysroot=$(rustc --print sysroot)
+  rm -f "$sysroot/lib/rustlib/src/rust/library/Cargo.lock"
+  rustup component add rust-src --toolchain stable-x86_64-pc-windows-msvc
+
+If you want, I can produce a git-style patch/diff that inserts only the new step into the existing workflow file instead of replacing it. Which would you prefer?
+
+## @ontouchstart
+
+This is too complicated. 
+
+## Copilot
+
+Understood — here's a very small, simple change. Add this single step (PowerShell) right before the Makefile/build step in .github/workflows/windows-makefile.yml. It just deletes the conflicting file (if present) and is safe to run on the Windows runner.
+
+```yaml name=.github/workflows/windows-makefile.yml url=https://github.com/ontouchstart/ontouchstart.github.io/blob/c28391da9a0a942a406e22c3c3ffaedfafad9081/.github/workflows/windows-makefile.yml
+- name: Remove conflicting rust-src Cargo.lock (Windows)
+  shell: pwsh
+  run: |
+    $sysroot = (& rustc --print sysroot).Trim()
+    $path = Join-Path $sysroot 'lib\rustlib\src\rust\library\Cargo.lock'
+    if (Test-Path $path) { Remove-Item -Force $path; Write-Host "Removed $path" } else { Write-Host "No conflicting Cargo.lock found" }
+```
+
+Where to put it
+- Insert the step immediately before the step that runs your Makefile (the build/test step). That keeps the change minimal and fixes the rustup "detected conflict" error on Windows.
+
+If you want, I can make and show a git-style patch that inserts this exact step into the workflow file.
