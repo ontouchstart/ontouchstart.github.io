@@ -6,7 +6,9 @@ all:
 
 	make ./bin/cargo
 	make compare_cargo_versions
-	make test
+	make check
+	# make build
+	# make test
 
 ./bin/cargo:
 	cargo install cargo --root .
@@ -17,6 +19,12 @@ compare_cargo_versions: ./bin/cargo
 	cargo --version --verbose > default-cargo-version-verbos.log
 	./bin/cargo --version --verbose > local-cargo-version-verbos.log
 	-diff default-cargo-version-verbos.log local-cargo-version-verbos.log
+
+check:	./bin/cargo
+	./bin/cargo check
+
+build:	./bin/cargo
+	./bin/cargo build
 
 test:	./bin/cargo
 	./bin/cargo test
