@@ -6,9 +6,7 @@ all:
 
 	make ./bin/cargo
 	make compare_cargo_versions
-	make check
-	make build
-	make test
+	make check build test
 
 ./bin/cargo:
 	cargo install cargo --root .
