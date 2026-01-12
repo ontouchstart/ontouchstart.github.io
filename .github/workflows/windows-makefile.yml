@@ -1,5 +1,5 @@
-# https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
-name: Makefile CI (ubuntu-24.04)
+# https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md
+name: Makefile CI (windows-2025)
 
 on:
   push:
@@ -7,8 +7,7 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-24.04
+    runs-on: windows-2025
 
     steps:
     - uses: actions/checkout@v5
