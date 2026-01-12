@@ -1,0 +1,15 @@
+name: Makefile CI (Ubuntu)
+
+on:
+  push:
+    branches: [ "2026_01_12_rs" ]
+
+jobs:
+  build:
+    runs-on: macos-26
+
+    steps:
+    - uses: actions/checkout@v5
+    - uses: dtolnay/rust-toolchain@stable
+    - name: Make
+      run: make
