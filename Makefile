@@ -5,8 +5,7 @@ all:
 	rustc --version --verbose
 	cargo --version --verbose
 
-	make ./bin/cargo
-	make check build test
+	make check build fmt test
 
 ./bin/cargo:
 	cargo check --verbose
@@ -17,12 +16,13 @@ all:
 check:	./bin/cargo
 	./bin/cargo check --verbose
 
+fmt:	./bin/cargo
+	./bin/cargo fmt
+
 build:	./bin/cargo
-	cargo build
 	./bin/cargo build
 
 test:	./bin/cargo
-	cargo test
 	./bin/cargo test
 
 clean:
