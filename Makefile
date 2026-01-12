@@ -10,6 +10,7 @@ all:
 	make check build test
 
 ./bin/cargo:
+	cargo check --verbose
 	cargo install cargo --root .
 	cat -n .crates.toml 
 	cat .crates2.json | jq .
@@ -20,8 +21,7 @@ compare_cargo_versions: ./bin/cargo
 	-diff default-cargo-version-verbos.log local-cargo-version-verbos.log
 
 check:	./bin/cargo
-	# cargo check
-	./bin/cargo check -v
+	./bin/cargo check --verbose
 
 build:	./bin/cargo
 	cargo build
