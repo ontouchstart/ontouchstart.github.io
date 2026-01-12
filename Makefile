@@ -1,17 +1,18 @@
 all:	
-	cargo install cargo-expand
-	cargo --version
-	cargo update
-	cargo fmt
+	ls -a
 
-	cargo expand -p url --lib --tests
-	cargo test -p url
+	rustc --version --verbose
+	cargo --version --verbose
 
-	cargo expand -p branch --lib --tests
-	cargo test -p branch
+	cargo install cargo --root .
 
-	cargo expand -p compile_fail
-	cargo test -p compile_fail
+	./bin/cargo --version --verbose
 
-	cargo expand -p backyard
-	cargo test -p backyard
+	cat -n .crates.toml 
+	cat .crates2.json | jq .
+
+clean:
+	rm -rf .crates.toml
+	rm -rf .crates2.json
+	rm -rf bin target
+	ls -a

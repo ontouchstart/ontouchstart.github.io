@@ -1,7 +1,0 @@
-[package]
-name = "url"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-branch = { version = "0.1.0", path = "../branch" }

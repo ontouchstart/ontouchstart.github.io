@@ -1,3 +1,0 @@
-[workspace]
-resolver = "3"
-members = ["branch", "compile_fail", "backyard", "url"]
