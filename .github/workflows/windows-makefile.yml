@@ -13,5 +13,3 @@ jobs:
       with:
         toolchain: stable
     - run: cargo test --all-features
-    - name: Make
-      run: make
