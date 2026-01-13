@@ -3,7 +3,7 @@ name: Makefile CI (macos-26)
 
 on:
   push:
-    branches: [ "2026_01_12_rs" ]
+    branches: [ "2026_01_13_rs" ]
 
 jobs:
   build:

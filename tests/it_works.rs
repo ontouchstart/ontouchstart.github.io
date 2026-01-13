@@ -2,7 +2,7 @@
 mod tests {
     #[test]
     fn it_works() {
-        let result = ontouchstart_2026_01_12_rs::add(2, 2);
+        let result = ontouchstart_2026_01_13_rs::add(2, 2);
         assert_eq!(result, 4);
     }
 }
