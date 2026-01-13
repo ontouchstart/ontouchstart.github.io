@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Rust Notebook | @ontouchstart</title>
+        <title>2026/01/13 - Rust Notebook | @ontouchstart</title>
 
 
         <!-- Custom HTML head -->
@@ -12,20 +12,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="favicon-8114d1fc.png">
-        <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
-        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -34,12 +34,12 @@
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "";
+            const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-ad953133.js"></script>
+        <script src="../../../toc-ad953133.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -105,7 +105,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -137,7 +137,7 @@
                     <h1 class="menu-title">Rust Notebook | @ontouchstart</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
@@ -156,62 +156,88 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="introduction-or-how-i-get-here"><a class="header" href="#introduction-or-how-i-get-here">Introduction (or how I get here)</a></h1>
-<p>Back in 2021 I had a Rust notebook built with <a href="https://rust-lang.github.io/mdBook">mdBook</a> to explore
-<a href="https://rust-lang.org/what/wasm/">WASM</a>. It was generated and maintained as a public GitHub repo and hosted on both
-<a href="https://docs.github.com/en/pages">GitHub</a> and <a href="https://pages.cloudflare.com">Cloudflare</a>.
-(They are all permanently gone now.)</p>
-<p>It was a cool notebook and blew the mind of the hiring manager of a tech consulting company. That was how I got back to
-professional software development, stopped hacking openly on GitHub and deleted all my repositories except
-following public archives. I haven’t looked at them since the 2019 New York City Marathon.</p>
-<ul>
-<li><a href="https://github.com/mocaspike150/api">https://github.com/mocaspike150/api</a></li>
-<li><a href="https://github.com/mocaspike150/lab">https://github.com/mocaspike150/lab</a></li>
-<li><a href="https://github.com/mocaspike150/donation">https://github.com/mocaspike150/donation</a></li>
-<li><a href="https://github.com/mocaspike150/leaderboard">https://github.com/mocaspike150/leaderboard</a></li>
-<li><a href="https://github.com/mocaspike150/mocaspike150.github.io">https://github.com/mocaspike150/mocaspike150.github.io</a></li>
-</ul>
-<p>Going backwards a few more years, I was doing STEM education for kids and had some Python, Jupyter Notebook stuff such as
-driving <a href="https://en.wikipedia.org/wiki/Lego_Mindstorms">Lego Mindstorms</a>. I even had some <a href="https://colab.google">Codelab</a>
-Jupyter Notooks running pre-2.0 <a href="https://en.wikipedia.org/wiki/TensorFlow">TensorFlow</a>.</p>
-<p>Those are fun projects but I have deleted them all from GitHub.</p>
-<p>The user name <a href="https://github.com/ontouchstart">ontouchstart</a> was created about the time when I was doing Mobile HTML5 work
-on first generation iPhone and Andriod. The name <em>ontouchstart</em> is just an <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/touchstart_event">event handler</a> that only exists on mobile devices.</p>
-<p>I had another GitHub account before <a href="https://github.com/ontouchstart">ontouchstart</a> but forgot its name.</p>
-<p>I was into git before there was a GitHub. And I still remember this <a href="https://tom.preston-werner.com/2008/10/18/how-i-turned-down-300k">famous blog</a> by <a href="https://en.wikipedia.org/wiki/Tom_Preston-Werner">Tom Preston-Werner</a> when it first came out.</p>
-<p>I was using SVN and CVS then and was super excited about
-<a href="https://youtu.be/4XpnKHJAok8">Tech Talk: Linus Torvalds on git</a> when it came out 18 years ago.</p>
-<p>I have done tons of projects in
-<a href="https://en.wikipedia.org/wiki/PHP">PHP</a>,
-<a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>,
-<a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a>,
-<a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP</a>,
-<a href="https://en.wikipedia.org/wiki/Perl,">Perl</a>
-<a href="https://en.wikipedia.org/wiki/Wolfram_Mathematica">Mathematica</a>,
-<a href="https://en.wikipedia.org/wiki/MATLAB">MATLAB</a>,
-<a href="https://en.wikipedia.org/wiki/C_(programming_language)">C/C++</a>,
-<a href="https://en.wikipedia.org/wiki/Fortran">Fortran</a>.</p>
-<p>They are all gone (or stuck somewhere in some old hard drives).</p>
-<h2 id="what-is-this-notebook-then"><a class="header" href="#what-is-this-notebook-then">What is this notebook then?</a></h2>
-<p>This notebook is my resumed exploration of the process of software development with modern toolchains in
-<a href="https://docs.astral.sh/uv">Python</a> and <a href="https://doc.rust-lang.org/cargo">Rust</a>.</p>
-<p>The investigation in this notebook will be more on <strong>how</strong> to do things with these tools other than <strong>what</strong> to do.
-If I am hired to do things professionally, it would be more about <strong>what</strong> than <strong>how</strong>.</p>
-<p>This is notebook of ideas, not a product.
-I will not maintain it professionally because it is not worth it.
-<strong>Please do not use any part of it as a dependency in your project</strong>.</p>
-<p>This is not an educational or promotional (portfolio) web site either. I have no interest to teach anyone or explain
-what I did, how I did it and why I did it. Every page, module and line of code has its purpose I might or might not explain.</p>
-<p>Feel free to poke around and <a href="mailto:ontouchstart@gmail.com">contact me</a> if you want to.</p>
+                        <h1 id="20260113"><a class="header" href="#20260113">2026/01/13</a></h1>
+<h2 id="branch-for-crate"><a class="header" href="#branch-for-crate">Branch for crate</a></h2>
+<p><a href="https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_13_rs">https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_13_rs</a></p>
+<pre><code class="language-toml">[package]
+name = "ontouchstart_2026_01_13_rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+</code></pre>
+<h2 id="branch-for-test"><a class="header" href="#branch-for-test">Branch for test</a></h2>
+<pre><code class="language-toml">[package]
+name = "ontouchstart_2026_01_13_rs_test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ontouchstart_2026_01_13_rs = { git = "https://github.com/ontouchstart/ontouchstart.github.io", branch = "2026_01_13_rs", version = "0.1.0" }
+</code></pre>
+<p><a href="https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_13_rs_test">https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_13_rs_test</a></p>
+<h2 id="ci"><a class="header" href="#ci">CI</a></h2>
+<p><a href="https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs+is%3Asuccess">https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs+is%3Asuccess</a></p>
+<p><a href="https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs_test+is%3Asuccess">https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs_test+is%3Asuccess</a></p>
+<pre><code class="language-yaml"># https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
+name: Makefile CI (ubuntu-24.04)
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-24.04
+
+    steps:
+    - uses: actions/checkout@v6
+    - uses: ontouchstart/rust-toolchain@master
+      with:
+        toolchain: stable
+    - run: cargo test --all-features
+</code></pre>
+<pre><code class="language-yaml"># https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md
+name: Makefile CI (windows-2025)
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-2025
+
+    steps:
+    - uses: actions/checkout@v6
+    - uses: ontouchstart/rust-toolchain@master
+      with:
+        toolchain: stable
+    - run: cargo test --all-features
+</code></pre>
+<pre><code class="language-yaml"># https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md
+name: Makefile CI (macos-26)
+
+on: push
+
+jobs:
+  build:
+    runs-on: macos-26
+
+    steps:
+    - uses: actions/checkout@v6
+    - uses: ontouchstart/rust-toolchain@master
+      with:
+        toolchain: stable
+    - run: cargo test --all-features
+
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-
-                            <a rel="next prefetch" href="bootstrap.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            <a rel="prev" href="../../../2026/01/12/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
+
 
                         <div style="clear: both"></div>
                     </nav>
@@ -219,10 +245,10 @@ what I did, how I did it and why I did it. Every page, module and line of code h
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-
-                    <a rel="next prefetch" href="bootstrap.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    <a rel="prev" href="../../../2026/01/12/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
+
             </nav>
 
         </div>
@@ -241,9 +267,9 @@ what I did, how I did it and why I did it. Every page, module and line of code h
 
 
 
-        <script src="clipboard-1626706a.min.js"></script>
-        <script src="highlight-abc7f01d.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="../../../clipboard-1626706a.min.js"></script>
+        <script src="../../../highlight-abc7f01d.js"></script>
+        <script src="../../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

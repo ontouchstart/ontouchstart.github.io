@@ -40,7 +40,7 @@
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-ece0f7a7.js"></script>
+        <script src="toc-ad953133.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -2950,6 +2950,80 @@ pub fn main() -&gt; () {
     extern crate test;
     test::test_main_static(&amp;[&amp;it_works])
 }
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="20260113"><a class="header" href="#20260113">2026/01/13</a></h1>
+<h2 id="branch-for-crate"><a class="header" href="#branch-for-crate">Branch for crate</a></h2>
+<p><a href="https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_13_rs">https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_13_rs</a></p>
+<pre><code class="language-toml">[package]
+name = "ontouchstart_2026_01_13_rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+</code></pre>
+<h2 id="branch-for-test"><a class="header" href="#branch-for-test">Branch for test</a></h2>
+<pre><code class="language-toml">[package]
+name = "ontouchstart_2026_01_13_rs_test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ontouchstart_2026_01_13_rs = { git = "https://github.com/ontouchstart/ontouchstart.github.io", branch = "2026_01_13_rs", version = "0.1.0" }
+</code></pre>
+<p><a href="https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_13_rs_test">https://github.com/ontouchstart/ontouchstart.github.io/tree/2026_01_13_rs_test</a></p>
+<h2 id="ci"><a class="header" href="#ci">CI</a></h2>
+<p><a href="https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs+is%3Asuccess">https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs+is%3Asuccess</a></p>
+<p><a href="https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs_test+is%3Asuccess">https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs_test+is%3Asuccess</a></p>
+<pre><code class="language-yaml"># https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
+name: Makefile CI (ubuntu-24.04)
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-24.04
+
+    steps:
+    - uses: actions/checkout@v6
+    - uses: ontouchstart/rust-toolchain@master
+      with:
+        toolchain: stable
+    - run: cargo test --all-features
+</code></pre>
+<pre><code class="language-yaml"># https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md
+name: Makefile CI (windows-2025)
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-2025
+
+    steps:
+    - uses: actions/checkout@v6
+    - uses: ontouchstart/rust-toolchain@master
+      with:
+        toolchain: stable
+    - run: cargo test --all-features
+</code></pre>
+<pre><code class="language-yaml"># https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md
+name: Makefile CI (macos-26)
+
+on: push
+
+jobs:
+  build:
+    runs-on: macos-26
+
+    steps:
+    - uses: actions/checkout@v6
+    - uses: ontouchstart/rust-toolchain@master
+      with:
+        toolchain: stable
+    - run: cargo test --all-features
 
 </code></pre>
 
