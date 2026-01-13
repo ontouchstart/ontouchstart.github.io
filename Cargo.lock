@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "ontouchstart_2026_01_13_rs"
 version = "0.1.0"
-source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=2026_01_13_rs#082e262d18fd06b30140c0f9a5b43ae4b0a3fdbf"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=2026_01_13_rs#37ff3faf86796a930c3948c84c894a2132a28304"
 
 [[package]]
 name = "ontouchstart_2026_01_13_rs_test"
