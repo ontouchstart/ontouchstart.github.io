@@ -7,6 +7,7 @@ all:
 	cargo check --verbose
 	cargo build --verbose
 	cargo fmt --verbose
+	cat -n tests/vec.rs
 	cargo test tests 
 
 clean:
