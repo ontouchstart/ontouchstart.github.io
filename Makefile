@@ -10,10 +10,10 @@ all:
 	cargo fmt --verbose
 	cargo test --verbose
 
-	make check build fmt test expands
+	make check build fmt test expand
 
 ./bin/cargo-expand: ./bin/cargo
-	cargo install ./bin/cargo-expands --root .
+	cargo install ./bin/cargo-expand --root .
 
 ./bin/cargo:
 	cargo install cargo --root .
@@ -32,7 +32,7 @@ build:	./bin/cargo
 test:	./bin/cargo
 	./bin/cargo test
 
-expands: ./bin/cargo-expands
+expand: ./bin/cargo-expand
 	./bin/cargo-expand expand --lib
 	./bin/cargo-expand expand --test it_works
 	
