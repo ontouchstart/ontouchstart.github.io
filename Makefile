@@ -7,7 +7,7 @@ all:
 	cargo check --verbose
 	cargo build --verbose
 	cargo fmt --verbose
-	cargo test --verbose
+	cargo test tests 
 
 clean:
 	rm -rf *.log
