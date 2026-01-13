@@ -10,7 +10,10 @@ all:
 	cargo fmt --verbose
 	cargo test --verbose
 
-	make check build fmt test
+	make check build fmt test expands
+
+./bin/cargo-expand: ./bin/cargo
+	cargo install ./bin/cargo-expands --root .
 
 ./bin/cargo:
 	cargo install cargo --root .
@@ -28,6 +31,11 @@ build:	./bin/cargo
 
 test:	./bin/cargo
 	./bin/cargo test
+
+expands: ./bin/cargo-expands
+	./bin/cargo-expand expand --lib
+	./bin/cargo-expand expand --test it_works
+	
 
 clean:
 	rm -rf .crates.toml
