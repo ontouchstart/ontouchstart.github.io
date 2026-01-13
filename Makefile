@@ -5,10 +5,14 @@ all:
 	rustc --version --verbose
 	cargo --version --verbose
 
+	cargo check --verbose
+	cargo build --verbose
+	cargo fmt --verbose
+	cargo test --verbose
+
 	make check build fmt test
 
 ./bin/cargo:
-	cargo check --verbose
 	cargo install cargo --root .
 	cat -n .crates.toml 
 	cat .crates2.json | jq .
