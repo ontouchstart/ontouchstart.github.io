@@ -13,7 +13,7 @@ all:
 	make check build fmt test expand
 
 ./bin/cargo-expand: ./bin/cargo
-	cargo install ./bin/cargo-expand --root .
+	cargo install cargo-expand --root .
 
 ./bin/cargo:
 	cargo install cargo --root .
