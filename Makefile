@@ -1,15 +1,11 @@
 all:
-	env
-	rustup --version --verbose
-	rustc --version --verbose
-	cargo --version --verbose
+	echo "We do not need to run make in CI"
+	echo "see the workflow log here"
+	echo "https://github.com/ontouchstart/ontouchstart.github.io/actions?query=branch%3A2026_01_13_rs_test+is%3Asuccess"
 
-	cargo check --verbose
-	cargo build --verbose
-	cargo fmt --verbose
-	cargo test tests 
+install:
+	cargo add --git https://github.com/ontouchstart/ontouchstart.github.io --branch 2026_01_13_rs ontouchstart_2026_01_13_rs
+	cargo update
 
-clean:
-	rm -rf *.log
-	rm -rf bin target
-	ls -a
+test:
+	cargo test 

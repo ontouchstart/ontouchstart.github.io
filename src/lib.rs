@@ -2,10 +2,6 @@ pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
 
-mod enums;
-
-pub use enums::SpreadsheetCell;
-
 #[cfg(test)]
 mod tests {
     use super::*;
