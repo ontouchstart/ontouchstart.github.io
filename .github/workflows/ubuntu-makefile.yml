@@ -1,9 +1,7 @@
 # https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
 name: Makefile CI (ubuntu-24.04)
 
-on:
-  push:
-    branches: [ "2026_01_13_rs" ]
+on: push
 
 jobs:
   build:
