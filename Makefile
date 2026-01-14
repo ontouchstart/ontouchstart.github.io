@@ -3,13 +3,5 @@ all:
 	rustup --version --verbose
 	rustc --version --verbose
 	cargo --version --verbose
+	uv --version
 
-	cargo check --verbose
-	cargo build --verbose
-	cargo fmt --verbose
-	cargo test tests 
-
-clean:
-	rm -rf *.log
-	rm -rf bin target
-	ls -a

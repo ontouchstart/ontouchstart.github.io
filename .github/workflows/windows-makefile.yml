@@ -9,7 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v6
-    - uses: ontouchstart/rust-toolchain@master
-      with:
-        toolchain: stable
-    - run: cargo test --all-features
+    - uses: ontouchstart/rust-toolchain
+    - uses: ontouchstart/setup-uv
+    - run: make
