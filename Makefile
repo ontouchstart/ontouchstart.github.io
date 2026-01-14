@@ -3,5 +3,8 @@ all:
 	rustup --version --verbose
 	rustc --version --verbose
 	cargo --version --verbose
-	cargo test --verbose
+	cargo check
+	cargo fmt
+	cargo test --lib --verbose
+	cargo clean
 
