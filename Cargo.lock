@@ -99,7 +99,7 @@ checksum = "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d"
 [[package]]
 name = "ontouchstart_2026_01_14_rs"
 version = "0.1.0"
-source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=ontouchstart_2026_01_14_rs#b4505f6f989d89ccfed6f01a9659ba3225cb8fad"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=ontouchstart_2026_01_14_rs#b122da56c969f3d47fddea91c1906730391a7a6f"
 
 [[package]]
 name = "ontouchstart_2026_01_14_rs_proptest"
