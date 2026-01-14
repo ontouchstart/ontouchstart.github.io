@@ -2,13 +2,13 @@ pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
 
-// should fail
-mod parse_date_0;
-// mod parse_date_1;
+// should pass
+// mod parse_date_0;
+mod parse_date_1;
 
-// should fail
-pub use parse_date_0::parse_date;
-// pub use parse_date_1::parse_date;
+// should pass
+// pub use parse_date_0::parse_date;
+pub use parse_date_1::parse_date;
 
 #[cfg(test)]
 mod tests {
