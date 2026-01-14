@@ -12,5 +12,4 @@ jobs:
     - uses: ontouchstart/rust-toolchain@master
       with:
          toolchain: stable
-    - uses: ontouchstart/setup-uv@main
     - run: make
