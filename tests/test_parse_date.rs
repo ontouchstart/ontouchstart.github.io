@@ -1,7 +1,7 @@
 // Bring the macros and other important things into scope.
 use proptest::prelude::*;
 
-use ontouchstart_2026_01_14_rs_proptest::parse_date;
+use ontouchstart_2026_01_14_rs::parse_date;
 #[test]
 fn test_parse_date() {
     assert_eq!(None, parse_date("2017-06-1"));
