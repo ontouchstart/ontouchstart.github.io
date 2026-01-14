@@ -10,6 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v6
-    - uses: ontouchstart/rust-toolchain@main
+    - uses: ontouchstart/rust-toolchain@master
     - uses: ontouchstart/setup-uv@main
     - run: make
