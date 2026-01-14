@@ -24,6 +24,7 @@ pub fn add(left: u64, right: u64) -> u64 {
 
 mod enums;
 
+pub use enums::GenericCell;
 pub use enums::SpreadsheetCell;
 
 #[cfg(test)]
@@ -37,7 +38,7 @@ mod tests {
     }
 
     #[test]
-    fn vec_enum() {
+    fn test_spreadsheet_cell() {
         let v = vec![
             SpreadsheetCell::Int(3),
             SpreadsheetCell::Text(String::from("blue")),
@@ -58,16 +59,56 @@ mod tests {
         );
         assert_eq!(format!("{:#?}", v.get(3)), "None");
     }
+
+    #[test]
+    fn test_generic_cell_float() {
+        let v = vec![
+            GenericCell::Int(3),
+            GenericCell::Text(String::from("blue")),
+            GenericCell::Float(10.12),
+        ];
+
+        assert_eq!(
+            format!("{:#?}", v.get(0)),
+            "Some(\n    Int(\n        3,\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(1)),
+            "Some(\n    Text(\n        \"blue\",\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(2)),
+            "Some(\n    Float(\n        10.12,\n    ),\n)"
+        );
+        assert_eq!(format!("{:#?}", v.get(3)), "None");
+    }
+
+    #[test]
+    fn test_generic_cell_string_float() {
+        let v = vec![
+            GenericCell::Int(3),
+            GenericCell::Text(String::from("blue")),
+            GenericCell::Float(String::from("10.12")),
+        ];
+
+        assert_eq!(
+            format!("{:#?}", v.get(0)),
+            "Some(\n    Int(\n        3,\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(1)),
+            "Some(\n    Text(\n        \"blue\",\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(2)),
+            "Some(\n    Float(\n        \"10.12\",\n    ),\n)"
+        );
+        assert_eq!(format!("{:#?}", v.get(3)), "None");
+    }
 }
 ```
 
 `src/enums.rs`
-
-```rust
-mod enums;
-
-pub use enums::SpreadsheetCell;
-```
 
 ```rust
 #[derive(Debug)]
@@ -77,11 +118,19 @@ pub enum SpreadsheetCell {
     Text(String),
 }
 
+#[derive(Debug)]
+pub enum GenericCell<I, F, T> {
+    Int(I),
+    Float(F),
+    Text(T),
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
     #[test]
-    fn vec_enum() {
+    fn test_spreadsheet_cell() {
         let v = vec![
             SpreadsheetCell::Int(3),
             SpreadsheetCell::Text(String::from("blue")),
@@ -99,6 +148,52 @@ mod tests {
         assert_eq!(
             format!("{:#?}", v.get(2)),
             "Some(\n    Float(\n        10.12,\n    ),\n)"
+        );
+        assert_eq!(format!("{:#?}", v.get(3)), "None");
+    }
+
+    #[test]
+    fn test_generic_cell_float() {
+        let v = vec![
+            GenericCell::Int(3),
+            GenericCell::Text(String::from("blue")),
+            GenericCell::Float(10.12),
+        ];
+
+        assert_eq!(
+            format!("{:#?}", v.get(0)),
+            "Some(\n    Int(\n        3,\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(1)),
+            "Some(\n    Text(\n        \"blue\",\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(2)),
+            "Some(\n    Float(\n        10.12,\n    ),\n)"
+        );
+        assert_eq!(format!("{:#?}", v.get(3)), "None");
+    }
+
+    #[test]
+    fn test_generic_cell_string_float() {
+        let v = vec![
+            GenericCell::Int(3),
+            GenericCell::Text(String::from("blue")),
+            GenericCell::Float(String::from("10.12")),
+        ];
+
+        assert_eq!(
+            format!("{:#?}", v.get(0)),
+            "Some(\n    Int(\n        3,\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(1)),
+            "Some(\n    Text(\n        \"blue\",\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(2)),
+            "Some(\n    Float(\n        \"10.12\",\n    ),\n)"
         );
         assert_eq!(format!("{:#?}", v.get(3)), "None");
     }
@@ -196,17 +291,73 @@ mod tests {
 }
 ```
 
-`tests/vec_enum.rs`
+`tests/test_generic_cell.rs`
 
 ```rust
 #[cfg(test)]
 mod tests {
+    use ontouchstart_2026_01_13_rs::GenericCell;
+
     #[test]
-    fn vec_enum() {
+    fn test_generic_cell_float() {
         let v = vec![
-            ontouchstart_2026_01_13_rs::SpreadsheetCell::Int(3),
-            ontouchstart_2026_01_13_rs::SpreadsheetCell::Text(String::from("blue")),
-            ontouchstart_2026_01_13_rs::SpreadsheetCell::Float(10.12),
+            GenericCell::Int(3),
+            GenericCell::Text(String::from("blue")),
+            GenericCell::Float(10.12),
+        ];
+
+        assert_eq!(
+            format!("{:#?}", v.get(0)),
+            "Some(\n    Int(\n        3,\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(1)),
+            "Some(\n    Text(\n        \"blue\",\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(2)),
+            "Some(\n    Float(\n        10.12,\n    ),\n)"
+        );
+        assert_eq!(format!("{:#?}", v.get(3)), "None");
+    }
+
+    #[test]
+    fn test_generic_cell_string_float() {
+        let v = vec![
+            GenericCell::Int(3),
+            GenericCell::Text(String::from("blue")),
+            GenericCell::Float(String::from("10.12")),
+        ];
+
+        assert_eq!(
+            format!("{:#?}", v.get(0)),
+            "Some(\n    Int(\n        3,\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(1)),
+            "Some(\n    Text(\n        \"blue\",\n    ),\n)"
+        );
+        assert_eq!(
+            format!("{:#?}", v.get(2)),
+            "Some(\n    Float(\n        \"10.12\",\n    ),\n)"
+        );
+        assert_eq!(format!("{:#?}", v.get(3)), "None");
+    }
+}
+```
+
+`tests/test_spreadsheet_cell.rs`
+
+```rust
+#[cfg(test)]
+mod tests {
+    use ontouchstart_2026_01_13_rs::SpreadsheetCell;
+    #[test]
+    fn test_spreadsheet_cell() {
+        let v = vec![
+            SpreadsheetCell::Int(3),
+            SpreadsheetCell::Text(String::from("blue")),
+            SpreadsheetCell::Float(10.12),
         ];
 
         assert_eq!(
