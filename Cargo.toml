@@ -5,5 +5,3 @@ edition = "2024"
 
 [dev-dependencies]
 ontouchstart_2026_01_14_rs = { git = "https://github.com/ontouchstart/ontouchstart.github.io", branch = "ontouchstart_2026_01_14_rs" }
-proptest = "1.9.0"
-
