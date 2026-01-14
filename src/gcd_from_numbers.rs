@@ -27,6 +27,11 @@ fn test_gcd_from_numbers() {
 fn test_gcd_from_empty_numbers_panic() {
     let empty_numbers = Vec::<usize>::new();
     gcd_from_numbers(empty_numbers);
+}
+
+#[test]
+#[should_panic]
+fn test_gcd_from_0_numbers_panic() {
     gcd_from_numbers([0].to_vec());
     gcd_from_numbers([1, 0].to_vec());
 }
