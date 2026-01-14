@@ -20,5 +20,7 @@ fn test_gcd() {
 #[test]
 #[should_panic]
 fn test_gcd_panic() {
-    assert_eq!(gcd(0, 0), 1);
+    gcd(0, 0);
+    gcd(0, 1);
+    gcd(1, 0);
 }

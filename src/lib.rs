@@ -5,6 +5,9 @@ pub fn add(left: u64, right: u64) -> u64 {
 mod gcd;
 pub use gcd::gcd;
 
+mod gcd_from_numbers;
+pub use gcd_from_numbers::gcd_from_numbers;
+
 // should pass in ontouchstart_2026_01_14_rs_proptest
 // mod parse_date_0;
 mod parse_date_1;
