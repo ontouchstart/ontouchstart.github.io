@@ -1,11 +1,12 @@
 #[cfg(test)]
 mod tests {
+    use ontouchstart_2026_01_13_rs::SpreadsheetCell;
     #[test]
-    fn vec_enum() {
+    fn test_spreadsheet_cell() {
         let v = vec![
-            ontouchstart_2026_01_13_rs::SpreadsheetCell::Int(3),
-            ontouchstart_2026_01_13_rs::SpreadsheetCell::Text(String::from("blue")),
-            ontouchstart_2026_01_13_rs::SpreadsheetCell::Float(10.12),
+            SpreadsheetCell::Int(3),
+            SpreadsheetCell::Text(String::from("blue")),
+            SpreadsheetCell::Float(10.12),
         ];
 
         assert_eq!(
