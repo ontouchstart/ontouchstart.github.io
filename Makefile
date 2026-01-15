@@ -8,3 +8,5 @@ all:
 	cargo test --lib --verbose
 	cargo clean
 
+rtfm:
+	cargo doc --open

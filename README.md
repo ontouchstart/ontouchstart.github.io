@@ -1,6 +1,13 @@
 # ontouchstart_2026_01_15_rs_hello_tokio
 
-# hello_tokio
+## RTFM:
+
+```
+make rtfm
+```
+(This is so cool.)
+
+## hello_tokio
 
 <https://github.com/tokio-rs/website/blob/master/content/tokio/tutorial/hello-tokio.md>
 
@@ -28,4 +35,5 @@ mini-redis % cargo run --bin mini-redis-server
      Running `target/debug/hello-tokio`
 got value from the server; result=Some(b"world")
 ```
+
 
