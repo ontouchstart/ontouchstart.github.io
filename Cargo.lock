@@ -3,13 +3,13 @@
 version = 4
 
 [[package]]
-name = "ontouchstart_2026_01_14_rs"
+name = "ontouchstart_2026_01_15_rs"
 version = "0.1.0"
-source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=ontouchstart_2026_01_14_rs#7a8f09e1c568ba1d7da6ea7b1cee92afea151c94"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=ontouchstart_2026_01_15_rs#e9b671c34e10b11567640cb41c692c55c50986cf"
 
 [[package]]
-name = "ontouchstart_2026_01_14_rs_proptest"
+name = "ontouchstart_2026_01_15_rs_test"
 version = "0.1.0"
 dependencies = [
- "ontouchstart_2026_01_14_rs",
+ "ontouchstart_2026_01_15_rs",
 ]

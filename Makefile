@@ -3,7 +3,11 @@ all:
 	rustup --version --verbose
 	rustc --version --verbose
 	cargo --version --verbose
-	cargo add --dev --git https://github.com/ontouchstart/ontouchstart.github.io --branch ontouchstart_2026_01_14_rs ontouchstart_2026_01_14_rs
+	cargo add --dev --git https://github.com/ontouchstart/ontouchstart.github.io --branch ontouchstart_2026_01_15_rs ontouchstart_2026_01_15_rs
 	cargo update
-	cargo test --tests --verbose
+	cargo test --tests
 	cargo clean
+
+test:
+	cargo fmt
+	cargo test --tests --verbose
