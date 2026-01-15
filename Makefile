@@ -10,3 +10,6 @@ all:
 
 rtfm:
 	cargo doc --open
+
+clean:
+	cargo clean
