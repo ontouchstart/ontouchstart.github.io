@@ -13,7 +13,7 @@ mod tests {
     /// Integration tests for the default `add` fn from remote crate
     #[test]
     fn it_works_remote_crate() {
-        use ontouchstart_2026_01_15_rs::add;
+        use default::add;
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
