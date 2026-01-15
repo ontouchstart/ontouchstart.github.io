@@ -23,6 +23,6 @@ Every project starts with a single README.md and grows into a tree or forest.
 
 ## Answer 
 
-Depends on the scales.
+Depends on the scale. 
 
 
