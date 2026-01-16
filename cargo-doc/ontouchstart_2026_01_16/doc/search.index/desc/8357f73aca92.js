@@ -1,1 +1,0 @@
-rd_("DkFollowing code depends on the crate <code>ontouchstart_buffer</code> so \xe2\x80\xa6CcThis crate has no library, only tests and doc-tests")
