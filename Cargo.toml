@@ -1,3 +1,3 @@
 [workspace]
 resolver = "3"
-members = ["ontouchstart-buffer"]
+members = ["ontouchstart-buffer", "ontouchstart-sieve"]
