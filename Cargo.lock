@@ -8,7 +8,7 @@ version = "0.1.0"
 source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=ontouchstart_2026_01_15_rs#4027d785bc14b15ecd7176e99fdbfd3ce3876a27"
 
 [[package]]
-name = "ontouchstart_2026_01_15_rs_test"
+name = "ontouchstart-buffer"
 version = "0.1.0"
 dependencies = [
  "default",

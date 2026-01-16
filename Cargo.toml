@@ -1,7 +1,3 @@
-[package]
-name = "ontouchstart_2026_01_15_rs_test"
-version = "0.1.0"
-edition = "2024"
-
-[dev-dependencies]
-default = { git = "https://github.com/ontouchstart/ontouchstart.github.io", branch = "ontouchstart_2026_01_15_rs" }
+[workspace]
+resolver = "3"
+members = ["ontouchstart-buffer"]
