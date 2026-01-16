@@ -1,5 +1,5 @@
 #[test]
-fn string_literals() -> () {
+fn string_literals() {
     assert_eq!("\"Ouch!\" said the well.", r#""Ouch!" said the well."#);
 
     let multiline_string = "In the room the women come and go,
