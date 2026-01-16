@@ -1,4 +1,4 @@
-# 📒 Cargo Doc
+# 📒 cargo-doc
 
 <https://doc.rust-lang.org/cargo/commands/cargo-doc.html>
 
