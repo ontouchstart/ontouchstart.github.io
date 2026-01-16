@@ -11,12 +11,11 @@
 //! ```
 //!
 
-#![doc(html_playground_url = "")]
 ///
 /// Following code depends on the crate `ontouchstart_buffer`
 /// so we can't run it in the playground.
 /// You can copy and paste to your code.
-/// ```
+/// ```code
 /// use ontouchstart_buffer::it_works;
 /// assert_eq!(it_works(), b"It works!");
 /// ```
