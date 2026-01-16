@@ -1,9 +1,12 @@
+//! # hello-tokio
+//!
+//! <https://github.com/tokio-rs/website/blob/master/content/tokio/tutorial/hello-tokio.md>
+//!
+//!
+
 use mini_redis::{Result, client};
 
 #[tokio::main]
-/// # hello-tokio
-///
-/// <https://github.com/tokio-rs/website/blob/master/content/tokio/tutorial/hello-tokio.md>
 async fn main() -> Result<()> {
     // Open a connection to the mini-redis address.
     let mut client = client::connect("127.0.0.1:6379").await?;

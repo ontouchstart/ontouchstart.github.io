@@ -1,12 +1,14 @@
+//! # hello-tokio
+//!
+//! set_value variation of
+//!
+//! <https://github.com/tokio-rs/website/blob/master/content/tokio/tutorial/hello-tokio.md>
+//!
+//!
 use mini_redis::{Result, client};
 use std::env;
 
 #[tokio::main]
-/// # hello-tokio
-///
-/// <https://github.com/tokio-rs/website/blob/master/content/tokio/tutorial/hello-tokio.md>
-///
-
 async fn main() -> Result<()> {
     let args: Vec<String> = env::args().collect();
 
