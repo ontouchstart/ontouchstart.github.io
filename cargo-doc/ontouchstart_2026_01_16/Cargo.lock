@@ -5,7 +5,7 @@ version = 4
 [[package]]
 name = "ontouchstart-buffer"
 version = "0.1.0"
-source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=ontouchstart_2026_01_16_rs#2c29abdda8ddabbfd59187002891357edc06a8b8"
+source = "git+https://github.com/ontouchstart/ontouchstart.github.io?branch=ontouchstart_2026_01_16_rs#a896c4db85fb15ddd24acf57f01583822090e455"
 
 [[package]]
 name = "ontouchstart_2026_01_16"
