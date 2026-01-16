@@ -11,4 +11,10 @@ mod tests {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
+
+    #[test]
+    fn test_ontouchstart_buffer_it_works() {
+        use ontouchstart_buffer::it_works;
+        assert_eq!(it_works(), b"It works!");
+    }
 }

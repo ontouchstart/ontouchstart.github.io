@@ -1,1 +1,0 @@
-rd_("CcThis crate has no library, only tests and doc-tests")
