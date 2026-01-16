@@ -7,6 +7,7 @@
 //! assert_eq!(buffer.write_all(b"It works!").unwrap(), ());
 //! assert_eq!(buffer.len(), 9);
 //! assert_eq!(buffer, b"It works!");
+//! assert_eq!(buffer, [73, 116, 32, 119, 111, 114, 107, 115, 33]);
 //! ```
 //!
 #[cfg(test)]
