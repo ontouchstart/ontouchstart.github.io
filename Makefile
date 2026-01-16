@@ -5,7 +5,7 @@ all:
 	cargo --version --verbose
 	cargo update
 	cargo fmt
-	cargo test
+	cargo test --lib
 	cargo clean
 
 test:
