@@ -11,3 +11,6 @@ all:
 test:
 	cargo fmt
 	cargo test
+
+server: # do not run this in CI
+	uv run mlx_lm.server
