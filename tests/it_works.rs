@@ -5,7 +5,7 @@ mod tests {
     /// Integration tests for the default `add` fn from local crate
     #[test]
     fn it_works_local_crate() {
-        use ontouchstart_2026_01_15_rs_test::add;
+        use ontouchstart_2026_01_17_rs_test::add;
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
