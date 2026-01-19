@@ -15,7 +15,11 @@ test:
 server: # do not run this in CI
 	uv run mlx_lm.server
 
-models: # do not run this in CI
+build:
 	cargo build
-	./target/debug/mlx_lm_models| jq .
 
+models: # do not run this in CI
+	./target/debug/mlx_lm_models | jq . | tee models.json
+
+brown_mm:
+	./target/debug/mlx_lm_brown_mm | jq . | tee brown_mm.json

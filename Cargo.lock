@@ -630,6 +630,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "mlx_lm_brown_mm"
+version = "0.1.0"
+dependencies = [
+ "reqwest",
+ "serde",
+ "tokio",
+]
+
+[[package]]
 name = "mlx_lm_models"
 version = "0.1.0"
 dependencies = [

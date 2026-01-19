@@ -1,0 +1,10 @@
+[package]
+name = "mlx_lm_brown_mm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+reqwest = { version = "0.13.1", features = ["json"] }
+serde = "1.0.228"
+tokio = { version = "1.49.0", features = ["full"] }
+
