@@ -14,3 +14,7 @@ test:
 
 server: # do not run this in CI
 	uv run mlx_lm.server
+
+models: # do not run this in CI
+	./target/debug/mlx_lm_models| jq .
+
