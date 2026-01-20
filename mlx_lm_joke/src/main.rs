@@ -1,11 +1,9 @@
-use reqwest::Error;
-
 #[tokio::main] // Marks the async main function
-async fn main() -> Result<(), Error> {
+async fn main() -> Result<(), reqwest::Error> {
     let client = reqwest::Client::new();
     let res = client
         .post("http://localhost:8080/v1/chat/completions")
-        .body("{\"model\": \"mlx-community/Llama-3.2-3B-Instruct-4bit\",\"messages\": [{\"role\": \"user\", \"content\": \"Tell me something about brown M&Ms\"}]}")
+        .body("{\"model\": \"openai/gpt-oss-20b\",\"messages\": [{\"role\": \"user\", \"content\": \"Tell me a joke about Rust.\"}]}")
         .send()
         .await?;
 

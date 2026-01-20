@@ -1,5 +1,5 @@
 [package]
-name = "mlx_lm_models"
+name = "mlx_lm_joke"
 version = "0.1.0"
 edition = "2024"
 

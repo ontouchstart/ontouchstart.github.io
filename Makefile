@@ -18,8 +18,5 @@ server: # do not run this in CI
 build:
 	cargo build
 
-models: # do not run this in CI
-	./target/debug/mlx_lm_models | jq . | tee models.json
-
-brown_mm:
-	./target/debug/mlx_lm_brown_mm | jq . | tee brown_mm.json
+joke:
+	./target/debug/mlx_lm_joke | jq . | tee joke.json
