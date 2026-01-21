@@ -12,11 +12,3 @@ test:
 	cargo fmt
 	cargo test
 
-server: # do not run this in CI
-	uv run mlx_lm.server
-
-build:
-	cargo build
-
-joke:
-	./target/debug/mlx_lm_joke | jq . | tee joke.json
