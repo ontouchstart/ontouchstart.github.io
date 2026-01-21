@@ -7,6 +7,7 @@ all:
 	cargo fmt
 	cargo test --lib
 	cargo clean
+	cargo tree > cargo-tree.txt
 
 test:
 	cargo fmt
