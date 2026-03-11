@@ -1,9 +1,0 @@
-[project]
-name = "qwen3-30b-a3b-mlx-4bit"
-version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.14"
-dependencies = [
-    "mlx-lm>=0.28.3",
-]

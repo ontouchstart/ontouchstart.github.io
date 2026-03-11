@@ -1,8 +1,0 @@
-[package]
-name = "github_url_2026_01_09_rs"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-url = { git = "https://github.com/ontouchstart/ontouchstart.github.io", branch = "2026_01_09_rs", version = "0.1.0" }
-backyard = { git = "https://github.com/ontouchstart/ontouchstart.github.io", branch = "2026_01_09_rs", version = "0.1.0" }
