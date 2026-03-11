@@ -1,3 +1,3 @@
-Every 🕳️ has a [🕳️](rabbit-holes) underneath.
+Every 🕳️ has a [🕳️](https://ontouchstart.github.io/rabbit-holes) underneath.
 
-© 2026  [🕳️](rabbit-holes)
+© 2026  [🕳️](https://ontouchstart.github.io/rabbit-holes)
