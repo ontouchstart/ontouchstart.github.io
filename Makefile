@@ -20,5 +20,5 @@ endef
 
 export Dockerfile
 Dockerfile:;@echo "$$Dockerfile" > Dockerfile&&docker build -t $(image) .
-clean:;rm -rf Dockerfile
+clean:;rm -rf Dockerfile home/MyLeanProject/
 rmi:;docker rmi $(image)&&make clean
