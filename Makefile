@@ -5,6 +5,7 @@ test: Dockerfile compose.yml home/test;docker compose run --rm test
 down:Dockerfile compose.yml;docker compose down
 
 define Dockerfile
+ARG DEBIAN_FRONTEND=noninteractive
 FROM debian:13-slim
 RUN apt update&&apt install -y curl git make neovim
 RUN curl -fsSL https://deb.nodesource.com/setup_24.x |  bash -
