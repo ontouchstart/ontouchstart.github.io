@@ -42,7 +42,7 @@ export compose_yml
 
 define server_js
 const http = require('http');
-const server = http.createServer((req, res) => {res.end('Hello from server');});
+const server = http.createServer((req, res) => {res.end('Hello from server\\n');});
 server.listen(3000, () => console.log('Server listening on port 3000'));
 endef
 export server_js
@@ -50,7 +50,6 @@ export server_js
 define client_js
 const http = require('http');
 http.get('http://server:3000', res => {res.on('data', chunk => process.stdout.write(chunk));});
-console.log("Done");
 endef
 export client_js
 
