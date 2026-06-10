@@ -4,7 +4,7 @@ bash:Dockerfile;docker run -v ./home:/home --rm -it $(image) bash
 
 define Dockerfile
 FROM debian:13-slim
-RUN apt update&&apt install -y curl git make
+RUN apt update&&apt install -y curl git make neovim
 WORKDIR /opt
 RUN curl -sSfOL https://elan.lean-lang.org/elan-init.sh
 RUN sh /opt/elan-init.sh -y
