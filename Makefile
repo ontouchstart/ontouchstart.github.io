@@ -1,9 +1,9 @@
 image=2026-06-10-docker
-all:Dockerfile;docker run --rm $(image) bash -c "uname -a"
+all:Dockerfile;docker run --rm $(image) bash -c "lake --version&&lean --version"
 bash:Dockerfile;docker run --rm -it $(image) 
 
 define Dockerfile
-FROM debian:13-slim
+FROM leanprovercommunity/lean4:latest
 WORKDIR /home
 CMD ["bash"]
 endef
