@@ -1,6 +1,6 @@
 image=2026_06_10_llama_cpp
 release=b9592
-all:Dockerfile;docker run --rm -it $(image) bash -c "/home/llama.cpp/build/bin/llama-cli --version"
+all:Dockerfile;docker run --rm $(image) bash -c "/home/llama.cpp/build/bin/llama-cli --version"
 
 define Dockerfile
 FROM debian:13-slim
