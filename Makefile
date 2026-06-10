@@ -1,0 +1,27 @@
+image=2026_06_10_llama_cpp
+release=b9592
+all:Dockerfile;docker run --rm -it $(image) bash -c "/home/llama.cpp/build/bin/llama-cli --version"
+
+define Dockerfile
+FROM debian:13-slim
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt-get install -y curl git make neovim
+RUN curl -fsSL https://deb.nodesource.com/setup_24.x |  bash -
+RUN apt-get install -y nodejs pkg-config libssl-dev libcap-dev
+RUN apt-get install -y bubblewrap build-essential ccache clang-19 cmake gdb jq libcap-dev llvm pkg-config python3.13-venv
+ENV CC=clang-19
+
+WORKDIR /home
+RUN git clone --depth=1 -b $(release) https://github.com/ggml-org/llama.cpp
+RUN echo "all:;cd llama.cpp && cmake -B build && make -C build" > Makefile
+RUN make
+CMD ["bash"]
+endef
+export Dockerfile
+
+bash:Dockerfile;docker run --rm -it $(image) 
+Dockerfile:;@echo "$$Dockerfile" > Dockerfile&&docker build -t $(image) .
+build:Dockerfile;docker build --no-cache -t $(image) .
+
+clean:;rm -rf Dockerfile 
