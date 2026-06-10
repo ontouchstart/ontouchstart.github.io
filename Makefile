@@ -1,5 +1,5 @@
 image=2026-06-10-docker
-all:Dockerfile;docker run --rm $(image) bash -c "lake --version&&lean --version"
+all:Dockerfile;docker run --rm $(image) bash -c "uname -a"
 bash:Dockerfile;docker run --rm -it $(image) 
 
 define Dockerfile
