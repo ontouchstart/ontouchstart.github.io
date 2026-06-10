@@ -7,9 +7,10 @@ down:Dockerfile compose.yml;docker compose down
 define Dockerfile
 ARG DEBIAN_FRONTEND=noninteractive
 FROM debian:13-slim
-RUN apt update&&apt install -y curl git make neovim
+RUN apt-get update
+RUN apt-get install -y curl git make neovim
 RUN curl -fsSL https://deb.nodesource.com/setup_24.x |  bash -
-RUN apt install -y nodejs pkg-config libssl-dev libcap-dev
+RUN apt-get install -y nodejs pkg-config libssl-dev libcap-dev
 
 WORKDIR /home
 CMD ["bash"]
