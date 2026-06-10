@@ -1,0 +1,12 @@
+# https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md
+name: Makefile CI (macos-26)
+
+on: push
+
+jobs:
+  build:
+    runs-on: macos-26
+
+    steps:
+    - uses: actions/checkout@v6
+    - run: make

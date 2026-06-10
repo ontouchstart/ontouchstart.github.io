@@ -1,0 +1,12 @@
+# https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md
+name: Makefile CI (windows-2025)
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-2025
+
+    steps:
+    - uses: actions/checkout@v6
+    - run: make

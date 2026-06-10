@@ -1,0 +1,1 @@
+all:;uname -a&&date
