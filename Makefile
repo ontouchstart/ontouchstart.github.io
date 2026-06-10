@@ -1,10 +1,10 @@
 image=2026-06-10-docker-lake
-all:Dockerfile;docker run -v ./home:/home --rm $(image) bash -c "make -C /home"
+all:Dockerfile;docker run -v ./home:/home --rm $(image) bash -c "make -C /home build"
 bash:Dockerfile;docker run -v ./home:/home --rm -it $(image) bash
 
 define Dockerfile
 FROM debian:13-slim
-RUN apt update&&apt install -y curl make
+RUN apt update&&apt install -y curl git make
 WORKDIR /opt
 RUN curl -sSfOL https://elan.lean-lang.org/elan-init.sh
 RUN sh /opt/elan-init.sh -y
