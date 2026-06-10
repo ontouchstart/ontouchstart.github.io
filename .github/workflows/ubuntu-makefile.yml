@@ -1,12 +1,12 @@
-# https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
-name: Makefile CI (ubuntu-24.04)
+# https://github.com/actions/runner-images/blob/main/images/ubuntu-slim/ubuntu-slim-Readme.md
+name: Makefile CI (ubuntu-slim)
 
 on: push
 
 jobs:
   build:
 
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-slim
 
     steps:
     - uses: actions/checkout@v6
