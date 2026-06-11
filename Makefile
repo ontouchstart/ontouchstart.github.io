@@ -1,6 +1,6 @@
 image=2026_06_11_llama_cpp
 release=b9601	# https://github.com/ggml-org/llama.cpp/releases/tag/b9601
-all:Dockerfile;docker run --rm $(image) bash -c "make -C /home"
+all:Dockerfile;docker run --rm $(image) bash -c "make -C /home life"
 
 define Dockerfile
 FROM debian:13-slim
