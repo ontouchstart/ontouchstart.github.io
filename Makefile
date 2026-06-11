@@ -14,7 +14,8 @@ ENV CC=clang-19
 
 WORKDIR /home
 RUN git clone --depth=1 -b $(release) https://github.com/ggml-org/llama.cpp
-RUN echo "all:;cd llama.cpp && cmake -B build && make -C build" > Makefile
+RUN echo 'all:llama.cpp/build/bin;/home/llama.cpp/build/bin/llama-cli -hf ggml-org/gemma-4-E2B-it-GGUF --single-turn --prompt "What is the meaning of life?"' > Makefile
+RUN echo "llama.cpp/build/bin:;cd llama.cpp && cmake -B build && make -C build" >> Makefile
 RUN make
 CMD ["bash"]
 endef
