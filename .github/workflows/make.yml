@@ -1,0 +1,13 @@
+# https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
+name: make 
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-24.04
+
+    steps:
+    - uses: actions/checkout@v6
+    - run: git clone https://gist.github.com/3088e416e1bce9015310bfc6c56566e3 src&& make -C src
