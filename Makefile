@@ -1,5 +1,5 @@
 # https://github.com/sdiehl/zero-to-qed
-build:;docker compose run --rm dev bash -c "make build"
+build:Dockerfile compose.yml;docker compose run --rm dev bash -c "make build"
 dev:up;docker compose exec dev bash
 up:Dockerfile compose.yml home/Makefile;docker compose up -d
 down:;docker compose down
