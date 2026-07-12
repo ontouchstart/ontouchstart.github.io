@@ -1,14 +1,16 @@
 # https://github.com/sdiehl/zero-to-qed
-build:up;docker compose exec dev bash -c "cd zero-to-qed&&just build"
+build:;docker compose run --rm dev bash -c "make build"
 dev:up;docker compose exec dev bash
 up:Dockerfile compose.yml home/Makefile;docker compose up -d
 down:;docker compose down
 clean:;rm -rf home Dockerfile compose.yml
 
 define home_Makefile
-all:justfile zero-to-qed;just serve
+serve:justfile zero-to-qed;just serve
+build:justfile zero-to-qed;just build
 zero-to-qed:;git clone https://github.com/sdiehl/zero-to-qed
-justfile:;echo "serve:" > justfile &&echo " cd zero-to-qed/docs && mdbook serve -n 0.0.0.0" >> justfile
+justfile:;echo "serve:" > justfile &&echo "  cd zero-to-qed/docs && mdbook serve -n 0.0.0.0" >> justfile
+justfile:;echo "build:" > justfile &&echo "  cd zero-to-qed&&lake build" >> justfile
 endef
 export home_Makefile
 
@@ -68,7 +70,7 @@ services:
       - ./home:/home
     ports:
       - "8000:3000"
-    command: ["make"]
+    command: ["make", "serve"]
 endef
 export compose_yml
 
