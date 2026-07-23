@@ -1,0 +1,2 @@
+# AI Friendly Software Engineering
+
