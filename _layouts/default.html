@@ -6,8 +6,23 @@
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   
-    <script type="text/javascript" id="MathJax-script" async src="https://jsdelivr.net"></script>
-    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] } }; </script>
+    <link rel="stylesheet" href="https://jsdelivr.net">
+    <script defer src="https://jsdelivr.net"></script>
+
+<script defer>
+  document.addEventListener("DOMContentLoaded", function() {
+    const mathBlocks = document.querySelectorAll('script[type^="math/tex"]');
+    mathBlocks.forEach((el) => {
+      const tex = el.textContent.replace("% <![CDATA[", "").replace("%]]>", "");
+      const displayMode = el.type === "math/tex; mode=display";
+
+      const span = document.createElement("span");
+      span.innerHTML = katex.renderToString(tex, { displayMode: displayMode });
+      el.parentNode.insertBefore(span, el);
+      el.remove();
+    });
+  });
+</script>
   </head>
   <body>
     <main>
