@@ -8,14 +8,12 @@
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
-    <main>
+    <div class="container-lg px-3 my-5 markdown-body">
       {{ content }}
-    </main>
-
-    <footer>
-      <p>&copy; {{ 'now' | date: '%Y' }} Sam Liu 🤔</p>
-    </footer>
-
+      <footer>
+        <p>&copy; {{ 'now' | date: '%Y' }} Sam Liu 🤔</p>
+      </footer>
+    </div>
   </body>
 </html>
 
