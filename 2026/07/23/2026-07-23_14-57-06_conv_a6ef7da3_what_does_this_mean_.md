@@ -4,16 +4,16 @@ https://ontouchstart.github.io/README.md
 
 The link leads to a simple page containing **Euler's Identity**:
 
-$$e^{i\\pi} + 1 = 0$$
+$$e^{i\pi} + 1 = 0$$
 
 ### What it means:
 This is considered one of the most beautiful and profound equations in mathematics because it links five of the most fundamental constants of mathematics in a single simple statement:
 
-1.  **$e$**: The base of the natural logarithm (essential for calculus and growth).
-2.  **$i$**: The imaginary unit (defined as $\\sqrt{-1}$, essential for complex numbers).
-3.  **$\\pi$**: The ratio of a circle's circumference to its diameter (essential for geometry and trigonometry).
-4.  **$1$**: The multiplicative identity.
-5.  **$0$**: The additive identity.
+1.  ** $e$ **: The base of the natural logarithm (essential for calculus and growth).
+2.  ** $i$ **: The imaginary unit (defined as $\sqrt{-1}$, essential for complex numbers).
+3.  ** $\pi$ **: The ratio of a circle's circumference to its diameter (essential for geometry and trigonometry).
+4.  ** $1$ **: The multiplicative identity.
+5.  ** $0$ **: The additive identity.
 
 Essentially, it shows a deep, underlying connection between trigonometry, complex analysis, and exponential functions.
 
