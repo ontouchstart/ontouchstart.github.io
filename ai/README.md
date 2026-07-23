@@ -3,12 +3,14 @@
 Engineering is problem solving, Software Engineering is solving software problems or solving problems with software.
 AI Friendly Software Engineering is solving AI caused software problems or solving software problems with AI.
 
-# Problems can be solved by software
+## Problems can be solved by software
 
 Fundamentally they are data problems: data generation, collection, storage, transmission, and transformation. 
 
-# Software problems
+## Software problems
 
 Software problems are tooling problems. Software should perform specific tasks. Problems related to Software Development Life Cycle (SDLC) are software problems. Since we use software in SDLC, we can also use software to solve software problems. So the border is kind of fuzzy here.
 
+## AI is nondeterministic automation
 
+Regardless of implementations or service provider, fundamentally AI is just [nondeterministic](https://en.wikipedia.org/wiki/Nondeterministic_algorithm) automation. In this context, AI friendly software engineering faces new opportunities and challenges.
