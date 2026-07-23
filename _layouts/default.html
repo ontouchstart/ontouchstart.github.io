@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
+    <script type="text/javascript" id="MathJax-script" async src="https://jsdelivr.net"></script>
+    <script> window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] } }; </script>
+  </head>
+  <body>
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.author }}</p>
+    </footer>
+
+  </body>
+</html>
+
