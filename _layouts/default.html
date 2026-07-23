@@ -3,26 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ page.title }} | Sam Liu 🤔 </title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  
-    <link rel="stylesheet" href="https://jsdelivr.net">
-    <script defer src="https://jsdelivr.net"></script>
-
-<script defer>
-  document.addEventListener("DOMContentLoaded", function() {
-    const mathBlocks = document.querySelectorAll('script[type^="math/tex"]');
-    mathBlocks.forEach((el) => {
-      const tex = el.textContent.replace("% <![CDATA[", "").replace("%]]>", "");
-      const displayMode = el.type === "math/tex; mode=display";
-
-      const span = document.createElement("span");
-      span.innerHTML = katex.renderToString(tex, { displayMode: displayMode });
-      el.parentNode.insertBefore(span, el);
-      el.remove();
-    });
-  });
-</script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
     <main>
@@ -30,7 +13,7 @@
     </main>
 
     <footer>
-      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.author }}</p>
+      <p>&copy; {{ 'now' | date: '%Y' }} Sam Liu 🤔</p>
     </footer>
 
   </body>
