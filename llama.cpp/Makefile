@@ -9,6 +9,8 @@ release=b10107
 server:	build
 	# https://huggingface.co/ggml-org/gemma-4-12B-it-GGUF
 	build/bin/llama-server -hf ggml-org/gemma-4-12B-it-GGUF
+pi-server:
+	build/bin/llama-server --models-dir ~/models --no-models-autoload --jinja --host 127.0.0.1 --port 8080 -ngl 999 -c 32768
 
 build:	$(repo)
 	cmake -B build -S $(repo)
