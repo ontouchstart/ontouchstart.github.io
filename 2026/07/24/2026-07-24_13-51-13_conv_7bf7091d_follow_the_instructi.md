@@ -33,8 +33,8 @@ By adopting the "Turing Machine + Oracle" model, we provide a common language. W
 ## 4. The Nature of the Oracle: Turing vs. Random
 A critical distinction must be made between two types of Oracles:
 
-1. **The Turing Oracle (Deterministic):** A theoretical construct where the Oracle provides a specific, fixed answer to a specific problem. If the Oracle were fully "computable," it would simply be another part of the Turing Machine.
-2. **The Random Oracle (Stochastic):** A model where the Oracle provides a response that is stochastic or based on "experience." 
+1.  **The Turing Oracle (Deterministic):** A theoretical construct where the Oracle provides a specific, fixed answer to a specific problem. If the Oracle were fully "computable," it would simply be another part of the Turing Machine.
+2.  **The Random Oracle (Stochastic):** A model where the Oracle provides a response that is stochastic or based on "experience." 
 
 Modern AI functions as a **Random Oracle Based on Experience**. Because the training data is a reflection of human experience (which is inherently noisy and stochastic), the "Oracle" consulted by the AI is not a deterministic lookup table. It is a probabilistic mapping. This explains why AI can generalize and "hallucinate"—it is navigating a stochastic oracle rather than following a rigid, deterministic path.
 
