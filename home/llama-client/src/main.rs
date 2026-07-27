@@ -25,11 +25,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         // Since base_path already contains /v1, we just append /health and /models
         // and ensure we don't have double slashes.
-        let full_path = if base_path.ends_with('/') {
-            format!("{}{}", base_path, endpoint)
-        } else {
-            format!("{}/{}", base_path, endpoint)
-        };
+        let full_path = format!("{}/{}", base_path, endpoint);
 
         let request = format!(
             "GET {} HTTP/1.1\r\nHost: {}\r\nConnection: close\r\n\r\n",
@@ -44,6 +40,26 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         println!("{}", String::from_utf8_lossy(&buffer));
         println!();
     }
+
+    // Chat completion
+    println!("--- Requesting /v1/chat/completions ---");
+    let mut stream = TcpStream::connect(&address).await?;
+
+    let chat_path = format!("{}/chat/completions", base_path);
+
+    let body = r#"{"model": "gemma-4-12B-it-Q4_K_M", "messages": [{"role": "user", "content": "Hello, how are you?"}]}"#;
+    let request = format!(
+        "POST {} HTTP/1.1\r\nHost: {}\r\nContent-Type: application/json\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{}",
+        chat_path, host_port, body.len(), body
+    );
+
+    stream.write_all(request.as_bytes()).await?;
+
+    let mut buffer = Vec::new();
+    stream.read_to_end(&mut buffer).await?;
+
+    println!("{}", String::from_utf8_lossy(&buffer));
+    println!();
 
     Ok(())
 }
