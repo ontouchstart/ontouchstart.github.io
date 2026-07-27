@@ -1,0 +1,34 @@
+{
+  "llama.cpp": {
+    "models": [
+      {
+        "id": "gemma-4-12B-it-Q4_K_M",
+        "name": "gemma-4-12B-it-Q4_K_M",
+        "api": "openai-completions",
+        "provider": "llama.cpp",
+        "baseUrl": "http://host.docker.internal:8080/v1",
+        "reasoning": false,
+        "input": [
+          "text"
+        ],
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "contextWindow": 32768,
+        "maxTokens": 32768,
+        "compat": {
+          "supportsStore": false,
+          "supportsDeveloperRole": false,
+          "supportsReasoningEffort": false,
+          "supportsUsageInStreaming": false,
+          "supportsStrictMode": false,
+          "maxTokensField": "max_tokens"
+        }
+      }
+    ],
+    "checkedAt": 1785170933029
+  }
+}
