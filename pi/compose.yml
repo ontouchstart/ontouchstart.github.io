@@ -6,4 +6,4 @@ services:
       - LLAMA_BASE_URL=http://host.docker.internal:8080/v1
     volumes:
       - ../home:/home
-      - ./root:/root
+      - ../agent:/root/.pi/agent
