@@ -1,7 +1,7 @@
 github=https://github.com
 owner=ggml-org
 repo=llama.cpp
-release=b10152
+release=b10173
 42:	build
 	# https://huggingface.co/ggml-org/gemma-4-E2B-it-GGUF
 	build/bin/llama-cli -hf ggml-org/gemma-4-E2B-it-GGUF --prompt "What is the question to the answer of 42?" --single-turn
