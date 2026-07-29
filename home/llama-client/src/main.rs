@@ -61,5 +61,25 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("{}", String::from_utf8_lossy(&buffer));
     println!();
 
+    // Tokenize
+    println!("--- Requesting /tokenize ---");
+    let mut stream = TcpStream::connect(&address).await?;
+
+    let tokenize_path = "/tokenize";
+
+    let tokenize_body = r#"{"model": "gemma-4-12B-it-Q4_K_M", "content": "Hello, how are you?"}"#;
+    let request = format!(
+        "POST {} HTTP/1.1\r\nHost: {}\r\nContent-Type: application/json\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{}",
+        tokenize_path, host_port, tokenize_body.len(), tokenize_body
+    );
+
+    stream.write_all(request.as_bytes()).await?;
+
+    let mut buffer = Vec::new();
+    stream.read_to_end(&mut buffer).await?;
+
+    println!("{}", String::from_utf8_lossy(&buffer));
+    println!();
+
     Ok(())
 }
