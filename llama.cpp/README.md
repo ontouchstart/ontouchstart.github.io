@@ -1,4 +1,4 @@
-# llama.app]
+# llama.app
 
-[llama.app](https://llama.app)
+[models](https://llama.app/models)
 
