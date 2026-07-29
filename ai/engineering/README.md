@@ -7,7 +7,7 @@ AI Friendly Software Engineering is solving AI caused software problems or solvi
 
 Fundamentally they are data problems: data generation, collection, storage, transmission, and transformation. 
 
-## Problems that cannot be solved by software 
+## Problems cannot be solved by software 
 
 There are many many problems that cannot be solved by software. For these problems, relying on software blindly will only cause _Software Problems_. Don’t fall into the trap of software problems, it will cost you more if you use more powerful software.
 
