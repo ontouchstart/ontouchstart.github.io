@@ -1,5 +1,2 @@
-# llama.cpp
+# [llama.app](https://llama.app)
 
-https://llama.app/
-
-See [Makefile](Makefile) for usage.
