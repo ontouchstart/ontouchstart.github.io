@@ -14,4 +14,5 @@ ENV RUSTUP_HOME=/usr/local/rustup \
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 RUN npm install -g --ignore-scripts @earendil-works/pi-coding-agent
+RUN pi install git:github.com/huggingface/pi-llama
 WORKDIR /home
