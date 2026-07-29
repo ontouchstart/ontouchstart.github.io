@@ -6,6 +6,9 @@ release=b10182
 	# https://huggingface.co/ggml-org/gemma-4-E2B-it-GGUF
 	build/bin/llama-cli -hf ggml-org/gemma-4-E2B-it-GGUF --prompt "What is the question to the answer of 42?" --single-turn
 
+chinese: build
+	build/bin/llama-cli -hf ggml-org/gemma-4-E2B-it-GGUF --prompt "Print random number of random Chinese characters in one line without spaces." --single-turn
+
 server:	build
 	# https://huggingface.co/ggml-org/gemma-4-12B-it-GGUF
 	build/bin/llama-server -hf ggml-org/gemma-4-12B-it-GGUF
