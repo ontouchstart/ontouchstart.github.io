@@ -5,22 +5,22 @@ tags:
 - gguf
 - quantized
 base_model:
-- google/gemma-4-E4B-it
+- google/gemma-4-12B-it
 ---
 
-# gemma-4-E4B-it
+# gemma-4-12B-it
 
 Run with https://llama.app
 
 ```bash
-llama serve -hf ggml-org/gemma-4-E4B-it-GGUF
+llama serve -hf ggml-org/gemma-4-12B-it-GGUF
 ```
 
 ### Source models
-- https://huggingface.co/google/gemma-4-E4B-it
-- https://huggingface.co/google/gemma-4-E4B-it-assistant
-- https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-unquantized-assistant
-- https://huggingface.co/google/gemma-4-E4B-it-qat-q4_0-unquantized
+- https://huggingface.co/google/gemma-4-12B-it
+- https://huggingface.co/google/gemma-4-12B-it-assistant
+- https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-unquantized-assistant
+- https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-unquantized
 
 ### TODOs
 
