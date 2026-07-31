@@ -24,3 +24,8 @@ $(repo):
 
 clean:
 	rm -rf $(repo) build
+
+download:
+	uv run hf download --local-dir models ggml-org/gemma-4-E2B-it-GGUF
+	uv run hf download --local-dir models ggml-org/gemma-4-E4B-it-GGUF
+	uv run hf download --local-dir models ggml-org/gemma-4-12B-it-GGUF
