@@ -1,10 +1,14 @@
 github=https://github.com
 owner=ggml-org
 repo=llama.cpp
-release=b10195
+release=b10199
 
+prompt="Print random number of random Chinese characters in one line without spaces."
 chinese: build 
-	build/bin/llama-cli -hf ggml-org/gemma-4-E2B-it-GGUF --prompt "Print random number of random Chinese characters in one line without spaces." --single-turn --output chinese.md
+	build/bin/llama-cli -hf ggml-org/gemma-4-E2B-it-GGUF --prompt $(prompt) --single-turn --output chinese.md
+	build/bin/llama-cli --model models/gemma-4-E2B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-E2B-it.md
+	build/bin/llama-cli --model models/gemma-4-E4B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-E4B-it.md
+	build/bin/llama-cli --model models/gemma-4-12B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-12B-it.md
 
 server:	build
 	# https://huggingface.co/ggml-org/gemma-4-12B-it-GGUF
