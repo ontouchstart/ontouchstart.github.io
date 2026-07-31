@@ -2,5 +2,5 @@
   "lastChangelogVersion": "0.83.0",
   "theme": "dark",
   "defaultProvider": "llama.cpp",
-  "defaultModel": "gemma-4-12B-it-Q4_K_M"
+  "defaultModel": "ggml-org/gemma-4-12B-it-GGUF:Q8_0"
 }
