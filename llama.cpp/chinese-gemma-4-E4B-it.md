@@ -6,19 +6,21 @@ Assistant:
 
 Thinking Process:
 
-1.  **Analyze the Request:** The user wants a string composed of "random number of random Chinese characters in one line without spaces."
-2.  **Identify the Goal:** Generate random Chinese characters.
-3.  **Determine Constraints:**
-    *   Random number of characters (variable length).
-    *   Random characters (must be actual Chinese characters/Hanzi).
-    *   One line.
+1.  **Analyze the Request:** The user wants a line of text composed of:
+    *   Random number of characters.
+    *   Random Chinese characters.
     *   No spaces.
-4.  **Execution Strategy (Simulated/Conceptual):**
-    *   Need a pool of Chinese characters.
-    *   Need a random length (e.g., 5 to 20).
-    *   Iterate that many times, picking a random character from the pool each time.
-    *   Join them into a single string.
-5.  **Generate Output:** (Since I am an AI, I will execute this generation now.)[End thinking]
+    *   In one line.
 
-獛宇冱魨世溎龉聾𦽲
+2.  **Determine the Action:** I need to generate a string of random, valid Chinese characters.
+
+3.  **Execution (Internal Simulation/Generation):** I will select a random length (e.g., between 10 and 30 characters) and then populate that string with common/random Chinese Hanzi.
+
+    *Example Generation:*
+    *   Length: ~20
+    *   Characters: 欢, 盛, 世, 界, 游, 行, 学, 习, 灵, 趣, 文, 化, 发展, 科技, 创新, 传统, 美, 好, 世界, 友。
+
+4.  **Final Output Formatting:** Ensure the output is a continuous string, meeting all constraints. (The generated string is appropriate.)[End thinking]
+
+繁盛世界游行学习灵趣文化发展科技创新传统美好世界友
 
