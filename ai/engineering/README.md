@@ -1,19 +1,17 @@
-# AI Friendly Software Engineering
+# AI Friendly Engineering
 
-Engineering is problem solving, Software Engineering is solving software problems or solving problems with software.
-AI Friendly Software Engineering is solving AI caused software problems or solving software problems with AI.
+[Engineering](/engineering) is not intrinsically related to AI, which might have its own engineering problems.
+AI Friendly engineering is a mindset that distinguishes these two domains in following senses:
 
-## Problems can be solved by software
+1. Use engineering to solve AI problems.
+2. Use AI to solve engineering problems.
+3. Avoid unnecessary engineering problem caused by AI.
+4. Avoid unnecessary AI problem caused by engineering (sometimes we call this _overengineering_).
 
-Fundamentally they are data problems: data generation, collection, storage, transmission, and transformation. 
+We want to have a _virtuous_ cycle to improve AI via engineering and improve engineering via AI. 
 
-## Problems cannot be solved by software 
+However if we are not careful, we could also easily fall into a _vicious_ cycle, where AI creates more engineering problems and 
+overengineering then creates more AI problem. In this case, the _solution_ of one domain becomes the _problem_ in the other domain.
 
-There are many many problems that cannot be solved by software. For these problems, relying on software blindly will only cause _Software Problems_. Don’t fall into the trap of software problems, it will cost you more if you use more powerful software.
-
-## Software problems
-
-Software problems are tooling problems. Software should perform specific tasks. Problems related to Software Development Life Cycle (SDLC) are software problems. Since we use software in SDLC, we can also use software to solve software problems. So the border is kind of fuzzy here.
-
-## AI Friendly vs Human Friendly (WIP)
+We need AI Friendly Enigeering and Engineering Friendly AI.
 
