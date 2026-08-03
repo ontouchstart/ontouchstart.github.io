@@ -1,4 +1,4 @@
-# Thoughts 💭 about AI 🤖
+# AI
 
 [AI Friendly Engineering](engineering)
 
