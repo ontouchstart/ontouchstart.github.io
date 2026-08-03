@@ -1,11 +1,20 @@
 # Engineering
 
-Engineering is problem solving, Software Engineering is solving software problems or solving problems with software.
-AI Friendly Software Engineering is solving AI caused software problems or solving software problems with AI.
+Engineering is problem solving, software engineering is about solving software problems or solving problems with software.
 
 ## Problems can be solved by software
 
-Fundamentally they are data problems: data generation, collection, storage, transmission, and transformation. 
+Fundamentally there are two types of problems:
+
+1. Data problems: data generation, collection, storage, transmission, and transformation. 
+2. Content problems: help human users create and consume _content_.
+
+## Difference between data and content
+
+- Data is artifact created for and consumed by software.
+- Content is artifact created for and consumed by human.
+
+An image file is data, an image is content.
 
 ## Problems cannot be solved by software 
 
@@ -17,3 +26,8 @@ Software problems are tooling problems. Software should perform specific tasks. 
 
 ## Nonsoftware Engineering and Nonsoftware Problems
 
+Problems that can be solved without software are nonsoftware problems and belong to nonsoftware engineering.
+
+Interestingly, software created problems usually need software solutions, so they are software engineering problems.
+A nonsoftware solution to the kind of problems is simply _stop using the software that caused the problem_.
+Engineering is about trade-off and problem solving. If AI gives you unnecessary problem, stop using it is the best (sometimes the only) solution.
