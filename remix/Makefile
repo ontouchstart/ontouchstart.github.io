@@ -1,4 +1,4 @@
-test:	build	home
+test:	home
 	docker compose run --rm --remove-orphans dev bash -c 'pnpm install && pnpm run test' > test.log
 
 dev:

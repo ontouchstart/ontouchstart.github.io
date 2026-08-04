@@ -1,6 +1,6 @@
 services:
   dev:
     build:
-      context: .
+      context: ../playwright
     volumes:
       - ./home:/home
