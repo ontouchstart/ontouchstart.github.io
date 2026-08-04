@@ -1,0 +1,6 @@
+services:
+  dev:
+    build:
+      context: ../playwright
+    volumes:
+      - ./home:/home
