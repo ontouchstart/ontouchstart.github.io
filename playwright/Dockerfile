@@ -7,4 +7,6 @@ RUN npm approve-scripts --all
 RUN npm install 
 RUN npm run build 
 RUN npm install -g /playwright/packages/playwright
+RUN npm install -g pnpm
 RUN playwright --version
+WORKDIR /home
