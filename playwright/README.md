@@ -1,3 +1,3 @@
 # Playwright
 
-https://github.com/microsoft/playwright/tree/main/docs/src
+https://github.com/microsoft/playwright
