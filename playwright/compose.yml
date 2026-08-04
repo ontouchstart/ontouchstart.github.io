@@ -2,3 +2,5 @@ services:
   dev:
     build:
       context: .
+    volumes:
+      - ./home:/home
