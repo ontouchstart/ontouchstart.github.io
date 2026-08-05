@@ -2,7 +2,7 @@
 
 https://linkedin.com/in/samliu
 
-## Private Investigation of Local Agentic AI
+## Investigation of Local Agentic AI
 2026
 
 ### WIP
