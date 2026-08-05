@@ -2,11 +2,6 @@
 
 https://linkedin.com/in/samliu
 
-## Investigation of Local Agentic AI
-2026
-
-### WIP
-
 ## Hearst Magazines
 New York, NY 
 
