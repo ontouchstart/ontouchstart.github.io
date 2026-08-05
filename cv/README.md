@@ -9,6 +9,7 @@ https://linkedin.com/in/samliu
 
 ## Hearst Magazines
 New York, NY 
+
 2022-2025
 
 ### Senior Software Engineer
@@ -25,6 +26,7 @@ Extensive hands-on experience with generative AI in code review, feature develop
 
 ## Elephant Ventures, LLC.
 New York, NY
+
 2021-2022
 
 ### Senior Software Engineer
@@ -35,6 +37,7 @@ Internal R&D with Docker containers and AWS.
 
 ## Glen Rock Creative, LLC.
 Glen Rock, NJ
+
 2019-2021
 
 ### Technology Manager
@@ -43,6 +46,7 @@ React/Next.js Shopify app development on Heroku platform
 
 ## Museum of Chinese in America
 New York, NY
+
 2019
 
 ### MOCA Spike 150 Project
@@ -51,6 +55,7 @@ Open source project hosted on GitHub built with D3 visualization and innovative 
 
 ## HXBG Chinese Schoo
 Paramus, NJ
+
 2013-2016
 
 ### Member of the School Board
@@ -61,6 +66,7 @@ Lego Robotics and programming class in Python and Jupyter Notebooks
 
 ## Resolute Digital
 New York, NY
+
 2013
 
 ### Senior Front End Engineer
@@ -69,6 +75,7 @@ Mobile web development for startup client
 
 ## Reflexions Data
 New York, NY
+
 2012
 
 ### Senior Front End Engineer
@@ -77,6 +84,7 @@ Full stack LAMP web developer for e-commerce and enterprise clients, PHP, MySQL
 
 ## Medialets
 New York, NY
+
 2010-2012
 
 ### Production Engineer
@@ -85,18 +93,21 @@ Mobile Rich media advertising software development with JavaScript and HTML5 on 
 
 ## Bloomsburg University
 Bloomsburg, PA
+
 2007-2008
 
 ### Assistant Professor, Physics Department
 
 ## St. John’s University
 New York, NY
+
 2003-2007
 
 ### Assistant Professor, Physics Department
 
 ## New York University
 New York, NY
+
 1998-2002
 
 ### Analytics Software Developer, Psychology Department
