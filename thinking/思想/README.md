@@ -1,6 +1,6 @@
 # 思想
 
-Thinking is a mental activity. In Chinese, there are two characters to represent the idea of thinking: 思想.
+In Chinese, these two characters represent the idea of thinking.
 What is the subtle diffence between 思and 想? We can think about it with or without the help of Internet and AI.
 I will skip the nondeterministic Internet search results and AI Chain of Thoughts (CoT) to only give my thoughts at this moment.
 
