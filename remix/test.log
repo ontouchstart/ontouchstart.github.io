@@ -3971,3 +3971,1847 @@ packages/cli test:   ✓ reports missing database module exports without stack n
 packages/cli test:   ✓ parses typed migration options and loads full TypeScript app modules (449.05ms)
 packages/cli test:   ✓ reports invalid database arguments as CLI usage errors (4.76ms)
 packages/cli test:   ✓ preserves application output written to both output streams (208.78ms)
+packages/cli test: ▶ runRemixDoctor (122.21ms) [server]
+packages/cli test:   ✓ runs doctor with typed options (122.21ms)
+packages/cli test: ▶ doctor command (4206.23ms) [server]
+packages/cli test:   ✓ prints doctor command help (6.42ms)
+packages/cli test:   ✓ works from a nested directory inside an app (113.06ms)
+packages/cli test:   ✓ reports no findings for a clean fixture (115.01ms)
+packages/cli test:   ✓ does not require a root action controller when the root route map has no direct leaves (120.41ms)
+packages/cli test:   ✓ applies no fixes for a clean fixture (112.93ms)
+packages/cli test:   ✓ does not print color when output is not a tty (112.04ms)
+packages/cli test:   ✓ marks advice-only suites as passing while still printing the advice (116.89ms)
+packages/cli test:   ✓ reports environment warnings and skips later suites when package.json is missing (2.18ms)
+packages/cli test:   ✓ reports invalid package.json and skips later suites (2.36ms)
+packages/cli test:   ✓ reports unsupported node versions and skips later suites (4.17ms)
+packages/cli test:   ✓ accepts standard npm semver range syntax for engines.node (7.26ms)
+packages/cli test:   ✓ reports missing remix dependencies and skips later suites (2.00ms)
+packages/cli test:   ✓ updates package.json with supported engines.node and a remix dependency (114.00ms)
+packages/cli test:   ✓ reports unresolved remix installs and skips later suites (2.59ms)
+packages/cli test:   ✓ reports missing app routes files and skips actions (3.33ms)
+packages/cli test:   ✓ updates unsupported engines.node to the supported floor (115.81ms)
+packages/cli test:   ✓ reports missing action controllers (111.27ms)
+packages/cli test:   ✓ creates app/routes.ts and a default root action controller when routes are missing (113.51ms)
+packages/cli test:   ✓ replaces comment-only app/routes.ts and creates a default root action controller (175.41ms)
+packages/cli test:   ✓ creates runnable placeholder owners for missing routes and leaves the project clean (125.48ms)
+packages/cli test:   ✓ creates safe placeholder action keys for non-identifier route keys (113.04ms)
+packages/cli test:   ✓ sanitizes traversal route keys before generating doctor fix paths (113.32ms)
+packages/cli test:   ✓ creates a jsx root action controller placeholder when the project uses tsx (121.98ms)
+packages/cli test:   ✓ accepts the global no-color flag (110.42ms)
+packages/cli test:   ✓ reports duplicate action controller files (112.50ms)
+packages/cli test:   ✓ fails fix mode when unfixable action warnings remain (110.74ms)
+packages/cli test:   ✓ reports incomplete actions when a route-key folder is missing its entry file (112.59ms)
+packages/cli test:   ✓ creates a typed controller placeholder for incomplete actions from local tsx evidence (118.27ms)
+packages/cli test:   ✓ reports orphan action controller folders (119.54ms)
+packages/cli test:   ✓ reports extraneous route directories outside any controller route (114.14ms)
+packages/cli test:   ✓ reports extraneous route directories from the route-map shape (111.37ms)
+packages/cli test:   ✓ allows route names like shared and common when the route map declares them (115.78ms)
+packages/cli test:   ✓ uses kebab-case controller paths for camelCase route keys (111.98ms)
+packages/cli test:   ✓ creates nested controller placeholders with kebab-case paths and camelCase actions (116.54ms)
+packages/cli test:   ✓ prefers existing ts owner files when inferring missing action extensions (115.26ms)
+packages/cli test:   ✓ prefers existing jsx owner files when inferring missing action extensions (112.64ms)
+packages/cli test:   ✓ reports project warnings when routes is not exported (69.12ms)
+packages/cli test:   ✓ reports project warnings when the route map is invalid (67.17ms)
+packages/cli test:   ✓ reports project warnings when importing routes throws (65.32ms)
+packages/cli test:   ✓ prints machine-readable findings as json (110.45ms)
+packages/cli test:   ✓ prints applied fixes and remaining findings as json (118.99ms)
+packages/cli test:   ✓ prints skipped suites as json when project blocks actions (71.38ms)
+packages/cli test:   ✓ loads strict mode from remix.json and lets --no-strict override it (225.93ms)
+packages/cli test:   ✓ fails strict mode when action warnings are present (111.33ms)
+packages/cli test:   ✓ fails strict mode when project warnings are present (60.32ms)
+packages/cli test: ▶ routes command (1247.73ms) [server]
+packages/cli test:   ✓ prints routes command help (19.13ms)
+packages/cli test:   ✓ prints a compact tree for a basic fixture app (122.72ms)
+packages/cli test:   ✓ works from a nested directory inside an app (112.46ms)
+packages/cli test:   ✓ prints a verbose tree with full owner paths on every route (111.82ms)
+packages/cli test:   ✓ prints a flat table of routes (113.42ms)
+packages/cli test:   ✓ omits the table header row with --no-headers (112.65ms)
+packages/cli test:   ✓ resolves owner files with js, jsx, and ts extensions (110.10ms)
+packages/cli test:   ✓ maps camelCase route keys to kebab-case owner paths (112.74ms)
+packages/cli test:   ✓ prints normalized JSON with owner metadata (117.06ms)
+packages/cli test:   ✓ annotates missing owners without failing the command (113.16ms)
+packages/cli test:   ✓ rejects --json when combined with table formatting (2.75ms)
+packages/cli test:   ✓ rejects --json when combined with verbose formatting (2.17ms)
+packages/cli test:   ✓ rejects --no-headers without table formatting (2.16ms)
+packages/cli test:   ✓ fails when no app/routes.ts can be found (3.42ms)
+packages/cli test:   ✓ fails when the route module does not export routes (61.46ms)
+packages/cli test:   ✓ fails when the route map contains invalid values (62.97ms)
+packages/cli test:   ✓ fails when importing the route module throws (67.54ms)
+packages/cli test: ▶ test command (3358.14ms) [server]
+packages/cli test:   ✓ prints test command help (8.42ms)
+packages/cli test:   ✓ parses test arguments and runs tests in the current project (395.66ms)
+packages/cli test:   ✓ loads test defaults from a commented remix.json file (384.30ms)
+packages/cli test:   ✓ loads a custom config and resolves its paths from the config directory (410.30ms)
+packages/cli test:   ✓ lets negative CLI flags override configured booleans (779.54ms)
+packages/cli test:   ✓ uses the last positive or negative form of each boolean flag (0.58ms)
+packages/cli test:   ✓ lets CLI arrays, scalars, and positional globs replace configured values (383.75ms)
+packages/cli test:   ✓ merges nested coverage flags with configured coverage paths (579.73ms)
+packages/cli test:   ✓ reports missing and invalid selected config files before running tests (3.18ms)
+packages/cli test:   ✓ invokes the test package directly with typed options (384.40ms)
+packages/cli test:   ✓ exits watch mode when no test files can be found (4.97ms)
+packages/cli test:   ✓ reports invalid test arguments as CLI usage errors (3.68ms)
+packages/cli test:   ✓ rejects non-numeric values for numeric options (6.18ms)
+packages/cli test:   ✓ rejects non-integer concurrency values (6.24ms)
+packages/cli test:   ✓ treats help flags after -- as positional globs (4.02ms)
+packages/cli test:   ✓ rejects unsupported pool values (3.13ms)
+packages/cli test:   ✓ documents defaults in the help text (0.08ms)
+packages/cli test: ℹ files 19
+packages/cli test: ℹ suites 21
+packages/cli test: ℹ tests 222
+packages/cli test: ℹ pass 222
+packages/cli test: ℹ fail 0
+packages/cli test: ℹ duration_ms 22932.00101
+packages/cli test: Done
+packages/async-context-middleware test$ remix test
+packages/cop-middleware test$ remix test
+packages/cors-middleware test$ remix test
+packages/form-data-parser test$ remix test
+packages/form-data-parser test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/form-data-parser test: Running server tests:
+packages/cop-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/cop-middleware test: Running server tests:
+packages/async-context-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/async-context-middleware test: Running server tests:
+packages/cors-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/cors-middleware test: Running server tests:
+packages/form-data-parser test: ▶ parseFormData (13.64ms) [server]
+packages/form-data-parser test:   ✓ parses a application/x-www-form-urlencoded request (6.17ms)
+packages/form-data-parser test:   ✓ throws when urlencoded form data exceeds maxParts (0.50ms)
+packages/form-data-parser test:   ✓ throws when urlencoded form data exceeds maxTotalSize (0.24ms)
+packages/form-data-parser test:   ✓ preserves repeated urlencoded form fields (0.48ms)
+packages/form-data-parser test:   ✓ parses a multipart/form-data request (1.52ms)
+packages/form-data-parser test:   ✓ calls the file upload handler for each file part (0.55ms)
+packages/form-data-parser test:   ✓ allows returning `null` from the upload handler (0.33ms)
+packages/form-data-parser test:   ✓ allows returning strings from the upload handler (0.32ms)
+packages/form-data-parser test:   ✓ allows returning files from the upload handler (0.44ms)
+packages/form-data-parser test:   ✓ allows errors thrown by the upload handler to propagate directly (0.40ms)
+packages/form-data-parser test:   ✓ throws MaxFilesExceededError when the number of files exceeds the limit (0.35ms)
+packages/form-data-parser test:   ✓ throws when the number of multipart parts exceeds maxParts (0.27ms)
+packages/form-data-parser test:   ✓ throws when aggregate multipart content size exceeds maxTotalSize (0.19ms)
+packages/form-data-parser test:   ✓ throws when the request does not contain parseable content (0.63ms)
+packages/form-data-parser test:   ✓ throws when the request contains malformed multipart/form-data (0.18ms)
+packages/form-data-parser test:   ✓ parses a multipart file without a media type (0.14ms)
+packages/form-data-parser test:   ✓ parses multipart uploads with non-ASCII filenames (0.57ms)
+packages/form-data-parser test:   ✓ preserves non-ASCII multipart field names and filenames (0.22ms)
+packages/form-data-parser test:   ✓ preserves literal percent sequences in multipart filenames (0.15ms)
+packages/form-data-parser test: ℹ files 1
+packages/form-data-parser test: ℹ suites 1
+packages/form-data-parser test: ℹ tests 19
+packages/form-data-parser test: ℹ pass 19
+packages/form-data-parser test: ℹ fail 0
+packages/form-data-parser test: ℹ duration_ms 553.01554
+packages/form-data-parser test: Done
+packages/fs test$ remix test
+packages/cop-middleware test: ▶ cop middleware (12.52ms) [server]
+packages/cop-middleware test:   ✓ allows same-origin requests for unsafe methods (5.50ms)
+packages/cop-middleware test:   ✓ allows browser initiated top-level requests with Sec-Fetch-Site none (0.72ms)
+packages/cop-middleware test:   ✓ rejects unsafe cross-site requests from Sec-Fetch-Site (1.06ms)
+packages/cop-middleware test:   ✓ rejects same-site requests to preserve origin-level guarantees (0.44ms)
+packages/cop-middleware test:   ✓ falls back to Origin when Sec-Fetch-Site is missing (0.83ms)
+packages/cop-middleware test:   ✓ allows requests with no browser provenance headers (0.47ms)
+packages/cop-middleware test:   ✓ allows safe methods even for cross-site requests (0.40ms)
+packages/cop-middleware test:   ✓ supports trusted origins (0.54ms)
+packages/cop-middleware test:   ✓ supports insecure bypass patterns (1.44ms)
+packages/cop-middleware test:   ✓ does not bypass paths that only differ by trailing slash or method (0.55ms)
+packages/cop-middleware test:   ✓ supports custom deny handlers (0.37ms)
+packages/cop-middleware test:   ✓ validates trusted origins and bypass patterns (0.21ms)
+packages/async-context-middleware test: ▶ asyncContext (4.03ms) [server]
+packages/async-context-middleware test:   ✓ stores the request context in AsyncLocalStorage (4.03ms)
+packages/cop-middleware test: ℹ files 1
+packages/cop-middleware test: ℹ suites 1
+packages/cop-middleware test: ℹ tests 12
+packages/cop-middleware test: ℹ pass 12
+packages/cop-middleware test: ℹ fail 0
+packages/cop-middleware test: ℹ duration_ms 596.27979
+packages/cors-middleware test: ▶ cors middleware (11.79ms) [server]
+packages/cors-middleware test:   ✓ adds wildcard CORS response headers by default (6.78ms)
+packages/cors-middleware test:   ✓ reflects origin and adds Vary when credentials are enabled (0.76ms)
+packages/cors-middleware test:   ✓ short-circuits preflight requests (0.45ms)
+packages/cors-middleware test:   ✓ continues preflight requests when preflightContinue is true (0.87ms)
+packages/cors-middleware test:   ✓ blocks disallowed origins in preflight requests (0.25ms)
+packages/cors-middleware test:   ✓ supports function-based dynamic origin checks (0.62ms)
+packages/cors-middleware test:   ✓ matches regex origins consistently across repeated requests (0.65ms)
+packages/cors-middleware test:   ✓ supports explicit allowed headers and max-age for preflight requests (0.32ms)
+packages/cors-middleware test:   ✓ adds Vary for function-based allowed header resolvers (0.22ms)
+packages/cors-middleware test:   ✓ falls back to requested headers for function-based allowed header resolvers (0.20ms)
+packages/cors-middleware test:   ✓ sets Access-Control-Allow-Private-Network when requested (0.14ms)
+packages/cors-middleware test:   ✓ sets Access-Control-Expose-Headers for actual requests (0.26ms)
+packages/cors-middleware test:   ✓ merges CORS Vary values with an existing response Vary header (0.29ms)
+packages/cop-middleware test: Done
+packages/logger-middleware test$ remix test
+packages/async-context-middleware test: ℹ files 1
+packages/async-context-middleware test: ℹ suites 1
+packages/async-context-middleware test: ℹ tests 1
+packages/async-context-middleware test: ℹ pass 1
+packages/async-context-middleware test: ℹ fail 0
+packages/async-context-middleware test: ℹ duration_ms 594.87125
+packages/cors-middleware test: ℹ files 1
+packages/cors-middleware test: ℹ suites 1
+packages/cors-middleware test: ℹ tests 13
+packages/cors-middleware test: ℹ pass 13
+packages/cors-middleware test: ℹ fail 0
+packages/cors-middleware test: ℹ duration_ms 594.56846
+packages/async-context-middleware test: Done
+packages/render-middleware test$ remix test
+packages/cors-middleware test: Done
+packages/response test$ remix test
+packages/fs test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/fs test: Running server tests:
+packages/logger-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/logger-middleware test: Running server tests:
+packages/response test: Found 4 test file(s) (4 server, 0 browser, 0 e2e)
+packages/response test: Running server tests:
+packages/render-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/render-middleware test: Running server tests:
+packages/fs test: ▶ openLazyFile (12.37ms) [server]
+packages/fs test:   ✓ opens a file and reads content (7.56ms)
+packages/fs test:   ✓ sets MIME type based on file extension (0.39ms)
+packages/fs test:   ✓ sets lastModified from file stats (0.20ms)
+packages/fs test:   ✓ overrides file name with options.name (0.18ms)
+packages/fs test:   ✓ overrides MIME type with options.type (0.16ms)
+packages/fs test:   ✓ overrides lastModified with options.lastModified (0.17ms)
+packages/fs test:   ✓ reads file as ArrayBuffer (0.77ms)
+packages/fs test:   ✓ streams file content (1.14ms)
+packages/fs test:   ✓ handles empty files (0.51ms)
+packages/fs test:   ✓ handles large files (0.68ms)
+packages/fs test:   ✓ throws error for non-existent files (0.37ms)
+packages/fs test:   ✓ throws error when opening a directory (0.25ms)
+packages/fs test: ▶ writeFile (8.98ms) [server]
+packages/fs test:   ✓ writes file to a path (1.81ms)
+packages/fs test:   ✓ writes file using a file descriptor (1.15ms)
+packages/fs test:   ✓ writes file using a FileHandle (1.24ms)
+packages/fs test:   ✓ writes empty files (0.74ms)
+packages/fs test:   ✓ writes large files (1.44ms)
+packages/fs test:   ✓ creates parent directories when writing to path (0.91ms)
+packages/fs test:   ✓ preserves file content exactly (1.11ms)
+packages/fs test:   ✓ rejects when the source stream fails (0.58ms)
+packages/response test: ▶ createRedirectResponse() (1.71ms) [server]
+packages/response test:   ✓ creates a redirect with default 302 status (1.04ms)
+packages/response test:   ✓ creates a redirect with custom status code (0.09ms)
+packages/response test:   ✓ accepts ResponseInit object as second parameter (0.24ms)
+packages/response test:   ✓ handles relative URLs (0.08ms)
+packages/response test:   ✓ allows overriding Location header (0.08ms)
+packages/response test:   ✓ allows overriding Location header with Headers object (0.10ms)
+packages/response test:   ✓ accepts a URL object (0.07ms)
+packages/fs test: ℹ files 1
+packages/fs test: ℹ suites 2
+packages/fs test: ℹ tests 20
+packages/fs test: ℹ pass 20
+packages/fs test: ℹ fail 0
+packages/fs test: ℹ duration_ms 710.04246
+packages/fs test: Done
+packages/session-middleware test$ remix test
+packages/response test: ▶ createHtmlResponse() (3.01ms) [server]
+packages/response test:   ✓ creates a Response with HTML content-type header (2.27ms)
+packages/response test:   ✓ preserves custom headers and status from init (0.33ms)
+packages/response test:   ✓ allows overriding Content-Type header (0.15ms)
+packages/response test:   ✓ accepts SafeHtml from escape tag without re-escaping (0.26ms)
+packages/response test:   ▶ DOCTYPE prepending (3.41ms) [server]
+packages/response test:     ▶ string body (0.52ms) [server]
+packages/response test:       ✓ prepends DOCTYPE to string body (0.15ms)
+packages/response test:       ✓ does not prepend DOCTYPE if already present (0.15ms)
+packages/response test:       ✓ handles DOCTYPE with leading whitespace (0.11ms)
+packages/response test:       ✓ handles DOCTYPE case-insensitively (0.12ms)
+packages/response test:     ▶ SafeHtml body (0.35ms) [server]
+packages/response test:       ✓ prepends DOCTYPE to SafeHtml body (0.17ms)
+packages/response test:       ✓ does not prepend DOCTYPE if already present in SafeHtml (0.17ms)
+packages/response test:     ▶ Blob body (1.64ms) [server]
+packages/response test:       ✓ prepends DOCTYPE to Blob body (1.15ms)
+packages/response test:       ✓ does not prepend DOCTYPE if already present in Blob (0.48ms)
+packages/response test:     ▶ ArrayBuffer body (0.23ms) [server]
+packages/response test:       ✓ prepends DOCTYPE to ArrayBuffer body (0.13ms)
+packages/response test:       ✓ does not prepend DOCTYPE if already present in ArrayBuffer (0.10ms)
+packages/response test:     ▶ Uint8Array body (0.13ms) [server]
+packages/response test:       ✓ prepends DOCTYPE to Uint8Array body (0.08ms)
+packages/response test:       ✓ does not prepend DOCTYPE if already present in Uint8Array (0.06ms)
+packages/response test:     ▶ DataView body (0.12ms) [server]
+packages/response test:       ✓ prepends DOCTYPE to DataView body (0.07ms)
+packages/response test:       ✓ does not prepend DOCTYPE if already present in DataView (0.05ms)
+packages/response test:     ▶ ReadableStream body (0.42ms) [server]
+packages/response test:       ✓ prepends DOCTYPE to ReadableStream body (0.12ms)
+packages/response test:       ✓ does not prepend DOCTYPE if already present in ReadableStream (0.08ms)
+packages/response test:       ✓ handles empty ReadableStream (0.09ms)
+packages/response test:       ✓ handles multi-chunk ReadableStream (0.13ms)
+packages/response test: ▶ createFileResponse() (5.21ms) [server]
+packages/response test:   ✓ serves a file (4.08ms)
+packages/response test:   ✓ serves a LazyFile (0.84ms)
+packages/response test:   ✓ serves a file with HEAD request (0.28ms)
+packages/response test:   ▶ ETag support (3.99ms) [server]
+packages/response test:     ✓ includes weak ETag header by default (0.27ms)
+packages/response test:     ✓ does not include ETag when etag=false (0.22ms)
+packages/response test:     ✓ generates strong ETag when etag=strong (1.07ms)
+packages/response test:     ✓ uses SHA-256 by default for strong ETags (0.50ms)
+packages/response test:     ✓ supports custom digest algorithm (0.35ms)
+packages/response test:     ✓ supports custom digest function (0.19ms)
+packages/response test:     ✓ throws error for unsupported algorithm (0.48ms)
+packages/response test:     ✓ supports SHA-1 algorithm (0.46ms)
+packages/response test:     ✓ supports SHA-384 algorithm (0.44ms)
+packages/response test:   ▶ If-None-Match support (1.17ms) [server]
+packages/response test:     ✓ returns 304 (Not Modified) when If-None-Match matches ETag (0.36ms)
+packages/response test:     ✓ returns 304 (Not Modified) when If-None-Match is * (0.14ms)
+packages/response test:     ✓ returns 200 (OK) when If-None-Match does not match (0.17ms)
+packages/response test:     ✓ handles multiple ETags in If-None-Match (0.17ms)
+packages/response test:     ✓ ignores If-None-Match when etag is disabled (0.17ms)
+packages/response test:     ✓ ignores If-Modified-Since when If-None-Match is present but does not match (0.16ms)
+packages/response test:   ▶ If-Match support (0.19ms) [server]
+packages/response test:     ✓ ignores If-Match when etag is disabled (0.19ms)
+packages/response test:     ▶ precondition validation (1.96ms) [server]
+packages/response test:       ✓ returns 412 (Precondition Failed) when resource has weak ETag (0.31ms)
+packages/response test:       ✓ returns 200 (OK) when resource has strong ETag and If-Match matches (0.68ms)
+packages/response test:       ✓ returns 412 (Precondition Failed) when If-Match does not match (weak ETag) (0.12ms)
+packages/response test:       ✓ returns 412 (Precondition Failed) when If-Match does not match (strong ETag) (0.33ms)
+packages/response test:       ✓ returns 200 (OK) when If-Match is * (0.36ms)
+packages/response test:       ✓ returns 412 (Precondition Failed) when If-Match contains multiple ETags and none match (0.16ms)
+packages/response test:     ▶ prioritization (0.19ms) [server]
+packages/response test:       ✓ returns 412 (Precondition Failed) when If-Match fails, even if If-None-Match would match (0.19ms)
+packages/response test:   ▶ If-Unmodified-Since support (0.20ms) [server]
+packages/response test:     ✓ ignores If-Unmodified-Since when lastModified is disabled (0.20ms)
+packages/response test:     ▶ precondition validation (0.66ms) [server]
+packages/response test:       ✓ returns 200 (OK) when If-Unmodified-Since is after Last-Modified (0.19ms)
+packages/response test:       ✓ returns 200 (OK) when If-Unmodified-Since matches Last-Modified (0.15ms)
+packages/response test:       ✓ returns 412 (Precondition Failed) when If-Unmodified-Since is before Last-Modified (0.12ms)
+packages/response test:       ✓ ignores malformed If-Unmodified-Since (0.10ms)
+packages/response test:       ✓ treats dates with same second but different milliseconds as equal (0.10ms)
+packages/response test:     ▶ prioritization (0.40ms) [server]
+packages/response test:       ✓ returns 412 (Precondition Failed) when If-Match fails, even if If-Unmodified-Since would pass (0.08ms)
+packages/response test:       ✓ ignores If-Unmodified-Since when If-Match is present (strong ETag) (0.32ms)
+packages/response test:   ▶ Last-Modified support (0.47ms) [server]
+packages/response test:     ✓ includes Last-Modified header (0.09ms)
+packages/response test:     ✓ does not include Last-Modified when lastModified=false (0.06ms)
+packages/response test:     ✓ returns 304 (Not Modified) when If-Modified-Since matches Last-Modified (0.08ms)
+packages/response test:     ✓ returns 304 (Not Modified) when If-Modified-Since is after Last-Modified (0.05ms)
+packages/response test:     ✓ returns 200 (OK) when If-Modified-Since is before Last-Modified (0.08ms)
+packages/response test:     ✓ treats dates with same second but different milliseconds as equal (0.05ms)
+packages/response test:     ✓ prioritizes ETag over If-Modified-Since when both are present (0.06ms)
+packages/response test:   ▶ Range requests (5.81ms) [server]
+packages/response test:     ✓ includes Accept-Ranges header for non-compressible media types by default (0.06ms)
+packages/response test:     ✓ does not include Accept-Ranges header for compressible media types by default (0.05ms)
+packages/response test:     ✓ includes Accept-Ranges header when explicitly enabled (0.08ms)
+packages/response test:     ✓ omits Accept-Ranges header when acceptRanges=false (0.05ms)
+packages/response test:     ✓ handles simple range request (0.49ms)
+packages/response test:     ✓ handles range with only start (0.18ms)
+packages/response test:     ✓ handles suffix range (last N bytes) (0.10ms)
+packages/response test:     ✓ clamps end byte to file size when it exceeds (0.11ms)
+packages/response test:     ✓ ignores Range header for non-GET/HEAD requests (0.12ms)
+packages/response test:     ✓ ignores Range header for HEAD requests (0.08ms)
+packages/response test:     ✓ returns 416 (Range Not Satisfiable) for unsatisfiable range (0.10ms)
+packages/response test:     ✓ returns 416 (Range Not Satisfiable) for multipart ranges (not supported) (0.10ms)
+packages/response test:     ✓ returns 400 (Bad Request) for malformed multipart range syntax (0.15ms)
+packages/response test:     ✓ returns 400 (Bad Request) for start > end (0.07ms)
+packages/response test:     ✓ returns 400 (Bad Request) for malformed range (0.07ms)
+packages/response test:     ✓ returns 400 (Bad Request) for "bytes=" with no range (0.07ms)
+packages/response test:     ✓ returns full file when acceptRanges=false (0.08ms)
+packages/response test:     ✓ returns 412 (Precondition Failed) when If-Match fails before processing Range (0.07ms)
+packages/response test:     ✓ returns 206 (Partial Content) when If-Match succeeds with Range request (strong ETag) (0.58ms)
+packages/response test:     ✓ returns 206 (Partial Content) when If-Unmodified-Since passes with Range request (0.22ms)
+packages/response test:     ✓ returns 412 (Precondition Failed) when If-Unmodified-Since fails before processing Range (0.12ms)
+packages/response test:     ✓ returns 304 (Not Modified) when If-None-Match matches etag (0.12ms)
+packages/response test:     ✓ returns 206 (Partial Content) when If-None-Match does not match (0.13ms)
+packages/response test:     ✓ returns 304 (Not Modified) when If-Modified-Since matches (0.11ms)
+packages/response test:     ✓ returns 206 (Partial Content) when If-Modified-Since does not match (0.11ms)
+packages/response test:     ✓ returns 206 (Partial Content) when If-Range matches Last-Modified date (0.55ms)
+packages/response test:     ✓ returns 200 (OK, full file) when If-Range does not match Last-Modified date (0.28ms)
+packages/response test:     ✓ ignores If-Range with weak ETag value (only Last-Modified date supported) (0.15ms)
+packages/response test:     ✓ returns full file when If-Range has invalid date format (0.09ms)
+packages/response test:     ✓ returns full file when If-Range is malformed (0.30ms)
+packages/response test:     ✓ ignores If-Range when acceptRanges is disabled (0.34ms)
+packages/response test:     ✓ ignores If-Range when lastModified is disabled (0.12ms)
+packages/response test:     ✓ returns 304 (Not Modified) with If-None-Match + If-Range when If-None-Match matches (0.12ms)
+packages/response test:     ✓ returns 206 (Partial Content) with If-None-Match + If-Range when If-Range matches and If-None-Match does not match (0.27ms)
+packages/response test:     ✓ returns 200 (OK) with If-None-Match + If-Range when both If-None-Match and If-Range do not match (0.15ms)
+packages/response test:   ▶ Cache-Control (0.15ms) [server]
+packages/response test:     ✓ does not include Cache-Control header by default (0.09ms)
+packages/response test:     ✓ uses custom Cache-Control header (0.06ms)
+packages/response test:   ▶ Content-Type (0.81ms) [server]
+packages/response test:     ✓ sets Content-Type from file with charset for text-based types (0.36ms)
+packages/response test:     ✓ does not add charset to XML types (0.11ms)
+packages/response test:     ✓ sets Content-Type with charset for application/javascript (0.06ms)
+packages/response test:     ✓ does not add charset to binary types (0.21ms)
+packages/response test:     ✓ handles file with empty type (0.07ms)
+packages/render-middleware test: ▶ renderWith (6.48ms) [server]
+packages/render-middleware test:   ✓ adds a renderer to request context (4.98ms)
+packages/render-middleware test:   ✓ creates a request-scoped renderer from the current request context (0.65ms)
+packages/render-middleware test:   ✓ preserves custom renderer input and options types (0.81ms)
+packages/render-middleware test:   ✓ derives renderer context from middleware (0.03ms)
+packages/render-middleware test: ℹ files 1
+packages/render-middleware test: ℹ suites 1
+packages/render-middleware test: ℹ tests 4
+packages/render-middleware test: ℹ pass 4
+packages/render-middleware test: ℹ fail 0
+packages/render-middleware test: ℹ duration_ms 742.49604
+packages/render-middleware test: Done
+packages/logger-middleware test: ▶ logger (9.26ms) [server]
+packages/logger-middleware test:   ✓ provides the configured logger on request context (4.65ms)
+packages/logger-middleware test:   ✓ logs the request (1.25ms)
+packages/logger-middleware test:   ✓ colorizes high-signal tokens when colors are enabled (0.58ms)
+packages/logger-middleware test:   ✓ colorizes methods, statuses, and content lengths by severity (0.47ms)
+packages/logger-middleware test:   ✓ opts out of colors with the colors option (0.49ms)
+packages/logger-middleware test:   ✓ respects NO_COLOR by default when the process global is defined (0.42ms)
+packages/logger-middleware test:   ✓ forces colors on with the colors option (0.28ms)
+packages/logger-middleware test:   ✓ enables colors by default in TTY environments (0.34ms)
+packages/logger-middleware test:   ✓ leaves colors off by default outside TTY environments (0.40ms)
+packages/logger-middleware test:   ✓ leaves invalid content lengths uncolored (0.38ms)
+packages/logger-middleware test: ℹ files 1
+packages/logger-middleware test: ℹ suites 1
+packages/logger-middleware test: ℹ tests 10
+packages/logger-middleware test: ℹ pass 10
+packages/logger-middleware test: ℹ fail 0
+packages/logger-middleware test: ℹ duration_ms 802.37700
+packages/logger-middleware test: Done
+packages/response test: ▶ compressResponse() (49.01ms) [server]
+packages/response test:   ✓ compresses response with gzip when client accepts it (10.58ms)
+packages/response test:   ✓ compresses response with brotli when client prefers it (3.53ms)
+packages/response test:   ✓ compresses response with deflate (1.96ms)
+packages/response test:   ✓ selects identity without changing representation headers (0.93ms)
+packages/response test:   ✓ preserves existing Vary values when identity is selected (0.91ms)
+packages/response test:   ✓ does not duplicate Accept-Encoding in Vary header (0.92ms)
+packages/response test:   ✓ selects identity when client does not send Accept-Encoding (0.44ms)
+packages/response test:   ✓ compresses responses when Content-Length is not set (0.83ms)
+packages/response test:   ✓ skips compression when Content-Length is below threshold (0.51ms)
+packages/response test:   ✓ respects custom threshold option (0.88ms)
+packages/response test:   ✓ skips compression for already compressed responses (0.32ms)
+packages/response test:   ✓ skips compression when Cache-Control: no-transform is present (0.52ms)
+packages/response test:   ✓ skips compression when response has no body (0.21ms)
+packages/response test:   ✓ compresses with custom compression level (3.51ms)
+packages/response test:   ✓ compresses with custom brotli options (18.71ms)
+packages/response test:   ✓ limits to specified encodings (0.49ms)
+packages/response test:   ✓ returns uncompressed when encodings is empty array (0.10ms)
+packages/response test:   ✓ handles quality factors in Accept-Encoding (0.21ms)
+packages/response test:   ✓ client quality factors override server preference order (0.24ms)
+packages/response test:   ✓ server preference order breaks ties when client has equal quality factors (0.14ms)
+packages/response test:   ✓ respects explicit rejection with q=0 (0.14ms)
+packages/response test:   ✓ returns uncompressed when all encodings are rejected but identity is acceptable (0.16ms)
+packages/response test:   ✓ requires compression when identity is explicitly rejected (0.12ms)
+packages/response test:   ✓ returns 406 when all encodings including identity are rejected (0.21ms)
+packages/response test:   ✓ handles wildcard with quality factor (0.18ms)
+packages/response test:   ✓ prefers explicit encoding over wildcard (0.19ms)
+packages/response test:   ✓ respects wildcard rejection with q=0 (0.12ms)
+packages/response test:   ✓ allows identity when wildcard rejects compression but identity is explicit (0.18ms)
+packages/response test:   ✓ handles wildcard with identity rejection (0.29ms)
+packages/response test:   ✓ preserves response status and statusText (0.13ms)
+packages/response test:   ✓ removes Content-Length header (0.16ms)
+packages/response test:   ✓ sets Accept-Ranges to none (0.11ms)
+packages/response test:   ✓ converts strong ETags to weak (0.14ms)
+packages/response test:   ✓ preserves weak ETags (0.12ms)
+packages/response test:   ✓ does not add ETag when not present (0.14ms)
+packages/response test:   ✓ converts strong ETags to weak for HEAD requests (0.11ms)
+packages/response test:   ✓ skips responses with Accept-Ranges: bytes (0.07ms)
+packages/response test:   ✓ skips 206 partial content responses (0.08ms)
+packages/response test:   ✓ sets compression headers for HEAD requests without compressing (0.13ms)
+packages/response test:   ✓ negotiates encoding for HEAD requests (0.13ms)
+packages/response test:   ✓ returns identity for HEAD when client does not accept compression (0.11ms)
+packages/response test:   ✓ sets compression headers for HEAD requests even when body is already null (0.08ms)
+packages/response test:   ▶ Server-Sent Events (4.55ms) [server]
+packages/response test:     ✓ applies flush defaults while preserving custom compression options (0.08ms)
+packages/response test:     ✓ preserves explicit flush options (0.03ms)
+packages/response test:     ✓ does not apply flush defaults for non-SSE responses (0.06ms)
+packages/response test:     ✓ compresses SSE with br (3.14ms)
+packages/response test:     ✓ compresses SSE with gzip (0.58ms)
+packages/response test:     ✓ compresses SSE with deflate (0.66ms)
+packages/response test:   ▶ Streaming compression (135.88ms) [server]
+packages/response test:     ✓ propagates errors from input stream (4.19ms)
+packages/response test:     ✓ handles output stream cancellation and stops processing source stream (131.70ms)
+packages/response test:     ▶ correctness (round-trip compression) (1.49ms) [server]
+packages/response test:       ✓ handles binary data byte-perfectly (1.49ms)
+packages/response test:       ▶ gzip (1.61ms) [server]
+packages/response test:         ✓ compresses and decompresses simple text (0.75ms)
+packages/response test:         ✓ compresses and decompresses empty string (0.47ms)
+packages/response test:         ✓ compresses and decompresses unicode (0.39ms)
+packages/response test:       ▶ deflate (1.50ms) [server]
+packages/response test:         ✓ compresses and decompresses simple text (0.57ms)
+packages/response test:         ✓ compresses and decompresses empty string (0.42ms)
+packages/response test:         ✓ compresses and decompresses unicode (0.50ms)
+packages/response test:       ▶ br (1.76ms) [server]
+packages/response test:         ✓ compresses and decompresses simple text (0.64ms)
+packages/response test:         ✓ compresses and decompresses empty string (0.37ms)
+packages/response test:         ✓ compresses and decompresses unicode (0.75ms)
+packages/response test:     ▶ chunk handling (2.72ms) [server]
+packages/response test:       ✓ handles multiple chunks correctly (0.90ms)
+packages/response test:       ✓ handles single-byte chunks (0.81ms)
+packages/response test:       ✓ handles empty chunks in stream (0.68ms)
+packages/response test:       ✓ handles stream that closes immediately without data (0.32ms)
+packages/response test:     ▶ Compressor interactions (12.17ms) [server]
+packages/response test:       ✓ ignores data events emitted after error (0.23ms)
+packages/response test:       ✓ ignores data events emitted after cancellation (0.12ms)
+packages/response test:       ✓ handles multiple data chunks emitted during single write (0.13ms)
+packages/response test:       ✓ handles backpressure (write returns false, then drain) (0.18ms)
+packages/response test:       ✓ handles cancel while waiting for drain (0.07ms)
+packages/response test:       ✓ handles error emitted while waiting for drain and stops loop (0.13ms)
+packages/response test:       ✓ handles compressor error after successful chunks (0.11ms)
+packages/response test:       ✓ stops calling reader.read() after error (0.20ms)
+packages/response test:       ✓ propagates reader.cancel() errors (10.38ms)
+packages/response test:       ✓ handles error passed to write() callback (0.16ms)
+packages/response test:       ✓ prevents duplicate error reporting if destroy() also emits error (0.15ms)
+packages/response test:       ✓ calls compressor.end() when input stream is done (0.08ms)
+packages/response test:       ✓ closes output stream when compressor emits end event (0.12ms)
+packages/response test:       ✓ handles end event with final data chunk (0.11ms)
+packages/response test: ℹ files 4
+packages/response test: ℹ suites 31
+packages/response test: ℹ tests 190
+packages/response test: ℹ pass 190
+packages/response test: ℹ fail 0
+packages/response test: ℹ duration_ms 902.41692
+packages/response test: Done
+packages/session-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/session-middleware test: Running server tests:
+packages/session-middleware test: ▶ session middleware (15.80ms) [server]
+packages/session-middleware test:   ✓ defaults session cookies to HTTP-only (6.73ms)
+packages/session-middleware test:   ✓ respects and warns about explicitly disabling HTTP-only (2.64ms)
+packages/session-middleware test:   ✓ persists session data across requests (3.16ms)
+packages/session-middleware test:   ✓ allows for direct return of fetch() call (1.88ms)
+packages/session-middleware test:   ✓ throws if the session cookie is not signed (0.25ms)
+packages/session-middleware test:   ✓ throws at request time if the session is already started (0.26ms)
+packages/session-middleware test:   ✓ throws at request time if the session is modified by another middleware/handler (0.29ms)
+packages/session-middleware test:   ✓ does not overwrite cookies set by other middleware/handlers (0.58ms)
+packages/session-middleware test: ℹ files 1
+packages/session-middleware test: ℹ suites 1
+packages/session-middleware test: ℹ tests 8
+packages/session-middleware test: ℹ pass 8
+packages/session-middleware test: ℹ fail 0
+packages/session-middleware test: ℹ duration_ms 489.99696
+packages/session-middleware test: Done
+packages/auth-middleware test$ remix test
+packages/fetch-proxy test$ remix test
+packages/compression-middleware test$ remix test
+packages/file-storage test$ remix test
+packages/fetch-proxy test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/fetch-proxy test: Running server tests:
+packages/auth-middleware test: Found 6 test file(s) (6 server, 0 browser, 0 e2e)
+packages/auth-middleware test: Running server tests:
+packages/file-storage test: Found 2 test file(s) (2 server, 0 browser, 0 e2e)
+packages/file-storage test: Running server tests:
+packages/compression-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/compression-middleware test: Running server tests:
+packages/file-storage test: ▶ createMemoryFileStorage (1.77ms) [server]
+packages/file-storage test:   ✓ stores and retrieves files (0.64ms)
+packages/file-storage test:   ✓ lists files with pagination (0.66ms)
+packages/file-storage test:   ✓ lists files by key prefix (0.23ms)
+packages/file-storage test:   ✓ lists files with metadata (0.25ms)
+packages/file-storage test:   ▶ integration with form-data-parser (8.80ms) [server]
+packages/file-storage test:     ✓ stores and lists file uploads (8.80ms)
+packages/auth-middleware test: ▶ auth middleware (8.26ms) [server]
+packages/auth-middleware test:   ✓ throws when no schemes are configured (0.64ms)
+packages/auth-middleware test:   ✓ provides auth state on request context (4.33ms)
+packages/auth-middleware test:   ✓ authenticates with the first successful scheme (0.50ms)
+packages/auth-middleware test:   ✓ continues through null/undefined skip results until one succeeds (0.37ms)
+packages/auth-middleware test:   ✓ treats undefined authenticate results as implicit skip (0.63ms)
+packages/auth-middleware test:   ✓ sets unauthenticated state with no error when all schemes skip (0.54ms)
+packages/auth-middleware test:   ✓ rejects legacy { status: "skip" } results (0.34ms)
+packages/auth-middleware test:   ✓ stops on failure and records auth error details (0.40ms)
+packages/auth-middleware test:   ✓ bubbles thrown errors from schemes (0.19ms)
+packages/auth-middleware test:   ✓ uses default failure message and code when failure payload is empty (0.33ms)
+packages/auth-middleware test: ▶ apiKey scheme (2.66ms) [server]
+packages/auth-middleware test:   ✓ authenticates valid API keys (1.92ms)
+packages/auth-middleware test:   ✓ skips when API key header is missing (0.17ms)
+packages/auth-middleware test:   ✓ fails when API key header is empty (0.15ms)
+packages/auth-middleware test:   ✓ fails when key verification fails (0.16ms)
+packages/auth-middleware test:   ✓ supports custom header names (0.25ms)
+packages/auth-middleware test: ▶ bearer scheme (3.03ms) [server]
+packages/auth-middleware test:   ✓ authenticates valid bearer tokens (1.71ms)
+packages/auth-middleware test:   ✓ skips when the auth header is missing (0.15ms)
+packages/auth-middleware test:   ✓ skips when a different auth scheme is provided (0.16ms)
+packages/auth-middleware test:   ✓ fails when the auth header format is malformed (0.19ms)
+packages/auth-middleware test:   ✓ fails when token verification fails (0.37ms)
+packages/auth-middleware test:   ✓ supports custom header, scheme, and challenge settings (0.44ms)
+packages/auth-middleware test: ▶ auth middleware type inference (0.18ms) [server]
+packages/auth-middleware test:   ✓ propagates auth state into controller and action contracts (0.18ms)
+packages/auth-middleware test: ▶ requireAuth middleware (7.57ms) [server]
+packages/auth-middleware test:   ✓ passes through when request is authenticated (4.43ms)
+packages/auth-middleware test:   ✓ installs context.auth when auth state was set without a direct property (0.86ms)
+packages/auth-middleware test:   ✓ returns default 401 response when unauthenticated (0.39ms)
+packages/auth-middleware test:   ✓ supports a custom failure response callback (0.54ms)
+packages/auth-middleware test:   ✓ adds WWW-Authenticate header when challenge is present (0.62ms)
+packages/auth-middleware test:   ✓ does not overwrite existing WWW-Authenticate header (0.35ms)
+packages/auth-middleware test:   ✓ throws a clear error when auth middleware did not run first (0.37ms)
+packages/file-storage test: ▶ fs file storage (54.18ms) [server]
+packages/file-storage test:   ✓ stores and retrieves files (12.05ms)
+packages/file-storage test:   ✓ stores file size in metadata (2.24ms)
+packages/file-storage test:   ✓ removes empty hash directories after removing files (2.55ms)
+packages/file-storage test:   ✓ lists files with pagination (16.33ms)
+packages/file-storage test:   ✓ lists files by key prefix (8.34ms)
+packages/file-storage test:   ✓ lists files with metadata (6.91ms)
+packages/file-storage test:   ✓ handles race conditions (3.76ms)
+packages/file-storage test:   ✓ throws if directory is a file (0.50ms)
+packages/file-storage test:   ✓ puts files (1.50ms)
+packages/file-storage test:   ▶ integration with form-data-parser (9.30ms) [server]
+packages/file-storage test:     ✓ stores and lists file uploads (9.30ms)
+packages/auth-middleware test: ▶ createSessionAuthScheme scheme (12.27ms) [server]
+packages/auth-middleware test:   ✓ throws when Session is not available in request context (2.56ms)
+packages/auth-middleware test:   ✓ skips when read() returns null (2.69ms)
+packages/auth-middleware test:   ✓ authenticates when verify() returns an identity (0.52ms)
+packages/auth-middleware test:   ✓ fails and invalidates when verify() returns null (0.49ms)
+packages/auth-middleware test:   ✓ uses a custom scheme name (0.38ms)
+packages/auth-middleware test:   ✓ invalidates stale session auth before requireAuth() returns 401 (5.63ms)
+packages/file-storage test: ℹ files 2
+packages/file-storage test: ℹ suites 4
+packages/file-storage test: ℹ tests 15
+packages/file-storage test: ℹ pass 15
+packages/file-storage test: ℹ fail 0
+packages/file-storage test: ℹ duration_ms 1047.90033
+packages/auth-middleware test: ℹ files 6
+packages/auth-middleware test: ℹ suites 6
+packages/auth-middleware test: ℹ tests 35
+packages/auth-middleware test: ℹ pass 35
+packages/auth-middleware test: ℹ fail 0
+packages/auth-middleware test: ℹ duration_ms 1063.35163
+packages/compression-middleware test: ▶ compression() (18.17ms) [server]
+packages/compression-middleware test:   ✓ compresses compressible content types (12.46ms)
+packages/compression-middleware test:   ✓ does not compress non-compressible content types (0.91ms)
+packages/compression-middleware test:   ✓ marks identity responses as Accept-Encoding variants (1.14ms)
+packages/compression-middleware test:   ✓ respects threshold option (0.39ms)
+packages/compression-middleware test:   ✓ compresses responses when Content-Length is not set (0.46ms)
+packages/compression-middleware test:   ✓ respects custom filterMediaType (0.68ms)
+packages/compression-middleware test:   ✓ allows custom filterMediaType to use isCompressibleMimeType (0.65ms)
+packages/compression-middleware test:   ✓ supports dynamic encodings based on response (0.84ms)
+packages/compression-middleware test:   ✓ allows disabling compression per response via empty encodings array (0.64ms)
+packages/file-storage test: Done
+packages/form-data-middleware test$ remix test
+packages/auth-middleware test: Done
+packages/tar-parser test$ remix test
+packages/compression-middleware test: ℹ files 1
+packages/compression-middleware test: ℹ suites 1
+packages/compression-middleware test: ℹ tests 9
+packages/compression-middleware test: ℹ pass 9
+packages/compression-middleware test: ℹ fail 0
+packages/compression-middleware test: ℹ duration_ms 1063.46679
+packages/compression-middleware test: Done
+packages/fetch-proxy test: ▶ fetch proxy (68.72ms) [server]
+packages/fetch-proxy test:   ✓ appends the request URL pathname + search to the target URL (2.90ms)
+packages/fetch-proxy test:   ✓ forwards request method, headers, and body (4.50ms)
+packages/fetch-proxy test:   ✓ forwards an empty request body (0.20ms)
+packages/fetch-proxy test:   ✓ forwards various HTTP methods correctly (2.18ms)
+packages/fetch-proxy test:   ✓ does not append X-Forwarded headers by default (0.13ms)
+packages/fetch-proxy test:   ✓ does not forward the incoming Host header (0.17ms)
+packages/fetch-proxy test:   ✓ does not forward the incoming Accept-Encoding header (0.14ms)
+packages/fetch-proxy test:   ✓ appends X-Forwarded headers when desired (0.24ms)
+packages/fetch-proxy test:   ✓ appends default X-Forwarded-Port values when request URLs omit ports (0.21ms)
+packages/fetch-proxy test:   ✓ forwards additional request init options (0.12ms)
+packages/fetch-proxy test:   ✓ rewrites cookie domain and path (0.63ms)
+packages/fetch-proxy test:   ✓ strips gzip response headers when fetch returns a decoded body (35.93ms)
+packages/fetch-proxy test:   ✓ preserves content length for unencoded responses (2.38ms)
+packages/fetch-proxy test:   ✓ preserves content encoding metadata for HEAD responses (3.75ms)
+packages/fetch-proxy test:   ✓ preserves content encoding metadata for 304 responses (2.65ms)
+packages/fetch-proxy test:   ✓ strips ambiguous content encoding headers for unsupported content encodings (4.25ms)
+packages/fetch-proxy test:   ✓ strips transfer framing headers from unencoded responses (6.86ms)
+packages/fetch-proxy test:   ✓ omits cookie domain for localhost requests with a port and rewrites path (0.22ms)
+packages/fetch-proxy test:   ✓ rewrites cookie domain to hostname for DNS requests with a port and rewrites path (0.15ms)
+packages/fetch-proxy test:   ✓ omits cookie domains for IPv4 request hosts with ports (0.15ms)
+packages/fetch-proxy test:   ✓ omits cookie domains for IPv6 request hosts with ports (0.17ms)
+packages/fetch-proxy test:   ✓ rewrites cookie domains to punycode hostnames without ports (0.20ms)
+packages/fetch-proxy test:   ✓ preserves host-only upstream cookies while rewriting paths (0.14ms)
+packages/fetch-proxy test:   ✓ preserves cookie domains when only domain rewriting is disabled (0.12ms)
+packages/fetch-proxy test:   ✓ does not rewrite cookie domain and path when opting-out (0.11ms)
+packages/fetch-proxy test:   ✓ preserves all request properties when using proxy(request) (0.14ms)
+packages/fetch-proxy test:   ✓ allows init to override request properties (0.10ms)
+packages/fetch-proxy test: ▶ fetch proxy (double-arg style) (1.03ms) [server]
+packages/fetch-proxy test:   ✓ works with proxy(url, init) style (0.14ms)
+packages/fetch-proxy test:   ✓ keeps X-Forwarded headers when proxy(url, init) provides custom headers (0.39ms)
+packages/fetch-proxy test:   ✓ handles proxy(url) with defaults (0.14ms)
+packages/fetch-proxy test:   ✓ forwards headers correctly with proxy(url, init) (0.14ms)
+packages/fetch-proxy test:   ✓ handles body with proxy(url, init) (0.22ms)
+packages/fetch-proxy test: ℹ files 1
+packages/fetch-proxy test: ℹ suites 2
+packages/fetch-proxy test: ℹ tests 32
+packages/fetch-proxy test: ℹ pass 32
+packages/fetch-proxy test: ℹ fail 0
+packages/fetch-proxy test: ℹ duration_ms 1221.10142
+packages/fetch-proxy test: Done
+packages/form-data-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/form-data-middleware test: Running server tests:
+packages/tar-parser test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/tar-parser test: Running server tests:
+packages/form-data-middleware test: ▶ formData middleware (15.97ms) [server]
+packages/form-data-middleware test:   ✓ parses application/x-www-form-urlencoded form data from the request body (8.03ms)
+packages/form-data-middleware test:   ✓ parses multipart/form-data form data from the request body (1.46ms)
+packages/form-data-middleware test:   ✓ stores uploaded files in context.get(FormData) on a multipart/form-data request (1.03ms)
+packages/form-data-middleware test:   ✓ provides an empty FormData for GET requests (0.35ms)
+packages/form-data-middleware test:   ✓ provides an empty FormData for HEAD requests (0.26ms)
+packages/form-data-middleware test:   ✓ throws when the request body is malformed multipart/form-data (0.44ms)
+packages/form-data-middleware test:   ✓ suppresses parse errors when suppressErrors is true (0.47ms)
+packages/form-data-middleware test:   ✓ sets context.get(FormData) to an empty FormData when parse errors are suppressed (0.37ms)
+packages/form-data-middleware test:   ✓ does not suppress maxFiles errors when suppressErrors is true (0.44ms)
+packages/form-data-middleware test:   ✓ does not suppress maxHeaderSize errors when suppressErrors is true (0.41ms)
+packages/form-data-middleware test:   ✓ does not suppress maxFileSize errors when suppressErrors is true (0.33ms)
+packages/form-data-middleware test:   ✓ does not suppress maxParts errors when suppressErrors is true (0.41ms)
+packages/form-data-middleware test:   ✓ does not suppress maxTotalSize errors when suppressErrors is true (0.40ms)
+packages/form-data-middleware test:   ✓ invokes a custom `uploadHandler` for file uploads (0.52ms)
+packages/form-data-middleware test:   ✓ is a no-op when FormData has already been parsed by an earlier middleware (0.40ms)
+packages/form-data-middleware test:   ✓ installs context.formData when FormData was already parsed by an earlier middleware (0.28ms)
+packages/form-data-middleware test:   ✓ is a no-op when FormData has already been parsed by earlier request pipeline middleware (0.35ms)
+packages/form-data-middleware test: ℹ files 1
+packages/form-data-middleware test: ℹ suites 1
+packages/form-data-middleware test: ℹ tests 17
+packages/form-data-middleware test: ℹ pass 17
+packages/form-data-middleware test: ℹ fail 0
+packages/form-data-middleware test: ℹ duration_ms 531.48183
+packages/form-data-middleware test: Done
+packages/tar-parser test: ▶ TarParser (120.95ms) [server]
+packages/tar-parser test:   ✓ parses express-4.21.1.tgz (13.56ms)
+packages/tar-parser test:   ✓ parses fetch-proxy-0.1.0.tar.gz (6.63ms)
+packages/tar-parser test:   ✓ parses lodash-4.17.21.tgz (23.65ms)
+packages/tar-parser test:   ✓ parses npm-11.0.0.tgz (77.11ms)
+packages/tar-parser test: ▶ tar-stream test cases (15.98ms) [server]
+packages/tar-parser test:   ✓ parses one-file.tar (3.49ms)
+packages/tar-parser test:   ✓ parses multi-file.tar (1.00ms)
+packages/tar-parser test:   ✓ parses a file body that ends at a chunk boundary (0.80ms)
+packages/tar-parser test:   ✓ parses pax.tar (0.84ms)
+packages/tar-parser test:   ✓ parses types.tar (0.81ms)
+packages/tar-parser test:   ✓ parses long-name.tar (0.78ms)
+packages/tar-parser test:   ✓ parses unicode-bsd.tar (0.78ms)
+packages/tar-parser test:   ✓ parses unicode.tar (0.65ms)
+packages/tar-parser test:   ✓ parses name-is-100.tar (0.73ms)
+packages/tar-parser test:   ✓ parses space.tar (0.72ms)
+packages/tar-parser test:   ✓ parses gnu-long-path.tar (0.66ms)
+packages/tar-parser test:   ✓ parses base-256-uid-gid.tar (0.76ms)
+packages/tar-parser test:   ✓ parses base-256-size.tar (0.72ms)
+packages/tar-parser test:   ✓ parses latin1.tar (0.85ms)
+packages/tar-parser test:   ✓ throws when parsing incomplete.tar (0.86ms)
+packages/tar-parser test:   ✓ parses gnu.tar (0.77ms)
+packages/tar-parser test:   ✓ parses gnu-incremental.tar (0.76ms)
+packages/tar-parser test: ℹ files 1
+packages/tar-parser test: ℹ suites 2
+packages/tar-parser test: ℹ tests 21
+packages/tar-parser test: ℹ pass 21
+packages/tar-parser test: ℹ fail 0
+packages/tar-parser test: ℹ duration_ms 607.26292
+packages/tar-parser test: Done
+packages/assets test$ remix test
+packages/auth test$ remix test
+packages/csrf-middleware test$ remix test
+packages/file-storage-s3 test$ remix test
+packages/auth test: Found 16 test file(s) (16 server, 0 browser, 0 e2e)
+packages/auth test: Running server tests:
+packages/csrf-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/csrf-middleware test: Running server tests:
+packages/file-storage-s3 test: Found 2 test file(s) (2 server, 0 browser, 0 e2e)
+packages/file-storage-s3 test: Running server tests:
+packages/assets test: Found 7 test file(s) (7 server, 0 browser, 0 e2e)
+packages/assets test: Running server tests:
+packages/auth test: ▶ credentials provider (0.78ms) [server]
+packages/auth test:   ✓ defaults the provider name to password and preserves the configured hooks (0.70ms)
+packages/auth test:   ✓ uses the configured provider name (0.08ms)
+packages/assets test: ▶ hashContent (2.26ms) [server]
+packages/assets test:   ✓ accepts byte content (2.26ms)
+packages/assets test: ▶ generateFingerprint (3.04ms) [server]
+packages/assets test:   ✓ changes when the buildId changes (0.42ms)
+packages/assets test:   ✓ uses an unambiguous serialization format (0.41ms)
+packages/assets test:   ✓ accepts byte content (2.20ms)
+packages/assets test: ▶ formatFingerprintedPathname (0.26ms) [server]
+packages/assets test:   ✓ inserts the fingerprint before the file extension (0.16ms)
+packages/assets test:   ✓ appends the fingerprint when there is no file extension (0.09ms)
+packages/assets test: ▶ parseFingerprintSuffix (0.79ms) [server]
+packages/assets test:   ✓ parses fingerprints inserted before the file extension (0.68ms)
+packages/assets test:   ✓ parses fingerprints appended to extensionless paths (0.11ms)
+packages/assets test: ▶ paths (1.23ms) [server]
+packages/assets test:   ✓ normalizes windows separators and uppercases drive letters (0.39ms)
+packages/assets test:   ✓ normalizes URL pathnames consistently (0.08ms)
+packages/assets test:   ✓ detects absolute file paths across platforms (0.10ms)
+packages/assets test:   ✓ normalizes absolute file paths to a standard internal form (0.11ms)
+packages/assets test:   ✓ preserves UNC roots when normalizing file paths (0.18ms)
+packages/assets test:   ✓ resolves relative file paths from a normalized root (0.10ms)
+packages/assets test:   ✓ preserves already-absolute file paths when resolving (0.03ms)
+packages/assets test:   ✓ resolves relative file paths from UNC roots (0.05ms)
+packages/assets test:   ✓ gets relative file paths across normalized roots (0.18ms)
+packages/file-storage-s3 test: ▶ s3 file storage integration # skipped [server]
+packages/file-storage-s3 test:   ↓ stores and retrieves files # skipped
+packages/file-storage-s3 test:   ↓ lists files with pagination and prefix filtering # skipped
+packages/file-storage-s3 test:   ↓ lists files with metadata # skipped
+packages/file-storage-s3 test: ▶ s3 file storage (47.68ms) [server]
+packages/file-storage-s3 test:   ✓ stores and retrieves files (20.25ms)
+packages/file-storage-s3 test:   ✓ lists files with pagination (13.47ms)
+packages/file-storage-s3 test:   ✓ lists files by key prefix (9.40ms)
+packages/file-storage-s3 test:   ✓ lists files with metadata (3.38ms)
+packages/file-storage-s3 test:   ✓ supports virtual-host style URLs (1.18ms)
+packages/assets test: ▶ createModuleStore (1.50ms) [server]
+packages/assets test:   ✓ increments a record version on each invalidation (0.87ms)
+packages/assets test:   ✓ retains stale emitted modules across change invalidations (0.17ms)
+packages/assets test:   ✓ clears stale emitted modules across structural invalidations (0.12ms)
+packages/assets test:   ✓ does not retain stale emitted modules without a snapshot (0.07ms)
+packages/assets test:   ✓ invalidates records for structural candidate file events (0.27ms)
+packages/file-storage-s3 test: ℹ files 2
+packages/file-storage-s3 test: ℹ suites 2
+packages/file-storage-s3 test: ℹ tests 8
+packages/file-storage-s3 test: ℹ pass 5
+packages/file-storage-s3 test: ℹ fail 0
+packages/file-storage-s3 test: ℹ skipped 3
+packages/file-storage-s3 test: ℹ duration_ms 1616.33737
+packages/file-storage-s3 test: Done
+packages/method-override-middleware test$ remix test
+packages/assets test: ▶ mayContainCommonJSModuleGlobals (2.49ms) [server]
+packages/assets test:   ✓ skips comments that only mention require, module, and exports as words (1.54ms)
+packages/assets test:   ✓ skips function and variable names that only contain those words (0.62ms)
+packages/assets test:   ✓ detects require calls with varying whitespace (0.10ms)
+packages/assets test:   ✓ detects require member access with varying whitespace (0.03ms)
+packages/assets test:   ✓ detects require bracket access (0.02ms)
+packages/assets test:   ✓ detects module.exports with varying whitespace (0.11ms)
+packages/assets test:   ✓ detects bracketed module exports with all quote types (0.03ms)
+packages/assets test:   ✓ detects exports property access and assignment with varying whitespace (0.04ms)
+packages/assets test: ▶ isCommonJS (8.03ms) [server]
+packages/assets test:   ▶ module globals (5.90ms) [server]
+packages/assets test:     ✓ detects module.exports assignment (4.94ms)
+packages/assets test:     ✓ detects module.exports member access (0.23ms)
+packages/assets test:     ✓ detects bracketed module exports with all quote types (0.28ms)
+packages/assets test:     ✓ detects exports property access with dot and bracket notation (0.18ms)
+packages/assets test:     ✓ detects exports assignment with varying whitespace (0.07ms)
+packages/assets test:     ✓ detects require calls and member access with varying whitespace (0.20ms)
+packages/assets test:   ▶ scope awareness (0.32ms) [server]
+packages/assets test:     ✓ does not flag a shadowed require parameter (0.17ms)
+packages/assets test:     ✓ does not flag a shadowed module variable (0.08ms)
+packages/assets test:     ✓ does not flag a shadowed exports variable (0.07ms)
+packages/assets test:   ▶ compiled output behavior (1.81ms) [server]
+packages/assets test:     ✓ flags CommonJS even when ESM syntax is also present (1.20ms)
+packages/assets test:     ✓ does not flag suspicious text in strings and comments (0.32ms)
+packages/assets test:     ✓ does not flag valid ESM output (0.07ms)
+packages/assets test:     ✓ does not flag transformed TypeScript without CommonJS globals (0.07ms)
+packages/assets test:     ✓ does not flag transformed TSX without CommonJS globals (0.16ms)
+packages/auth test: ▶ refreshExternalAuth() (18.08ms) [server]
+packages/auth test:   ✓ refreshes Google tokens and preserves the existing refresh token when the provider omits one (3.30ms)
+packages/auth test:   ✓ refreshes X tokens with HTTP basic auth (2.02ms)
+packages/auth test:   ✓ refreshes Atmosphere DPoP tokens and updates the nonce (12.45ms)
+packages/auth test:   ✓ fails for providers that do not implement refresh-token exchange (0.31ms)
+packages/auth test: ▶ verifyCredentials() (15.29ms) [server]
+packages/auth test:   ✓ returns the authenticated result when credentials are valid (13.21ms)
+packages/auth test:   ✓ returns null when credentials are rejected (0.80ms)
+packages/auth test:   ✓ rethrows unexpected parse or verify errors (1.28ms)
+packages/assets test: ▶ resolveScriptTarget (2.34ms) [server]
+packages/assets test:   ✓ accepts top-level browser and ECMAScript targets (1.00ms)
+packages/assets test:   ✓ accepts numeric es targets (0.15ms)
+packages/assets test:   ✓ returns supported script targets that can be passed to transforms (0.35ms)
+packages/assets test:   ✓ rejects unsupported target keys (0.39ms)
+packages/assets test:   ✓ rejects version ranges (0.09ms)
+packages/assets test:   ✓ rejects empty es target values (0.07ms)
+packages/assets test:   ✓ rejects prefixed es target values (0.06ms)
+packages/assets test:   ✓ rejects es target values below 2015 (0.13ms)
+packages/assets test:   ✓ rejects shorthand es target values like "6" (0.09ms)
+packages/assets test: ▶ resolveStyleTarget (0.20ms) [server]
+packages/assets test:   ✓ maps ios to ios_saf and ignores target.es (0.20ms)
+packages/auth test: ▶ completeAuth() (22.15ms) [server]
+packages/auth test:   ✓ rotates the session id and returns the session for auth writes (22.15ms)
+packages/auth test: ▶ startExternalAuth() (39.22ms) [server]
+packages/auth test:   ✓ redirects to the provider authorization URL and stores a transaction (31.76ms)
+packages/auth test:   ✓ drops unsafe returnTo values before persisting the transaction (3.15ms)
+packages/auth test:   ✓ drops backslash returnTo values before persisting the transaction (4.31ms)
+packages/assets test: ▶ compileRoutes (16.85ms) [server]
+packages/assets test:   ✓ supports windows-style roots without parsing them as route syntax (7.87ms)
+packages/assets test:   ✓ supports UNC roots when mapping file paths back to URLs (1.51ms)
+packages/assets test:   ✓ supports file patterns outside the root directory (4.24ms)
+packages/assets test:   ✓ supports route configs with different root directories (2.64ms)
+packages/assets test:   ✓ decodes generated file paths while keeping URL pathnames encoded (0.58ms)
+packages/auth test: ▶ finishExternalAuth() (47.05ms) [server]
+packages/auth test:   ✓ completes a Google callback, preserves returnTo, and clears the transaction (35.40ms)
+packages/auth test:   ✓ rethrows callback errors and clears the transaction (7.84ms)
+packages/auth test:   ✓ rejects invalid OAuth state (3.81ms)
+packages/auth test: ▶ auth0 provider (21.40ms) [server]
+packages/auth test:   ✓ derives the issuer from the Auth0 domain and provider name (21.40ms)
+packages/csrf-middleware test: ▶ csrf middleware (31.86ms) [server]
+packages/csrf-middleware test:   ✓ creates and stores a token on safe requests (10.11ms)
+packages/csrf-middleware test:   ✓ accepts a valid token from request headers (3.27ms)
+packages/csrf-middleware test:   ✓ rejects unsafe requests with a missing token (1.83ms)
+packages/csrf-middleware test:   ✓ rejects unsafe requests with an invalid token (1.91ms)
+packages/csrf-middleware test:   ✓ validates form field tokens when formData middleware is enabled (8.48ms)
+packages/csrf-middleware test:   ✓ rejects unsafe requests with invalid origin by default (1.57ms)
+packages/csrf-middleware test:   ✓ supports custom origin matching (2.03ms)
+packages/csrf-middleware test:   ✓ supports custom token value extractors (1.77ms)
+packages/csrf-middleware test:   ✓ throws when session middleware is not registered (0.89ms)
+packages/auth test: ▶ atmosphere provider (63.65ms) [server]
+packages/csrf-middleware test: ℹ files 1
+packages/csrf-middleware test: ℹ suites 1
+packages/csrf-middleware test: ℹ tests 9
+packages/csrf-middleware test: ℹ pass 9
+packages/csrf-middleware test: ℹ fail 0
+packages/csrf-middleware test: ℹ duration_ms 2008.97588
+packages/auth test:   ✓ resolves a handle through DNS-over-HTTPS, performs PAR with DPoP, and completes the callback (47.44ms)
+packages/auth test:   ✓ supports loopback clients and falls back to HTTPS handle resolution when DNS does not return a DID (6.81ms)
+packages/auth test:   ✓ falls back to HTTPS handle resolution when DNS resolution fails (3.35ms)
+packages/auth test:   ✓ aborts slow HTTPS handle resolution after DNS returns a DID (0.71ms)
+packages/auth test:   ✓ prefers DNS handle resolution when HTTPS returns a different DID first (0.45ms)
+packages/auth test:   ✓ falls back to HTTPS handle resolution when DNS is slow (0.70ms)
+packages/auth test:   ✓ resolves path-based did:web documents (2.91ms)
+packages/auth test:   ✓ requires prepare before starting auth (1.11ms)
+packages/auth test:   ✓ rejects localhost loopback redirect URIs (0.18ms)
+packages/auth test: ▶ OAuth flow integration (84.66ms) [server]
+packages/auth test:   ✓ completes the full browser OIDC flow against a local fake provider (84.66ms)
+packages/csrf-middleware test: Done
+packages/auth test: ▶ facebook provider (28.26ms) [server]
+packages/auth test:   ✓ redirects to the Facebook authorization endpoint with default PKCE parameters (8.54ms)
+packages/auth test:   ✓ uses configured scopes in the Facebook authorization URL (1.37ms)
+packages/auth test:   ✓ normalizes Facebook profiles and tokens (7.59ms)
+packages/auth test:   ✓ fails when the Facebook profile does not include a valid id (10.77ms)
+packages/method-override-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/method-override-middleware test: Running server tests:
+packages/auth test: ▶ github provider (23.85ms) [server]
+packages/auth test:   ✓ redirects to the GitHub authorization endpoint with configured scopes (7.80ms)
+packages/auth test:   ✓ hydrates missing email addresses from the GitHub email API (6.44ms)
+packages/auth test:   ✓ uses the primary profile email without calling the GitHub email API (2.75ms)
+packages/auth test:   ✓ keeps the GitHub profile email unchanged when the email API returns no addresses (3.49ms)
+packages/auth test:   ✓ fails when the GitHub profile does not include a valid id (3.37ms)
+packages/auth test: ▶ microsoft provider (8.34ms) [server]
+packages/auth test:   ✓ uses the tenant-specific Microsoft issuer and provider name (8.34ms)
+packages/auth test: ▶ google provider (7.96ms) [server]
+packages/auth test:   ✓ uses the Google OIDC defaults and provider name (6.72ms)
+packages/auth test:   ✓ includes configured authorization params in the Google login redirect (1.24ms)
+packages/auth test: ▶ okta provider (7.69ms) [server]
+packages/auth test:   ✓ uses the provided Okta issuer and provider name (7.69ms)
+packages/auth test: ▶ oidc provider (22.98ms) [server]
+packages/auth test:   ✓ discovers metadata and caches it across login requests (9.21ms)
+packages/auth test:   ✓ retries discovery after a failed metadata request (1.97ms)
+packages/auth test:   ✓ includes authorizationParams in the authorization URL (1.22ms)
+packages/auth test:   ✓ uses metadata override without discovery (1.05ms)
+packages/auth test:   ✓ completes callback, normalizes claims, and applies mapProfile (3.82ms)
+packages/auth test:   ✓ fails when metadata does not include a userinfo endpoint (5.72ms)
+packages/auth test: ▶ x provider (25.68ms) [server]
+packages/auth test:   ✓ redirects to the X authorization endpoint with default PKCE parameters (9.25ms)
+packages/auth test:   ✓ uses configured scopes in the X authorization URL (2.32ms)
+packages/auth test:   ✓ normalizes X profiles and exchanges tokens with HTTP basic auth (5.92ms)
+packages/auth test:   ✓ fails when the X profile does not include a valid id (3.18ms)
+packages/auth test:   ✓ fails when the X profile does not include a valid username (2.31ms)
+packages/auth test:   ✓ fails when the X profile does not include a valid name (2.70ms)
+packages/auth test: ℹ files 16
+packages/auth test: ℹ suites 16
+packages/auth test: ℹ tests 52
+packages/auth test: ℹ pass 52
+packages/auth test: ℹ fail 0
+packages/auth test: ℹ duration_ms 2830.10208
+packages/auth test: Done
+packages/method-override-middleware test: ▶ methodOverride middleware (7.86ms) [server]
+packages/method-override-middleware test:   ✓ overrides the request method with the value of the method override field (7.86ms)
+packages/method-override-middleware test: ℹ files 1
+packages/method-override-middleware test: ℹ suites 1
+packages/method-override-middleware test: ℹ tests 1
+packages/method-override-middleware test: ℹ pass 1
+packages/method-override-middleware test: ℹ fail 0
+packages/method-override-middleware test: ℹ duration_ms 632.14079
+packages/method-override-middleware test: Done
+packages/assets test: There was an error in the asset server error handler: Error: error handler failed
+packages/assets test: ▶ asset-server (849.59ms) [server]
+packages/assets test:   ✓ handles GET and HEAD requests but ignores POST (34.10ms)
+packages/assets test:   ✓ serves entry points with no-cache and ETags (7.40ms)
+packages/assets test:   ✓ does not match a stripped weak ETag prefix in If-None-Match (4.47ms)
+packages/assets test:   ✓ serves allow-listed internal modules directly by default with ETags (3.80ms)
+packages/assets test:   ✓ supports .mts modules (5.01ms)
+packages/assets test:   ✓ resolves explicit .js imports to TypeScript files when needed (8.05ms)
+packages/assets test:   ✓ resolves explicit .js imports to directory indexes when needed (6.93ms)
+packages/assets test:   ✓ resolves explicit .jsx imports to TSX files when needed (3.31ms)
+packages/assets test:   ✓ resolves explicit .mjs imports to .mts files when needed (2.91ms)
+packages/assets test:   ✓ serves CSS assets directly and ignores unsupported direct requests for other non-compiled files (11.73ms)
+packages/assets test:   ✓ serves direct CSS assets with no-cache, ETags, and HEAD support (5.38ms)
+packages/assets test:   ✓ serves configured file assets with no-cache, ETags, and HEAD support (2.71ms)
+packages/assets test:   ✓ picks up source file changes without watch mode (2.97ms)
+packages/assets test:   ✓ serves request-transformed file assets (2.42ms)
+packages/assets test:   ✓ serializes typed transform arguments and no-arg shorthand in hrefs (3.45ms)
+packages/assets test:   ✓ supports transform params with delimiter-like characters (3.59ms)
+packages/assets test:   ✓ treats an empty transform array in getHref as no transform (1.14ms)
+packages/assets test:   ✓ returns 400 for malformed file transform queries without calling onError (1.25ms)
+packages/assets test:   ✓ returns 400 for invalid file transform requests without calling onError (1.43ms)
+packages/assets test:   ✓ returns 400 for transform queries on served script assets (1.88ms)
+packages/assets test:   ✓ returns 400 for transform queries on served style assets (1.81ms)
+packages/assets test:   ✓ validates transform params when generating hrefs (1.15ms)
+packages/assets test:   ✓ allows global file transforms to skip by returning null (7.59ms)
+packages/assets test:   ✓ skips global file transforms when configured extensions do not match (4.45ms)
+packages/assets test:   ✓ reports named global file transform result errors with the function name (1.81ms)
+packages/assets test:   ✓ reports anonymous global file transform result errors with the transform index (2.08ms)
+packages/assets test:   ✓ allows request file transforms to return string content directly (2.30ms)
+packages/assets test:   ✓ rejects request file transforms when configured extensions do not match (2.05ms)
+packages/assets test:   ✓ reports invalid request file transform results with a specific error code (1.35ms)
+packages/assets test:   ✓ reports thrown request file transform errors as transform failures (2.67ms)
+packages/assets test:   ✓ matches transform extension filters against the current extension in the pipeline (2.18ms)
+packages/assets test:   ✓ allows request file transforms to return string content in object form (2.00ms)
+packages/assets test:   ✓ recomputes transformed file outputs on each request when no cache is configured (2.44ms)
+packages/assets test:   ✓ uses configured file storage for transformed asset caching (8.05ms)
+packages/assets test:   ✓ invalidates transformed file cache entries when source files change without watch mode (4.70ms)
+packages/assets test:   ✓ does not reuse stale transformed cache entries after delete and recreate in watch mode (2.74ms)
+packages/assets test:   ✓ accepts one-item tuples for no-arg transforms and serializes them as strings (0.62ms)
+packages/assets test:   ✓ limits request transforms to 5 by default when generating hrefs (0.47ms)
+packages/assets test:   ✓ limits request transforms to 5 by default when parsing requests (0.98ms)
+packages/assets test:   ✓ supports overriding files.maxRequestTransforms (1.20ms)
+packages/assets test:   ✓ rewrites CSS imports and relative file URLs to served URLs (6.30ms)
+packages/assets test:   ✓ encodes handwritten query syntax when rewriting CSS file URLs (2.42ms)
+packages/assets test:   ✓ rewrites fingerprinted CSS file URLs through the file href pipeline (5.84ms)
+packages/assets test:   ✓ preserves non-transform CSS file query params when rewriting transformed URLs (4.86ms)
+packages/assets test:   ✓ preserves non-transform CSS file query params and hashes for fingerprinted rewritten URLs (5.27ms)
+packages/assets test:   ✓ leaves external CSS imports unchanged (2.63ms)
+packages/assets test:   ✓ leaves external CSS url dependencies unchanged (2.70ms)
+packages/assets test:   ✓ getHref returns fingerprinted URLs for configured file assets when fingerprinting is enabled (3.02ms)
+packages/assets test:   ✓ uses immutable caching for fingerprinted file requests and returns null on mismatch (4.33ms)
+packages/assets test:   ✓ updates source file fingerprints when source files change without watch mode (6.95ms)
+packages/assets test:   ✓ getHref returns fingerprinted URLs for transformed file assets when fingerprinting is enabled (2.93ms)
+packages/assets test:   ✓ returns null for fingerprint mismatches on transformed file requests (3.82ms)
+packages/assets test:   ✓ reuses the source fingerprint across transformed file variants (1.92ms)
+packages/assets test:   ✓ fingerprints CSS import graphs when fingerprinting is enabled (3.88ms)
+packages/assets test:   ✓ getPreloads accepts multiple style roots and dedupes shared imports (3.46ms)
+packages/assets test:   ✓ uses immutable caching for fingerprinted style requests and returns null on mismatch (4.78ms)
+packages/assets test:   ✓ keeps fingerprinted style graphs stable within a build (4.30ms)
+packages/assets test:   ✓ uses buildId to change internal style fingerprints (8.41ms)
+packages/assets test:   ✓ supports external style source maps (2.76ms)
+packages/assets test:   ✓ supports external style source maps for fingerprinted request URLs (2.59ms)
+packages/assets test:   ✓ supports external style source maps for fingerprinted import graphs (7.22ms)
+packages/assets test:   ✓ supports inline style source maps with absolute source paths (2.68ms)
+packages/assets test:   ✓ applies top-level common compiler options to styles (2.29ms)
+packages/assets test:   ✓ updates style source map mappings after import rewriting (6.11ms)
+packages/assets test:   ✓ applies top-level target transforms and minifies CSS output (1.97ms)
+packages/assets test:   ✓ uses immutable caching for fingerprinted script requests (4.32ms)
+packages/assets test:   ✓ fingerprints all modules with filename.@fingerprint.ext urls and returns null on mismatch (4.84ms)
+packages/assets test:   ✓ keeps fingerprinted script graphs stable within a build (5.85ms)
+packages/assets test:   ✓ uses buildId to change internal fingerprints (6.21ms)
+packages/assets test:   ✓ keeps cached source output stable until the server restarts (3.60ms)
+packages/assets test:   ✓ keeps cached importer output stable when dependency contents change (3.94ms)
+packages/assets test:   ✓ fingerprints rewritten imports even when those modules can also be fetched directly (3.12ms)
+packages/assets test:   ✓ supports external source maps for fingerprinted request URLs (5.22ms)
+packages/assets test:   ✓ supports inline source maps with absolute source paths (2.41ms)
+packages/assets test:   ✓ applies top-level common compiler options to scripts (7.21ms)
+packages/assets test:   ✓ updates source map mappings after import rewriting (4.80ms)
+packages/assets test:   ✓ preserves quoted dynamic import specifiers when rewriting URLs (3.83ms)
+packages/assets test:   ✓ rewrites static template-literal dynamic imports (4.23ms)
+packages/assets test:   ✓ rewrites re-exported package specifiers (4.44ms)
+packages/assets test:   ✓ leaves variable dynamic imports unchanged (1.72ms)
+packages/assets test:   ✓ leaves interpolated template-literal dynamic imports unchanged (1.68ms)
+packages/assets test:   ✓ leaves concatenated dynamic imports unchanged (2.02ms)
+packages/assets test:   ✓ updates source map mappings for rewritten dynamic imports (5.03ms)
+packages/assets test:   ✓ keeps source map mappings character-accurate with minify enabled (4.73ms)
+packages/assets test:   ✓ supports HEAD requests for source map URLs (1.94ms)
+packages/assets test:   ✓ leaves configured external imports unchanged (1.82ms)
+packages/assets test:   ✓ leaves data and http(s) URL imports unchanged (1.76ms)
+packages/assets test:   ✓ uses canonical realpaths for module identity when imports go through symlinks (3.57ms)
+packages/assets test:   ✓ uses one canonical URL when app and package imports resolve to the same pnpm package (20.44ms)
+packages/assets test:   ✓ getHref returns fingerprinted URLs for served script files when fingerprinting is enabled (1.77ms)
+packages/assets test:   ✓ getPreloads is file-oriented and returns the fingerprinted root href first (4.47ms)
+packages/assets test:   ✓ getPreloads accepts arbitrary file roots (3.15ms)
+packages/assets test:   ✓ getPreloads accepts multiple file paths and dedupes shared dependencies (2.84ms)
+packages/assets test:   ✓ getPreloads stays shallowest-first across multiple roots (6.18ms)
+packages/assets test:   ✓ getPreloads returns file asset roots as direct hrefs (1.30ms)
+packages/assets test:   ✓ getPreloads stays shallowest-first across mixed asset roots (6.77ms)
+packages/assets test:   ✓ getPreloads rejects script request URLs (1.16ms)
+packages/assets test:   ✓ getPreloads rejects script request URLs in arrays (0.95ms)
+packages/assets test:   ✓ getHref rejects modules outside configured fileMap entries (0.70ms)
+packages/assets test:   ✓ getPreloads rejects denied modules (0.83ms)
+packages/assets test:   ✓ getPreloads uses jsxImportSource inherited through tsconfig extends (7.45ms)
+packages/assets test:   ✓ keeps cached tsconfig-driven transforms until the server restarts (7.67ms)
+packages/assets test:   ✓ keeps tsconfig-driven imports stable within a fingerprinted build (6.05ms)
+packages/assets test:   ✓ picks up extensionless import resolution changes after restart (6.61ms)
+packages/assets test:   ✓ keeps cached extensionless import resolution stable until restart (4.07ms)
+packages/assets test:   ✓ picks up source changes in watch mode without restarting (6.22ms)
+packages/assets test:   ✓ picks up source changes in default watch mode without restarting (3.83ms)
+packages/assets test:   ✓ picks up source changes outside rootDir in watch mode (4.41ms)
+packages/assets test:   ✓ ignores source changes that match watch.ignore in watch mode (2.83ms)
+packages/assets test:   ✓ recovers in watch mode when a previously missing import is created (4.58ms)
+packages/assets test:   ✓ picks up style source changes in watch mode without restarting (3.97ms)
+packages/assets test:   ✓ recovers in watch mode when a previously missing CSS import is created (4.29ms)
+packages/assets test:   ✓ recovers in watch mode when a previously missing CSS url file is created (5.10ms)
+packages/assets test:   ✓ does not watch style dependency ancestor directories in watch mode (3.12ms)
+packages/assets test:   ✓ fails in watch mode when a CSS url file is deleted (4.23ms)
+packages/assets test:   ✓ fails in watch mode when a CSS url file ancestor directory is deleted (5.41ms)
+packages/assets test:   ✓ recovers in watch mode when a previously broken style transform is fixed (3.81ms)
+packages/assets test:   ✓ ignores extensionless import recovery when the candidate matches watch.ignore (3.55ms)
+packages/assets test:   ✓ picks up root package imports changes in watch mode (6.32ms)
+packages/assets test:   ✓ ignores root package.json changes that match watch.ignore in watch mode (4.98ms)
+packages/assets test:   ✓ picks up root package imports when package.json is added in watch mode (4.54ms)
+packages/assets test:   ✓ fails alias resolution when root package.json is removed in watch mode (4.96ms)
+packages/assets test:   ✓ converges to the latest source content after burst writes in watch mode (8.64ms)
+packages/assets test:   ✓ converges to the latest broken source after burst writes in watch mode (8.00ms)
+packages/assets test:   ✓ converges across repeated package imports toggles in watch mode (16.97ms)
+packages/assets test:   ✓ recovers in watch mode when a previously broken transform is fixed (4.67ms)
+packages/assets test:   ✓ keeps serving healthy modules while another module fails and recovers through multiple watch-mode errors (7.82ms)
+packages/assets test:   ✓ picks up tsconfig-driven transform changes in watch mode (8.84ms)
+packages/assets test:   ✓ ignores tsconfig changes that match watch.ignore in watch mode (7.25ms)
+packages/assets test:   ✓ picks up tsconfig paths resolution changes in watch mode (6.30ms)
+packages/assets test:   ✓ picks up tsconfig paths when tsconfig.json is added in watch mode (4.96ms)
+packages/assets test:   ✓ fails tsconfig paths resolution when tsconfig.json is removed in watch mode (4.81ms)
+packages/assets test:   ✓ converges across repeated tsconfig paths toggles in watch mode (19.14ms)
+packages/assets test:   ✓ picks up package resolution changes in watch mode (8.82ms)
+packages/assets test:   ✓ converges across repeated package exports toggles in watch mode (17.90ms)
+packages/assets test:   ✓ switches extensionless imports to a higher-priority file in watch mode (5.06ms)
+packages/assets test:   ✓ falls back to the next valid extensionless candidate in watch mode (4.81ms)
+packages/assets test:   ✓ stops watching a deleted module directory after the module is removed in watch mode (2.77ms)
+packages/assets test:   ✓ stops invalidating caches after close is called in watch mode (2.52ms)
+packages/assets test:   ✓ keeps extensionless import resolution stable within a fingerprinted build (3.85ms)
+packages/assets test:   ✓ picks up dotted extensionless import resolution changes after restart (4.23ms)
+packages/assets test:   ✓ keeps cached dotted extensionless import resolution stable until restart (3.25ms)
+packages/assets test:   ✓ switches dotted extensionless imports to a higher-priority file in watch mode (4.71ms)
+packages/assets test:   ✓ falls back to the next valid dotted extensionless candidate in watch mode (4.86ms)
+packages/assets test:   ✓ keeps dotted extensionless import resolution stable within a fingerprinted build (3.38ms)
+packages/assets test:   ✓ picks up aliased import resolution changes after restart (4.03ms)
+packages/assets test:   ✓ picks up aliased directory resolution changes after restart (4.26ms)
+packages/assets test:   ✓ keeps cached aliased import resolution stable until restart (2.85ms)
+packages/assets test:   ✓ switches aliased imports to an exact-match file in watch mode (4.70ms)
+packages/assets test:   ✓ falls back to the next valid aliased candidate in watch mode (4.44ms)
+packages/assets test:   ✓ falls back to an aliased directory candidate in watch mode (5.07ms)
+packages/assets test:   ✓ keeps aliased import resolution stable within a fingerprinted build (3.15ms)
+packages/assets test:   ✓ supports absolute entry-point patterns (1.08ms)
+packages/assets test:   ✓ does not require separate entry-point configuration when fingerprinting (0.20ms)
+packages/assets test:   ✓ treats an empty basePath as root (1.03ms)
+packages/assets test:   ✓ rethrows unexpected realpath errors for exact file matchers (0.37ms)
+packages/assets test:   ✓ rejects invalid allowed package names (0.86ms)
+packages/assets test:   ✓ does not treat Node builtin names as installed packages (0.28ms)
+packages/assets test:   ✓ rejects invalid allowed package dependency names (0.57ms)
+packages/assets test:   ✓ rejects invalid allowed optional package dependency names (0.62ms)
+packages/assets test:   ✓ rejects absolute file patterns (1.97ms)
+packages/assets test:   ✓ supports absolute allowFiles rules and denyFiles overrides (2.18ms)
+packages/assets test:   ✓ rejects unnamed route wildcards because fileMap entries must be reversible (0.10ms)
+packages/assets test:   ✓ supports glob-style allowFiles and denyFiles rules (1.83ms)
+packages/assets test:   ✓ allows package files by package name (1.97ms)
+packages/assets test:   ✓ allows imported package files by package name (3.00ms)
+packages/assets test:   ✓ allows package dependency files by package name without prior importer requests (6.62ms)
+packages/assets test:   ✓ does not allow installed package files outside allowed package dependencies (6.27ms)
+packages/assets test:   ✓ does not allow installed peer dependency files unless they are explicitly allowed (4.43ms)
+packages/assets test:   ✓ allows peer dependency files when they are explicitly allowed by package name (2.05ms)
+packages/assets test:   ✓ updates allowed package dependencies when workspace lockfiles change in watch mode (4.35ms)
+packages/assets test:   ✓ watches workspace package state files for allowed packages without watching all of node_modules (2.83ms)
+packages/assets test:   ✓ does not watch package state files for allowed packages when no package manager root is found (2.56ms)
+packages/assets test:   ✓ updates installed optional package dependencies when workspace lockfiles change in watch mode (5.98ms)
+packages/assets test:   ✓ traverses out of a nested asset server root to watch workspace lockfiles (7.16ms)
+packages/assets test:   ✓ applies denyFiles rules to allowed package files (2.13ms)
+packages/assets test:   ✓ applies denyFiles rules to allowed package realpaths (3.69ms)
+packages/assets test:   ✓ allows pnpm package realpaths by package name (3.15ms)
+packages/assets test:   ✓ does not allow other installed copies of transitive dependencies by package name (5.31ms)
+packages/assets test:   ✓ matches dot-prefixed files and directories in glob-style allowFiles rules (2.36ms)
+packages/assets test:   ✓ does not call onError for denied direct requests (0.55ms)
+packages/assets test:   ✓ minifies output when requested (1.21ms)
+packages/assets test:   ✓ lowers syntax to the configured ECMAScript target (1.27ms)
+packages/assets test:   ✓ lowers syntax to the configured browser target object (1.19ms)
+packages/assets test:   ✓ serves injected helpers while preserving authored imports of the same package (23.41ms)
+packages/assets test:   ✓ does not inherit target from tsconfig (1.52ms)
+packages/assets test:   ✓ rejects fingerprinting without a buildId string (0.37ms)
+packages/assets test:   ✓ rejects fingerprinting without a non-empty buildId (0.36ms)
+packages/assets test:   ✓ rejects fingerprinting in watch mode (0.37ms)
+packages/assets test:   ✓ rejects fingerprinting when watch uses its default mode (0.34ms)
+packages/assets test:   ✓ rejects files extensions for compiled asset types (0.34ms)
+packages/assets test:   ✓ rejects files extensions for script module types (0.32ms)
+packages/assets test:   ✓ rejects non-positive files.maxRequestTransforms values (0.38ms)
+packages/assets test:   ✓ rejects invalid request transform extension filters (0.38ms)
+packages/assets test:   ✓ rejects empty global transform extension filters (0.38ms)
+packages/assets test:   ✓ calls onError for unexpected compilation failures (1.72ms)
+packages/assets test:   ✓ calls onError for unsupported imported file types (1.55ms)
+packages/assets test:   ✓ calls onError for import resolution failures (1.21ms)
+packages/assets test:   ✓ calls onError for CSS import resolution failures (1.08ms)
+packages/assets test:   ✓ calls onError for unsupported CSS url dependencies when files are not configured (1.28ms)
+packages/assets test:   ✓ calls onError for CSS url resolution failures (1.05ms)
+packages/assets test:   ✓ warns for malformed CSS-authored file transform queries without failing the stylesheet (1.82ms)
+packages/assets test:   ✓ treats inherited object property names as unknown file transform requests (0.90ms)
+packages/assets test:   ✓ warns for invalid CSS-authored file transform requests without failing the stylesheet (1.62ms)
+packages/assets test:   ✓ warns for over-limit CSS-authored file transform requests without failing the stylesheet (1.71ms)
+packages/assets test:   ✓ calls onError for malformed CSS transforms (1.00ms)
+packages/assets test:   ✓ calls onError for disallowed CSS imports (1.28ms)
+packages/assets test:   ✓ calls onError for disallowed CSS url dependencies (1.22ms)
+packages/assets test:   ✓ calls onError when a CSS import is outside configured fileMap entries (1.33ms)
+packages/assets test:   ✓ calls onError when a CSS url dependency is outside configured fileMap entries (1.39ms)
+packages/assets test:   ✓ calls onError for CommonJS modules (2.53ms)
+packages/assets test:   ✓ calls onError for disallowed imported scripts (1.44ms)
+packages/assets test:   ✓ calls onError when an imported module is outside configured fileMap entries (1.40ms)
+packages/assets test:   ✓ uses a custom response returned from onError (2.89ms)
+packages/assets test:   ✓ falls back to the default 500 when onError throws (2.56ms)
+packages/assets test:   ✓ logs watcher errors (2.33ms)
+packages/assets test:   ▶ tsconfig transform support (28.72ms) [server]
+packages/assets test:     ✓ supports jsxImportSource with the automatic JSX runtime (4.30ms)
+packages/assets test:     ✓ supports the react-jsxdev runtime (3.65ms)
+packages/assets test:     ✓ supports classic JSX pragma options (2.49ms)
+packages/assets test:     ✓ rejects unsupported JSX preserve mode (2.09ms)
+packages/assets test:     ✓ supports namespaces and respects allowNamespaces when it is disabled (3.89ms)
+packages/assets test:     ✓ passes experimentalDecorators through to Oxc (3.94ms)
+packages/assets test:     ✓ emits decorator metadata only when tsconfig enables it (4.41ms)
+packages/assets test:     ✓ supports useDefineForClassFields false when lowering class fields (3.95ms)
+packages/assets test: ℹ files 7
+packages/assets test: ℹ suites 15
+packages/assets test: ℹ tests 283
+packages/assets test: ℹ pass 283
+packages/assets test: ℹ fail 0
+packages/assets test: ℹ duration_ms 4223.96563
+packages/assets test: Done
+packages/static-middleware test$ remix test
+packages/static-middleware test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/static-middleware test: Running server tests:
+packages/static-middleware test: ▶ staticFiles middleware (29.46ms) [server]
+packages/static-middleware test:   ✓ supports etag by default (8.74ms)
+packages/static-middleware test:   ✓ does not send etag if etag is disabled (1.27ms)
+packages/static-middleware test:   ✓ supports last-modified by default (2.53ms)
+packages/static-middleware test:   ✓ does not send last-modified if lastModified is disabled (1.24ms)
+packages/static-middleware test:   ✓ does not support accept-ranges by default for compressible files (1.79ms)
+packages/static-middleware test:   ✓ supports range requests when acceptRanges is explicitly enabled (2.04ms)
+packages/static-middleware test:   ✓ supports range requests with acceptRanges function (1.77ms)
+packages/static-middleware test:   ✓ supports cache-control (0.56ms)
+packages/static-middleware test:   ✓ works with multiple static middleware instances (1.79ms)
+packages/static-middleware test:   ✓ works as fallback middleware (1.83ms)
+packages/static-middleware test:   ✓ ignores POST requests (0.40ms)
+packages/static-middleware test:   ✓ ignores PUT requests (0.26ms)
+packages/static-middleware test:   ✓ ignores DELETE requests (0.24ms)
+packages/static-middleware test:   ✓ ignores PATCH requests (0.24ms)
+packages/static-middleware test:   ✓ ignores OPTIONS requests (0.27ms)
+packages/static-middleware test:   ✓ prevents path traversal with .. in pathname (1.11ms)
+packages/static-middleware test:   ✓ does not support absolute paths in the URL (0.46ms)
+packages/static-middleware test:   ✓ serves symlinked files inside the root using the requested path metadata (1.13ms)
+packages/static-middleware test:   ✓ does not serve symlinked files outside the root (0.61ms)
+packages/static-middleware test:   ✓ does not serve files from symlinked directories outside the root (0.63ms)
+packages/static-middleware test:   ✓ does not serve index files from symlinked directories outside the root (0.56ms)
+packages/static-middleware test:   ▶ basic functionality (3.11ms) [server]
+packages/static-middleware test:     ✓ serves a file (0.71ms)
+packages/static-middleware test:     ✓ serves a file with HEAD request (0.44ms)
+packages/static-middleware test:     ✓ serves files from nested directories (0.86ms)
+packages/static-middleware test:     ✓ falls through to handler for non-existent file (0.42ms)
+packages/static-middleware test:     ✓ falls through to handler when requesting a directory (0.67ms)
+packages/static-middleware test:   ▶ filter option (0.92ms) [server]
+packages/static-middleware test:     ✓ filters files based on custom filter function (0.92ms)
+packages/static-middleware test:   ▶ index option (9.85ms) [server]
+packages/static-middleware test:     ✓ serves default index.html when requesting a directory (0.88ms)
+packages/static-middleware test:     ✓ serves default index.html when requesting a directory without trailing slash (1.11ms)
+packages/static-middleware test:     ✓ serves default index.htm when index.html does not exist (1.18ms)
+packages/static-middleware test:     ✓ prefers index.html over index.htm when both exist (1.06ms)
+packages/static-middleware test:     ✓ falls through when directory has no index file (0.74ms)
+packages/static-middleware test:     ✓ serves custom index file when specified (1.01ms)
+packages/static-middleware test:     ✓ tries custom index files in order (1.02ms)
+packages/static-middleware test:     ✓ serves root directory index file (0.81ms)
+packages/static-middleware test:     ✓ supports empty index array to disable index file serving (0.56ms)
+packages/static-middleware test:     ✓ supports index: false to disable index file serving (0.55ms)
+packages/static-middleware test:     ✓ supports index: true to use default index files (0.93ms)
+packages/static-middleware test:   ▶ works with method-override middleware (6.68ms) [server]
+packages/static-middleware test:     ✓ ignores overridden POST requests (5.58ms)
+packages/static-middleware test:     ✓ serves files with overridden GET requests (1.10ms)
+packages/static-middleware test: ℹ files 1
+packages/static-middleware test: ℹ suites 5
+packages/static-middleware test: ℹ tests 40
+packages/static-middleware test: ℹ pass 40
+packages/static-middleware test: ℹ fail 0
+packages/static-middleware test: ℹ duration_ms 578.19146
+packages/static-middleware test: Done
+packages/remix test$ remix test
+packages/remix test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+packages/remix test: Running server tests:
+packages/remix test: ▶ manifest (57.33ms) [server]
+packages/remix test:   ✓ every manifest entry has a valid remix path format (0.28ms)
+packages/remix test:   ✓ every manifest value references a real export in its package (20.91ms)
+packages/remix test:   ✓ all exports of every referenced package are covered (5.84ms)
+packages/remix test:   ✓ every @remix-run/* workspace package is referenced in the manifest (0.07ms)
+packages/remix test:   ✓ every remix package export references a generated source file (8.47ms)
+packages/remix test:   ✓ package README headings use unscoped package names (21.17ms)
+packages/remix test:   ✓ generates README mirrors for representative published remix docs (0.53ms)
+packages/remix test:   ✓ generates one README mirror per remix source path (0.05ms)
+packages/remix test: ℹ files 1
+packages/remix test: ℹ suites 1
+packages/remix test: ℹ tests 8
+packages/remix test: ℹ pass 8
+packages/remix test: ℹ fail 0
+packages/remix test: ℹ duration_ms 483.03962
+packages/remix test: Done
+demos/bookstore test$ NODE_ENV=test remix test
+demos/social-auth test$ NODE_ENV=test remix test
+demos/frames test$ NODE_ENV=test remix test
+demos/sse test$ remix test
+demos/frames test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+demos/frames test: Running server tests:
+demos/social-auth test: Found 4 test file(s) (4 server, 0 browser, 0 e2e)
+demos/social-auth test: Running server tests:
+demos/sse test: Found 1 test file(s) (1 server, 0 browser, 0 e2e)
+demos/sse test: Running server tests:
+demos/bookstore test: Found 13 test file(s) (11 server, 1 browser, 1 e2e)
+demos/bookstore test: [remix:test] Test server running on http://localhost:44457
+demos/bookstore test: Running server tests:
+demos/social-auth test: ▶ auth session model (3.96ms) [server]
+demos/social-auth test:   ✓ parses a stored auth session value (3.96ms)
+demos/social-auth test: ▶ resolve external auth helper (96.24ms) [server]
+demos/social-auth test:   ✓ links an external account to an existing user by email (44.44ms)
+demos/social-auth test:   ✓ updates an existing linked external account on later logins (51.80ms)
+demos/social-auth test: ▶ social-auth database seed (206.24ms) [server]
+demos/social-auth test:   ✓ seeds the demo credential users (85.70ms)
+demos/social-auth test:   ✓ stores verifiable password hashes (120.54ms)
+demos/bookstore test: ▶ bookstore database seed (145.68ms) [server]
+demos/bookstore test:   ✓ stores verifiable password hashes for seeded users (107.93ms)
+demos/bookstore test:   ✓ does not duplicate journal entries or seed data when migrated again (37.74ms)
+demos/social-auth test: ▶ social-auth router (475.08ms) [server]
+demos/social-auth test:   ✓ renders the login page at the home route (69.74ms)
+demos/social-auth test:   ✓ renders disabled social buttons when provider env vars are missing (43.58ms)
+demos/social-auth test:   ✓ logs in with credentials and shows the protected account page (62.06ms)
+demos/social-auth test:   ✓ shows an error after invalid credentials (51.78ms)
+demos/social-auth test:   ✓ completes external Google login and persists the linked account (44.91ms)
+demos/social-auth test:   ✓ creates a new user during signup and signs them in (64.09ms)
+demos/social-auth test:   ✓ creates a reset token and allows resetting the password (77.42ms)
+demos/social-auth test:   ✓ logs out and redirects subsequent protected requests back to home (61.51ms)
+demos/social-auth test: ℹ files 4
+demos/social-auth test: ℹ suites 4
+demos/social-auth test: ℹ tests 13
+demos/social-auth test: ℹ pass 13
+demos/social-auth test: ℹ fail 0
+demos/social-auth test: ℹ duration_ms 2911.61159
+demos/social-auth test: Done
+demos/timeboxer test$ NODE_ENV=test remix test
+demos/frames test: ▶ router
+demos/frames test:   ✔ streams frame fallbacks and resolved templates incrementally (283.45025ms)
+demos/frames test: ✔ router (284.700083ms)
+demos/frames test: ℹ tests 1
+demos/frames test: ℹ suites 1
+demos/frames test: ℹ pass 1
+demos/frames test: ℹ fail 0
+demos/frames test: ℹ cancelled 0
+demos/frames test: ℹ skipped 0
+demos/frames test: ℹ todo 0
+demos/frames test: ℹ duration_ms 288.538625
+demos/frames test: ℹ files 0
+demos/frames test: ℹ suites 0
+demos/frames test: ℹ tests 0
+demos/frames test: ℹ pass 0
+demos/frames test: ℹ fail 0
+demos/frames test: ℹ duration_ms 2983.88983
+demos/frames test: Done
+demos/unpkg test$ remix test
+demos/unpkg test: Found 4 test file(s) (4 server, 0 browser, 0 e2e)
+demos/unpkg test: Running server tests:
+demos/timeboxer test: Found 9 test file(s) (8 server, 1 browser, 0 e2e)
+demos/timeboxer test: [remix:test] Test server running on http://localhost:39523
+demos/timeboxer test: Running server tests:
+demos/unpkg test: ▶ formatBytes (0.53ms) [server]
+demos/unpkg test:   ✓ returns dash for zero bytes (0.39ms)
+demos/unpkg test:   ✓ formats bytes (0.07ms)
+demos/unpkg test:   ✓ formats kilobytes (0.04ms)
+demos/unpkg test:   ✓ formats megabytes (0.03ms)
+demos/bookstore test: ▶ router (611.14ms) [server]
+demos/bookstore test:   ✓ responds to basic GET request (607.10ms)
+demos/bookstore test:   ✓ returns 404 for unknown routes (4.04ms)
+demos/sse test: ▶ router (2252.01ms) [server]
+demos/sse test:   ▶ home page (225.23ms) [server]
+demos/sse test:     ✓ returns 200 (205.07ms)
+demos/sse test:     ✓ returns HTML content (11.88ms)
+demos/sse test:     ✓ includes expected content (4.79ms)
+demos/sse test:     ✓ shows limit info when limit param is provided (3.49ms)
+demos/sse test:   ▶ messages endpoint (2008.59ms) [server]
+demos/sse test:     ✓ returns SSE content type (3.30ms)
+demos/sse test:     ✓ streams messages with limit (2005.29ms)
+demos/sse test:   ▶ POST requests (18.19ms) [server]
+demos/sse test:     ✓ returns 404 for non-GET requests to home (7.58ms)
+demos/sse test:     ✓ returns 404 for non-GET requests to messages (10.61ms)
+demos/unpkg test: ▶ mime type helpers (8.92ms) [server]
+demos/unpkg test:   ✓ detects display MIME types for package files (8.54ms)
+demos/unpkg test:   ✓ gets extensions from filenames (0.09ms)
+demos/unpkg test:   ✓ detects image MIME types supported by inline previews (0.05ms)
+demos/unpkg test:   ✓ detects filenames that should be treated as text (0.05ms)
+demos/unpkg test:   ✓ detects likely text bytes (0.15ms)
+demos/unpkg test:   ✓ uses either the filename or content bytes for text previews (0.04ms)
+demos/sse test: ℹ files 1
+demos/sse test: ℹ suites 3
+demos/sse test: ℹ tests 8
+demos/sse test: ℹ pass 8
+demos/sse test: ℹ fail 0
+demos/sse test: ℹ duration_ms 5040.28759
+demos/sse test: Done
+docs/shared test$ remix test
+demos/bookstore test: ▶ books handlers (601.10ms) [server]
+demos/bookstore test:   ✓ GET /books returns list of books (584.37ms)
+demos/bookstore test:   ✓ GET /books/:slug returns book details (13.45ms)
+demos/bookstore test:   ✓ GET /books/:slug returns 404 for non-existent book (3.28ms)
+demos/bookstore test: ▶ auth handlers (806.08ms) [server]
+demos/bookstore test:   ✓ POST /login with valid credentials sets session cookie and redirects (570.93ms)
+demos/bookstore test:   ✓ POST /login with invalid credentials redirects back to login with error (71.62ms)
+demos/bookstore test:   ✓ POST /login does not treat wildcard characters as email matches (14.12ms)
+demos/bookstore test:   ✓ flash error message is cleared after being displayed once (33.62ms)
+demos/bookstore test:   ✓ POST /register creates new user and sets session (35.05ms)
+demos/bookstore test:   ✓ accessing protected route redirects to login with returnTo parameter (2.35ms)
+demos/bookstore test:   ✓ successful login with returnTo redirects to original destination (39.78ms)
+demos/bookstore test:   ✓ failed login with returnTo preserves returnTo parameter (11.50ms)
+demos/bookstore test:   ✓ POST /reset-password with mismatched passwords redirects back with error (15.47ms)
+demos/bookstore test:   ✓ POST /reset-password with invalid token redirects back with error (11.63ms)
+demos/bookstore test: ▶ root controller (660.97ms) [server]
+demos/bookstore test:   ✓ GET / returns home page (564.18ms)
+demos/bookstore test:   ✓ GET /uploads/*key serves uploaded files from storage (71.15ms)
+demos/bookstore test:   ✓ GET /uploads/*key returns 404 for non-existent files (4.85ms)
+demos/bookstore test:   ✓ GET /uploads/*key serves files with correct content type (20.79ms)
+demos/bookstore test: ▶ admin handlers (710.86ms) [server]
+demos/bookstore test:   ✓ GET /admin redirects when not authenticated (608.57ms)
+demos/bookstore test:   ✓ GET /admin returns 403 for non-admin users (102.29ms)
+demos/bookstore test: ▶ checkout handlers (478.16ms) [server]
+demos/bookstore test:   ✓ GET /checkout redirects when not authenticated (410.66ms)
+demos/bookstore test:   ✓ POST /checkout creates order when authenticated with items in cart (67.50ms)
+demos/bookstore test: ▶ contact controller (416.51ms) [server]
+demos/bookstore test:   ✓ POST /contact returns success message (416.51ms)
+demos/bookstore test: ▶ admin books handlers (463.31ms) [server]
+demos/bookstore test:   ✓ POST /admin/books creates new book when admin (463.31ms)
+demos/timeboxer test: ▶ createScheduleIcs (0.86ms) [server]
+demos/timeboxer test:   ✓ escapes text values for calendar and event fields (0.45ms)
+demos/timeboxer test:   ✓ folds long lines (0.10ms)
+demos/timeboxer test:   ✓ maps every weekday to the matching BYDAY code (0.14ms)
+demos/timeboxer test:   ✓ renders an empty schedule as a calendar without events (0.05ms)
+demos/timeboxer test:   ✓ uses injected time for deterministic timestamps and event dates (0.05ms)
+demos/timeboxer test:   ✓ creates independent events for duplicate block names (0.07ms)
+demos/timeboxer test: ▶ ScheduleLayout (5.71ms) [server]
+demos/timeboxer test:   ✓ moves a block later in a stack by reordering the stack (1.80ms)
+demos/timeboxer test:   ✓ moves a block to the dragged cell and shifts the destination chain (0.30ms)
+demos/timeboxer test:   ✓ moves a block upward and slides the collided block into the nearest open slot (0.10ms)
+demos/timeboxer test:   ✓ keeps a taller dragged block anchored when moving up into a shorter block (0.12ms)
+demos/timeboxer test:   ✓ moves a block down and slides the collided block into the nearest open slot (0.09ms)
+demos/timeboxer test:   ✓ moves down through a stack and slides the collided item into the nearest open slot (0.08ms)
+demos/timeboxer test:   ✓ swaps days for a clean horizontal move without mutating the source blocks (0.13ms)
+demos/timeboxer test:   ✓ does not swap horizontally when the displaced block would hit a third block (0.09ms)
+demos/timeboxer test:   ✓ moves across the week without filling the source gap (0.07ms)
+demos/timeboxer test:   ✓ moves selected adjacent blocks together as a compound block (0.44ms)
+demos/timeboxer test:   ✓ keeps grouped block offsets when moving selected blocks across days (0.12ms)
+demos/timeboxer test:   ✓ marks grouped moves unresolved when selected blocks span multiple days (0.05ms)
+demos/timeboxer test:   ✓ marks impossible resizes unresolved without returning an overlapping layout (0.15ms)
+demos/timeboxer test:   ✓ keeps a moved stack within configured visible bounds (0.18ms)
+demos/timeboxer test:   ✓ does not squeeze collided blocks by default (0.05ms)
+demos/timeboxer test:   ✓ moves a block deeper and uses nearby open space for displaced items (0.07ms)
+demos/timeboxer test:   ✓ pushes blocks down when resizing the bottom edge into them (0.05ms)
+demos/timeboxer test:   ✓ pushes blocks up when resizing the top edge into them (0.06ms)
+demos/timeboxer test:   ✓ copies blocks across days as independent events and reflows each target day (0.16ms)
+demos/timeboxer test:   ✓ keeps successful horizontal copies when another target day is unresolved (1.19ms)
+demos/timeboxer test:   ✓ honors exact first and last day time boundaries when moving (0.17ms)
+demos/timeboxer test:   ✓ clamps moves outside the start and end of the day (0.06ms)
+demos/timeboxer test:   ✓ snaps resize minutes to slots while preserving minimum duration (0.06ms)
+demos/timeboxer test:   ✓ clamps resize edges to configured visible day bounds (0.05ms)
+demos/timeboxer test:   ✓ deletes one block without changing the others (0.05ms)
+demos/unpkg test: ▶ parsePackagePath (1.12ms) [server]
+demos/unpkg test:   ✓ parses simple package name (0.47ms)
+demos/unpkg test:   ✓ parses package name with version (0.05ms)
+demos/unpkg test:   ✓ parses package name with partial version (0.03ms)
+demos/unpkg test:   ✓ parses package with file path (0.04ms)
+demos/unpkg test:   ✓ parses package with version and file path (0.04ms)
+demos/unpkg test:   ✓ parses package with nested file path (0.03ms)
+demos/unpkg test:   ✓ parses scoped package name (0.03ms)
+demos/unpkg test:   ✓ parses scoped package with version (0.04ms)
+demos/unpkg test:   ✓ parses scoped package with file path (0.04ms)
+demos/unpkg test:   ✓ parses scoped package with version and file path (0.05ms)
+demos/unpkg test:   ✓ throws for invalid scoped package path (0.24ms)
+demos/unpkg test:   ✓ parses URL-encoded caret semver range (0.03ms)
+demos/unpkg test:   ✓ parses URL-encoded tilde semver range (0.02ms)
+demos/unpkg test:   ✓ parses unencoded semver range (0.02ms)
+demos/unpkg test: ▶ resolveVersion (3.24ms) [server]
+demos/unpkg test:   ✓ resolves dist-tag to version (0.06ms)
+demos/unpkg test:   ✓ resolves exact version (0.02ms)
+demos/unpkg test:   ✓ resolves partial major version to highest match (1.81ms)
+demos/unpkg test:   ✓ resolves partial major.minor version to highest match (0.64ms)
+demos/unpkg test:   ✓ throws for non-existent version (0.15ms)
+demos/unpkg test:   ✓ throws for non-existent partial version (0.15ms)
+demos/unpkg test:   ✓ resolves caret range to highest matching version (0.11ms)
+demos/unpkg test:   ✓ resolves tilde range to highest matching version (0.11ms)
+demos/unpkg test:   ✓ resolves greater-than-or-equal range (0.06ms)
+demos/unpkg test:   ✓ resolves complex semver range (0.06ms)
+demos/unpkg test:   ✓ throws for semver range with no matching version (0.07ms)
+demos/unpkg test: ▶ isFullyResolvedVersion (0.06ms) [server]
+demos/unpkg test:   ✓ returns true for exact version in versions (0.02ms)
+demos/unpkg test:   ✓ returns false for dist-tag (0.01ms)
+demos/unpkg test:   ✓ returns false for partial version (0.01ms)
+demos/unpkg test:   ✓ returns false for semver range (0.01ms)
+demos/unpkg test:   ✓ returns false for non-existent version (0.01ms)
+demos/unpkg test: ▶ getFilesAtPath (7.37ms) [server]
+demos/unpkg test:   ✓ lists root level files and directories (7.18ms)
+demos/unpkg test:   ✓ lists files in src directory (0.07ms)
+demos/unpkg test:   ✓ lists files in nested directory (0.02ms)
+demos/unpkg test:   ✓ lists files in dist directory (0.03ms)
+demos/unpkg test:   ✓ returns empty for non-existent directory (0.01ms)
+demos/unpkg test:   ✓ handles trailing slash in path (0.01ms)
+demos/unpkg test:   ✓ handles leading slash in path (0.01ms)
+demos/unpkg test:   ✓ sorts directories before files (0.03ms)
+demos/unpkg test: ▶ Error classes (0.10ms) [server]
+demos/unpkg test:   ✓ PackageNotFoundError has correct properties (0.06ms)
+demos/unpkg test:   ✓ VersionNotFoundError has correct properties (0.02ms)
+demos/unpkg test:   ✓ InvalidPathError has correct properties (0.02ms)
+demos/timeboxer test: ▶ schedule persistence lifecycle (22.55ms) [server]
+demos/timeboxer test:   ✓ excludes soft-deleted schedules from list, get, and export lookup paths (10.09ms)
+demos/timeboxer test:   ✓ keeps deleted schedule names reserved for the same user (4.00ms)
+demos/timeboxer test:   ✓ cascades schedules and blocks when deleting a user (3.69ms)
+demos/timeboxer test:   ✓ replaces schedule blocks by client id and deletes omitted blocks (4.77ms)
+demos/unpkg test: ▶ router (94.85ms) [server]
+demos/unpkg test:   ▶ home page (5.34ms) [server]
+demos/unpkg test:     ✓ returns 200 (3.86ms)
+demos/unpkg test:     ✓ returns HTML content (0.85ms)
+demos/unpkg test:     ✓ includes example links (0.63ms)
+demos/unpkg test:   ▶ browse route (48.40ms) [server]
+demos/unpkg test:     ✓ returns 404 for invalid package path (0.87ms)
+demos/unpkg test:     ✓ returns 404 for non-existent package (0.97ms)
+demos/unpkg test:     ✓ returns package directory listing for valid package (26.30ms)
+demos/unpkg test:     ✓ returns file content for valid file path (11.35ms)
+demos/unpkg test:     ✓ shows index.js in package root (8.91ms)
+demos/unpkg test:   ▶ POST requests (0.34ms) [server]
+demos/unpkg test:     ✓ returns 404 for non-GET requests (0.34ms)
+demos/unpkg test:   ▶ version redirects (40.78ms) [server]
+demos/unpkg test:     ✓ redirects package without version to latest (1.13ms)
+demos/unpkg test:     ✓ redirects dist-tag "latest" to resolved version (1.82ms)
+demos/unpkg test:     ✓ redirects partial major version to highest match (7.48ms)
+demos/unpkg test:     ✓ redirects partial major.minor version to highest match (4.64ms)
+demos/unpkg test:     ✓ redirects caret semver range to highest compatible version (2.08ms)
+demos/unpkg test:     ✓ redirects tilde semver range to highest patch version (1.19ms)
+demos/unpkg test:     ✓ redirects URL-encoded caret range (2.18ms)
+demos/unpkg test:     ✓ redirects URL-encoded tilde range (2.45ms)
+demos/unpkg test:     ✓ redirects complex semver range (3.95ms)
+demos/unpkg test:     ✓ preserves file path in redirect (2.36ms)
+demos/unpkg test:     ✓ does not redirect fully resolved version (11.49ms)
+demos/unpkg test: ℹ files 4
+demos/unpkg test: ℹ suites 11
+demos/unpkg test: ℹ tests 71
+demos/unpkg test: ℹ pass 71
+demos/unpkg test: ℹ fail 0
+demos/unpkg test: ℹ duration_ms 2006.94829
+demos/unpkg test: Done
+template test$ NODE_ENV=test node --import remix/node-tsx --test
+template test: ℹ tests 0
+template test: ℹ suites 0
+template test: ℹ pass 0
+template test: ℹ fail 0
+template test: ℹ cancelled 0
+template test: ℹ skipped 0
+template test: ℹ todo 0
+template test: ℹ duration_ms 14.675417
+template test: Done
+docs/shared test: Found 22 test file(s) (17 server, 5 browser, 0 e2e)
+docs/shared test: [remix:test] Test server running on http://localhost:38963
+docs/shared test: Running server tests:
+demos/bookstore test: ▶ account handlers (209.72ms) [server]
+demos/bookstore test:   ✓ GET /account redirects to login when not authenticated (114.55ms)
+demos/bookstore test:   ✓ GET /account returns account page when authenticated (41.63ms)
+demos/bookstore test:   ✓ GET /account/orders/:orderId shows order for authenticated user (20.40ms)
+demos/bookstore test:   ✓ GET /account/orders shows item counts from normalized order items (33.13ms)
+demos/bookstore test: ▶ cart handlers (1611.93ms) [server]
+demos/bookstore test:   ✓ POST /cart/api/add adds book to cart (473.21ms)
+demos/bookstore test:   ✓ GET /cart shows cart items (63.14ms)
+demos/bookstore test:   ✓ cart persists state across requests with same session (17.72ms)
+demos/bookstore test:   ✓ GET /fragments/cart-items renders table fragment for cart items (7.46ms)
+demos/bookstore test:   ✓ GET /fragments/cart-items renders totals and actions (14.02ms)
+demos/bookstore test:   ✓ GET /fragments/cart-items renders empty state when cart is empty (2.77ms)
+demos/bookstore test:   ✓ PUT /cart/api/update returns 204 when redirect is none (1008.57ms)
+demos/bookstore test:   ✓ DELETE /cart/api/remove returns 204 when redirect is none (25.06ms)
+demos/bookstore test: Running tests for project `chromium`:
+docs/shared test: ▶ getActiveHeadingIndex (0.36ms) [server]
+docs/shared test:   ✓ selects the first heading before any heading crosses the activation line (0.27ms)
+docs/shared test:   ✓ selects the last heading that crossed the activation line (0.04ms)
+docs/shared test:   ✓ selects the final heading at the end of the document (0.02ms)
+docs/shared test:   ✓ returns -1 when there are no headings (0.02ms)
+docs/shared test: ▶ shouldLoadPagefind() (0.55ms) [server]
+docs/shared test:   ✓ loads Pagefind outside development before its generated module exists (0.34ms)
+docs/shared test:   ✓ omits Pagefind in development when its generated module is missing (0.20ms)
+docs/shared test: ▶ Icon (5.90ms) [server]
+docs/shared test:   ✓ renders a decorative reference to the shared SVG sprite (5.90ms)
+docs/shared test: ▶ PagefindElements (2.50ms) [server]
+docs/shared test:   ✓ renders config and modal with the provided asset paths (2.50ms)
+docs/shared test: ▶ DocsTableOfContents (3.03ms) [server]
+docs/shared test:   ✓ renders the first heading as current and indents h3 links (3.03ms)
+docs/shared test: { visited: [ '/', '/follow.md' ] }
+docs/shared test: ▶ crawl(router) (105.00ms) [server]
+docs/shared test:   ✓ visits the root path by default (23.60ms)
+docs/shared test:   ✓ visits custom initial paths (2.58ms)
+docs/shared test:   ✓ uses correct file paths based on content type (3.61ms)
+docs/shared test:   ✓ does not follow links when spider is false (6.41ms)
+docs/shared test:   ✓ follows links by default (spider is true) (1.54ms)
+docs/shared test:   ✓ always queues CSS, JS, and image assets regardless of spider mode (3.52ms)
+docs/shared test:   ✓ skips absolute http/https URLs by default (0.37ms)
+docs/shared test:   ✓ skips protocol-relative URLs by default (0.22ms)
+docs/shared test:   ✓ skips non-navigable href schemes (0.58ms)
+docs/shared test:   ✓ does not follow links with rel="nofollow" (0.72ms)
+docs/shared test:   ✓ queues preload/prefetch link elements (1.95ms)
+docs/shared test:   ✓ resolves relative hrefs against the current page URL (0.44ms)
+docs/shared test:   ✓ throws on non-2xx responses (0.41ms)
+docs/shared test:   ✓ fetches pages concurrently when concurrency > 1 (42.63ms)
+docs/shared test:   ✓ does not visit the same path twice (2.29ms)
+docs/shared test:   ✓ follows same-site link[rel="alternate"] (3.12ms)
+docs/shared test:   ✓ skips cross-origin link[rel="alternate"] hrefs (0.63ms)
+docs/shared test:   ✓ does not follow links on pages with <meta name="robots" content="nofollow"> (0.91ms)
+docs/shared test:   ✓ does not follow links on pages with <meta name="robots" content="noindex, nofollow"> (2.91ms)
+docs/shared test:   ✓ follows links on matching pages when page-level nofollow is ignored (2.66ms)
+docs/shared test:   ✓ still honors page-level nofollow when ignorePageNofollow does not match (1.29ms)
+docs/shared test:   ✓ does not follow links on pages with <meta name="googlebot" content="nofollow"> (0.40ms)
+docs/shared test:   ✓ still follows links on pages without a meta robots nofollow directive (0.45ms)
+docs/shared test:   ✓ still queues assets even when meta robots nofollow prevents link following (0.40ms)
+docs/shared test:   ✓ does not follow link[rel="alternate nofollow"] (1.36ms)
+docs/shared test: ▶ docsMarkdownContentCss (36.32ms) [server]
+docs/shared test:   ✓ serializes the shared prose mix (36.32ms)
+docs/shared test: ▶ DocsShell (20.90ms) [server]
+docs/shared test:   ✓ renders site-owned content into shared shell regions (20.90ms)
+docs/shared test: ▶ createDocsNavigationLinks (0.85ms) [server]
+docs/shared test:   ✓ returns the six absolute links in navigation order (0.74ms)
+docs/shared test:   ✓ retains order when a caller replaces an existing link (0.10ms)
+docs/shared test: ▶ DocsHeader (40.06ms) [server]
+docs/shared test:   ✓ renders the Remix brand and a native mobile menu (25.60ms)
+docs/shared test:   ✓ renders the mobile menu reveal animation (2.25ms)
+docs/shared test:   ✓ renders one responsive search trigger for Pagefind focus ownership (3.97ms)
+docs/shared test:   ✓ renders the compact search trigger when enabled (5.25ms)
+docs/shared test:   ✓ omits search triggers when search is disabled (2.99ms)
+docs/shared test: ▶ DocsFooter (16.18ms) [server]
+docs/shared test:   ✓ renders the Remix brand, social links, and legal copy (16.18ms)
+demos/bookstore test: ▶ RestfulForm (18.50ms) [browser:chromium]
+demos/bookstore test:   ✓ renders a GET form when method is not specified (7.30ms)
+demos/bookstore test:   ✓ renders a GET form when method is GET (3.80ms)
+demos/bookstore test:   ✓ renders a POST form when method is POST (0.80ms)
+demos/bookstore test:   ✓ renders a POST form with hidden _method input when method is PUT (0.70ms)
+demos/bookstore test:   ✓ renders a POST form with hidden _method input when method is DELETE (0.30ms)
+demos/bookstore test:   ✓ renders a POST form with hidden _method input when method is PATCH (0.30ms)
+demos/bookstore test:   ✓ uses a custom methodOverrideField name (0.20ms)
+demos/bookstore test:   ✓ passes additional props to the form element (4.30ms)
+demos/bookstore test:   ✓ renders children inside the form (0.40ms)
+demos/bookstore test:   ✓ renders children alongside the hidden method input for non-POST methods (0.40ms)
+docs/shared test: ▶ parse()
+docs/shared test:   ✔ parses all elements from a realistic HTML document (10.485209ms)
+docs/shared test:   ✔ parses the correct number of head elements (3.498167ms)
+docs/shared test:   ✔ parses the correct number of body elements (2.939209ms)
+docs/shared test:   ✔ parses the correct number of div elements (0.9115ms)
+docs/shared test:   ✔ parses the correct number of anchor elements (3.340209ms)
+docs/shared test:   ✔ parses the correct number of img elements (0.91375ms)
+docs/shared test:   ✔ parses the correct number of script elements (0.794083ms)
+docs/shared test:   ✔ parses the correct number of link elements (2.436333ms)
+docs/shared test:   ✔ parses the correct number of meta elements (6.339625ms)
+docs/shared test:   ✔ parses the correct number of section elements (4.538417ms)
+docs/shared test:   ✔ parses the correct number of list items (2.405916ms)
+docs/shared test:   ✔ extracts href attributes from anchor elements (1.207792ms)
+docs/shared test:   ✔ extracts src attributes from img elements (0.470958ms)
+docs/shared test:   ✔ parses a simple HTML snippet correctly (0.100334ms)
+docs/shared test:   ✔ handles self-closing tags (0.073334ms)
+docs/shared test:   ✔ skips HTML comments (0.088791ms)
+docs/shared test:   ✔ handles boolean attributes (0.102792ms)
+docs/shared test:   ✔ serializes the parsed tree instead of the flat element list (0.157125ms)
+docs/shared test:   ✔ serializes attribute and innerHTML mutations in place (0.135708ms)
+docs/shared test:   ✔ preserves comments in the serialized tree when enabled (0.103625ms)
+docs/shared test: ✔ parse() (44.2015ms)
+docs/shared test: ℹ tests 20
+docs/shared test: ℹ suites 1
+docs/shared test: ℹ pass 20
+docs/shared test: ℹ fail 0
+docs/shared test: ℹ cancelled 0
+docs/shared test: ℹ skipped 0
+docs/shared test: ℹ todo 0
+docs/shared test: ℹ duration_ms 58.262334
+demos/timeboxer test: ▶ schedule authorization (288.36ms) [server]
+demos/timeboxer test:   ✓ does not expose another user active schedule (288.36ms)
+docs/shared test: ▶ discoverPublicModuleHrefs() (11.26ms) [server]
+docs/shared test:   ✓ discovers modules inside colocated public directories with their preloads (11.26ms)
+docs/shared test: Crawled / -> ./../../../tmp/remix-docs-prerender-9sBa96/output/index.html
+docs/shared test: Crawled /about -> ./../../../tmp/remix-docs-prerender-9sBa96/output/about/index.html
+demos/timeboxer test: ▶ security middleware (525.53ms) [server]
+demos/timeboxer test:   ✓ rejects auth mutations with missing or invalid CSRF tokens (242.01ms)
+demos/timeboxer test:   ✓ rejects schedule mutations with missing or invalid CSRF tokens (162.20ms)
+demos/timeboxer test:   ✓ accepts valid CSRF tokens for auth and schedule mutations (121.32ms)
+docs/shared test: Crawled /start -> ./../../../tmp/remix-docs-prerender-8tSRL4/output/start/index.html
+docs/shared test: ▶ prerender(router, options) (34.93ms) [server]
+docs/shared test:   ✓ copies public directories and writes crawled responses (25.58ms)
+docs/shared test:   ✓ passes site-specific options to the crawler (7.74ms)
+docs/shared test:   ✓ runs finalization when prerendering fails (1.61ms)
+demos/timeboxer test: ▶ schedule endpoints (566.26ms) [server]
+demos/timeboxer test:   ✓ requires authentication (41.65ms)
+demos/timeboxer test:   ✓ creates schedules and replaces the full schedule document (278.78ms)
+demos/timeboxer test:   ✓ lists schedules by creation date with newest first (88.84ms)
+demos/timeboxer test:   ✓ deletes schedules (72.09ms)
+demos/timeboxer test:   ✓ treats duplicated block names as independent events (84.90ms)
+demos/timeboxer test: ▶ schedule input validation (649.36ms) [server]
+demos/timeboxer test:   ✓ rejects invalid JSON request bodies (161.01ms)
+demos/timeboxer test:   ✓ rejects invalid integer schedule ids (133.48ms)
+demos/timeboxer test:   ✓ rejects invalid day and time bounds without changing the schedule (95.47ms)
+demos/timeboxer test:   ✓ rejects zero and negative duration blocks (67.15ms)
+demos/timeboxer test:   ✓ accepts maximum name, id, and color lengths and rejects longer values (78.21ms)
+demos/timeboxer test:   ✓ accepts nullable color and adjacent blocks (56.28ms)
+demos/timeboxer test:   ✓ rolls back failed replacements and keeps the persisted revision unchanged (57.76ms)
+demos/timeboxer test: ▶ auth endpoints (648.63ms) [server]
+demos/timeboxer test:   ✓ validates signup credentials (62.49ms)
+demos/timeboxer test:   ✓ rejects duplicate usernames (110.84ms)
+demos/timeboxer test:   ✓ signs up and starts a session (59.84ms)
+demos/timeboxer test:   ✓ flashes invalid login credentials and renders the error (134.67ms)
+demos/timeboxer test:   ✓ logs in and starts a session (120.45ms)
+demos/timeboxer test:   ✓ logs out and clears the session (60.46ms)
+demos/timeboxer test:   ✓ redirects authenticated login and signup pages home (50.29ms)
+demos/timeboxer test:   ✓ renders account status when signed in and redirects anonymous users to login (49.58ms)
+docs/shared test: ▶ looksLikeMeta (0.27ms) [server]
+docs/shared test:   ✓ treats bracket-opened info strings as meta, not languages (0.22ms)
+docs/shared test:   ✓ treats key=value info strings as meta (0.04ms)
+docs/shared test:   ✓ treats plain language names as languages (0.02ms)
+docs/shared test: ▶ readCodeBlockMetaParameter (0.34ms) [server]
+docs/shared test:   ✓ reads a bare unquoted value (0.10ms)
+docs/shared test:   ✓ reads a double-quoted value (0.07ms)
+docs/shared test:   ✓ reads a single-quoted value (0.02ms)
+docs/shared test:   ✓ returns undefined when the parameter is absent (0.03ms)
+docs/shared test:   ✓ does not match a parameter name that is a prefix of another (0.08ms)
+docs/shared test:   ✓ matches the parameter at the start of the meta string (0.04ms)
+docs/shared test: ▶ readHighlightedLines (0.92ms) [server]
+docs/shared test:   ✓ collects a bare brace group (0.55ms)
+docs/shared test:   ✓ collects a bare bracket group (0.14ms)
+docs/shared test:   ✓ collects a highlight= parameter (0.04ms)
+docs/shared test:   ✓ collects a lines= parameter (0.04ms)
+docs/shared test:   ✓ combines every supported form in one meta string (0.06ms)
+docs/shared test:   ✓ ignores zero and negative line numbers (0.04ms)
+docs/shared test:   ✓ ignores an inverted range (0.03ms)
+docs/shared test:   ✓ returns an empty set for empty meta (0.02ms)
+docs/shared test: ▶ addLineNumbers (0.09ms) [server]
+docs/shared test:   ✓ strips surrounding brackets or braces before parsing (0.03ms)
+docs/shared test:   ✓ splits a comma-separated spec into individual lines and ranges (0.03ms)
+docs/shared test:   ✓ ignores blank segments (0.02ms)
+docs/shared test:   ✓ ignores undefined and whitespace-only specs (0.01ms)
+docs/shared test: ▶ readCodeBlockInfo (0.28ms) [server]
+docs/shared test:   ✓ defaults a missing language to TypeScript (0.09ms)
+docs/shared test:   ✓ defaults an empty language to TypeScript (0.05ms)
+docs/shared test:   ✓ keeps a real language name (0.02ms)
+docs/shared test:   ✓ reclaims a bracket info string as meta when no language is given (0.04ms)
+docs/shared test:   ✓ reads the filename parameter (0.02ms)
+docs/shared test:   ✓ falls back to the title parameter when filename is absent (0.02ms)
+docs/shared test:   ✓ omits filename when neither filename nor title is present (0.02ms)
+docs/shared test:   ✓ parses highlighted lines alongside a filename (0.03ms)
+docs/shared test: ▶ parseMarkdownFrontmatter (3.55ms) [server]
+docs/shared test:   ✓ separates typed attributes from the Markdown body (3.55ms)
+docs/shared test: ▶ parseMarkdownDocument (9.10ms) [server]
+docs/shared test:   ✓ parses the frontmatter body into a Markdown root (9.10ms)
+docs/shared test: ▶ addHeadingIds / readMarkdownHeadingsFromRoot (17.66ms) [server]
+docs/shared test:   ✓ collects h2 and h3 headings with their depth (11.27ms)
+docs/shared test:   ✓ slugifies section ids from heading text (1.11ms)
+docs/shared test:   ✓ prefers an explicit {#id} over the slugified text (0.81ms)
+docs/shared test:   ✓ strips the explicit id marker from the rendered title (0.59ms)
+docs/shared test:   ✓ disambiguates duplicate heading slugs (0.85ms)
+docs/shared test:   ✓ falls back to the section id for an empty heading (0.48ms)
+docs/shared test:   ✓ falls back to the section id when the title has no slug characters (0.38ms)
+docs/shared test:   ✓ renders inline markdown in section titleHtml (2.16ms)
+docs/shared test: ▶ renderMarkdownHtml (12.00ms) [server]
+docs/shared test:   ✓ preserves raw HTML (9.08ms)
+docs/shared test:   ✓ renders linked headings and transforms links (2.92ms)
+docs/shared test: Running tests for project `chromium`:
+docs/shared test: ▶ CodeBlockCopyButtons (3.00ms) [browser:chromium]
+docs/shared test:   ✓ restarts after navigation and cancels stale clipboard work (3.00ms)
+docs/shared test: ▶ DocsHeader mobile menu (18.30ms) [browser:chromium]
+docs/shared test:   ✓ keeps search in the top header on mobile (14.50ms)
+docs/shared test:   ✓ opens and closes without application JavaScript (3.80ms)
+docs/shared test: ▶ startDocsShellBehavior (5.80ms) [browser:chromium]
+docs/shared test:   ✓ synchronizes collapsed shell accessibility state (3.10ms)
+docs/shared test:   ✓ preserves collapsed state when the shell is reconnected (0.60ms)
+docs/shared test:   ✓ opens mobile navigation panels from the sub-header (0.90ms)
+docs/shared test:   ✓ tracks the sticky mobile navigation edge while scrolling (0.20ms)
+docs/shared test:   ✓ remeasures the sticky edge before opening a mobile panel (0.50ms)
+docs/shared test:   ✓ keeps the navigation panel open while page navigation is pending (0.50ms)
+docs/shared test: ▶ initial table of contents selection (0.80ms) [browser:chromium]
+docs/shared test:   ✓ uses the restored viewport position before hydration (0.80ms)
+docs/shared test: ▶ startTableOfContentsBehavior (31.70ms) [browser:chromium]
+docs/shared test:   ✓ synchronizes the current link after scrolling (14.10ms)
+docs/shared test:   ✓ preserves fractional indicator geometry (16.30ms)
+docs/shared test:   ✓ restarts when navigation re-renders the client entry (1.00ms)
+docs/shared test:   ✓ restores server-rendered state during cleanup (0.30ms)
+docs/shared test: ▶ Pagefind search behavior (1.00ms) [browser:chromium]
+docs/shared test:   ✓ opens search from either trigger and restores focus when the modal closes (1.00ms)
+docs/shared test: ℹ files 21
+docs/shared test: ℹ suites 28
+docs/shared test: ℹ tests 104
+docs/shared test: ℹ pass 104
+docs/shared test: ℹ fail 0
+docs/shared test: ℹ duration_ms 5181.50667
+docs/shared test: Done
+demos/bookstore test: ▶ e2e (2431.49ms) [e2e:chromium]
+demos/bookstore test:   ✓ adds to cart (2431.49ms)
+demos/bookstore test: Running tests for project `firefox`:
+demos/bookstore test: ▶ RestfulForm (4.00ms) [browser:firefox]
+demos/bookstore test:   ✓ renders a GET form when method is not specified (1.00ms)
+demos/bookstore test:   ✓ renders a GET form when method is GET (0.00ms)
+demos/bookstore test:   ✓ renders a POST form when method is POST (1.00ms)
+demos/bookstore test:   ✓ renders a POST form with hidden _method input when method is PUT (0.00ms)
+demos/bookstore test:   ✓ renders a POST form with hidden _method input when method is DELETE (1.00ms)
+demos/bookstore test:   ✓ renders a POST form with hidden _method input when method is PATCH (0.00ms)
+demos/bookstore test:   ✓ uses a custom methodOverrideField name (0.00ms)
+demos/bookstore test:   ✓ passes additional props to the form element (0.00ms)
+demos/bookstore test:   ✓ renders children inside the form (1.00ms)
+demos/bookstore test:   ✓ renders children alongside the hidden method input for non-POST methods (0.00ms)
+demos/bookstore test: ▶ e2e (1955.83ms) [e2e:firefox]
+demos/bookstore test:   ✓ adds to cart (1955.83ms)
+demos/bookstore test: ℹ files 13
+demos/bookstore test: ℹ suites 13
+demos/bookstore test: ℹ tests 61
+demos/bookstore test: ℹ pass 61
+demos/bookstore test: ℹ fail 0
+demos/bookstore test: ℹ duration_ms 17722.87984
+demos/bookstore test: Done
+demos/timeboxer test: Running tests for project `chromium`:
+demos/timeboxer test: ▶ ScheduleGrid (214.10ms) [browser:chromium]
+demos/timeboxer test:   ✓ renders a weekly grid with time cells and scheduled blocks (53.70ms)
+demos/timeboxer test:   ✓ starts a focused draft when an empty time cell is clicked (34.10ms)
+demos/timeboxer test:   ✓ cancels a draft with Escape (33.80ms)
+demos/timeboxer test:   ✓ commits a named draft with Enter and saves the schedule (33.90ms)
+demos/timeboxer test:   ✓ deletes the selected block with the Delete key and saves the schedule (36.10ms)
+demos/timeboxer test:   ✓ renames an existing block on blur and saves the schedule (22.50ms)
+demos/timeboxer test: ℹ files 9
+demos/timeboxer test: ℹ suites 9
+demos/timeboxer test: ℹ tests 65
+demos/timeboxer test: ℹ pass 65
+demos/timeboxer test: ℹ fail 0
+demos/timeboxer test: ℹ duration_ms 15420.23459
+demos/timeboxer test: Done
+docs/guides test$ NODE_ENV=test remix test
+docs/api test$ remix test
+docs/api test: Found 3 test file(s) (3 server, 0 browser, 0 e2e)
+docs/api test: Running server tests:
+docs/guides test: Found 8 test file(s) (7 server, 1 browser, 0 e2e)
+docs/guides test: [remix:test] Test server running on http://localhost:45689
+docs/guides test: Running server tests:
+docs/api test: ▶ getVersionsForPickerFromTags() (1.53ms) [server]
+docs/api test:   ✓ returns stable Remix v3 tags sorted newest first (1.10ms)
+docs/api test:   ✓ falls back when there are no stable Remix v3 tags (0.11ms)
+docs/api test:   ✓ includes the active version when it has a matching prerelease tag (0.05ms)
+docs/api test:   ✓ throws when the active version has no matching git tag (0.27ms)
+docs/guides test: ▶ readChapterMetadata (1.19ms) [server]
+docs/guides test:   ✓ reads title, description, and chapter from frontmatter attributes (0.64ms)
+docs/guides test:   ✓ throws when title is missing (0.28ms)
+docs/guides test:   ✓ throws when description is missing (0.05ms)
+docs/guides test:   ✓ throws when a value is only whitespace (0.09ms)
+docs/guides test:   ✓ throws when a value is a non-string type (0.07ms)
+docs/guides test:   ✓ falls back to a generic location when filePath is absent (0.05ms)
+docs/guides test: ▶ ChapterNavigationContent (3.00ms) [server]
+docs/guides test:   ✓ renders numeric order and the chapter title (2.60ms)
+docs/guides test:   ✓ marks only the current chapter (0.40ms)
+docs/guides test: ▶ readMarkdownFrameReferences (25.94ms) [server]
+docs/guides test:   ✓ collects every ::frame directive with its source and line number (15.37ms)
+docs/guides test:   ✓ parses the raw source so line numbers stay aligned with the file (3.94ms)
+docs/guides test:   ✓ ignores directives that are not ::frame (2.03ms)
+docs/guides test:   ✓ skips frame directives with no src attribute (0.85ms)
+docs/guides test:   ✓ skips frame directives with a blank src attribute (1.09ms)
+docs/guides test:   ✓ returns no references for a chapter without frames (2.66ms)
+docs/guides test: ▶ splitMarkdownRoot (5.92ms) [server]
+docs/guides test:   ✓ emits markdown segments separated by frame segments (1.22ms)
+docs/guides test:   ✓ reports the starting line number for each markdown segment (1.82ms)
+docs/guides test:   ✓ does not emit empty markdown segments between adjacent frames (1.47ms)
+docs/guides test:   ✓ emits a single markdown segment when there are no frames (1.41ms)
+docs/api test: ▶ renderMarkdownFile() (175.13ms) [server]
+docs/api test:   ✓ adds linked heading IDs and collects h2 and h3 headings for the table of contents (24.48ms)
+docs/api test:   ✓ renders highlighted code blocks with the shared copy contract (135.34ms)
+docs/api test:   ✓ uses and removes explicit heading IDs (1.50ms)
+docs/api test:   ✓ preserves raw HTML (1.12ms)
+docs/api test:   ✓ rewrites API links for the active version (2.84ms)
+docs/api test:   ✓ links API symbols inside highlighted code (9.84ms)
+docs/guides test: ▶ ChapterCard (2.33ms) [server]
+docs/guides test:   ✓ formats the chapter order with two digits (2.33ms)
+docs/guides test: ▶ loadDocsChapterSummaries (194.66ms) [server]
+docs/guides test:   ✓ retains numeric chapter order for presentation-specific labels (194.66ms)
+docs/guides test: ▶ parseChapterFilename (1.19ms) [server]
+docs/guides test:   ✓ parses an order prefix and slug (0.53ms)
+docs/guides test:   ✓ parses a numeric slug segment (0.05ms)
+docs/guides test:   ✓ rejects a missing .md extension (0.16ms)
+docs/guides test:   ✓ rejects a file without an order prefix (0.10ms)
+docs/guides test:   ✓ rejects a zero order prefix (0.11ms)
+docs/guides test:   ✓ rejects an uppercase slug (0.12ms)
+docs/guides test:   ✓ rejects a non-markdown file (0.11ms)
+docs/guides test: ▶ root controller assets (21.03ms) [server]
+docs/guides test:   ✓ serves shared static assets at root URLs (9.71ms)
+docs/guides test:   ✓ serves source only from colocated public directories (6.03ms)
+docs/guides test:   ✓ serves an existing prerendered Pagefind asset in development (3.64ms)
+docs/guides test:   ✓ returns no content for a Pagefind asset that has not been prerendered (1.65ms)
+docs/guides test: ▶ docs responses (957.93ms) [server]
+docs/guides test:   ✓ renders no current chapter on the index (215.94ms)
+docs/guides test:   ✓ configures Pagefind around the searchable docs content (6.15ms)
+docs/guides test:   ✓ excludes chapter navigation chrome from the Pagefind index (729.02ms)
+docs/guides test:   ✓ marks exactly one chapter current on a chapter response (6.83ms)
+docs/guides test: Running tests for project `chromium`:
+docs/guides test: ▶ startChapterNavigationIndicator (6.80ms) [browser:chromium]
+docs/guides test:   ✓ moves the indicator from the previous to the destination chapter (6.40ms)
+docs/guides test:   ✓ keeps the current indicator for destinations outside the chapter list (0.20ms)
+docs/guides test:   ✓ restores the server-rendered state during cleanup (0.20ms)
+docs/guides test: ℹ files 8
+docs/guides test: ℹ suites 10
+docs/guides test: ℹ tests 38
+docs/guides test: ℹ pass 38
+docs/guides test: ℹ fail 0
+docs/guides test: ℹ duration_ms 4738.59834
+docs/guides test: Done
+docs/api test: ▶ createApiRouter() (1908.95ms) [server]
+docs/api test:   ✓ does not load generated docs output while creating the router (325.87ms)
+docs/api test:   ✓ uses root asset URLs when no asset version is configured (276.07ms)
+docs/api test:   ✓ keeps persistent stylesheets after variable head content (216.88ms)
+docs/api test:   ✓ uses versioned asset URLs when an asset version is configured (199.34ms)
+docs/api test:   ✓ serves site-specific and shared static assets at root URLs (150.04ms)
+docs/api test:   ✓ serves dotted version routes only for configured versions (234.01ms)
+docs/api test:   ✓ maps API document actions at root and versioned paths (267.94ms)
+docs/api test:   ✓ serves only the configured asset URL space (238.79ms)
+docs/api test: ▶ getVersionedLookupHref() (0.23ms) [server]
+docs/api test:   ✓ preserves dots in versioned markdown lookup targets (0.11ms)
+docs/api test:   ✓ uses docs routes for HTML lookup targets (0.06ms)
+docs/api test:   ✓ preserves query strings and hashes (0.04ms)
+docs/api test:   ✓ leaves non-API lookup targets unchanged (0.01ms)
+docs/api test: ▶ getApiRouteHref() (0.04ms) [server]
+docs/api test:   ✓ returns undefined for non-API hrefs (0.02ms)
+docs/api test:   ✓ preserves unversioned docs hrefs when version is undefined (0.02ms)
+docs/api test: ℹ files 3
+docs/api test: ℹ suites 5
+docs/api test: ℹ tests 24
+docs/api test: ℹ pass 24
+docs/api test: ℹ fail 0
+docs/api test: ℹ duration_ms 5032.42309
+docs/api test: Done
