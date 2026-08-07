@@ -1,0 +1,13 @@
+services:
+  vscode:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vscode
+    ports:
+      - "8888:8080"
+    volumes:
+      # Maps your local project folder to the container workspace
+      - ./workspace:/home/developer/workspace
+    restart: unless-stopped
+
