@@ -1,5 +1,5 @@
-# Use a clean, long-term support Ubuntu image
-FROM ubuntu:24.04
+FROM mcr.microsoft.com/playwright:v1.62.1-noble
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install basic development utilities
 RUN apt-get update && apt-get install -y \
