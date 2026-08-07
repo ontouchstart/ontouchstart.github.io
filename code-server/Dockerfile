@@ -7,6 +7,11 @@ RUN apt-get update && apt-get install -y \
     sudo \
     git \
     build-essential \
+    krb5-user \
+    libkrb5-dev \
+    libx11-dev \
+    libxkbfile-dev \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install code-server
