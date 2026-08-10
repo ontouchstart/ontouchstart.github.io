@@ -1,1 +1,0 @@
-export*from"/assets/packages/ui/src/anchor/index.@_-oWcP.js";

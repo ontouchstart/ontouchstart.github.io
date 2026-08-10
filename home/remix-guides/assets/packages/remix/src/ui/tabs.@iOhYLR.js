@@ -1,1 +1,0 @@
-export*from"/assets/packages/ui/src/tabs/index.@H9WHcq.js";

@@ -1,1 +1,0 @@
-export*from"/assets/packages/ui/src/breadcrumbs/index.@SERb6-.js";

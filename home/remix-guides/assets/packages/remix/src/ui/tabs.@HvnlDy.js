@@ -1,0 +1,1 @@
+export*from"/assets/packages/ui/src/tabs/index.@drGd9R.js";

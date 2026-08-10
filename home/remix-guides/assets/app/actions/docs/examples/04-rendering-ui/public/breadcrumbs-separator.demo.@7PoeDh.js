@@ -1,0 +1,1 @@
+import{Breadcrumbs as e}from"/assets/packages/remix/src/ui/breadcrumbs.@G0_GTX.js";import{jsx as t}from"/assets/packages/remix/src/ui/jsx-runtime.@lotMAM.js";export function BreadcrumbsSeparator(){return()=>t(e,{items:[{href:`/`,label:`Workspace`},{href:`/projects`,label:`Projects`},{label:`Components`}],separator:`/`})}

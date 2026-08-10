@@ -1,0 +1,1 @@
+export*from"/assets/packages/ui/src/checkbox/index.@moFlsv.js";export{default}from"/assets/packages/ui/src/checkbox/index.@moFlsv.js";

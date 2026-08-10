@@ -1,1 +1,0 @@
-export*from"/assets/packages/ui/src/accordion/primitives.@gXjn_T.js";
