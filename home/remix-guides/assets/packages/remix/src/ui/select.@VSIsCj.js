@@ -1,1 +1,0 @@
-export*from"/assets/packages/ui/src/select/index.@YGrrS2.js";
