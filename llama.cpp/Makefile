@@ -10,7 +10,7 @@ chinese: build
 	build/bin/llama-cli --model models/gemma-4-12B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-12B-it.md
 
 server:	build
-	build/bin/llama-server --models-dir models
+	build/bin/llama-server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf
 
 build:	$(repo)
 	cmake -B build -S $(repo)
