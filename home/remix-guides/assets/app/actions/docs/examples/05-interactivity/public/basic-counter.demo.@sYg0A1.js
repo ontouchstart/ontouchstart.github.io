@@ -1,0 +1,1 @@
+import{on as e}from"/assets/packages/remix/src/ui.@YBTJBI.js";import{jsxs as t}from"/assets/packages/remix/src/ui/jsx-runtime.@K2Pib_.js";export function BasicCounter(n){let r=0;return()=>t(`button`,{mix:[e(`click`,()=>{r++,n.update()})],children:[`Ye ol' counter: `,r]})}

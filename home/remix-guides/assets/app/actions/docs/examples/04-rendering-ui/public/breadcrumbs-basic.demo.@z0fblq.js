@@ -1,0 +1,1 @@
+import{Breadcrumbs as e}from"/assets/packages/remix/src/ui/breadcrumbs.@hmj5-p.js";import{jsx as t}from"/assets/packages/remix/src/ui/jsx-runtime.@K2Pib_.js";export function BreadcrumbsBasic(){return()=>t(e,{items:[{href:`/`,label:`Home`},{href:`/components`,label:`Components`},{label:`Breadcrumbs`}]})}

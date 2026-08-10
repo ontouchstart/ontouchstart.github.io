@@ -1,0 +1,1 @@
+import{createRemixElement as e}from"/assets/packages/ui/src/runtime/core/vnode.@7D5re-.js";export function jsx(t,n,r){return e(t,n,r)}export{jsx as jsxDEV,jsx as jsxs};
