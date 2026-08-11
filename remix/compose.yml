@@ -35,3 +35,47 @@ services:
       - "44104:44100"
     working_dir: /remix/demos/bookstore
     command: pnpm dev
+
+  remix-frame-navigation:
+    image: remix-base:latest
+    ports:
+      - "44105:44100"
+    working_dir: /remix/demos/frame-navigation
+    command: pnpm dev
+
+  remix-frames:
+    image: remix-base:latest
+    ports:
+      - "44106:44100"
+    working_dir: /remix/demos/frames
+    command: pnpm dev
+
+  remix-social-auth:
+    image: remix-base:latest
+    ports:
+      - "44107:44100"
+    working_dir: /remix/demos/social-auth
+    command: pnpm dev
+
+  remix-sse:
+    image: remix-base:latest
+    ports:
+      - "44108:44100"
+    working_dir: /remix/demos/sse
+    command: pnpm dev
+
+  remix-timeboxer:
+    image: remix-base:latest
+    ports:
+      - "44109:44100"
+    environment:
+      - SESSION_SECRET=sessionsecret
+    working_dir: /remix/demos/timeboxer
+    command: pnpm dev
+
+  remix-unpkg:
+    image: remix-base:latest
+    ports:
+      - "44110:44100"
+    working_dir: /remix/demos/unpkg
+    command: pnpm dev
