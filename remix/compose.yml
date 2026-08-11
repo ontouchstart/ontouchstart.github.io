@@ -1,26 +1,30 @@
 services:
+  remix-base:
+    build: .
+    image: remix-base:latest
+
+  remix-test:
+    image: remix-base:latest
+    working_dir: /remix
+    command: pnpm run test
+
   remix-guides:
-    build:
-      context: .
+    image: remix-base:latest
     ports:
       - "44101:44100"
     working_dir: /remix
     command: pnpm --filter remix-guides run dev
 
   remix-api:
-    build:
-      context: .
+    image: remix-base:latest
     ports:
       - "44102:44100"
     working_dir: /remix
     command: pnpm --filter remix-api run dev
 
-  test:
-    build:
-      context: .
-    working_dir: /remix
-    command: pnpm run test
-
-  dev:
-    build:
-      context: .
+  remix-bookstore:
+    image: remix-base:latest
+    ports:
+      - "44103:44100"
+    working_dir: /remix/demos/bookstore
+    command: pnpm run dev
