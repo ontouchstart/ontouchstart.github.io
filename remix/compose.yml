@@ -1,7 +1,18 @@
 services:
+  remix-guides:
+    build:
+      context: .
+    ports:
+      - "44101:44100"
+    working_dir: /remix
+    command: pnpm --filter remix-guides run dev
+
+  test:
+    build:
+      context: .
+    working_dir: /remix
+    command: pnpm run test
+
   dev:
     build:
-      context: ../playwright
-    volumes:
-      - ../home:/home
-      - ./remix:/remix
+      context: .

@@ -1,10 +1,10 @@
 test:	remix
-	docker compose run --rm --remove-orphans dev bash -c 'cd /remix && pnpm install && pnpm run test' > test.log
+	docker compose run --rm --remove-orphans test > test.log
 
-dev:	remix
-	docker compose run --rm --remove-orphans dev bash
+remix-guides:	remix
+	docker compose up remix-guides
 
-build:
+build:	remix
 	docker compose build --no-cache
 
 remix:
