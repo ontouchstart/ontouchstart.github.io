@@ -4,6 +4,9 @@ test:	remix
 remix-guides:	remix
 	docker compose up remix-guides
 
+remix-api:	remix
+	docker compose up remix-api
+
 build:	remix
 	docker compose build --no-cache
 

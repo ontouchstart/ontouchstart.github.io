@@ -20,4 +20,5 @@ COPY remix /remix
 WORKDIR /remix
 RUN pnpm install
 RUN pnpm run build
+RUN pnpm --filter remix-api run docs
 WORKDIR /home
