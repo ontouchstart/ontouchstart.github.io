@@ -22,9 +22,16 @@ services:
     working_dir: /remix
     command: pnpm --filter remix-api run dev
 
-  remix-bookstore:
+  remix-assets:
     image: remix-base:latest
     ports:
       - "44103:44100"
+    working_dir: /remix/demos/assets
+    command: pnpm dev
+
+  remix-bookstore:
+    image: remix-base:latest
+    ports:
+      - "44104:44100"
     working_dir: /remix/demos/bookstore
-    command: pnpm run dev
+    command: pnpm dev

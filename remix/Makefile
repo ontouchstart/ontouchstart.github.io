@@ -1,14 +1,14 @@
-remix-test:	remix
+test:	remix
 	docker compose run --rm --remove-orphans remix-test > test.log
 
-remix-guides:	remix
-	docker compose up remix-guides
+dev:
+	docker compose run --rm --remove-orphans remix-test bash
 
-remix-api:	remix
-	docker compose up remix-api
+up:
+	docker compose up -d
 
-remix-bookstore:	remix
-	docker compose up remix-bookstore
+down:
+	docker compose down
 
 build:	remix
 	docker compose build --no-cache
