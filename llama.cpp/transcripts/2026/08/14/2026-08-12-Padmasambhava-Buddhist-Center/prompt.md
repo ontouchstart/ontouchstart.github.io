@@ -1,0 +1,1 @@
+I had some interesting discussions with some philosophers and scholars about language, philosophy, AI, Archive Fever, Michael Levin and artificial irrational reality (I made up the terminology) at Padmasambhava Buddhist Center yesterday. Write a 500 word English essay about it as if you were there as my assistant.  Then write a short summary in Tibetan.
