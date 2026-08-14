@@ -1,0 +1,21 @@
+services:
+  base:
+    build: .
+    image: base:latest
+
+  build:
+    image: base:latest
+    working_dir: /workers-rs
+    command: cargo build
+
+  test:
+    image: base:latest
+    working_dir: /workers-rs
+    command: cargo test
+
+  pi:
+    image: base:latest
+    working_dir: /workers-rs
+    command: pi
+    volumes:
+      - ../agent:/root/.pi/agent
