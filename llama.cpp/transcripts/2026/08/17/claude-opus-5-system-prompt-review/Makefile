@@ -1,5 +1,4 @@
 cli=../../../../../build/bin/llama-cli
-model=../../../../../models/gemma-4-E2B-it-Q8_0.gguf
 all:
-	$(cli) --model $(model) --file prompt.md --single-turn --output transcript.md
+	$(cli) --server-base http://localhost:8080 --file prompt.md --single-turn --output transcript.md
 
