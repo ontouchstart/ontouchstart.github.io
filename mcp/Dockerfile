@@ -1,6 +1,6 @@
 FROM node
 COPY ./servers /servers
-WORKDIR /servers/src/everything
+WORKDIR /servers
 RUN npm install
-CMD ["npm", "run", "start:streamableHttp"]
+RUN npm run build
 

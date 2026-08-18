@@ -1,6 +1,12 @@
 services:
-  server:
-    build:
-      context: .
+  servers:
+    build: .
+    image: mcp_servers
+
+  everything:
+    image: mcp_servers
+    working_dir: /servers/src/everything
+    command: npm run start:streamableHttp
     ports:
       - "3001:3001"
+
