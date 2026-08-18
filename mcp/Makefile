@@ -1,5 +1,5 @@
 up:
-	docker compose up
+	docker compose up everything
 down:
 	docker compose down
 servers-dev:
