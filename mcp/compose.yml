@@ -1,0 +1,6 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - "3001:3001"
