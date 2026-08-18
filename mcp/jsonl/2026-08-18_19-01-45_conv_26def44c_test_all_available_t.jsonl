@@ -1,0 +1,1348 @@
+{
+  "harness": "llama.app",
+  "type": "session",
+  "currNode": "ff38a9ec-5824-48e9-b98f-36d3bbe3a9e1",
+  "id": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+  "lastModified": 1787079443309,
+  "name": "Test all available tools.",
+  "reasoningEffort": "default"
+}
+{
+  "message": {
+    "children": [
+      "3cd69344-b6dc-4fb3-92c5-ecd28147a4de"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "id": "b73e0079-561a-431e-af5c-0bdce56596aa",
+    "parent": null,
+    "role": "system",
+    "timestamp": 1787079443285,
+    "type": "root"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "a5358a9b-7a91-4af3-911a-60293e9367de"
+    ],
+    "content": "Test all available tools.",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "extra": [],
+    "role": "user",
+    "timestamp": 1787079443289,
+    "type": "text",
+    "id": "3cd69344-b6dc-4fb3-92c5-ecd28147a4de",
+    "parent": "b73e0079-561a-431e-af5c-0bdce56596aa"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "c39930cd-5660-47d0-92b0-0fe90bc1d4a4"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079443313,
+    "type": "text",
+    "id": "a5358a9b-7a91-4af3-911a-60293e9367de",
+    "parent": "3cd69344-b6dc-4fb3-92c5-ecd28147a4de",
+    "completionId": "chatcmpl-ptzLRaPkaevWj0TCMHPl8qGRZhNMIH9B",
+    "reasoningContent": "The user wants to test all available tools. I should call each tool provided in the tool definitions to demonstrate their functionality.\n\nList of tools:\n1. `echo`: requires `message`.\n2. `get-annotated-message`: requires `messageType` (enum: error, success, debug), optional `includeImage`.\n3. `get-env`: no parameters.\n4. `get-resource-links`: optional `count` (1-10).\n5. `get-resource-reference`: requires `resourceId` (number), `resourceType` (enum: Text, Blob).\n6. `get-structured-content`: requires `location` (enum: New York, Chicago, Los Angeles).\n7. `get-sum`: requires `a` and `b` (numbers).\n8. `get-tiny-image`: no parameters.\n9. `gzip-file-as-resource`: requires `data`, `name`, `outputType` (enum: resourceLink, resource).\n10. `toggle-simulated-logging`: no parameters.\n11. `toggle-subscriber-updates`: no parameters.\n12. `trigger-long-running-operation`: requires `duration`, `steps`.\n13. `simulate-research-query`: requires `topic`, optional `ambiguous`.\n\nI will execute these one by one or in groups if the model allows parallel execution (though standard behavior is sequential or batching). I'll start by calling them.",
+    "timings": {
+      "agentic": {
+        "llm": {
+          "predicted_ms": 154185.265,
+          "predicted_n": 929,
+          "prompt_ms": 24737.442000000006,
+          "prompt_n": 2716
+        },
+        "perTurn": [
+          {
+            "llm": {
+              "predicted_ms": 54545.112,
+              "predicted_n": 341,
+              "prompt_ms": 5557.19,
+              "prompt_n": 963
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 51,
+                "name": "echo",
+                "success": true
+              }
+            ],
+            "toolsMs": 51,
+            "turn": 1
+          },
+          {
+            "llm": {
+              "predicted_ms": 4682.111,
+              "predicted_n": 25,
+              "prompt_ms": 954.901,
+              "prompt_n": 37
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 81,
+                "name": "get-annotated-message",
+                "success": true
+              }
+            ],
+            "toolsMs": 81,
+            "turn": 2
+          },
+          {
+            "llm": {
+              "predicted_ms": 1490.877,
+              "predicted_n": 10,
+              "prompt_ms": 1065.619,
+              "prompt_n": 75
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 28,
+                "name": "get-env",
+                "success": true
+              }
+            ],
+            "toolsMs": 28,
+            "turn": 3
+          },
+          {
+            "llm": {
+              "predicted_ms": 2466.458,
+              "predicted_n": 16,
+              "prompt_ms": 3334.612,
+              "prompt_n": 609
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 106,
+                "name": "get-resource-links",
+                "success": true
+              }
+            ],
+            "toolsMs": 106,
+            "turn": 4
+          },
+          {
+            "llm": {
+              "predicted_ms": 4579.26,
+              "predicted_n": 24,
+              "prompt_ms": 2086.522,
+              "prompt_n": 260
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 26,
+                "name": "get-resource-reference",
+                "success": true
+              }
+            ],
+            "toolsMs": 26,
+            "turn": 5
+          },
+          {
+            "llm": {
+              "predicted_ms": 2821.738,
+              "predicted_n": 18,
+              "prompt_ms": 882.012,
+              "prompt_n": 88
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 19,
+                "name": "get-structured-content",
+                "success": true
+              }
+            ],
+            "toolsMs": 19,
+            "turn": 6
+          },
+          {
+            "llm": {
+              "predicted_ms": 3161.091,
+              "predicted_n": 20,
+              "prompt_ms": 791.545,
+              "prompt_n": 52
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 17,
+                "name": "get-sum",
+                "success": true
+              }
+            ],
+            "toolsMs": 17,
+            "turn": 7
+          },
+          {
+            "llm": {
+              "predicted_ms": 1823.85,
+              "predicted_n": 12,
+              "prompt_ms": 785.725,
+              "prompt_n": 49
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 26,
+                "name": "get-tiny-image",
+                "success": true
+              }
+            ],
+            "toolsMs": 26,
+            "turn": 8
+          },
+          {
+            "llm": {
+              "predicted_ms": 7744.732,
+              "predicted_n": 46,
+              "prompt_ms": 831.936,
+              "prompt_n": 73
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 1301,
+                "name": "gzip-file-as-resource",
+                "success": true
+              }
+            ],
+            "toolsMs": 1301,
+            "turn": 9
+          },
+          {
+            "llm": {
+              "predicted_ms": 2132.649,
+              "predicted_n": 13,
+              "prompt_ms": 1096.934,
+              "prompt_n": 102
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 18,
+                "name": "toggle-simulated-logging",
+                "success": true
+              }
+            ],
+            "toolsMs": 18,
+            "turn": 10
+          },
+          {
+            "llm": {
+              "predicted_ms": 1856.145,
+              "predicted_n": 12,
+              "prompt_ms": 1190.735,
+              "prompt_n": 131
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 22,
+                "name": "toggle-subscriber-updates",
+                "success": true
+              }
+            ],
+            "toolsMs": 22,
+            "turn": 1
+          },
+          {
+            "llm": {
+              "predicted_ms": 3233.024,
+              "predicted_n": 22,
+              "prompt_ms": 947.472,
+              "prompt_n": 90
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 5045,
+                "name": "trigger-long-running-operation",
+                "success": true
+              }
+            ],
+            "toolsMs": 5045,
+            "turn": 2
+          },
+          {
+            "llm": {
+              "predicted_ms": 3741.265,
+              "predicted_n": 24,
+              "prompt_ms": 1203.842,
+              "prompt_n": 58
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 2,
+                "name": "simulate-research-query",
+                "success": false
+              }
+            ],
+            "toolsMs": 2,
+            "turn": 3
+          },
+          {
+            "llm": {
+              "predicted_ms": 59906.953,
+              "predicted_n": 346,
+              "prompt_ms": 4008.397,
+              "prompt_n": 129
+            },
+            "toolCalls": [],
+            "toolsMs": 0,
+            "turn": 4
+          }
+        ],
+        "toolCalls": [
+          {
+            "duration_ms": 51,
+            "name": "echo",
+            "success": true
+          },
+          {
+            "duration_ms": 81,
+            "name": "get-annotated-message",
+            "success": true
+          },
+          {
+            "duration_ms": 28,
+            "name": "get-env",
+            "success": true
+          },
+          {
+            "duration_ms": 106,
+            "name": "get-resource-links",
+            "success": true
+          },
+          {
+            "duration_ms": 26,
+            "name": "get-resource-reference",
+            "success": true
+          },
+          {
+            "duration_ms": 19,
+            "name": "get-structured-content",
+            "success": true
+          },
+          {
+            "duration_ms": 17,
+            "name": "get-sum",
+            "success": true
+          },
+          {
+            "duration_ms": 26,
+            "name": "get-tiny-image",
+            "success": true
+          },
+          {
+            "duration_ms": 1301,
+            "name": "gzip-file-as-resource",
+            "success": true
+          },
+          {
+            "duration_ms": 18,
+            "name": "toggle-simulated-logging",
+            "success": true
+          },
+          {
+            "duration_ms": 22,
+            "name": "toggle-subscriber-updates",
+            "success": true
+          },
+          {
+            "duration_ms": 5045,
+            "name": "trigger-long-running-operation",
+            "success": true
+          },
+          {
+            "duration_ms": 2,
+            "name": "simulate-research-query",
+            "success": false
+          }
+        ],
+        "toolCallsCount": 13,
+        "toolsMs": 6742,
+        "turns": 4
+      },
+      "cache_n": 2865,
+      "predicted_ms": 59906.953,
+      "predicted_n": 346,
+      "prompt_ms": 4008.397,
+      "prompt_n": 129
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"message\":\"Testing echo tool.\"}",
+          "name": "echo"
+        },
+        "id": "o0PqGTCsfFadh1dzAuUjorgrGgqTmHB4",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "2cf01421-de68-4d56-9f57-429efd089d68"
+    ],
+    "content": "Echo: Testing echo tool.",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079624054,
+    "toolCallId": "o0PqGTCsfFadh1dzAuUjorgrGgqTmHB4",
+    "type": "text",
+    "id": "c39930cd-5660-47d0-92b0-0fe90bc1d4a4",
+    "parent": "a5358a9b-7a91-4af3-911a-60293e9367de"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "a4e2f844-13d9-459e-a456-997e60b081bf"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079624069,
+    "type": "text",
+    "id": "2cf01421-de68-4d56-9f57-429efd089d68",
+    "parent": "c39930cd-5660-47d0-92b0-0fe90bc1d4a4",
+    "timings": {
+      "cache_n": 1287,
+      "prompt_n": 37,
+      "prompt_ms": 954.901,
+      "prompt_per_token_ms": 25.808135135135135,
+      "prompt_per_second": 38.74747225105011,
+      "predicted_n": 25,
+      "predicted_ms": 4682.111,
+      "predicted_per_token_ms": 195.08795833333332,
+      "predicted_per_second": 5.12589299997373
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"includeImage\":true,\"messageType\":\"success\"}",
+          "name": "get-annotated-message"
+        },
+        "id": "XrLIU5Rc9o1UfWTAiNUrbyXxYPDpzqkU",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "423f041e-9b2c-4f73-99fb-5ad4ee763ffe"
+    ],
+    "content": "Operation completed successfully\n[Attachment saved: mcp-attachment-1787079633210-1.png]",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "extra": [
+      {
+        "base64Url": "data:image/png;base64,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",
+        "name": "mcp-attachment-1787079633210-1.png",
+        "type": "IMAGE"
+      }
+    ],
+    "role": "tool",
+    "timestamp": 1787079633211,
+    "toolCallId": "XrLIU5Rc9o1UfWTAiNUrbyXxYPDpzqkU",
+    "type": "text",
+    "id": "a4e2f844-13d9-459e-a456-997e60b081bf",
+    "parent": "2cf01421-de68-4d56-9f57-429efd089d68"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "34ca580d-cfaf-4e35-b599-52c4e72e0788"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079633222,
+    "type": "text",
+    "id": "423f041e-9b2c-4f73-99fb-5ad4ee763ffe",
+    "parent": "a4e2f844-13d9-459e-a456-997e60b081bf",
+    "timings": {
+      "cache_n": 1319,
+      "prompt_n": 75,
+      "prompt_ms": 1065.619,
+      "prompt_per_token_ms": 14.208253333333332,
+      "prompt_per_second": 70.38162795520725,
+      "predicted_n": 10,
+      "predicted_ms": 1490.877,
+      "predicted_per_token_ms": 165.653,
+      "predicted_per_second": 6.036715302469621
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{}",
+          "name": "get-env"
+        },
+        "id": "T9ClZTI1FyIaKp6b9T9IhZZQvzNWiC5G",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "1fca804b-0e84-4fab-8ef7-3eeac4373bd6"
+    ],
+    "content": "{\n  \"npm_config_user_agent\": \"npm/11.19.0 node/v26.7.0 linux arm64 workspaces/true\",\n  \"NODE_VERSION\": \"26.7.0\",\n  \"HOSTNAME\": \"def0474d77c5\",\n  \"npm_node_execpath\": \"/usr/local/bin/node\",\n  \"npm_config_noproxy\": \"\",\n  \"HOME\": \"/root\",\n  \"npm_package_json\": \"/servers/src/everything/package.json\",\n  \"npm_config_userconfig\": \"/root/.npmrc\",\n  \"npm_config_local_prefix\": \"/servers\",\n  \"COLOR\": \"0\",\n  \"npm_config_prefix\": \"/usr/local\",\n  \"npm_config_npm_version\": \"11.19.0\",\n  \"npm_config_cache\": \"/root/.npm\",\n  \"npm_config_node_gyp\": \"/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js\",\n  \"PATH\": \"/servers/src/everything/node_modules/.bin:/servers/src/node_modules/.bin:/servers/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\",\n  \"NODE\": \"/usr/local/bin/node\",\n  \"npm_package_name\": \"@modelcontextprotocol/server-everything\",\n  \"npm_lifecycle_script\": \"node dist/index.js streamableHttp\",\n  \"npm_package_version\": \"2.0.0\",\n  \"npm_lifecycle_event\": \"start:streamableHttp\",\n  \"npm_config_globalconfig\": \"/usr/local/etc/npmrc\",\n  \"npm_config_init_module\": \"/root/.npm-init.js\",\n  \"PWD\": \"/servers/src/everything\",\n  \"npm_execpath\": \"/usr/local/lib/node_modules/npm/bin/npm-cli.js\",\n  \"npm_config_global_prefix\": \"/usr/local\",\n  \"npm_config_allow_scripts\": \"\",\n  \"npm_command\": \"run\",\n  \"INIT_CWD\": \"/servers/src/everything\",\n  \"EDITOR\": \"vi\"\n}",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079636908,
+    "toolCallId": "T9ClZTI1FyIaKp6b9T9IhZZQvzNWiC5G",
+    "type": "text",
+    "id": "34ca580d-cfaf-4e35-b599-52c4e72e0788",
+    "parent": "423f041e-9b2c-4f73-99fb-5ad4ee763ffe"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "560a537c-8b52-41d6-94e6-3470f0b5b982"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079636916,
+    "type": "text",
+    "id": "1fca804b-0e84-4fab-8ef7-3eeac4373bd6",
+    "parent": "34ca580d-cfaf-4e35-b599-52c4e72e0788",
+    "timings": {
+      "cache_n": 1391,
+      "prompt_n": 609,
+      "prompt_ms": 3334.612,
+      "prompt_per_token_ms": 5.475553366174056,
+      "prompt_per_second": 182.6299431538062,
+      "predicted_n": 16,
+      "predicted_ms": 2466.458,
+      "predicted_per_token_ms": 164.43053333333333,
+      "predicted_per_second": 6.0815955511912225
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"count\":5}",
+          "name": "get-resource-links"
+        },
+        "id": "nnKQ2rZsynYSj46uqXm1vCMWAQroqZBE",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "3975d243-f1b3-480e-896f-bae576b23313"
+    ],
+    "content": "Here are 5 resource links to resources available in this server:\n{\"name\":\"Blob Resource 1\",\"uri\":\"demo://resource/dynamic/blob/1\",\"description\":\"Resource 1: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}\n{\"name\":\"Text Resource 2\",\"uri\":\"demo://resource/dynamic/text/2\",\"description\":\"Resource 2: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}\n{\"name\":\"Blob Resource 3\",\"uri\":\"demo://resource/dynamic/blob/3\",\"description\":\"Resource 3: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}\n{\"name\":\"Text Resource 4\",\"uri\":\"demo://resource/dynamic/text/4\",\"description\":\"Resource 4: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}\n{\"name\":\"Blob Resource 5\",\"uri\":\"demo://resource/dynamic/blob/5\",\"description\":\"Resource 5: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079643906,
+    "toolCallId": "nnKQ2rZsynYSj46uqXm1vCMWAQroqZBE",
+    "type": "text",
+    "id": "560a537c-8b52-41d6-94e6-3470f0b5b982",
+    "parent": "1fca804b-0e84-4fab-8ef7-3eeac4373bd6"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "5407ec12-ee82-41d9-bee0-32d0f45be70f"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079643912,
+    "type": "text",
+    "id": "3975d243-f1b3-480e-896f-bae576b23313",
+    "parent": "560a537c-8b52-41d6-94e6-3470f0b5b982",
+    "timings": {
+      "cache_n": 1997,
+      "prompt_n": 260,
+      "prompt_ms": 2086.522,
+      "prompt_per_token_ms": 8.025084615384616,
+      "prompt_per_second": 124.60927802342846,
+      "predicted_n": 24,
+      "predicted_ms": 4579.26,
+      "predicted_per_token_ms": 199.09826086956522,
+      "predicted_per_second": 5.022645580290265
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"resourceId\":2,\"resourceType\":\"Text\"}",
+          "name": "get-resource-reference"
+        },
+        "id": "h9ATjr8tRdl5WlbWSZbNposS2c5G2ShZ",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "e80767e9-12bb-4124-8565-74540d15b5c9"
+    ],
+    "content": "Returning resource reference for Resource 2:\nResource 2: This is a plaintext resource created at 7:00:51 PM\nYou can access this resource using the URI: demo://resource/dynamic/text/2",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079651714,
+    "toolCallId": "h9ATjr8tRdl5WlbWSZbNposS2c5G2ShZ",
+    "type": "text",
+    "id": "5407ec12-ee82-41d9-bee0-32d0f45be70f",
+    "parent": "3975d243-f1b3-480e-896f-bae576b23313"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "c57ea40e-6fc7-46d2-b5a7-341ac19141cb"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079651720,
+    "type": "text",
+    "id": "e80767e9-12bb-4124-8565-74540d15b5c9",
+    "parent": "5407ec12-ee82-41d9-bee0-32d0f45be70f",
+    "timings": {
+      "cache_n": 2254,
+      "prompt_n": 88,
+      "prompt_ms": 882.012,
+      "prompt_per_token_ms": 10.022863636363637,
+      "prompt_per_second": 99.77188518977066,
+      "predicted_n": 18,
+      "predicted_ms": 2821.738,
+      "predicted_per_token_ms": 165.9845882352941,
+      "predicted_per_second": 6.02465572636439
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"location\":\"Chicago\"}",
+          "name": "get-structured-content"
+        },
+        "id": "KC3ENwxxi2YalY7oHozIyozn4F6N25xd",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "05d4f93b-1518-40ec-94af-0f455b434301"
+    ],
+    "content": "{\"temperature\":36,\"conditions\":\"Light rain / drizzle\",\"humidity\":82}",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079656549,
+    "toolCallId": "KC3ENwxxi2YalY7oHozIyozn4F6N25xd",
+    "type": "text",
+    "id": "c57ea40e-6fc7-46d2-b5a7-341ac19141cb",
+    "parent": "e80767e9-12bb-4124-8565-74540d15b5c9"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "b4479002-7d34-4b91-9ea7-4933320cd1e4"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079656553,
+    "type": "text",
+    "id": "05d4f93b-1518-40ec-94af-0f455b434301",
+    "parent": "c57ea40e-6fc7-46d2-b5a7-341ac19141cb",
+    "timings": {
+      "cache_n": 2339,
+      "prompt_n": 52,
+      "prompt_ms": 791.545,
+      "prompt_per_token_ms": 15.22201923076923,
+      "prompt_per_second": 65.69430670397766,
+      "predicted_n": 20,
+      "predicted_ms": 3161.091,
+      "predicted_per_token_ms": 166.37321052631577,
+      "predicted_per_second": 6.010583055027521
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"a\":10,\"b\":25}",
+          "name": "get-sum"
+        },
+        "id": "870I3gXaU97np5YyURv6vJim8KwN4FzK",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "9cee0eca-ef39-41fa-945e-0f05003440f7"
+    ],
+    "content": "The sum of 10 and 25 is 35.",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079661612,
+    "toolCallId": "870I3gXaU97np5YyURv6vJim8KwN4FzK",
+    "type": "text",
+    "id": "b4479002-7d34-4b91-9ea7-4933320cd1e4",
+    "parent": "05d4f93b-1518-40ec-94af-0f455b434301"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "97211c02-a5c7-46d8-bf7c-33b78be8e3f9"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079661619,
+    "type": "text",
+    "id": "9cee0eca-ef39-41fa-945e-0f05003440f7",
+    "parent": "b4479002-7d34-4b91-9ea7-4933320cd1e4",
+    "timings": {
+      "cache_n": 2388,
+      "prompt_n": 49,
+      "prompt_ms": 785.725,
+      "prompt_per_token_ms": 16.035204081632653,
+      "prompt_per_second": 62.36278596200961,
+      "predicted_n": 12,
+      "predicted_ms": 1823.85,
+      "predicted_per_token_ms": 165.80454545454543,
+      "predicted_per_second": 6.0311977410423
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{}",
+          "name": "get-tiny-image"
+        },
+        "id": "gPa03wPbUIzR8f0Vz7HMg6eW0XPjoNy9",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "23607c3c-2387-4184-8efa-2e40c39efb60"
+    ],
+    "content": "Here's the image you requested:\n[Attachment saved: mcp-attachment-1787079665355-1.png]\nThe image above is the MCP logo.",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "extra": [
+      {
+        "base64Url": "data:image/png;base64,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",
+        "name": "mcp-attachment-1787079665355-1.png",
+        "type": "IMAGE"
+      }
+    ],
+    "role": "tool",
+    "timestamp": 1787079665355,
+    "toolCallId": "gPa03wPbUIzR8f0Vz7HMg6eW0XPjoNy9",
+    "type": "text",
+    "id": "97211c02-a5c7-46d8-bf7c-33b78be8e3f9",
+    "parent": "9cee0eca-ef39-41fa-945e-0f05003440f7"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "bf15827d-b9ea-4afa-85f4-d983989fe587"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079665364,
+    "type": "text",
+    "id": "23607c3c-2387-4184-8efa-2e40c39efb60",
+    "parent": "97211c02-a5c7-46d8-bf7c-33b78be8e3f9",
+    "timings": {
+      "cache_n": 2434,
+      "prompt_n": 73,
+      "prompt_ms": 831.936,
+      "prompt_per_token_ms": 11.396383561643836,
+      "prompt_per_second": 87.74713439495345,
+      "predicted_n": 46,
+      "predicted_ms": 7744.732,
+      "predicted_per_token_ms": 172.10515555555554,
+      "predicted_per_second": 5.810401186251506
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"data\":\"https://example.com/file.txt\",\"name\":\"compressed.txt.gz\",\"outputType\":\"resourceLink\"}",
+          "name": "gzip-file-as-resource"
+        },
+        "id": "9bxB1nUnuFfaP57KyCJMa8ui766Me1Mi",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "cf974936-7e62-4cd5-b8a0-39c387980e5d"
+    ],
+    "content": "{\"name\":\"compressed.txt.gz\",\"uri\":\"demo://resource/session/compressed.txt.gz\",\"mimeType\":\"application/gzip\",\"type\":\"resource_link\"}",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079676361,
+    "toolCallId": "9bxB1nUnuFfaP57KyCJMa8ui766Me1Mi",
+    "type": "text",
+    "id": "bf15827d-b9ea-4afa-85f4-d983989fe587",
+    "parent": "23607c3c-2387-4184-8efa-2e40c39efb60"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "46c90c03-788f-456d-acd8-a69ed689a5ce",
+      "35ec6ffd-2a4a-48e6-9965-07a878653bce"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079676390,
+    "type": "text",
+    "id": "cf974936-7e62-4cd5-b8a0-39c387980e5d",
+    "parent": "bf15827d-b9ea-4afa-85f4-d983989fe587",
+    "timings": {
+      "cache_n": 2599,
+      "prompt_n": 131,
+      "prompt_ms": 1190.735,
+      "prompt_per_token_ms": 9.089580152671754,
+      "prompt_per_second": 110.01608250366371,
+      "predicted_n": 12,
+      "predicted_ms": 1856.145,
+      "predicted_per_token_ms": 168.74045454545455,
+      "predicted_per_second": 5.926261148778786
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{}",
+          "name": "toggle-subscriber-updates"
+        },
+        "id": "BltJCJpzKO6IrTA5M59lluKBH86OzjSR",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "Started simulated, random-leveled logging for session 113573e2-37a7-4438-b8fb-56ff481b0b44 at a 5 second pace. Client's selected logging level will be respected. If an interval elapses and the message to be sent is below the selected level, it will not be sent. Thus at higher chosen logging levels, messages should arrive further apart. ",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079681729,
+    "toolCallId": "zmrSQczK1RTcYc2iHcHaPkHP3oNjrZSA",
+    "type": "text",
+    "id": "46c90c03-788f-456d-acd8-a69ed689a5ce",
+    "parent": "cf974936-7e62-4cd5-b8a0-39c387980e5d"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "25642895-7ccb-45bb-8b80-c23bfd47d60f"
+    ],
+    "content": "Started simulated resource updated notifications for session 113573e2-37a7-4438-b8fb-56ff481b0b44 at a 5 second pace. Client will receive updates for any resources the it is subscribed to.",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079690684,
+    "toolCallId": "BltJCJpzKO6IrTA5M59lluKBH86OzjSR",
+    "type": "text",
+    "id": "35ec6ffd-2a4a-48e6-9965-07a878653bce",
+    "parent": "cf974936-7e62-4cd5-b8a0-39c387980e5d"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "12c67263-525c-4bf6-a79f-d236b9d39c69"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079690688,
+    "type": "text",
+    "id": "25642895-7ccb-45bb-8b80-c23bfd47d60f",
+    "parent": "35ec6ffd-2a4a-48e6-9965-07a878653bce",
+    "timings": {
+      "cache_n": 2727,
+      "prompt_n": 90,
+      "prompt_ms": 947.472,
+      "prompt_per_token_ms": 10.527466666666667,
+      "prompt_per_second": 94.98961446881808,
+      "predicted_n": 22,
+      "predicted_ms": 3233.024,
+      "predicted_per_token_ms": 153.9535238095238,
+      "predicted_per_second": 6.495466782801489
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"duration\":5,\"steps\":3}",
+          "name": "trigger-long-running-operation"
+        },
+        "id": "Hd8wk6UcwHibhE7BQUKhLRuTdGU0djrS",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "f2ba2bae-30f6-4703-8823-2ff57280baee"
+    ],
+    "content": "Long running operation completed. Duration: 5 seconds, Steps: 3.",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079700043,
+    "toolCallId": "Hd8wk6UcwHibhE7BQUKhLRuTdGU0djrS",
+    "type": "text",
+    "id": "12c67263-525c-4bf6-a79f-d236b9d39c69",
+    "parent": "25642895-7ccb-45bb-8b80-c23bfd47d60f"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "4239432b-58f2-4c01-b206-15738bed9806"
+    ],
+    "content": "",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079700052,
+    "type": "text",
+    "id": "f2ba2bae-30f6-4703-8823-2ff57280baee",
+    "parent": "12c67263-525c-4bf6-a79f-d236b9d39c69",
+    "timings": {
+      "cache_n": 2812,
+      "prompt_n": 58,
+      "prompt_ms": 1203.842,
+      "prompt_per_token_ms": 20.75589655172414,
+      "prompt_per_second": 48.179079978934105,
+      "predicted_n": 24,
+      "predicted_ms": 3741.265,
+      "predicted_per_token_ms": 162.6636956521739,
+      "predicted_per_second": 6.1476532670099555
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"topic\":\"Impact of quantum computing on modern cryptography\"}",
+          "name": "simulate-research-query"
+        },
+        "id": "hmlihlia0HSuu2I0ur7QAOocEGawsDrq",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "ff38a9ec-5824-48e9-b98f-36d3bbe3a9e1"
+    ],
+    "content": "Error: Tool \"simulate-research-query\" execution failed on server \"dd52d780-5c7e-4c7a-a85b-711b685f2a5c\": MCP error -32600: Tool \"simulate-research-query\" requires task-based execution. Use client.experimental.tasks.callToolStream() instead.",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "role": "tool",
+    "timestamp": 1787079705146,
+    "toolCallId": "hmlihlia0HSuu2I0ur7QAOocEGawsDrq",
+    "type": "text",
+    "id": "4239432b-58f2-4c01-b206-15738bed9806",
+    "parent": "f2ba2bae-30f6-4703-8823-2ff57280baee"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "I have successfully tested all the tools available in the server. Here is a summary of the results:\n\n1.  **`echo`**: Successfully echoed the test message.\n2.  **`get-annotated-message`**: Successfully returned a success message with an image attachment.\n3.  **`get-env`**: Successfully retrieved the environment variables.\n4.  **`get-resource-links`**: Successfully returned 5 resource links.\n5.  **`get-resource-reference`**: Successfully returned a resource reference for ID 2.\n6.  **`get-structured-content`**: Successfully returned weather data for Chicago.\n7.  **`get-sum`**: Successfully calculated the sum of 10 and 25 (35).\n8.  **`get-tiny-image`**: Successfully returned the MCP logo image.\n9.  **`gzip-file-as-resource`**: Successfully generated a resource link for a gzipped file.\n10. **`toggle-simulated-logging`**: Successfully enabled simulated logging.\n11. **`toggle-subscriber-updates`**: Successfully enabled simulated resource update notifications.\n12. **`trigger-long-running-operation`**: Successfully completed a 5-second operation with 3 steps.\n13. **`simulate-research-query`**: This tool returned an error indicating that it requires task-based execution via a specific client method (`callToolStream`), which is a limitation of the current tool call mechanism.\n\nAll tools are functional except for the research query, which requires a specialized client interaction.",
+    "convId": "26def44c-c2ff-40f9-a0be-94ef06f49929",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787079705154,
+    "type": "text",
+    "id": "ff38a9ec-5824-48e9-b98f-36d3bbe3a9e1",
+    "parent": "4239432b-58f2-4c01-b206-15738bed9806",
+    "timings": {
+      "agentic": {
+        "llm": {
+          "predicted_ms": 154185.265,
+          "predicted_n": 929,
+          "prompt_ms": 24737.442000000006,
+          "prompt_n": 2716
+        },
+        "perTurn": [
+          {
+            "llm": {
+              "predicted_ms": 54545.112,
+              "predicted_n": 341,
+              "prompt_ms": 5557.19,
+              "prompt_n": 963
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 51,
+                "name": "echo",
+                "success": true
+              }
+            ],
+            "toolsMs": 51,
+            "turn": 1
+          },
+          {
+            "llm": {
+              "predicted_ms": 4682.111,
+              "predicted_n": 25,
+              "prompt_ms": 954.901,
+              "prompt_n": 37
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 81,
+                "name": "get-annotated-message",
+                "success": true
+              }
+            ],
+            "toolsMs": 81,
+            "turn": 2
+          },
+          {
+            "llm": {
+              "predicted_ms": 1490.877,
+              "predicted_n": 10,
+              "prompt_ms": 1065.619,
+              "prompt_n": 75
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 28,
+                "name": "get-env",
+                "success": true
+              }
+            ],
+            "toolsMs": 28,
+            "turn": 3
+          },
+          {
+            "llm": {
+              "predicted_ms": 2466.458,
+              "predicted_n": 16,
+              "prompt_ms": 3334.612,
+              "prompt_n": 609
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 106,
+                "name": "get-resource-links",
+                "success": true
+              }
+            ],
+            "toolsMs": 106,
+            "turn": 4
+          },
+          {
+            "llm": {
+              "predicted_ms": 4579.26,
+              "predicted_n": 24,
+              "prompt_ms": 2086.522,
+              "prompt_n": 260
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 26,
+                "name": "get-resource-reference",
+                "success": true
+              }
+            ],
+            "toolsMs": 26,
+            "turn": 5
+          },
+          {
+            "llm": {
+              "predicted_ms": 2821.738,
+              "predicted_n": 18,
+              "prompt_ms": 882.012,
+              "prompt_n": 88
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 19,
+                "name": "get-structured-content",
+                "success": true
+              }
+            ],
+            "toolsMs": 19,
+            "turn": 6
+          },
+          {
+            "llm": {
+              "predicted_ms": 3161.091,
+              "predicted_n": 20,
+              "prompt_ms": 791.545,
+              "prompt_n": 52
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 17,
+                "name": "get-sum",
+                "success": true
+              }
+            ],
+            "toolsMs": 17,
+            "turn": 7
+          },
+          {
+            "llm": {
+              "predicted_ms": 1823.85,
+              "predicted_n": 12,
+              "prompt_ms": 785.725,
+              "prompt_n": 49
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 26,
+                "name": "get-tiny-image",
+                "success": true
+              }
+            ],
+            "toolsMs": 26,
+            "turn": 8
+          },
+          {
+            "llm": {
+              "predicted_ms": 7744.732,
+              "predicted_n": 46,
+              "prompt_ms": 831.936,
+              "prompt_n": 73
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 1301,
+                "name": "gzip-file-as-resource",
+                "success": true
+              }
+            ],
+            "toolsMs": 1301,
+            "turn": 9
+          },
+          {
+            "llm": {
+              "predicted_ms": 2132.649,
+              "predicted_n": 13,
+              "prompt_ms": 1096.934,
+              "prompt_n": 102
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 18,
+                "name": "toggle-simulated-logging",
+                "success": true
+              }
+            ],
+            "toolsMs": 18,
+            "turn": 10
+          },
+          {
+            "llm": {
+              "predicted_ms": 1856.145,
+              "predicted_n": 12,
+              "prompt_ms": 1190.735,
+              "prompt_n": 131
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 22,
+                "name": "toggle-subscriber-updates",
+                "success": true
+              }
+            ],
+            "toolsMs": 22,
+            "turn": 1
+          },
+          {
+            "llm": {
+              "predicted_ms": 3233.024,
+              "predicted_n": 22,
+              "prompt_ms": 947.472,
+              "prompt_n": 90
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 5045,
+                "name": "trigger-long-running-operation",
+                "success": true
+              }
+            ],
+            "toolsMs": 5045,
+            "turn": 2
+          },
+          {
+            "llm": {
+              "predicted_ms": 3741.265,
+              "predicted_n": 24,
+              "prompt_ms": 1203.842,
+              "prompt_n": 58
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 2,
+                "name": "simulate-research-query",
+                "success": false
+              }
+            ],
+            "toolsMs": 2,
+            "turn": 3
+          },
+          {
+            "llm": {
+              "predicted_ms": 59906.953,
+              "predicted_n": 346,
+              "prompt_ms": 4008.397,
+              "prompt_n": 129
+            },
+            "toolCalls": [],
+            "toolsMs": 0,
+            "turn": 4
+          }
+        ],
+        "toolCalls": [
+          {
+            "duration_ms": 51,
+            "name": "echo",
+            "success": true
+          },
+          {
+            "duration_ms": 81,
+            "name": "get-annotated-message",
+            "success": true
+          },
+          {
+            "duration_ms": 28,
+            "name": "get-env",
+            "success": true
+          },
+          {
+            "duration_ms": 106,
+            "name": "get-resource-links",
+            "success": true
+          },
+          {
+            "duration_ms": 26,
+            "name": "get-resource-reference",
+            "success": true
+          },
+          {
+            "duration_ms": 19,
+            "name": "get-structured-content",
+            "success": true
+          },
+          {
+            "duration_ms": 17,
+            "name": "get-sum",
+            "success": true
+          },
+          {
+            "duration_ms": 26,
+            "name": "get-tiny-image",
+            "success": true
+          },
+          {
+            "duration_ms": 1301,
+            "name": "gzip-file-as-resource",
+            "success": true
+          },
+          {
+            "duration_ms": 18,
+            "name": "toggle-simulated-logging",
+            "success": true
+          },
+          {
+            "duration_ms": 22,
+            "name": "toggle-subscriber-updates",
+            "success": true
+          },
+          {
+            "duration_ms": 5045,
+            "name": "trigger-long-running-operation",
+            "success": true
+          },
+          {
+            "duration_ms": 2,
+            "name": "simulate-research-query",
+            "success": false
+          }
+        ],
+        "toolCallsCount": 13,
+        "toolsMs": 6742,
+        "turns": 4
+      },
+      "cache_n": 2865,
+      "predicted_ms": 59906.953,
+      "predicted_n": 346,
+      "prompt_ms": 4008.397,
+      "prompt_n": 129
+    }
+  },
+  "type": "message"
+}
