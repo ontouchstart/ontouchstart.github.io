@@ -11,7 +11,7 @@ chinese: build
 	$(llama) cli --model models/gemma-4-12B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-12B-it.md
 
 server:	build
-	$(llama) server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf
+	$(llama) server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf --ui-mcp-proxy
 
 build:	$(repo)
 	cmake -B build -S $(repo)
