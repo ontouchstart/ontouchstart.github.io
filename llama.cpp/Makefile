@@ -1,16 +1,17 @@
 github=https://github.com
 owner=ggml-org
 repo=llama.cpp
-release=b10456
+release=b10472
+llama=build/bin/llama
 
 prompt="Print random number of random Chinese characters in one line without spaces."
 chinese: build 
-	build/bin/llama-cli --model models/gemma-4-E2B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-E2B-it.md
-	build/bin/llama-cli --model models/gemma-4-E4B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-E4B-it.md
-	build/bin/llama-cli --model models/gemma-4-12B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-12B-it.md
+	$(llama) cli --model models/gemma-4-E2B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-E2B-it.md
+	$(llama) cli --model models/gemma-4-E4B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-E4B-it.md
+	$(llama) cli --model models/gemma-4-12B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-12B-it.md
 
 server:	build
-	build/bin/llama-server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf
+	$(llama) server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf
 
 build:	$(repo)
 	cmake -B build -S $(repo)
