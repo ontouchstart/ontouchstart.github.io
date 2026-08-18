@@ -2,8 +2,9 @@ up:
 	docker compose up everything
 down:
 	docker compose down
-servers-dev:
-	docker compose run --remove-orphans --rm servers bash
+dev:
+	docker compose run --remove-orphans --rm dev bash
+
 everything-dev:
 	docker compose exec everything bash
 

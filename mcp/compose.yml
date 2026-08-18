@@ -1,20 +1,21 @@
 services:
-  base:
+  dev:
     build: .
-    image: mcp_base
+    image: mcp_dev
+    working_dir: /
 
   typescript-sdk:
-    image: mcp_base
+    image: mcp_dev
     working_dir: /typescript-sdk
     command: bash
 
   servers:
-    image: mcp_base
+    image: mcp_dev
     working_dir: /servers
     command: bash
 
   everything:
-    image: mcp_base
+    image: mcp_dev
     working_dir: /servers/src/everything
     command: npm run start:streamableHttp
     ports:
