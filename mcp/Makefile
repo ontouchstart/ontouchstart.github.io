@@ -10,7 +10,7 @@ dev:
 everything-dev:
 	docker compose exec everything bash
 
-build:	modelcontextprotocol servers typescript-sdk
+build:
 	docker compose build
 
 modelcontextprotocol:

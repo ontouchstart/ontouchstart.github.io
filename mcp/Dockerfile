@@ -8,10 +8,13 @@ ENV PATH=/usr/local/cargo/bin:$PATH
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 RUN npm install -g pnpm
-COPY ./modelcontextprotocol /modelcontextprotocol
-COPY ./servers /servers
+
+WORKDIR /
+RUN git clone -b 2026-07-28  https://github.com/modelcontextprotocol/modelcontextprotocol.git
+RUN git clone -b 1.30.0 https://github.com/modelcontextprotocol/typescript-sdk.git
+RUN git clone -b 2026.8.18 https://github.com/modelcontextprotocol/servers.git
+
 WORKDIR /servers
 RUN npm install
 RUN npm run build
-COPY ./typescript-sdk /typescript-sdk
-WORKDIR /typescript-sdk
+WORKDIR /
