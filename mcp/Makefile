@@ -14,13 +14,13 @@ build:	modelcontextprotocol servers typescript-sdk
 	docker compose build
 
 modelcontextprotocol:
-	git clone https://github.com/modelcontextprotocol/modelcontextprotocol.git
+	git clone -b 2026-07-28  https://github.com/modelcontextprotocol/modelcontextprotocol.git
 
 typescript-sdk:
-	git clone https://github.com/modelcontextprotocol/typescript-sdk
+	git clone -b 1.30.0 https://github.com/modelcontextprotocol/typescript-sdk
 
 servers:
-	git clone https://github.com/modelcontextprotocol/servers.git
+	git clone -b 2026.8.18 https://github.com/modelcontextprotocol/servers.git
 
 clean:
 	rm -rf modelcontextprotocol servers typescript-sdk

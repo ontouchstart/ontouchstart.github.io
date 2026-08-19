@@ -15,5 +15,3 @@ RUN npm install
 RUN npm run build
 COPY ./typescript-sdk /typescript-sdk
 WORKDIR /typescript-sdk
-RUN pnpm install
-RUN pnpm build:all
