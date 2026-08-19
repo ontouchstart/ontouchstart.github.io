@@ -5,3 +5,7 @@ https://lobste.rs/s/caubyr/bun_1_4_rust_rewrite_is_not_looking_good#c_f9bjvn
 https://chrisburnell.com/html-can-do-that/
 
 https://lobste.rs/s/ttxwdz/what_software_do_you_use_daily_2026
+
+https://lobste.rs/s/caubyr/bun_1_4_rust_rewrite_is_not_looking_good#c_gycpfk
+
+https://ontouchstart.github.io/llama.cpp/transcripts/firefox/2026/08/19/2026-08-19_15-42-46_conv_8a8c1577_chat_8_19_2026_11_4_epic-cycles.txt
