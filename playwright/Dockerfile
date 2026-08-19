@@ -15,6 +15,7 @@ RUN npm approve-scripts --all
 RUN npm install 
 RUN npm run build 
 RUN npm install -g /playwright/packages/playwright
+RUN playwright install-deps
 RUN npm install -g npm@latest pnpm@latest-11 bun@latest deno@latest
 RUN playwright --version
 RUN node --version

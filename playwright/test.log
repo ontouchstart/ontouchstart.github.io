@@ -1,0 +1,28 @@
+### Browser `default` opened with pid 19.
+### Ran Playwright code
+```js
+await page.goto('http://ontouchstart.github.io/playwright');
+```
+### Page
+- Page URL: https://ontouchstart.github.io/playwright/
+- Page Title: Sam Liu | Playwright
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-08-19T18-15-55-066Z.yml)
+- generic [ref=e2]:
+  - heading "Playwright" [level=1] [ref=e3]
+  - paragraph [ref=e4]:
+    - link "https://github.com/microsoft/playwright/releases/tag/v1.62.1" [ref=e5] [cursor=pointer]:
+      - /url: https://github.com/microsoft/playwright/releases/tag/v1.62.1
+  - contentinfo [ref=e6]:
+    - paragraph [ref=e7]:
+      - text: © 2026
+      - link "Sam Liu" [ref=e8] [cursor=pointer]:
+        - /url: /
+      - link "👨🏻‍💻" [ref=e9] [cursor=pointer]:
+        - /url: /engineering
+      - link "🤖" [ref=e10] [cursor=pointer]:
+        - /url: /ai
+      - link "📷" [ref=e11] [cursor=pointer]:
+        - /url: /photography
+      - link "🎲" [ref=e12] [cursor=pointer]:
+        - /url: /random/internet
