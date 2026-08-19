@@ -1,0 +1,1028 @@
+{
+  "harness": "llama.app",
+  "type": "session",
+  "currNode": "d075d166-69e2-4e6f-9f6f-88881580d12c",
+  "id": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+  "lastModified": 1787145832429,
+  "name": "Test all available tools.",
+  "reasoningEffort": "default"
+}
+{
+  "message": {
+    "children": [
+      "69b89644-01c4-4140-b0a5-a4dc799cfc46"
+    ],
+    "content": "",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "id": "9dd4c339-ecf3-4593-acfb-7d15faf928d8",
+    "parent": null,
+    "role": "system",
+    "timestamp": 1787145578559,
+    "type": "root"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "793c716c-da79-474d-8d82-bfb93d431cad"
+    ],
+    "content": "Test all available tools.",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "extra": [],
+    "role": "user",
+    "timestamp": 1787145578565,
+    "type": "text",
+    "id": "69b89644-01c4-4140-b0a5-a4dc799cfc46",
+    "parent": "9dd4c339-ecf3-4593-acfb-7d15faf928d8"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "b0a6877e-5211-416c-8cd4-1965ba55c1b2",
+      "54ede214-9ba1-4d5f-a418-9ebc0ac305c1",
+      "c36203a2-6fd5-4a60-8ca8-13b65fca83fb",
+      "fd9a52d7-1edb-499d-b0ec-5e2925175286",
+      "01af520d-0644-4600-8713-819d4e678e14"
+    ],
+    "content": "",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787145578596,
+    "type": "text",
+    "id": "793c716c-da79-474d-8d82-bfb93d431cad",
+    "parent": "69b89644-01c4-4140-b0a5-a4dc799cfc46",
+    "completionId": "chatcmpl-aZB2vgdTfcUQ7xwr14Tcok9utIQQo11a",
+    "reasoningContent": "The user wants to \"Test all available tools.\" I should go through the list of available tools and call them one by one or in groups to demonstrate their functionality.\n\nLooking at the available tools:\n1. `echo`: Requires `message`.\n2. `get-annotated-message`: Requires `messageType`.\n3. `get-env`: No parameters.\n4. `get-resource-links`: Optional `count`.\n5. `get-resource-reference`: Requires `resourceId`, `resourceType`.\n6. `get-structured-content`: Requires `location`.\n7. `get-sum`: Requires `a`, `b`.\n8. `get-tiny-image`: No parameters.\n9. `gzip-file-as-resource`: Requires `data`, `name`, `outputType`.\n10. `toggle-simulated-logging`: No parameters.\n11. `toggle-subscriber-updates`: No parameters.\n12. `trigger-long-running-operation`: Requires `duration`, `steps`.\n13. `simulate-research-query`: Requires `topic`, optional `ambiguous`.\n\nI will start by calling a few simple ones first to confirm they work, then proceed through others. Since I can call multiple tools in one turn if needed, but it's better to group them logically.\n\nPlan:\n1. Call `echo`, `get-env`, `get-tiny-image`, `toggle-simulated-logging`, `toggle-subscriber-updates`.\n2. Call `get-sum`, `get-annotated-message`, `get-resource-links`, `get-structured-content`.\n3. Call `get-resource-reference`, `gzip-file-as-resource`, `trigger-long-running-operation`, `simulate-research-query`.\n\nWait, the prompt says \"Test all available tools\". I'll do them in batches.\n\nBatch 1:\n- `echo(message=\"Tool test 1\")`\n- `get-env()`\n- `get-tiny-image()`\n- `toggle-simulated-logging()`\n- `toggle-subscriber-updates()`\n\nBatch 2:\n- `get-sum(a=10, b=20)`\n- `get-annotated-message(messageType=\"success\")`\n- `get-resource-links(count=5)`\n- `get-structured-content(location=\"New York\")`\n\nBatch 3:\n- `get-resource-reference(resourceId=1, resourceType=\"Text\")`\n- `gzip-file-as-resource(data=\"hello world\", name=\"test.txt\", outputType=\"resource\")`\n- `trigger-long-running-operation(duration=5, steps=3)`\n- `simulate-research-query(topic=\"Artificial Intelligence\")`\n\nI will execute these.",
+    "timings": {
+      "agentic": {
+        "llm": {
+          "predicted_ms": 172798.501,
+          "predicted_n": 1192,
+          "prompt_ms": 14921.268,
+          "prompt_n": 2662
+        },
+        "perTurn": [
+          {
+            "llm": {
+              "predicted_ms": 100149.41,
+              "predicted_n": 682,
+              "prompt_ms": 5162.911,
+              "prompt_n": 963
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 111,
+                "name": "echo",
+                "success": true
+              },
+              {
+                "duration_ms": 12,
+                "name": "get-env",
+                "success": true
+              },
+              {
+                "duration_ms": 11,
+                "name": "get-tiny-image",
+                "success": true
+              },
+              {
+                "duration_ms": 11,
+                "name": "toggle-simulated-logging",
+                "success": true
+              },
+              {
+                "duration_ms": 12,
+                "name": "toggle-subscriber-updates",
+                "success": true
+              }
+            ],
+            "toolsMs": 157,
+            "turn": 1
+          },
+          {
+            "llm": {
+              "predicted_ms": 12435.197,
+              "predicted_n": 87,
+              "prompt_ms": 5084.57,
+              "prompt_n": 966
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 34,
+                "name": "get-sum",
+                "success": true
+              },
+              {
+                "duration_ms": 33,
+                "name": "get-annotated-message",
+                "success": true
+              },
+              {
+                "duration_ms": 106,
+                "name": "get-resource-links",
+                "success": true
+              },
+              {
+                "duration_ms": 25,
+                "name": "get-structured-content",
+                "success": true
+              }
+            ],
+            "toolsMs": 198,
+            "turn": 2
+          },
+          {
+            "llm": {
+              "predicted_ms": 15168.58,
+              "predicted_n": 108,
+              "prompt_ms": 2679.324,
+              "prompt_n": 393
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 25,
+                "name": "get-resource-reference",
+                "success": true
+              },
+              {
+                "duration_ms": 15,
+                "name": "gzip-file-as-resource",
+                "success": true
+              },
+              {
+                "duration_ms": 5033,
+                "name": "trigger-long-running-operation",
+                "success": true
+              },
+              {
+                "duration_ms": 1,
+                "name": "simulate-research-query",
+                "success": false
+              }
+            ],
+            "toolsMs": 5074,
+            "turn": 3
+          },
+          {
+            "llm": {
+              "predicted_ms": 45045.314,
+              "predicted_n": 315,
+              "prompt_ms": 1994.463,
+              "prompt_n": 340
+            },
+            "toolCalls": [],
+            "toolsMs": 0,
+            "turn": 4
+          }
+        ],
+        "toolCalls": [
+          {
+            "duration_ms": 111,
+            "name": "echo",
+            "success": true
+          },
+          {
+            "duration_ms": 12,
+            "name": "get-env",
+            "success": true
+          },
+          {
+            "duration_ms": 11,
+            "name": "get-tiny-image",
+            "success": true
+          },
+          {
+            "duration_ms": 11,
+            "name": "toggle-simulated-logging",
+            "success": true
+          },
+          {
+            "duration_ms": 12,
+            "name": "toggle-subscriber-updates",
+            "success": true
+          },
+          {
+            "duration_ms": 34,
+            "name": "get-sum",
+            "success": true
+          },
+          {
+            "duration_ms": 33,
+            "name": "get-annotated-message",
+            "success": true
+          },
+          {
+            "duration_ms": 106,
+            "name": "get-resource-links",
+            "success": true
+          },
+          {
+            "duration_ms": 25,
+            "name": "get-structured-content",
+            "success": true
+          },
+          {
+            "duration_ms": 25,
+            "name": "get-resource-reference",
+            "success": true
+          },
+          {
+            "duration_ms": 15,
+            "name": "gzip-file-as-resource",
+            "success": true
+          },
+          {
+            "duration_ms": 5033,
+            "name": "trigger-long-running-operation",
+            "success": true
+          },
+          {
+            "duration_ms": 1,
+            "name": "simulate-research-query",
+            "success": false
+          }
+        ],
+        "toolCallsCount": 13,
+        "toolsMs": 5429,
+        "turns": 4
+      },
+      "cache_n": 2977,
+      "predicted_ms": 45045.314,
+      "predicted_n": 315,
+      "prompt_ms": 1994.463,
+      "prompt_n": 340
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"message\":\"Tool test 1\"}",
+          "name": "echo"
+        },
+        "id": "MCTVf6Q2bseL3FCS4d5rSTC1iS05SfTP",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{}",
+          "name": "get-env"
+        },
+        "id": "DUXiBzCODcEsFcKyZdmBuYLiPzoLngvT",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{}",
+          "name": "get-tiny-image"
+        },
+        "id": "DB0TfRhAOmDn4nQ2mhlpDJMoyWbX7AaK",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{}",
+          "name": "toggle-simulated-logging"
+        },
+        "id": "hUmeaUKinhS2XVNxOSzQDCrxulR0Bo3k",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{}",
+          "name": "toggle-subscriber-updates"
+        },
+        "id": "FGDIWofjioAqTGaC6EyJwD2xjTAEUJzY",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "Echo: Tool test 1",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145727082,
+    "toolCallId": "MCTVf6Q2bseL3FCS4d5rSTC1iS05SfTP",
+    "type": "text",
+    "id": "b0a6877e-5211-416c-8cd4-1965ba55c1b2",
+    "parent": "793c716c-da79-474d-8d82-bfb93d431cad"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "{\n  \"npm_config_user_agent\": \"npm/11.19.0 node/v26.7.0 linux arm64 workspaces/true\",\n  \"NODE_VERSION\": \"26.7.0\",\n  \"HOSTNAME\": \"8aad3d4c81e9\",\n  \"npm_node_execpath\": \"/usr/local/bin/node\",\n  \"npm_config_noproxy\": \"\",\n  \"HOME\": \"/root\",\n  \"npm_package_json\": \"/servers/src/everything/package.json\",\n  \"npm_config_userconfig\": \"/root/.npmrc\",\n  \"npm_config_local_prefix\": \"/servers\",\n  \"COLOR\": \"0\",\n  \"npm_config_prefix\": \"/usr/local\",\n  \"npm_config_npm_version\": \"11.19.0\",\n  \"npm_config_cache\": \"/root/.npm\",\n  \"RUSTUP_HOME\": \"/usr/local/rustup\",\n  \"npm_config_node_gyp\": \"/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js\",\n  \"PATH\": \"/servers/src/everything/node_modules/.bin:/servers/src/node_modules/.bin:/servers/node_modules/.bin:/node_modules/.bin:/usr/local/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\",\n  \"NODE\": \"/usr/local/bin/node\",\n  \"npm_package_name\": \"@modelcontextprotocol/server-everything\",\n  \"npm_lifecycle_script\": \"node dist/index.js streamableHttp\",\n  \"npm_package_version\": \"2026.8.18\",\n  \"npm_lifecycle_event\": \"start:streamableHttp\",\n  \"npm_config_globalconfig\": \"/usr/local/etc/npmrc\",\n  \"npm_config_init_module\": \"/root/.npm-init.js\",\n  \"PWD\": \"/servers/src/everything\",\n  \"npm_execpath\": \"/usr/local/lib/node_modules/npm/bin/npm-cli.js\",\n  \"CARGO_HOME\": \"/usr/local/cargo\",\n  \"npm_config_global_prefix\": \"/usr/local\",\n  \"npm_config_allow_scripts\": \"\",\n  \"npm_command\": \"run\",\n  \"INIT_CWD\": \"/servers/src/everything\",\n  \"EDITOR\": \"vi\"\n}",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145727105,
+    "toolCallId": "DUXiBzCODcEsFcKyZdmBuYLiPzoLngvT",
+    "type": "text",
+    "id": "54ede214-9ba1-4d5f-a418-9ebc0ac305c1",
+    "parent": "793c716c-da79-474d-8d82-bfb93d431cad"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "Here's the image you requested:\n[Attachment saved: mcp-attachment-1787145727122-1.png]\nThe image above is the MCP logo.",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "extra": [
+      {
+        "base64Url": "data:image/png;base64,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",
+        "name": "mcp-attachment-1787145727122-1.png",
+        "type": "IMAGE"
+      }
+    ],
+    "role": "tool",
+    "timestamp": 1787145727122,
+    "toolCallId": "DB0TfRhAOmDn4nQ2mhlpDJMoyWbX7AaK",
+    "type": "text",
+    "id": "c36203a2-6fd5-4a60-8ca8-13b65fca83fb",
+    "parent": "793c716c-da79-474d-8d82-bfb93d431cad"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "Started simulated, random-leveled logging for session 3ea2b33c-e758-4616-b4f9-3cf7ad63a2ac at a 5 second pace. Client's selected logging level will be respected. If an interval elapses and the message to be sent is below the selected level, it will not be sent. Thus at higher chosen logging levels, messages should arrive further apart. ",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145727137,
+    "toolCallId": "hUmeaUKinhS2XVNxOSzQDCrxulR0Bo3k",
+    "type": "text",
+    "id": "fd9a52d7-1edb-499d-b0ec-5e2925175286",
+    "parent": "793c716c-da79-474d-8d82-bfb93d431cad"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "2c1a0eb3-d1c6-47ac-b8e4-8955f5e39b61"
+    ],
+    "content": "Started simulated resource updated notifications for session 3ea2b33c-e758-4616-b4f9-3cf7ad63a2ac at a 5 second pace. Client will receive updates for any resources the it is subscribed to.",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145727154,
+    "toolCallId": "FGDIWofjioAqTGaC6EyJwD2xjTAEUJzY",
+    "type": "text",
+    "id": "01af520d-0644-4600-8713-819d4e678e14",
+    "parent": "793c716c-da79-474d-8d82-bfb93d431cad"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "5cb09dc0-c568-4fbb-947b-39abc56c0f9c",
+      "fcae9d08-7f31-4def-acd4-62f3ee6d0d83",
+      "00aa9edd-7baa-40c7-a335-6fae6c54a14d",
+      "242b5252-f7cc-4461-84c5-ea121e09e6a9"
+    ],
+    "content": "",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787145727157,
+    "type": "text",
+    "id": "2c1a0eb3-d1c6-47ac-b8e4-8955f5e39b61",
+    "parent": "01af520d-0644-4600-8713-819d4e678e14",
+    "reasoningContent": "The first batch of tests is complete. Now I will proceed with the second batch.\n",
+    "timings": {
+      "cache_n": 1589,
+      "prompt_n": 966,
+      "prompt_ms": 5084.57,
+      "prompt_per_token_ms": 5.263530020703933,
+      "prompt_per_second": 189.98656720233961,
+      "predicted_n": 87,
+      "predicted_ms": 12435.197,
+      "predicted_per_token_ms": 144.5953139534884,
+      "predicted_per_second": 6.915853444058827
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"a\":10,\"b\":20}",
+          "name": "get-sum"
+        },
+        "id": "VtR2LUJDmc2LGQ376dzEDLmK6BFRKGTi",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{\"messageType\":\"success\"}",
+          "name": "get-annotated-message"
+        },
+        "id": "DcMpA6lIBCPSVdqNIwNGWSpa6q7eYugj",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{\"count\":5}",
+          "name": "get-resource-links"
+        },
+        "id": "spl9cekUMUd2IRqBihxDgH9viULr7cOm",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{\"location\":\"New York\"}",
+          "name": "get-structured-content"
+        },
+        "id": "oM1U8d9IkbQ3HfckzrUbLzszdRZC2zzF",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "The sum of 10 and 20 is 30.",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145745843,
+    "toolCallId": "VtR2LUJDmc2LGQ376dzEDLmK6BFRKGTi",
+    "type": "text",
+    "id": "5cb09dc0-c568-4fbb-947b-39abc56c0f9c",
+    "parent": "2c1a0eb3-d1c6-47ac-b8e4-8955f5e39b61"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "Operation completed successfully",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145746894,
+    "toolCallId": "DcMpA6lIBCPSVdqNIwNGWSpa6q7eYugj",
+    "type": "text",
+    "id": "fcae9d08-7f31-4def-acd4-62f3ee6d0d83",
+    "parent": "2c1a0eb3-d1c6-47ac-b8e4-8955f5e39b61"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "Here are 5 resource links to resources available in this server:\n{\"name\":\"Blob Resource 1\",\"uri\":\"demo://resource/dynamic/blob/1\",\"description\":\"Resource 1: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}\n{\"name\":\"Text Resource 2\",\"uri\":\"demo://resource/dynamic/text/2\",\"description\":\"Resource 2: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}\n{\"name\":\"Blob Resource 3\",\"uri\":\"demo://resource/dynamic/blob/3\",\"description\":\"Resource 3: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}\n{\"name\":\"Text Resource 4\",\"uri\":\"demo://resource/dynamic/text/4\",\"description\":\"Resource 4: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}\n{\"name\":\"Blob Resource 5\",\"uri\":\"demo://resource/dynamic/blob/5\",\"description\":\"Resource 5: plaintext resource\",\"mimeType\":\"text/plain\",\"type\":\"resource_link\"}",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145748015,
+    "toolCallId": "spl9cekUMUd2IRqBihxDgH9viULr7cOm",
+    "type": "text",
+    "id": "00aa9edd-7baa-40c7-a335-6fae6c54a14d",
+    "parent": "2c1a0eb3-d1c6-47ac-b8e4-8955f5e39b61"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "d6aec3aa-e670-43a3-8d8f-6cf014e54436"
+    ],
+    "content": "{\"temperature\":33,\"conditions\":\"Cloudy\",\"humidity\":82}",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145749055,
+    "toolCallId": "oM1U8d9IkbQ3HfckzrUbLzszdRZC2zzF",
+    "type": "text",
+    "id": "242b5252-f7cc-4461-84c5-ea121e09e6a9",
+    "parent": "2c1a0eb3-d1c6-47ac-b8e4-8955f5e39b61"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "47317160-00d9-41af-a84a-32da3b5efce7",
+      "cc950bba-a1c5-40ad-8b80-85d6d85f1027",
+      "d7128194-001e-48b9-a3cb-e90bc7b1d19a",
+      "25b6712f-cdcd-43bb-85c1-76fd771d3719"
+    ],
+    "content": "",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787145749060,
+    "type": "text",
+    "id": "d6aec3aa-e670-43a3-8d8f-6cf014e54436",
+    "parent": "242b5252-f7cc-4461-84c5-ea121e09e6a9",
+    "reasoningContent": "The second batch is complete. Now for the final batch.\n\n",
+    "timings": {
+      "cache_n": 2572,
+      "prompt_n": 393,
+      "prompt_ms": 2679.324,
+      "prompt_per_token_ms": 6.817618320610687,
+      "prompt_per_second": 146.67878912740676,
+      "predicted_n": 108,
+      "predicted_ms": 15168.58,
+      "predicted_per_token_ms": 141.76242990654205,
+      "predicted_per_second": 7.054055158755797
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"resourceId\":1,\"resourceType\":\"Text\"}",
+          "name": "get-resource-reference"
+        },
+        "id": "tgPDpUvpnei8sdM4P8ofWqr7167KJT2q",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{\"data\":\"hello world\",\"name\":\"test.txt\",\"outputType\":\"resource\"}",
+          "name": "gzip-file-as-resource"
+        },
+        "id": "US4g1RHJtHNStFXE96zjHpV6O2DUQYfj",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{\"duration\":5,\"steps\":3}",
+          "name": "trigger-long-running-operation"
+        },
+        "id": "4rAnz9ayQSMsmkpaoHB7hN1UMQZzZXzf",
+        "type": "function"
+      },
+      {
+        "function": {
+          "arguments": "{\"topic\":\"Artificial Intelligence\"}",
+          "name": "simulate-research-query"
+        },
+        "id": "ZVssKYZ0hMPLpSOJxJves1504PLa58BK",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "Returning resource reference for Resource 1:\nResource 1: This is a plaintext resource created at 1:22:48 PM\nYou can access this resource using the URI: demo://resource/dynamic/text/1",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145768040,
+    "toolCallId": "tgPDpUvpnei8sdM4P8ofWqr7167KJT2q",
+    "type": "text",
+    "id": "47317160-00d9-41af-a84a-32da3b5efce7",
+    "parent": "d6aec3aa-e670-43a3-8d8f-6cf014e54436"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "MCP error -32602: Input validation error: Invalid arguments for tool gzip-file-as-resource: Invalid URL at data",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145769069,
+    "toolCallId": "US4g1RHJtHNStFXE96zjHpV6O2DUQYfj",
+    "type": "text",
+    "id": "cc950bba-a1c5-40ad-8b80-85d6d85f1027",
+    "parent": "d6aec3aa-e670-43a3-8d8f-6cf014e54436"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "Long running operation completed. Duration: 5 seconds, Steps: 3.",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145775111,
+    "toolCallId": "4rAnz9ayQSMsmkpaoHB7hN1UMQZzZXzf",
+    "type": "text",
+    "id": "d7128194-001e-48b9-a3cb-e90bc7b1d19a",
+    "parent": "d6aec3aa-e670-43a3-8d8f-6cf014e54436"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "063563c6-9902-45e5-83d7-22fce8fb553f"
+    ],
+    "content": "Error: Tool \"simulate-research-query\" execution failed on server \"0a41a774-061b-49f8-9b88-35cfdef6d64b\": MCP error -32600: Tool \"simulate-research-query\" requires task-based execution. Use client.experimental.tasks.callToolStream() instead.",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145776128,
+    "toolCallId": "ZVssKYZ0hMPLpSOJxJves1504PLa58BK",
+    "type": "text",
+    "id": "25b6712f-cdcd-43bb-85c1-76fd771d3719",
+    "parent": "d6aec3aa-e670-43a3-8d8f-6cf014e54436"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "8f577990-3016-4b10-8d88-0f6ee6af2383"
+    ],
+    "content": "I have completed testing all the available tools. Here is a summary of the results:\n\n### **Successful Tests:**\n- **`echo`**: Successfully echoed the provided message.\n- **`get-env`**: Retrieved the current environment variables.\n- **`get-tiny-image`**: Returned a tiny MCP logo image.\n- **`toggle-simulated-logging`**: Successfully enabled simulated logging.\n- **`toggle-subscriber-updates`**: Successfully enabled simulated resource updates.\n- **`get-sum`**: Correctly calculated the sum of 10 and 20.\n- **`get-annotated-message`**: Successfully demonstrated an annotated \"success\" message.\n- **`get-resource-links`**: Retrieved 5 resource links.\n- **`get-structured-content`**: Returned structured weather data for New York.\n- **`get-resource-reference`**: Provided a reference for Resource 1.\n- **`trigger-long-running-operation`**: Successfully simulated a long-running operation.\n\n### **Errors / Specific Behaviors:**\n- **`gzip-file-as-resource`**: Failed with an input validation error (Invalid URL). It likely requires a properly formatted URL or Data URI for the `data` parameter.\n- **`simulate-research-query`**: Failed with a server error indicating it requires a task-based execution (stream) rather than a standard tool call.\n\nAll standard tools are functional!",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787145776137,
+    "type": "text",
+    "id": "063563c6-9902-45e5-83d7-22fce8fb553f",
+    "parent": "25b6712f-cdcd-43bb-85c1-76fd771d3719",
+    "timings": {
+      "agentic": {
+        "llm": {
+          "predicted_ms": 172798.501,
+          "predicted_n": 1192,
+          "prompt_ms": 14921.268,
+          "prompt_n": 2662
+        },
+        "perTurn": [
+          {
+            "llm": {
+              "predicted_ms": 100149.41,
+              "predicted_n": 682,
+              "prompt_ms": 5162.911,
+              "prompt_n": 963
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 111,
+                "name": "echo",
+                "success": true
+              },
+              {
+                "duration_ms": 12,
+                "name": "get-env",
+                "success": true
+              },
+              {
+                "duration_ms": 11,
+                "name": "get-tiny-image",
+                "success": true
+              },
+              {
+                "duration_ms": 11,
+                "name": "toggle-simulated-logging",
+                "success": true
+              },
+              {
+                "duration_ms": 12,
+                "name": "toggle-subscriber-updates",
+                "success": true
+              }
+            ],
+            "toolsMs": 157,
+            "turn": 1
+          },
+          {
+            "llm": {
+              "predicted_ms": 12435.197,
+              "predicted_n": 87,
+              "prompt_ms": 5084.57,
+              "prompt_n": 966
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 34,
+                "name": "get-sum",
+                "success": true
+              },
+              {
+                "duration_ms": 33,
+                "name": "get-annotated-message",
+                "success": true
+              },
+              {
+                "duration_ms": 106,
+                "name": "get-resource-links",
+                "success": true
+              },
+              {
+                "duration_ms": 25,
+                "name": "get-structured-content",
+                "success": true
+              }
+            ],
+            "toolsMs": 198,
+            "turn": 2
+          },
+          {
+            "llm": {
+              "predicted_ms": 15168.58,
+              "predicted_n": 108,
+              "prompt_ms": 2679.324,
+              "prompt_n": 393
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 25,
+                "name": "get-resource-reference",
+                "success": true
+              },
+              {
+                "duration_ms": 15,
+                "name": "gzip-file-as-resource",
+                "success": true
+              },
+              {
+                "duration_ms": 5033,
+                "name": "trigger-long-running-operation",
+                "success": true
+              },
+              {
+                "duration_ms": 1,
+                "name": "simulate-research-query",
+                "success": false
+              }
+            ],
+            "toolsMs": 5074,
+            "turn": 3
+          },
+          {
+            "llm": {
+              "predicted_ms": 45045.314,
+              "predicted_n": 315,
+              "prompt_ms": 1994.463,
+              "prompt_n": 340
+            },
+            "toolCalls": [],
+            "toolsMs": 0,
+            "turn": 4
+          }
+        ],
+        "toolCalls": [
+          {
+            "duration_ms": 111,
+            "name": "echo",
+            "success": true
+          },
+          {
+            "duration_ms": 12,
+            "name": "get-env",
+            "success": true
+          },
+          {
+            "duration_ms": 11,
+            "name": "get-tiny-image",
+            "success": true
+          },
+          {
+            "duration_ms": 11,
+            "name": "toggle-simulated-logging",
+            "success": true
+          },
+          {
+            "duration_ms": 12,
+            "name": "toggle-subscriber-updates",
+            "success": true
+          },
+          {
+            "duration_ms": 34,
+            "name": "get-sum",
+            "success": true
+          },
+          {
+            "duration_ms": 33,
+            "name": "get-annotated-message",
+            "success": true
+          },
+          {
+            "duration_ms": 106,
+            "name": "get-resource-links",
+            "success": true
+          },
+          {
+            "duration_ms": 25,
+            "name": "get-structured-content",
+            "success": true
+          },
+          {
+            "duration_ms": 25,
+            "name": "get-resource-reference",
+            "success": true
+          },
+          {
+            "duration_ms": 15,
+            "name": "gzip-file-as-resource",
+            "success": true
+          },
+          {
+            "duration_ms": 5033,
+            "name": "trigger-long-running-operation",
+            "success": true
+          },
+          {
+            "duration_ms": 1,
+            "name": "simulate-research-query",
+            "success": false
+          }
+        ],
+        "toolCallsCount": 13,
+        "toolsMs": 5429,
+        "turns": 4
+      },
+      "cache_n": 2977,
+      "predicted_ms": 45045.314,
+      "predicted_n": 315,
+      "prompt_ms": 1994.463,
+      "prompt_n": 340
+    }
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "e89a9d87-b171-49e9-96b5-76ff1f036742"
+    ],
+    "content": "Fix gzip-file-as-resource",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "extra": [],
+    "role": "user",
+    "timestamp": 1787145832371,
+    "type": "text",
+    "id": "8f577990-3016-4b10-8d88-0f6ee6af2383",
+    "parent": "063563c6-9902-45e5-83d7-22fce8fb553f"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "360d45f0-9c5e-44f1-8b96-0559fa4ee1bd"
+    ],
+    "content": "",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787145832430,
+    "type": "text",
+    "id": "e89a9d87-b171-49e9-96b5-76ff1f036742",
+    "parent": "8f577990-3016-4b10-8d88-0f6ee6af2383",
+    "completionId": "chatcmpl-jCYGHhV6YZl1C7KVJGKZQnZrAe0sjy6E",
+    "reasoningContent": "The user wants to \"fix\" the `gzip-file-as-resource` tool because it failed in the previous turn with an \"Invalid URL\" error.\n\nLooking back at the tool definition for `gzip-file-as-resource`:\n- `data`: URL or data URI of the file content to compress.\n- `name`: Name of the output file.\n- `outputType`: 'resourceLink' or 'resource'.\n\nThe error message was: `MCP error -32602: Input validation error: Invalid arguments for tool gzip-file-as-resource: Invalid URL at data`.\nIn my previous turn, I called it with `data: \"hello world\"`.\nSince the tool description specifies \"URL or data URI\", I should provide a valid Data URI.\n\nA Data URI for \"hello world\" would be `data:text/plain;base64,aGVsbG8gd29ybGQ=`.\n\nI will try calling the tool again with a valid Data URI.",
+    "timings": {
+      "agentic": {
+        "llm": {
+          "predicted_ms": 55176.05099999999,
+          "predicted_n": 392,
+          "prompt_ms": 13932.39,
+          "prompt_n": 2630
+        },
+        "perTurn": [
+          {
+            "llm": {
+              "predicted_ms": 38465.643,
+              "predicted_n": 272,
+              "prompt_ms": 12946.492,
+              "prompt_n": 2532
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 244,
+                "name": "gzip-file-as-resource",
+                "success": true
+              }
+            ],
+            "toolsMs": 244,
+            "turn": 1
+          },
+          {
+            "llm": {
+              "predicted_ms": 16710.408,
+              "predicted_n": 120,
+              "prompt_ms": 985.898,
+              "prompt_n": 98
+            },
+            "toolCalls": [],
+            "toolsMs": 0,
+            "turn": 2
+          }
+        ],
+        "toolCalls": [
+          {
+            "duration_ms": 244,
+            "name": "gzip-file-as-resource",
+            "success": true
+          }
+        ],
+        "toolCallsCount": 1,
+        "toolsMs": 244,
+        "turns": 2
+      },
+      "cache_n": 3195,
+      "predicted_ms": 16710.408,
+      "predicted_n": 120,
+      "prompt_ms": 985.898,
+      "prompt_n": 98
+    },
+    "toolCalls": [
+      {
+        "function": {
+          "arguments": "{\"data\":\"data:text/plain;base64,aGVsbG8gd29ybGQ=\",\"name\":\"test.txt\",\"outputType\":\"resource\"}",
+          "name": "gzip-file-as-resource"
+        },
+        "id": "3gjkFHqie6yuX23fEoejbIf2sriLIYdh",
+        "type": "function"
+      }
+    ]
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [
+      "d075d166-69e2-4e6f-9f6f-88881580d12c"
+    ],
+    "content": "H4sIAAAAAAAAA8tIzcnJVyjPL8pJAQCFEUoNCwAAAA==",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "role": "tool",
+    "timestamp": 1787145886197,
+    "toolCallId": "3gjkFHqie6yuX23fEoejbIf2sriLIYdh",
+    "type": "text",
+    "id": "360d45f0-9c5e-44f1-8b96-0559fa4ee1bd",
+    "parent": "e89a9d87-b171-49e9-96b5-76ff1f036742"
+  },
+  "type": "message"
+}
+{
+  "message": {
+    "children": [],
+    "content": "The `gzip-file-as-resource` tool was failing because it required a valid URL or Data URI for the `data` parameter, but I was providing plain text.\n\nI have fixed this by providing a proper Data URI (`data:text/plain;base64,aGVsbG8gd29ybGQ=`) for the string \"hello world\". The tool now successfully compresses the content and returns the gzipped data.",
+    "convId": "2253aacf-297a-4da1-88e2-a084d0a453a1",
+    "model": "models/gemma-4-12B-it-Q8_0.gguf",
+    "role": "assistant",
+    "timestamp": 1787145886210,
+    "type": "text",
+    "id": "d075d166-69e2-4e6f-9f6f-88881580d12c",
+    "parent": "360d45f0-9c5e-44f1-8b96-0559fa4ee1bd",
+    "reasoningContent": "The tool `gzip-file-as-resource` now succeeded because I provided a proper Data URI. I should inform the user.",
+    "timings": {
+      "agentic": {
+        "llm": {
+          "predicted_ms": 55176.05099999999,
+          "predicted_n": 392,
+          "prompt_ms": 13932.39,
+          "prompt_n": 2630
+        },
+        "perTurn": [
+          {
+            "llm": {
+              "predicted_ms": 38465.643,
+              "predicted_n": 272,
+              "prompt_ms": 12946.492,
+              "prompt_n": 2532
+            },
+            "toolCalls": [
+              {
+                "duration_ms": 244,
+                "name": "gzip-file-as-resource",
+                "success": true
+              }
+            ],
+            "toolsMs": 244,
+            "turn": 1
+          },
+          {
+            "llm": {
+              "predicted_ms": 16710.408,
+              "predicted_n": 120,
+              "prompt_ms": 985.898,
+              "prompt_n": 98
+            },
+            "toolCalls": [],
+            "toolsMs": 0,
+            "turn": 2
+          }
+        ],
+        "toolCalls": [
+          {
+            "duration_ms": 244,
+            "name": "gzip-file-as-resource",
+            "success": true
+          }
+        ],
+        "toolCallsCount": 1,
+        "toolsMs": 244,
+        "turns": 2
+      },
+      "cache_n": 3195,
+      "predicted_ms": 16710.408,
+      "predicted_n": 120,
+      "prompt_ms": 985.898,
+      "prompt_n": 98
+    }
+  },
+  "type": "message"
+}
