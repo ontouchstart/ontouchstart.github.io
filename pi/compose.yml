@@ -1,8 +1,7 @@
 services:
   dev:
     build:
-      context: ../playwright
+      context: .
     volumes:
-      - ./pi:/pi
       - ../home:/home
       - ../agent:/root/.pi/agent
