@@ -1,3 +1,3 @@
 # llama.app
 
-https://github.com/ggml-org/llama.cpp/releases/tag/b10488
+https://github.com/ggml-org/llama.cpp/releases/tag/b10502
