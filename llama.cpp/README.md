@@ -1,4 +1,3 @@
 # llama.app
 
-[models](https://llama.app/models)
-
+https://github.com/ggml-org/llama.cpp/releases/tag/b10488
