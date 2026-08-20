@@ -1,5 +1,5 @@
 test:
-	docker compose run --rm --remove-orphans dev bash -c 'playwright cli --browser=firefox open http://ontouchstart.github.io/playwright && cat .playwright-cli/*' | tee test.log
+	docker compose run --rm --remove-orphans dev bash -c 'playwright cli --browser=chromium open https://news.ycombinator.com/item?id=49362728 && cat .playwright-cli/*' | tee test.yaml
 dev:
 	docker compose run --rm --remove-orphans dev bash
 build:
