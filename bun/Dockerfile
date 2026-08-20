@@ -1,4 +1,6 @@
 FROM nixos/nix
+RUN nix-env -iA nixpkgs.vim
+RUN nix-env -iA nixpkgs.rustup
 RUN git clone -b bun-v1.4.0 --depth=1 https://github.com/oven-sh/bun.git
 WORKDIR /bun
 # RUN nix --extra-experimental-features "nix-command flakes" flake update
