@@ -1,6 +1,6 @@
 # llama.app
 
-https://github.com/ggml-org/llama.cpp/releases/tag/b10516
+https://github.com/ggml-org/llama.cpp/releases/tag/b10520
 
 https://ontouchstart.github.io/llama.cpp/chinese-gemma-4-E2B-it
 
