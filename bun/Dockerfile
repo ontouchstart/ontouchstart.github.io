@@ -1,7 +1,10 @@
 FROM nixos/nix
+RUN nix-channel --update
+RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
+RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
 RUN nix-env -iA nixpkgs.vim
 RUN nix-env -iA nixpkgs.rustup
 RUN git clone -b bun-v1.4.0 --depth=1 https://github.com/oven-sh/bun.git
 WORKDIR /bun
-# RUN nix --extra-experimental-features "nix-command flakes" flake update
-# RUN nix --extra-experimental-features nix-command --extra-experimental-features flakes develop
+RUN nix flake update
+RUN nix develop
