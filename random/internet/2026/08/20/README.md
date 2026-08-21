@@ -4,6 +4,6 @@ https://nixos.org
 
 https://github.com/NixOS/nix
 
-https://github.com/ngi-nix/nixpkgs
+https://github.com/NixOS/nixpkgs
 
 https://mitchellh.com/writing/nix-with-dockerfiles
