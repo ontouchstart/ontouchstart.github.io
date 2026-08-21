@@ -2,7 +2,7 @@
 
 https://ontouchstart.github.io/duck.ai/2026/08/20/duck.ai_2026-08-20_21-21-41
 
-—-
+---
 
 https://nixos.org
 
