@@ -3,92 +3,1876 @@
 #1 DONE 0.0s
 
 #2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 343B done
+#2 transferring dockerfile: 577B done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/nixos/nix:latest
-#3 DONE 3.5s
+#3 DONE 0.2s
 
 #4 [internal] load .dockerignore
 #4 transferring context: 2B done
 #4 DONE 0.0s
 
-#5 [1/7] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
+#5 [ 1/12] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
 #5 resolve docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c 0.0s done
 #5 CACHED
 
-#6 [2/7] RUN nix-channel --update
-#6 1.577 unpacking 1 channels...
-#6 DONE 12.7s
+#6 [internal] load build context
+#6 transferring context: 33B done
+#6 DONE 0.0s
 
-#7 [3/7] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
-#7 DONE 0.5s
+#7 [ 2/12] RUN nix-channel --update
+#7 1.442 unpacking 1 channels...
+#7 DONE 14.3s
 
-#8 [4/7] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
-#8 DONE 0.7s
+#8 [ 3/12] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
+#8 DONE 0.6s
 
-#9 [5/7] RUN nix-env -iA nixpkgs.vim
-#9 0.285 installing 'vim-9.2.0782'
-#9 0.541 these 10 paths will be fetched (26.3 MiB download, 108.3 MiB unpacked):
-#9 0.541   /nix/store/a9kda025a17126f14c01xpwscmjqddwb-bash-interactive-5.3p15
-#9 0.541   /nix/store/qz6qz18kddi2y25gk9h8ffg37lk8vwcf-gawk-5.4.1
-#9 0.541   /nix/store/f8q4w2hbjvwy7qqwpnvbf5f4qwyww6cp-glibc-2.42-67
-#9 0.541   /nix/store/929svfrm3z9facma5l7y3pkym56b8gni-libidn2-2.3.8
-#9 0.541   /nix/store/b57ihysnpkp69hsbbw1gr1yjac6xagkf-libunistring-1.4.2
-#9 0.541   /nix/store/ah5m9c4ffy0m45h68ls77xr6m4c6rmg9-ncurses-6.6
-#9 0.541   /nix/store/6alwmb2pqwzkvfrhanphmab7487p0qbi-readline-8.3p3
-#9 0.541   /nix/store/im6yfz8490h7mjnnzazgapdhxlak2d61-vim-9.2.0782
-#9 0.541   /nix/store/wbn5r5xbxfxfxmx0jc4md2zifl1dfmny-vim-9.2.0782-xxd
-#9 0.541   /nix/store/5fmknmxx5s78zbbai817zghzmc5l7d3z-xgcc-15.3.0-libgcc
-#9 0.543 copying path '/nix/store/5fmknmxx5s78zbbai817zghzmc5l7d3z-xgcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
-#9 0.543 copying path '/nix/store/b57ihysnpkp69hsbbw1gr1yjac6xagkf-libunistring-1.4.2' from 'https://cache.nixos.org'...
-#9 0.620 copying path '/nix/store/929svfrm3z9facma5l7y3pkym56b8gni-libidn2-2.3.8' from 'https://cache.nixos.org'...
-#9 0.643 copying path '/nix/store/f8q4w2hbjvwy7qqwpnvbf5f4qwyww6cp-glibc-2.42-67' from 'https://cache.nixos.org'...
-#9 0.908 copying path '/nix/store/qz6qz18kddi2y25gk9h8ffg37lk8vwcf-gawk-5.4.1' from 'https://cache.nixos.org'...
-#9 0.908 copying path '/nix/store/ah5m9c4ffy0m45h68ls77xr6m4c6rmg9-ncurses-6.6' from 'https://cache.nixos.org'...
-#9 0.908 copying path '/nix/store/wbn5r5xbxfxfxmx0jc4md2zifl1dfmny-vim-9.2.0782-xxd' from 'https://cache.nixos.org'...
-#9 0.998 copying path '/nix/store/6alwmb2pqwzkvfrhanphmab7487p0qbi-readline-8.3p3' from 'https://cache.nixos.org'...
-#9 1.024 copying path '/nix/store/a9kda025a17126f14c01xpwscmjqddwb-bash-interactive-5.3p15' from 'https://cache.nixos.org'...
-#9 1.085 copying path '/nix/store/im6yfz8490h7mjnnzazgapdhxlak2d61-vim-9.2.0782' from 'https://cache.nixos.org'...
-#9 1.433 building '/nix/store/ljkqdjly1f49syf13hkb17zy0h4zclnz-user-environment.drv'...
-#9 DONE 1.7s
+#9 [ 4/12] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
+#9 DONE 0.6s
 
-#10 [6/7] RUN git clone -b bun-v1.4.0 --depth=1 https://github.com/oven-sh/bun.git
-#10 0.116 Cloning into 'bun'...
-#10 8.119 Note: switching to '34cbb9a40b4bd1bd767d134a7065e66c2432a676'.
-#10 8.119 
-#10 8.119 You are in 'detached HEAD' state. You can look around, make experimental
-#10 8.119 changes and commit them, and you can discard any commits you make in this
-#10 8.119 state without impacting any branches by switching back to a branch.
-#10 8.119 
-#10 8.119 If you want to create a new branch to retain commits you create, you may
-#10 8.119 do so (now or later) by using -c with the switch command. Example:
-#10 8.119 
-#10 8.119   git switch -c <new-branch-name>
-#10 8.119 
-#10 8.119 Or undo this operation with:
-#10 8.119 
-#10 8.119   git switch -
-#10 8.119 
-#10 8.119 Turn off this advice by setting config variable advice.detachedHead to false
-#10 8.119 
-#10 9.130 Updating files:  99% (19562/19667)Updating files: 100% (19667/19667)Updating files: 100% (19667/19667), done.
-#10 DONE 9.4s
+#10 [ 5/12] RUN nix-env -iA nixpkgs.vim
+#10 0.266 installing 'vim-9.2.0782'
+#10 0.537 these 10 paths will be fetched (26.3 MiB download, 108.3 MiB unpacked):
+#10 0.537   /nix/store/a9kda025a17126f14c01xpwscmjqddwb-bash-interactive-5.3p15
+#10 0.537   /nix/store/qz6qz18kddi2y25gk9h8ffg37lk8vwcf-gawk-5.4.1
+#10 0.537   /nix/store/f8q4w2hbjvwy7qqwpnvbf5f4qwyww6cp-glibc-2.42-67
+#10 0.537   /nix/store/929svfrm3z9facma5l7y3pkym56b8gni-libidn2-2.3.8
+#10 0.537   /nix/store/b57ihysnpkp69hsbbw1gr1yjac6xagkf-libunistring-1.4.2
+#10 0.537   /nix/store/ah5m9c4ffy0m45h68ls77xr6m4c6rmg9-ncurses-6.6
+#10 0.537   /nix/store/6alwmb2pqwzkvfrhanphmab7487p0qbi-readline-8.3p3
+#10 0.537   /nix/store/im6yfz8490h7mjnnzazgapdhxlak2d61-vim-9.2.0782
+#10 0.537   /nix/store/wbn5r5xbxfxfxmx0jc4md2zifl1dfmny-vim-9.2.0782-xxd
+#10 0.537   /nix/store/5fmknmxx5s78zbbai817zghzmc5l7d3z-xgcc-15.3.0-libgcc
+#10 0.538 copying path '/nix/store/5fmknmxx5s78zbbai817zghzmc5l7d3z-xgcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#10 0.538 copying path '/nix/store/b57ihysnpkp69hsbbw1gr1yjac6xagkf-libunistring-1.4.2' from 'https://cache.nixos.org'...
+#10 0.605 copying path '/nix/store/929svfrm3z9facma5l7y3pkym56b8gni-libidn2-2.3.8' from 'https://cache.nixos.org'...
+#10 0.626 copying path '/nix/store/f8q4w2hbjvwy7qqwpnvbf5f4qwyww6cp-glibc-2.42-67' from 'https://cache.nixos.org'...
+#10 0.868 copying path '/nix/store/qz6qz18kddi2y25gk9h8ffg37lk8vwcf-gawk-5.4.1' from 'https://cache.nixos.org'...
+#10 0.868 copying path '/nix/store/ah5m9c4ffy0m45h68ls77xr6m4c6rmg9-ncurses-6.6' from 'https://cache.nixos.org'...
+#10 0.868 copying path '/nix/store/wbn5r5xbxfxfxmx0jc4md2zifl1dfmny-vim-9.2.0782-xxd' from 'https://cache.nixos.org'...
+#10 0.959 copying path '/nix/store/6alwmb2pqwzkvfrhanphmab7487p0qbi-readline-8.3p3' from 'https://cache.nixos.org'...
+#10 0.979 copying path '/nix/store/a9kda025a17126f14c01xpwscmjqddwb-bash-interactive-5.3p15' from 'https://cache.nixos.org'...
+#10 1.030 copying path '/nix/store/im6yfz8490h7mjnnzazgapdhxlak2d61-vim-9.2.0782' from 'https://cache.nixos.org'...
+#10 1.380 building '/nix/store/ljkqdjly1f49syf13hkb17zy0h4zclnz-user-environment.drv'...
+#10 DONE 1.6s
 
-#11 [7/7] WORKDIR /bun
-#11 DONE 0.1s
+#11 [ 6/12] RUN git clone -b bun-v1.4.0 --depth=1 https://github.com/oven-sh/bun.git
+#11 0.116 Cloning into 'bun'...
+#11 7.367 Note: switching to '34cbb9a40b4bd1bd767d134a7065e66c2432a676'.
+#11 7.367 
+#11 7.367 You are in 'detached HEAD' state. You can look around, make experimental
+#11 7.367 changes and commit them, and you can discard any commits you make in this
+#11 7.367 state without impacting any branches by switching back to a branch.
+#11 7.367 
+#11 7.367 If you want to create a new branch to retain commits you create, you may
+#11 7.367 do so (now or later) by using -c with the switch command. Example:
+#11 7.367 
+#11 7.367   git switch -c <new-branch-name>
+#11 7.367 
+#11 7.367 Or undo this operation with:
+#11 7.367 
+#11 7.367   git switch -
+#11 7.367 
+#11 7.367 Turn off this advice by setting config variable advice.detachedHead to false
+#11 7.367 
+#11 8.379 Updating files:  85% (16819/19667)Updating files:  86% (16914/19667)Updating files:  87% (17111/19667)Updating files:  88% (17307/19667)Updating files:  89% (17504/19667)Updating files:  90% (17701/19667)Updating files:  91% (17897/19667)Updating files:  92% (18094/19667)Updating files:  93% (18291/19667)Updating files:  94% (18487/19667)Updating files:  95% (18684/19667)Updating files:  96% (18881/19667)Updating files:  97% (19077/19667)Updating files:  98% (19274/19667)Updating files:  99% (19471/19667)Updating files: 100% (19667/19667)Updating files: 100% (19667/19667), done.
+#11 DONE 8.7s
 
-#12 exporting to image
-#12 exporting layers
-#12 exporting layers 7.6s done
-#12 exporting manifest sha256:bb9f2c7c06e3b855a329704660c3a7e116f33082531757e44dbe1636fe55ce58 done
-#12 exporting config sha256:4c282eb9baafef0c51333b8f2cda539de251016e795fe2d5d6ccba53dc4ab7d6 done
-#12 exporting attestation manifest sha256:a39d55ec645a36f888c801a79ad966910c82fe1bac1a8ea7f35e2368df57402f done
-#12 exporting manifest list sha256:262804ecdf2209a464cc8c2e43b52096c0e17b0f44bd6ecccf63428d0069f5de done
-#12 naming to docker.io/library/bun-dev:latest done
-#12 unpacking to docker.io/library/bun-dev:latest
-#12 unpacking to docker.io/library/bun-dev:latest 10.6s done
-#12 DONE 18.3s
+#12 [ 7/12] WORKDIR /bun
+#12 DONE 0.1s
 
-#13 resolving provenance for metadata file
+#13 [ 8/12] COPY flake.patch .
 #13 DONE 0.0s
+
+#14 [ 9/12] RUN git apply flake.patch
+#14 DONE 0.1s
+
+#15 [10/12] RUN nix flake update
+#15 0.407 warning: Git tree '/bun' is dirty
+#15 0.981 unpacking 'github:numtide/flake-utils/11707dc2f618dd54ca8739b309ec4fc024de578b' into the Git cache...
+#15 1.255 unpacking 'github:NixOS/nixpkgs/ffb3c9b700e759be2ef13237c9d8f953b32a1e46' into the Git cache...
+#15 10.96 warning: updating lock file "/bun/flake.lock":
+#15 10.96 • Updated input 'nixpkgs':
+#15 10.96     'github:NixOS/nixpkgs/c9b6fb798541223bbb396d287d16f43520250518?narHash=sha256-vgPm2xjOmKdZ0xKA6yLXPJpjOtQPHfaZDRtH%2B47XEBo%3D' (2025-10-07)
+#15 10.96   → 'github:NixOS/nixpkgs/ffb3c9b700e759be2ef13237c9d8f953b32a1e46?narHash=sha256-RD2kNWCG%2BBjo6h%2BJVjWVNntZs2GtRoeY2xHjts/FNkA%3D' (2026-08-19)
+#15 DONE 11.3s
+
+#16 [11/12] RUN nix develop --command bash -c "BUN_DEBUG_QUIET_LOGS=1 bun scripts/build.ts --profile=debug --asan=off"
+#16 0.317 warning: Git tree '/bun' is dirty
+#16 0.820 unpacking 'github:nix-systems/default/da67096a3b9bf56a91d16901293e51ba5b49a27e?narHash=sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768%3D' into the Git cache...
+#16 0.962 copying path '/nix/store/jpnpv93s5ppfb1kbvfp8qa763vfb4fjb-source' from 'https://cache.nixos.org'...
+#16 6.586 evaluation warning: stdenv.isLinux is deprecated, use stdenv.hostPlatform.isLinux instead
+#16 6.586 evaluation warning: stdenv.isDarwin is deprecated, use stdenv.hostPlatform.isDarwin instead
+#16 7.880 evaluation warning: The xorg package set has been deprecated, 'xorg.libX11' has been renamed to 'libx11'
+#16 7.880 evaluation warning: The xorg package set has been deprecated, 'xorg.libxcb' has been renamed to 'libxcb'
+#16 7.880 evaluation warning: The xorg package set has been deprecated, 'xorg.libXcomposite' has been renamed to 'libxcomposite'
+#16 7.881 evaluation warning: The xorg package set has been deprecated, 'xorg.libXcursor' has been renamed to 'libxcursor'
+#16 7.882 evaluation warning: The xorg package set has been deprecated, 'xorg.libXdamage' has been renamed to 'libxdamage'
+#16 7.883 evaluation warning: The xorg package set has been deprecated, 'xorg.libXext' has been renamed to 'libxext'
+#16 7.883 evaluation warning: The xorg package set has been deprecated, 'xorg.libXfixes' has been renamed to 'libxfixes'
+#16 7.883 evaluation warning: The xorg package set has been deprecated, 'xorg.libXi' has been renamed to 'libxi'
+#16 7.883 evaluation warning: The xorg package set has been deprecated, 'xorg.libXrandr' has been renamed to 'libxrandr'
+#16 7.883 evaluation warning: The xorg package set has been deprecated, 'xorg.libXrender' has been renamed to 'libxrender'
+#16 7.883 evaluation warning: The xorg package set has been deprecated, 'xorg.libXScrnSaver' has been renamed to 'libxscrnsaver'
+#16 7.884 evaluation warning: The xorg package set has been deprecated, 'xorg.libXtst' has been renamed to 'libxtst'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libxshmfence' has been renamed to 'libxshmfence'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libX11' has been renamed to 'libx11'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libxcb' has been renamed to 'libxcb'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libXcomposite' has been renamed to 'libxcomposite'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libXcursor' has been renamed to 'libxcursor'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libXdamage' has been renamed to 'libxdamage'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libXext' has been renamed to 'libxext'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libXfixes' has been renamed to 'libxfixes'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libXi' has been renamed to 'libxi'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libXrandr' has been renamed to 'libxrandr'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libXrender' has been renamed to 'libxrender'
+#16 8.095 evaluation warning: The xorg package set has been deprecated, 'xorg.libxshmfence' has been renamed to 'libxshmfence'
+#16 8.129 copying path '/nix/store/k6b8s259p59ckiahvg9pcmz0yhy4kvlh-bun-1.3.13' from 'https://cache.nixos.org'...
+#16 8.135 copying path '/nix/store/3kaakrwd1jia637aa3cpj3lkgfxwg3k3-bash-5.3p15' from 'https://cache.nixos.org'...
+#16 8.136 copying path '/nix/store/5q8qvlg818jqdxgazgc69gvbqik5rc3n-liberation-fonts-2.1.5' from 'https://cache.nixos.org'...
+#16 8.136 copying path '/nix/store/23z88ry5bx0ahhh9246xd0b9v4g9wnjv-libtool-2.6.2-lib' from 'https://cache.nixos.org'...
+#16 8.137 copying path '/nix/store/0vs7b4cjq3sg9267h7vbyjf1kxnd3qws-alsa-topology-conf-1.2.5.1' from 'https://cache.nixos.org'...
+#16 8.139 copying path '/nix/store/gc4gq3xjlhvfmyf599n6l7jvc7z41yyg-libxml2-2.15.3' from 'https://cache.nixos.org'...
+#16 8.141 copying path '/nix/store/0zf11cns5d8m47p3ina084c024hqrrgk-lndir-1.0.5' from 'https://cache.nixos.org'...
+#16 8.144 copying path '/nix/store/k9i57229fs22a8dna2qsxrv6vazm0kni-libxshmfence-1.3.3' from 'https://cache.nixos.org'...
+#16 8.144 copying path '/nix/store/aa9rghyxmmpc800q2fm3v4yspjgssfvz-nspr-4.39' from 'https://cache.nixos.org'...
+#16 8.145 copying path '/nix/store/w590vx55f4fy0g0gvhj2k4w15acavqd3-xz-5.8.3' from 'https://cache.nixos.org'...
+#16 8.145 copying path '/nix/store/vnazsj33pbi2nklj0g9w8xs6h9wmgb8k-openssl-3.6.3' from 'https://cache.nixos.org'...
+#16 8.145 copying path '/nix/store/3v2w5hdrpzwx3w8svda35lyrq9jwqbc8-zlib-1.3.2' from 'https://cache.nixos.org'...
+#16 8.147 copying path '/nix/store/kf94rdy65hbqjrvw07b3w3gigiv4q3ax-expat-2.8.2' from 'https://cache.nixos.org'...
+#16 8.147 copying path '/nix/store/v13r1hh64a4317ia7hn26wzh2s0c3ivr-lld-21.1.8-lib' from 'https://cache.nixos.org'...
+#16 8.150 copying path '/nix/store/sfh0a5cxkx0lmxjzclsxwn8gqbixd955-xkeyboard-config-2.48' from 'https://cache.nixos.org'...
+#16 8.151 copying path '/nix/store/ghs8dpbw5c818hdwjyr41q4l1jfdvv14-perl5.42.0-libnet-3.15' from 'https://cache.nixos.org'...
+#16 8.159 copying path '/nix/store/zmhsvn0jkdm2hqixsrxf5jnyy4smm5in-bzip2-1.0.8' from 'https://cache.nixos.org'...
+#16 8.187 copying path '/nix/store/abnig2yjbzhisw59m8ann9kwlv3v027a-zlib-1.3.2-static' from 'https://cache.nixos.org'...
+#16 8.235 copying path '/nix/store/6dd8s7cyhssjqkfcv9i35fzzsk764m5z-libipt-2.2' from 'https://cache.nixos.org'...
+#16 8.236 copying path '/nix/store/81wjrpmg3m5dyhr10yvjnsyh4dcdpsym-libpng-apng-1.6.58' from 'https://cache.nixos.org'...
+#16 8.252 copying path '/nix/store/7z48md6zfy6v6ng0xvs55f634qnwr2h1-xxhash-0.8.3' from 'https://cache.nixos.org'...
+#16 8.270 copying path '/nix/store/y4kivjss3mg1kxy6p8483s9mi4hf4qmy-brotli-1.2.0-lib' from 'https://cache.nixos.org'...
+#16 8.271 copying path '/nix/store/xrrivqyzxxkzl3xm47dg1irck95ahw9g-setup-debug-info-dirs-hook' from 'https://cache.nixos.org'...
+#16 8.280 copying path '/nix/store/2r04afmsjkpkp482q1xvkdg8d2mj04i9-gzip-1.14' from 'https://cache.nixos.org'...
+#16 8.281 copying path '/nix/store/5chj8dwgz2p7a31r7vzrg23pf675in5z-perl5.42.0-TermReadKey-2.38' from 'https://cache.nixos.org'...
+#16 8.291 copying path '/nix/store/vp2gqjgmq60m3cydi6imw28fzgdynpgs-gnu-config-2024-01-01' from 'https://cache.nixos.org'...
+#16 8.293 copying path '/nix/store/65zg8l2r3vx34zxr0gzzxlgxxbwmq0zy-perl5.42.0-FCGI-0.82' from 'https://cache.nixos.org'...
+#16 8.299 copying path '/nix/store/p1zamvivw0l5zf4crr82v6f6rpg014fm-sqlite-3.53.3' from 'https://cache.nixos.org'...
+#16 8.327 copying path '/nix/store/jbfpbknl5qh0cm5zg48gxgb6fzhwvq04-git-2.55.0-doc' from 'https://cache.nixos.org'...
+#16 8.361 copying path '/nix/store/brn37ijdrwnll5wrc0avzhjhqgiyipx6-dns-root-data-2025-04-14' from 'https://cache.nixos.org'...
+#16 8.365 copying path '/nix/store/k7c84b0jrp0yjgnawpprmcd7kj243vfg-perl5.42.0-URI-5.21' from 'https://cache.nixos.org'...
+#16 8.370 copying path '/nix/store/p6k41cfwvr8plgvcnnlb55wb0cy49qyx-gnused-4.10' from 'https://cache.nixos.org'...
+#16 8.379 copying path '/nix/store/fcxfhk189ild904pas0z3s9f3igqhbq8-c-ares-1.34.8' from 'https://cache.nixos.org'...
+#16 8.382 copying path '/nix/store/ly5swsxfy36yqnx2amyzx3pd06rkd87n-libapparmor-5.0.2' from 'https://cache.nixos.org'...
+#16 8.395 copying path '/nix/store/2bn1xqms2qy2h0d1l21aqa4qyvskxgjg-giflib-6.1.3' from 'https://cache.nixos.org'...
+#16 8.399 copying path '/nix/store/pr8yxkg38z8xgz0q6z53fh4iydsf7jsp-perl5.42.0-HTML-TagCloud-0.38' from 'https://cache.nixos.org'...
+#16 8.400 copying path '/nix/store/r5k6jvbgqbmav38w3n0yadcia99ks5l4-zlib-ng-2.3.3' from 'https://cache.nixos.org'...
+#16 8.401 copying path '/nix/store/vz99vl0g4v7jpynwnlmvgrs1y7gwi23f-perl5.42.0-Digest-HMAC-1.05' from 'https://cache.nixos.org'...
+#16 8.449 copying path '/nix/store/1w70hxw54x2r46brgdqxb30kbxcr3wxg-libedit-20260508-3.1' from 'https://cache.nixos.org'...
+#16 8.462 copying path '/nix/store/xa1brw3bh0lrw4f5d1g74gmm2jv4d39v-pcre2-10.47' from 'https://cache.nixos.org'...
+#16 8.468 copying path '/nix/store/y0gr2a2rv8yr2aszr7qqlqhvwr1zwmcy-perl5.42.0-FCGI-ProcManager-0.28' from 'https://cache.nixos.org'...
+#16 8.499 copying path '/nix/store/mhpnggd19hisq1zsjzhb7pch08f7bix6-libffi-3.7.1' from 'https://cache.nixos.org'...
+#16 8.507 copying path '/nix/store/yx4sm7i1s32bp906qm1csvlcqz3xpg40-util-linux-minimal-2.42.2-lib' from 'https://cache.nixos.org'...
+#16 8.509 copying path '/nix/store/6bn0d74gc2ap4p0k2wawvqq4ri8w6fk0-iana-etc-20251215' from 'https://cache.nixos.org'...
+#16 8.511 copying path '/nix/store/l06hkrvzgb0iw5pbz6j5xzhkqs2bns6p-tzdata-2026c' from 'https://cache.nixos.org'...
+#16 8.518 copying path '/nix/store/ylgaax76s6d0w0gnjd37p12p2rqdg6ad-expat-2.8.2-dev' from 'https://cache.nixos.org'...
+#16 8.518 copying path '/nix/store/692k4nvjyachas8zg1jl7c7vwd4bxxv9-freetype-2.14.3' from 'https://cache.nixos.org'...
+#16 8.518 copying path '/nix/store/xq2d27sf13d5zg6fhndphxqr7f1mggy7-mailcap-2.1.54' from 'https://cache.nixos.org'...
+#16 8.566 copying path '/nix/store/xdf3jqbcg7v1ykma34b8v950mmq95zg1-binutils-2.46-lib' from 'https://cache.nixos.org'...
+#16 8.566 copying path '/nix/store/d9by4vhj0ss1g374jzy6683sgrl35l30-libcap-ng-0.9.3' from 'https://cache.nixos.org'...
+#16 8.567 copying path '/nix/store/mqvdid5df6c5g58psakn4a50mjwl527b-nspr-4.39-dev' from 'https://cache.nixos.org'...
+#16 8.575 copying path '/nix/store/dwcx61zdi5bryhmgpmg48flh01zyqw1k-unzip-6.0' from 'https://cache.nixos.org'...
+#16 8.601 copying path '/nix/store/cs4qdrs4wvw71gyqkgslcq0yp4g79gpd-zlib-1.3.2-dev' from 'https://cache.nixos.org'...
+#16 8.619 copying path '/nix/store/7fpa007v1xfaz2zq9kmqnahmiy0pnr6n-libev-4.33' from 'https://cache.nixos.org'...
+#16 8.623 copying path '/nix/store/3rvan09345s1x4iz20bzfzx7ikmsd9pw-wayland-1.26.0' from 'https://cache.nixos.org'...
+#16 8.628 copying path '/nix/store/5cq3hbrsd7qcbbdkp9mci5ynm8dd4yad-fribidi-1.0.16' from 'https://cache.nixos.org'...
+#16 8.645 copying path '/nix/store/6d0i36a5s7klmwsfcksvx266rwzh6d6c-iso-codes-4.20.1' from 'https://cache.nixos.org'...
+#16 8.658 copying path '/nix/store/07gribxm3sky3lw2g64n59l974q7q1bf-gnugrep-3.12' from 'https://cache.nixos.org'...
+#16 8.671 copying path '/nix/store/r8lxndj3syf32h2mcp6gnr52vir3qibn-libselinux-3.10' from 'https://cache.nixos.org'...
+#16 8.685 copying path '/nix/store/phs39dhh68pj4jg19qivz8v9b68c5sbd-audit-4.2.1-lib' from 'https://cache.nixos.org'...
+#16 8.709 copying path '/nix/store/yjifjy7qjzm9jli8xhzwy3y6fzw84405-go-1.26.5' from 'https://cache.nixos.org'...
+#16 8.711 copying path '/nix/store/wdilhgvxrj383i0f5015cv3gqam9yq3w-file-5.48' from 'https://cache.nixos.org'...
+#16 8.733 copying path '/nix/store/hxs297qc7vid67qqkcw7lw1yfy2hkaki-libpng-apng-1.6.58-dev' from 'https://cache.nixos.org'...
+#16 8.735 copying path '/nix/store/xrr5dy5hir3wlmxan7glv2dcpvrd8gj9-gnum4-1.4.21' from 'https://cache.nixos.org'...
+#16 8.737 copying path '/nix/store/w9r18912qll24297k9sm6abi40rnbm8i-xorgproto-2025.1' from 'https://cache.nixos.org'...
+#16 8.737 copying path '/nix/store/9xdi8c5c8c8s6n9ggqvw2lagijx3slms-libxdmcp-1.1.5' from 'https://cache.nixos.org'...
+#16 8.742 copying path '/nix/store/gx0lskzy7a13r8rhb0hqngnfrhaz9c81-perl5.42.0-Net-SSLeay-1.92' from 'https://cache.nixos.org'...
+#16 8.744 copying path '/nix/store/y8jf3yy18mdg7vqr01j39rcfdjr5hb1k-wget-1.25.0' from 'https://cache.nixos.org'...
+#16 8.751 copying path '/nix/store/a7qcdrcx203yxjb54bhncibks2c14d5v-libxau-1.0.12' from 'https://cache.nixos.org'...
+#16 8.786 copying path '/nix/store/1f2wdgkvn0rlz41ziycqdw5vdsg1pf2i-gsettings-desktop-schemas-50.1' from 'https://cache.nixos.org'...
+#16 8.797 copying path '/nix/store/146aqw2n4qgdc5y6g4711b5blx6niyz8-lm-sensors-3.6.2' from 'https://cache.nixos.org'...
+#16 8.802 copying path '/nix/store/z90qxq32ss488dazcqwvnjq7sgabqcxs-glib-2.88.3' from 'https://cache.nixos.org'...
+#16 8.804 copying path '/nix/store/65i16igqriavg83p8vabfa9g2hw2nq23-lzo-2.10' from 'https://cache.nixos.org'...
+#16 8.815 copying path '/nix/store/7kfks6szw7rxyv7vbfj0qvi8mljbwq5m-pixman-0.46.4' from 'https://cache.nixos.org'...
+#16 8.836 copying path '/nix/store/fad93y4mkr05xim8viz1m1mah6gld582-hiredis-1.4.1' from 'https://cache.nixos.org'...
+#16 8.842 copying path '/nix/store/3140ljx4n6abv5jginribyy680qjw7q2-expand-response-params' from 'https://cache.nixos.org'...
+#16 8.846 copying path '/nix/store/9k3l8v5p5zh9ai9hjjm45izbkhvlwfdd-glibc-2.42-67-bin' from 'https://cache.nixos.org'...
+#16 8.879 copying path '/nix/store/0fc8ib0xkkqk0bd6m10mmhlq1qnqxr41-libxcb-1.17.0' from 'https://cache.nixos.org'...
+#16 8.883 copying path '/nix/store/0zmsyh4np15jjffra33qg2160rvs2wyd-file-5.48-dev' from 'https://cache.nixos.org'...
+#16 8.887 copying path '/nix/store/jkry4b00dmfsfx5r8m2n11r7fchz6aj8-gcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#16 8.888 copying path '/nix/store/wkhdy2mn35pll1b1kglsj2hacdk0fkav-libxshmfence-1.3.3-dev' from 'https://cache.nixos.org'...
+#16 8.894 copying path '/nix/store/6wvm2snjhp6g0fl2s8159maswq7rx2j2-libxau-1.0.12-dev' from 'https://cache.nixos.org'...
+#16 8.906 copying path '/nix/store/4q862pif22jj28vxg9w7p449pd0a99gl-rhash-1.4.6' from 'https://cache.nixos.org'...
+#16 8.936 copying path '/nix/store/d8ymm5b5m3n4j15g933y7p9shcwd4k6d-libuv-1.52.1' from 'https://cache.nixos.org'...
+#16 8.954 copying path '/nix/store/7zy98i52jaifcpgj3ymw6vdx754m0pnn-nghttp2-1.69.0-lib' from 'https://cache.nixos.org'...
+#16 8.960 copying path '/nix/store/bvjp82swwzljhjfsnv7jdvr7xyxb0dbc-nghttp3-1.16.0' from 'https://cache.nixos.org'...
+#16 8.989 copying path '/nix/store/cpwqjn64gzylzqnr2lj7wgdd9fvf29df-ngtcp2-1.23.0' from 'https://cache.nixos.org'...
+#16 8.989 copying path '/nix/store/x1zf7hg1r7zpwcgvvl13fy3611lm3bd9-libssh2-1.11.1' from 'https://cache.nixos.org'...
+#16 8.989 copying path '/nix/store/fdn90f4m92qk40q8vq8ijpq1yvbd0pci-curl-8.21.0-man' from 'https://cache.nixos.org'...
+#16 8.992 copying path '/nix/store/jmdlsqv4ajngq9vd8057ihkjn9gi713d-dejavu-fonts-minimal-2.37' from 'https://cache.nixos.org'...
+#16 8.996 copying path '/nix/store/8ycplarjb92gxa3ia9b5x9bx0l122jmk-libdisplay-info-0.4.0' from 'https://cache.nixos.org'...
+#16 9.026 copying path '/nix/store/ylzalvsf8nxhidm1p72k6ckxckpj1wd3-gcc-15.3.0-lib' from 'https://cache.nixos.org'...
+#16 9.038 copying path '/nix/store/ji91jz4fm8vrwjhi1iqv5gg8yic0jini-libx11-1.8.13' from 'https://cache.nixos.org'...
+#16 9.052 copying path '/nix/store/scmid0ab41q380f3fw2xr4nppgbszs45-libxcb-1.17.0-dev' from 'https://cache.nixos.org'...
+#16 9.062 copying path '/nix/store/bs3vdapyv7jq4xklbr51nxk9yilh84ar-vulkan-loader-1.4.357.0' from 'https://cache.nixos.org'...
+#16 9.066 copying path '/nix/store/x1f9w9zsawhq3baif02d0lclpqficm72-libxcb-keysyms-0.4.1' from 'https://cache.nixos.org'...
+#16 9.072 copying path '/nix/store/hci8r3x1q2mgali0ddw40b2qy48v4fbq-libxml2-2.15.3-bin' from 'https://cache.nixos.org'...
+#16 9.082 copying path '/nix/store/wm6k5qgx2vrkzcvgs9w9cfibxbvb74b1-nghttp3-1.16.0-dev' from 'https://cache.nixos.org'...
+#16 9.102 copying path '/nix/store/99ijl832yfqmx798hnpkcwnqk8np7lxd-wayland-1.26.0-dev' from 'https://cache.nixos.org'...
+#16 9.114 copying path '/nix/store/pw6m2q1x3vmr3bhi7x3wayb5271pl5ma-fribidi-1.0.16-dev' from 'https://cache.nixos.org'...
+#16 9.119 copying path '/nix/store/q4q9wd81hqwvxvy6wj9j00xk3gh87k1x-wayland-protocols-1.49' from 'https://cache.nixos.org'...
+#16 9.122 copying path '/nix/store/4arh69nm7q14c3winf8dv7s7v0nvdcqi-libffi-3.7.1-dev' from 'https://cache.nixos.org'...
+#16 9.147 copying path '/nix/store/nn5c3lfrjf40ib773cvl3hxjvw86bs36-ngtcp2-1.23.0-dev' from 'https://cache.nixos.org'...
+#16 9.159 copying path '/nix/store/5927rrbd5zcapzk681b9m19hdahjmh31-fontconfig-2.18.2' from 'https://cache.nixos.org'...
+#16 9.171 copying path '/nix/store/78j8mm3dpnj1q6x3813ripjkjklqzyjq-libuv-1.52.1-dev' from 'https://cache.nixos.org'...
+#16 9.184 copying path '/nix/store/a7iw93h3qr57p3xg9db9mvbazq4xzszk-hdrhistogram_c-0.11.10' from 'https://cache.nixos.org'...
+#16 9.185 copying path '/nix/store/ikafwfc3mfisagsclqb8dl58q9qqyky2-llhttp-9.4.3' from 'https://cache.nixos.org'...
+#16 9.203 copying path '/nix/store/vs650xhl2qdrmbws0vsf0nsx5qh86d8d-c-ares-1.34.8' from 'https://cache.nixos.org'...
+#16 9.211 copying path '/nix/store/mlqqpn1h34rwg4ix8sn84lafb4jzw2sb-libxcrypt-4.5.2' from 'https://cache.nixos.org'...
+#16 9.218 copying path '/nix/store/d7gdsz9vpblq9wx39wp3s0fkw86pwy0k-pkg-config-0.29.2' from 'https://cache.nixos.org'...
+#16 9.221 copying path '/nix/store/bc9zgcv6xxpcj366wrrn10mxrpax2cg0-gdbm-1.26-lib' from 'https://cache.nixos.org'...
+#16 9.242 copying path '/nix/store/pkjkl2glnx7g3v3s2rlhxmipvfqbrsjl-mpdecimal-4.0.1' from 'https://cache.nixos.org'...
+#16 9.252 copying path '/nix/store/3lzrddk8kbyxsmj7f2xqky82n28cxk6b-expand-response-params' from 'https://cache.nixos.org'...
+#16 9.287 copying path '/nix/store/b9lnrrbgb4yh20iqy9dpikhs5in7ri3r-linux-headers-7.1' from 'https://cache.nixos.org'...
+#16 9.288 copying path '/nix/store/cvgmnc85kzd87hsxrpspap6zvmmwmh9d-uvwasi-0.0.23' from 'https://cache.nixos.org'...
+#16 9.298 copying path '/nix/store/grsq3jn1lprgim1ibdyg1ny1mgvnd2xq-llhttp-9.4.3-dev' from 'https://cache.nixos.org'...
+#16 9.310 copying path '/nix/store/2qqlbvvf35gz7dwmg3dlkz3dgy3dn3aj-file-5.48' from 'https://cache.nixos.org'...
+#16 9.315 copying path '/nix/store/52wvaq4xw249yk99h33sflc9f8zw0gs6-libx11-1.8.13-dev' from 'https://cache.nixos.org'...
+#16 9.326 copying path '/nix/store/y9dqkgn9kpsjzb6z56n4fvx03vd5i2h5-libxcomposite-0.4.7' from 'https://cache.nixos.org'...
+#16 9.340 copying path '/nix/store/b3ic1fcx2qmx5l4cfgrq3wnk4q8hzbx4-libxext-1.3.7' from 'https://cache.nixos.org'...
+#16 9.342 copying path '/nix/store/fr7cz2pv91irm3y48vm19d56r2a7zkcr-libxfixes-6.0.2' from 'https://cache.nixos.org'...
+#16 9.355 copying path '/nix/store/n5j846ms59gqdhm61c9cl8gsi46d2dbz-libxkbcommon-1.13.2' from 'https://cache.nixos.org'...
+#16 9.357 copying path '/nix/store/w66ychfm05df3fjv3g3pfbc9givl45gh-libxrender-0.9.12' from 'https://cache.nixos.org'...
+#16 9.362 copying path '/nix/store/myjvqwq5i784sz8p75xh5rwab0lm09fz-fontconfig-2.18.2-lib' from 'https://cache.nixos.org'...
+#16 9.389 copying path '/nix/store/5fi9ys1lcnhbc8rcrp0d40rawhlzx4kj-pkg-config-wrapper-0.29.2' from 'https://cache.nixos.org'...
+#16 9.394 copying path '/nix/store/ncrqb1icmqyxbpfwxawyqlks98dy5nid-c-ares-1.34.8-dev' from 'https://cache.nixos.org'...
+#16 9.423 copying path '/nix/store/ynvd9pad8r220aa3p4ki7g04g2z8rh1g-brotli-1.2.0' from 'https://cache.nixos.org'...
+#16 9.423 copying path '/nix/store/7i4c31hkr3f5859qkwkd1q9avmsa6s74-xz-5.8.3-bin' from 'https://cache.nixos.org'...
+#16 9.437 copying path '/nix/store/9jgjxyq4x8xpwqnx5lg5zyqiqpgy2fp9-bzip2-1.0.8-bin' from 'https://cache.nixos.org'...
+#16 9.443 copying path '/nix/store/iv16qhgzcqsvf9fsjkd3x2vjjbs0fnci-libxdamage-1.1.7' from 'https://cache.nixos.org'...
+#16 9.456 copying path '/nix/store/mcfmlfrm4s8yrbd181fglkz1w2kgx4ri-libxext-1.3.7-dev' from 'https://cache.nixos.org'...
+#16 9.483 copying path '/nix/store/36f0ghag4x56mb5qdnzszb5ndhfxzybr-libxcursor-1.2.3' from 'https://cache.nixos.org'...
+#16 9.489 copying path '/nix/store/xmqhw4ypjzjcayq08v5csrx0218fbc0d-libxfixes-6.0.2-dev' from 'https://cache.nixos.org'...
+#16 9.495 copying path '/nix/store/h9xd7aca66y67zi5gp4vzwhj7vzgpxdx-libxi-1.8.3' from 'https://cache.nixos.org'...
+#16 9.497 copying path '/nix/store/n1mr33iqyv4vvwb967s7lkzza3g4d5p6-libxrandr-1.5.5' from 'https://cache.nixos.org'...
+#16 9.521 copying path '/nix/store/ki634vxc2806yy5z4ybjbsi7hkik0gv8-libxrender-0.9.12-dev' from 'https://cache.nixos.org'...
+#16 9.530 copying path '/nix/store/6iv76ghhbpbpkgfad25ngns7jw4jakr7-libxkbcommon-1.13.2-dev' from 'https://cache.nixos.org'...
+#16 9.537 copying path '/nix/store/9h6z0m0j8lpi79z111fy37hn2brmqbm8-brotli-1.2.0-dev' from 'https://cache.nixos.org'...
+#16 9.539 copying path '/nix/store/n9c5alzvyfnl8z1yxpyiaqyxjagz33m2-libxdamage-1.1.7-dev' from 'https://cache.nixos.org'...
+#16 9.544 copying path '/nix/store/fh4lkqcs7wwdi2yx7zl251rj8png1r54-libxscrnsaver-1.2.5' from 'https://cache.nixos.org'...
+#16 9.553 copying path '/nix/store/bqg9vzj6kz3wjy1ay7f743zap82a7hg6-bzip2-1.0.8-dev' from 'https://cache.nixos.org'...
+#16 9.572 copying path '/nix/store/n7pd6q1faa53zchdkw2l14768av4nmz8-xz-5.8.3-dev' from 'https://cache.nixos.org'...
+#16 9.578 copying path '/nix/store/db15i2ldhmgliimajkj6jmf1588x32l0-cairo-1.18.4' from 'https://cache.nixos.org'...
+#16 9.583 copying path '/nix/store/dnvwhqgbyg8vhxmkjdfxfjlf77lq13pn-gmp-with-cxx-6.3.0' from 'https://cache.nixos.org'...
+#16 9.588 copying path '/nix/store/k2fr8pihnym47m71fij3ns184vbx4v79-zstd-1.5.7' from 'https://cache.nixos.org'...
+#16 9.592 copying path '/nix/store/sq7c80pva0lk51gn7fbgycr0gaw001pn-gettext-1.0' from 'https://cache.nixos.org'...
+#16 9.598 copying path '/nix/store/hynd7ax0sb0vv7xa3lpg2m842h1abzm7-libxcomposite-0.4.7-dev' from 'https://cache.nixos.org'...
+#16 9.619 copying path '/nix/store/4fkv25vllnmvlh0xgvzgaj5q1s87xyf2-libxcursor-1.2.3-dev' from 'https://cache.nixos.org'...
+#16 9.631 copying path '/nix/store/fak7myymy8rw84qf9hm9gxsmcbr8qpra-libxi-1.8.3-dev' from 'https://cache.nixos.org'...
+#16 9.634 copying path '/nix/store/aqnjw8g0zzkrckcbkm45dk0ri2y2q195-libxrandr-1.5.5-dev' from 'https://cache.nixos.org'...
+#16 9.638 copying path '/nix/store/kr4vpmy91sw8p150ridzacrggzma1d08-libxtst-1.2.5' from 'https://cache.nixos.org'...
+#16 9.639 copying path '/nix/store/3qsbga9b43wmla9ahf5j18k1hch843n0-llvm-21.1.8-lib' from 'https://cache.nixos.org'...
+#16 9.647 copying path '/nix/store/baki8hsddzdn2kdamf6l6prcgl2mxg1g-ninja-1.13.2' from 'https://cache.nixos.org'...
+#16 9.649 copying path '/nix/store/bzg5q6y7fa6japxlb5lhpwd1vnz95lab-freetype-2.14.3-dev' from 'https://cache.nixos.org'...
+#16 9.671 copying path '/nix/store/cwn32dkv1iffrhh6sw1gk09nxb10dv17-glibc-2.42-67-dev' from 'https://cache.nixos.org'...
+#16 9.673 copying path '/nix/store/f83m21cbsgnrg6vjax8fmhv2lnmvqyz8-libxinerama-1.1.6' from 'https://cache.nixos.org'...
+#16 9.695 copying path '/nix/store/4zaigyrqmrflk48kdp8b9v46yrs1h9kl-dconf-0.49.0-lib' from 'https://cache.nixos.org'...
+#16 9.713 copying path '/nix/store/0h5p96jxi4p990pg3s1609y048xyzknf-fmt-12.2.0' from 'https://cache.nixos.org'...
+#16 9.720 copying path '/nix/store/dwhnlpxdj2x7g1dvwq1fm18hadnqywy8-compiler-rt-libc-21.1.8' from 'https://cache.nixos.org'...
+#16 9.730 copying path '/nix/store/0rqvb1hj5jh36msyqxiy3zdqyjkhfbgy-mpfr-4.2.2' from 'https://cache.nixos.org'...
+#16 9.733 copying path '/nix/store/ahisl0z6jzqgi69nhdsz0wd4k80c3wyq-gmp-with-cxx-6.3.0-dev' from 'https://cache.nixos.org'...
+#16 9.738 copying path '/nix/store/wjd0n4zc4iawhsa9az3m5pkri9dqd4rh-libxxf86vm-1.1.7' from 'https://cache.nixos.org'...
+#16 9.743 copying path '/nix/store/bgq9cggny5a11g3bzyazl9fbkdbr9ka1-shared-mime-info-2.4' from 'https://cache.nixos.org'...
+#16 9.768 copying path '/nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7' from 'https://cache.nixos.org'...
+#16 9.774 copying path '/nix/store/7w6a03silnkhm5x4bdsjd5cnri73pyid-kmod-31-lib' from 'https://cache.nixos.org'...
+#16 9.781 copying path '/nix/store/pi7b0sg9jk0ccxlwpbpmzyvp0w6f1115-libxinerama-1.1.6-dev' from 'https://cache.nixos.org'...
+#16 9.794 copying path '/nix/store/izq16l9s2qycfqdf7fnkpxqmljhlvaq8-fontconfig-2.18.2-bin' from 'https://cache.nixos.org'...
+#16 9.798 copying path '/nix/store/jk4bf13spkqis8p0djz9qpi152qzh6sp-glib-2.88.3-bin' from 'https://cache.nixos.org'...
+#16 9.822 copying path '/nix/store/2llfzajrzvc9r5xgz6f84jspl2z3n1xs-simdutf-9.0.0' from 'https://cache.nixos.org'...
+#16 9.864 copying path '/nix/store/dc14kykxhg4gkbcsglaqsdbq7yd6y2nn-ccache-4.13.6' from 'https://cache.nixos.org'...
+#16 9.865 copying path '/nix/store/65448rf5aim0fjsiiqcz6v16yj5igq0a-icu4c-78.3' from 'https://cache.nixos.org'...
+#16 9.881 copying path '/nix/store/9p2nbm4m4x1wlh64q3xxyiz242pipv51-gtest-1.17.0' from 'https://cache.nixos.org'...
+#16 9.890 copying path '/nix/store/i6zfaprd8qgm92j252z0k47q76dq3z6h-glibc-iconv-2.42' from 'https://cache.nixos.org'...
+#16 9.890 copying path '/nix/store/bxn3lxvkr5im8r556wcmrg0j3g1n2hxg-lief-0.17.6' from 'https://cache.nixos.org'...
+#16 9.893 copying path '/nix/store/jrzzd2552k2gsjlxn655vrylvrwlaq3r-temporal_capi-0.2.6' from 'https://cache.nixos.org'...
+#16 9.898 copying path '/nix/store/lw5azh3993rw4rmahihhirs8khggmi1a-nbytes-0.1.4' from 'https://cache.nixos.org'...
+#16 9.931 copying path '/nix/store/h5j90i26a2i71s376zqvp8n2msiszp0z-fontconfig-2.18.2-dev' from 'https://cache.nixos.org'...
+#16 9.966 copying path '/nix/store/n8wz6bjfkdkpa1qrgnx9fz526qy5ry04-simdjson-4.6.5' from 'https://cache.nixos.org'...
+#16 10.00 copying path '/nix/store/gfxjcg8364qfyxcflz9cksnr86i26jln-merve-1.2.2' from 'https://cache.nixos.org'...
+#16 10.01 copying path '/nix/store/swvlm5m5jgvasnza487qbgqfas6a1r30-ada-3.4.4' from 'https://cache.nixos.org'...
+#16 10.04 copying path '/nix/store/rrc4m369h000c5ajmskwb3ksafsz824z-kmod-31' from 'https://cache.nixos.org'...
+#16 10.05 copying path '/nix/store/kk3ki7n9yazpdbsk7ink29mhm4v1wnqa-patchelf-0.15.2' from 'https://cache.nixos.org'...
+#16 10.12 copying path '/nix/store/75cs0y6n4dgm7l0bc4c2h5x82qpccdsy-gtest-1.17.0-dev' from 'https://cache.nixos.org'...
+#16 10.15 copying path '/nix/store/94wzcs1f5rpjq83nwdrgwwkzr1qz8vfl-libxft-2.3.9' from 'https://cache.nixos.org'...
+#16 10.19 copying path '/nix/store/fi3wcrkma5cpnp53dxzaly0846bg0rmq-perl5.42.0-HTML-Tagset-3.20' from 'https://cache.nixos.org'...
+#16 10.19 copying path '/nix/store/36z368yjqm57gcidfn38c61k6rk0wfp9-util-linux-minimal-2.42.2-login' from 'https://cache.nixos.org'...
+#16 10.20 copying path '/nix/store/f1gagmli6hbbzgmaz2yciv3cql27piwz-openssl-3.6.3-bin' from 'https://cache.nixos.org'...
+#16 10.23 copying path '/nix/store/hmlk7z390nxkn72z7wk9x50bb9k4g0bd-update-autotools-gnu-config-scripts-hook' from 'https://cache.nixos.org'...
+#16 10.26 copying path '/nix/store/mw8g7c1mzfmsjk8zw8qrrj0j2qziil6i-find-xml-catalogs-hook' from 'https://cache.nixos.org'...
+#16 10.26 copying path '/nix/store/jqjv8k57dkxhx34swbfkajrrj5vfl6r5-libjpeg-turbo-3.1.4.1' from 'https://cache.nixos.org'...
+#16 10.29 copying path '/nix/store/pkgmxazp4w04a4phmy00d0rdym7pa0xl-gnumake-4.4.1' from 'https://cache.nixos.org'...
+#16 10.31 copying path '/nix/store/7zq0ls41xgv373anbjnpnrbai386fg2v-libxft-2.3.9-dev' from 'https://cache.nixos.org'...
+#16 10.31 copying path '/nix/store/m0ds0h4z5qhwdqmrkqvpchasmji25v3p-libyaml-0.2.5' from 'https://cache.nixos.org'...
+#16 10.32 copying path '/nix/store/1bczr25ry5vg2wr27jc7kc61f8c2yn2v-util-linux-minimal-2.42.2-swap' from 'https://cache.nixos.org'...
+#16 10.34 copying path '/nix/store/p4xn44pyfhfrbwyx9di5dzwfyayx9d16-systemd-minimal-libs-261.1' from 'https://cache.nixos.org'...
+#16 10.38 copying path '/nix/store/dgzd0xg1qmk6z4bdaipzlb4fivfh0b78-gmp-with-cxx-6.3.0' from 'https://cache.nixos.org'...
+#16 10.42 copying path '/nix/store/0mj515vwnzqmxqrb9m425p2h9fbpnjcc-libxml2-2.15.3-dev' from 'https://cache.nixos.org'...
+#16 10.43 copying path '/nix/store/l5jj35jgikj1y7m23r5d57xkdlr7w3l7-util-linux-minimal-2.42.2-mount' from 'https://cache.nixos.org'...
+#16 10.44 copying path '/nix/store/kdk1h9zg91ypbnsrd4m82qs191i5rijv-openssl-3.6.3-dev' from 'https://cache.nixos.org'...
+#16 10.45 copying path '/nix/store/f8fyc0jdz8pqigpdyhzpny115c6nsk6i-ruby-3.4.9' from 'https://cache.nixos.org'...
+#16 10.50 copying path '/nix/store/86zr9zylxh1ywwk01w76xc8gmykx576p-json-glib-1.10.8' from 'https://cache.nixos.org'...
+#16 10.53 copying path '/nix/store/2i1hgmh5kaa976iqdrgwcclv0mz8jgrf-attr-2.6.0' from 'https://cache.nixos.org'...
+#16 10.56 copying path '/nix/store/l5zqppiy8dazh9z96lfj2z7swzx9dsf7-acl-2.4.0' from 'https://cache.nixos.org'...
+#16 10.56 copying path '/nix/store/hz51xhnpl8d51hh6kkhqhnwm52v9ks4i-gmp-6.3.0' from 'https://cache.nixos.org'...
+#16 10.57 copying path '/nix/store/4617igj8b1xh55sb46b9x0az3bh84ssi-gobject-introspection-1.86.0' from 'https://cache.nixos.org'...
+#16 10.67 copying path '/nix/store/5vwn85gq3niq9gxc4fvdhqaq3gj73p29-perl5.42.0-Mozilla-CA-20230821' from 'https://cache.nixos.org'...
+#16 10.68 copying path '/nix/store/0qkacffjmc7588calz6x7a092hdbvg49-perl5.42.0-Try-Tiny-0.31' from 'https://cache.nixos.org'...
+#16 10.69 copying path '/nix/store/sdn3h2ygsp93ny68xp6xnw21vya7js1d-libssh2-1.11.1-dev' from 'https://cache.nixos.org'...
+#16 10.71 copying path '/nix/store/dqxknsb71lsgzfzcdmn6x7fzssqbdyyx-coreutils-9.11' from 'https://cache.nixos.org'...
+#16 10.77 copying path '/nix/store/flpfpb9gn5jk3zjdvpgzmy2b14ksjdmn-libarchive-3.8.8-lib' from 'https://cache.nixos.org'...
+#16 10.80 copying path '/nix/store/wx3srh3ql6ixj6hvmxp84cf5w9p1ag0f-gnutar-1.35' from 'https://cache.nixos.org'...
+#16 10.80 copying path '/nix/store/1gqjlc6ysvvla1j34bjc3fd89lyjs7h6-mpfr-4.2.2' from 'https://cache.nixos.org'...
+#16 10.81 copying path '/nix/store/l73b40s107mbz59w42s1j7dpfj56xfrk-isl-0.20' from 'https://cache.nixos.org'...
+#16 10.84 copying path '/nix/store/0afw57kj1dypiawnygqhiv4m6phln0dm-perl5.42.0-IO-HTML-1.004' from 'https://cache.nixos.org'...
+#16 10.89 copying path '/nix/store/3yj2yr6plb7q0xn3mfpvdfy6hi70pazf-perl5.42.0-IO-Socket-SSL-2.083' from 'https://cache.nixos.org'...
+#16 10.95 copying path '/nix/store/72sra5sw8a2aspnn72r6vjwxbm80x9gd-perl5.42.0-Crypt-URandom-0.55' from 'https://cache.nixos.org'...
+#16 11.01 copying path '/nix/store/gy1ldhbj7qrxnr6ssh06nqqidq3ibfis-libglvnd-1.7.0' from 'https://cache.nixos.org'...
+#16 11.02 copying path '/nix/store/7j80zc5807d96ldm5sv0q7qs5mipli22-perl5.42.0-Test-RequiresInternet-0.05' from 'https://cache.nixos.org'...
+#16 11.03 copying path '/nix/store/8l49xc65lv36r3l7vgl5hn6jisj8jvry-perl5.42.0-LWP-MediaTypes-6.04' from 'https://cache.nixos.org'...
+#16 11.03 copying path '/nix/store/00qad9xxxv7ca23hx2i09snra8w37yjg-libmpc-1.4.1' from 'https://cache.nixos.org'...
+#16 11.05 copying path '/nix/store/adlx3ngvaz0xik8120q7cwdis6md9jjz-perl5.42.0-Clone-0.46' from 'https://cache.nixos.org'...
+#16 11.06 copying path '/nix/store/zwrvfq06cg9sffvmqsc3sqkjz4mhm907-perl5.42.0-Net-SMTP-SSL-1.04' from 'https://cache.nixos.org'...
+#16 11.07 copying path '/nix/store/njkg10wv2l1wzlmrbnkxjqn7rfj0wk88-alsa-ucm-conf-1.2.16.1' from 'https://cache.nixos.org'...
+#16 11.08 copying path '/nix/store/jkfinz27i21wha3wg25qj96yp4rcs9dj-systemd-minimal-261.1' from 'https://cache.nixos.org'...
+#16 11.12 copying path '/nix/store/5mh24sqy6bfigfnxd0z2f34ayjldhgg1-perl5.42.0-Authen-SASL-2.1900' from 'https://cache.nixos.org'...
+#16 11.13 copying path '/nix/store/pprcff204bh02cq1rjmbx2fz1kw137y9-perl-5.42.0' from 'https://cache.nixos.org'...
+#16 11.14 copying path '/nix/store/6pqs0j1lc9gq1ay0blmgvfw6ppw2ldh8-compiler-rt-libc-21.1.8-dev' from 'https://cache.nixos.org'...
+#16 11.16 copying path '/nix/store/4fj1rs40wx8r4pbbzrjzmzxv4dg4aia5-findutils-4.11.0' from 'https://cache.nixos.org'...
+#16 11.16 copying path '/nix/store/gplpbrr2ggr4xha4lqz0y667845nvp3p-diffutils-3.12' from 'https://cache.nixos.org'...
+#16 11.17 copying path '/nix/store/bxxw1906hsa770igjyzvhh5zgwknal3h-perl5.42.0-Encode-Locale-1.05' from 'https://cache.nixos.org'...
+#16 11.17 copying path '/nix/store/ch6gyavxaji48yyfdgdvyzhb9878301p-perl5.42.0-Test-Fatal-0.017' from 'https://cache.nixos.org'...
+#16 11.22 copying path '/nix/store/wqqb6mbnrnm380adc0ry5hdm449xix4f-gcc-15.3.0' from 'https://cache.nixos.org'...
+#16 11.23 copying path '/nix/store/d0yjv7jazwrvb8p1abqh6n3csqa21sp4-alsa-lib-1.2.16.1' from 'https://cache.nixos.org'...
+#16 11.25 copying path '/nix/store/gnzifmzb5r72ajwbbvpbkwvyf45sqhjp-perl5.42.0-Compress-Raw-Zlib-2.222' from 'https://cache.nixos.org'...
+#16 11.27 copying path '/nix/store/x0mgm8f41ifmdnfxdypidgnyjax9hjyr-libepoxy-1.5.10' from 'https://cache.nixos.org'...
+#16 11.28 copying path '/nix/store/x7kb8q12n6l0kbhgx52wwam1hwpyigzl-libglvnd-1.7.0-dev' from 'https://cache.nixos.org'...
+#16 11.28 copying path '/nix/store/h0zfxbpl0p5r10dlyahxz9mzgf1md268-perl5.42.0-Compress-Raw-Bzip2-2.218' from 'https://cache.nixos.org'...
+#16 11.38 copying path '/nix/store/h73acc4phd6fy12nsyrnray727wpvmwa-perl5.42.0-Test-Needs-0.002010' from 'https://cache.nixos.org'...
+#16 11.39 copying path '/nix/store/vpxrgyxi44znlpq75imiyaklw2g4xcyi-perl5.42.0-WWW-RobotRules-6.02' from 'https://cache.nixos.org'...
+#16 11.40 copying path '/nix/store/w4jh2b0crsxqk58bj6s9l0cwblmv0cd4-perl5.42.0-Net-HTTP-6.23' from 'https://cache.nixos.org'...
+#16 11.40 copying path '/nix/store/xpc4a1dchff70fn9d05ws4v2ipc12cq2-perl5.42.0-TimeDate-2.33' from 'https://cache.nixos.org'...
+#16 11.46 copying path '/nix/store/57fv53m58x8l051dirhzwlhlk3zr48im-zstd-1.5.7-bin' from 'https://cache.nixos.org'...
+#16 11.49 copying path '/nix/store/m3ifaai992k2wn6z0akvi76z671mv192-libjpeg-turbo-3.1.4.1-bin' from 'https://cache.nixos.org'...
+#16 11.49 copying path '/nix/store/16fiqfj4val8lpa80azssybwljfs3dc7-graphite2-1.3.15' from 'https://cache.nixos.org'...
+#16 11.49 copying path '/nix/store/wi3n92k0x9zdgbmzkvbm51rlfmm5722j-json-c-0.18' from 'https://cache.nixos.org'...
+#16 11.52 copying path '/nix/store/f3l4alxx38b9pg39sh5kzgaxiisf1cnh-libice-1.1.2' from 'https://cache.nixos.org'...
+#16 11.52 copying path '/nix/store/irwai5r7dcn836p9zri9bzcawc7d91s2-libtasn1-4.21.0' from 'https://cache.nixos.org'...
+#16 11.54 copying path '/nix/store/wavmkdswdv8v1kdilnbazill9b77agkb-perl5.42.0-HTTP-Date-6.06' from 'https://cache.nixos.org'...
+#16 11.61 copying path '/nix/store/ysi6g37naf5aw57fvhyjmjjzf6scmmki-alsa-lib-1.2.16.1-dev' from 'https://cache.nixos.org'...
+#16 11.62 copying path '/nix/store/vhkc52wdiwjhy0vkgsswl1bsr7xfphg3-zstd-1.5.7-dev' from 'https://cache.nixos.org'...
+#16 11.64 copying path '/nix/store/whnmh1masdn89jdf4mkzgxzykw0k79z4-libdeflate-1.25' from 'https://cache.nixos.org'...
+#16 11.64 copying path '/nix/store/2dd1n2sylq2ah6ij7s2zjm2y5qjdl3kx-harfbuzz-13.2.1' from 'https://cache.nixos.org'...
+#16 11.64 copying path '/nix/store/p504yd5gipcqczgdi3kygzykmfgdai71-p11-kit-0.26.2' from 'https://cache.nixos.org'...
+#16 11.65 copying path '/nix/store/dq2bqy1lpvj95d4x2vki1l4559al6df1-libjpeg-turbo-3.1.4.1-dev' from 'https://cache.nixos.org'...
+#16 11.65 copying path '/nix/store/vszsb03gbq46l8gx0nf1hg7vs9v8ahkn-libice-1.1.2-dev' from 'https://cache.nixos.org'...
+#16 11.76 copying path '/nix/store/nqhk36qvv90ahnrbk0qhkardq4nzrp22-libsm-1.2.6' from 'https://cache.nixos.org'...
+#16 11.77 copying path '/nix/store/d52k7x1yyqgygv4cha58bv9ckgc2pisj-perl5.42.0-File-Listing-6.16' from 'https://cache.nixos.org'...
+#16 11.78 copying path '/nix/store/nc72i3ffndprkfxcxmsdcx9la9zbmvr3-perl5.42.0-HTTP-CookieJar-0.014' from 'https://cache.nixos.org'...
+#16 11.79 copying path '/nix/store/ha5qkgfgs1gpiybg7pi13nhmjnyhvx80-libwebp-1.6.0' from 'https://cache.nixos.org'...
+#16 11.80 copying path '/nix/store/jv1r9zrhzyrkbjvkcz5n75356hpqmnd1-libdatrie-2019-12-20-lib' from 'https://cache.nixos.org'...
+#16 11.89 copying path '/nix/store/y8dk7gfmccgzd25njl0pvc88dz8s2mg4-libidn2-2.3.8-bin' from 'https://cache.nixos.org'...
+#16 11.90 copying path '/nix/store/n3mfngwq7h803y7p1yya4vrhq4w3rp33-libsm-1.2.6-dev' from 'https://cache.nixos.org'...
+#16 11.90 copying path '/nix/store/1gdx234nb8i2xf9j4ddva8ld7zs2gvww-hwdata-0.410' from 'https://cache.nixos.org'...
+#16 11.93 copying path '/nix/store/947psdd7hsirjhg4vzjsakqck6dfy7z0-sqlite-3.53.3-bin' from 'https://cache.nixos.org'...
+#16 12.02 copying path '/nix/store/inlbd4qpfa4pq5db572s8455c5rfzwsj-libthai-0.1.30' from 'https://cache.nixos.org'...
+#16 12.03 copying path '/nix/store/45q8c6y2zpbfvaldpa3iv5mk3b83c5w6-libidn2-2.3.8-dev' from 'https://cache.nixos.org'...
+#16 12.10 copying path '/nix/store/1wpp3c87m4wcqsrkwfn1bxx4q9ql9aci-ncurses-6.6-man' from 'https://cache.nixos.org'...
+#16 12.15 copying path '/nix/store/f6fil9pffjbhp2pvs3ri59jgr4a7vmvl-libusb-1.0.30' from 'https://cache.nixos.org'...
+#16 12.19 copying path '/nix/store/j3y936i4dsyr4fzmxwfwxv5pk401qhb2-libpaper-2.2.8' from 'https://cache.nixos.org'...
+#16 12.23 copying path '/nix/store/jy0n03pwr53788ym3n91yxf92990rgg4-nss-3.112.5' from 'https://cache.nixos.org'...
+#16 12.32 copying path '/nix/store/9xv39s6xlidk22n8m7r5yzynsd60xvz9-keyutils-1.6.3-lib' from 'https://cache.nixos.org'...
+#16 12.34 copying path '/nix/store/x01rpzv7bbqi9sic78zjnqyi7jvby1cb-libevent-2.1.13' from 'https://cache.nixos.org'...
+#16 12.39 copying path '/nix/store/43kh06xv15bv3z58qz8h0iswfwbpfmbc-publicsuffix-list-0-unstable-2026-07-25' from 'https://cache.nixos.org'...
+#16 12.44 copying path '/nix/store/7iav2369qm1r36my3xb0s9p66hmvyj5l-pango-1.57.1' from 'https://cache.nixos.org'...
+#16 12.46 copying path '/nix/store/m0fz5n1ihmwg8c89wx6icw4y74pw16xx-ncurses-6.6-dev' from 'https://cache.nixos.org'...
+#16 12.56 copying path '/nix/store/4nw5wlqzxg7hyrwkif8rhir6406sx1ad-krb5-1.22.2-lib' from 'https://cache.nixos.org'...
+#16 12.57 copying path '/nix/store/smlvbkblfh3gnx23yrrxampz2a24bfy9-libpsl-0.21.5' from 'https://cache.nixos.org'...
+#16 12.59 copying path '/nix/store/16rny3zmsdad30dyivimcifkdvpqqwyh-sqlite-3.53.3-dev' from 'https://cache.nixos.org'...
+#16 12.63 copying path '/nix/store/nw49cbshw8av4h12hhkh907nw6x4y3mp-nghttp2-1.69.0' from 'https://cache.nixos.org'...
+#16 12.71 copying path '/nix/store/hzsr2m3vn8hw08rc7fa45fr6g9vnk33y-ed-1.22.5' from 'https://cache.nixos.org'...
+#16 12.72 copying path '/nix/store/mrpcf46cfykva9l519shhm8njpxxb7kg-pango-1.57.1-bin' from 'https://cache.nixos.org'...
+#16 12.78 copying path '/nix/store/zph25xxn2l4pzywx5pnqfdn3q8hfr6cv-libpsl-0.21.5-dev' from 'https://cache.nixos.org'...
+#16 12.85 copying path '/nix/store/zz70xhdj57ap277cnpf5x3y29v56mnfi-libsoup-3.6.6' from 'https://cache.nixos.org'...
+#16 12.86 copying path '/nix/store/rqsvp4bl1xzw9ma001g6761bfjqsiwyy-patch-2.8' from 'https://cache.nixos.org'...
+#16 12.91 copying path '/nix/store/mm80mz52armp3bqw4h16ic6y36dpyhqs-binutils-2.46' from 'https://cache.nixos.org'...
+#16 12.97 copying path '/nix/store/61p1lm7n9yhy633pykn42zyjfgyk1kg7-libdaemon-0.14' from 'https://cache.nixos.org'...
+#16 13.02 copying path '/nix/store/xs8mx36pszvyvzsmbfrlpgrnn87n3psx-libpciaccess-0.19' from 'https://cache.nixos.org'...
+#16 13.03 copying path '/nix/store/4by3jl5flwzg5vk1zb9hgm151a66hn3m-nss-3.112.5-dev' from 'https://cache.nixos.org'...
+#16 13.08 copying path '/nix/store/lqqgi7yp2rbyhnvkh101alsalkwyp26i-stdenv-linux-no-cc' from 'https://cache.nixos.org'...
+#16 13.10 copying path '/nix/store/i12w90xf6fqxy35mrndlgn5x33v31z53-nghttp2-1.69.0-dev' from 'https://cache.nixos.org'...
+#16 13.11 copying path '/nix/store/8xjsfv19z90diipv5ylqbbs5cgqda880-nettle-3.10.2' from 'https://cache.nixos.org'...
+#16 13.12 copying path '/nix/store/x4najp0vxryz2w6d9js91hvrnfbcg26b-krb5-1.22.2' from 'https://cache.nixos.org'...
+#16 13.17 copying path '/nix/store/w0szn2ip93x22mzmlxxgncrcj9qnm4wc-curl-8.21.0' from 'https://cache.nixos.org'...
+#16 13.21 copying path '/nix/store/4zdn38xm499ggfasdlbwgc28h2237bhk-libdrm-2.4.134' from 'https://cache.nixos.org'...
+#16 13.23 copying path '/nix/store/bb37hm26c2qzh8yqn5a6bsyv5in911d2-curl-8.21.0' from 'https://cache.nixos.org'...
+#16 13.25 copying path '/nix/store/fybnr8q7n7ffi4fi1insksh5y8x8jczq-lerc-4.2.0' from 'https://cache.nixos.org'...
+#16 13.37 copying path '/nix/store/i64gb2kqng143771565687azjs833v3a-graphite2-1.3.15-dev' from 'https://cache.nixos.org'...
+#16 13.41 copying path '/nix/store/aykdq7abk7gvr9smfzzwj5r50rg9q892-unbound-1.25.2-lib' from 'https://cache.nixos.org'...
+#16 13.42 copying path '/nix/store/9ylzn2a4zj8asy0gvcss1vbmv3hcp1p1-krb5-1.22.2-dev' from 'https://cache.nixos.org'...
+#16 13.48 copying path '/nix/store/fji56ygiylm8hv1q35xqmsgbhhcal1iy-libdrm-2.4.134-bin' from 'https://cache.nixos.org'...
+#16 13.50 copying path '/nix/store/al7inln3qfpv0h5473fq4s02x1k563ap-libtiff-4.7.2' from 'https://cache.nixos.org'...
+#16 13.54 copying path '/nix/store/adxriyzavxyy90a3l0j8plfb2wyyv53v-harfbuzz-13.2.1-dev' from 'https://cache.nixos.org'...
+#16 13.57 copying path '/nix/store/baiqbh22367k40973a7rx2lj2mp7skmp-elfutils-0.195' from 'https://cache.nixos.org'...
+#16 13.60 copying path '/nix/store/b9pmqk4jhjmf5gfgwjx68hhnaj5p061f-cmake-4.3.4' from 'https://cache.nixos.org'...
+#16 13.62 copying path '/nix/store/xjw7ywpiszdgcd684j707az8vhg7nyf0-rustup-1.29.0' from 'https://cache.nixos.org'...
+#16 13.65 copying path '/nix/store/hp5k463c2va37bh16jw4ss2nkwb2g7nz-dbus-1.16.2-lib' from 'https://cache.nixos.org'...
+#16 13.72 copying path '/nix/store/1s5wcl7fqh2cybx19s3l9k1sfycrqlh1-libdrm-2.4.134-dev' from 'https://cache.nixos.org'...
+#16 13.85 copying path '/nix/store/0gm46ay1b1c2ic40xi6fg2r9gfwcxnnz-gnutls-3.8.13' from 'https://cache.nixos.org'...
+#16 13.86 copying path '/nix/store/akxylaygd9x03qcq3688m3wp942z9ia4-gdk-pixbuf-2.44.7' from 'https://cache.nixos.org'...
+#16 14.07 copying path '/nix/store/ai0yaxin94p1ya5d49nw0bbbqx17jzdr-curl-8.21.0-bin' from 'https://cache.nixos.org'...
+#16 14.28 copying path '/nix/store/6qdgazw5m4j26si6w7y6cfhqfmi3iwna-at-spi2-core-2.60.6' from 'https://cache.nixos.org'...
+#16 14.35 copying path '/nix/store/7qmyfy8fd09plcv85j1bcwhv3gaxjagr-mesa-libgbm-26.1.3' from 'https://cache.nixos.org'...
+#16 14.38 copying path '/nix/store/bvsc1pj1lxdkk2sqkr17ssas0qvkh55n-avahi-0.8' from 'https://cache.nixos.org'...
+#16 14.47 copying path '/nix/store/r19irjfvzkzijszg9nqkb4h9by6y7762-curl-8.21.0-dev' from 'https://cache.nixos.org'...
+#16 14.48 copying path '/nix/store/pxvlda6ibjdl4hpih7shhlgd5sq9mlq1-dbus-1.16.2' from 'https://cache.nixos.org'...
+#16 14.61 copying path '/nix/store/vsczjck7qbz3igkv3i230maig2qz89av-lerc-4.2.0-dev' from 'https://cache.nixos.org'...
+#16 14.64 copying path '/nix/store/i9xcd5i0pkl0xdldaj57r1zn8m8xfrgr-libtiff-4.7.2-bin' from 'https://cache.nixos.org'...
+#16 14.66 copying path '/nix/store/3bhqb8cnndkch493f6f06pgdff7igi0f-db-4.8.30' from 'https://cache.nixos.org'...
+#16 14.67 copying path '/nix/store/h8gzixg8h3zxmm708wvfc0zr4hl8kd7h-dbus-1.16.2-dev' from 'https://cache.nixos.org'...
+#16 14.74 copying path '/nix/store/z9dlh8l5vx8174gg2h5fqqcsx482cyav-cups-2.4.19-lib' from 'https://cache.nixos.org'...
+#16 14.85 copying path '/nix/store/vdvd8aish78jikm7wq8mdxsrv089sf2z-libtiff-4.7.2-dev' from 'https://cache.nixos.org'...
+#16 15.15 copying path '/nix/store/if0jy4wir03z31y1kqhfc3mgvz5ih71v-linux-pam-1.7.2' from 'https://cache.nixos.org'...
+#16 15.23 copying path '/nix/store/dk4jxsif42n1asxag0vqfwvjj8ir3gzc-icu4c-78.3-dev' from 'https://cache.nixos.org'...
+#16 15.23 copying path '/nix/store/apz8qld85v2y2wnzbyadyyls8ygx7qa1-boost-1.89.0' from 'https://cache.nixos.org'...
+#16 15.23 copying path '/nix/store/0msq0i4f1lv7xj3jmnvvsfs464v09yaz-tinysparql-3.11.1' from 'https://cache.nixos.org'...
+#16 15.36 copying path '/nix/store/aqxpzr68nhhzac7ymvvp6ss60hpv8jwz-cups-2.4.19' from 'https://cache.nixos.org'...
+#16 15.73 copying path '/nix/store/9hw32ha7kqddcfw1q6awcakychc0n3sy-nodejs-slim-26.7.0' from 'https://cache.nixos.org'...
+#16 15.82 copying path '/nix/store/y3b3mh8q3v33crq919rcxyxky9din09y-gtk+3-3.24.52' from 'https://cache.nixos.org'...
+#16 16.14 copying path '/nix/store/fwk4bgd1v892v488vmvyxwlhsn2216l3-perl5.42.0-IO-Compress-2.221' from 'https://cache.nixos.org'...
+#16 16.28 copying path '/nix/store/4wczdrgafhrx0rdnk5vy94nj5g2vxaa4-binutils-wrapper-2.46' from 'https://cache.nixos.org'...
+#16 16.28 copying path '/nix/store/m9n6gv7j96sxbb0lzkgz40a02yb20hah-binutils-wrapper-2.46' from 'https://cache.nixos.org'...
+#16 16.28 copying path '/nix/store/sxapy4d2xzq6akwrkrd2ksxx7dv3jg00-perl5.42.0-HTTP-Message-7.02' from 'https://cache.nixos.org'...
+#16 16.42 copying path '/nix/store/k1i8np1y3raiavx3nbvd7f3m8hmvmlks-perl5.42.0-HTML-Parser-3.85' from 'https://cache.nixos.org'...
+#16 16.42 copying path '/nix/store/jlaimr9p20cjgl7waab20gb6h5b6jga4-perl5.42.0-HTTP-Daemon-6.17' from 'https://cache.nixos.org'...
+#16 16.42 copying path '/nix/store/s6zqpsc8cf48vw0q8s8zd2330m8q69f1-perl5.42.0-HTTP-Cookies-6.10' from 'https://cache.nixos.org'...
+#16 16.42 copying path '/nix/store/i91sc1fprvrqhya9h7f19lww2vngqnlp-perl5.42.0-HTTP-Negotiate-6.01' from 'https://cache.nixos.org'...
+#16 16.47 copying path '/nix/store/k7phxxvxw2h99smsk07y8d3nlh7gbc3x-source-highlight-3.1.9' from 'https://cache.nixos.org'...
+#16 16.55 copying path '/nix/store/1hpmxrk1h6z0disn5645ldszhmy07y5g-perl5.42.0-CGI-4.59' from 'https://cache.nixos.org'...
+#16 16.55 copying path '/nix/store/394gj35jpp6dg48v6kpmbijxgw2lqywc-perl5.42.0-libwww-perl-6.83' from 'https://cache.nixos.org'...
+#16 16.73 copying path '/nix/store/wl8zbbcqv05a0wcf3vj3s2xsydc2ikfi-perl5.42.0-CGI-Fast-2.16' from 'https://cache.nixos.org'...
+#16 16.95 copying path '/nix/store/sk60slbcsmpfn3im2d6kr8fkvy47zsy3-cups-2.4.19-dev' from 'https://cache.nixos.org'...
+#16 20.61 copying path '/nix/store/ca48qdipfhgbmw3g2aivd0cw7ix3iyfl-nodejs-slim-26.7.0-npm' from 'https://cache.nixos.org'...
+#16 21.10 building '/nix/store/8dvzdilzaji0gmcr5znd7h3jj5y2yaaa-nodejs-26.7.0.drv'...
+#16 22.40 copying path '/nix/store/99qckb7iqnq9nhf4ca7pqp6hlli9ylw7-gdb-17.2' from 'https://cache.nixos.org'...
+#16 22.40 copying path '/nix/store/q3pvpkn0qmin7x572p3z32hxz9yny73i-git-2.55.0' from 'https://cache.nixos.org'...
+#16 22.40 copying path '/nix/store/if9plfpzc97icinz2z0lgfqfa2hp5m3i-python3.14-packaging-26.2' from 'https://cache.nixos.org'...
+#16 22.56 copying path '/nix/store/yip89xn7mb3mzsrj77bffxj0idz3kr1k-glib-2.88.3-dev' from 'https://cache.nixos.org'...
+#16 22.96 copying path '/nix/store/45xyzk1nv4zr9dkqkxkb7yp3wkqhygq8-at-spi2-core-2.60.6-dev' from 'https://cache.nixos.org'...
+#16 22.96 copying path '/nix/store/yr5cfqmb5xs2i6bm2xvrwaxgnarimmb7-cairo-1.18.4-dev' from 'https://cache.nixos.org'...
+#16 22.96 copying path '/nix/store/v5gdrr1xbs2jrh9nnbsd290r470dmahi-gdk-pixbuf-2.44.7-dev' from 'https://cache.nixos.org'...
+#16 23.08 copying path '/nix/store/jpwvl11laxrm1a8f9c0h8qli1qxzbf0g-pango-1.57.1-dev' from 'https://cache.nixos.org'...
+#16 23.22 copying path '/nix/store/83cavl55wx0sk5sjws4i5mnv3yjs1gl6-gtk+3-3.24.52-dev' from 'https://cache.nixos.org'...
+#16 25.22 copying path '/nix/store/gw0vcpg33m9cqd6rscyqvds45apfrxfy-gcc-wrapper-15.3.0' from 'https://cache.nixos.org'...
+#16 25.22 copying path '/nix/store/5lx71lf2d9d3w8aly9jk4ljcy8pq6liy-libtool-2.6.2' from 'https://cache.nixos.org'...
+#16 26.49 copying path '/nix/store/spgkrx6v9a7frdhpn0i9dpl3nq7hd3ni-clang-21.1.8-lib' from 'https://cache.nixos.org'...
+#16 26.49 copying path '/nix/store/c94dn74av9i505z0lfbm5dckvyfp2sw8-lld-21.1.8' from 'https://cache.nixos.org'...
+#16 26.49 copying path '/nix/store/dbfzdkyghh88s4siw6006c0hlipm5xjg-llvm-21.1.8' from 'https://cache.nixos.org'...
+#16 26.49 copying path '/nix/store/kf777y29v1whh9lbn5nh47zrfrgrj6bd-mesa-26.2.0' from 'https://cache.nixos.org'...
+#16 27.93 copying path '/nix/store/ygsgmqd0nfqd0xd2qaj98h4p67nk315c-lld-21.1.8-dev' from 'https://cache.nixos.org'...
+#16 30.41 copying path '/nix/store/kbys3dd32c826jrp1nybx6wvskm1wix3-llvm-21.1.8-dev' from 'https://cache.nixos.org'...
+#16 33.83 copying path '/nix/store/bf2sablqrr2bz3763rmlb1fwrfvsrgfk-clang-21.1.8' from 'https://cache.nixos.org'...
+#16 34.47 copying path '/nix/store/ypqlf774n9dmfbxrg33pzpm149npz75n-clang-wrapper-21.1.8' from 'https://cache.nixos.org'...
+#16 34.49 copying path '/nix/store/mrmya8nxp128f29z608sy5dsb8q4qb3z-stdenv-linux' from 'https://cache.nixos.org'...
+#16 34.52 building '/nix/store/fc0pxfl57fv932dz65gz6bcmyv63kph8-nix-shell-env.drv'...
+#16 35.67 this path will be fetched (107.5 KiB download, 107.4 KiB unpacked):
+#16 35.67   /nix/store/gdbq6857ydnda2zi8fhdmzpbjh9d946l-bash-interactive-5.3p15-man
+#16 35.67 copying path '/nix/store/gdbq6857ydnda2zi8fhdmzpbjh9d946l-bash-interactive-5.3p15-man' from 'https://cache.nixos.org'...
+#16 35.74 Setting up required mutable Rust toolchain...
+#16 35.75 info: syncing channel updates for nightly-2026-07-20-aarch64-unknown-linux-gnu
+#16 36.04 info: latest update on 2026-07-20 for version 1.99.0-nightly (9f36de775 2026-07-19)
+#16 36.04 info: downloading 7 components
+#16 48.24 
+#16 48.25   nightly-2026-07-20-aarch64-unknown-linux-gnu installed - rustc 1.99.0-nightly (9f36de775 2026-07-19)
+#16 48.25 
+#16 48.25 info: default toolchain set to nightly-2026-07-20-aarch64-unknown-linux-gnu
+#16 48.25 info: self-update is disabled for this build of rustup
+#16 48.25 info: any updates to rustup will need to be fetched with your system package manager
+#16 48.25 =====================================
+#16 48.25 Bun Development Environment Fixed
+#16 48.25 =====================================
+#16 48.29 Node.js: v26.7.0
+#16 48.29 Bun: 1.3.13
+#16 48.35 Clang: clang version 21.1.8
+#16 48.37 CMake: cmake version 4.3.4
+#16 48.37 LLVM: 21.1.8
+#16 48.37 
+#16 48.37 Quick start:
+#16 48.37   bun bd                    # Build debug binary
+#16 48.37   bun bd test <test-file>   # Run tests
+#16 48.37 =====================================
+#16 48.93 [configured] bun-debug
+#16 48.93   target       linux-aarch64-gnu
+#16 48.93   build type   Debug
+#16 48.93   build dir    ./build/debug
+#16 48.93   revision     34cbb9a40b (pinned; rm <build dir>/git-revision to refresh)
+#16 48.93   features     assertions, logs
+#16 48.93 
+#16 48.93 23 deps, 120 codegen, 1191 objects in 496ms
+#16 48.93 
+#16 48.94 ninja: Entering directory `/bun/build/debug'
+#16 48.96 [1/1258] mkdir codegen
+#16 48.96 [2/1258] mkdir stamps
+#16 48.97 [3/1258] mkdir obj
+#16 48.97 [4/1258] mkdir pch
+#16 49.00 [5/1258] gen ErrorCode+*.h
+#16 49.03 [6/1258] gen bindgenv2
+#16 49.05 [7/1258] gen .bind.ts → GeneratedBindings.cpp
+#16 49.13 [8/1258] gen JSBuffer.lut.h
+#16 49.13 Generating /bun/build/debug/codegen/JSBuffer.lut.h from /bun/src/jsc/bindings/JSBuffer.cpp
+#16 49.32 [9/1258] gen ProcessBindingBuffer.lut.h
+#16 49.32 Generating /bun/build/debug/codegen/ProcessBindingBuffer.lut.h from /bun/src/jsc/bindings/ProcessBindingBuffer.cpp
+#16 49.36 [10/1258] fetch picohttpparser
+#16 49.36 [picohttpparser] fetching h2o/picohttpparser@066d2b1e
+#16 49.36 [picohttpparser] done → /bun/vendor/picohttpparser
+#16 49.42 [11/1258] gen ProcessBindingConstants.lut.h
+#16 49.42 Generating /bun/build/debug/codegen/ProcessBindingConstants.lut.h from /bun/src/jsc/bindings/ProcessBindingConstants.cpp
+#16 49.42 [12/1258] gen ZigGlobalObject.lut.h
+#16 49.42 Generating /bun/build/debug/codegen/ZigGlobalObject.lut.h from /bun/src/jsc/bindings/ZigGlobalObject.lut.txt
+#16 49.44 [13/1258] gen BunProcess.lut.h
+#16 49.44 Generating /bun/build/debug/codegen/BunProcess.lut.h from /bun/src/jsc/bindings/BunProcess.cpp
+#16 49.46 [14/1258] gen JSSink.{cpp,h,lut.h,rs}
+#16 49.46 generated_jssink.rs: 8 sinks, 96 exported symbols
+#16 49.46 Generating /bun/build/debug/codegen/JSSink.lut.h from /bun/build/debug/codegen/JSSink.lut.txt
+#16 49.50 [15/1258] gen BunObject.lut.h
+#16 49.50 Generating /bun/build/debug/codegen/BunObject.lut.h from /bun/src/jsc/bindings/BunObject.cpp
+#16 49.53 [16/1258] gen ProcessBindingHTTPParser.lut.h
+#16 49.53 Generating /bun/build/debug/codegen/ProcessBindingHTTPParser.lut.h from /bun/src/jsc/bindings/ProcessBindingHTTPParser.cpp
+#16 49.54 [17/1258] gen JSEvent.lut.h
+#16 49.54 Generating /bun/build/debug/codegen/JSEvent.lut.h from /bun/src/jsc/bindings/webcore/JSEvent.cpp
+#16 49.56 [18/1258] gen string-map defines_table
+#16 49.64 [19/1258] fetch tinycc
+#16 49.64 [tinycc] fetching oven-sh/tinycc@05f0fafa
+#16 49.64 [tinycc] applying tcc.h.patch
+#16 49.64 [tinycc] done → /bun/vendor/tinycc
+#16 49.65 [20/1258] gen ProcessBindingFs.lut.h
+#16 49.65 Generating /bun/build/debug/codegen/ProcessBindingFs.lut.h from /bun/src/jsc/bindings/ProcessBindingFs.cpp
+#16 49.65 [21/1258] gen NodeModuleModule.lut.h
+#16 49.65 Generating /bun/build/debug/codegen/NodeModuleModule.lut.h from /bun/src/jsc/modules/NodeModuleModule.cpp
+#16 49.65 [22/1258] gen bake.{client,server,error}.js
+#16 49.65 -> bake.client.js, bake.server.js, bake.error.js
+#16 49.70 [23/1258] gen ZigGeneratedClasses.{cpp,h,rs}
+#16 49.70 Found 2 classes from /bun/src/jsc/resolve_message.classes.ts
+#16 49.70   - ResolveMessage (15 fields)
+#16 49.70   - BuildMessage (10 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/Archive.classes.ts
+#16 49.70   - Archive (4 fields, 1 class fields)
+#16 49.70 Found 2 classes from /bun/src/runtime/api/BunObject.classes.ts
+#16 49.70   - ResourceUsage (8 fields)
+#16 49.70   - Subprocess (20 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/cron.classes.ts
+#16 49.70   - CronJob (5 fields)
+#16 49.70 Found 3 classes from /bun/src/runtime/api/filesystem_router.classes.ts
+#16 49.70   - FileSystemRouter (5 fields)
+#16 49.70   - FrameworkFileSystemRouter (2 fields)
+#16 49.70   - MatchedRoute (8 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/Glob.classes.ts
+#16 49.70   - Glob (5 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/h2.classes.ts
+#16 49.70   - H2FrameParser (32 fields)
+#16 49.70 Found 9 classes from /bun/src/runtime/api/html_rewriter.classes.ts
+#16 49.70   - HTMLRewriter (3 fields)
+#16 49.70   - TextChunk (7 fields)
+#16 49.70   - DocType (5 fields)
+#16 49.70   - DocEnd (1 fields)
+#16 49.70   - Comment (6 fields)
+#16 49.70   - EndTag (4 fields)
+#16 49.70   - AttributeIterator (2 fields)
+#16 49.70   - Element (19 fields)
+#16 49.70   - HTMLRewriterTransform
+#16 49.70 Found 2 classes from /bun/src/runtime/api/JSBundler.classes.ts
+#16 49.70   - Transpiler (4 fields)
+#16 49.70   - BuildArtifact (12 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/ParsedShellScript.classes.ts
+#16 49.70   - ParsedShellScript (3 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/S3Client.classes.ts
+#16 49.70   - S3Client (9 fields, 9 class fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/S3Stat.classes.ts
+#16 49.70   - S3Stat (4 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/SecureContext.classes.ts
+#16 49.70   - SecureContext (2 fields, 3 class fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/Shell.classes.ts
+#16 49.70   - ShellInterpreter (3 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/sourcemap.classes.ts
+#16 49.70   - SourceMap (4 fields)
+#16 49.70 Found 4 classes from /bun/src/runtime/api/sql.classes.ts
+#16 49.70   - PostgresSQLConnection (9 fields)
+#16 49.70   - PostgresSQLQuery (5 fields)
+#16 49.70   - MySQLConnection (8 fields)
+#16 49.70   - MySQLQuery (5 fields)
+#16 49.70 Found 3 classes from /bun/src/runtime/api/streams.classes.ts
+#16 49.70   - BlobInternalReadableStreamSource (13 fields)
+#16 49.70   - FileInternalReadableStreamSource (10 fields)
+#16 49.70   - BytesInternalReadableStreamSource (13 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/api/Terminal.classes.ts
+#16 49.70   - Terminal (12 fields)
+#16 49.70 Found 3 classes from /bun/src/runtime/api/zlib.classes.ts
+#16 49.70   - NativeZlib (7 fields)
+#16 49.70   - NativeBrotli (7 fields)
+#16 49.70   - NativeZstd (7 fields)
+#16 49.70 Found 10 classes from /bun/src/runtime/crypto/crypto.classes.ts
+#16 49.70   - Crypto (3 fields)
+#16 49.70   - SHA1 (3 fields, 2 class fields)
+#16 49.70   - MD5 (3 fields, 2 class fields)
+#16 49.70   - MD4 (3 fields, 2 class fields)
+#16 49.70   - SHA224 (3 fields, 2 class fields)
+#16 49.70   - SHA512 (3 fields, 2 class fields)
+#16 49.70   - SHA384 (3 fields, 2 class fields)
+#16 49.70   - SHA256 (3 fields, 2 class fields)
+#16 49.70   - SHA512_256 (3 fields, 2 class fields)
+#16 49.70   - CryptoHasher (5 fields, 2 class fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/ffi/ffi.classes.ts
+#16 49.70   - FFI (2 fields)
+#16 49.70 Found 1 classes from /bun/src/runtime/image/Image.classes.ts
+#16 49.70   - Image (21 fields, 4 class fields)
+#16 49.70 Found 6 classes from /bun/src/runtime/node/node.classes.ts
+#16 49.70   - DNSResolver (16 fields)
+#16 49.70   - FSWatcher (3 fields)
+#16 49.70   - StatWatcher (3 fields)
+#16 49.70   - Timeout (12 fields)
+#16 49.70   - Immediate (6 fields)
+#16 49.70   - NodeJSFS (88 fields)
+#16 49.70 Found 3 classes from /bun/src/runtime/node/quic/quic.classes.ts
+#16 49.70   - QuicEndpoint (7 fields)
+#16 49.70   - QuicSession (13 fields)
+#16 49.70   - QuicStream (14 fields)
+#16 49.70 Found 7 classes from /bun/src/runtime/server/server.classes.ts
+#16 49.70   - HTTPServer (21 fields)
+#16 49.70   - DebugHTTPServer (21 fields)
+#16 49.70   - HTTPSServer (21 fields)
+#16 49.70   - DebugHTTPSServer (21 fields)
+#16 49.70   - NodeHTTPResponse (30 fields)
+#16 49.70   - ServerWebSocket (20 fields)
+#16 49.70   - HTMLBundle (1 fields)
+#16 49.70 Found 6 classes from /bun/src/runtime/socket/sockets.classes.ts
+#16 49.70   - TLSSocket (57 fields)
+#16 49.70   - TCPSocket (55 fields)
+#16 49.70   - Listener (11 fields)
+#16 49.70   - UDPSocket (23 fields)
+#16 49.70   - SocketAddress (6 fields, 2 class fields)
+#16 49.70   - BlockList (5 fields, 1 class fields)
+#16 49.70 Found 15 classes from /bun/src/runtime/test_runner/jest.classes.ts
+#16 49.70   - ExpectAnything
+#16 49.70   - ExpectAny
+#16 49.70   - ExpectCloseTo
+#16 49.70   - ExpectObjectContaining
+#16 49.70   - ExpectStringContaining
+#16 49.70   - ExpectStringMatching
+#16 49.70   - ExpectArrayContaining
+#16 49.70   - ExpectCustomAsymmetricMatcher (1 fields)
+#16 49.70   - ExpectMatcherContext (5 fields)
+#16 49.70   - ExpectMatcherUtils (6 fields)
+#16 49.71   - ExpectStatic (10 fields)
+#16 49.71   - Expect (89 fields, 15 class fields)
+#16 49.71   - ExpectTypeOf (38 fields)
+#16 49.71   - DoneCallback
+#16 49.71   - ScopeFunctions (13 fields)
+#16 49.71 Found 1 classes from /bun/src/runtime/valkey_jsc/valkey.classes.ts
+#16 49.71   - RedisClient (212 fields)
+#16 49.71 Found 1 classes from /bun/src/runtime/webcore/encoding.classes.ts
+#16 49.71   - TextDecoder (4 fields)
+#16 49.71 Found 3 classes from /bun/src/runtime/webcore/response.classes.ts
+#16 49.71   - Request (22 fields)
+#16 49.71   - Response (17 fields, 3 class fields)
+#16 49.71   - Blob (18 fields)
+#16 49.71 generated_classes.rs: 93 classes (79 resolved), 1527 exported symbols
+#16 49.74 [24/1258] fetch zlib
+#16 49.74 [zlib] fetching zlib-ng/zlib-ng@12731092
+#16 49.74 [zlib] applying clang-cl-arm64.patch
+#16 49.74 [zlib] done → /bun/vendor/zlib
+#16 49.75 [25/1258] host-cc deps/tinycc/codegen-tool
+#16 49.76 [26/1258] subst deps/zlib/zconf.h
+#16 49.77 [27/1258] subst deps/zlib/zlib.h
+#16 49.80 [28/1258] codegen tinycc
+#16 49.82 [29/1258] install /bun
+#16 49.82 bun install v1.3.13 (bf2e2cec)
+#16 49.82 
+#16 49.82 + @lezer/common@1.3.0
+#16 49.82 + @lezer/cpp@1.1.3
+#16 49.82 + esbuild@0.21.5
+#16 49.82 + mitata@0.1.14
+#16 49.82 + oxlint@1.70.0
+#16 49.82 + prettier@3.6.2
+#16 49.82 + prettier-plugin-organize-imports@4.3.0
+#16 49.82 + react@18.3.1
+#16 49.82 + react-dom@18.3.1
+#16 49.82 + source-map-js@1.2.1
+#16 49.82 + typescript@6.0.2
+#16 49.82 
+#16 49.82 42 packages installed [841.00ms]
+#16 49.85 [30/1258] cc obj/vendor/zlib/compress.c.o
+#16 49.85 [31/1258] cc obj/vendor/zlib/adler32.c.o
+#16 49.86 [32/1258] esbuild runtime.out.js
+#16 49.86 
+#16 49.86   build/debug/codegen/runtime.out.js  5.3kb
+#16 49.86 
+#16 49.86 ⚡ Done in 4ms
+#16 49.90 [33/1258] cc obj/vendor/zlib/crc32.c.o
+#16 49.96 [34/1258] cc obj/vendor/zlib/crc32_braid_comb.c.o
+#16 49.97 [35/1258] install /bun/packages/bun-error
+#16 49.97 bun install v1.3.13 (bf2e2cec)
+#16 49.97 
+#16 49.97 + preact@10.27.2
+#16 49.97 
+#16 49.97 1 package installed [143.00ms]
+#16 50.05 [36/1258] cc obj/vendor/zlib/deflate.c.o
+#16 50.08 [37/1258] esbuild bun-error
+#16 50.08 
+#16 50.08   ../../build/debug/codegen/bun-error/index.js       34.9kb
+#16 50.08   ../../build/debug/codegen/bun-error/bun-error.css  12.8kb
+#16 50.08 
+#16 50.08 ⚡ Done in 15ms
+#16 50.09 [38/1258] cc obj/vendor/zlib/deflate_fast.c.o
+#16 50.14 [39/1258] gen ProcessBindingNatives.lut.h
+#16 50.15 Generating /bun/build/debug/codegen/ProcessBindingNatives.lut.h from /bun/src/jsc/bindings/ProcessBindingNatives.cpp
+#16 50.16 [40/1258] gen generated_host_exports.rs
+#16 50.16 generated_host_exports.rs: 92 exports (host=3, lazy=10, generic=79, rust=0); 241 extern-C blocks audited
+#16 50.17 [41/1258] cc obj/vendor/zlib/deflate_huff.c.o
+#16 50.19 [42/1258] cc obj/vendor/zlib/deflate_medium.c.o
+#16 50.25 [43/1258] cc obj/vendor/zlib/deflate_quick.c.o
+#16 50.25 [44/1258] cc obj/vendor/zlib/deflate_rle.c.o
+#16 50.25 [45/1258] gen cpp.rs (cppbind)
+#16 50.27 [46/1258] cc obj/vendor/zlib/deflate_slow.c.o
+#16 50.32 [47/1258] cc obj/vendor/zlib/deflate_stored.c.o
+#16 50.34 [48/1258] fetch brotli
+#16 50.34 [brotli] fetching google/brotli@v1.1.0
+#16 50.34 [brotli] done → /bun/vendor/brotli
+#16 50.36 [49/1258] install /bun/src/node-fallbacks
+#16 50.36 bun install v1.3.13 (bf2e2cec)
+#16 50.36 
+#16 50.36 + assert@2.1.0
+#16 50.36 + browserify-zlib@0.2.0
+#16 50.36 + crypto-browserify@3.12.1
+#16 50.36 + domain-browser@4.23.0
+#16 50.36 + https-browserify@1.0.0
+#16 50.36 + punycode@2.3.1
+#16 50.36 + querystring-es3@1.0.0-0
+#16 50.36 + react-refresh@0.17.0
+#16 50.36 + readable-stream@4.7.0
+#16 50.36 + stream-http@3.2.0
+#16 50.36 + string_decoder@1.3.0
+#16 50.36 
+#16 50.36 103 packages installed [370.00ms]
+#16 50.36 [50/1258] cc obj/vendor/zlib/infback.c.o
+#16 50.37 [51/1258] gen node-fallbacks/react-refresh.js
+#16 50.37 Bundled 1 module in 7ms
+#16 50.37 
+#16 50.37   react-refresh.js  4.81 KB  (entry point)
+#16 50.37 
+#16 50.38 [52/1258] cc obj/vendor/zlib/functable.c.o
+#16 50.40 [53/1258] cc obj/vendor/zlib/inftrees.c.o
+#16 50.42 [54/1258] cc obj/vendor/zlib/inflate.c.o
+#16 50.45 [55/1258] cc obj/vendor/zlib/insert_string.c.o
+#16 50.45 [56/1258] fetch nodejs (prebuilt)
+#16 50.45 [nodejs] fetching https://nodejs.org/dist/v26.3.0/node-v26.3.0-headers.tar.gz
+#16 50.45 [nodejs] extracted to /root/.bun/build-cache/nodejs-headers-26.3.0
+#16 50.49 [57/1258] cc obj/vendor/zlib/insert_string_roll.c.o
+#16 50.51 [58/1258] cc obj/vendor/zlib/uncompr.c.o
+#16 50.53 [59/1258] fetch zstd
+#16 50.53 [zstd] fetching facebook/zstd@f8745da6
+#16 50.53 [zstd] done → /bun/vendor/zstd
+#16 50.53 [60/1258] cc obj/vendor/zlib/zutil.c.o
+#16 50.54 [61/1258] cc obj/vendor/zlib/trees.c.o
+#16 50.55 [62/1258] cc obj/vendor/zlib/cpu_features.c.o
+#16 50.59 [63/1258] cc obj/vendor/zlib/gzlib.c.o
+#16 50.61 [64/1258] cc obj/vendor/zlib/gzread.c.o
+#16 50.63 [65/1258] cc obj/vendor/zlib/arch/generic/adler32_c.c.o
+#16 50.64 [66/1258] cc obj/vendor/zlib/gzwrite.c.o
+#16 50.66 [67/1258] cc obj/vendor/zlib/arch/generic/crc32_chorba_c.c.o
+#16 50.67 [68/1258] cc obj/vendor/zlib/arch/generic/adler32_fold_c.c.o
+#16 50.69 [69/1258] fetch libjpeg-turbo
+#16 50.69 [libjpeg-turbo] fetching libjpeg-turbo/libjpeg-turbo@e352b02f
+#16 50.69 [libjpeg-turbo] applying 8bit-only.patch
+#16 50.69 [libjpeg-turbo] overlay jbun_stubs.c
+#16 50.69 [libjpeg-turbo] done → /bun/vendor/libjpeg-turbo
+#16 50.70 [70/1258] gen node-fallbacks/*.js
+#16 50.70 [71/1258] cc obj/vendor/zlib/arch/generic/chunkset_c.c.o
+#16 50.71 [72/1258] subst deps/libjpeg-turbo/jconfig.h
+#16 50.73 [73/1258] subst deps/libjpeg-turbo/jversion.h
+#16 50.73 [74/1258] cc obj/vendor/zlib/arch/generic/compare256_c.c.o
+#16 50.73 [75/1258] subst deps/libjpeg-turbo/jconfigint.h
+#16 50.73 [76/1258] cc obj/vendor/zlib/arch/generic/crc32_braid_c.c.o
+#16 50.74 [77/1258] subst deps/libjpeg-turbo/neon-compat.h
+#16 50.75 [78/1258] cc obj/vendor/zlib/arch/generic/slide_hash_c.c.o
+#16 50.78 [79/1258] cc obj/vendor/zlib/arch/generic/crc32_fold_c.c.o
+#16 50.78 [80/1258] fetch libdeflate
+#16 50.78 [libdeflate] fetching ebiggers/libdeflate@c8c56a20
+#16 50.78 [libdeflate] done → /bun/vendor/libdeflate
+#16 50.82 [81/1258] cc obj/vendor/zlib/arch/arm/arm_features.c.o
+#16 50.87 [82/1258] cc obj/vendor/zlib/arch/arm/crc32_armv8.c.o
+#16 50.88 [83/1258] cc obj/vendor/zstd/lib/common/debug.c.o
+#16 50.97 [84/1258] cc obj/vendor/zlib/arch/arm/chunkset_neon.c.o
+#16 50.99 [85/1258] cc obj/vendor/zlib/arch/arm/compare256_neon.c.o
+#16 51.00 [86/1258] cc obj/vendor/zlib/arch/arm/adler32_neon.c.o
+#16 51.00 [87/1258] cc obj/vendor/zlib/arch/arm/slide_hash_neon.c.o
+#16 51.06 [88/1258] cc obj/vendor/zstd/lib/common/threading.c.o
+#16 51.08 [89/1258] cc obj/vendor/zstd/lib/common/entropy_common.c.o
+#16 51.09 [90/1258] cc obj/vendor/zstd/lib/common/xxhash.c.o
+#16 51.11 [91/1258] fetch libspng
+#16 51.11 [libspng] fetching randy408/libspng@fb768002
+#16 51.11 [libspng] done → /bun/vendor/libspng
+#16 51.13 [92/1258] cc obj/vendor/zstd/lib/common/error_private.c.o
+#16 51.19 [93/1258] fetch cares
+#16 51.19 [cares] fetching c-ares/c-ares@c7a3138d
+#16 51.19 [cares] applying accept-rdata-compression.patch
+#16 51.19 [cares] done → /bun/vendor/cares
+#16 51.25 [94/1258] cc obj/vendor/zstd/lib/common/fse_decompress.c.o
+#16 51.30 [95/1258] cc obj/vendor/zstd/lib/common/pool.c.o
+#16 51.31 [96/1258] cc obj/vendor/zstd/lib/compress/hist.c.o
+#16 51.36 [97/1258] cc obj/vendor/zstd/lib/common/zstd_common.c.o
+#16 51.41 [98/1258] cc obj/vendor/zstd/lib/compress/fse_compress.c.o
+#16 51.43 [99/1258] fetch libarchive
+#16 51.43 [libarchive] fetching libarchive/libarchive@ded82291
+#16 51.43 [libarchive] applying archive_write_add_filter_gzip.c.patch
+#16 51.43 [libarchive] applying select-registered-only.patch
+#16 51.43 [libarchive] applying nonblocking-read.patch
+#16 51.43 [libarchive] applying archive_string-codepage-cache.patch
+#16 51.43 [libarchive] done → /bun/vendor/libarchive
+#16 51.45 [100/1258] cc obj/vendor/zstd/lib/compress/huf_compress.c.o
+#16 51.50 [101/1258] fetch libwebp
+#16 51.50 [libwebp] fetching webmproject/libwebp@b7e29b9d
+#16 51.50 [libwebp] done → /bun/vendor/libwebp
+#16 51.57 [102/1258] cc obj/vendor/zstd/lib/compress/zstd_compress_literals.c.o
+#16 51.59 [103/1258] cc obj/vendor/zstd/lib/compress/zstd_compress_sequences.c.o
+#16 51.66 [104/1258] cc obj/vendor/zstd/lib/compress/zstd_compress_superblock.c.o
+#16 51.71 [105/1258] fetch hdrhistogram
+#16 51.71 [hdrhistogram] fetching HdrHistogram/HdrHistogram_c@be60a998
+#16 51.71 [hdrhistogram] applying bitscan-type.patch
+#16 51.71 [hdrhistogram] done → /bun/vendor/hdrhistogram
+#16 51.79 [106/1258] cc obj/vendor/zstd/lib/compress/zstd_double_fast.c.o
+#16 51.81 [107/1258] cc obj/vendor/zstd/lib/compress/zstd_compress.c.o
+#16 51.84 [108/1258] cc obj/vendor/zstd/lib/compress/zstd_fast.c.o
+#16 51.90 [109/1258] fetch highway
+#16 51.90 [highway] fetching google/highway@2607d3b5
+#16 51.90 [highway] applying silence-warnings.patch
+#16 51.90 [highway] done → /bun/vendor/highway
+#16 51.93 [110/1258] cc obj/vendor/zstd/lib/compress/zstd_ldm.c.o
+#16 52.00 [111/1258] fetch lshpack
+#16 52.00 [lshpack] fetching litespeedtech/ls-hpack@8905c024
+#16 52.00 [lshpack] applying bss-huff-tables.patch
+#16 52.00 [lshpack] done → /bun/vendor/lshpack
+#16 52.07 [112/1258] fetch lsqpack
+#16 52.07 [lsqpack] fetching litespeedtech/ls-qpack@1e9c5b8e
+#16 52.07 [lsqpack] applying bss-huff-tables.patch
+#16 52.07 [lsqpack] done → /bun/vendor/lsqpack
+#16 52.09 [113/1258] cc obj/vendor/zstd/lib/compress/zstd_preSplit.c.o
+#16 52.10 [114/1258] cc obj/vendor/zstd/lib/compress/zstd_opt.c.o
+#16 52.11 [115/1258] fetch mimalloc
+#16 52.11 [mimalloc] fetching oven-sh/mimalloc@6a14aee2
+#16 52.11 [mimalloc] done → /bun/vendor/mimalloc
+#16 52.16 [116/1258] cc obj/vendor/zstd/lib/compress/zstdmt_compress.c.o
+#16 52.23 [117/1258] cc obj/vendor/zstd/lib/decompress/zstd_ddict.c.o
+#16 52.25 [118/1258] cc obj/vendor/zstd/lib/decompress/huf_decompress.c.o
+#16 52.40 [119/1258] cc obj/vendor/zstd/lib/dictBuilder/divsufsort.c.o
+#16 52.45 [120/1258] cc obj/vendor/zstd/lib/decompress/zstd_decompress.c.o
+#16 52.48 [121/1258] cc obj/vendor/zstd/lib/dictBuilder/cover.c.o
+#16 52.51 [122/1258] cc obj/vendor/zstd/lib/decompress/zstd_decompress_block.c.o
+#16 52.57 [123/1258] cc obj/vendor/brotli/c/common/constants.c.o
+#16 52.57 [124/1258] cc obj/vendor/brotli/c/common/context.c.o
+#16 52.58 [125/1258] cc obj/vendor/zstd/lib/dictBuilder/fastcover.c.o
+#16 52.66 [126/1258] cc obj/vendor/brotli/c/common/transform.c.o
+#16 52.66 [127/1258] cc obj/vendor/brotli/c/common/platform.c.o
+#16 52.67 [128/1258] cc obj/vendor/brotli/c/common/shared_dictionary.c.o
+#16 52.70 [129/1258] fetch lsquic
+#16 52.70 [lsquic] fetching litespeedtech/lsquic@31819113
+#16 52.70 [lsquic] applying versions-to-string.patch
+#16 52.70 [lsquic] applying allow-no-sni.patch
+#16 52.70 [lsquic] applying skip-priority-walk.patch
+#16 52.70 [lsquic] applying hash-nested-iter.patch
+#16 52.70 [lsquic] applying abort-error-tickable.patch
+#16 52.70 [lsquic] applying disable-gquic.patch
+#16 52.70 [lsquic] applying requeue-unsent-coalesced.patch
+#16 52.70 [lsquic] applying node-quic-accessors.patch
+#16 52.70 [lsquic] applying coalesce-batch-drop.patch
+#16 52.70 [lsquic] applying connection-close-pns.patch
+#16 52.70 [lsquic] done → /bun/vendor/lsquic
+#16 52.75 [130/1258] cc obj/vendor/brotli/c/common/dictionary.c.o
+#16 52.76 [131/1258] cc obj/vendor/brotli/c/dec/bit_reader.c.o
+#16 52.76 [132/1258] cc obj/vendor/zstd/lib/dictBuilder/zdict.c.o
+#16 52.78 [133/1258] cc obj/vendor/brotli/c/dec/huffman.c.o
+#16 52.81 [134/1258] fetch lolhtml
+#16 52.81 [lolhtml] fetching oven-sh/lol-html@725ce499
+#16 52.81 [lolhtml] done → /bun/vendor/lolhtml
+#16 52.89 [135/1258] cc obj/vendor/brotli/c/dec/state.c.o
+#16 53.07 [136/1258] fetch rust-argon2
+#16 53.07 [rust-argon2] fetching sru-systems/rust-argon2@ed81866f
+#16 53.07 [rust-argon2] applying legacy-low-memory.patch
+#16 53.07 [rust-argon2] done → /bun/vendor/rust-argon2
+#16 53.08 [137/1258] cc obj/vendor/brotli/c/enc/bit_cost.c.o
+#16 53.17 [138/1258] cc obj/vendor/brotli/c/dec/decode.c.o
+#16 53.19 [139/1258] cc obj/vendor/brotli/c/enc/backward_references_hq.c.o
+#16 53.21 [140/1258] cc obj/vendor/brotli/c/enc/block_splitter.c.o
+#16 53.35 [141/1258] cc obj/vendor/brotli/c/enc/brotli_bit_stream.c.o
+#16 53.36 [142/1258] cc obj/vendor/brotli/c/enc/command.c.o
+#16 53.44 [143/1258] cc obj/vendor/brotli/c/enc/cluster.c.o
+#16 53.52 [144/1258] cc obj/vendor/brotli/c/enc/compound_dictionary.c.o
+#16 53.52 [145/1258] cc obj/vendor/brotli/c/enc/dictionary_hash.c.o
+#16 53.62 [146/1258] cc obj/vendor/brotli/c/enc/fast_log.c.o
+#16 53.64 [147/1258] cc obj/vendor/brotli/c/enc/compress_fragment.c.o
+#16 53.64 [148/1258] cc obj/vendor/brotli/c/enc/entropy_encode.c.o
+#16 53.68 [149/1258] cc obj/vendor/brotli/c/enc/compress_fragment_two_pass.c.o
+#16 53.73 [150/1258] cc obj/vendor/brotli/c/enc/memory.c.o
+#16 53.74 [151/1258] cc obj/vendor/brotli/c/enc/literal_cost.c.o
+#16 53.82 [152/1258] cc obj/vendor/brotli/c/enc/utf8_util.c.o
+#16 53.83 [153/1258] cc obj/vendor/brotli/c/enc/backward_references.c.o
+#16 53.86 [154/1258] cc obj/vendor/brotli/c/enc/encode.c.o
+#16 53.89 [155/1258] cc obj/vendor/brotli/c/enc/encoder_dict.c.o
+#16 53.90 [156/1258] cc obj/vendor/zstd/lib/compress/zstd_lazy.c.o
+#16 53.93 [157/1258] cc obj/vendor/libdeflate/lib/utils.c.o
+#16 53.99 [158/1258] cc obj/vendor/libdeflate/lib/x86/cpu_features.c.o
+#16 54.00 [159/1258] cc obj/vendor/brotli/c/enc/histogram.c.o
+#16 54.03 [160/1258] cc obj/vendor/libdeflate/lib/deflate_decompress.c.o
+#16 54.08 [161/1258] cc obj/vendor/brotli/c/enc/metablock.c.o
+#16 54.09 [162/1258] cc obj/vendor/brotli/c/enc/static_dict.c.o
+#16 54.09 [163/1258] cc obj/vendor/libdeflate/lib/zlib_compress.c.o
+#16 54.11 [164/1258] cc obj/vendor/libdeflate/lib/zlib_decompress.c.o
+#16 54.14 [165/1258] cc obj/vendor/libdeflate/lib/arm/cpu_features.c.o
+#16 54.19 [166/1258] cc obj/vendor/libdeflate/lib/gzip_compress.c.o
+#16 54.21 [167/1258] cc obj/vendor/libdeflate/lib/gzip_decompress.c.o
+#16 54.24 [168/1258] cc obj/vendor/libarchive/libarchive/archive_acl.c.o
+#16 54.25 [169/1258] cc obj/vendor/libdeflate/lib/adler32.c.o
+#16 54.25 [170/1258] cc obj/vendor/libarchive/libarchive/archive_cmdline.c.o
+#16 54.27 [171/1258] cc obj/vendor/libarchive/libarchive/archive_check_magic.c.o
+#16 54.27 [172/1258] cc obj/vendor/libarchive/libarchive/archive_cryptor.c.o
+#16 54.32 [173/1258] cc obj/vendor/libarchive/libarchive/archive_digest.c.o
+#16 54.35 [174/1258] cc obj/vendor/libdeflate/lib/deflate_compress.c.o
+#16 54.35 [175/1258] cc obj/vendor/libarchive/libarchive/archive_entry_copy_stat.c.o
+#16 54.37 [176/1258] cc obj/vendor/libarchive/libarchive/archive_entry_link_resolver.c.o
+#16 54.39 [177/1258] cc obj/vendor/libarchive/libarchive/archive_entry_sparse.c.o
+#16 54.43 [178/1258] cc obj/vendor/libarchive/libarchive/archive_entry_stat.c.o
+#16 54.45 [179/1258] cc obj/vendor/libarchive/libarchive/archive_hmac.c.o
+#16 54.46 [180/1258] cc obj/vendor/libarchive/libarchive/archive_entry_strmode.c.o
+#16 54.46 [181/1258] cc obj/vendor/libarchive/libarchive/archive_entry_xattr.c.o
+#16 54.47 [182/1258] cc obj/vendor/libarchive/libarchive/archive_entry.c.o
+#16 54.52 [183/1258] cc obj/vendor/libarchive/libarchive/archive_options.c.o
+#16 54.52 [184/1258] cc obj/vendor/libarchive/libarchive/archive_match.c.o
+#16 54.53 [185/1258] cc obj/vendor/libdeflate/lib/crc32.c.o
+#16 54.57 [186/1258] cc obj/vendor/libarchive/libarchive/archive_pathmatch.c.o
+#16 54.57 [187/1258] cc obj/vendor/libarchive/libarchive/archive_pack_dev.c.o
+#16 54.60 [188/1258] cc obj/vendor/libarchive/libarchive/archive_ppmd7.c.o
+#16 54.60 [189/1258] cc obj/vendor/libarchive/libarchive/archive_random.c.o
+#16 54.60 [190/1258] cc obj/vendor/libarchive/libarchive/archive_parse_date.c.o
+#16 54.61 [191/1258] cc obj/vendor/libarchive/libarchive/archive_rb.c.o
+#16 54.67 [192/1258] cc obj/src/jsc/bindings/sqlite/sqlite3.c.o
+#16 54.68 [193/1258] cc obj/vendor/libarchive/libarchive/archive_read_add_passphrase.c.o
+#16 54.70 [194/1258] cc obj/vendor/libarchive/libarchive/archive_read_append_filter.c.o
+#16 54.71 [195/1258] cc obj/vendor/libarchive/libarchive/archive_read.c.o
+#16 54.71 [196/1258] cc obj/vendor/libarchive/libarchive/archive_read_data_into_fd.c.o
+#16 54.71 [197/1258] cc obj/vendor/libarchive/libarchive/archive_read_disk_set_standard_lookup.c.o
+#16 54.73 [198/1258] cc obj/vendor/libarchive/libarchive/archive_read_extract.c.o
+#16 54.76 [199/1258] cc obj/vendor/libarchive/libarchive/archive_read_disk_entry_from_file.c.o
+#16 54.80 [200/1258] cc obj/vendor/libarchive/libarchive/archive_read_open_fd.c.o
+#16 54.81 [201/1258] cc obj/vendor/libarchive/libarchive/archive_read_open_file.c.o
+#16 54.81 [202/1258] cc obj/vendor/libarchive/libarchive/archive_read_disk_posix.c.o
+#16 54.82 [203/1258] cc obj/vendor/libarchive/libarchive/archive_read_set_format.c.o
+#16 54.82 [204/1258] cc obj/vendor/libarchive/libarchive/archive_read_extract2.c.o
+#16 54.83 [205/1258] cc obj/vendor/libarchive/libarchive/archive_read_open_memory.c.o
+#16 54.86 [206/1258] cc obj/vendor/libarchive/libarchive/archive_read_set_options.c.o
+#16 54.89 [207/1258] cc obj/vendor/libarchive/libarchive/archive_read_open_filename.c.o
+#16 54.89 [208/1258] cc obj/vendor/libarchive/libarchive/archive_read_support_filter_gzip.c.o
+#16 54.93 [209/1258] cc obj/vendor/libarchive/libarchive/archive_read_support_format_empty.c.o
+#16 54.94 [210/1258] cc obj/vendor/libarchive/libarchive/archive_read_support_filter_program.c.o
+#16 54.95 [211/1258] cc obj/vendor/libarchive/libarchive/archive_read_support_format_raw.c.o
+#16 54.96 [212/1258] cc obj/vendor/libarchive/libarchive/archive_string_sprintf.c.o
+#16 54.97 [213/1258] cc obj/vendor/libarchive/libarchive/archive_time.c.o
+#16 55.01 [214/1258] cc obj/vendor/libarchive/libarchive/archive_version_details.c.o
+#16 55.02 [215/1258] cc obj/vendor/libarchive/libarchive/archive_util.c.o
+#16 55.03 [216/1258] cc obj/vendor/libarchive/libarchive/archive_read_support_format_tar.c.o
+#16 55.05 [217/1258] cc obj/vendor/libarchive/libarchive/archive_string.c.o
+#16 55.05 [218/1258] cc obj/vendor/libarchive/libarchive/archive_virtual.c.o
+#16 55.08 [219/1258] cc obj/vendor/libarchive/libarchive/archive_write_open_fd.c.o
+#16 55.11 [220/1258] cc obj/vendor/libarchive/libarchive/archive_write.c.o
+#16 55.11 [221/1258] cc obj/vendor/libarchive/libarchive/archive_write_disk_set_standard_lookup.c.o
+#16 55.13 [222/1258] cc obj/vendor/libarchive/libarchive/archive_write_open_file.c.o
+#16 55.15 [223/1258] cc obj/vendor/libarchive/libarchive/archive_write_open_memory.c.o
+#16 55.16 [224/1258] cc obj/vendor/libarchive/libarchive/archive_write_open_filename.c.o
+#16 55.17 [225/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter.c.o
+#16 55.20 [226/1258] cc obj/vendor/libarchive/libarchive/archive_write_disk_posix.c.o
+#16 55.22 [227/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_b64encode.c.o
+#16 55.22 [228/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_compress.c.o
+#16 55.24 [229/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_bzip2.c.o
+#16 55.25 [230/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_by_name.c.o
+#16 55.26 [231/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_grzip.c.o
+#16 55.28 [232/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_gzip.c.o
+#16 55.28 [233/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lrzip.c.o
+#16 55.29 [234/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lz4.c.o
+#16 55.31 [235/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_none.c.o
+#16 55.35 [236/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_program.c.o
+#16 55.36 [237/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_xz.c.o
+#16 55.36 [238/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_uuencode.c.o
+#16 55.37 [239/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lzop.c.o
+#16 55.39 [240/1258] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_zstd.c.o
+#16 55.39 [241/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format.c.o
+#16 55.44 [242/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_by_name.c.o
+#16 55.45 [243/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_ar.c.o
+#16 55.46 [244/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_7zip.c.o
+#16 55.49 [245/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_odc.c.o
+#16 55.49 [246/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_binary.c.o
+#16 55.50 [247/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio.c.o
+#16 55.51 [248/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_filter_by_ext.c.o
+#16 55.51 [249/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_newc.c.o
+#16 55.52 [250/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_gnutar.c.o
+#16 55.61 [251/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_pax.c.o
+#16 55.61 [252/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_shar.c.o
+#16 55.62 [253/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_raw.c.o
+#16 55.63 [254/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_warc.c.o
+#16 55.64 [255/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_ustar.c.o
+#16 55.64 [256/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_xar.c.o
+#16 55.64 [257/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_v7tar.c.o
+#16 55.64 [258/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_mtree.c.o
+#16 55.73 [259/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_options.c.o
+#16 55.74 [260/1258] cc obj/vendor/libjpeg-turbo/src/jcapistd.c.o
+#16 55.74 [261/1258] cc obj/vendor/libjpeg-turbo/src/jcapimin.c.o
+#16 55.75 [262/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_passphrase.c.o
+#16 55.75 [263/1258] cc obj/vendor/libarchive/libarchive/xxhash.c.o
+#16 55.75 [264/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_iso9660.c.o
+#16 55.75 [265/1258] cc obj/vendor/libarchive/libarchive/filter_fork_posix.c.o
+#16 55.81 [266/1258] cc obj/vendor/libarchive/libarchive/archive_write_set_format_zip.c.o
+#16 55.81 [267/1258] cc obj/vendor/libjpeg-turbo/src/jccoefct.c.o
+#16 55.84 [268/1258] cc obj/vendor/libjpeg-turbo/src/jcicc.c.o
+#16 55.86 [269/1258] cc obj/vendor/libjpeg-turbo/src/jccolor.c.o
+#16 55.86 [270/1258] cc obj/vendor/libjpeg-turbo/src/jcdiffct.c.o
+#16 55.87 [271/1258] cc obj/vendor/libjpeg-turbo/src/jclhuff.c.o
+#16 55.87 [272/1258] cc obj/vendor/libjpeg-turbo/src/jcdctmgr.c.o
+#16 55.89 [273/1258] cc obj/vendor/libjpeg-turbo/src/jcinit.c.o
+#16 55.90 [274/1258] cc obj/vendor/libjpeg-turbo/src/jclossls.c.o
+#16 55.93 [275/1258] cc obj/vendor/libjpeg-turbo/src/jcmainct.c.o
+#16 55.96 [276/1258] cc obj/vendor/libjpeg-turbo/src/jcomapi.c.o
+#16 55.97 [277/1258] cc obj/vendor/libjpeg-turbo/src/jcmaster.c.o
+#16 55.98 [278/1258] cc obj/vendor/libjpeg-turbo/src/jcphuff.c.o
+#16 55.98 [279/1258] cc obj/vendor/libjpeg-turbo/src/jcparam.c.o
+#16 55.99 [280/1258] cc obj/vendor/libjpeg-turbo/src/jcmarker.c.o
+#16 56.00 [281/1258] cc obj/vendor/libjpeg-turbo/src/jcprepct.c.o
+#16 56.03 [282/1258] cc obj/vendor/libjpeg-turbo/src/jcsample.c.o
+#16 56.05 [283/1258] cc obj/vendor/libjpeg-turbo/src/jctrans.c.o
+#16 56.06 [284/1258] cc obj/vendor/libjpeg-turbo/src/jdapimin.c.o
+#16 56.08 [285/1258] cc obj/vendor/libjpeg-turbo/src/jdatasrc.c.o
+#16 56.11 [286/1258] cc obj/vendor/libjpeg-turbo/src/jdatadst.c.o
+#16 56.12 [287/1258] cc obj/vendor/libjpeg-turbo/src/jdapistd.c.o
+#16 56.12 [288/1258] cc obj/vendor/libjpeg-turbo/src/jdcoefct.c.o
+#16 56.16 [289/1258] cc obj/vendor/libjpeg-turbo/src/jddiffct.c.o
+#16 56.16 [290/1258] cc obj/vendor/libjpeg-turbo/src/jchuff.c.o
+#16 56.19 [291/1258] cc obj/vendor/libjpeg-turbo/src/jdicc.c.o
+#16 56.20 [292/1258] cc obj/vendor/libjpeg-turbo/src/jddctmgr.c.o
+#16 56.21 [293/1258] cc obj/vendor/libjpeg-turbo/src/jdhuff.c.o
+#16 56.21 [294/1258] cc obj/vendor/libjpeg-turbo/src/jdcolor.c.o
+#16 56.21 [295/1258] cc obj/vendor/libjpeg-turbo/src/jdlhuff.c.o
+#16 56.22 [296/1258] cc obj/vendor/libjpeg-turbo/src/jdlossls.c.o
+#16 56.22 [297/1258] cc obj/vendor/libjpeg-turbo/src/jdinput.c.o
+#16 56.28 [298/1258] cc obj/vendor/libjpeg-turbo/src/jdmainct.c.o
+#16 56.31 [299/1258] cc obj/vendor/libjpeg-turbo/src/jdpostct.c.o
+#16 56.32 [300/1258] cc obj/vendor/libjpeg-turbo/src/jdtrans.c.o
+#16 56.32 [301/1258] cc obj/vendor/libjpeg-turbo/src/jdmarker.c.o
+#16 56.33 [302/1258] cc obj/vendor/libjpeg-turbo/src/jdsample.c.o
+#16 56.34 [303/1258] cc obj/vendor/libjpeg-turbo/src/jdmaster.c.o
+#16 56.34 [304/1258] cc obj/vendor/libjpeg-turbo/src/jdphuff.c.o
+#16 56.36 [305/1258] cc obj/vendor/libjpeg-turbo/src/jfdctflt.c.o
+#16 56.37 [306/1258] cc obj/vendor/libjpeg-turbo/src/jfdctfst.c.o
+#16 56.41 [307/1258] cc obj/vendor/libjpeg-turbo/src/jidctfst.c.o
+#16 56.41 [308/1258] cc obj/vendor/libjpeg-turbo/src/jidctflt.c.o
+#16 56.42 [309/1258] cc obj/vendor/libjpeg-turbo/src/jfdctint.c.o
+#16 56.43 [310/1258] cc obj/vendor/libjpeg-turbo/src/jidctred.c.o
+#16 56.44 [311/1258] cc obj/vendor/libjpeg-turbo/src/jdmerge.c.o
+#16 56.46 [312/1258] cc obj/vendor/libjpeg-turbo/src/jaricom.c.o
+#16 56.50 [313/1258] cc obj/vendor/libjpeg-turbo/src/jdarith.c.o
+#16 56.51 [314/1258] cc obj/vendor/libjpeg-turbo/src/jmemnobs.c.o
+#16 56.51 [315/1258] cc obj/vendor/libjpeg-turbo/src/jcarith.c.o
+#16 56.52 [316/1258] cc obj/vendor/libjpeg-turbo/src/jerror.c.o
+#16 56.52 [317/1258] cc obj/vendor/libjpeg-turbo/src/jidctint.c.o
+#16 56.54 [318/1258] cc obj/vendor/libjpeg-turbo/src/jquant1.c.o
+#16 56.55 [319/1258] cc obj/vendor/libjpeg-turbo/src/jmemmgr.c.o
+#16 56.57 [320/1258] cc obj/vendor/libjpeg-turbo/src/jquant2.c.o
+#16 56.58 [321/1258] cc obj/vendor/libjpeg-turbo/src/jpeg_nbits.c.o
+#16 56.60 [322/1258] cc obj/vendor/libjpeg-turbo/src/jutils.c.o
+#16 56.61 [323/1258] cc obj/vendor/libjpeg-turbo/src/jdatasrc-tj.c.o
+#16 56.65 [324/1258] cc obj/vendor/libjpeg-turbo/src/jdatadst-tj.c.o
+#16 56.68 [325/1258] cc obj/vendor/libjpeg-turbo/jbun_stubs.c.o
+#16 56.70 [326/1258] cc obj/vendor/libjpeg-turbo/src/transupp.c.o
+#16 56.83 [327/1258] cc obj/vendor/libjpeg-turbo/src/turbojpeg.c.o
+#16 56.91 [328/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jcsample-neon.c.o
+#16 56.92 [329/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jcphuff-neon.c.o
+#16 56.93 [330/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jcgray-neon.c.o
+#16 56.95 [331/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jdsample-neon.c.o
+#16 56.95 [332/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jfdctfst-neon.c.o
+#16 57.03 [333/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jquanti-neon.c.o
+#16 57.06 [334/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jidctred-neon.c.o
+#16 57.15 [335/1258] cc obj/vendor/libjpeg-turbo/simd/arm/aarch64/jsimd.c.o
+#16 57.24 [336/1258] cc obj/vendor/libwebp/src/dec/alpha_dec.c.o
+#16 57.25 [337/1258] cc obj/vendor/libjpeg-turbo/simd/arm/aarch64/jchuff-neon.c.o
+#16 57.28 [338/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jdmerge-neon.c.o
+#16 57.29 [339/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jidctfst-neon.c.o
+#16 57.38 [340/1258] cc obj/vendor/libwebp/src/dec/buffer_dec.c.o
+#16 57.38 [341/1258] cc obj/vendor/libwebp/src/dec/frame_dec.c.o
+#16 57.41 [342/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jfdctint-neon.c.o
+#16 57.42 [343/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jidctint-neon.c.o
+#16 57.42 [344/1258] cc obj/vendor/libwebp/src/dec/idec_dec.c.o
+#16 57.44 [345/1258] cc obj/vendor/libwebp/src/dec/io_dec.c.o
+#16 57.47 [346/1258] cc obj/vendor/libwebp/src/dec/quant_dec.c.o
+#16 57.50 [347/1258] cc obj/vendor/libwebp/src/dec/tree_dec.c.o
+#16 57.50 [348/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jccolor-neon.c.o
+#16 57.53 [349/1258] cc obj/vendor/libwebp/src/dec/webp_dec.c.o
+#16 57.53 [350/1258] cc obj/vendor/libjpeg-turbo/simd/arm/jdcolor-neon.c.o
+#16 57.54 [351/1258] cc obj/vendor/libwebp/src/enc/alpha_enc.c.o
+#16 57.54 [352/1258] cc obj/vendor/libwebp/src/dec/vp8_dec.c.o
+#16 57.54 [353/1258] cc obj/vendor/libspng/spng/spng.c.o
+#16 57.57 [354/1258] cc obj/vendor/libwebp/src/dec/vp8l_dec.c.o
+#16 57.58 [355/1258] cc obj/vendor/libwebp/src/enc/analysis_enc.c.o
+#16 57.62 [356/1258] cc obj/vendor/libwebp/src/enc/config_enc.c.o
+#16 57.64 [357/1258] cc obj/vendor/libwebp/src/enc/filter_enc.c.o
+#16 57.66 [358/1258] cc obj/vendor/libwebp/src/enc/backward_references_enc.c.o
+#16 57.67 [359/1258] cc obj/vendor/libwebp/src/enc/cost_enc.c.o
+#16 57.67 [360/1258] cc obj/vendor/libwebp/src/enc/frame_enc.c.o
+#16 57.67 [361/1258] cc obj/vendor/libwebp/src/enc/iterator_enc.c.o
+#16 57.69 [362/1258] cc obj/vendor/libwebp/src/enc/histogram_enc.c.o
+#16 57.70 [363/1258] cc obj/vendor/libwebp/src/enc/near_lossless_enc.c.o
+#16 57.71 [364/1258] cc obj/vendor/libwebp/src/enc/backward_references_cost_enc.c.o
+#16 57.73 [365/1258] cc obj/vendor/libwebp/src/enc/picture_enc.c.o
+#16 57.76 [366/1258] cc obj/vendor/libwebp/src/enc/picture_tools_enc.c.o
+#16 57.77 [367/1258] cc obj/vendor/libwebp/src/enc/picture_psnr_enc.c.o
+#16 57.78 [368/1258] cc obj/vendor/libwebp/src/enc/picture_rescale_enc.c.o
+#16 57.80 [369/1258] cc obj/vendor/libwebp/src/enc/picture_csp_enc.c.o
+#16 57.82 [370/1258] cc obj/vendor/libwebp/src/enc/predictor_enc.c.o
+#16 57.83 [371/1258] cc obj/vendor/libwebp/src/enc/tree_enc.c.o
+#16 57.84 [372/1258] cc obj/vendor/libwebp/src/enc/token_enc.c.o
+#16 57.86 [373/1258] cc obj/vendor/libwebp/src/enc/syntax_enc.c.o
+#16 57.86 [374/1258] cc obj/vendor/libwebp/src/dsp/alpha_processing_mips_dsp_r2.c.o
+#16 57.87 [375/1258] cc obj/vendor/libwebp/src/dsp/alpha_processing.c.o
+#16 57.90 [376/1258] cc obj/vendor/libwebp/src/enc/webp_enc.c.o
+#16 57.90 [377/1258] cc obj/vendor/libwebp/src/dsp/alpha_processing_sse2.c.o
+#16 57.91 [378/1258] cc obj/vendor/libwebp/src/dsp/alpha_processing_sse41.c.o
+#16 57.93 [379/1258] cc obj/vendor/libwebp/src/enc/vp8l_enc.c.o
+#16 57.95 [380/1258] cc obj/vendor/libwebp/src/dsp/cost_mips32.c.o
+#16 57.95 [381/1258] cc obj/vendor/libwebp/src/dsp/cost_mips_dsp_r2.c.o
+#16 57.97 [382/1258] cc obj/vendor/libwebp/src/dsp/cost.c.o
+#16 57.98 [383/1258] cc obj/vendor/libwebp/src/dsp/cost_sse2.c.o
+#16 58.01 [384/1258] cc obj/vendor/libwebp/src/dsp/cpu.c.o
+#16 58.26 [385/1258] cc obj/vendor/libwebp/src/dsp/dec.c.o
+#16 58.26 [386/1258] cc obj/vendor/libwebp/src/dsp/dec_msa.c.o
+#16 58.26 [387/1258] cc obj/vendor/libwebp/src/dsp/cost_neon.c.o
+#16 58.28 [388/1258] cc obj/vendor/libwebp/src/enc/quant_enc.c.o
+#16 58.31 [389/1258] cc obj/vendor/libwebp/src/dsp/alpha_processing_neon.c.o
+#16 58.33 [390/1258] cc obj/vendor/libwebp/src/dsp/dec_mips32.c.o
+#16 58.35 [391/1258] cc obj/vendor/libwebp/src/dsp/dec_mips_dsp_r2.c.o
+#16 58.35 [392/1258] cc obj/vendor/libwebp/src/dsp/enc_mips32.c.o
+#16 58.35 [393/1258] cc obj/vendor/libwebp/src/dsp/dec_clip_tables.c.o
+#16 58.35 [394/1258] cc obj/vendor/libwebp/src/dsp/dec_sse2.c.o
+#16 58.36 [395/1258] cc obj/vendor/libwebp/src/dsp/dec_sse41.c.o
+#16 58.36 [396/1258] cc obj/vendor/libwebp/src/dsp/enc.c.o
+#16 58.38 [397/1258] cc obj/vendor/libwebp/src/dsp/enc_mips_dsp_r2.c.o
+#16 58.41 [398/1258] cc obj/vendor/libwebp/src/dsp/enc_msa.c.o
+#16 58.42 [399/1258] cc obj/vendor/libwebp/src/dsp/enc_sse2.c.o
+#16 58.43 [400/1258] cc obj/vendor/libwebp/src/dsp/filters_mips_dsp_r2.c.o
+#16 58.44 [401/1258] cc obj/vendor/libwebp/src/dsp/enc_sse41.c.o
+#16 58.44 [402/1258] cc obj/vendor/libwebp/src/dsp/filters.c.o
+#16 58.45 [403/1258] cc obj/vendor/libwebp/src/dsp/filters_msa.c.o
+#16 58.50 [404/1258] cc obj/vendor/libwebp/src/dsp/filters_sse2.c.o
+#16 58.51 [405/1258] cc obj/vendor/libwebp/src/dsp/lossless_avx2.c.o
+#16 58.51 [406/1258] cc obj/vendor/libwebp/src/dsp/lossless_enc_avx2.c.o
+#16 58.53 [407/1258] cc obj/vendor/libwebp/src/dsp/lossless.c.o
+#16 58.54 [408/1258] cc obj/vendor/libwebp/src/dsp/lossless_enc_mips32.c.o
+#16 58.58 [409/1258] cc obj/vendor/libwebp/src/dsp/dec_neon.c.o
+#16 58.58 [410/1258] cc obj/vendor/libwebp/src/dsp/lossless_enc_mips_dsp_r2.c.o
+#16 58.58 [411/1258] cc obj/vendor/libwebp/src/dsp/lossless_enc.c.o
+#16 58.58 [412/1258] cc obj/vendor/libwebp/src/dsp/lossless_enc_msa.c.o
+#16 58.61 [413/1258] cc obj/vendor/libwebp/src/dsp/lossless_enc_sse2.c.o
+#16 58.62 [414/1258] cc obj/vendor/libwebp/src/dsp/lossless_enc_sse41.c.o
+#16 58.66 [415/1258] cc obj/vendor/libwebp/src/dsp/lossless_msa.c.o
+#16 58.66 [416/1258] cc obj/vendor/libwebp/src/dsp/lossless_mips_dsp_r2.c.o
+#16 58.67 [417/1258] cc obj/vendor/libwebp/src/dsp/lossless_sse2.c.o
+#16 58.67 [418/1258] cc obj/vendor/libwebp/src/dsp/enc_neon.c.o
+#16 58.70 [419/1258] cc obj/vendor/libwebp/src/dsp/lossless_sse41.c.o
+#16 58.72 [420/1258] cc obj/vendor/libwebp/src/dsp/rescaler.c.o
+#16 58.74 [421/1258] cc obj/vendor/libwebp/src/dsp/rescaler_mips_dsp_r2.c.o
+#16 58.74 [422/1258] cc obj/vendor/libwebp/src/dsp/rescaler_mips32.c.o
+#16 58.75 [423/1258] cc obj/vendor/libwebp/src/dsp/lossless_enc_neon.c.o
+#16 58.76 [424/1258] cc obj/vendor/libwebp/src/dsp/rescaler_msa.c.o
+#16 58.80 [425/1258] cc obj/vendor/libwebp/src/dsp/filters_neon.c.o
+#16 58.81 [426/1258] cc obj/vendor/libwebp/src/dsp/ssim.c.o
+#16 58.81 [427/1258] cc obj/vendor/libwebp/src/dsp/ssim_sse2.c.o
+#16 58.82 [428/1258] cc obj/vendor/libwebp/src/dsp/rescaler_sse2.c.o
+#16 58.82 [429/1258] cc obj/vendor/libwebp/src/dsp/upsampling_mips_dsp_r2.c.o
+#16 58.83 [430/1258] cc obj/vendor/libwebp/src/dsp/upsampling_msa.c.o
+#16 58.84 [431/1258] cc obj/vendor/libwebp/src/dsp/upsampling.c.o
+#16 58.90 [432/1258] cc obj/vendor/libwebp/src/dsp/upsampling_sse2.c.o
+#16 58.90 [433/1258] cc obj/vendor/libwebp/src/dsp/upsampling_sse41.c.o
+#16 58.91 [434/1258] cc obj/vendor/libwebp/src/dsp/yuv_mips32.c.o
+#16 58.94 [435/1258] cc obj/vendor/libwebp/src/dsp/yuv_mips_dsp_r2.c.o
+#16 58.94 [436/1258] cc obj/vendor/libwebp/src/dsp/yuv.c.o
+#16 58.96 [437/1258] cc obj/vendor/libwebp/src/dsp/lossless_neon.c.o
+#16 58.98 [438/1258] cc obj/vendor/libwebp/src/dsp/yuv_sse2.c.o
+#16 58.99 [439/1258] cc obj/vendor/libwebp/src/dsp/rescaler_neon.c.o
+#16 58.99 [440/1258] cc obj/vendor/libwebp/src/utils/bit_reader_utils.c.o
+#16 59.00 [441/1258] cc obj/vendor/libwebp/src/dsp/yuv_sse41.c.o
+#16 59.05 [442/1258] cc obj/vendor/libwebp/src/utils/color_cache_utils.c.o
+#16 59.07 [443/1258] cc obj/vendor/libwebp/src/utils/filters_utils.c.o
+#16 59.08 [444/1258] cc obj/vendor/libwebp/src/utils/huffman_encode_utils.c.o
+#16 59.09 [445/1258] cc obj/vendor/libwebp/src/utils/quant_levels_dec_utils.c.o
+#16 59.10 [446/1258] cc obj/vendor/libwebp/src/utils/palette.c.o
+#16 59.10 [447/1258] cc obj/vendor/libwebp/src/utils/huffman_utils.c.o
+#16 59.10 [448/1258] cc obj/vendor/libwebp/src/utils/bit_writer_utils.c.o
+#16 59.12 [449/1258] cc obj/vendor/libwebp/src/dsp/yuv_neon.c.o
+#16 59.14 [450/1258] cc obj/vendor/libwebp/src/utils/quant_levels_utils.c.o
+#16 59.18 [451/1258] cc obj/vendor/libwebp/src/utils/thread_utils.c.o
+#16 59.18 [452/1258] cc obj/vendor/libwebp/src/utils/rescaler_utils.c.o
+#16 59.19 [453/1258] cc obj/vendor/libwebp/src/utils/random_utils.c.o
+#16 59.20 [454/1258] cc obj/vendor/libwebp/src/utils/utils.c.o
+#16 59.24 [455/1258] cc obj/vendor/libwebp/src/demux/demux.c.o
+#16 59.25 [456/1258] cc obj/vendor/libwebp/src/mux/muxedit.c.o
+#16 59.25 [457/1258] cc obj/vendor/libwebp/src/mux/muxinternal.c.o
+#16 59.26 [458/1258] cc obj/vendor/libwebp/src/mux/muxread.c.o
+#16 59.27 [459/1258] cc obj/vendor/libwebp/sharpyuv/sharpyuv_cpu.c.o
+#16 59.29 [460/1258] cc obj/vendor/libwebp/src/dsp/upsampling_neon.c.o
+#16 59.30 [461/1258] cc obj/vendor/libwebp/sharpyuv/sharpyuv_dsp.c.o
+#16 59.30 [462/1258] cc obj/vendor/libwebp/sharpyuv/sharpyuv.c.o
+#16 59.32 [463/1258] cc obj/vendor/libwebp/sharpyuv/sharpyuv_csp.c.o
+#16 59.34 [464/1258] cc obj/vendor/libwebp/sharpyuv/sharpyuv_sse2.c.o
+#16 59.38 [465/1258] cc obj/vendor/cares/src/lib/ares_android.c.o
+#16 59.38 [466/1258] cc obj/vendor/libwebp/sharpyuv/sharpyuv_gamma.c.o
+#16 59.42 [467/1258] cc obj/vendor/cares/src/lib/ares_addrinfo_localhost.c.o
+#16 59.42 [468/1258] cc obj/vendor/cares/src/lib/ares_addrinfo2hostent.c.o
+#16 59.42 [469/1258] cc obj/vendor/cares/src/lib/ares_cancel.c.o
+#16 59.43 [470/1258] cc obj/vendor/cares/src/lib/ares_close_sockets.c.o
+#16 59.46 [471/1258] cc obj/vendor/cares/src/lib/ares_cookie.c.o
+#16 59.47 [472/1258] cc obj/vendor/cares/src/lib/ares_conn.c.o
+#16 59.51 [473/1258] cc obj/vendor/cares/src/lib/ares_data.c.o
+#16 59.53 [474/1258] cc obj/vendor/cares/src/lib/ares_destroy.c.o
+#16 59.54 [475/1258] cc obj/vendor/libwebp/sharpyuv/sharpyuv_neon.c.o
+#16 59.55 [476/1258] cc obj/vendor/cares/src/lib/ares_free_string.c.o
+#16 59.55 [477/1258] cc obj/vendor/cares/src/lib/ares_free_hostent.c.o
+#16 59.55 [478/1258] cc obj/vendor/cares/src/lib/ares_freeaddrinfo.c.o
+#16 59.57 [479/1258] cc obj/vendor/cares/src/lib/ares_getenv.c.o
+#16 59.59 [480/1258] cc obj/vendor/cares/src/lib/ares_getaddrinfo.c.o
+#16 59.64 [481/1258] cc obj/vendor/cares/src/lib/ares_gethostbyaddr.c.o
+#16 59.66 [482/1258] cc obj/vendor/cares/src/lib/ares_getnameinfo.c.o
+#16 59.67 [483/1258] cc obj/vendor/cares/src/lib/ares_gethostbyname.c.o
+#16 59.67 [484/1258] cc obj/vendor/cares/src/lib/ares_library_init.c.o
+#16 59.68 [485/1258] cc obj/vendor/cares/src/lib/ares_metrics.c.o
+#16 59.69 [486/1258] cc obj/vendor/cares/src/lib/ares_hosts_file.c.o
+#16 59.71 [487/1258] cc obj/vendor/cares/src/lib/ares_options.c.o
+#16 59.73 [488/1258] cc obj/vendor/cares/src/lib/ares_parse_into_addrinfo.c.o
+#16 59.76 [489/1258] cc obj/vendor/cares/src/lib/ares_init.c.o
+#16 59.79 [490/1258] cc obj/vendor/cares/src/lib/ares_process.c.o
+#16 59.80 [491/1258] cc obj/vendor/cares/src/lib/ares_query.c.o
+#16 59.81 [492/1258] cc obj/vendor/cares/src/lib/ares_qcache.c.o
+#16 59.83 [493/1258] cc obj/vendor/cares/src/lib/ares_send.c.o
+#16 59.84 [494/1258] cc obj/vendor/cares/src/lib/ares_search.c.o
+#16 59.88 [495/1258] cc obj/vendor/cares/src/lib/ares_set_socket_functions.c.o
+#16 59.90 [496/1258] cc obj/vendor/cares/src/lib/ares_sortaddrinfo.c.o
+#16 59.90 [497/1258] cc obj/vendor/cares/src/lib/ares_socket.c.o
+#16 59.90 [498/1258] cc obj/vendor/cares/src/lib/ares_strerror.c.o
+#16 59.92 [499/1258] cc obj/vendor/cares/src/lib/ares_sysconfig_mac.c.o
+#16 59.94 [500/1258] cc obj/vendor/cares/src/lib/ares_sysconfig.c.o
+#16 59.96 [501/1258] cc obj/vendor/cares/src/lib/ares_timeout.c.o
+#16 59.97 [502/1258] cc obj/vendor/cares/src/lib/ares_sysconfig_win.c.o
+#16 59.99 [503/1258] cc obj/vendor/cares/src/lib/ares_sysconfig_files.c.o
+#16 60.03 [504/1258] cc obj/vendor/cares/src/lib/ares_version.c.o
+#16 60.03 [505/1258] cc obj/vendor/cares/src/lib/inet_ntop.c.o
+#16 60.04 [506/1258] cc obj/vendor/cares/src/lib/ares_update_servers.c.o
+#16 60.06 [507/1258] cc obj/vendor/cares/src/lib/inet_net_pton.c.o
+#16 60.08 [508/1258] cc obj/vendor/cares/src/lib/windows_port.c.o
+#16 60.09 [509/1258] cc obj/vendor/cares/src/lib/dsa/ares_array.c.o
+#16 60.12 [510/1258] cc obj/vendor/cares/src/lib/dsa/ares_htable.c.o
+#16 60.13 [511/1258] cc obj/vendor/cares/src/lib/dsa/ares_htable_asvp.c.o
+#16 60.14 [512/1258] cc obj/vendor/cares/src/lib/dsa/ares_htable_dict.c.o
+#16 60.15 [513/1258] cc obj/vendor/cares/src/lib/dsa/ares_htable_strvp.c.o
+#16 60.17 [514/1258] cc obj/vendor/cares/src/lib/dsa/ares_htable_vpstr.c.o
+#16 60.17 [515/1258] cc obj/vendor/cares/src/lib/dsa/ares_htable_szvp.c.o
+#16 60.19 [516/1258] cc obj/vendor/cares/src/lib/dsa/ares_htable_vpvp.c.o
+#16 60.21 [517/1258] cc obj/vendor/cares/src/lib/dsa/ares_slist.c.o
+#16 60.22 [518/1258] cc obj/vendor/cares/src/lib/dsa/ares_llist.c.o
+#16 60.26 [519/1258] cc obj/vendor/cares/src/lib/event/ares_event_kqueue.c.o
+#16 60.27 [520/1258] cc obj/vendor/cares/src/lib/event/ares_event_configchg.c.o
+#16 60.28 [521/1258] cc obj/vendor/cares/src/lib/event/ares_event_poll.c.o
+#16 60.28 [522/1258] cc obj/vendor/cares/src/lib/event/ares_event_epoll.c.o
+#16 60.29 [523/1258] cc obj/vendor/cares/src/lib/event/ares_event_select.c.o
+#16 60.29 [524/1258] cc obj/vendor/cares/src/lib/event/ares_event_thread.c.o
+#16 60.31 [525/1258] cc obj/vendor/cares/src/lib/event/ares_event_wake_pipe.c.o
+#16 60.35 [526/1258] cc obj/vendor/cares/src/lib/event/ares_event_win32.c.o
+#16 60.38 [527/1258] cc obj/vendor/cares/src/lib/legacy/ares_create_query.c.o
+#16 60.39 [528/1258] cc obj/vendor/cares/src/lib/legacy/ares_expand_name.c.o
+#16 60.41 [529/1258] cc obj/vendor/cares/src/lib/legacy/ares_fds.c.o
+#16 60.41 [530/1258] cc obj/vendor/cares/src/lib/legacy/ares_expand_string.c.o
+#16 60.42 [531/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_aaaa_reply.c.o
+#16 60.42 [532/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_a_reply.c.o
+#16 60.44 [533/1258] cc obj/vendor/cares/src/lib/legacy/ares_getsock.c.o
+#16 60.45 [534/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_caa_reply.c.o
+#16 60.47 [535/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_mx_reply.c.o
+#16 60.51 [536/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_naptr_reply.c.o
+#16 60.52 [537/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_soa_reply.c.o
+#16 60.53 [538/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_ns_reply.c.o
+#16 60.56 [539/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_ptr_reply.c.o
+#16 60.56 [540/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_uri_reply.c.o
+#16 60.56 [541/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_txt_reply.c.o
+#16 60.60 [542/1258] cc obj/vendor/cares/src/lib/legacy/ares_parse_srv_reply.c.o
+#16 60.61 [543/1258] cc obj/vendor/cares/src/lib/record/ares_dns_multistring.c.o
+#16 60.63 [544/1258] cc obj/vendor/cares/src/lib/record/ares_dns_mapping.c.o
+#16 60.65 [545/1258] cc obj/vendor/cares/src/lib/record/ares_dns_name.c.o
+#16 60.68 [546/1258] cc obj/vendor/cares/src/lib/record/ares_dns_parse.c.o
+#16 60.71 [547/1258] cc obj/vendor/cares/src/lib/record/ares_dns_write.c.o
+#16 60.71 [548/1258] cc obj/vendor/cares/src/lib/record/ares_dns_record.c.o
+#16 60.72 [549/1258] cc obj/vendor/cares/src/lib/str/ares_strsplit.c.o
+#16 60.74 [550/1258] cc obj/vendor/cares/src/lib/str/ares_buf.c.o
+#16 60.75 [551/1258] cc obj/vendor/cares/src/lib/util/ares_threads.c.o
+#16 60.75 [552/1258] cc obj/vendor/cares/src/lib/util/ares_iface_ips.c.o
+#16 60.76 [553/1258] cc obj/vendor/cares/src/lib/util/ares_timeval.c.o
+#16 60.78 [554/1258] cc obj/vendor/cares/src/lib/str/ares_str.c.o
+#16 60.80 [555/1258] cc obj/vendor/cares/src/lib/util/ares_math.c.o
+#16 60.83 [556/1258] cc obj/vendor/cares/src/lib/util/ares_rand.c.o
+#16 60.85 [557/1258] cc obj/vendor/hdrhistogram/src/hdr_histogram_log_no_op.c.o
+#16 60.87 [558/1258] gen JS modules (bundle-modules)
+#16 60.87 Preprocess modules (10531ms)
+#16 60.87 Bundle modules (72ms)
+#16 60.87 Postprocesss modules (108ms)
+#16 60.87 Bundle Functions (1084ms)
+#16 60.87 Generate Code (14ms)
+#16 60.87 
+#16 60.87 [11.83s] Bundled "src/js" for development
+#16 60.87   2822 kb
+#16 60.87   198 internal modules
+#16 60.87   13 native modules
+#16 60.87   92 internal functions across 17 files
+#16 60.87 [558/1258] cargo bun_bin → libbun_rust.a (--target aarch64-unknown-linux-gnu)
+#16 61.24 
+#16 61.24   nightly-2026-07-20-aarch64-unknown-linux-gnu unchanged - rustc 1.99.0-nightly (9f36de775 2026-07-19)
+#16 61.24 
+#16 61.49 [1m[92m    Updating[0m crates.io index
+#16 63.37 [1m[92m Downloading[0m crates ...
+#16 63.51 [1m[92m  Downloaded[0m cfg-if v1.0.4
+#16 63.51 [1m[92m  Downloaded[0m bcrypt v0.19.0
+#16 63.52 [1m[92m  Downloaded[0m crypto-common v0.1.7
+#16 63.52 [1m[92m  Downloaded[0m cssparser-macros v0.6.1
+#16 63.52 [1m[92m  Downloaded[0m cpufeatures v0.2.17
+#16 63.52 [1m[92m  Downloaded[0m arrayref v0.3.9
+#16 63.53 [1m[92m  Downloaded[0m block-buffer v0.10.4
+#16 63.53 [1m[92m  Downloaded[0m darling_macro v0.21.3
+#16 63.53 [1m[92m  Downloaded[0m stable_deref_trait v1.2.1
+#16 63.53 [1m[92m  Downloaded[0m const_format_proc_macros v0.2.34
+#16 63.54 [1m[92m  Downloaded[0m digest v0.10.7
+#16 63.55 [1m[92m  Downloaded[0m konst_macro_rules v0.2.19
+#16 63.55 [1m[92m  Downloaded[0m version_check v0.9.5
+#16 63.56 [1m[92m  Downloaded[0m arrayvec v0.7.6
+#16 63.56 [1m[92m  Downloaded[0m scopeguard v1.2.0
+#16 63.56 [1m[92m  Downloaded[0m subtle v2.6.1
+#16 63.57 [1m[92m  Downloaded[0m errno v0.3.14
+#16 63.57 [1m[92m  Downloaded[0m ident_case v1.0.1
+#16 63.57 [1m[92m  Downloaded[0m byteorder v1.5.0
+#16 63.57 [1m[92m  Downloaded[0m dtoa-short v0.3.5
+#16 63.57 [1m[92m  Downloaded[0m phf_codegen v0.13.1
+#16 63.58 [1m[92m  Downloaded[0m blowfish v0.9.1
+#16 63.58 [1m[92m  Downloaded[0m constant_time_eq v0.4.2
+#16 63.58 [1m[92m  Downloaded[0m crossbeam-utils v0.8.21
+#16 63.59 [1m[92m  Downloaded[0m equivalent v1.0.2
+#16 63.59 [1m[92m  Downloaded[0m fnv v1.0.7
+#16 63.59 [1m[92m  Downloaded[0m heck v0.5.0
+#16 63.59 [1m[92m  Downloaded[0m mime v0.3.17
+#16 63.60 [1m[92m  Downloaded[0m phf_macros v0.13.1
+#16 63.60 [1m[92m  Downloaded[0m precomputed-hash v0.1.1
+#16 63.60 [1m[92m  Downloaded[0m rustc-hash v2.1.2
+#16 63.60 [1m[92m  Downloaded[0m rustc_version v0.4.1
+#16 63.60 [1m[92m  Downloaded[0m strum v0.26.3
+#16 63.61 [1m[92m  Downloaded[0m typed-arena v2.0.2
+#16 63.61 [1m[92m  Downloaded[0m blake2 v0.10.6
+#16 63.62 [1m[92m  Downloaded[0m blake2b_simd v1.0.4
+#16 63.62 [1m[92m  Downloaded[0m phf_shared v0.13.1
+#16 63.62 [1m[92m  Downloaded[0m enum-map-derive v0.17.0
+#16 63.62 [1m[92m  Downloaded[0m inout v0.1.4
+#16 63.62 [1m[92m  Downloaded[0m siphasher v1.0.3
+#16 63.63 [1m[92m  Downloaded[0m unicode-xid v0.2.6
+#16 63.64 [1m[92m  Downloaded[0m cipher v0.4.4
+#16 63.64 [1m[92m  Downloaded[0m foldhash v0.1.5
+#16 63.66 [1m[92m  Downloaded[0m itoa v1.0.18
+#16 63.66 [1m[92m  Downloaded[0m keccak v0.1.6
+#16 63.66 [1m[92m  Downloaded[0m dtoa v1.0.11
+#16 63.66 [1m[92m  Downloaded[0m foldhash v0.2.0
+#16 63.66 [1m[92m  Downloaded[0m enumset_derive v0.14.0
+#16 63.66 [1m[92m  Downloaded[0m fastrand v2.4.1
+#16 63.67 [1m[92m  Downloaded[0m bitflags v2.11.1
+#16 63.68 [1m[92m  Downloaded[0m semver v1.0.28
+#16 63.69 [1m[92m  Downloaded[0m phf_generator v0.13.1
+#16 63.69 [1m[92m  Downloaded[0m new_debug_unreachable v1.0.6
+#16 63.69 [1m[92m  Downloaded[0m rustversion v1.0.22
+#16 63.69 [1m[92m  Downloaded[0m strum_macros v0.26.4
+#16 63.69 [1m[92m  Downloaded[0m thiserror-impl v2.0.18
+#16 63.70 [1m[92m  Downloaded[0m servo_arc v0.4.3
+#16 63.70 [1m[92m  Downloaded[0m thiserror v2.0.18
+#16 63.70 [1m[92m  Downloaded[0m phf v0.13.1
+#16 63.71 [1m[92m  Downloaded[0m enum-map v2.7.3
+#16 63.71 [1m[92m  Downloaded[0m paste v1.0.15
+#16 63.71 [1m[92m  Downloaded[0m quote v1.0.45
+#16 63.71 [1m[92m  Downloaded[0m allocator-api2 v0.2.21
+#16 63.72 [1m[92m  Downloaded[0m generic-array v0.14.7
+#16 63.72 [1m[92m  Downloaded[0m smallvec v1.15.1
+#16 63.72 [1m[92m  Downloaded[0m zeroize v1.8.2
+#16 63.72 [1m[92m  Downloaded[0m cssparser v0.36.0
+#16 63.72 [1m[92m  Downloaded[0m darling v0.21.3
+#16 63.73 [1m[92m  Downloaded[0m getrandom v0.4.2
+#16 63.73 [1m[92m  Downloaded[0m bytemuck v1.25.0
+#16 63.73 [1m[92m  Downloaded[0m const_format v0.2.36
+#16 63.74 [1m[92m  Downloaded[0m proc-macro2 v1.0.106
+#16 63.74 [1m[92m  Downloaded[0m serde_core v1.0.228
+#16 63.74 [1m[92m  Downloaded[0m unicode-ident v1.0.24
+#16 63.74 [1m[92m  Downloaded[0m selectors v0.33.0
+#16 63.75 [1m[92m  Downloaded[0m darling_core v0.21.3
+#16 63.75 [1m[92m  Downloaded[0m log v0.4.29
+#16 63.75 [1m[92m  Downloaded[0m base64 v0.22.1
+#16 63.76 [1m[92m  Downloaded[0m enumset v1.1.10
+#16 63.76 [1m[92m  Downloaded[0m memchr v2.8.0
+#16 63.76 [1m[92m  Downloaded[0m typenum v1.20.0
+#16 63.77 [1m[92m  Downloaded[0m derive_more v2.1.1
+#16 63.78 [1m[92m  Downloaded[0m derive_more-impl v2.1.1
+#16 63.78 [1m[92m  Downloaded[0m konst v0.2.20
+#16 63.79 [1m[92m  Downloaded[0m serde v1.0.228
+#16 63.79 [1m[92m  Downloaded[0m hashbrown v0.15.5
+#16 63.80 [1m[92m  Downloaded[0m hashbrown v0.16.1
+#16 63.81 [1m[92m  Downloaded[0m syn v2.0.117
+#16 63.82 [1m[92m  Downloaded[0m bstr v1.12.1
+#16 63.83 [1m[92m  Downloaded[0m rustix v0.38.44
+#16 63.86 [1m[92m  Downloaded[0m libc v0.2.186
+#16 63.91 [1m[92m  Downloaded[0m sha3 v0.10.9
+#16 63.92 [1m[92m  Downloaded[0m encoding_rs v0.8.35
+#16 63.94 [1m[92m  Downloaded[0m linux-raw-sys v0.4.15
+#16 64.45 [1m[92m   Compiling[0m proc-macro2 v1.0.106
+#16 64.45 [1m[92m   Compiling[0m unicode-ident v1.0.24
+#16 64.45 [1m[92m   Compiling[0m quote v1.0.45
+#16 64.45 [1m[92m   Compiling[0m libc v0.2.186
+#16 64.45 [1m[92m   Compiling[0m ident_case v1.0.1
+#16 64.45 [1m[92m   Compiling[0m fnv v1.0.7
+#16 64.45 [1m[92m   Compiling[0m rustversion v1.0.22
+#16 64.45 [1m[92m   Compiling[0m bitflags v2.11.1
+#16 64.45 [1m[92m   Compiling[0m heck v0.5.0
+#16 64.45 [1m[92m   Compiling[0m konst_macro_rules v0.2.19
+#16 64.53 [1m[92m   Compiling[0m unicode-xid v0.2.6
+#16 64.56 [1m[92m   Compiling[0m memchr v2.8.0
+#16 64.58 [1m[92m   Compiling[0m scopeguard v1.2.0
+#16 64.65 [1m[92m   Compiling[0m konst v0.2.20
+#16 64.80 [1m[92m   Compiling[0m allocator-api2 v0.2.21
+#16 64.93 [1m[92m   Compiling[0m thiserror v2.0.18
+#16 64.99 [1m[92m   Compiling[0m bun_opaque v0.0.0 (/bun/src/opaque)
+#16 65.00 [1m[92m   Compiling[0m itoa v1.0.18
+#16 65.06 [1m[92m   Compiling[0m typed-arena v2.0.2
+#16 65.08 [1m[92m   Compiling[0m bun_output_tags v0.0.0 (/bun/src/bun_output_tags)
+#16 65.11 [1m[92m   Compiling[0m bstr v1.12.1
+#16 65.12 [1m[92m   Compiling[0m bun_core v0.0.0 (/bun/src/bun_core)
+#16 65.16 [1m[92m   Compiling[0m bytemuck v1.25.0
+#16 65.18 [1m[92m   Compiling[0m bun_windows_sys v0.0.0 (/bun/src/windows_sys)
+#16 65.31 [1m[92m   Compiling[0m smallvec v1.15.1
+#16 65.45 [1m[92m   Compiling[0m paste v1.0.15
+#16 65.47 [1m[92m   Compiling[0m rustc-hash v2.1.2
+#16 65.52 [1m[92m   Compiling[0m rustix v0.38.44
+#16 65.54 [1m[92m   Compiling[0m hashbrown v0.15.5
+#16 65.84 [1m[92m   Compiling[0m linux-raw-sys v0.4.15
+#16 66.09 [1m[92m   Compiling[0m syn v2.0.117
+#16 66.15 [1m[92m   Compiling[0m siphasher v1.0.3
+#16 66.42 [1m[92m   Compiling[0m phf_shared v0.13.1
+#16 66.43 [1m[92m   Compiling[0m const_format_proc_macros v0.2.34
+#16 66.45 [1m[92m   Compiling[0m fastrand v2.4.1
+#16 66.58 [1m[92m   Compiling[0m bun_parsers v0.0.0 (/bun/src/parsers)
+#16 66.79 [1m[92m   Compiling[0m phf_generator v0.13.1
+#16 66.80 [1m[92m   Compiling[0m cfg-if v1.0.4
+#16 66.82 [1m[92m   Compiling[0m dtoa v1.0.11
+#16 66.87 [1m[92m   Compiling[0m stable_deref_trait v1.2.1
+#16 66.88 [1m[92m   Compiling[0m foldhash v0.2.0
+#16 67.06 [1m[92m   Compiling[0m phf_codegen v0.13.1
+#16 67.19 [1m[92m   Compiling[0m selectors v0.33.0
+#16 67.42 [1m[92m   Compiling[0m dtoa-short v0.3.5
+#16 67.53 [1m[92m   Compiling[0m servo_arc v0.4.3
+#16 67.55 [1m[92m   Compiling[0m log v0.4.29
+#16 67.61 [1m[92m   Compiling[0m precomputed-hash v0.1.1
+#16 67.72 [1m[92m   Compiling[0m new_debug_unreachable v1.0.6
+#16 67.77 [1m[92m   Compiling[0m equivalent v1.0.2
+#16 67.79 [1m[92m   Compiling[0m const_format v0.2.36
+#16 67.84 [1m[92m   Compiling[0m hashbrown v0.16.1
+#16 68.23 [1m[92m   Compiling[0m encoding_rs v0.8.35
+#16 68.27 [1m[92m   Compiling[0m mime v0.3.17
+#16 68.28 [1m[92m   Compiling[0m bun_install v0.0.0 (/bun/src/install)
+#16 68.56 [1m[92m   Compiling[0m bun_jsc v0.0.0 (/bun/src/jsc)
+#16 68.69 [1m[92m   Compiling[0m version_check v0.9.5
+#16 68.75 [1m[92m   Compiling[0m typenum v1.20.0
+#16 69.00 [1m[92m   Compiling[0m subtle v2.6.1
+#16 69.17 [1m[92m   Compiling[0m getrandom v0.4.2
+#16 69.19 [1m[92m   Compiling[0m crossbeam-utils v0.8.21
+#16 69.24 [1m[92m   Compiling[0m generic-array v0.14.7
+#16 69.28 [1m[92m   Compiling[0m darling_core v0.21.3
+#16 69.44 [1m[92m   Compiling[0m cpufeatures v0.2.17
+#16 69.51 [1m[92m   Compiling[0m base64 v0.22.1
+#16 69.53 [1m[92m   Compiling[0m arrayref v0.3.9
+#16 69.57 [1m[92m   Compiling[0m byteorder v1.5.0
+#16 69.94 [1m[92m   Compiling[0m constant_time_eq v0.4.2
+#16 70.15 [1m[92m   Compiling[0m arrayvec v0.7.6
+#16 70.69 [1m[92m   Compiling[0m crypto-common v0.1.7
+#16 70.86 [1m[92m   Compiling[0m block-buffer v0.10.4
+#16 70.90 [1m[92m   Compiling[0m inout v0.1.4
+#16 70.94 [1m[92m   Compiling[0m blake2b_simd v1.0.4
+#16 71.02 [1m[92m   Compiling[0m digest v0.10.7
+#16 71.12 [1m[92m   Compiling[0m cipher v0.4.4
+#16 71.29 [1m[92m   Compiling[0m keccak v0.1.6
+#16 71.39 [1m[92m   Compiling[0m bun_runtime v0.0.0 (/bun/src/runtime)
+#16 71.53 [1m[92m   Compiling[0m blowfish v0.9.1
+#16 71.56 [1m[92m   Compiling[0m zeroize v1.8.2
+#16 71.58 [1m[92m   Compiling[0m sha3 v0.10.9
+#16 71.62 [1m[92m   Compiling[0m blake2 v0.10.6
+#16 71.66 [1m[92m   Compiling[0m rust-argon2 v3.0.0 (/bun/vendor/rust-argon2)
+#16 71.80 [1m[92m   Compiling[0m bcrypt v0.19.0
+#16 72.77 [1m[92m   Compiling[0m strum_macros v0.26.4
+#16 72.77 [1m[92m   Compiling[0m enum-map-derive v0.17.0
+#16 72.77 [1m[92m   Compiling[0m thiserror-impl v2.0.18
+#16 72.77 [1m[92m   Compiling[0m bun_dispatch v0.0.0 (/bun/src/dispatch)
+#16 72.77 [1m[92m   Compiling[0m bun_core_macros v0.0.0 (/bun/src/bun_core_macros)
+#16 72.77 [1m[92m   Compiling[0m bun_jsc_macros v0.0.0 (/bun/src/jsc_macros)
+#16 72.77 [1m[92m   Compiling[0m phf_macros v0.13.1
+#16 72.78 [1m[92m   Compiling[0m derive_more-impl v2.1.1
+#16 72.80 [1m[92m   Compiling[0m darling_macro v0.21.3
+#16 73.04 [1m[92m   Compiling[0m cssparser-macros v0.6.1
+#16 73.32 [1m[92m   Compiling[0m darling v0.21.3
+#16 73.36 [1m[92m   Compiling[0m enumset_derive v0.14.0
+#16 73.39 [1m[92m   Compiling[0m enum-map v2.7.3
+#16 73.45 [1m[92m   Compiling[0m bun_css_derive v0.0.0 (/bun/src/css_derive)
+#16 74.25 [1m[92m   Compiling[0m phf v0.13.1
+#16 74.38 [1m[92m   Compiling[0m bun_clap_macros v0.0.0 (/bun/src/clap_macros)
+#16 74.59 [1m[92m   Compiling[0m derive_more v2.1.1
+#16 74.90 [1m[92m   Compiling[0m cssparser v0.36.0
+#16 75.29 [1m[92m   Compiling[0m enumset v1.1.10
+#16 75.77 [1m[92m   Compiling[0m strum v0.26.3
+#16 75.82 [1m[92m   Compiling[0m bun_mimalloc_sys v0.0.0 (/bun/src/mimalloc_sys)
+#16 75.82 [1m[92m   Compiling[0m bun_wyhash v0.0.0 (/bun/src/wyhash)
+#16 75.84 [1m[92m   Compiling[0m bun_highway v0.0.0 (/bun/src/highway)
+#16 75.85 [1m[92m   Compiling[0m bun_simdutf_sys v0.0.0 (/bun/src/simdutf_sys)
+#16 75.89 [1m[92m   Compiling[0m bun_libuv_sys v0.0.0 (/bun/src/libuv_sys)
+#16 76.03 [1m[92m   Compiling[0m bun_brotli_sys v0.0.0 (/bun/src/brotli_sys)
+#16 76.18 [1m[92m   Compiling[0m bun_alloc v0.0.0 (/bun/src/bun_alloc)
+#16 76.41 [1m[92m   Compiling[0m bun_hash v0.0.0 (/bun/src/hash)
+#16 76.68 [1m[92m   Compiling[0m lol_html v2.7.2 (/bun/vendor/lolhtml)
+#16 76.78 [1m[92m   Compiling[0m bun_libdeflate_sys v0.0.0 (/bun/src/libdeflate_sys)
+#16 78.79 [1m[92m   Compiling[0m bun_errno v0.0.0 (/bun/src/errno)
+#16 78.79 [1m[92m   Compiling[0m bun_ptr v0.0.0 (/bun/src/ptr)
+#16 78.82 [1m[92m   Compiling[0m bun_boringssl_sys v0.0.0 (/bun/src/boringssl_sys)
+#16 78.94 [1m[92m   Compiling[0m bun_safety v0.0.0 (/bun/src/safety)
+#16 79.01 [1m[92m   Compiling[0m bun_zlib_sys v0.0.0 (/bun/src/zlib_sys)
+#16 79.26 [1m[92m   Compiling[0m bun_paths v0.0.0 (/bun/src/paths)
+#16 79.27 [1m[92m   Compiling[0m bun_collections v0.0.0 (/bun/src/collections)
+#16 79.33 [1m[92m   Compiling[0m bun_cares_sys v0.0.0 (/bun/src/cares_sys)
+#16 79.48 [1m[92m   Compiling[0m bun_zstd v0.0.0 (/bun/src/zstd)
+#16 79.58 [1m[92m   Compiling[0m bun_picohttp v0.0.0 (/bun/src/picohttp)
+#16 79.62 [1m[92m   Compiling[0m bun_brotli v0.0.0 (/bun/src/brotli)
+#16 79.63 [1m[92m   Compiling[0m bun_output v0.0.0 (/bun/src/output)
+#16 80.17 [1m[92m   Compiling[0m bun_sys v0.0.0 (/bun/src/sys)
+#16 80.21 [1m[92m   Compiling[0m bun_url v0.0.0 (/bun/src/url)
+#16 80.25 [1m[92m   Compiling[0m bun_semver v0.0.0 (/bun/src/semver)
+#16 80.50 [1m[92m   Compiling[0m bun_base64 v0.0.0 (/bun/src/base64)
+#16 80.69 [1m[92m   Compiling[0m bun_http_types v0.0.0 (/bun/src/http_types)
+#16 81.22 [1m[92m   Compiling[0m bun_threading v0.0.0 (/bun/src/threading)
+#16 81.24 [1m[92m   Compiling[0m bun_perf v0.0.0 (/bun/src/perf)
+#16 81.60 [1m[92m   Compiling[0m bun_analytics v0.0.0 (/bun/src/analytics)
+#16 81.87 [1m[92m   Compiling[0m bun_ast v0.0.0 (/bun/src/ast)
+#16 81.95 [1m[92m   Compiling[0m bun_uws_sys v0.0.0 (/bun/src/uws_sys)
+#16 81.98 [1m[92m   Compiling[0m bun_which v0.0.0 (/bun/src/which)
+#16 82.39 [1m[92m   Compiling[0m bun_spawn_sys v0.0.0 (/bun/src/spawn_sys)
+#16 82.45 [1m[92m   Compiling[0m bun_dotenv v0.0.0 (/bun/src/dotenv)
+#16 82.79 [1m[92m   Compiling[0m bun_libarchive v0.0.0 (/bun/src/libarchive)
+#16 82.92 [1m[92m   Compiling[0m bun_boringssl v0.0.0 (/bun/src/boringssl)
+#16 83.86 [1m[92m   Compiling[0m bun_io v0.0.0 (/bun/src/io)
+#16 83.96 [1m[92m   Compiling[0m bun_uws v0.0.0 (/bun/src/uws)
+#16 83.99 [1m[92m   Compiling[0m bun_sha_hmac v0.0.0 (/bun/src/sha_hmac)
+#16 84.12 [1m[92m   Compiling[0m bun_watcher v0.0.0 (/bun/src/watcher)
+#16 84.13 [1m[92m   Compiling[0m bun_glob v0.0.0 (/bun/src/glob)
+#16 84.26 [1m[92m   Compiling[0m bun_md v0.0.0 (/bun/src/md)
+#16 84.73 [1m[92m   Compiling[0m bun_install_types v0.0.0 (/bun/src/install_types)
+#16 85.30 [1m[92m   Compiling[0m bun_zlib v0.0.0 (/bun/src/zlib)
+#16 85.61 [1m[92m   Compiling[0m bun_options_types v0.0.0 (/bun/src/options_types)
+#16 86.47 [1m[92m   Compiling[0m bun_crash_handler v0.0.0 (/bun/src/crash_handler)
+#16 86.70 [1m[92m   Compiling[0m bun_react_compiler v0.0.0 (/bun/src/react_compiler)
+#16 86.71 [1m[92m   Compiling[0m bun_event_loop v0.0.0 (/bun/src/event_loop)
+#16 86.90 [1m[92m   Compiling[0m bun_resolve_builtins v0.0.0 (/bun/src/resolve_builtins)
+#16 87.55 [1m[92m   Compiling[0m bun_sourcemap v0.0.0 (/bun/src/sourcemap)
+#16 88.14 [1m[92m   Compiling[0m bun_css v0.0.0 (/bun/src/css)
+#16 88.31 [1m[92m   Compiling[0m bun_dns v0.0.0 (/bun/src/dns)
+#16 88.53 [1m[92m   Compiling[0m bun_js_printer v0.0.0 (/bun/src/js_printer)
+#16 88.64 [1m[92m   Compiling[0m bun_http v0.0.0 (/bun/src/http)
+#16 88.68 [1m[92m   Compiling[0m bun_api v0.0.0 (/bun/src/api)
+#16 88.83 [1m[92m   Compiling[0m bun_exe_format v0.0.0 (/bun/src/exe_format)
+#16 89.43 [1m[92m   Compiling[0m bun_spawn v0.0.0 (/bun/src/spawn)
+#16 90.00 [1m[92m   Compiling[0m bun_clap v0.0.0 (/bun/src/clap)
+#16 90.20 [1m[92m   Compiling[0m bun_patch v0.0.0 (/bun/src/patch)
+#16 90.42 [1m[92m   Compiling[0m bun_s3_signing v0.0.0 (/bun/src/s3_signing)
+#16 90.43 [1m[92m   Compiling[0m bun_sql v0.0.0 (/bun/src/sql)
+#16 90.62 [1m[92m   Compiling[0m bun_csrf v0.0.0 (/bun/src/csrf)
+#16 90.72 [1m[92m   Compiling[0m bun_shell_parser v0.0.0 (/bun/src/shell_parser)
+#16 91.02 [1m[92m   Compiling[0m bun_tcc_sys v0.0.0 (/bun/src/tcc_sys)
+#16 91.30 [1m[92m   Compiling[0m bun_valkey v0.0.0 (/bun/src/valkey)
+#16 91.59 [1m[92m   Compiling[0m bun_lsquic_sys v0.0.0 (/bun/src/lsquic_sys)
+#16 91.88 [1m[92m   Compiling[0m bun_platform v0.0.0 (/bun/src/platform)
+#16 93.93 [1m[92m   Compiling[0m bun_js_parser v0.0.0 (/bun/src/js_parser)
+#16 95.87 [1m[92m   Compiling[0m bun_resolver v0.0.0 (/bun/src/resolver)
+#16 95.87 [1m[92m   Compiling[0m bun_ini v0.0.0 (/bun/src/ini)
+#16 97.00 [1m[92m   Compiling[0m bun_bundler v0.0.0 (/bun/src/bundler)
+#16 97.05 [1m[92m   Compiling[0m bun_router v0.0.0 (/bun/src/router)
+#16 99.16 [1m[92m   Compiling[0m bun_standalone_graph v0.0.0 (/bun/src/standalone_graph)
+#16 99.16 [1m[92m   Compiling[0m bun_transpiler v0.0.0 (/bun/src/transpiler)
+#16 99.56 [1m[92m   Compiling[0m bun_bunfig v0.0.0 (/bun/src/bunfig)
+#16 103.2 [1m[92m   Compiling[0m bun_js_parser_jsc v0.0.0 (/bun/src/js_parser_jsc)
+#16 103.2 [1m[92m   Compiling[0m bun_ast_jsc v0.0.0 (/bun/src/ast_jsc)
+#16 103.2 [1m[92m   Compiling[0m bun_sql_jsc v0.0.0 (/bun/src/sql_jsc)
+#16 103.2 [1m[92m   Compiling[0m bun_sourcemap_jsc v0.0.0 (/bun/src/sourcemap_jsc)
+#16 103.2 [1m[92m   Compiling[0m bun_sys_jsc v0.0.0 (/bun/src/sys_jsc)
+#16 103.4 [1m[92m   Compiling[0m bun_patch_jsc v0.0.0 (/bun/src/patch_jsc)
+#16 103.4 [1m[92m   Compiling[0m bun_css_jsc v0.0.0 (/bun/src/css_jsc)
+#16 103.5 [1m[92m   Compiling[0m bun_http_jsc v0.0.0 (/bun/src/http_jsc)
+#16 103.8 [1m[92m   Compiling[0m bun_install_jsc v0.0.0 (/bun/src/install_jsc)
+#16 103.8 [1m[92m   Compiling[0m bun_semver_jsc v0.0.0 (/bun/src/semver_jsc)
+#16 104.1 [1m[92m   Compiling[0m bun_bundler_jsc v0.0.0 (/bun/src/bundler_jsc)
+#16 148.7 [1m[92m   Compiling[0m bun_bin v0.0.0 (/bun/src/bun_bin)
+#16 163.9 [1m[92m    Finished[0m `dev` profile [unoptimized + debuginfo] target(s) in 1m 42s
+#16 164.1 [583/1258] fetch boringssl
+#16 164.1 [boringssl] fetching oven-sh/boringssl@2288897e
+#16 164.1 [boringssl] done → /bun/vendor/boringssl
+#16 164.1 [748/1258] fetch WebKit (prebuilt)
+#16 164.1 [WebKit] fetching https://github.com/oven-sh/WebKit/releases/download/autobuild-0f966e81b78c84bb23213e391bc679c4ef83e56b/bun-webkit-linux-arm64-debug.tar.gz
+#16 164.1 [WebKit] extracted to /root/.bun/build-cache/webkit-0f966e81b78c84bb-arm64-debug
+#16 164.1 [1192/1258] cxx obj/src/jsc/bindings/webcore/streams/JSCrossRealmTransformState.cpp.o
+#16 164.1 [1194/1258] cxx obj/src/jsc/bindings/webcore/streams/JSCompressionStream.cpp.o
+#16 164.2 [1195/1258] cxx obj/src/jsc/bindings/webcore/streams/BunStreamSource.cpp.o
+#16 164.2 [1196/1258] cxx obj/src/jsc/bindings/webcore/streams/JSCompressionStreamShared.cpp.o
+#16 164.6 [1197/1258] cxx obj/src/jsc/bindings/webcore/streams/JSCountQueuingStrategy.cpp.o
+#16 164.6 [1198/1258] cxx obj/src/jsc/bindings/webcore/streams/JSDecompressionStream.cpp.o
+#16 165.4 [1199/1258] cxx obj/src/jsc/bindings/webcore/streams/JSPullIntoDescriptor.cpp.o
+#16 166.7 [1200/1258] cxx obj/src/jsc/bindings/webcore/SerializedScriptValue.cpp.o
+#16 166.8 [1201/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamBYOBRequest.cpp.o
+#16 166.8 [1202/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamReaderBase.cpp.o
+#16 167.1 [1203/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamBYOBReader.cpp.o
+#16 167.2 [1204/1258] cxx obj/src/jsc/bindings/webcore/streams/JSDirectStreamController.cpp.o
+#16 167.3 [1205/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadableByteStreamController.cpp.o
+#16 167.4 [1206/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamDefaultController.cpp.o
+#16 167.5 [1207/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStream.cpp.o
+#16 168.0 [1208/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamAsyncIterator.cpp.o
+#16 168.6 [1209/1258] cxx obj/src/jsc/bindings/webcore/streams/JSStreamAlgorithmContexts.cpp.o
+#16 168.8 [1210/1258] cxx obj/src/jsc/bindings/webcore/streams/JSStreamsRuntime.cpp.o
+#16 169.0 [1211/1258] cxx obj/src/jsc/bindings/webcore/streams/JSStreamTeeState.cpp.o
+#16 169.3 [1212/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamDefaultReader.cpp.o
+#16 169.5 [1213/1258] cxx obj/src/jsc/bindings/webcore/streams/JSStreamPipeToOperation.cpp.o
+#16 169.9 [1214/1258] cxx obj/src/jsc/bindings/webcore/streams/JSTextEncoderStream.cpp.o
+#16 170.1 [1215/1258] cxx obj/src/jsc/bindings/webcore/streams/JSTransformStream.cpp.o
+#16 170.2 [1216/1258] cxx obj/src/jsc/bindings/webcore/streams/JSTextDecoderStream.cpp.o
+#16 170.4 [1217/1258] cxx obj/src/jsc/bindings/webcore/streams/JSReadRequest.cpp.o
+#16 170.5 [1218/1258] cxx obj/src/jsc/bindings/webcore/streams/JSTransformStreamDefaultController.cpp.o
+#16 171.3 [1219/1258] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStream.cpp.o
+#16 171.4 [1220/1258] cxx obj/src/jsc/bindings/webcore/streams/TransformStreamOperations.cpp.o
+#16 171.5 [1221/1258] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStreamDefaultWriter.cpp.o
+#16 171.9 [1222/1258] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStreamDefaultController.cpp.o
+#16 172.4 [1223/1258] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsInspectCustom.cpp.o
+#16 172.7 [1224/1258] cxx obj/src/jsc/bindings/webcore/streams/WritableStreamOperations.cpp.o
+#16 172.8 [1225/1258] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsMisc.cpp.o
+#16 172.8 [1226/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CBC.cpp.o
+#16 173.0 [1227/1258] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsExports.cpp.o
+#16 173.3 [1228/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CBCOpenSSL.cpp.o
+#16 173.5 [1229/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CFBOpenSSL.cpp.o
+#16 173.7 [1230/1258] cxx obj/src/jsc/bindings/webcore/streams/ReadableStreamOperations.cpp.o
+#16 173.8 [1231/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CFB.cpp.o
+#16 174.2 [1232/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CTR.cpp.o
+#16 174.4 [1233/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CTROpenSSL.cpp.o
+#16 174.8 [1234/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_KW.cpp.o
+#16 174.9 [1235/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_GCMOpenSSL.cpp.o
+#16 175.1 [1236/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_GCM.cpp.o
+#16 175.5 [1237/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmHMAC.cpp.o
+#16 175.6 [1238/1258] cxx obj/src/jsc/bindings/workaround-missing-symbols.cpp.o
+#16 175.6 [1239/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmECDSA.cpp.o
+#16 176.2 [1240/1258] cxx obj/src/io/io_darwin.cpp.o
+#16 176.2 [1241/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSA_OAEP.cpp.o
+#16 176.4 [1242/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSA_PSS.cpp.o
+#16 176.4 [1243/1258] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSASSA_PKCS1_v1_5.cpp.o
+#16 176.6 [1244/1258] cxx obj/src/simdutf_sys/bun-simdutf.cpp.o
+#16 177.7 [1245/1258] cxx obj/codegen/WebCoreJSBuiltins.cpp.o
+#16 178.1 [1246/1258] cxx obj/codegen/GeneratedSocketConfigBinaryType.cpp.o
+#16 178.3 [1247/1258] cxx obj/codegen/GeneratedBindings.cpp.o
+#16 179.6 [1248/1258] cxx obj/codegen/JSSink.cpp.o
+#16 179.7 [1249/1258] cxx obj/src/jsc/bindings/xxhash3.cpp.o
+#16 180.0 [1250/1258] cxx obj/codegen/GeneratedSocketConfigHandlers.cpp.o
+#16 181.6 [1251/1258] cxx obj/codegen/GeneratedFakeTimersConfig.cpp.o
+#16 181.6 [1252/1258] cxx obj/codegen/GeneratedSocketConfig.cpp.o
+#16 182.5 [1253/1258] cxx obj/src/jsc/bindings/webcrypto/SubtleCrypto.cpp.o
+#16 182.7 [1254/1258] cxx obj/codegen/GeneratedSSLConfig.cpp.o
+#16 185.3 [1255/1258] cxx obj/src/jsc/bindings/ZigGlobalObject.cpp.o
+#16 187.1 [1256/1258] cxx obj/codegen/ZigGeneratedClasses.cpp.o
+#16 187.1 [1256/1258] link bun-debug
+#16 201.5 [1257/1258] bun-debug --revision
+#16 201.5 1.4.0-debug+34cbb9a40
+#16 201.5 [build] done
+#16 DONE 201.7s
+
+#17 [12/12] RUN /bun/build/debug/bun-debug --help
+#17 1.774 Bun is a fast JavaScript runtime, package manager, bundler, and test runner. (1.4.0-debug+34cbb9a40)
+#17 1.774 
+#17 1.774 Usage: bun <command> [...flags] [...args]
+#17 1.774 
+#17 1.774 Commands:
+#17 1.774   run       ./my-script.ts       Execute a file with Bun
+#17 1.774             lint                 Run a package.json script
+#17 1.774   test                           Run unit tests with Bun
+#17 1.774   x         prisma               Execute a package binary (CLI), installing if needed (bunx)
+#17 1.774   repl                           Start a REPL session with Bun
+#17 1.774   exec                           Run a shell script directly with Bun
+#17 1.774 
+#17 1.774   install                        Install dependencies for a package.json (bun i)
+#17 1.774   add       lyra                 Add a dependency to package.json (bun a)
+#17 1.774   remove    webpack              Remove a dependency from package.json (bun rm)
+#17 1.774   update    @remix-run/dev       Update outdated dependencies
+#17 1.774   audit                          Check installed packages for vulnerabilities
+#17 1.774   dedupe                         Remove duplicate versions from the lockfile
+#17 1.774   prune                          Remove packages that are not in the lockfile from node_modules
+#17 1.774   outdated                       Display latest versions of outdated dependencies
+#17 1.774   link      [<package>]          Register or link a local npm package
+#17 1.774   unlink                         Unregister a local npm package
+#17 1.774   publish                        Publish a package to the npm registry
+#17 1.774   patch <pkg>                    Prepare a package for patching
+#17 1.774   pm <subcommand>                Additional package management utilities
+#17 1.774   info      @evan/duckdb         Display package metadata from the registry
+#17 1.774   why       @zarfjs/zarf         Explain why a package is installed
+#17 1.774 
+#17 1.774   build     ./a.ts ./b.jsx       Bundle TypeScript & JavaScript into a single file
+#17 1.774 
+#17 1.774   init                           Start an empty Bun project from a built-in template
+#17 1.774   create    elysia               Create a new project from a template (bun c)
+#17 1.774   upgrade                        Upgrade to latest version of Bun.
+#17 1.774 
+#17 1.774   <command> --help               Print help text for command.
+#17 1.774 
+#17 1.774 Flags:
+#17 1.774       --silent                        Don't print the script command
+#17 1.774       --elide-lines=<val>             Number of lines of script output shown when using --filter (default: 10). Set to 0 to show all lines.
+#17 1.774   -v, --version                       Print version and exit
+#17 1.774       --revision                      Print version with revision and exit
+#17 1.774   -F, --filter=<val>                  Run a script in all workspace packages matching the pattern
+#17 1.774   -b, --bun                           Force a script or package to use Bun's runtime instead of Node.js (via symlinking node)
+#17 1.774       --no-orphans                    Exit when the parent process dies, and on exit kill every descendant.
+#17 1.774       --shell=<val>                   Control the shell used for package.json scripts. Supports either 'bun' or 'system'
+#17 1.774       --workspaces                    Run a script in all workspace packages (from the "workspaces" field in package.json)
+#17 1.774       --parallel                      Run multiple scripts concurrently with Foreman-style output
+#17 1.774       --sequential                    Run multiple scripts sequentially with Foreman-style output
+#17 1.774       --no-exit-on-error              Continue running other scripts when one fails (with --parallel/--sequential)
+#17 1.774       --watch                         Automatically restart the process on file change
+#17 1.774       --watch-kill-signal=<val>       Signal whose handlers run when --watch restarts the process (default: "SIGTERM")
+#17 1.774       --hot                           Enable auto reload in the Bun runtime, test runner, or bundler
+#17 1.774       --no-clear-screen               Disable clearing the terminal screen on reload when --hot or --watch is enabled
+#17 1.774       --smol                          Use less memory, but run garbage collection more often
+#17 1.774       --interactive                   Start a Node.js-compatible REPL, like node --interactive
+#17 1.774   -r, --preload=<val>                 Import a module before other modules are loaded
+#17 1.774       --require=<val>                 Alias of --preload, for Node.js compatibility
+#17 1.774       --import=<val>                  Alias of --preload, for Node.js compatibility
+#17 1.774       --inspect=<val>                 Activate Bun's debugger
+#17 1.774       --inspect-wait=<val>            Activate Bun's debugger, wait for a connection before executing
+#17 1.774       --inspect-brk=<val>             Activate Bun's debugger, set breakpoint on first line of code and wait
+#17 1.774       --cpu-prof                      Start CPU profiler and write profile to disk on exit
+#17 1.774       --cpu-prof-name=<val>           Specify the name of the CPU profile file
+#17 1.774       --cpu-prof-dir=<val>            Specify the directory where the CPU profile will be saved
+#17 1.774       --cpu-prof-md                   Output CPU profile in markdown format (grep-friendly, designed for LLM analysis)
+#17 1.774       --cpu-prof-interval=<val>       Specify the sampling interval in microseconds for CPU profiling (default: 1000)
+#17 1.774       --heap-prof                     Write a heap profile to disk on exit (.heapprofile)
+#17 1.774       --heap-prof-name=<val>          Specify the name of the heap profile file
+#17 1.774       --heap-prof-dir=<val>           Specify the directory where the heap profile will be saved
+#17 1.774       --heap-prof-md                  Generate markdown heap profile on exit (for CLI analysis)
+#17 1.774       --heap-prof-interval=<val>      Specify the average sampling interval in bytes for heap profiling (default: 524288)
+#17 1.774       --if-present                    Exit without an error if the entrypoint does not exist
+#17 1.774       --no-install                    Disable auto install in the Bun runtime
+#17 1.774       --install=<val>                 Configure auto-install behavior. One of "auto" (default, auto-installs when no node_modules), "fallback" (missing packages only), "force" (always).
+#17 1.774   -i                                  Auto-install dependencies during execution. Equivalent to --install=fallback.
+#17 1.774   -e, --eval=<val>                    Evaluate argument as a script
+#17 1.774   -p, --print=<val>                   Evaluate argument as a script and print the result
+#17 1.774       --prefer-offline                Skip staleness checks for packages in the Bun runtime and resolve from disk
+#17 1.774       --prefer-latest                 Use the latest matching versions of packages in the Bun runtime, always checking npm
+#17 1.774       --port=<val>                    Set the default port for Bun.serve
+#17 1.774       --conditions=<val>              Pass custom conditions to resolve
+#17 1.774       --fetch-preconnect=<val>        Preconnect to a URL while code is loading
+#17 1.774       --experimental-http2-fetch      Offer h2 in fetch() TLS ALPN. Same as BUN_FEATURE_FLAG_EXPERIMENTAL_HTTP2_CLIENT=1
+#17 1.774       --experimental-http3-fetch      Honor Alt-Svc: h3 in fetch() and upgrade to HTTP/3. Same as BUN_FEATURE_FLAG_EXPERIMENTAL_HTTP3_CLIENT=1
+#17 1.774       --max-http-header-size=<val>    Set the maximum size of HTTP headers in bytes. Default is 16KiB
+#17 1.774       --insecure-http-parser          Use an insecure HTTP parser that accepts invalid HTTP headers
+#17 1.774       --dns-result-order=<val>        Set the default order of DNS lookup results. Valid orders: verbatim (default), ipv4first, ipv6first
+#17 1.774       --experimental-stream-iter      Enable the experimental stream/iter API (node:stream/iter, node:zlib/iter).
+#17 1.774       --expose-gc                     Expose gc() on the global object. Has no effect on Bun.gc().
+#17 1.774       --no-deprecation                Suppress all reporting of the custom deprecation.
+#17 1.774       --throw-deprecation             Determine whether or not deprecation warnings result in errors.
+#17 1.774       --no-warnings                   Silence all process warnings
+#17 1.774       --trace-warnings                Show stack traces on process warnings
+#17 1.774       --trace-deprecation             Show stack traces on deprecations
+#17 1.774       --pending-deprecation           Emit pending deprecation warnings
+#17 1.774       --redirect-warnings=<val>       Write process warnings to the given file instead of printing to stderr
+#17 1.774       --disable-warning=<val>         Silence specific process warnings by code or type
+#17 1.774       --title=<val>                   Set the process title
+#17 1.774       --zero-fill-buffers             Boolean to force Buffer.allocUnsafe(size) to be zero-filled.
+#17 1.774       --use-system-ca                 Use the system's trusted certificate authorities
+#17 1.774       --use-openssl-ca                Use OpenSSL's default CA store
+#17 1.774       --use-bundled-ca                Use bundled CA store
+#17 1.774       --tls-min-v1.0                  Set the default TLS minimum to TLSv1.0
+#17 1.774       --tls-min-v1.1                  Set the default TLS minimum to TLSv1.1
+#17 1.774       --tls-min-v1.2                  Set the default TLS minimum to TLSv1.2
+#17 1.774       --tls-min-v1.3                  Set the default TLS minimum to TLSv1.3
+#17 1.774       --tls-max-v1.2                  Set the default TLS maximum to TLSv1.2
+#17 1.774       --tls-max-v1.3                  Set the default TLS maximum to TLSv1.3
+#17 1.774       --redis-preconnect              Preconnect to $REDIS_URL at startup
+#17 1.774       --sql-preconnect                Preconnect to PostgreSQL at startup
+#17 1.774       --no-addons                     Throw an error if process.dlopen is called, and disable export condition "node-addons"
+#17 1.774       --unhandled-rejections=<val>    One of "strict", "throw", "warn", "none", or "warn-with-error-code"
+#17 1.774       --console-depth=<val>           Set the default depth for console.log object inspection (default: 2)
+#17 1.774       --user-agent=<val>              Set the default User-Agent header for HTTP requests
+#17 1.774       --cron-title=<val>              Title for cron execution mode
+#17 1.774       --cron-period=<val>             Cron period for cron execution mode
+#17 1.774       --main-fields=<val>             Main fields to lookup in package.json. Defaults to --target dependent
+#17 1.774       --preserve-symlinks             Preserve symlinks when resolving files
+#17 1.774       --preserve-symlinks-main        Preserve symlinks when resolving the main entry point
+#17 1.774       --extension-order=<val>         Defaults to: .tsx,.ts,.jsx,.js,.json
+#17 1.774       --tsconfig-override=<val>       Specify custom tsconfig.json. Default $cwd/tsconfig.json
+#17 1.774   -d, --define=<val>                  Substitute K:V while parsing, e.g. --define process.env.NODE_ENV:"development". Values are parsed as JSON.
+#17 1.774       --drop=<val>                    Remove function calls, e.g. --drop=console removes all console.* calls.
+#17 1.774       --feature=<val>                 Enable a feature flag for dead-code elimination, e.g. --feature=SUPER_SECRET
+#17 1.774   -l, --loader=<val>                  Parse files with .ext:loader, e.g. --loader .js:jsx. Valid loaders: js, jsx, ts, tsx, json, toml, text, file, wasm, napi
+#17 1.774       --no-macros                     Disable macros from being executed in the bundler, transpiler and runtime
+#17 1.774       --jsx-factory=<val>             Changes the function called when compiling JSX elements using the classic JSX runtime
+#17 1.774       --jsx-fragment=<val>            Changes the function called when compiling JSX fragments
+#17 1.774       --jsx-import-source=<val>       Declares the module specifier to be used for importing the jsx and jsxs factory functions. Default: "react"
+#17 1.774       --jsx-runtime=<val>             "automatic" (default) or "classic"
+#17 1.774       --jsx-side-effects              Treat JSX elements as having side effects (disable pure annotations)
+#17 1.774       --ignore-dce-annotations        Ignore tree-shaking annotations such as @__PURE__
+#17 1.774       --breakpoint-resolve=<val>      DEBUG MODE: breakpoint when resolving something that includes this string
+#17 1.774       --env-file=<val>                Load environment variables from the specified file(s)
+#17 1.774       --no-env-file                   Disable automatic loading of .env files
+#17 1.774       --cwd=<val>                     Absolute path to resolve files & entry points from. This just changes the process' cwd.
+#17 1.774   -c, --config=<val>                  Specify path to Bun config file. Default $cwd/bunfig.toml
+#17 1.774   -h, --help                          Display this menu and exit
+#17 1.774       --verbose-error-trace           Dump error return traces
+#17 1.774 
+#17 1.774 (more flags in bun install --help, bun test --help, and bun build --help)
+#17 1.774 
+#17 1.774 Learn more about Bun:            https://bun.com/docs
+#17 1.774 Join our Discord community:      https://bun.com/discord
+#17 DONE 1.9s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 435.8s done
+#18 exporting manifest sha256:75499f7c84039f15d7d1aa6775a8ae495f6b5922454b29be190c3597f225e3ad done
+#18 exporting config sha256:7971927b8df1a5660060b6e048d9426a97f2506b6dbc491fa66f0ae624666717 done
+#18 exporting attestation manifest sha256:b89c877e5f7c3328bc777d4197d8733415369116adf951df199efa4ced7db051 done
+#18 exporting manifest list sha256:d0a5bd20f2d5fc8bec2aebbf79f00c6dc6325feaf86077b1bdcfc71022bf4acf done
+#18 naming to docker.io/library/bun-bun:latest done
+#18 unpacking to docker.io/library/bun-bun:latest
+#18 unpacking to docker.io/library/bun-bun:latest 100.6s done
+#18 DONE 536.5s
+
+#19 resolving provenance for metadata file
+#19 DONE 0.0s

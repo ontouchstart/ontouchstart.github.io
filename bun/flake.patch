@@ -1,0 +1,50 @@
+diff --git a/flake.nix b/flake.nix
+index 38667c11..632d3e6e 100644
+--- a/flake.nix
++++ b/flake.nix
+@@ -47,8 +47,7 @@
+           llvm
+           lld
+           pkgs.gcc
+-          pkgs.rustc
+-          pkgs.cargo
++          pkgs.rustup
+           pkgs.go
+ 
+           # Bun itself (for running build scripts via `bun bd`)
+@@ -151,9 +150,34 @@
+             export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath packages}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+           '' + ''
+ 
++            # FIX 1: Provide a fully mutable, local Rustup stack inside the project directory
++            # This isolates Cargo files so it won't crash on Nix Store read-only errors
++            export RUSTUP_HOME="$PWD/.rustup"
++            export CARGO_HOME="$PWD/.cargo-home"
++            export PATH="$CARGO_HOME/bin:$PATH"
++
++            # Auto-install the requested toolchain and standard library code components
++            if ! rustup toolchain list | grep -q "nightly-2026-07-20"; then
++              echo "Setting up required mutable Rust toolchain..."
++              rustup toolchain install nightly-2026-07-20 --component rust-src
++            fi
++            export RUSTUP_TOOLCHAIN=nightly-2026-07-20
++            export RUSTC_BOOTSTRAP=1
++
++            # FIX 2: Bypass Clang's missing ZSTD debug compression capability
++            export RUSTFLAGS="-C link-arg=-gz=none"
++            export CFLAGS="-Wno-error=debug-compression-unavailable"
++            export CXXFLAGS="-Wno-error=debug-compression-unavailable"
++          '' + pkgs.lib.optionalString pkgs.stdenv.isLinux ''
++            export LD="${pkgs.lib.getExe' lld "ld.lld"}"
++            export NIX_CFLAGS_LINK="''${NIX_CFLAGS_LINK:+$NIX_CFLAGS_LINK }-fuse-ld=lld"
++            export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath packages}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
++          '' + ''
++            export NIX_CFLAGS_COMPILE="-Wno-error=debug-compression-unavailable -gz=none -DWTF_USE_ADDRESS_SANITIZER=0"
++
+             # Print welcome message
+             echo "====================================="
+-            echo "Bun Development Environment"
++            echo "Bun Development Environment" Fixed
+             echo "====================================="
+             echo "Node.js: $(node --version 2>/dev/null || echo 'not found')"
+             echo "Bun: $(bun --version 2>/dev/null || echo 'not found')"
