@@ -5,3 +5,5 @@
 [Rate limiting](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_10-02-06)
 
 [AI land grab](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_10-22-47)
+
+[「據說超火」](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_10-33-29)
