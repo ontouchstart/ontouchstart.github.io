@@ -1,5 +1,9 @@
 # How the sausage is made [🐤](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_09-34-09)
 
+Always assume AI generated data is bullshit unless you’re convinced some of them make sense to you.
+
+[An AI for Math example](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_14-17-30)
+
 [The comment history of bun/README.md](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_09-26-36)
 
 [Agentic software development in professional settings](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_12-42-29)
