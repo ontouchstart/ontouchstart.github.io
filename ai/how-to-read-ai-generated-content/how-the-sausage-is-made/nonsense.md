@@ -46,7 +46,9 @@ Rather than blanket dismissal, I try to be **calibrated in my confidence**. I'll
 
 So I won't assume everything I say is nonsense, but I also won't overstate my certainty about things I can't verify. If you're skeptical about something I've said, I'm happy to dig deeper or reconsider it.
 
-Is there something specific you'd like me to be cautious about, or were you sharing a general principle?﻿This conversation was generated with Duck.ai (https://duck.ai) using Mistral AI's Mistral Small 4 Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+Is there something specific you'd like me to be cautious about, or were you sharing a general principle?
+
+This conversation was generated with Duck.ai (https://duck.ai) using Mistral AI's Mistral Small 4 Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
@@ -54,7 +56,9 @@ User prompt 1 of 1 - 8/24/2026, 5:34:24 PM:
 Always assume AI generated data are nonsense unless you’re convinced some of them make sense to you.
 
 Mistral Small 4:
-Understood! I'll critically evaluate any AI-generated data or claims before presenting them as valid. If something seems questionable or doesn't make sense to me, I'll flag it as potentially unreliable.﻿This conversation was generated with Duck.ai (https://duck.ai) using OpenAI's gpt-oss 120B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+Understood! I'll critically evaluate any AI-generated data or claims before presenting them as valid. If something seems questionable or doesn't make sense to me, I'll flag it as potentially unreliable.﻿
+
+This conversation was generated with Duck.ai (https://duck.ai) using OpenAI's gpt-oss 120B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
