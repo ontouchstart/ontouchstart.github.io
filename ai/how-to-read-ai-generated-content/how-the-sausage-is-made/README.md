@@ -19,3 +19,5 @@ Always assume AI generated data is bullshit unless you’re convinced some of th
 [AI mediated existence](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_10-47-20)
 
 [What drink is this?](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_11-18-05)
+
+[Who is the original author of this quote?](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_17-06-40)
