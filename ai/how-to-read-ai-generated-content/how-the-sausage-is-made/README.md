@@ -4,6 +4,7 @@
 
 [Agentic software development in professional settings](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_12-42-29)
 
+[The reality vs media hype](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_12-58-03)
 
 [Rate limiting](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_10-02-06)
 
