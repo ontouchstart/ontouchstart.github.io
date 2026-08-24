@@ -1,6 +1,6 @@
 # How the sausage is made [🐤](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_09-34-09)
 
-Always assume AI generated data are nonsense unless you’re convinced some of them make sense to you.
+[Always assume AI generated data are nonsense unless you’re convinced some of them make sense to you.](nonsense)
 
 [An AI for Math example](https://ontouchstart.github.io/duck.ai/2026/08/24/duck.ai_2026-08-24_14-17-30)
 
