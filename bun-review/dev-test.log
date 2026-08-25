@@ -1,0 +1,5689 @@
+git clone https://github.com/oven-sh/bun.git && cd bun && git apply ../flake.patch && nix flake update
+cd bun && nix develop --command bash -c "RUSTC_BOOTSTRAP=1 BUN_DEBUG_QUIET_LOGS=1 bun scripts/build.ts --profile=debug --asan=off"
+Setting up required mutable Rust toolchain...
+
+  nightly-2026-07-20-aarch64-unknown-linux-gnu installed - rustc 1.99.0-nightly (9f36de775 2026-07-19)
+
+=====================================
+Bun Development Environment Fixed
+=====================================
+Node.js: v26.7.0
+Bun: 1.3.13
+Clang: clang version 21.1.8
+CMake: cmake version 4.3.4
+LLVM: 21.1.8
+
+Quick start:
+  bun bd                    # Build debug binary
+  bun bd test <test-file>   # Run tests
+=====================================
+ninja: Entering directory `/bun/build/debug'
+[1/1267] mkdir stamps
+[2/1267] mkdir codegen
+[3/1267] mkdir obj
+[4/1267] mkdir pch
+[5/1267] gen ErrorCode+*.h
+[6/1267] gen .bind.ts → GeneratedBindings.cpp
+[7/1267] gen bindgenv2
+[8/1267] gen bake.{client,server,error}.js
+-> bake.client.js, bake.server.js, bake.error.js
+[9/1267] gen JSBuffer.lut.h
+Generating /bun/build/debug/codegen/JSBuffer.lut.h from /bun/src/jsc/bindings/JSBuffer.cpp
+[10/1267] gen ZigGeneratedClasses.{cpp,h,rs}
+Found 2 classes from /bun/src/jsc/resolve_message.classes.ts
+  - ResolveMessage (15 fields)
+  - BuildMessage (10 fields)
+Found 1 classes from /bun/src/runtime/api/Archive.classes.ts
+  - Archive (4 fields, 1 class fields)
+Found 2 classes from /bun/src/runtime/api/BunObject.classes.ts
+  - ResourceUsage (8 fields)
+  - Subprocess (20 fields)
+Found 1 classes from /bun/src/runtime/api/cron.classes.ts
+  - CronJob (5 fields)
+Found 3 classes from /bun/src/runtime/api/filesystem_router.classes.ts
+  - FileSystemRouter (5 fields)
+  - FrameworkFileSystemRouter (2 fields)
+  - MatchedRoute (8 fields)
+Found 1 classes from /bun/src/runtime/api/Glob.classes.ts
+  - Glob (5 fields)
+Found 1 classes from /bun/src/runtime/api/h2.classes.ts
+  - H2FrameParser (32 fields)
+Found 9 classes from /bun/src/runtime/api/html_rewriter.classes.ts
+  - HTMLRewriter (3 fields)
+  - TextChunk (7 fields)
+  - DocType (5 fields)
+  - DocEnd (1 fields)
+  - Comment (6 fields)
+  - EndTag (4 fields)
+  - AttributeIterator (2 fields)
+  - Element (19 fields)
+  - HTMLRewriterTransform
+Found 2 classes from /bun/src/runtime/api/JSBundler.classes.ts
+  - Transpiler (4 fields)
+  - BuildArtifact (12 fields)
+Found 1 classes from /bun/src/runtime/api/ParsedShellScript.classes.ts
+  - ParsedShellScript (3 fields)
+Found 1 classes from /bun/src/runtime/api/S3Client.classes.ts
+  - S3Client (9 fields, 9 class fields)
+Found 1 classes from /bun/src/runtime/api/S3Stat.classes.ts
+  - S3Stat (4 fields)
+Found 1 classes from /bun/src/runtime/api/SecureContext.classes.ts
+  - SecureContext (2 fields, 3 class fields)
+Found 1 classes from /bun/src/runtime/api/Shell.classes.ts
+  - ShellInterpreter (3 fields)
+Found 1 classes from /bun/src/runtime/api/sourcemap.classes.ts
+  - SourceMap (4 fields)
+Found 4 classes from /bun/src/runtime/api/sql.classes.ts
+  - PostgresSQLConnection (9 fields)
+  - PostgresSQLQuery (5 fields)
+  - MySQLConnection (8 fields)
+  - MySQLQuery (5 fields)
+Found 3 classes from /bun/src/runtime/api/streams.classes.ts
+  - BlobInternalReadableStreamSource (13 fields)
+  - FileInternalReadableStreamSource (10 fields)
+  - BytesInternalReadableStreamSource (13 fields)
+Found 1 classes from /bun/src/runtime/api/Terminal.classes.ts
+  - Terminal (12 fields)
+Found 3 classes from /bun/src/runtime/api/zlib.classes.ts
+  - NativeZlib (7 fields)
+  - NativeBrotli (7 fields)
+  - NativeZstd (7 fields)
+Found 10 classes from /bun/src/runtime/crypto/crypto.classes.ts
+  - Crypto (3 fields)
+  - SHA1 (3 fields, 2 class fields)
+  - MD5 (3 fields, 2 class fields)
+  - MD4 (3 fields, 2 class fields)
+  - SHA224 (3 fields, 2 class fields)
+  - SHA512 (3 fields, 2 class fields)
+  - SHA384 (3 fields, 2 class fields)
+  - SHA256 (3 fields, 2 class fields)
+  - SHA512_256 (3 fields, 2 class fields)
+  - CryptoHasher (5 fields, 2 class fields)
+Found 1 classes from /bun/src/runtime/ffi/ffi.classes.ts
+  - FFI (2 fields)
+Found 1 classes from /bun/src/runtime/image/Image.classes.ts
+  - Image (21 fields, 4 class fields)
+Found 6 classes from /bun/src/runtime/node/node.classes.ts
+  - DNSResolver (16 fields)
+  - FSWatcher (3 fields)
+  - StatWatcher (3 fields)
+  - Timeout (12 fields)
+  - Immediate (6 fields)
+  - NodeJSFS (88 fields)
+Found 3 classes from /bun/src/runtime/node/quic/quic.classes.ts
+  - QuicEndpoint (7 fields)
+  - QuicSession (13 fields)
+  - QuicStream (14 fields)
+Found 7 classes from /bun/src/runtime/server/server.classes.ts
+  - HTTPServer (21 fields)
+  - DebugHTTPServer (21 fields)
+  - HTTPSServer (21 fields)
+  - DebugHTTPSServer (21 fields)
+  - NodeHTTPResponse (30 fields)
+  - ServerWebSocket (20 fields)
+  - HTMLBundle (1 fields)
+Found 6 classes from /bun/src/runtime/socket/sockets.classes.ts
+  - TLSSocket (57 fields)
+  - TCPSocket (55 fields)
+  - Listener (11 fields)
+  - UDPSocket (23 fields)
+  - SocketAddress (6 fields, 2 class fields)
+  - BlockList (5 fields, 1 class fields)
+Found 15 classes from /bun/src/runtime/test_runner/jest.classes.ts
+  - ExpectAnything
+  - ExpectAny
+  - ExpectCloseTo
+  - ExpectObjectContaining
+  - ExpectStringContaining
+  - ExpectStringMatching
+  - ExpectArrayContaining
+  - ExpectCustomAsymmetricMatcher (1 fields)
+  - ExpectMatcherContext (5 fields)
+  - ExpectMatcherUtils (6 fields)
+  - ExpectStatic (10 fields)
+  - Expect (89 fields, 15 class fields)
+  - ExpectTypeOf (38 fields)
+  - DoneCallback
+  - ScopeFunctions (13 fields)
+Found 1 classes from /bun/src/runtime/valkey_jsc/valkey.classes.ts
+  - RedisClient (212 fields)
+Found 1 classes from /bun/src/runtime/webcore/encoding.classes.ts
+  - TextDecoder (4 fields)
+Found 3 classes from /bun/src/runtime/webcore/response.classes.ts
+  - Request (22 fields)
+  - Response (17 fields, 3 class fields)
+  - Blob (18 fields)
+generated_classes.rs: 93 classes (79 resolved), 1527 exported symbols
+[11/1267] gen ProcessBindingBuffer.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingBuffer.lut.h from /bun/src/jsc/bindings/ProcessBindingBuffer.cpp
+[12/1267] fetch picohttpparser
+[picohttpparser] fetching h2o/picohttpparser@066d2b1e
+[picohttpparser] done → /bun/vendor/picohttpparser
+[13/1267] gen ZigGlobalObject.lut.h
+Generating /bun/build/debug/codegen/ZigGlobalObject.lut.h from /bun/src/jsc/bindings/ZigGlobalObject.lut.txt
+[14/1267] gen BunObject.lut.h
+Generating /bun/build/debug/codegen/BunObject.lut.h from /bun/src/jsc/bindings/BunObject.cpp
+[15/1267] gen ProcessBindingHTTPParser.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingHTTPParser.lut.h from /bun/src/jsc/bindings/ProcessBindingHTTPParser.cpp
+[16/1267] fetch zlib
+[zlib] fetching zlib-ng/zlib-ng@12731092
+[zlib] applying clang-cl-arm64.patch
+[zlib] done → /bun/vendor/zlib
+[17/1267] gen BunProcess.lut.h
+Generating /bun/build/debug/codegen/BunProcess.lut.h from /bun/src/jsc/bindings/BunProcess.cpp
+[18/1267] fetch tinycc
+[tinycc] fetching oven-sh/tinycc@05f0fafa
+[tinycc] applying tcc.h.patch
+[tinycc] done → /bun/vendor/tinycc
+[19/1267] gen ProcessBindingConstants.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingConstants.lut.h from /bun/src/jsc/bindings/ProcessBindingConstants.cpp
+[20/1267] subst deps/zlib/zconf.h
+[21/1267] subst deps/zlib/zlib.h
+[22/1267] fetch libjpeg-turbo
+[libjpeg-turbo] fetching libjpeg-turbo/libjpeg-turbo@e352b02f
+[libjpeg-turbo] applying 8bit-only.patch
+[libjpeg-turbo] overlay jbun_stubs.c
+[libjpeg-turbo] done → /bun/vendor/libjpeg-turbo
+[23/1267] gen JSEvent.lut.h
+Generating /bun/build/debug/codegen/JSEvent.lut.h from /bun/src/jsc/bindings/webcore/JSEvent.cpp
+[24/1267] install /bun
+bun install v1.3.13 (bf2e2cec)
+
++ @lezer/common@1.3.0
++ @lezer/cpp@1.1.3
++ esbuild@0.21.5
++ mitata@0.1.14
++ oxlint@1.70.0
++ prettier@3.6.2
++ prettier-plugin-organize-imports@4.3.0
++ react@18.3.1
++ react-dom@18.3.1
++ source-map-js@1.2.1
++ typescript@6.0.2
+
+42 packages installed [1020.00ms]
+[25/1267] subst deps/libjpeg-turbo/jconfig.h
+[26/1267] gen NodeModuleModule.lut.h
+Generating /bun/build/debug/codegen/NodeModuleModule.lut.h from /bun/src/jsc/modules/NodeModuleModule.cpp
+[27/1267] gen ProcessBindingFs.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingFs.lut.h from /bun/src/jsc/bindings/ProcessBindingFs.cpp
+[28/1267] subst deps/libjpeg-turbo/jconfigint.h
+[29/1267] gen JSSink.{cpp,h,lut.h,rs}
+generated_jssink.rs: 8 sinks, 96 exported symbols
+Generating /bun/build/debug/codegen/JSSink.lut.h from /bun/build/debug/codegen/JSSink.lut.txt
+[30/1267] esbuild runtime.out.js
+
+  build/debug/codegen/runtime.out.js  5.3kb
+
+⚡ Done in 3ms
+[31/1267] install /bun/packages/bun-error
+bun install v1.3.13 (bf2e2cec)
+
++ preact@10.27.2
+
+1 package installed [168.00ms]
+[32/1267] host-cc deps/tinycc/codegen-tool
+[33/1267] subst deps/libjpeg-turbo/jversion.h
+[34/1267] gen string-map defines_table
+[35/1267] subst deps/libjpeg-turbo/neon-compat.h
+[36/1267] gen compressed/completions/bun.bash.zst
+[37/1267] esbuild bun-error
+
+  ../../build/debug/codegen/bun-error/index.js       34.9kb
+  ../../build/debug/codegen/bun-error/bun-error.css  12.8kb
+
+⚡ Done in 20ms
+[38/1267] gen compressed/completions/bun.zsh.zst
+[39/1267] gen compressed/completions/bun.fish.zst
+[40/1267] gen compressed/src/runtime/bake/bun-framework-react/client.tsx.zst
+[41/1267] gen compressed/codegen/bake.client.js.zst
+[42/1267] gen compressed/codegen/bake.error.js.zst
+[43/1267] gen compressed/codegen/bun-error/bun-error.css.zst
+[44/1267] gen compressed/codegen/bun-error/index.js.zst
+[45/1267] codegen tinycc
+[46/1267] fetch libdeflate
+[libdeflate] fetching ebiggers/libdeflate@c8c56a20
+[libdeflate] done → /bun/vendor/libdeflate
+[47/1267] cc obj/vendor/zlib/adler32.c.o
+[48/1267] cc obj/vendor/zlib/compress.c.o
+[49/1267] fetch brotli
+[brotli] fetching google/brotli@v1.1.0
+[brotli] done → /bun/vendor/brotli
+[50/1267] cc obj/vendor/zlib/crc32.c.o
+[51/1267] install /bun/src/node-fallbacks
+bun install v1.3.13 (bf2e2cec)
+
++ assert@2.1.0
++ browserify-zlib@0.2.0
++ crypto-browserify@3.12.1
++ domain-browser@4.23.0
++ https-browserify@1.0.0
++ punycode@2.3.1
++ querystring-es3@1.0.0-0
++ react-refresh@0.17.0
++ readable-stream@4.7.0
++ stream-http@3.2.0
++ string_decoder@1.3.0
+
+103 packages installed [526.00ms]
+[52/1267] gen node-fallbacks/react-refresh.js
+Bundled 1 module in 11ms
+
+  react-refresh.js  4.81 KB  (entry point)
+
+[53/1267] gen ProcessBindingNatives.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingNatives.lut.h from /bun/src/jsc/bindings/ProcessBindingNatives.cpp
+[54/1267] cc obj/vendor/zlib/crc32_braid_comb.c.o
+[55/1267] cc obj/vendor/zlib/deflate.c.o
+[56/1267] gen compressed/codegen/node-fallbacks/react-refresh.js.zst
+[57/1267] fetch zstd
+[zstd] fetching facebook/zstd@f8745da6
+[zstd] done → /bun/vendor/zstd
+[58/1267] cc obj/vendor/zlib/deflate_huff.c.o
+[59/1267] cc obj/vendor/zlib/deflate_medium.c.o
+[60/1267] gen cpp.rs (cppbind)
+[61/1267] cc obj/vendor/zlib/deflate_quick.c.o
+[62/1267] cc obj/vendor/zlib/deflate_fast.c.o
+[63/1267] cc obj/vendor/zlib/deflate_slow.c.o
+[64/1267] cc obj/vendor/zlib/deflate_rle.c.o
+[65/1267] cc obj/vendor/zlib/functable.c.o
+[66/1267] gen node-fallbacks/*.js
+[67/1267] cc obj/vendor/zlib/deflate_stored.c.o
+[68/1267] cc obj/vendor/zlib/infback.c.o
+[69/1267] fetch libspng
+[libspng] fetching randy408/libspng@fb768002
+[libspng] done → /bun/vendor/libspng
+[70/1267] fetch nodejs (prebuilt)
+[nodejs] fetching https://nodejs.org/dist/v26.3.0/node-v26.3.0-headers.tar.gz
+[nodejs] extracted to /root/.bun/build-cache/nodejs-headers-26.3.0
+[71/1267] gen generated_host_exports.rs
+generated_host_exports.rs: 116 exports (host=5, lazy=10, generic=101, rust=0); 242 extern-C blocks audited
+[72/1267] cc obj/vendor/zlib/inflate.c.o
+[73/1267] cc obj/vendor/zlib/insert_string_roll.c.o
+[74/1267] cc obj/vendor/zlib/uncompr.c.o
+[75/1267] cc obj/vendor/zlib/inftrees.c.o
+[76/1267] cc obj/vendor/zlib/insert_string.c.o
+[77/1267] cc obj/vendor/zlib/zutil.c.o
+[78/1267] cc obj/vendor/zlib/trees.c.o
+[79/1267] cc obj/vendor/zlib/cpu_features.c.o
+[80/1267] cc obj/vendor/zlib/gzlib.c.o
+[81/1267] cc obj/vendor/zlib/gzwrite.c.o
+[82/1267] cc obj/vendor/zlib/gzread.c.o
+[83/1267] cc obj/vendor/zlib/arch/generic/adler32_c.c.o
+[84/1267] cc obj/vendor/zlib/arch/generic/adler32_fold_c.c.o
+[85/1267] cc obj/vendor/zlib/arch/generic/crc32_chorba_c.c.o
+[86/1267] cc obj/vendor/zlib/arch/generic/chunkset_c.c.o
+[87/1267] cc obj/vendor/zlib/arch/generic/crc32_braid_c.c.o
+[88/1267] cc obj/vendor/zlib/arch/generic/compare256_c.c.o
+[89/1267] cc obj/vendor/zlib/arch/generic/slide_hash_c.c.o
+[90/1267] cc obj/vendor/zlib/arch/arm/arm_features.c.o
+[91/1267] fetch libwebp
+[libwebp] fetching webmproject/libwebp@b7e29b9d
+[libwebp] done → /bun/vendor/libwebp
+[92/1267] cc obj/vendor/zlib/arch/generic/crc32_fold_c.c.o
+[93/1267] cc obj/vendor/zstd/lib/common/debug.c.o
+[94/1267] fetch libarchive
+[libarchive] fetching libarchive/libarchive@ded82291
+[libarchive] applying archive_write_add_filter_gzip.c.patch
+[libarchive] applying select-registered-only.patch
+[libarchive] applying nonblocking-read.patch
+[libarchive] applying archive_string-codepage-cache.patch
+[libarchive] done → /bun/vendor/libarchive
+[95/1267] cc obj/vendor/zlib/arch/arm/crc32_armv8.c.o
+[96/1267] cc obj/vendor/zlib/arch/arm/chunkset_neon.c.o
+[97/1267] fetch hdrhistogram
+[hdrhistogram] fetching HdrHistogram/HdrHistogram_c@be60a998
+[hdrhistogram] applying bitscan-type.patch
+[hdrhistogram] done → /bun/vendor/hdrhistogram
+[98/1267] fetch cares
+[cares] fetching c-ares/c-ares@c7a3138d
+[cares] applying accept-rdata-compression.patch
+[cares] done → /bun/vendor/cares
+[99/1267] cc obj/vendor/zlib/arch/arm/slide_hash_neon.c.o
+[100/1267] cc obj/vendor/zlib/arch/arm/compare256_neon.c.o
+[101/1267] cc obj/vendor/zstd/lib/common/threading.c.o
+[102/1267] cc obj/vendor/zlib/arch/arm/adler32_neon.c.o
+[103/1267] cc obj/vendor/zstd/lib/common/error_private.c.o
+[104/1267] cc obj/vendor/zstd/lib/common/xxhash.c.o
+[105/1267] cc obj/vendor/zstd/lib/common/pool.c.o
+[106/1267] cc obj/vendor/zstd/lib/common/fse_decompress.c.o
+[107/1267] cc obj/vendor/zstd/lib/common/entropy_common.c.o
+[108/1267] cc obj/vendor/zstd/lib/common/zstd_common.c.o
+[109/1267] cc obj/vendor/zstd/lib/compress/hist.c.o
+[110/1267] cc obj/vendor/zstd/lib/compress/fse_compress.c.o
+[111/1267] fetch highway
+[highway] fetching google/highway@2607d3b5
+[highway] applying silence-warnings.patch
+[highway] done → /bun/vendor/highway
+[112/1267] fetch mimalloc
+[mimalloc] fetching oven-sh/mimalloc@942b8342
+[mimalloc] done → /bun/vendor/mimalloc
+[113/1267] cc obj/vendor/zstd/lib/compress/zstd_compress_literals.c.o
+[114/1267] fetch lsqpack
+[lsqpack] fetching litespeedtech/ls-qpack@1e9c5b8e
+[lsqpack] applying bss-huff-tables.patch
+[lsqpack] done → /bun/vendor/lsqpack
+[115/1267] cc obj/vendor/zstd/lib/compress/zstd_compress_sequences.c.o
+[116/1267] cc obj/vendor/zstd/lib/compress/huf_compress.c.o
+[117/1267] fetch lshpack
+[lshpack] fetching litespeedtech/ls-hpack@8905c024
+[lshpack] applying bss-huff-tables.patch
+[lshpack] done → /bun/vendor/lshpack
+[118/1267] cc obj/vendor/zstd/lib/compress/zstd_compress.c.o
+[119/1267] cc obj/vendor/zstd/lib/compress/zstd_compress_superblock.c.o
+[120/1267] cc obj/vendor/zstd/lib/compress/zstd_double_fast.c.o
+[121/1267] cc obj/vendor/zstd/lib/compress/zstd_fast.c.o
+[122/1267] cc obj/vendor/zstd/lib/compress/zstd_ldm.c.o
+[123/1267] cc obj/vendor/zstd/lib/compress/zstd_opt.c.o
+[124/1267] cc obj/vendor/zstd/lib/compress/zstd_preSplit.c.o
+[125/1267] cc obj/vendor/zstd/lib/decompress/zstd_ddict.c.o
+[126/1267] cc obj/vendor/zstd/lib/compress/zstdmt_compress.c.o
+[127/1267] fetch lsquic
+[lsquic] fetching litespeedtech/lsquic@31819113
+[lsquic] applying versions-to-string.patch
+[lsquic] applying allow-no-sni.patch
+[lsquic] applying skip-priority-walk.patch
+[lsquic] applying hash-nested-iter.patch
+[lsquic] applying abort-error-tickable.patch
+[lsquic] applying disable-gquic.patch
+[lsquic] applying requeue-unsent-coalesced.patch
+[lsquic] applying node-quic-accessors.patch
+[lsquic] applying coalesce-batch-drop.patch
+[lsquic] applying connection-close-pns.patch
+[lsquic] done → /bun/vendor/lsquic
+[128/1267] cc obj/vendor/zstd/lib/dictBuilder/divsufsort.c.o
+[129/1267] fetch lolhtml
+[lolhtml] fetching oven-sh/lol-html@725ce499
+[lolhtml] done → /bun/vendor/lolhtml
+[130/1267] cc obj/vendor/zstd/lib/decompress/huf_decompress.c.o
+[131/1267] cc obj/vendor/zstd/lib/dictBuilder/cover.c.o
+[132/1267] cc obj/vendor/zstd/lib/dictBuilder/fastcover.c.o
+[133/1267] cc obj/vendor/zstd/lib/decompress/zstd_decompress.c.o
+[134/1267] cc obj/vendor/zstd/lib/decompress/zstd_decompress_block.c.o
+[135/1267] cc obj/vendor/brotli/c/common/constants.c.o
+[136/1267] cc obj/vendor/brotli/c/common/context.c.o
+[137/1267] cc obj/vendor/brotli/c/common/platform.c.o
+[138/1267] cc obj/vendor/brotli/c/common/shared_dictionary.c.o
+[139/1267] cc obj/vendor/brotli/c/common/transform.c.o
+[140/1267] cc obj/vendor/brotli/c/dec/bit_reader.c.o
+[141/1267] cc obj/vendor/brotli/c/dec/huffman.c.o
+[142/1267] fetch rust-argon2
+[rust-argon2] fetching sru-systems/rust-argon2@ed81866f
+[rust-argon2] applying legacy-low-memory.patch
+[rust-argon2] done → /bun/vendor/rust-argon2
+[143/1267] cc obj/vendor/brotli/c/common/dictionary.c.o
+[144/1267] cc obj/vendor/brotli/c/dec/state.c.o
+[145/1267] cc obj/vendor/zstd/lib/dictBuilder/zdict.c.o
+[146/1267] cc obj/vendor/brotli/c/enc/cluster.c.o
+[147/1267] cc obj/vendor/brotli/c/enc/bit_cost.c.o
+[148/1267] cc obj/vendor/brotli/c/enc/brotli_bit_stream.c.o
+[149/1267] cc obj/vendor/brotli/c/enc/command.c.o
+[150/1267] cc obj/vendor/brotli/c/enc/backward_references_hq.c.o
+[151/1267] cc obj/vendor/brotli/c/enc/block_splitter.c.o
+[152/1267] cc obj/vendor/brotli/c/enc/compound_dictionary.c.o
+[153/1267] cc obj/vendor/brotli/c/enc/entropy_encode.c.o
+[154/1267] cc obj/vendor/brotli/c/dec/decode.c.o
+[155/1267] cc obj/vendor/brotli/c/enc/dictionary_hash.c.o
+[156/1267] cc obj/vendor/brotli/c/enc/compress_fragment.c.o
+[157/1267] cc obj/vendor/brotli/c/enc/fast_log.c.o
+[158/1267] cc obj/vendor/brotli/c/enc/encode.c.o
+[159/1267] cc obj/vendor/brotli/c/enc/compress_fragment_two_pass.c.o
+[160/1267] cc obj/vendor/brotli/c/enc/literal_cost.c.o
+[161/1267] cc obj/vendor/brotli/c/enc/memory.c.o
+[162/1267] cc obj/vendor/brotli/c/enc/encoder_dict.c.o
+[163/1267] cc obj/vendor/brotli/c/enc/utf8_util.c.o
+[164/1267] cc obj/vendor/brotli/c/enc/backward_references.c.o
+[165/1267] cc obj/vendor/libdeflate/lib/x86/cpu_features.c.o
+[166/1267] cc obj/vendor/libdeflate/lib/utils.c.o
+[167/1267] cc obj/vendor/brotli/c/enc/histogram.c.o
+[168/1267] cc obj/vendor/libdeflate/lib/deflate_decompress.c.o
+[169/1267] cc obj/vendor/libdeflate/lib/zlib_compress.c.o
+[170/1267] cc obj/vendor/libdeflate/lib/arm/cpu_features.c.o
+[171/1267] cc obj/vendor/libdeflate/lib/zlib_decompress.c.o
+[172/1267] cc obj/vendor/brotli/c/enc/metablock.c.o
+[173/1267] cc obj/vendor/libdeflate/lib/gzip_compress.c.o
+[174/1267] cc obj/vendor/zstd/lib/compress/zstd_lazy.c.o
+[175/1267] cc obj/vendor/libdeflate/lib/gzip_decompress.c.o
+[176/1267] cc obj/vendor/libarchive/libarchive/archive_cryptor.c.o
+[177/1267] cc obj/vendor/libarchive/libarchive/archive_acl.c.o
+[178/1267] cc obj/vendor/libarchive/libarchive/archive_check_magic.c.o
+[179/1267] cc obj/vendor/brotli/c/enc/static_dict.c.o
+[180/1267] cc obj/vendor/libarchive/libarchive/archive_cmdline.c.o
+[181/1267] cc obj/vendor/libarchive/libarchive/archive_entry_copy_stat.c.o
+[182/1267] cc obj/vendor/libdeflate/lib/deflate_compress.c.o
+[183/1267] cc obj/vendor/libarchive/libarchive/archive_entry_link_resolver.c.o
+[184/1267] cc obj/vendor/libdeflate/lib/adler32.c.o
+[185/1267] cc obj/vendor/libarchive/libarchive/archive_digest.c.o
+[186/1267] cc obj/vendor/libarchive/libarchive/archive_entry.c.o
+[187/1267] cc obj/vendor/libarchive/libarchive/archive_entry_sparse.c.o
+[188/1267] cc obj/vendor/libdeflate/lib/crc32.c.o
+[189/1267] cc obj/vendor/libarchive/libarchive/archive_entry_xattr.c.o
+[190/1267] cc obj/vendor/libarchive/libarchive/archive_entry_stat.c.o
+[191/1267] cc obj/vendor/libarchive/libarchive/archive_entry_strmode.c.o
+[192/1267] cc obj/vendor/libarchive/libarchive/archive_options.c.o
+[193/1267] cc obj/vendor/libarchive/libarchive/archive_hmac.c.o
+[194/1267] cc obj/vendor/libarchive/libarchive/archive_pack_dev.c.o
+[195/1267] cc obj/vendor/libarchive/libarchive/archive_parse_date.c.o
+[196/1267] cc obj/vendor/libarchive/libarchive/archive_pathmatch.c.o
+[197/1267] cc obj/vendor/libarchive/libarchive/archive_match.c.o
+[198/1267] cc obj/vendor/libarchive/libarchive/archive_rb.c.o
+[199/1267] cc obj/vendor/libarchive/libarchive/archive_read_append_filter.c.o
+[200/1267] cc obj/vendor/libarchive/libarchive/archive_read.c.o
+[201/1267] cc obj/vendor/libarchive/libarchive/archive_read_add_passphrase.c.o
+[202/1267] cc obj/vendor/libarchive/libarchive/archive_read_data_into_fd.c.o
+[203/1267] cc obj/vendor/libarchive/libarchive/archive_read_disk_entry_from_file.c.o
+[204/1267] cc obj/vendor/libarchive/libarchive/archive_random.c.o
+[205/1267] cc obj/vendor/libarchive/libarchive/archive_read_disk_set_standard_lookup.c.o
+[206/1267] cc obj/vendor/libarchive/libarchive/archive_read_disk_posix.c.o
+[207/1267] cc obj/vendor/libarchive/libarchive/archive_ppmd7.c.o
+[208/1267] cc obj/vendor/libarchive/libarchive/archive_read_extract.c.o
+[209/1267] cc obj/vendor/libarchive/libarchive/archive_read_extract2.c.o
+[210/1267] cc obj/vendor/libarchive/libarchive/archive_read_open_fd.c.o
+[211/1267] cc obj/vendor/libarchive/libarchive/archive_read_open_file.c.o
+[212/1267] cc obj/vendor/libarchive/libarchive/archive_read_open_filename.c.o
+[213/1267] cc obj/vendor/libarchive/libarchive/archive_read_open_memory.c.o
+[214/1267] cc obj/vendor/libarchive/libarchive/archive_read_set_format.c.o
+[215/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_format_raw.c.o
+[216/1267] cc obj/vendor/libarchive/libarchive/archive_read_set_options.c.o
+[217/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_format_empty.c.o
+[218/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_filter_gzip.c.o
+[219/1267] cc obj/vendor/libarchive/libarchive/archive_time.c.o
+[220/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_filter_program.c.o
+[221/1267] cc obj/vendor/libarchive/libarchive/archive_string_sprintf.c.o
+[222/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_format_tar.c.o
+[223/1267] cc obj/vendor/libarchive/libarchive/archive_util.c.o
+[224/1267] cc obj/vendor/libarchive/libarchive/archive_virtual.c.o
+[225/1267] cc obj/vendor/libarchive/libarchive/archive_string.c.o
+[226/1267] cc obj/vendor/libarchive/libarchive/archive_version_details.c.o
+[227/1267] cc obj/vendor/libarchive/libarchive/archive_write_open_fd.c.o
+[228/1267] cc obj/vendor/libarchive/libarchive/archive_write_disk_set_standard_lookup.c.o
+[229/1267] cc obj/vendor/libarchive/libarchive/archive_write.c.o
+[230/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_by_name.c.o
+[231/1267] cc obj/vendor/libarchive/libarchive/archive_write_open_memory.c.o
+[232/1267] cc obj/vendor/libarchive/libarchive/archive_write_open_filename.c.o
+[233/1267] cc obj/vendor/libarchive/libarchive/archive_write_disk_posix.c.o
+[234/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter.c.o
+[235/1267] cc obj/vendor/libarchive/libarchive/archive_write_open_file.c.o
+[236/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_compress.c.o
+[237/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_b64encode.c.o
+[238/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_bzip2.c.o
+[239/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lz4.c.o
+[240/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lrzip.c.o
+[241/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_none.c.o
+[242/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_grzip.c.o
+[243/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lzop.c.o
+[244/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_gzip.c.o
+[245/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_program.c.o
+[246/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_uuencode.c.o
+[247/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_by_name.c.o
+[248/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format.c.o
+[249/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_xz.c.o
+[250/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_zstd.c.o
+[251/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_ar.c.o
+[252/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio.c.o
+[253/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_newc.c.o
+[254/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_binary.c.o
+[255/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_7zip.c.o
+[256/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_odc.c.o
+[257/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_filter_by_ext.c.o
+[258/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_gnutar.c.o
+[259/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_raw.c.o
+[260/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_shar.c.o
+[261/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_pax.c.o
+[262/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_v7tar.c.o
+[263/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_warc.c.o
+[264/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_ustar.c.o
+[265/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_xar.c.o
+[266/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_iso9660.c.o
+[267/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_mtree.c.o
+[268/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_passphrase.c.o
+[269/1267] cc obj/vendor/libarchive/libarchive/xxhash.c.o
+[270/1267] cc obj/vendor/libarchive/libarchive/filter_fork_posix.c.o
+[271/1267] cc obj/vendor/libjpeg-turbo/src/jcapistd.c.o
+[272/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_options.c.o
+[273/1267] cc obj/vendor/libjpeg-turbo/src/jcapimin.c.o
+[274/1267] cc obj/vendor/libjpeg-turbo/src/jcdiffct.c.o
+[275/1267] cc obj/vendor/libjpeg-turbo/src/jccolor.c.o
+[276/1267] cc obj/vendor/libjpeg-turbo/src/jccoefct.c.o
+[277/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_zip.c.o
+[278/1267] cc obj/vendor/libjpeg-turbo/src/jcdctmgr.c.o
+[279/1267] cc obj/vendor/libjpeg-turbo/src/jcinit.c.o
+[280/1267] cc obj/vendor/libjpeg-turbo/src/jclhuff.c.o
+[281/1267] cc obj/vendor/libjpeg-turbo/src/jcicc.c.o
+[282/1267] cc obj/vendor/libjpeg-turbo/src/jclossls.c.o
+[283/1267] cc obj/vendor/libjpeg-turbo/src/jcmainct.c.o
+[284/1267] cc obj/vendor/libjpeg-turbo/src/jcomapi.c.o
+[285/1267] cc obj/vendor/libjpeg-turbo/src/jcparam.c.o
+[286/1267] cc obj/vendor/libjpeg-turbo/src/jcmarker.c.o
+[287/1267] cc obj/vendor/libjpeg-turbo/src/jcmaster.c.o
+[288/1267] cc obj/vendor/libjpeg-turbo/src/jcphuff.c.o
+[289/1267] cc obj/vendor/libjpeg-turbo/src/jcprepct.c.o
+[290/1267] cc obj/vendor/libjpeg-turbo/src/jcsample.c.o
+[291/1267] cc obj/vendor/libjpeg-turbo/src/jctrans.c.o
+[292/1267] cc obj/vendor/libjpeg-turbo/src/jdapimin.c.o
+[293/1267] cc obj/vendor/libjpeg-turbo/src/jdatasrc.c.o
+[294/1267] cc obj/vendor/libjpeg-turbo/src/jdapistd.c.o
+[295/1267] cc obj/vendor/libjpeg-turbo/src/jchuff.c.o
+[296/1267] cc obj/vendor/libjpeg-turbo/src/jdatadst.c.o
+[297/1267] cc obj/vendor/libjpeg-turbo/src/jddctmgr.c.o
+[298/1267] cc obj/vendor/libjpeg-turbo/src/jdcoefct.c.o
+[299/1267] cc obj/vendor/libjpeg-turbo/src/jddiffct.c.o
+[300/1267] cc obj/vendor/libjpeg-turbo/src/jdlhuff.c.o
+[301/1267] cc obj/vendor/libjpeg-turbo/src/jdinput.c.o
+[302/1267] cc obj/vendor/libjpeg-turbo/src/jdicc.c.o
+[303/1267] cc obj/vendor/libjpeg-turbo/src/jdcolor.c.o
+[304/1267] cc obj/vendor/libjpeg-turbo/src/jdhuff.c.o
+[305/1267] cc obj/vendor/libjpeg-turbo/src/jdlossls.c.o
+[306/1267] cc obj/vendor/libjpeg-turbo/src/jdmainct.c.o
+[307/1267] cc obj/vendor/libjpeg-turbo/src/jdmarker.c.o
+[308/1267] cc obj/vendor/libjpeg-turbo/src/jdmaster.c.o
+[309/1267] cc obj/vendor/libjpeg-turbo/src/jdsample.c.o
+[310/1267] cc obj/vendor/libjpeg-turbo/src/jfdctflt.c.o
+[311/1267] cc obj/vendor/libjpeg-turbo/src/jdphuff.c.o
+[312/1267] cc obj/vendor/libjpeg-turbo/src/jdpostct.c.o
+[313/1267] cc obj/vendor/libjpeg-turbo/src/jdtrans.c.o
+[314/1267] cc obj/vendor/libjpeg-turbo/src/jfdctint.c.o
+[315/1267] cc obj/vendor/libjpeg-turbo/src/jfdctfst.c.o
+[316/1267] cc obj/vendor/libjpeg-turbo/src/jdmerge.c.o
+[317/1267] cc obj/vendor/libjpeg-turbo/src/jidctflt.c.o
+[318/1267] cc obj/vendor/libjpeg-turbo/src/jidctfst.c.o
+[319/1267] cc obj/vendor/libjpeg-turbo/src/jerror.c.o
+[320/1267] cc obj/vendor/libjpeg-turbo/src/jcarith.c.o
+[321/1267] cc obj/vendor/libjpeg-turbo/src/jidctred.c.o
+[322/1267] cc obj/vendor/libjpeg-turbo/src/jaricom.c.o
+[323/1267] cc obj/vendor/libjpeg-turbo/src/jidctint.c.o
+[324/1267] cc obj/vendor/libjpeg-turbo/src/jmemnobs.c.o
+[325/1267] cc obj/vendor/libjpeg-turbo/src/jdarith.c.o
+[326/1267] cc obj/vendor/libjpeg-turbo/src/jmemmgr.c.o
+[327/1267] cc obj/vendor/libjpeg-turbo/src/jpeg_nbits.c.o
+[328/1267] cc obj/vendor/libjpeg-turbo/src/jquant1.c.o
+[329/1267] cc obj/vendor/libjpeg-turbo/src/jdatadst-tj.c.o
+[330/1267] cc obj/vendor/libjpeg-turbo/src/jquant2.c.o
+[331/1267] cc obj/vendor/libjpeg-turbo/src/jutils.c.o
+[332/1267] cc obj/vendor/libjpeg-turbo/src/jdatasrc-tj.c.o
+[333/1267] cc obj/vendor/libjpeg-turbo/src/transupp.c.o
+[334/1267] cc obj/vendor/libjpeg-turbo/jbun_stubs.c.o
+[335/1267] cc obj/vendor/libjpeg-turbo/src/turbojpeg.c.o
+[336/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jdsample-neon.c.o
+[337/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jcphuff-neon.c.o
+[338/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jcgray-neon.c.o
+[339/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jfdctfst-neon.c.o
+[340/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jquanti-neon.c.o
+[341/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jcsample-neon.c.o
+[342/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jidctred-neon.c.o
+[343/1267] cc obj/vendor/libjpeg-turbo/simd/arm/aarch64/jsimd.c.o
+[344/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jidctfst-neon.c.o
+[345/1267] cc obj/vendor/libwebp/src/dec/alpha_dec.c.o
+[346/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jidctint-neon.c.o
+[347/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jdmerge-neon.c.o
+[348/1267] cc obj/vendor/libjpeg-turbo/simd/arm/aarch64/jchuff-neon.c.o
+[349/1267] cc obj/vendor/libwebp/src/dec/buffer_dec.c.o
+[350/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jfdctint-neon.c.o
+[351/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jdcolor-neon.c.o
+[352/1267] cc obj/vendor/libwebp/src/dec/quant_dec.c.o
+[353/1267] cc obj/vendor/libwebp/src/dec/idec_dec.c.o
+[354/1267] cc obj/vendor/libwebp/src/dec/frame_dec.c.o
+[355/1267] cc obj/vendor/libwebp/src/dec/io_dec.c.o
+[356/1267] cc obj/vendor/libwebp/src/dec/tree_dec.c.o
+[357/1267] cc obj/vendor/libwebp/src/dec/vp8_dec.c.o
+[358/1267] cc obj/vendor/libwebp/src/dec/webp_dec.c.o
+[359/1267] cc obj/vendor/libwebp/src/enc/alpha_enc.c.o
+[360/1267] cc obj/vendor/libspng/spng/spng.c.o
+[361/1267] cc obj/vendor/libwebp/src/enc/analysis_enc.c.o
+[362/1267] cc obj/vendor/libwebp/src/enc/backward_references_cost_enc.c.o
+[363/1267] cc obj/vendor/libwebp/src/dec/vp8l_dec.c.o
+[364/1267] cc obj/vendor/libwebp/src/enc/config_enc.c.o
+[365/1267] cc obj/vendor/libwebp/src/enc/backward_references_enc.c.o
+[366/1267] cc obj/vendor/libwebp/src/enc/cost_enc.c.o
+[367/1267] cc obj/vendor/libwebp/src/enc/filter_enc.c.o
+[368/1267] cc obj/vendor/libwebp/src/enc/histogram_enc.c.o
+[369/1267] cc obj/vendor/libwebp/src/enc/frame_enc.c.o
+[370/1267] cc obj/vendor/libwebp/src/enc/near_lossless_enc.c.o
+[371/1267] cc obj/vendor/libwebp/src/enc/picture_enc.c.o
+[372/1267] cc obj/vendor/libwebp/src/enc/iterator_enc.c.o
+[373/1267] cc obj/vendor/libwebp/src/enc/picture_rescale_enc.c.o
+[374/1267] cc obj/vendor/libwebp/src/enc/picture_csp_enc.c.o
+[375/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jccolor-neon.c.o
+[376/1267] cc obj/vendor/libwebp/src/enc/picture_psnr_enc.c.o
+[377/1267] cc obj/vendor/libwebp/src/enc/picture_tools_enc.c.o
+[378/1267] cc obj/vendor/libwebp/src/enc/syntax_enc.c.o
+[379/1267] cc obj/vendor/libwebp/src/enc/token_enc.c.o
+[380/1267] cc obj/vendor/libwebp/src/enc/tree_enc.c.o
+[381/1267] cc obj/vendor/libwebp/src/enc/predictor_enc.c.o
+[382/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing.c.o
+[383/1267] cc obj/vendor/libwebp/src/enc/webp_enc.c.o
+[384/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing_mips_dsp_r2.c.o
+[385/1267] cc obj/vendor/libwebp/src/enc/vp8l_enc.c.o
+[386/1267] cc obj/vendor/libwebp/src/dsp/cost.c.o
+[387/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing_sse41.c.o
+[388/1267] cc obj/vendor/libwebp/src/dsp/cost_mips32.c.o
+[389/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing_sse2.c.o
+[390/1267] cc obj/vendor/libwebp/src/dsp/cost_mips_dsp_r2.c.o
+[391/1267] cc obj/vendor/libwebp/src/dsp/cpu.c.o
+[392/1267] cc obj/vendor/libwebp/src/dsp/cost_sse2.c.o
+[393/1267] cc obj/vendor/libwebp/src/enc/quant_enc.c.o
+[394/1267] cc obj/vendor/libwebp/src/dsp/dec_clip_tables.c.o
+[395/1267] cc obj/vendor/libwebp/src/dsp/dec_mips32.c.o
+[396/1267] cc obj/vendor/libwebp/src/dsp/dec_mips_dsp_r2.c.o
+[397/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing_neon.c.o
+[398/1267] cc obj/vendor/libwebp/src/dsp/dec.c.o
+[399/1267] cc obj/vendor/libwebp/src/dsp/dec_msa.c.o
+[400/1267] cc obj/vendor/libwebp/src/dsp/dec_sse2.c.o
+[401/1267] cc obj/vendor/libwebp/src/dsp/dec_sse41.c.o
+[402/1267] cc obj/vendor/libwebp/src/dsp/cost_neon.c.o
+[403/1267] cc obj/vendor/libwebp/src/dsp/enc_msa.c.o
+[404/1267] cc obj/vendor/libwebp/src/dsp/enc_mips32.c.o
+[405/1267] cc obj/vendor/libwebp/src/dsp/enc_sse2.c.o
+[406/1267] cc obj/vendor/libwebp/src/dsp/enc.c.o
+[407/1267] cc obj/vendor/libwebp/src/dsp/enc_mips_dsp_r2.c.o
+[408/1267] cc obj/vendor/libwebp/src/dsp/enc_sse41.c.o
+[409/1267] cc obj/vendor/libwebp/src/dsp/filters_mips_dsp_r2.c.o
+[410/1267] cc obj/vendor/libwebp/src/dsp/filters_sse2.c.o
+[411/1267] cc obj/vendor/libwebp/src/dsp/filters.c.o
+[412/1267] cc obj/vendor/libwebp/src/dsp/filters_msa.c.o
+[413/1267] cc obj/vendor/libwebp/src/dsp/lossless_avx2.c.o
+[414/1267] cc obj/vendor/libwebp/src/dsp/lossless.c.o
+[415/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_msa.c.o
+[416/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_avx2.c.o
+[417/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_mips_dsp_r2.c.o
+[418/1267] cc obj/vendor/libwebp/src/dsp/enc_neon.c.o
+[419/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_mips32.c.o
+[420/1267] cc obj/vendor/libwebp/src/dsp/dec_neon.c.o
+[421/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc.c.o
+[422/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_sse2.c.o
+[423/1267] cc obj/vendor/libwebp/src/dsp/lossless_mips_dsp_r2.c.o
+[424/1267] cc obj/vendor/libwebp/src/dsp/lossless_msa.c.o
+[425/1267] cc obj/vendor/libwebp/src/dsp/filters_neon.c.o
+[426/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_sse41.c.o
+[427/1267] cc obj/vendor/libwebp/src/dsp/lossless_sse2.c.o
+[428/1267] cc obj/vendor/libwebp/src/dsp/lossless_sse41.c.o
+[429/1267] cc obj/vendor/libwebp/src/dsp/rescaler_mips_dsp_r2.c.o
+[430/1267] cc obj/vendor/libwebp/src/dsp/rescaler_mips32.c.o
+[431/1267] cc obj/vendor/libwebp/src/dsp/rescaler_msa.c.o
+[432/1267] cc obj/vendor/libwebp/src/dsp/rescaler.c.o
+[433/1267] cc obj/vendor/libwebp/src/dsp/ssim.c.o
+[434/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_neon.c.o
+[435/1267] cc obj/vendor/libwebp/src/dsp/ssim_sse2.c.o
+[436/1267] cc obj/vendor/libwebp/src/dsp/rescaler_sse2.c.o
+[437/1267] cc obj/vendor/libwebp/src/dsp/upsampling_mips_dsp_r2.c.o
+[438/1267] cc obj/vendor/libwebp/src/dsp/lossless_neon.c.o
+[439/1267] cc obj/vendor/libwebp/src/dsp/upsampling_msa.c.o
+[440/1267] cc obj/vendor/libwebp/src/dsp/yuv_mips32.c.o
+[441/1267] cc obj/vendor/libwebp/src/dsp/upsampling_sse41.c.o
+[442/1267] cc obj/vendor/libwebp/src/dsp/upsampling.c.o
+[443/1267] cc obj/vendor/libwebp/src/dsp/upsampling_sse2.c.o
+[444/1267] cc obj/vendor/libwebp/src/dsp/yuv.c.o
+[445/1267] cc obj/vendor/libwebp/src/dsp/yuv_sse2.c.o
+[446/1267] cc obj/vendor/libwebp/src/dsp/yuv_sse41.c.o
+[447/1267] cc obj/vendor/libwebp/src/dsp/yuv_mips_dsp_r2.c.o
+[448/1267] cc obj/vendor/libwebp/src/utils/bit_reader_utils.c.o
+[449/1267] cc obj/vendor/libwebp/src/utils/color_cache_utils.c.o
+[450/1267] cc obj/vendor/libwebp/src/utils/filters_utils.c.o
+[451/1267] cc obj/vendor/libwebp/src/dsp/rescaler_neon.c.o
+[452/1267] cc obj/vendor/libwebp/src/utils/bit_writer_utils.c.o
+[453/1267] cc obj/vendor/libwebp/src/utils/huffman_encode_utils.c.o
+[454/1267] cc obj/vendor/libwebp/src/utils/quant_levels_dec_utils.c.o
+[455/1267] cc obj/vendor/libwebp/src/utils/palette.c.o
+[456/1267] cc obj/vendor/libwebp/src/utils/random_utils.c.o
+[457/1267] cc obj/vendor/libwebp/src/utils/huffman_utils.c.o
+[458/1267] cc obj/vendor/libwebp/src/utils/rescaler_utils.c.o
+[459/1267] cc obj/vendor/libwebp/src/utils/thread_utils.c.o
+[460/1267] cc obj/vendor/libwebp/src/utils/quant_levels_utils.c.o
+[461/1267] cc obj/vendor/libwebp/src/dsp/yuv_neon.c.o
+[462/1267] cc obj/vendor/libwebp/src/mux/muxinternal.c.o
+[463/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_cpu.c.o
+[464/1267] cc obj/vendor/libwebp/src/mux/muxread.c.o
+[465/1267] cc obj/vendor/libwebp/src/demux/demux.c.o
+[466/1267] cc obj/vendor/libwebp/src/utils/utils.c.o
+[467/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv.c.o
+[468/1267] cc obj/vendor/libwebp/src/mux/muxedit.c.o
+[469/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_csp.c.o
+[470/1267] cc obj/vendor/libwebp/src/dsp/upsampling_neon.c.o
+[471/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_dsp.c.o
+[472/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_sse2.c.o
+[473/1267] cc obj/vendor/cares/src/lib/ares_android.c.o
+[474/1267] cc obj/vendor/cares/src/lib/ares_cancel.c.o
+[475/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_gamma.c.o
+[476/1267] cc obj/vendor/cares/src/lib/ares_addrinfo2hostent.c.o
+[477/1267] cc obj/vendor/cares/src/lib/ares_addrinfo_localhost.c.o
+[478/1267] cc obj/vendor/cares/src/lib/ares_close_sockets.c.o
+[479/1267] cc obj/vendor/cares/src/lib/ares_destroy.c.o
+[480/1267] cc obj/vendor/cares/src/lib/ares_data.c.o
+[481/1267] cc obj/vendor/cares/src/lib/ares_conn.c.o
+[482/1267] cc obj/vendor/cares/src/lib/ares_cookie.c.o
+[483/1267] cc obj/vendor/cares/src/lib/ares_free_hostent.c.o
+[484/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_neon.c.o
+[485/1267] cc obj/vendor/cares/src/lib/ares_freeaddrinfo.c.o
+[486/1267] cc obj/vendor/cares/src/lib/ares_getenv.c.o
+[487/1267] cc obj/vendor/cares/src/lib/ares_free_string.c.o
+[488/1267] cc obj/vendor/cares/src/lib/ares_getaddrinfo.c.o
+[489/1267] cc obj/vendor/cares/src/lib/ares_getnameinfo.c.o
+[490/1267] cc obj/vendor/cares/src/lib/ares_gethostbyname.c.o
+[491/1267] cc obj/vendor/cares/src/lib/ares_gethostbyaddr.c.o
+[492/1267] cc obj/vendor/cares/src/lib/ares_hosts_file.c.o
+[493/1267] gen JS modules (bundle-modules)
+Preprocess modules (13106ms)
+Bundle modules (141ms)
+Postprocesss modules (74ms)
+Bundle Functions (957ms)
+Generate Code (41ms)
+
+[14.36s] Bundled "src/js" for development
+  2787 kb
+  197 internal modules
+  13 native modules
+  50 internal functions across 16 files
+[493/1267] cargo bun_runtime → libbun_runtime.a (--target aarch64-unknown-linux-gnu)
+
+  nightly-2026-07-20-aarch64-unknown-linux-gnu unchanged - rustc 1.99.0-nightly (9f36de775 2026-07-19)
+
+[502/1267] fetch boringssl
+[boringssl] fetching oven-sh/boringssl@2288897e
+[boringssl] done → /bun/vendor/boringssl
+[724/1267] fetch WebKit (prebuilt)
+[WebKit] fetching https://github.com/oven-sh/WebKit/releases/download/autobuild-cb61607f1a4bae79d7701965062634dee9efb349/bun-webkit-linux-arm64-debug.tar.gz
+[WebKit] extracted to /root/.bun/build-cache/webkit-cb61607f1a4bae79-arm64-debug
+[1193/1267] cxx obj/src/jsc/bindings/napi.cpp.o
+[1195/1267] cxx obj/src/jsc/bindings/webcore/JSMessageEventCustom.cpp.o
+[1196/1267] cxx obj/src/jsc/bindings/webcore/streams/CrossRealmTransform.cpp.o
+[1197/1267] cxx obj/src/jsc/bindings/bindings.cpp.o
+[1198/1267] cxx obj/src/jsc/bindings/sqlite/NodeSqlite.cpp.o
+[1199/1267] cxx obj/src/jsc/bindings/webcore/streams/BunAsyncIterableSource.cpp.o
+[1200/1267] cxx obj/src/jsc/bindings/webcore/streams/JSCompressionStreamShared.cpp.o
+[1201/1267] cxx obj/src/jsc/bindings/webcore/streams/JSByteLengthQueuingStrategy.cpp.o
+[1202/1267] cxx obj/src/jsc/bindings/webcore/streams/JSCompressionStream.cpp.o
+[1203/1267] cxx obj/src/jsc/bindings/webcore/streams/JSCountQueuingStrategy.cpp.o
+[1204/1267] cxx obj/src/jsc/bindings/webcore/streams/JSCrossRealmTransformState.cpp.o
+[1205/1267] cxx obj/src/jsc/bindings/webcore/streams/BunStreamSource.cpp.o
+[1206/1267] cxx obj/src/jsc/bindings/webcore/streams/JSDecompressionStream.cpp.o
+[1207/1267] cxx obj/src/jsc/bindings/webcore/streams/BunStreamConsumers.cpp.o
+[1208/1267] cxx obj/src/jsc/bindings/webcore/streams/JSPullIntoDescriptor.cpp.o
+[1209/1267] cxx obj/src/jsc/bindings/webcore/SerializedScriptValue.cpp.o
+[1210/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableByteStreamController.cpp.o
+[1211/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamReaderBase.cpp.o
+[1212/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamBYOBRequest.cpp.o
+[1213/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamBYOBReader.cpp.o
+[1214/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStream.cpp.o
+[1215/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamDefaultController.cpp.o
+[1216/1267] cxx obj/src/jsc/bindings/webcore/streams/JSDirectStreamController.cpp.o
+[1217/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamAsyncIterator.cpp.o
+[1218/1267] cxx obj/src/jsc/bindings/webcore/streams/JSStreamAlgorithmContexts.cpp.o
+[1219/1267] cxx obj/src/jsc/bindings/webcore/streams/JSStreamsRuntime.cpp.o
+[1220/1267] cxx obj/src/jsc/bindings/webcore/streams/JSStreamTeeState.cpp.o
+[1221/1267] cxx obj/src/jsc/bindings/webcore/streams/JSStreamPipeToOperation.cpp.o
+[1222/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamDefaultReader.cpp.o
+[1223/1267] cxx obj/src/jsc/bindings/webcore/streams/JSTextEncoderStream.cpp.o
+[1224/1267] cxx obj/src/jsc/bindings/webcore/streams/JSTransformStream.cpp.o
+[1225/1267] cxx obj/src/jsc/bindings/webcore/streams/JSTextDecoderStream.cpp.o
+[1226/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadRequest.cpp.o
+[1227/1267] cxx obj/src/jsc/bindings/webcore/streams/JSTransformStreamDefaultController.cpp.o
+[1228/1267] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStreamDefaultWriter.cpp.o
+[1229/1267] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStream.cpp.o
+[1230/1267] cxx obj/src/jsc/bindings/webcore/streams/TransformStreamOperations.cpp.o
+[1231/1267] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStreamDefaultController.cpp.o
+[1232/1267] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsInspectCustom.cpp.o
+[1233/1267] cxx obj/src/jsc/bindings/webcore/streams/WritableStreamOperations.cpp.o
+[1234/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CBC.cpp.o
+[1235/1267] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsMisc.cpp.o
+[1236/1267] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsExports.cpp.o
+[1237/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CBCOpenSSL.cpp.o
+[1238/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CFB.cpp.o
+[1239/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CFBOpenSSL.cpp.o
+[1240/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CTR.cpp.o
+[1241/1267] cxx obj/src/jsc/bindings/webcore/streams/ReadableStreamOperations.cpp.o
+[1242/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CTROpenSSL.cpp.o
+[1243/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_KW.cpp.o
+[1244/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_GCMOpenSSL.cpp.o
+[1245/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_GCM.cpp.o
+[1246/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmHMAC.cpp.o
+[1247/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmECDSA.cpp.o
+[1248/1267] cxx obj/src/jsc/bindings/workaround-missing-symbols.cpp.o
+[1249/1267] cxx obj/src/io/io_darwin.cpp.o
+[1250/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSA_OAEP.cpp.o
+[1251/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSA_PSS.cpp.o
+[1252/1267] cxx obj/src/simdutf_sys/bun-simdutf.cpp.o
+[1253/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSASSA_PKCS1_v1_5.cpp.o
+[1254/1267] cxx obj/codegen/WebCoreJSBuiltins.cpp.o
+[1255/1267] cxx obj/codegen/GeneratedSocketConfigBinaryType.cpp.o
+[1256/1267] cxx obj/codegen/JSSink.cpp.o
+[1257/1267] cxx obj/codegen/GeneratedBindings.cpp.o
+[1258/1267] cxx obj/src/jsc/bindings/xxhash3.cpp.o
+[1259/1267] cxx obj/codegen/GeneratedSocketConfigHandlers.cpp.o
+[1260/1267] cxx obj/codegen/GeneratedFakeTimersConfig.cpp.o
+[1261/1267] cxx obj/codegen/GeneratedSocketConfig.cpp.o
+[1262/1267] cxx obj/src/jsc/bindings/webcrypto/SubtleCrypto.cpp.o
+[1263/1267] cxx obj/codegen/GeneratedSSLConfig.cpp.o
+[1264/1267] cxx obj/src/jsc/bindings/ZigGlobalObject.cpp.o
+[1265/1267] cxx obj/codegen/ZigGeneratedClasses.cpp.o
+[1265/1267] link bun-debug
+[1266/1267] bun-debug --revision
+1.4.1-debug+adc354d99
+cd bun && nix develop --command bash -c "RUSTC_BOOTSTRAP=1 BUN_DEBUG_QUIET_LOGS=1 bun scripts/build.ts --profile=debug --asan=off test"
+=====================================
+Bun Development Environment Fixed
+=====================================
+Node.js: v26.7.0
+Bun: 1.3.13
+Clang: clang version 21.1.8
+CMake: cmake version 4.3.4
+LLVM: 21.1.8
+
+Quick start:
+  bun bd                    # Build debug binary
+  bun bd test <test-file>   # Run tests
+=====================================
+bun test v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+ LICENSE
+ lib/index.js
+ package.json
+ README.md
+ LICENSE
+ index.js
+ package.json
+ README.md
+ LICENSE
+ lib/enoent.js
+ lib/util/escape.js
+ index.js
+ lib/parse.js
+ lib/util/readShebang.js
+ lib/util/resolveCommand.js
+ package.json
+ CHANGELOG.md
+ README.md
+ LICENSE
+ dist/cjs/all-signals.js
+ dist/mjs/all-signals.js
+ dist/cjs/index.js
+ dist/mjs/index.js
+ dist/cjs/watchdog.js
+ dist/mjs/watchdog.js
+ dist/cjs/package.json
+ dist/mjs/package.json
+ package.json
+ dist/cjs/all-signals.d.ts.map
+ dist/mjs/all-signals.d.ts.map
+ dist/cjs/all-signals.js.map
+ dist/mjs/all-signals.js.map
+ dist/cjs/index.d.ts.map
+ dist/mjs/index.d.ts.map
+ dist/cjs/index.js.map
+ dist/mjs/index.js.map
+ dist/cjs/watchdog.d.ts.map
+ dist/mjs/watchdog.d.ts.map
+ dist/cjs/watchdog.js.map
+ dist/mjs/watchdog.js.map
+ README.md
+ dist/cjs/all-signals.d.ts
+ dist/mjs/all-signals.d.ts
+ dist/cjs/index.d.ts
+ dist/mjs/index.d.ts
+ dist/cjs/watchdog.d.ts
+ dist/mjs/watchdog.d.ts
+ package.json
+ README.md
+ imurmurhash.js
+ imurmurhash.min.js
+ LICENSE
+ .prettierrc.js
+ lib/encoding.js
+ test/test.js
+ package.json
+ README.md
+ .travis.yml
+ LICENSE
+ build/smartbuffer.js
+ build/utils.js
+ package.json
+ build/smartbuffer.js.map
+ build/utils.js.map
+ docs/CHANGELOG.md
+ docs/README_v3.md
+ README.md
+ docs/ROADMAP.md
+ typings/smartbuffer.d.ts
+ typings/utils.d.ts
+ .prettierrc.yaml
+ .travis.yml
+ package.json
+ .npmignore
+ README.md
+ index.js
+ equation.gif
+ .travis.yml
+ example/dns.js
+ example/stop.js
+ License
+ lib/retry.js
+ lib/retry_operation.js
+ Makefile
+ test/common.js
+ test/integration/test-forever.js
+ test/integration/test-retry-operation.js
+ test/integration/test-retry-wrap.js
+ test/integration/test-timeouts.js
+ LICENSE
+ dist/index.js
+ dist/index.js
+ package.json
+ dist/index.d.ts.map
+ dist/index.js.map
+ README.md
+ dist/index.d.ts
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/parse-args.js
+ dist/esm/parse-args.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ dist/commonjs/parse-args-cjs.cjs.map
+ dist/commonjs/parse-args-cjs.d.cts.map
+ dist/commonjs/parse-args.d.ts.map
+ dist/esm/parse-args.d.ts.map
+ dist/commonjs/parse-args.js.map
+ dist/esm/parse-args.js.map
+ LICENSE.md
+ README.md
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ dist/commonjs/parse-args.d.ts
+ dist/esm/parse-args.d.ts
+ LICENSE
+ lib/index.js
+ bin/which.js
+ package.json
+ README.md
+ dist/index.js
+ dist/index.js
+ dist/parse-proxy-response.js
+ package.json
+ dist/index.d.ts.map
+ dist/index.js.map
+ dist/parse-proxy-response.d.ts.map
+ dist/parse-proxy-response.js.map
+ README.md
+ dist/index.d.ts
+ dist/parse-proxy-response.d.ts
+ .editorconfig
+ index.js
+ index.umd.js
+ test/test.js
+ .eslintrc.json
+ test/.eslintrc.json
+ bower.json
+ package.json
+ README.md
+ .travis.yml
+ LICENSE
+ .eslintrc.cjs
+ build/common/constants.js
+ build/common/helpers.js
+ build/index.js
+ build/common/receivebuffer.js
+ build/client/socksclient.js
+ build/common/util.js
+ package.json
+ build/common/constants.js.map
+ build/common/helpers.js.map
+ build/index.js.map
+ build/common/receivebuffer.js.map
+ build/client/socksclient.js.map
+ build/common/util.js.map
+ docs/examples/javascript/associateExample.md
+ docs/examples/typescript/associateExample.md
+ docs/examples/javascript/bindExample.md
+ docs/examples/typescript/bindExample.md
+ docs/examples/javascript/connectExample.md
+ docs/examples/typescript/connectExample.md
+ docs/examples/index.md
+ docs/index.md
+ docs/migratingFromV1.md
+ README.md
+ typings/common/constants.d.ts
+ typings/common/helpers.d.ts
+ typings/index.d.ts
+ typings/common/receivebuffer.d.ts
+ typings/client/socksclient.d.ts
+ typings/common/util.d.ts
+ .prettierrc.yaml
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ LICENSE
+ lib/debug.js
+ lib/nopt-lib.js
+ bin/nopt.js
+ lib/nopt.js
+ lib/type-defs.js
+ package.json
+ README.md
+ LICENSE
+ dist/address-error.js
+ dist/common.js
+ dist/v4/constants.js
+ dist/v6/constants.js
+ dist/v6/helpers.js
+ dist/ip-address.js
+ dist/ipv4.js
+ dist/ipv6.js
+ dist/v6/regular-expressions.js
+ package.json
+ dist/address-error.d.ts.map
+ dist/address-error.js.map
+ dist/common.d.ts.map
+ dist/common.js.map
+ dist/v4/constants.d.ts.map
+ dist/v6/constants.d.ts.map
+ dist/v4/constants.js.map
+ dist/v6/constants.js.map
+ dist/v6/helpers.d.ts.map
+ dist/v6/helpers.js.map
+ dist/ip-address.d.ts.map
+ dist/ip-address.js.map
+ dist/ipv4.d.ts.map
+ dist/ipv4.js.map
+ dist/ipv6.d.ts.map
+ dist/ipv6.js.map
+ dist/v6/regular-expressions.d.ts.map
+ dist/v6/regular-expressions.js.map
+ README.md
+ dist/address-error.d.ts
+ src/address-error.ts
+ dist/common.d.ts
+ src/common.ts
+ dist/v4/constants.d.ts
+ dist/v6/constants.d.ts
+ src/v4/constants.ts
+ src/v6/constants.ts
+ dist/v6/helpers.d.ts
+ src/v6/helpers.ts
+ dist/ip-address.d.ts
+ src/ip-address.ts
+ dist/ipv4.d.ts
+ src/ipv4.ts
+ dist/ipv6.d.ts
+ src/ipv6.ts
+ dist/v6/regular-expressions.d.ts
+ src/v6/regular-expressions.ts
+ LICENSE
+ lib/index.js
+ package.json
+ README.md
+ .gitignore
+ LICENSE
+ test/basic.js
+ index.js
+ package-lock.json
+ package.json
+ README.md
+ build/index.cjs
+ build/index.d.cts
+ build/lib/index.js
+ package.json
+ README.md
+ index.mjs
+ LICENSE.txt
+ LICENSE
+ lib/index.js
+ package.json
+ README.md
+ LICENSE
+ dist/index.cjs
+ dist/index.d.cts
+ dist/builder/api-builder.js
+ dist/api/async.js
+ dist/api/counter.js
+ dist/api/functions/get-array.js
+ dist/api/functions/group-files.js
+ dist/builder/index.js
+ dist/index.js
+ dist/api/functions/invoke-callback.js
+ dist/api/functions/join-path.js
+ dist/api/functions/push-directory.js
+ dist/api/functions/push-file.js
+ dist/api/queue.js
+ dist/api/functions/resolve-symlink.js
+ dist/api/sync.js
+ dist/types.js
+ dist/utils.js
+ dist/api/functions/walk-directory.js
+ dist/api/walker.js
+ package.json
+ README.md
+ dist/index.mjs
+ dist/index.d.mts
+ dist/builder/api-builder.d.ts
+ dist/api/async.d.ts
+ dist/api/counter.d.ts
+ dist/api/functions/get-array.d.ts
+ dist/api/functions/group-files.d.ts
+ dist/builder/index.d.ts
+ dist/index.d.ts
+ dist/api/functions/invoke-callback.d.ts
+ dist/api/functions/join-path.d.ts
+ dist/api/functions/push-directory.d.ts
+ dist/api/functions/push-file.d.ts
+ dist/api/queue.d.ts
+ dist/api/functions/resolve-symlink.d.ts
+ dist/api/sync.d.ts
+ dist/types.d.ts
+ dist/utils.d.ts
+ dist/api/functions/walk-directory.d.ts
+ dist/api/walker.d.ts
+ LICENSE
+ index.js
+ package.json
+ README.md
+ .github/FUNDING.yml
+ LICENSE
+ dist/cjs/index.js
+ dist/mjs/index.js
+ dist/cjs/options.js
+ dist/mjs/options.js
+ dist/cjs/posix.js
+ dist/mjs/posix.js
+ dist/cjs/win32.js
+ dist/mjs/win32.js
+ dist/cjs/package.json
+ dist/mjs/package.json
+ package.json
+ dist/cjs/index.d.ts.map
+ dist/mjs/index.d.ts.map
+ dist/cjs/index.js.map
+ dist/mjs/index.js.map
+ dist/cjs/options.d.ts.map
+ dist/mjs/options.d.ts.map
+ dist/cjs/options.js.map
+ dist/mjs/options.js.map
+ dist/cjs/posix.d.ts.map
+ dist/mjs/posix.d.ts.map
+ dist/cjs/posix.js.map
+ dist/mjs/posix.js.map
+ dist/cjs/win32.d.ts.map
+ dist/mjs/win32.d.ts.map
+ dist/cjs/win32.js.map
+ dist/mjs/win32.js.map
+ README.md
+ dist/cjs/index.d.ts
+ dist/mjs/index.d.ts
+ dist/cjs/options.d.ts
+ dist/mjs/options.d.ts
+ dist/cjs/posix.d.ts
+ dist/mjs/posix.d.ts
+ dist/cjs/win32.d.ts
+ dist/mjs/win32.d.ts
+ LICENSE
+ src/browser.js
+ src/common.js
+ src/index.js
+ src/node.js
+ package.json
+ README.md
+ dist/cjs/browser.js
+ dist/mjs/browser.js
+ dist/cjs/index.js
+ dist/mjs/index.js
+ dist/cjs/signals.js
+ dist/mjs/signals.js
+ dist/cjs/package.json
+ dist/mjs/package.json
+ package.json
+ dist/cjs/browser.d.ts.map
+ dist/mjs/browser.d.ts.map
+ dist/cjs/browser.js.map
+ dist/mjs/browser.js.map
+ dist/cjs/index.d.ts.map
+ dist/mjs/index.d.ts.map
+ dist/cjs/index.js.map
+ dist/mjs/index.js.map
+ dist/cjs/signals.d.ts.map
+ dist/mjs/signals.d.ts.map
+ dist/cjs/signals.js.map
+ dist/mjs/signals.js.map
+ README.md
+ dist/cjs/browser.d.ts
+ dist/mjs/browser.d.ts
+ dist/cjs/index.d.ts
+ dist/mjs/index.d.ts
+ dist/cjs/signals.d.ts
+ dist/mjs/signals.d.ts
+ LICENSE.txt
+ LICENSE
+ dist/commonjs/glob.js
+ dist/esm/glob.js
+ dist/commonjs/has-magic.js
+ dist/esm/has-magic.js
+ dist/commonjs/ignore.js
+ dist/esm/ignore.js
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/pattern.js
+ dist/esm/pattern.js
+ dist/commonjs/processor.js
+ dist/esm/processor.js
+ dist/commonjs/walker.js
+ dist/esm/walker.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/esm/bin.d.mts.map
+ dist/esm/bin.mjs.map
+ dist/commonjs/glob.d.ts.map
+ dist/esm/glob.d.ts.map
+ dist/commonjs/glob.js.map
+ dist/esm/glob.js.map
+ dist/commonjs/has-magic.d.ts.map
+ dist/esm/has-magic.d.ts.map
+ dist/commonjs/has-magic.js.map
+ dist/esm/has-magic.js.map
+ dist/commonjs/ignore.d.ts.map
+ dist/esm/ignore.d.ts.map
+ dist/commonjs/ignore.js.map
+ dist/esm/ignore.js.map
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ dist/commonjs/pattern.d.ts.map
+ dist/esm/pattern.d.ts.map
+ dist/commonjs/pattern.js.map
+ dist/esm/pattern.js.map
+ dist/commonjs/processor.d.ts.map
+ dist/esm/processor.d.ts.map
+ dist/commonjs/processor.js.map
+ dist/esm/processor.js.map
+ dist/commonjs/walker.d.ts.map
+ dist/esm/walker.d.ts.map
+ dist/commonjs/walker.js.map
+ dist/esm/walker.js.map
+ README.md
+ dist/esm/bin.mjs
+ dist/esm/bin.d.mts
+ dist/commonjs/glob.d.ts
+ dist/esm/glob.d.ts
+ dist/commonjs/has-magic.d.ts
+ dist/esm/has-magic.d.ts
+ dist/commonjs/ignore.d.ts
+ dist/esm/ignore.d.ts
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ dist/commonjs/pattern.d.ts
+ dist/esm/pattern.d.ts
+ dist/commonjs/processor.d.ts
+ dist/esm/processor.d.ts
+ dist/commonjs/walker.d.ts
+ dist/esm/walker.d.ts
+ dist/cjs/index.js
+ dist/mjs/index.js
+ dist/cjs/package.json
+ dist/mjs/package.json
+ package.json
+ dist/cjs/index.d.ts.map
+ dist/mjs/index.d.ts.map
+ dist/cjs/index.js.map
+ dist/mjs/index.js.map
+ LICENSE.md
+ README.md
+ dist/cjs/index.d.ts
+ dist/mjs/index.d.ts
+ LICENSE
+ dist/cjs/assert-valid-pattern.js
+ dist/mjs/assert-valid-pattern.js
+ dist/cjs/ast.js
+ dist/mjs/ast.js
+ dist/cjs/brace-expressions.js
+ dist/mjs/brace-expressions.js
+ dist/cjs/escape.js
+ dist/mjs/escape.js
+ dist/cjs/index.js
+ dist/mjs/index.js
+ dist/cjs/unescape.js
+ dist/mjs/unescape.js
+ dist/cjs/package.json
+ dist/mjs/package.json
+ package.json
+ dist/cjs/assert-valid-pattern.d.ts.map
+ dist/mjs/assert-valid-pattern.d.ts.map
+ dist/cjs/assert-valid-pattern.js.map
+ dist/mjs/assert-valid-pattern.js.map
+ dist/cjs/ast.d.ts.map
+ dist/mjs/ast.d.ts.map
+ dist/cjs/ast.js.map
+ dist/mjs/ast.js.map
+ dist/cjs/brace-expressions.d.ts.map
+ dist/mjs/brace-expressions.d.ts.map
+ dist/cjs/brace-expressions.js.map
+ dist/mjs/brace-expressions.js.map
+ dist/cjs/escape.d.ts.map
+ dist/mjs/escape.d.ts.map
+ dist/cjs/escape.js.map
+ dist/mjs/escape.js.map
+ dist/cjs/index.d.ts.map
+ dist/mjs/index.d.ts.map
+ dist/cjs/index.js.map
+ dist/mjs/index.js.map
+ dist/cjs/unescape.d.ts.map
+ dist/mjs/unescape.d.ts.map
+ dist/cjs/unescape.js.map
+ dist/mjs/unescape.js.map
+ README.md
+ dist/cjs/assert-valid-pattern.d.ts
+ dist/mjs/assert-valid-pattern.d.ts
+ dist/cjs/ast.d.ts
+ dist/mjs/ast.d.ts
+ dist/cjs/brace-expressions.d.ts
+ dist/mjs/brace-expressions.d.ts
+ dist/cjs/escape.d.ts
+ dist/mjs/escape.d.ts
+ dist/cjs/index.d.ts
+ dist/mjs/index.d.ts
+ dist/cjs/unescape.d.ts
+ dist/mjs/unescape.d.ts
+ package.json
+ dangerous.js
+ LICENSE
+ Porting-Buffer.md
+ Readme.md
+ safer.js
+ tests.js
+ LICENSE
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ README.md
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ package.json
+ .npmignore
+ README.md
+ LICENSE
+ example.js
+ index.js
+ CHANGELOG.md
+ example.html
+ test/es6-import.js
+ dist/helpers.js
+ dist/index.js
+ dist/index.js
+ package.json
+ dist/helpers.d.ts.map
+ dist/helpers.js.map
+ dist/index.d.ts.map
+ dist/index.js.map
+ README.md
+ dist/helpers.d.ts
+ dist/index.d.ts
+ license
+ index.js
+ package.json
+ readme.md
+ package.json
+ index.js
+ license.md
+ readme.md
+ license
+ index.js
+ package.json
+ readme.md
+ lib/index.js
+ package.json
+ LICENSE.md
+ README.md
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ LICENSE.md
+ README.md
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ es2015/index.js
+ index.js
+ es2015/RGI_Emoji.js
+ RGI_Emoji.js
+ es2015/text.js
+ text.js
+ package.json
+ README.md
+ es2015/index.d.ts
+ index.d.ts
+ es2015/RGI_Emoji.d.ts
+ RGI_Emoji.d.ts
+ es2015/text.d.ts
+ text.d.ts
+ LICENSE-MIT.txt
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ dist/.gitattributes
+ LICENSE
+ src/angular-sprintf.js
+ dist/angular-sprintf.min.js
+ src/sprintf.js
+ dist/sprintf.min.js
+ package.json
+ dist/angular-sprintf.min.js.map
+ dist/sprintf.min.js.map
+ CONTRIBUTORS.md
+ README.md
+ LICENSE
+ dist/index.js
+ package.json
+ README.md
+ dist/index.mjs
+ dist/index.d.mts
+ dist/index.d.ts
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ LICENSE
+ lib/index.js
+ package.json
+ README.md
+ package.json
+ index.d.ts
+ index.js
+ license
+ readme.md
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ LICENSE
+ lib/cache/entry.js
+ lib/cache/errors.js
+ lib/fetch.js
+ lib/cache/index.js
+ lib/index.js
+ lib/cache/key.js
+ lib/options.js
+ lib/pipeline.js
+ lib/cache/policy.js
+ lib/remote.js
+ package.json
+ README.md
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ index.js
+ package.json
+ LICENSE.md
+ README.md
+ .github/FUNDING.yml
+ LICENSE
+ .idea/iconv-lite.iml
+ lib/bom-handling.js
+ encodings/dbcs-codec.js
+ encodings/dbcs-data.js
+ encodings/index.js
+ lib/index.js
+ encodings/internal.js
+ encodings/sbcs-codec.js
+ encodings/sbcs-data-generated.js
+ encodings/sbcs-data.js
+ lib/streams.js
+ encodings/utf16.js
+ encodings/utf32.js
+ encodings/utf7.js
+ encodings/tables/big5-added.json
+ encodings/tables/cp936.json
+ encodings/tables/cp949.json
+ encodings/tables/cp950.json
+ encodings/tables/eucjp.json
+ encodings/tables/gb18030-ranges.json
+ encodings/tables/gbk-added.json
+ package.json
+ encodings/tables/shiftjis.json
+ Changelog.md
+ README.md
+ lib/index.d.ts
+ .idea/codeStyles/codeStyleConfig.xml
+ .idea/modules.xml
+ .idea/inspectionProfiles/Project_Default.xml
+ .idea/codeStyles/Project.xml
+ .idea/vcs.xml
+ .github/dependabot.yml
+ LICENSE
+ def/js_native_api.def
+ def/node_api.def
+ include/js_native_api_types.h
+ include/js_native_api.h
+ include/node_api_types.h
+ include/node_api.h
+ lib/clang-utils.js
+ index.js
+ lib/parse-utils.js
+ test/parse-utils.js
+ symbols.js
+ .release-please-manifest.json
+ package.json
+ release-please-config.json
+ CHANGELOG.md
+ CODE_OF_CONDUCT.md
+ CONTRIBUTING.md
+ CREATING_A_RELEASE.md
+ README.md
+ LICENSE
+ index.js
+ package.json
+ README.md
+ LICENSE
+ index.js
+ package.json
+ README.md
+ package.json
+ eastasianwidth.js
+ README.md
+ LICENSE
+ index.js
+ package.json
+ README.md
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ LICENSE
+ clone.js
+ graceful-fs.js
+ legacy-streams.js
+ polyfills.js
+ package.json
+ README.md
+ package.json
+ index.d.ts
+ index.js
+ license
+ readme.md
+ LICENSE
+ lib/abort-error.js
+ lib/blob.js
+ lib/body.js
+ lib/fetch-error.js
+ lib/headers.js
+ lib/index.js
+ lib/request.js
+ lib/response.js
+ package.json
+ README.md
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ LICENSE
+ iterator.js
+ yallist.js
+ package.json
+ README.md
+ .editorconfig
+ .jshintrc
+ LICENSE
+ index.js
+ test/test.js
+ package.json
+ README.md
+ .travis.yml
+ LICENSE
+ lib/index.js
+ package.json
+ README.md
+ .editorconfig
+ LICENSE
+ internal/errors.js
+ index.js
+ examples/is-default-value.js
+ examples/limit-long-syntax.js
+ examples/negate.js
+ examples/no-repeated-options.js
+ internal/primordials.js
+ examples/simple-hard-coded.js
+ internal/util.js
+ utils.js
+ internal/validators.js
+ package.json
+ CHANGELOG.md
+ README.md
+ examples/ordered-options.mjs
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ LICENSE.md
+ README.md
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ LICENSE
+ lib/charset.js
+ lib/encoding.js
+ index.js
+ lib/language.js
+ lib/mediaType.js
+ package.json
+ HISTORY.md
+ README.md
+ LICENSE
+ dist/delay/always/always.delay.js
+ dist/backoff.js
+ dist/delay/delay.base.js
+ dist/delay/delay.factory.js
+ dist/delay/delay.interface.js
+ dist/jitter/full/full.jitter.js
+ dist/jitter/jitter.factory.js
+ dist/jitter/no/no.jitter.js
+ dist/options.js
+ dist/delay/skip-first/skip-first.delay.js
+ package.json
+ dist/delay/always/always.delay.js.map
+ dist/backoff.js.map
+ dist/delay/delay.base.js.map
+ dist/delay/delay.factory.js.map
+ dist/delay/delay.interface.js.map
+ dist/jitter/full/full.jitter.js.map
+ dist/jitter/jitter.factory.js.map
+ dist/jitter/no/no.jitter.js.map
+ dist/options.js.map
+ dist/delay/skip-first/skip-first.delay.js.map
+ README.md
+ dist/delay/always/always.delay.d.ts
+ dist/backoff.d.ts
+ dist/delay/delay.base.d.ts
+ dist/delay/delay.factory.d.ts
+ dist/delay/delay.interface.d.ts
+ dist/jitter/full/full.jitter.d.ts
+ dist/jitter/jitter.factory.d.ts
+ dist/jitter/no/no.jitter.d.ts
+ dist/options.d.ts
+ dist/delay/skip-first/skip-first.delay.d.ts
+ package.json
+ CHANGELOG.md
+ conversions.js
+ index.js
+ LICENSE
+ README.md
+ route.js
+ lib/entry-index.js
+ lib/get.js
+ lib/util/glob.js
+ lib/util/hash-to-segments.js
+ lib/index.js
+ lib/memoization.js
+ lib/content/path.js
+ lib/put.js
+ lib/content/read.js
+ lib/content/rm.js
+ lib/rm.js
+ lib/util/tmp.js
+ lib/verify.js
+ lib/content/write.js
+ package.json
+ LICENSE.md
+ README.md
+ LICENSE
+ range.bnf
+ functions/clean.js
+ functions/cmp.js
+ functions/coerce.js
+ classes/comparator.js
+ functions/compare-build.js
+ functions/compare-loose.js
+ functions/compare.js
+ internal/constants.js
+ internal/debug.js
+ functions/diff.js
+ functions/eq.js
+ functions/gt.js
+ functions/gte.js
+ ranges/gtr.js
+ internal/identifiers.js
+ functions/inc.js
+ classes/index.js
+ index.js
+ ranges/intersects.js
+ functions/lt.js
+ functions/lte.js
+ ranges/ltr.js
+ functions/major.js
+ ranges/max-satisfying.js
+ ranges/min-satisfying.js
+ ranges/min-version.js
+ functions/minor.js
+ functions/neq.js
+ ranges/outside.js
+ internal/parse-options.js
+ functions/parse.js
+ functions/patch.js
+ preload.js
+ functions/prerelease.js
+ classes/range.js
+ functions/rcompare.js
+ internal/re.js
+ functions/rsort.js
+ functions/satisfies.js
+ bin/semver.js
+ classes/semver.js
+ ranges/simplify.js
+ functions/sort.js
+ ranges/subset.js
+ ranges/to-comparators.js
+ functions/valid.js
+ ranges/valid.js
+ package.json
+ README.md
+ package.json
+ index.js
+ LICENSE
+ README.md
+ LICENSE
+ lib/constants.js
+ index.js
+ lib/parse.js
+ lib/picomatch.js
+ posix.js
+ lib/scan.js
+ lib/utils.js
+ package.json
+ README.md
+ LICENSE
+ index.js
+ package.json
+ README.md
+ index.d.ts
+ package.json
+ index.d.ts
+ index.js
+ LICENSE-MIT.txt
+ README.md
+ text.js
+ es2015/index.js
+ es2015/text.js
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ package.json
+ .npmignore
+ README.md
+ LICENSE
+ windows.js
+ index.js
+ mode.js
+ test/basic.js
+ nothing.c
+ node_addon_api.gyp
+ node_api.gyp
+ common.gypi
+ except.gypi
+ noexcept.gypi
+ napi-inl.deprecated.h
+ napi-inl.h
+ napi.h
+ tools/check-napi.js
+ tools/clang-format.js
+ tools/conversion.js
+ tools/eslint-format.js
+ index.js
+ package-support.json
+ package.json
+ LICENSE.md
+ README.md
+ tools/README.md
+ LICENSE
+ index.js
+ package.json
+ README.md
+ LICENSE
+ dist/helpers.js
+ dist/index.js
+ dist/index.js
+ package.json
+ dist/helpers.d.ts.map
+ dist/helpers.js.map
+ dist/index.d.ts.map
+ dist/index.js.map
+ README.md
+ dist/helpers.d.ts
+ dist/index.d.ts
+ license
+ index.js
+ package.json
+ readme.md
+ index.d.ts
+ LICENSE
+ bin/node-which
+ which.js
+ package.json
+ CHANGELOG.md
+ README.md
+ LICENSE
+ dist/commonjs/constants.js
+ dist/esm/constants.js
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/constants.d.ts.map
+ dist/esm/constants.d.ts.map
+ dist/commonjs/constants.js.map
+ dist/esm/constants.js.map
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ README.md
+ dist/commonjs/constants.d.ts
+ dist/esm/constants.d.ts
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ LICENSE
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ README.md
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ LICENSE
+ dist/index.js
+ dist/index.js
+ package.json
+ dist/index.d.ts.map
+ dist/index.js.map
+ README.md
+ dist/index.d.ts
+ lib/agents.js
+ lib/dns.js
+ lib/errors.js
+ lib/index.js
+ lib/options.js
+ lib/proxy.js
+ package.json
+ README.md
+ LICENSE
+ dist/cjs/src/bin.js
+ dist/cjs/src/find-made.js
+ dist/mjs/find-made.js
+ dist/cjs/src/index.js
+ dist/mjs/index.js
+ dist/cjs/src/mkdirp-manual.js
+ dist/mjs/mkdirp-manual.js
+ dist/cjs/src/mkdirp-native.js
+ dist/mjs/mkdirp-native.js
+ dist/cjs/src/opts-arg.js
+ dist/mjs/opts-arg.js
+ dist/cjs/src/path-arg.js
+ dist/mjs/path-arg.js
+ dist/cjs/src/use-native.js
+ dist/mjs/use-native.js
+ dist/cjs/package.json
+ dist/mjs/package.json
+ package.json
+ dist/cjs/src/bin.d.ts.map
+ dist/cjs/src/bin.js.map
+ dist/cjs/src/find-made.d.ts.map
+ dist/mjs/find-made.d.ts.map
+ dist/cjs/src/find-made.js.map
+ dist/mjs/find-made.js.map
+ dist/cjs/src/index.d.ts.map
+ dist/mjs/index.d.ts.map
+ dist/cjs/src/index.js.map
+ dist/mjs/index.js.map
+ dist/cjs/src/mkdirp-manual.d.ts.map
+ dist/mjs/mkdirp-manual.d.ts.map
+ dist/cjs/src/mkdirp-manual.js.map
+ dist/mjs/mkdirp-manual.js.map
+ dist/cjs/src/mkdirp-native.d.ts.map
+ dist/mjs/mkdirp-native.d.ts.map
+ dist/cjs/src/mkdirp-native.js.map
+ dist/mjs/mkdirp-native.js.map
+ dist/cjs/src/opts-arg.d.ts.map
+ dist/mjs/opts-arg.d.ts.map
+ dist/cjs/src/opts-arg.js.map
+ dist/mjs/opts-arg.js.map
+ dist/cjs/src/path-arg.d.ts.map
+ dist/mjs/path-arg.d.ts.map
+ dist/cjs/src/path-arg.js.map
+ dist/mjs/path-arg.js.map
+ dist/cjs/src/use-native.d.ts.map
+ dist/mjs/use-native.d.ts.map
+ dist/cjs/src/use-native.js.map
+ dist/mjs/use-native.js.map
+ readme.markdown
+ dist/cjs/src/bin.d.ts
+ dist/cjs/src/find-made.d.ts
+ dist/mjs/find-made.d.ts
+ dist/cjs/src/index.d.ts
+ dist/mjs/index.d.ts
+ dist/cjs/src/mkdirp-manual.d.ts
+ dist/mjs/mkdirp-manual.d.ts
+ dist/cjs/src/mkdirp-native.d.ts
+ dist/mjs/mkdirp-native.d.ts
+ dist/cjs/src/opts-arg.d.ts
+ dist/mjs/opts-arg.d.ts
+ dist/cjs/src/path-arg.d.ts
+ dist/mjs/path-arg.d.ts
+ dist/cjs/src/use-native.d.ts
+ dist/mjs/use-native.d.ts
+ lib/cp/LICENSE
+ lib/cp/errors.js
+ lib/common/get-options.js
+ lib/cp/index.js
+ lib/index.js
+ lib/move-file.js
+ lib/common/node.js
+ lib/cp/polyfill.js
+ lib/readdir-scoped.js
+ lib/with-temp-dir.js
+ package.json
+ LICENSE.md
+ README.md
+ LICENSE
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ README.md
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ LICENSE
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ README.md
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ LICENSE
+ dist/commonjs/create.js
+ dist/esm/create.js
+ dist/commonjs/cwd-error.js
+ dist/esm/cwd-error.js
+ dist/commonjs/extract.js
+ dist/esm/extract.js
+ dist/commonjs/get-write-flag.js
+ dist/esm/get-write-flag.js
+ dist/commonjs/header.js
+ dist/esm/header.js
+ dist/commonjs/index.js
+ dist/esm/index.js
+ dist/commonjs/large-numbers.js
+ dist/esm/large-numbers.js
+ dist/commonjs/list.js
+ dist/esm/list.js
+ dist/commonjs/make-command.js
+ dist/esm/make-command.js
+ dist/commonjs/mkdir.js
+ dist/esm/mkdir.js
+ dist/commonjs/mode-fix.js
+ dist/esm/mode-fix.js
+ dist/commonjs/normalize-unicode.js
+ dist/esm/normalize-unicode.js
+ dist/commonjs/normalize-windows-path.js
+ dist/esm/normalize-windows-path.js
+ dist/commonjs/options.js
+ dist/esm/options.js
+ dist/commonjs/pack.js
+ dist/esm/pack.js
+ dist/commonjs/parse.js
+ dist/esm/parse.js
+ dist/commonjs/path-reservations.js
+ dist/esm/path-reservations.js
+ dist/commonjs/pax.js
+ dist/esm/pax.js
+ dist/commonjs/read-entry.js
+ dist/esm/read-entry.js
+ dist/commonjs/replace.js
+ dist/esm/replace.js
+ dist/commonjs/strip-absolute-path.js
+ dist/esm/strip-absolute-path.js
+ dist/commonjs/strip-trailing-slashes.js
+ dist/esm/strip-trailing-slashes.js
+ dist/commonjs/symlink-error.js
+ dist/esm/symlink-error.js
+ dist/commonjs/types.js
+ dist/esm/types.js
+ dist/commonjs/unpack.js
+ dist/esm/unpack.js
+ dist/commonjs/update.js
+ dist/esm/update.js
+ dist/commonjs/warn-method.js
+ dist/esm/warn-method.js
+ dist/commonjs/winchars.js
+ dist/esm/winchars.js
+ dist/commonjs/write-entry.js
+ dist/esm/write-entry.js
+ dist/commonjs/package.json
+ dist/esm/package.json
+ package.json
+ dist/commonjs/create.d.ts.map
+ dist/esm/create.d.ts.map
+ dist/commonjs/create.js.map
+ dist/esm/create.js.map
+ dist/commonjs/cwd-error.d.ts.map
+ dist/esm/cwd-error.d.ts.map
+ dist/commonjs/cwd-error.js.map
+ dist/esm/cwd-error.js.map
+ dist/commonjs/extract.d.ts.map
+ dist/esm/extract.d.ts.map
+ dist/commonjs/extract.js.map
+ dist/esm/extract.js.map
+ dist/commonjs/get-write-flag.d.ts.map
+ dist/esm/get-write-flag.d.ts.map
+ dist/commonjs/get-write-flag.js.map
+ dist/esm/get-write-flag.js.map
+ dist/commonjs/header.d.ts.map
+ dist/esm/header.d.ts.map
+ dist/commonjs/header.js.map
+ dist/esm/header.js.map
+ dist/commonjs/index.d.ts.map
+ dist/esm/index.d.ts.map
+ dist/commonjs/index.js.map
+ dist/esm/index.js.map
+ dist/commonjs/large-numbers.d.ts.map
+ dist/esm/large-numbers.d.ts.map
+ dist/commonjs/large-numbers.js.map
+ dist/esm/large-numbers.js.map
+ dist/commonjs/list.d.ts.map
+ dist/esm/list.d.ts.map
+ dist/commonjs/list.js.map
+ dist/esm/list.js.map
+ dist/commonjs/make-command.d.ts.map
+ dist/esm/make-command.d.ts.map
+ dist/commonjs/make-command.js.map
+ dist/esm/make-command.js.map
+ dist/commonjs/mkdir.d.ts.map
+ dist/esm/mkdir.d.ts.map
+ dist/commonjs/mkdir.js.map
+ dist/esm/mkdir.js.map
+ dist/commonjs/mode-fix.d.ts.map
+ dist/esm/mode-fix.d.ts.map
+ dist/commonjs/mode-fix.js.map
+ dist/esm/mode-fix.js.map
+ dist/commonjs/normalize-unicode.d.ts.map
+ dist/esm/normalize-unicode.d.ts.map
+ dist/commonjs/normalize-unicode.js.map
+ dist/esm/normalize-unicode.js.map
+ dist/commonjs/normalize-windows-path.d.ts.map
+ dist/esm/normalize-windows-path.d.ts.map
+ dist/commonjs/normalize-windows-path.js.map
+ dist/esm/normalize-windows-path.js.map
+ dist/commonjs/options.d.ts.map
+ dist/esm/options.d.ts.map
+ dist/commonjs/options.js.map
+ dist/esm/options.js.map
+ dist/commonjs/pack.d.ts.map
+ dist/esm/pack.d.ts.map
+ dist/commonjs/pack.js.map
+ dist/esm/pack.js.map
+ dist/commonjs/parse.d.ts.map
+ dist/esm/parse.d.ts.map
+ dist/commonjs/parse.js.map
+ dist/esm/parse.js.map
+ dist/commonjs/path-reservations.d.ts.map
+ dist/esm/path-reservations.d.ts.map
+ dist/commonjs/path-reservations.js.map
+ dist/esm/path-reservations.js.map
+ dist/commonjs/pax.d.ts.map
+ dist/esm/pax.d.ts.map
+ dist/commonjs/pax.js.map
+ dist/esm/pax.js.map
+ dist/commonjs/read-entry.d.ts.map
+ dist/esm/read-entry.d.ts.map
+ dist/commonjs/read-entry.js.map
+ dist/esm/read-entry.js.map
+ dist/commonjs/replace.d.ts.map
+ dist/esm/replace.d.ts.map
+ dist/commonjs/replace.js.map
+ dist/esm/replace.js.map
+ dist/commonjs/strip-absolute-path.d.ts.map
+ dist/esm/strip-absolute-path.d.ts.map
+ dist/commonjs/strip-absolute-path.js.map
+ dist/esm/strip-absolute-path.js.map
+ dist/commonjs/strip-trailing-slashes.d.ts.map
+ dist/esm/strip-trailing-slashes.d.ts.map
+ dist/commonjs/strip-trailing-slashes.js.map
+ dist/esm/strip-trailing-slashes.js.map
+ dist/commonjs/symlink-error.d.ts.map
+ dist/esm/symlink-error.d.ts.map
+ dist/commonjs/symlink-error.js.map
+ dist/esm/symlink-error.js.map
+ dist/commonjs/types.d.ts.map
+ dist/esm/types.d.ts.map
+ dist/commonjs/types.js.map
+ dist/esm/types.js.map
+ dist/commonjs/unpack.d.ts.map
+ dist/esm/unpack.d.ts.map
+ dist/commonjs/unpack.js.map
+ dist/esm/unpack.js.map
+ dist/commonjs/update.d.ts.map
+ dist/esm/update.d.ts.map
+ dist/commonjs/update.js.map
+ dist/esm/update.js.map
+ dist/commonjs/warn-method.d.ts.map
+ dist/esm/warn-method.d.ts.map
+ dist/commonjs/warn-method.js.map
+ dist/esm/warn-method.js.map
+ dist/commonjs/winchars.d.ts.map
+ dist/esm/winchars.d.ts.map
+ dist/commonjs/winchars.js.map
+ dist/esm/winchars.js.map
+ dist/commonjs/write-entry.d.ts.map
+ dist/esm/write-entry.d.ts.map
+ dist/commonjs/write-entry.js.map
+ dist/esm/write-entry.js.map
+ README.md
+ dist/commonjs/create.d.ts
+ dist/esm/create.d.ts
+ dist/commonjs/cwd-error.d.ts
+ dist/esm/cwd-error.d.ts
+ dist/commonjs/extract.d.ts
+ dist/esm/extract.d.ts
+ dist/commonjs/get-write-flag.d.ts
+ dist/esm/get-write-flag.d.ts
+ dist/commonjs/header.d.ts
+ dist/esm/header.d.ts
+ dist/commonjs/index.d.ts
+ dist/esm/index.d.ts
+ dist/commonjs/large-numbers.d.ts
+ dist/esm/large-numbers.d.ts
+ dist/commonjs/list.d.ts
+ dist/esm/list.d.ts
+ dist/commonjs/make-command.d.ts
+ dist/esm/make-command.d.ts
+ dist/commonjs/mkdir.d.ts
+ dist/esm/mkdir.d.ts
+ dist/commonjs/mode-fix.d.ts
+ dist/esm/mode-fix.d.ts
+ dist/commonjs/normalize-unicode.d.ts
+ dist/esm/normalize-unicode.d.ts
+ dist/commonjs/normalize-windows-path.d.ts
+ dist/esm/normalize-windows-path.d.ts
+ dist/commonjs/options.d.ts
+ dist/esm/options.d.ts
+ dist/commonjs/pack.d.ts
+ dist/esm/pack.d.ts
+ dist/commonjs/parse.d.ts
+ dist/esm/parse.d.ts
+ dist/commonjs/path-reservations.d.ts
+ dist/esm/path-reservations.d.ts
+ dist/commonjs/pax.d.ts
+ dist/esm/pax.d.ts
+ dist/commonjs/read-entry.d.ts
+ dist/esm/read-entry.d.ts
+ dist/commonjs/replace.d.ts
+ dist/esm/replace.d.ts
+ dist/commonjs/strip-absolute-path.d.ts
+ dist/esm/strip-absolute-path.d.ts
+ dist/commonjs/strip-trailing-slashes.d.ts
+ dist/esm/strip-trailing-slashes.d.ts
+ dist/commonjs/symlink-error.d.ts
+ dist/esm/symlink-error.d.ts
+ dist/commonjs/types.d.ts
+ dist/esm/types.d.ts
+ dist/commonjs/unpack.d.ts
+ dist/esm/unpack.d.ts
+ dist/commonjs/update.d.ts
+ dist/esm/update.d.ts
+ dist/commonjs/warn-method.d.ts
+ dist/esm/warn-method.d.ts
+ dist/commonjs/winchars.d.ts
+ dist/esm/winchars.d.ts
+ dist/commonjs/write-entry.d.ts
+ dist/esm/write-entry.d.ts
+ gyp/gyp
+ gyp/LICENSE
+ gyp/pylib/packaging/LICENSE
+ LICENSE
+ gyp/pylib/packaging/LICENSE.APACHE
+ gyp/gyp.bat
+ gyp/pylib/packaging/LICENSE.BSD
+ gyp/data/win/large-pdb-shim.cc
+ src/win_delay_load_hook.cc
+ lib/Find-VisualStudio.cs
+ addon.gypi
+ lib/build.js
+ lib/clean.js
+ lib/configure.js
+ lib/create-config-gypi.js
+ lib/download.js
+ eslint.config.js
+ lib/find-node-directory.js
+ lib/find-python.js
+ lib/find-visualstudio.js
+ lib/install.js
+ lib/list.js
+ lib/log.js
+ bin/node-gyp.js
+ lib/node-gyp.js
+ lib/process-release.js
+ lib/rebuild.js
+ lib/remove.js
+ lib/util.js
+ .release-please-manifest.json
+ gyp/.release-please-manifest.json
+ package.json
+ gyp/release-please-config.json
+ release-please-config.json
+ CHANGELOG.md
+ CODE_OF_CONDUCT.md
+ CONTRIBUTING.md
+ gyp/docs/GypVsCMake.md
+ gyp/docs/Hacking.md
+ gyp/docs/InputFormatReference.md
+ gyp/docs/LanguageSpecification.md
+ gyp/docs/README.md
+ README.md
+ SECURITY.md
+ gyp/docs/Testing.md
+ gyp/docs/UserDocumentation.md
+ gyp/data/ninja/build.ninja
+ gyp/pylib/gyp/__init__.py
+ gyp/pylib/gyp/generator/__init__.py
+ gyp/pylib/packaging/__init__.py
+ gyp/pylib/packaging/_elffile.py
+ gyp/pylib/packaging/_manylinux.py
+ gyp/pylib/packaging/_musllinux.py
+ gyp/pylib/packaging/_parser.py
+ gyp/pylib/packaging/_structures.py
+ gyp/pylib/packaging/_tokenizer.py
+ gyp/pylib/gyp/generator/analyzer.py
+ gyp/pylib/gyp/generator/android.py
+ gyp/pylib/gyp/generator/cmake.py
+ gyp/pylib/gyp/common_test.py
+ gyp/pylib/gyp/common.py
+ gyp/pylib/gyp/generator/compile_commands_json.py
+ gyp/pylib/gyp/generator/dump_dependency_json.py
+ gyp/pylib/gyp/easy_xml_test.py
+ gyp/pylib/gyp/easy_xml.py
+ gyp/pylib/gyp/generator/eclipse.py
+ gyp/pylib/gyp/flock_tool.py
+ gyp/gyp_main.py
+ gyp/pylib/gyp/generator/gypd.py
+ gyp/pylib/gyp/generator/gypsh.py
+ gyp/pylib/gyp/input_test.py
+ gyp/pylib/gyp/input.py
+ gyp/pylib/gyp/mac_tool.py
+ gyp/pylib/gyp/generator/make.py
+ gyp/pylib/packaging/markers.py
+ gyp/pylib/packaging/metadata.py
+ gyp/pylib/gyp/msvs_emulation.py
+ gyp/pylib/gyp/generator/msvs_test.py
+ gyp/pylib/gyp/generator/msvs.py
+ gyp/pylib/gyp/MSVSNew.py
+ gyp/pylib/gyp/MSVSProject.py
+ gyp/pylib/gyp/MSVSSettings_test.py
+ gyp/pylib/gyp/MSVSSettings.py
+ gyp/pylib/gyp/MSVSToolFile.py
+ gyp/pylib/gyp/MSVSUserFile.py
+ gyp/pylib/gyp/MSVSUtil.py
+ gyp/pylib/gyp/MSVSVersion.py
+ gyp/pylib/gyp/ninja_syntax.py
+ gyp/pylib/gyp/generator/ninja_test.py
+ gyp/pylib/gyp/generator/ninja.py
+ gyp/pylib/packaging/requirements.py
+ gyp/pylib/gyp/simple_copy.py
+ gyp/pylib/packaging/specifiers.py
+ gyp/pylib/packaging/tags.py
+ gyp/test_gyp.py
+ gyp/pylib/packaging/utils.py
+ gyp/pylib/packaging/version.py
+ gyp/pylib/gyp/win_tool.py
+ gyp/pylib/gyp/xcode_emulation_test.py
+ gyp/pylib/gyp/xcode_emulation.py
+ gyp/pylib/gyp/xcode_ninja.py
+ gyp/pylib/gyp/generator/xcode_test.py
+ gyp/pylib/gyp/generator/xcode.py
+ gyp/pylib/gyp/xcodeproj_file.py
+ gyp/pylib/gyp/xml_fix.py
+ macOS_Catalina_acid_test.sh
+ gyp/pyproject.toml
+ gyp/pylib/packaging/py.typed
+
++ node-addon-api@8.0.0
++ node-api-headers@1.5.0
++ node-gyp@11.2.0
+
+94 packages installed [588.00ms]
+
+make[1]: Entering directory '/bun/test/napi/napi-app/build'
+  CC(target) Debug/obj.target/nothing/node_modules/node-addon-api/nothing.o
+rm -f Debug/obj.target/node_modules/node-addon-api/nothing.a Debug/obj.target/node_modules/node-addon-api/nothing.a.ar-file-list; mkdir -p `dirname Debug/obj.target/node_modules/node-addon-api/nothing.a`
+/nix/store/dbfzdkyghh88s4siw6006c0hlipm5xjg-llvm-21.1.8/bin/llvm-ar crs Debug/obj.target/node_modules/node-addon-api/nothing.a @Debug/obj.target/node_modules/node-addon-api/nothing.a.ar-file-list
+  COPY Debug/nothing.a
+  CC(target) Debug/obj.target/test_delete_ref_in_finalizer_experimental/test_delete_ref_in_finalizer_experimental.o
+  SOLINK_MODULE(target) Debug/obj.target/test_delete_ref_in_finalizer_experimental.node
+  COPY Debug/test_delete_ref_in_finalizer_experimental.node
+make[1]: Leaving directory '/bun/test/napi/napi-app/build'
+bun install v1.4.1 (adc354d99)
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/native-plugins_2FXAoV/build'
+  CC(target) Release/obj.target/good_plugin/good_plugin.o
+  CC(target) Release/obj.target/xXx123_foo_counter_321xXx/plugin.o
+  SOLINK_MODULE(target) Release/obj.target/good_plugin.node
+  COPY Release/good_plugin.node
+  SOLINK_MODULE(target) Release/obj.target/xXx123_foo_counter_321xXx.node
+  COPY Release/xXx123_foo_counter_321xXx.node
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/native-plugins_2FXAoV/build'
+
++ @types/bun@1.4.0
++ node-gyp@10.2.0 (v13.0.1 available)
++ typescript@5.9.3 (v7.0.2 available)
+
+94 packages installed [2.23s]
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/native-plugins_2FXAoV/build'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/native-plugins_2FXAoV/build'
+tempdir: /tmp/nix-shell.Y2x5HH/native-plugins_2FXAoV
+bun install v1.4.1 (adc354d99)
+
++ @types/bun@1.4.0
++ node-gyp@10.2.0 (v13.0.1 available)
++ typescript@5.9.3 (v7.0.2 available)
+
+94 packages installed [126.00ms]
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/uv-tests_rnThVU/build'
+  CC(target) Release/obj.target/uv_test/uv_impl.o
+  SOLINK_MODULE(target) Release/obj.target/uv_test.node
+  COPY Release/uv_test.node
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/uv-tests_rnThVU/build'
+bun install v1.4.1 (adc354d99)
+
+make[1]: Entering directory '/bun/test/napi/napi-app/build'
+  CC(target) Debug/obj.target/nothing/node_modules/node-addon-api/nothing.o
+rm -f Debug/obj.target/node_modules/node-addon-api/nothing.a Debug/obj.target/node_modules/node-addon-api/nothing.a.ar-file-list; mkdir -p `dirname Debug/obj.target/node_modules/node-addon-api/nothing.a`
+/nix/store/dbfzdkyghh88s4siw6006c0hlipm5xjg-llvm-21.1.8/bin/llvm-ar crs Debug/obj.target/node_modules/node-addon-api/nothing.a @Debug/obj.target/node_modules/node-addon-api/nothing.a.ar-file-list
+  COPY Debug/nothing.a
+  CC(target) Debug/obj.target/async_finalize_addon/async_finalize_addon.o
+  CXX(target) Debug/obj.target/constructor_order_addon/constructor_order_addon.o
+  CC(target) Debug/obj.target/ffi_addon_1/ffi_addon_1.o
+  CC(target) Debug/obj.target/ffi_addon_2/ffi_addon_2.o
+  CXX(target) Debug/obj.target/napitests/main.o
+  CXX(target) Debug/obj.target/napitests/async_tests.o
+  CXX(target) Debug/obj.target/napitests/class_test.o
+  CXX(target) Debug/obj.target/napitests/conversion_tests.o
+  CXX(target) Debug/obj.target/napitests/js_test_helpers.o
+  CXX(target) Debug/obj.target/napitests/standalone_tests.o
+  CXX(target) Debug/obj.target/napitests/wrap_tests.o
+  CXX(target) Debug/obj.target/napitests/get_string_tests.o
+  CXX(target) Debug/obj.target/null_addon/null_addon.o
+  CXX(target) Debug/obj.target/nullptr_addon/null_addon.o
+  CXX(target) Debug/obj.target/reentrant_register_addon/reentrant_register_addon.o
+  CC(target) Debug/obj.target/second_addon/second_addon.o
+  CC(target) Debug/obj.target/test_async_cleanup_hook_remove_nonexistent/test_async_cleanup_hook_remove_nonexistent.o
+  CC(target) Debug/obj.target/test_async_cleanup_hook_tsfn_release/test_async_cleanup_hook_tsfn_release.o
+  CC(target) Debug/obj.target/test_cleanup_hook_duplicates/test_cleanup_hook_duplicates.o
+  CC(target) Debug/obj.target/test_cleanup_hook_duplicates_release/test_cleanup_hook_duplicates_release.o
+  CC(target) Debug/obj.target/test_cleanup_hook_mixed_order/test_cleanup_hook_mixed_order.o
+  CC(target) Debug/obj.target/test_cleanup_hook_modification_during_iteration/test_cleanup_hook_modification_during_iteration.o
+  CC(target) Debug/obj.target/test_cleanup_hook_order/test_cleanup_hook_order.o
+  CC(target) Debug/obj.target/test_cleanup_hook_remove_nonexistent/test_cleanup_hook_remove_nonexistent.o
+  CC(target) Debug/obj.target/test_create_reference_primitive_v10/test_create_reference_primitive.o
+  CC(target) Debug/obj.target/test_create_reference_primitive_v8/test_create_reference_primitive.o
+  CC(target) Debug/obj.target/test_delete_ref_in_finalizer_experimental/test_delete_ref_in_finalizer_experimental.o
+  CC(target) Debug/obj.target/test_finalizer_create_error/test_finalizer_create_error.o
+  CC(target) Debug/obj.target/test_finalizer_iterator_invalidation/test_finalizer_iterator_invalidation.o
+  CC(target) Debug/obj.target/test_last_error_cannot_run_js/test_last_error_cannot_run_js.o
+  CC(target) Debug/obj.target/test_reference_unref_in_finalizer/test_reference_unref_in_finalizer.o
+  CC(target) Debug/obj.target/test_reference_unref_in_finalizer_experimental/test_reference_unref_in_finalizer_experimental.o
+  CC(target) Debug/obj.target/test_wrap_cleanup_order/test_wrap_cleanup_order.o
+  CXX(target) Debug/obj.target/throw_addon/null_addon.o
+  CXX(target) Debug/obj.target/undefined_addon/null_addon.o
+  SOLINK_MODULE(target) Debug/obj.target/async_finalize_addon.node
+  SOLINK_MODULE(target) Debug/obj.target/constructor_order_addon.node
+  SOLINK_MODULE(target) Debug/obj.target/ffi_addon_1.node
+  SOLINK_MODULE(target) Debug/obj.target/ffi_addon_2.node
+  SOLINK_MODULE(target) Debug/obj.target/null_addon.node
+  SOLINK_MODULE(target) Debug/obj.target/nullptr_addon.node
+  SOLINK_MODULE(target) Debug/obj.target/reentrant_register_addon.node
+  SOLINK_MODULE(target) Debug/obj.target/second_addon.node
+  SOLINK_MODULE(target) Debug/obj.target/test_async_cleanup_hook_remove_nonexistent.node
+  SOLINK_MODULE(target) Debug/obj.target/test_async_cleanup_hook_tsfn_release.node
+  SOLINK_MODULE(target) Debug/obj.target/test_cleanup_hook_duplicates.node
+  SOLINK_MODULE(target) Debug/obj.target/test_cleanup_hook_duplicates_release.node
+  SOLINK_MODULE(target) Debug/obj.target/test_cleanup_hook_mixed_order.node
+  SOLINK_MODULE(target) Debug/obj.target/test_cleanup_hook_modification_during_iteration.node
+  SOLINK_MODULE(target) Debug/obj.target/test_cleanup_hook_order.node
+  SOLINK_MODULE(target) Debug/obj.target/test_cleanup_hook_remove_nonexistent.node
+  SOLINK_MODULE(target) Debug/obj.target/test_create_reference_primitive_v10.node
+  SOLINK_MODULE(target) Debug/obj.target/test_create_reference_primitive_v8.node
+  SOLINK_MODULE(target) Debug/obj.target/test_delete_ref_in_finalizer_experimental.node
+  SOLINK_MODULE(target) Debug/obj.target/test_finalizer_create_error.node
+  SOLINK_MODULE(target) Debug/obj.target/test_finalizer_iterator_invalidation.node
+  SOLINK_MODULE(target) Debug/obj.target/test_last_error_cannot_run_js.node
+  SOLINK_MODULE(target) Debug/obj.target/test_reference_unref_in_finalizer.node
+  SOLINK_MODULE(target) Debug/obj.target/test_reference_unref_in_finalizer_experimental.node
+  SOLINK_MODULE(target) Debug/obj.target/test_wrap_cleanup_order.node
+  SOLINK_MODULE(target) Debug/obj.target/undefined_addon.node
+  SOLINK_MODULE(target) Debug/obj.target/throw_addon.node
+  COPY Debug/async_finalize_addon.node
+  COPY Debug/constructor_order_addon.node
+  COPY Debug/ffi_addon_1.node
+  COPY Debug/ffi_addon_2.node
+  COPY Debug/null_addon.node
+  COPY Debug/nullptr_addon.node
+  COPY Debug/reentrant_register_addon.node
+  COPY Debug/second_addon.node
+  COPY Debug/test_async_cleanup_hook_remove_nonexistent.node
+  COPY Debug/test_async_cleanup_hook_tsfn_release.node
+  COPY Debug/test_cleanup_hook_duplicates.node
+  COPY Debug/test_cleanup_hook_duplicates_release.node
+  COPY Debug/test_cleanup_hook_mixed_order.node
+  COPY Debug/test_cleanup_hook_modification_during_iteration.node
+  COPY Debug/test_cleanup_hook_order.node
+  COPY Debug/test_cleanup_hook_remove_nonexistent.node
+  COPY Debug/test_create_reference_primitive_v10.node
+  COPY Debug/test_create_reference_primitive_v8.node
+  COPY Debug/test_delete_ref_in_finalizer_experimental.node
+  COPY Debug/test_finalizer_create_error.node
+  COPY Debug/test_finalizer_iterator_invalidation.node
+  COPY Debug/test_last_error_cannot_run_js.node
+  COPY Debug/test_reference_unref_in_finalizer.node
+  COPY Debug/test_reference_unref_in_finalizer_experimental.node
+  COPY Debug/test_wrap_cleanup_order.node
+  COPY Debug/throw_addon.node
+  COPY Debug/undefined_addon.node
+  SOLINK_MODULE(target) Debug/obj.target/napitests.node
+  COPY Debug/napitests.node
+make[1]: Leaving directory '/bun/test/napi/napi-app/build'
+
+Checked 109 installs across 95 packages (no changes) [3.88s]
+Bundled 18 modules in 190ms
+
+  main.js                                                         59.96 KB  (entry point)
+  napitests-n57hzqqv.node                                         2.0 MB    (asset)
+  second_addon-ja8a6976.node                                      13.32 KB  (asset)
+  async_finalize_addon-pq7br08w.node                              14.18 KB  (asset)
+  test_reference_unref_in_finalizer-nqaktdg9.node                 20.74 KB  (asset)
+  test_reference_unref_in_finalizer_experimental-r5xvrk0n.node    18.1 KB   (asset)
+  constructor_order_addon-9kekmhwm.node                           10.67 KB  (asset)
+  test_cleanup_hook_order-qy79gkyw.node                           11.15 KB  (asset)
+  test_wrap_cleanup_order-za3mvvpr.node                           14.42 KB  (asset)
+  test_cleanup_hook_remove_nonexistent-t0ejy982.node              11.50 KB  (asset)
+  test_async_cleanup_hook_remove_nonexistent-4v5bqnsg.node        10.90 KB  (asset)
+  test_async_cleanup_hook_tsfn_release-wgm0wpf4.node              14.77 KB  (asset)
+  test_cleanup_hook_duplicates-q7bas59n.node                      11.34 KB  (asset)
+  test_cleanup_hook_mixed_order-c49jw60n.node                     12.74 KB  (asset)
+  test_cleanup_hook_modification_during_iteration-yb6ztaxd.node   13.41 KB  (asset)
+  test_create_reference_primitive_v10-yphj958y.node               12.93 KB  (asset)
+  test_create_reference_primitive_v8-q34yyebx.node                12.93 KB  (asset)
+
+Bundled 18 modules in 206ms
+
+  main.js                                                         59.86 KB  (entry point)
+  napitests-n57hzqqv.node                                         2.0 MB    (asset)
+  second_addon-ja8a6976.node                                      13.32 KB  (asset)
+  async_finalize_addon-pq7br08w.node                              14.18 KB  (asset)
+  test_reference_unref_in_finalizer-nqaktdg9.node                 20.74 KB  (asset)
+  test_reference_unref_in_finalizer_experimental-r5xvrk0n.node    18.1 KB   (asset)
+  constructor_order_addon-9kekmhwm.node                           10.67 KB  (asset)
+  test_cleanup_hook_order-qy79gkyw.node                           11.15 KB  (asset)
+  test_wrap_cleanup_order-za3mvvpr.node                           14.42 KB  (asset)
+  test_cleanup_hook_remove_nonexistent-t0ejy982.node              11.50 KB  (asset)
+  test_async_cleanup_hook_remove_nonexistent-4v5bqnsg.node        10.90 KB  (asset)
+  test_async_cleanup_hook_tsfn_release-wgm0wpf4.node              14.77 KB  (asset)
+  test_cleanup_hook_duplicates-q7bas59n.node                      11.34 KB  (asset)
+  test_cleanup_hook_mixed_order-c49jw60n.node                     12.74 KB  (asset)
+  test_cleanup_hook_modification_during_iteration-yb6ztaxd.node   13.41 KB  (asset)
+  test_create_reference_primitive_v10-yphj958y.node               12.93 KB  (asset)
+  test_create_reference_primitive_v8-q34yyebx.node                12.93 KB  (asset)
+
+ [198ms]  bundle  18 modules
+[4.198s] compile  main
+Bundled 18 modules in 188ms
+
+  main.js                                                         59.65 KB  (entry point)
+  napitests-n57hzqqv.node                                         2.0 MB    (asset)
+  second_addon-ja8a6976.node                                      13.32 KB  (asset)
+  async_finalize_addon-pq7br08w.node                              14.18 KB  (asset)
+  test_reference_unref_in_finalizer-nqaktdg9.node                 20.74 KB  (asset)
+  test_reference_unref_in_finalizer_experimental-r5xvrk0n.node    18.1 KB   (asset)
+  constructor_order_addon-9kekmhwm.node                           10.67 KB  (asset)
+  test_cleanup_hook_order-qy79gkyw.node                           11.15 KB  (asset)
+  test_wrap_cleanup_order-za3mvvpr.node                           14.42 KB  (asset)
+  test_cleanup_hook_remove_nonexistent-t0ejy982.node              11.50 KB  (asset)
+  test_async_cleanup_hook_remove_nonexistent-4v5bqnsg.node        10.90 KB  (asset)
+  test_async_cleanup_hook_tsfn_release-wgm0wpf4.node              14.77 KB  (asset)
+  test_cleanup_hook_duplicates-q7bas59n.node                      11.34 KB  (asset)
+  test_cleanup_hook_mixed_order-c49jw60n.node                     12.74 KB  (asset)
+  test_cleanup_hook_modification_during_iteration-yb6ztaxd.node   13.41 KB  (asset)
+  test_create_reference_primitive_v10-yphj958y.node               12.93 KB  (asset)
+  test_create_reference_primitive_v8-q34yyebx.node                12.93 KB  (asset)
+
+Bundled 18 modules in 187ms
+
+  main.js                                                         59.70 KB  (entry point)
+  napitests-n57hzqqv.node                                         2.0 MB    (asset)
+  second_addon-ja8a6976.node                                      13.32 KB  (asset)
+  async_finalize_addon-pq7br08w.node                              14.18 KB  (asset)
+  test_reference_unref_in_finalizer-nqaktdg9.node                 20.74 KB  (asset)
+  test_reference_unref_in_finalizer_experimental-r5xvrk0n.node    18.1 KB   (asset)
+  constructor_order_addon-9kekmhwm.node                           10.67 KB  (asset)
+  test_cleanup_hook_order-qy79gkyw.node                           11.15 KB  (asset)
+  test_wrap_cleanup_order-za3mvvpr.node                           14.42 KB  (asset)
+  test_cleanup_hook_remove_nonexistent-t0ejy982.node              11.50 KB  (asset)
+  test_async_cleanup_hook_remove_nonexistent-4v5bqnsg.node        10.90 KB  (asset)
+  test_async_cleanup_hook_tsfn_release-wgm0wpf4.node              14.77 KB  (asset)
+  test_cleanup_hook_duplicates-q7bas59n.node                      11.34 KB  (asset)
+  test_cleanup_hook_mixed_order-c49jw60n.node                     12.74 KB  (asset)
+  test_cleanup_hook_modification_during_iteration-yb6ztaxd.node   13.41 KB  (asset)
+  test_create_reference_primitive_v10-yphj958y.node               12.93 KB  (asset)
+  test_create_reference_primitive_v8-q34yyebx.node                12.93 KB  (asset)
+
+ [188ms]  bundle  18 modules
+[4.296s] compile  main
+bun install v1.4.1 (adc354d99)
+
++ node-gyp@11.2.0
+
+90 packages installed [264.00ms]
+bun install v1.4.1 (adc354d99)
+
++ node-gyp@11.2.0
+
+90 packages installed [80.00ms]
+bun install v1.4.1 (adc354d99)
+
++ node-gyp@11.2.0
+
+90 packages installed [80.00ms]
+bun install v1.4.1 (adc354d99)
+
++ node-gyp@11.2.0
+
+90 packages installed [80.00ms]
+build v8-module with bun in release mode stdout:
+
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/bun.test.SRKjqn/build'
+  CXX(target) Release/obj.target/v8tests/main.o
+  SOLINK_MODULE(target) Release/obj.target/v8tests.node
+  COPY Release/v8tests.node
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/bun.test.SRKjqn/build'
+
+build v8-module with bun in release mode stderr:
+gyp info it worked if it ends with ok
+gyp info using node-gyp@11.2.0
+gyp info using node@26.3.0 | linux | arm64
+gyp info find Python using Python version 3.14.7 found at "/nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7/bin/python3"
+gyp info spawn /nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7/bin/python3
+gyp info spawn args [
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.SRKjqn/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.SRKjqn/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.SRKjqn/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/root/.cache/node-gyp/26.3.0/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/root/.cache/node-gyp/26.3.0',
+gyp info spawn args '-Dnode_gyp_dir=/tmp/nix-shell.Y2x5HH/bun.test.SRKjqn/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/root/.cache/node-gyp/26.3.0/<(target_arch)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=/tmp/nix-shell.Y2x5HH/bun.test.SRKjqn',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+gyp info spawn make
+gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build', '--jobs', 10 ]
+../main.cpp:2162:1: warning: cast from 'void (*)(Local<Object>, Local<Value>, Local<Context>)' to 'node::addon_context_register_func' (aka 'void (*)(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void *)') converts to incompatible function type [-Wcast-function-type-mismatch]
+ 2162 | NODE_MODULE_CONTEXT_AWARE(NODE_GYP_MODULE_NAME, initialize)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/.cache/node-gyp/26.3.0/include/node/node.h:1354:3: note: expanded from macro 'NODE_MODULE_CONTEXT_AWARE'
+ 1354 |   NODE_MODULE_CONTEXT_AWARE_X(modname, regfunc, NULL, 0)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/.cache/node-gyp/26.3.0/include/node/node.h:1336:7: note: expanded from macro 'NODE_MODULE_CONTEXT_AWARE_X'
+ 1336 |       (node::addon_context_register_func) (regfunc),                  \
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+gyp info ok 
+
+build v8-module with bun in debug mode stdout:
+
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/bun.test.Xl0EJ1/build'
+  CXX(target) Debug/obj.target/v8tests/main.o
+  SOLINK_MODULE(target) Debug/obj.target/v8tests.node
+  COPY Debug/v8tests.node
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/bun.test.Xl0EJ1/build'
+
+build v8-module with bun in debug mode stderr:
+gyp info it worked if it ends with ok
+gyp info using node-gyp@11.2.0
+gyp info using node@26.3.0 | linux | arm64
+gyp info find Python using Python version 3.14.7 found at "/nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7/bin/python3"
+gyp info spawn /nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7/bin/python3
+gyp info spawn args [
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.Xl0EJ1/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.Xl0EJ1/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.Xl0EJ1/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/root/.cache/node-gyp/26.3.0/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/root/.cache/node-gyp/26.3.0',
+gyp info spawn args '-Dnode_gyp_dir=/tmp/nix-shell.Y2x5HH/bun.test.Xl0EJ1/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/root/.cache/node-gyp/26.3.0/<(target_arch)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=/tmp/nix-shell.Y2x5HH/bun.test.Xl0EJ1',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+gyp info spawn make
+gyp info spawn args [ 'BUILDTYPE=Debug', '-C', 'build', '--jobs', 10 ]
+../main.cpp:2162:1: warning: cast from 'void (*)(Local<Object>, Local<Value>, Local<Context>)' to 'node::addon_context_register_func' (aka 'void (*)(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void *)') converts to incompatible function type [-Wcast-function-type-mismatch]
+ 2162 | NODE_MODULE_CONTEXT_AWARE(NODE_GYP_MODULE_NAME, initialize)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/.cache/node-gyp/26.3.0/include/node/node.h:1354:3: note: expanded from macro 'NODE_MODULE_CONTEXT_AWARE'
+ 1354 |   NODE_MODULE_CONTEXT_AWARE_X(modname, regfunc, NULL, 0)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/.cache/node-gyp/26.3.0/include/node/node.h:1336:7: note: expanded from macro 'NODE_MODULE_CONTEXT_AWARE_X'
+ 1336 |       (node::addon_context_register_func) (regfunc),                  \
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+gyp info ok 
+
+build v8-module with node in release mode stdout:
+
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/bun.test.bA6bbc/build'
+  CXX(target) Release/obj.target/v8tests/main.o
+  SOLINK_MODULE(target) Release/obj.target/v8tests.node
+  COPY Release/v8tests.node
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/bun.test.bA6bbc/build'
+
+build v8-module with node in release mode stderr:
+gyp info it worked if it ends with ok
+gyp info using node-gyp@11.2.0
+gyp info using node@26.3.0 | linux | arm64
+gyp info find Python using Python version 3.14.7 found at "/nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7/bin/python3"
+gyp info spawn /nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7/bin/python3
+gyp info spawn args [
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.bA6bbc/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.bA6bbc/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.bA6bbc/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/root/.cache/node-gyp/26.3.0/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/root/.cache/node-gyp/26.3.0',
+gyp info spawn args '-Dnode_gyp_dir=/tmp/nix-shell.Y2x5HH/bun.test.bA6bbc/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/root/.cache/node-gyp/26.3.0/<(target_arch)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=/tmp/nix-shell.Y2x5HH/bun.test.bA6bbc',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+gyp info spawn make
+gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build', '--jobs', 10 ]
+../main.cpp:2162:1: warning: cast from 'void (*)(Local<Object>, Local<Value>, Local<Context>)' to 'node::addon_context_register_func' (aka 'void (*)(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void *)') converts to incompatible function type [-Wcast-function-type-mismatch]
+ 2162 | NODE_MODULE_CONTEXT_AWARE(NODE_GYP_MODULE_NAME, initialize)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/.cache/node-gyp/26.3.0/include/node/node.h:1354:3: note: expanded from macro 'NODE_MODULE_CONTEXT_AWARE'
+ 1354 |   NODE_MODULE_CONTEXT_AWARE_X(modname, regfunc, NULL, 0)
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/.cache/node-gyp/26.3.0/include/node/node.h:1336:7: note: expanded from macro 'NODE_MODULE_CONTEXT_AWARE_X'
+ 1336 |       (node::addon_context_register_func) (regfunc),                  \
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+gyp info ok 
+
+build bad-modules with node in release mode stdout:
+
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/bun.test.Kv2lEO/build'
+  CXX(target) Release/obj.target/mismatched_abi_version/mismatched_abi_version.o
+  CXX(target) Release/obj.target/no_entrypoint/no_entrypoint.o
+  SOLINK_MODULE(target) Release/obj.target/no_entrypoint.node
+  SOLINK_MODULE(target) Release/obj.target/mismatched_abi_version.node
+  COPY Release/no_entrypoint.node
+  COPY Release/mismatched_abi_version.node
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/bun.test.Kv2lEO/build'
+
+build bad-modules with node in release mode stderr:
+gyp info it worked if it ends with ok
+gyp info using node-gyp@11.2.0
+gyp info using node@26.3.0 | linux | arm64
+gyp info find Python using Python version 3.14.7 found at "/nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7/bin/python3"
+gyp info spawn /nix/store/3inr3nxzqarhb9rh1z7s2s20j8c0395h-python3-3.14.7/bin/python3
+gyp info spawn args [
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.Kv2lEO/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.Kv2lEO/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/nix-shell.Y2x5HH/bun.test.Kv2lEO/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/root/.cache/node-gyp/26.3.0/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/root/.cache/node-gyp/26.3.0',
+gyp info spawn args '-Dnode_gyp_dir=/tmp/nix-shell.Y2x5HH/bun.test.Kv2lEO/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/root/.cache/node-gyp/26.3.0/<(target_arch)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=/tmp/nix-shell.Y2x5HH/bun.test.Kv2lEO',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+gyp info spawn make
+gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build', '--jobs', 10 ]
+gyp info ok 
+
+bun install v1.4.1 (adc354d99)
+
++ node-gyp@11.2.0 (v13.0.1 available)
+
+88 packages installed [382.00ms]
+bun install v1.4.1 (adc354d99)
+
++ node-gyp@11.2.0 (v13.0.1 available)
+
+88 packages installed [86.00ms]
+bun install v1.4.1 (adc354d99)
+
++ node-gyp@11.2.0 (v13.0.1 available)
+
+88 packages installed [86.00ms]
+bun test v1.4.1 (adc354d99)
+WebSocket opened
+WebSocket closed
+WebSocket opened
+WebSocket closed
+WebSocket opened
+WebSocket closed
+WebSocket opened
+WebSocket closed
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket opened
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+WebSocket closed
+ [149ms]  bundle  2 modules
+ [179ms]  bundle  2 modules
+// ../bun.test.OFWfrR/index.js
+console.log("hello world");
+ [194ms]  bundle  1 modules
+[3.016s] compile  /tmp/nix-shell.Y2x5HH/bun.test.rtkLo9/bun-build-outfile2/b/u/n/index.exe
+[3.018s] compile  /tmp/nix-shell.Y2x5HH/bun.test.PruFZm/bun-build-outfile/index.exe
+84
+84
+[4.248s] compile  /tmp/nix-shell.Y2x5HH/bun-build-dirname-filename_aHVo8X/exe.exe
+tempdir /tmp/nix-shell.Y2x5HH/native-plugins_MRHL67
+bun install v1.4.1 (adc354d99)
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/native-plugins_MRHL67/build'
+  CXX(target) Release/obj.target/not_a_plugin/not_a_plugin.o
+  CXX(target) Release/obj.target/xXx123_foo_counter_321xXx/plugin.o
+  SOLINK_MODULE(target) Release/obj.target/not_a_plugin.node
+  COPY Release/not_a_plugin.node
+  SOLINK_MODULE(target) Release/obj.target/xXx123_foo_counter_321xXx.node
+  COPY Release/xXx123_foo_counter_321xXx.node
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/native-plugins_MRHL67/build'
+
++ @types/bun@1.4.0
++ node-gyp@10.2.0 (v13.0.1 available)
++ typescript@5.9.3 (v7.0.2 available)
+
+94 packages installed [640.00ms]
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/native-plugins_MRHL67/build'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/native-plugins_MRHL67/build'
+bun install v1.4.1 (adc354d99)
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/native-plugins_MRHL67/build'
+  CXX(target) Release/obj.target/not_a_plugin/not_a_plugin.o
+  CXX(target) Release/obj.target/xXx123_foo_counter_321xXx/plugin.o
+  SOLINK_MODULE(target) Release/obj.target/not_a_plugin.node
+  COPY Release/not_a_plugin.node
+  SOLINK_MODULE(target) Release/obj.target/xXx123_foo_counter_321xXx.node
+  COPY Release/xXx123_foo_counter_321xXx.node
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/native-plugins_MRHL67/build'
+
+Checked 104 installs across 95 packages (no changes) [455.00ms]
+make[1]: Entering directory '/tmp/nix-shell.Y2x5HH/native-plugins_MRHL67/build'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/nix-shell.Y2x5HH/native-plugins_MRHL67/build'
+Memory growth after 100000 reset() calls: 0.81 MB
+Memory growth after 100000 reset() calls: -0.20 MB
+{"result":{},"id":1}
+{"result":{},"id":2}
+{"result":{},"id":3}
+{"result":{},"id":4}
+{"result":{},"id":5}
+{"method":"HTTPServer.listen","params":{"serverId":1,"url":"http://localhost:39569/","startTime":1787672702373}}
+{"method":"HTTPServer.serverRoutesUpdated","params":{"serverId":1,"hotReloadId":0,"routes":[{"routeId":0,"path":"/","type":"api","scriptLine":-1},{"routeId":1,"path":"/api/users","type":"api","scriptLine":-1},{"routeId":2,"path":"/api/posts","type":"api","scriptLine":-1},{"routeId":3,"path":"/stop","type":"api","scriptLine":-1},{"routeId":4,"path":"/html","type":"html","scriptLine":-1,"filePath":"/tmp/nix-shell.Y2x5HH/http-server-inspector-testWHhKx7/index.html"}]}}
+{"method":"Bun.canReload"}
+{"method":"HTTPServer.serverRoutesUpdated","params":{"serverId":1,"hotReloadId":1,"routes":[{"routeId":0,"path":"/","type":"api","scriptLine":-1},{"routeId":1,"path":"/api/users","type":"api","scriptLine":-1},{"routeId":2,"path":"/api/posts","type":"api","scriptLine":-1},{"routeId":3,"path":"/api/posts/updated","type":"api","scriptLine":-1},{"routeId":4,"path":"/stop","type":"api","scriptLine":-1},{"routeId":5,"path":"/html","type":"html","scriptLine":-1,"filePath":"/tmp/nix-shell.Y2x5HH/http-server-inspector-testWHhKx7/index.html"}]}}
+Stopping server
+{"method":"Console.messageAdded","params":{"message":{"source":"console-api","level":"log","text":"Stopping server","type":"log","line":22,"column":18,"url":"/tmp/nix-shell.Y2x5HH/http-server-inspector-testWHhKx7/server.ts","repeatCount":1,"timestamp":1787672702.4172316,"parameters":[{"type":"string","value":"Stopping server"}],"stackTrace":{"callFrames":[{"functionName":"/stop","url":"/tmp/nix-shell.Y2x5HH/http-server-inspector-testWHhKx7/server.ts","scriptId":"2","lineNumber":22,"columnNumber":18}]}}}}
+{"method":"HTTPServer.close","params":{"serverId":1,"timestamp":1787672702451}}
+{
+  tempdir: "/tmp/nix-shell.Y2x5HH/http-server-inspector-testWHhKx7",
+}
+dir /tmp/nix-shell.Y2x5HH/bun-run-test💥'"​
+
+
+Text length: 1118890
+{
+  dir: "/tmp/nix-shell.Y2x5HH/require-cache-bug-leak-1_XnshtF",
+}
+Text length: 100057
+{
+  dir: "/tmp/nix-shell.Y2x5HH/require-cache-bug-leak-4_ajmLrz",
+}
+Text length: 100057
+This module has been evaluated!
+=== PROCESS OUTPUT ===
+Exit code: 0
+
+=== STDOUT ===
+ProcessEnv {
+  "����������": undefined,
+  PATH: "/usr/bin:/bin",
+  BUN_DEBUG_QUIET_LOGS: "1",
+  OOGA: "laskdjflsdf",
+  TZ: undefined,
+  NODE_TLS_REJECT_UNAUTHORIZED: undefined,
+  BUN_CONFIG_VERBOSE_FETCH: undefined,
+  HTTP_PROXY: undefined,
+  http_proxy: undefined,
+  HTTPS_PROXY: undefined,
+  https_proxy: undefined,
+  NO_PROXY: undefined,
+  no_proxy: undefined,
+}
+============================================================
+Bun Debug v1.4.1 (adc354d99) Linux arm64
+Linux Kernel v6.12.76 | glibc v2.42
+CPU: neon fp aes crc32 atomics
+Args: "/bun/build/debug/bun-debug" "/bun/test/cli/run/fixture-crash.js" "panic"
+Features: Bun.stderr(2) jsc tsconfig(3) tsconfig_paths 
+Builtins: "bun:internal-for-testing" "bun:main" 
+
+Elapsed: 544ms | User: 579ms | Sys: 12ms
+RSS: 120.77 MB | Peak: 1.90 GB | Commit: 19.73 MB | Faults: 0 | Machine: 12.53 GB
+
+panic(main thread): invoked crashByPanic() handler
+oh no: Bun has crashed. This indicates a bug in Bun, not your code.
+
+To send a redacted crash report to Bun's team,
+please file a GitHub issue using the link below:
+
+ http://localhost:37221/1.4.1/La2adc354dgGigggCm/qk0G+hyrpH2uivpHu5j44GuqkupHusjk0G_mq5nwJmmq+vJ24jvlL+vkvlLmpxiwLuvyiwL+hqpoEupxzoEmyuzoEA0eNrLzCvLz05NUUguSizOcKoMSMzLTNbQVMhIzEvJSS0CAK/LCxc
+
+
+============================================================
+Bun Debug v1.4.1 (adc354d99) Linux arm64
+Linux Kernel v6.12.76 | glibc v2.42
+CPU: neon fp aes crc32 atomics
+Args: "/bun/build/debug/bun-debug" "/bun/test/cli/run/fixture-crash.js" "segfault"
+Features: Bun.stderr(2) jsc tsconfig(3) tsconfig_paths 
+Builtins: "bun:internal-for-testing" "bun:main" 
+
+Elapsed: 544ms | User: 573ms | Sys: 8ms
+RSS: 120.66 MB | Peak: 1.90 GB | Commit: 19.73 MB | Faults: 0 | Machine: 12.53 GB
+
+panic(main thread): Segmentation fault at address 0xDEADBEEF
+oh no: Bun has crashed. This indicates a bug in Bun, not your code.
+
+To send a redacted crash report to Bun's team,
+please file a GitHub issue using the link below:
+
+ http://localhost:33881/1.4.1/La2adc354dgGigggC+5ot3Gmwhk0G+xyrpH2+ivpHu5k44GuykupHu4lk0G_mq5nwJmmq+vJ24jvlL+vkvlLmpxiwLuvyiwL+hqpoEupxzoEmyuzoEu5rt5Luo1h5L224g5LA2AjxgpqhB
+
+
+============================================================
+Bun Debug v1.4.1 (adc354d99) Linux arm64
+Linux Kernel v6.12.76 | glibc v2.42
+CPU: neon fp aes crc32 atomics
+Args: "/bun/build/debug/bun-debug" "/bun/test/cli/run/fixture-crash.js" "outOfMemory"
+Features: Bun.stderr(2) jsc tsconfig(3) tsconfig_paths 
+Builtins: "bun:internal-for-testing" "bun:main" 
+
+Elapsed: 554ms | User: 592ms | Sys: 8ms
+RSS: 120.73 MB | Peak: 1.90 GB | Commit: 19.73 MB | Faults: 0 | Machine: 12.53 GB
+
+oh no: Bun has run out of memory.
+
+To send a redacted crash report to Bun's team,
+please file a GitHub issue using the link below:
+
+ http://localhost:36845/1.4.1/La2adc354dgGigggC2oxv7I2k54pJ25hk0G+5yrpH2ujvpHu5l44Gu6kupHuonk0G_mq5nwJmmq+vJ24jvlL+vkvlLmpxiwLuvyiwL+hqpoEA9
+
+
+{
+  dir: "/tmp/nix-shell.Y2x5HH/react-spa-no-tailwind_RaFwQW",
+}
+ create  index.build.ts     build
+ create  index.css          css
+ create  index.html         html
+ create  index.client.tsx   bun
+ create  package.json       npm
+
+📦 Auto-installing 6 detected dependencies
+$ bun --only-missing install -- classnames react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+
+installed classnames@2.5.1
+installed react-dom@19.2.8
+installed react@19.2.8
+
+4 packages installed [1362.00ms]
+
+$ bun --only-missing add -d @types/bun @types/react@19 @types/react-dom@19
+
+bun add v1.4.1 (adc354d99)
+
+
+installed @types/bun@1.4.0
+installed @types/react@19.2.18
+installed @types/react-dom@19.2.5
+
+7 packages installed [826.00ms]
+
+--------------------------------
+✨ React project configured
+
+Development - frontend dev server with hot reload
+
+  bun dev
+
+Production - build optimized assets
+
+  bun run build
+
+Happy bunning! 🐇
+
+Bun v1.3.13 dev server ready in 11.22 ms
+
+url: http://localhost:40311/
+
+{
+  dir: "/tmp/nix-shell.Y2x5HH/react-spa-no-tailwind_RaFwQW",
+}
+ create  index.build.ts     build
+ create  index.css          css
+ create  index.html         html
+ create  index.client.tsx   bun
+ create  package.json       npm
+
+📦 Auto-installing 6 detected dependencies
+$ bun --only-missing install -- classnames react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+
+installed classnames@2.5.1
+installed react-dom@19.2.8
+installed react@19.2.8
+
+4 packages installed [1370.00ms]
+
+$ bun --only-missing add -d @types/bun @types/react@19 @types/react-dom@19
+
+bun add v1.4.1 (adc354d99)
+
+
+installed @types/bun@1.4.0
+installed @types/react@19.2.18
+installed @types/react-dom@19.2.5
+
+7 packages installed [848.00ms]
+
+--------------------------------
+✨ React project configured
+
+Development - frontend dev server with hot reload
+
+  bun dev
+
+Production - build optimized assets
+
+  bun run build
+
+Happy bunning! 🐇
+
+Bun v1.3.13 dev server ready in 7.60 ms
+
+url: http://localhost:42057/
+
+{
+  dir: "/tmp/nix-shell.Y2x5HH/react-spa-tailwind_TEgCOE",
+}
+ create  index.build.ts     build
+ create  index.css          css
+ create  index.html         html
+ create  index.client.tsx   bun
+ create  bunfig.toml        bun
+ create  package.json       npm
+
+📦 Auto-installing 7 detected dependencies
+$ bun --only-missing install -- tailwindcss bun-plugin-tailwind react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+ create  index.build.ts     build
+ create  index.css          css
+ create  index.html         html
+ create  index.client.tsx   bun
+ create  bunfig.toml        bun
+ create  package.json       npm
+
+📦 Auto-installing 7 detected dependencies
+$ bun --only-missing install -- tailwindcss bun-plugin-tailwind react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+ create  lib/utils.ts         shadcn
+ create  index.css            shadcn
+ create  index.build.ts       bun
+ create  index.client.tsx     bun
+ create  index.css            css
+ create  index.html           html
+ create  styles/globals.css   shadcn
+ create  bunfig.toml          bun
+ create  package.json         npm
+ create  tsconfig.json        tsc
+ create  components.json      shadcn
+
+📦 Auto-installing 12 detected dependencies
+$ bun --only-missing install -- lucide-react tailwindcss bun-plugin-tailwind tw-animate-css class-variance-authority clsx tailwind-merge react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+ create  lib/utils.ts         shadcn
+ create  index.css            shadcn
+ create  index.build.ts       bun
+ create  index.client.tsx     bun
+ create  index.css            css
+ create  index.html           html
+ create  styles/globals.css   shadcn
+ create  bunfig.toml          bun
+ create  package.json         npm
+ create  tsconfig.json        tsc
+ create  components.json      shadcn
+
+📦 Auto-installing 12 detected dependencies
+$ bun --only-missing install -- lucide-react tailwindcss bun-plugin-tailwind tw-animate-css class-variance-authority clsx tailwind-merge react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+{
+  dir: "/tmp/nix-shell.Y2x5HH/react-spa-no-tailwind_SMSb30",
+}
+ create  index.build.ts     build
+ create  index.css          css
+ create  index.html         html
+ create  index.client.tsx   bun
+ create  package.json       npm
+
+📦 Auto-installing 6 detected dependencies
+$ bun --only-missing install -- classnames react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+
+installed classnames@2.5.1
+installed react-dom@19.2.8
+installed react@19.2.8
+
+4 packages installed [1.52s]
+
+$ bun --only-missing add -d @types/bun @types/react@19 @types/react-dom@19
+
+bun add v1.4.1 (adc354d99)
+
+
+installed @types/bun@1.4.0
+installed @types/react@19.2.18
+installed @types/react-dom@19.2.5
+
+7 packages installed [877.00ms]
+
+--------------------------------
+✨ React project configured
+
+Development - frontend dev server with hot reload
+
+  bun dev
+
+Production - build optimized assets
+
+  bun run build
+
+Happy bunning! 🐇
+
+Bun v1.3.13 ready in 7.51 ms
+
+
+url: http://localhost:43233/
+
+{
+  dir: "/tmp/nix-shell.Y2x5HH/react-spa-no-tailwind_SMSb30",
+}
+ create  index.build.ts     build
+ create  index.css          css
+ create  index.html         html
+ create  index.client.tsx   bun
+ create  package.json       npm
+
+📦 Auto-installing 6 detected dependencies
+$ bun --only-missing install -- classnames react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+
+installed classnames@2.5.1
+installed react-dom@19.2.8
+installed react@19.2.8
+
+4 packages installed [1265.00ms]
+
+$ bun --only-missing add -d @types/bun @types/react@19 @types/react-dom@19
+
+bun add v1.4.1 (adc354d99)
+
+
+installed @types/bun@1.4.0
+installed @types/react@19.2.18
+installed @types/react-dom@19.2.5
+
+7 packages installed [810.00ms]
+
+--------------------------------
+✨ React project configured
+
+Development - frontend dev server with hot reload
+
+  bun dev
+
+Production - build optimized assets
+
+  bun run build
+
+Happy bunning! 🐇
+
+Bun v1.3.13 ready in 6.71 ms
+
+url: http://localhost:39809/
+
+{
+  dir: "/tmp/nix-shell.Y2x5HH/react-spa-tailwind_0Am87z",
+}
+ create  index.build.ts     build
+ create  index.css          css
+ create  index.html         html
+ create  index.client.tsx   bun
+ create  bunfig.toml        bun
+ create  package.json       npm
+
+📦 Auto-installing 7 detected dependencies
+$ bun --only-missing install -- tailwindcss bun-plugin-tailwind react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+ create  index.build.ts     build
+ create  index.css          css
+ create  index.html         html
+ create  index.client.tsx   bun
+ create  bunfig.toml        bun
+ create  package.json       npm
+
+📦 Auto-installing 7 detected dependencies
+$ bun --only-missing install -- tailwindcss bun-plugin-tailwind react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+RSS diff 2 MB
+RSS 2 MB
+ create  lib/utils.ts         shadcn
+ create  index.css            shadcn
+ create  index.build.ts       bun
+ create  index.client.tsx     bun
+ create  index.css            css
+ create  index.html           html
+ create  styles/globals.css   shadcn
+ create  bunfig.toml          bun
+ create  package.json         npm
+ create  tsconfig.json        tsc
+ create  components.json      shadcn
+
+📦 Auto-installing 12 detected dependencies
+$ bun --only-missing install -- lucide-react tailwindcss bun-plugin-tailwind tw-animate-css class-variance-authority clsx tailwind-merge react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+ create  lib/utils.ts         shadcn
+ create  index.css            shadcn
+ create  index.build.ts       bun
+ create  index.client.tsx     bun
+ create  index.css            css
+ create  index.html           html
+ create  styles/globals.css   shadcn
+ create  bunfig.toml          bun
+ create  package.json         npm
+ create  tsconfig.json        tsc
+ create  components.json      shadcn
+
+📦 Auto-installing 12 detected dependencies
+$ bun --only-missing install -- lucide-react tailwindcss bun-plugin-tailwind tw-animate-css class-variance-authority clsx tailwind-merge react-dom@19 react@19
+
+bun add v1.4.1 (adc354d99)
+
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_lUVbia"]
+bun install v1.4.1 (adc354d99)
+
+3 packages installed [644.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 10 installs across 7 packages (no changes) [58.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  packages/eslint-config/node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'packages/eslint-config/node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
+1 package installed [79.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_ge3vdW"]
+bun install v1.4.1 (adc354d99)
+
+3 packages installed [678.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 10 installs across 7 packages (no changes) [56.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
+1 package installed [77.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_3WHUSZ"]
+bun install v1.4.1 (adc354d99)
+
++ @types/ws@7.4.7 (v8.18.1 available)
+
+4 packages installed [599.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 11 installs across 8 packages (no changes) [63.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  /tmp/nix-shell.Y2x5HH/lol_3WHUSZ/packages/eslint-config/node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit '/tmp/nix-shell.Y2x5HH/lol_3WHUSZ/packages/eslint-config/node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
++ @types/ws@8.5.4
+
+1 package installed [76.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_GHBjmI"]
+bun install v1.4.1 (adc354d99)
+
++ @types/ws@7.4.7 (v8.18.1 available)
+
+4 packages installed [586.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 11 installs across 8 packages (no changes) [57.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  /tmp/nix-shell.Y2x5HH/lol_GHBjmI/node_modules/@repo/eslint-config/node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit '/tmp/nix-shell.Y2x5HH/lol_GHBjmI/node_modules/@repo/eslint-config/node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
++ @types/ws@8.5.4
+
+1 package installed [70.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_bLPfG3"]
+bun install v1.4.1 (adc354d99)
+
++ @types/ws@7.4.7 (v8.18.1 available)
+
+4 packages installed [623.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 11 installs across 8 packages (no changes) [60.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  /tmp/nix-shell.Y2x5HH/lol_bLPfG3/packages/eslint-config/node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit '/tmp/nix-shell.Y2x5HH/lol_bLPfG3/packages/eslint-config/node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
++ @types/ws@8.5.4
+
+1 package installed [65.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_7hdgVx"]
+bun install v1.4.1 (adc354d99)
+
++ @types/ws@7.4.7 (v8.18.1 available)
+
+4 packages installed [657.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 11 installs across 8 packages (no changes) [61.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  /tmp/nix-shell.Y2x5HH/lol_7hdgVx/node_modules/@repo/eslint-config/node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit '/tmp/nix-shell.Y2x5HH/lol_7hdgVx/node_modules/@repo/eslint-config/node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
++ @types/ws@8.5.4
+
+1 package installed [69.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-odd@3.0.1
+
+2 packages installed [328.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Done! Checked 4 packages (no changes) [50.00ms]
+
+To patch is-odd, edit the following folder:
+
+  /tmp/nix-shell.Y2x5HH/patch-ws-abs_ZDSbK4/node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit '/tmp/nix-shell.Y2x5HH/patch-ws-abs_ZDSbK4/node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
++ is-odd@3.0.1
+
+1 package installed [67.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-odd@3.0.1
+
+2 packages installed [324.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Done! Checked 4 packages (no changes) [50.00ms]
+
+To patch is-odd, edit the following folder:
+
+  /tmp/nix-shell.Y2x5HH/patch-ws-rel_CVHCXe/node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit '/tmp/nix-shell.Y2x5HH/patch-ws-rel_CVHCXe/node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
++ is-odd@3.0.1
+
+1 package installed [68.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_wDphp5"]
+bun install v1.4.1 (adc354d99)
+
++ @types/ws@7.4.7 (v8.18.1 available)
+
+4 packages installed [627.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 11 installs across 8 packages (no changes) [60.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  packages/eslint-config/node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'packages/eslint-config/node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
+1 package installed [60.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_jGkzas"]
+bun install v1.4.1 (adc354d99)
+
++ @types/ws@7.4.7 (v8.18.1 available)
+
+4 packages installed [629.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 11 installs across 8 packages (no changes) [57.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  node_modules/@repo/eslint-config/node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/@repo/eslint-config/node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
+1 package installed [69.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/lol_WTtI5t"]
+bun install v1.4.1 (adc354d99)
+
++ @types/ws@7.4.7 (v8.18.1 available)
+
+4 packages installed [633.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 11 installs across 8 packages (no changes) [63.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
++ @types/ws@7.4.7
+
+1 package installed [64.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/popular_qd69n7"]
+bun install v1.4.1 (adc354d99)
+
++ lodash@4.17.21 (v4.18.1 available)
+
+1 package installed [349.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 1 install across 2 packages (no changes) [36.00ms]
+
+To patch lodash, edit the following folder:
+
+  node_modules/lodash
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/lodash'
+bun patch v1.4.1 (adc354d99)
+
++ lodash@4.17.21
+
+1 package installed [106.00ms]
+420
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/popular_PvMTrG"]
+bun install v1.4.1 (adc354d99)
+
++ react@18.3.1 (v19.2.8 available)
+
+3 packages installed [844.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 3 installs across 4 packages (no changes) [42.00ms]
+
+To patch react, edit the following folder:
+
+  node_modules/react
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/react'
+bun patch v1.4.1 (adc354d99)
+
++ react@18.3.1
+
+1 package installed [60.00ms]
+420
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/popular_0DeuWw"]
+bun install v1.4.1 (adc354d99)
+
++ react-dom@18.3.1 (v19.2.8 available)
+
+5 packages installed [1.77s]
+bun patch v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [37.00ms]
+
+To patch react-dom, edit the following folder:
+
+  node_modules/react-dom
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/react-dom'
+bun patch v1.4.1 (adc354d99)
+
++ react-dom@18.3.1
+
+1 package installed [64.00ms]
+420
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/popular_y3ZCoA"]
+bun install v1.4.1 (adc354d99)
+
++ axios@1.7.2 (v1.19.0 available)
+
+23 packages installed [554.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 23 installs across 24 packages (no changes) [44.00ms]
+
+To patch axios, edit the following folder:
+
+  node_modules/axios
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/axios'
+bun patch v1.4.1 (adc354d99)
+
++ axios@1.7.2
+
+1 package installed [72.00ms]
+RSS diff 1 MB
+RSS 1 MB
+420
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/popular_4qP9Fv"]
+bun install v1.4.1 (adc354d99)
+
++ @types/express-serve-static-core@4.17.43 (v5.1.3 available)
+
+6 packages installed [695.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 6 installs across 7 packages (no changes) [37.00ms]
+
+To patch @types/express-serve-static-core, edit the following folder:
+
+  node_modules/@types/express-serve-static-core
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/@types/express-serve-static-core'
+bun patch v1.4.1 (adc354d99)
+
++ @types/express-serve-static-core@4.17.43
+
+1 package installed [55.00ms]
+420
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/popular_tqpskb"]
+bun install v1.4.1 (adc354d99)
+
++ @types/ws@8.5.4 (v8.18.1 available)
+
+3 packages installed [637.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 3 installs across 4 packages (no changes) [36.00ms]
+
+To patch @types/ws, edit the following folder:
+
+  node_modules/@types/ws
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/@types/ws'
+bun patch v1.4.1 (adc354d99)
+
++ @types/ws@8.5.4
+
+1 package installed [54.00ms]
+420
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/popular_KZu9h4"]
+bun install v1.4.1 (adc354d99)
+
++ @types/uuencode@0.0.3
+
+3 packages installed [750.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 3 installs across 4 packages (no changes) [36.00ms]
+
+To patch @types/uuencode, edit the following folder:
+
+  node_modules/@types/uuencode
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/@types/uuencode'
+bun patch v1.4.1 (adc354d99)
+
++ @types/uuencode@0.0.3
+
+1 package installed [53.00ms]
+420
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
++ is-odd@3.0.1
+
+7 packages installed [365.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 7 installs across 8 packages (no changes) [37.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-even/node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even/node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
+2 packages installed [53.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 7 installs across 8 packages (no changes) [40.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-even/node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even/node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
+2 packages installed [53.00ms]
+diff --git a/node_modules/is-even/node_modules/is-odd/.bun-tag-e64f331211cd7979 b/.bun-tag-e64f331211cd7979
+new file mode 100644
+index 0000000000000000000000000000000000000000..e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+diff --git a/index.js b/index.js
+index c8950c17b265104bcf27f8c345df1a1b13a78950..ccba8c7576307a69fd6c5942874a524dba61e7de 100644
+--- a/index.js
++++ b/index.js
+@@ -1,9 +1,9 @@
+ /*!
+- * is-odd <https://github.com/jonschlinkert/is-odd>
+- *
+- * Copyright (c) 2015-2017, Jon Schlinkert.
+- * Released under the MIT License.
+- */
++* is-odd <https://github.com/jonschlinkert/is-odd>
++*
++* Copyright (c) 2015-2017, Jon Schlinkert.
++* Released under the MIT License.
++*/
+ 
+ 'use strict';
+ 
+@@ -16,5 +16,7 @@ module.exports = function isOdd(i) {
+   if (Number(i) !== Math.floor(i)) {
+     throw new RangeError('is-odd expects an integer.');
+   }
++  console.log('hi')
++  console.log('hello')
+   return !!(~~i & 1);
+ };
+bun install v1.4.1 (adc354d99)
+
+Checked 7 installs across 8 packages (no changes) [39.00ms]
+hi
+hello
+true
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [350.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [36.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [374.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [37.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun patch v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+
++ lodash@4.17.21 (v4.18.1 available)
+
+1 package installed [355.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 1 install across 2 packages (no changes) [36.00ms]
+
+To patch lodash, edit the following folder:
+
+  node_modules/lodash
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/lodash'
+bun patch v1.4.1 (adc354d99)
+
+Checked 1 install across 2 packages (no changes) [36.00ms]
+
+To patch lodash, edit the following folder:
+
+  node_modules/lodash
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/lodash'
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [508.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [36.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun patch v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+1 package installed [54.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [355.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [36.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun patch v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+1 package installed [54.00ms]
+bun install v1.4.1 (adc354d99)
+RSS diff 1 MB
+RSS 1 MB
+
++ is-even@1.0.0
++ is-odd@3.0.1
+
+7 packages installed [338.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 7 installs across 8 packages (no changes) [38.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-even/node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even/node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
+2 packages installed [54.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
++ is-odd@3.0.1
+
+7 packages installed [329.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 7 installs across 8 packages (no changes) [37.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-even/node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even/node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
+2 packages installed [53.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [356.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [36.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [355.00ms]
+true
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [405.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [37.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [430.00ms]
+true
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
++ is-odd@3.0.1
+
+7 packages installed [337.00ms]
+node_modules/is-even/node_modules/is-odd
+bun patch v1.4.1 (adc354d99)
+
+Checked 7 installs across 8 packages (no changes) [37.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-even/node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even/node_modules/is-odd'
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [385.00ms]
+true
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
++ is-odd@3.0.1
+
+7 packages installed [321.00ms]
+node_modules/is-even/node_modules/is-odd
+bun patch v1.4.1 (adc354d99)
+
+Checked 7 installs across 8 packages (no changes) [37.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-even/node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even/node_modules/is-odd'
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [348.00ms]
+true
+
+Come hang out in bun's Discord: https://bun.com/discord
+
+Created test-template project successfully
+
+# To get started, run:
+
+  cd test-template
+  bun dev
+
+bun add v1.4.1 (adc354d99)
+
+installed lodash@4.0.0
+
+1 package installed [339.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 1 install across 2 packages (no changes) [35.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 1 install across 2 packages (no changes) [35.00ms]
+bun install v1.4.1 (adc354d99)
+
++ lodash@4.0.0
+
+1 package installed [47.00ms]
+bun add v1.4.1 (adc354d99)
+
+installed express@4.18.2
+
+68 packages installed [710.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [51.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [50.00ms]
+bun install v1.4.1 (adc354d99)
+
++ express@4.18.2
+
+68 packages installed [78.00ms]
+bun add v1.4.1 (adc354d99)
+
+installed express@4.18.2
+
+68 packages installed [712.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [50.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [49.00ms]
+bun install v1.4.1 (adc354d99)
+
++ express@4.18.2
+
+68 packages installed [75.00ms]
+bun install v1.4.1 (adc354d99)
+
+1 package installed [219.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [51.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [52.00ms]
+bun install v1.4.1 (adc354d99)
+
++ express@4.18.2
+
+68 packages installed [77.00ms]
+bun add v1.4.1 (adc354d99)
+
+installed express@4.18.2
+
+68 packages installed [658.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [50.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [49.00ms]
+bun install v1.4.1 (adc354d99)
+
++ express@4.18.2
+
+68 packages installed [75.00ms]
+bun add v1.4.1 (adc354d99)
+
+installed express@4.18.2
+
+68 packages installed [644.00ms]
+bun install v1.4.1 (adc354d99)
+bun add v1.4.1 (adc354d99)
+
+installed express@4.18.2
+
+68 packages installed [713.00ms]
+bun install v1.4.1 (adc354d99)
+
+1 package installed [220.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [49.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 68 installs across 69 packages (no changes) [49.00ms]
+bun install v1.4.1 (adc354d99)
+
++ express@4.18.2
+
+68 packages installed [77.00ms]
+bun install v1.4.1 (adc354d99)
+
+Done! Checked 2 packages (no changes) [38.00ms]
+bun install v1.4.1 (adc354d99)
+
+Done! Checked 2 packages (no changes) [46.00ms]
+bun install v1.4.1 (adc354d99)
+
+Done! Checked 2 packages (no changes) [46.00ms]
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+
+Saved bun.lock (4 packages) [498.00ms]
+
+Saved bun.lock (2 packages) [504.00ms]
+
+Saved bun.lock (2 packages) [546.00ms]
+bun install v1.4.1 (adc354d99)
+
+Saved bun.lock (4 packages) [667.00ms]
+bun install v1.4.1 (adc354d99)
+
+Saved bun.lock (2 packages) [758.00ms]
+
+Saved bun.lock (2 packages) [972.00ms]
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+
+Saved bun.lock (69 packages) [1482.00ms]
+
+Saved bun.lock (69 packages) [2.01s]
+
+Saved bun.lock (88 packages) [4.54s]
+
+Saved bun.lock (88 packages) [4.68s]
+
+Saved bun.lock (88 packages) [4.19s]
+
+Saved bun.lock (88 packages) [4.92s]
+
+Saved bun.lock (88 packages) [4.31s]
+
+Saved bun.lock (88 packages) [4.94s]
+
+Saved bun.lock (88 packages) [4.00s]
+
+Saved bun.lock (88 packages) [4.04s]
+RSS diff 11 MB
+RSS 11 MB
+/tmp/nix-shell.Y2x5HH/bun.test.VkxMFa
+/tmp/nix-shell.Y2x5HH/bun.test.109eAp
+TEMP: [String: "/tmp/nix-shell.Y2x5HH/patch1_SQR122"]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
++ is-odd@3.0.1
+
+7 packages installed [336.00ms]
+HI
+lol
+TEMP: [String: "/tmp/nix-shell.Y2x5HH/patch1_V9IOOP"]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
++ is-odd@3.0.1
+
+7 packages installed [328.00ms]
+Hi from isOdd!
+lol
+TEMP: [String: "/tmp/nix-shell.Y2x5HH/patch1_5Vm5Ec"]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [340.00ms]
+HI
+lol
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [386.00ms]
+Hi from isOdd!
+lol
+File [String: "/tmp/nix-shell.Y2x5HH/patch1_K6IWoa"]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [387.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+1 package installed [50.00ms]
+HI
+lol
+File [String: "/tmp/nix-shell.Y2x5HH/patch1_qeQoNR"]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [352.00ms]
+bun install v1.4.1 (adc354d99)
+
+1 package installed [51.00ms]
+Hi from isOdd!
+lol
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [394.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [39.00ms]
+lmao
+lol
+FILEDIR [String: "/tmp/nix-shell.Y2x5HH/patch1_4Rlj32"]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [356.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+2 packages installed [52.00ms]
+Hi from isOdd!
+lol
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [352.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [40.00ms]
+lmao
+lol
+bun install v1.4.1 (adc354d99)
+
++ @zackradisic/hls-dl@0.0.1
+
+10 packages installed [1.68s]
+PATCHED!
+[String: "/tmp/nix-shell.Y2x5HH/patch1_GwknUm"]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [360.00ms]
+bun patch v1.4.1 (adc354d99)
+
+4 packages installed [39.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun patch v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+1 package installed [53.00ms]
+PATCHED with isolated linker!
+true
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [387.00ms]
+bun patch v1.4.1 (adc354d99)
+
+4 packages installed [40.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
+Checked 5 installs across 6 packages (no changes) [36.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
+1 package installed [53.00ms]
+bun install v1.4.1 (adc354d99)
+
+1 package installed [51.00ms]
+Transitive patch with isolated!
+false
+bun install v1.4.1 (adc354d99)
+
++ @zackradisic/hls-dl@0.0.1
+
+10 packages installed [1349.00ms]
+bun patch v1.4.1 (adc354d99)
+
+9 packages installed [57.00ms]
+
+To patch @zackradisic/hls-dl, edit the following folder:
+
+  node_modules/@zackradisic/hls-dl
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/@zackradisic/hls-dl'
+bun patch v1.4.1 (adc354d99)
+
++ @zackradisic/hls-dl@0.0.1
+
+1 package installed [64.00ms]
+SCOPED PACKAGE PATCHED with isolated!
+bun install v1.4.1 (adc354d99)
+
+5 packages installed [369.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Done! Checked 7 packages (no changes) [48.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun patch v1.4.1 (adc354d99)
+
+1 package installed [64.00ms]
+WORKSPACE PATCH with isolated!
+true
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [352.00ms]
+bun patch v1.4.1 (adc354d99)
+
+4 packages installed [40.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun patch v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+1 package installed [53.00ms]
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+5 packages installed [45.00ms]
+REINSTALL TEST with isolated!
+true
+bun install v1.4.1 (adc354d99)
+
++ is-even@1.0.0
++ is-odd@3.0.1
+
+7 packages installed [333.00ms]
+bun patch v1.4.1 (adc354d99)
+
+5 packages installed [41.00ms]
+
+To patch is-even, edit the following folder:
+
+  node_modules/is-even
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-even'
+bun patch v1.4.1 (adc354d99)
+
++ is-even@1.0.0
+
+3 packages installed [53.00ms]
+bun patch v1.4.1 (adc354d99)
+
+Checked 7 installs across 8 packages (no changes) [40.00ms]
+
+To patch is-odd, edit the following folder:
+
+  node_modules/is-odd
+
+Once you're done with your changes, run:
+
+  bun patch --commit 'node_modules/is-odd'
+bun patch v1.4.1 (adc354d99)
+
++ is-odd@3.0.1
+
+1 package installed [53.00ms]
+is-even PATCHED with isolated!
+true
+is-odd PATCHED with isolated!
+true
+bun install v1.4.1 (adc354d99)
+
+Checked 7 installs across 4 packages (no changes) [42.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 7 installs across 4 packages (no changes) [43.00ms]
+bun install v1.4.1 (adc354d99)
+
+1 package removed [46.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 7 installs across 4 packages (no changes) [42.00ms]
+TEMPDIR [String: "/tmp/nix-shell.Y2x5HH/multi-glob_2ir3Ny"]
+bun install v1.4.1 (adc354d99)
+
+Checked 7 installs across 5 packages (no changes) [46.00ms]
+bun install v1.4.1 (adc354d99)
+
+Checked 7 installs across 5 packages (no changes) [85.00ms]
+Bin content first 50 chars: "#!/usr/bin/env python\nprint('hello from python')"
+ + .gitignore
+ + index.ts
+ + tsconfig.json (for editor autocomplete)
+ + README.md
+
+To get started, run:
+
+    bun run index.ts
+
+bun install v1.4.1 (adc354d99)
+ + .gitignore
+ + index.ts
+ + tsconfig.json (for editor autocomplete)
+ + README.md
+
+To get started, run:
+
+    bun run index.ts
+
+bun install v1.4.1 (adc354d99)
+ + .gitignore
+ + index.ts
+ + tsconfig.json (for editor autocomplete)
+ + README.md
+
+To get started, run:
+
+    bun run index.ts
+
+bun install v1.4.1 (adc354d99)
+ + bunfig.toml
+ + package.json
+ + tsconfig.json
+ + bun-env.d.ts
+ + README.md
+ + .gitignore
+ + src/index.ts
+ + src/App.tsx
+ + src/index.html
+ + src/index.css
+ + src/APITester.tsx
+ + src/react.svg
+ + src/frontend.tsx
+ + src/logo.svg
+
+ + bunfig.toml
+ + package.json
+ + tsconfig.json
+ + bun-env.d.ts
+ + README.md
+ + .gitignore
+ + src/index.ts
+ + src/App.tsx
+ + src/index.html
+ + src/index.css
+ + src/APITester.tsx
+ + src/react.svg
+ + src/frontend.tsx
+ + src/logo.svg
+ + build.ts
+
+bun install v1.4.1 (adc354d99)
+ + bunfig.toml
+ + styles/globals.css
+ + package.json
+ + components.json
+ + tsconfig.json
+ + bun-env.d.ts
+ + README.md
+ + .gitignore
+ + src/index.ts
+ + src/App.tsx
+ + src/index.html
+ + src/index.css
+ + src/components/ui/card.tsx
+ + src/components/ui/label.tsx
+ + src/components/ui/button.tsx
+ + src/components/ui/select.tsx
+ + src/components/ui/input.tsx
+ + src/components/ui/textarea.tsx
+ + src/APITester.tsx
+ + src/lib/utils.ts
+ + src/react.svg
+ + src/frontend.tsx
+ + src/logo.svg
+ + build.ts
+
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+ + tsconfig.json (for editor autocomplete)
+bun install v1.4.1 (adc354d99)
+
++ @types/bun@1.4.0
+
+4 packages installed [3.06s]
+
+
++ @types/bun@1.4.0
++ typescript@7.0.2
+
+6 packages installed [6.20s]
+
+
++ @types/bun@1.4.0
++ @types/react@19.2.18
++ @types/react-dom@19.2.5
++ react@19.2.8
++ react-dom@19.2.8
++ typescript@7.0.2
+
+12 packages installed [9.13s]
+
+✨ New project configured!
+
+Development - full-stack dev server with hot reload
+
+    bun dev
+
+Static Site - build optimized assets to disk (no backend)
+
+    bun run build
+
+Production - serve a full-stack production build
+
+    bun start
+
+Happy bunning! 🐇
+
++ @types/bun@1.4.0
++ typescript@7.0.2
+
+6 packages installed [10.39s]
+
+
++ @types/bun@1.4.0
++ typescript@7.0.2
+
+6 packages installed [10.85s]
+
+
++ @types/bun@1.4.0
++ typescript@7.0.2
+
+6 packages installed [11.40s]
+
+
+✨ New project configured!
+
+Development - full-stack dev server with hot reload
+
+    bun dev
+
+Static Site - build optimized assets to disk (no backend)
+
+    bun run build
+
+Production - serve a full-stack production build
+
+    bun start
+
+Happy bunning! 🐇
+
+✨ New project configured!
+
+Development - full-stack dev server with hot reload
+
+    bun dev
+
+Static Site - build optimized assets to disk (no backend)
+
+    bun run build
+
+Production - serve a full-stack production build
+
+    bun start
+
+Happy bunning! 🐇
+bun test v1.4.1 (adc354d99)
+bun test v1.4.1 (adc354d99)
+bun test v1.4.1 (adc354d99)
+{
+  tmpdir: "/tmp/nix-shell.Y2x5HH/bun.test.A5iZTq",
+}
+bun install v1.4.1 (adc354d99)
+
++ @babel/core@7.25.2
++ @types/react@18.3.5
++ @types/styled-components-react-native@5.2.5
++ @typescript-eslint/eslint-plugin@8.5.0
++ @typescript-eslint/parser@8.5.0
++ babel-plugin-module-resolver@5.0.2
++ eslint@9.10.0
++ eslint-config-airbnb@19.0.4
++ eslint-config-prettier@9.1.0
++ eslint-import-resolver-typescript@3.6.3
++ eslint-plugin-import@2.30.0
++ eslint-plugin-jsx-a11y@6.10.0
++ eslint-plugin-prefer-arrow-functions@3.4.1
++ eslint-plugin-prettier@5.2.1
++ eslint-plugin-react@7.35.2
++ eslint-plugin-react-hooks@4.6.2
++ prettier@3.3.3
++ react-native-svg-transformer@1.5.0
++ typescript@5.6.2
++ @expo/vector-icons@14.0.2
++ @gorhom/bottom-sheet@4.6.4
++ @hookform/resolvers@3.9.0
++ @tanstack/react-query@5.55.4
++ axios@1.7.7
++ date-fns@3.6.0
++ expo@51.0.32
++ expo-checkbox@3.0.0
++ expo-constants@16.0.2
++ expo-font@12.0.10
++ expo-image@1.12.15
++ expo-image-picker@15.0.7
++ expo-linear-gradient@13.0.2
++ expo-linking@6.3.1
++ expo-router@3.5.23
++ expo-secure-store@13.0.2
++ expo-status-bar@1.12.1
++ expo-updates@0.25.24
++ expo-web-browser@13.0.3
++ react@18.3.1
++ react-dom@18.3.1
++ react-hook-form@7.53.0
++ react-native@0.75.2
++ react-native-dropdown-picker@5.4.6
++ react-native-gesture-handler@2.19.0
++ react-native-masked-text@1.13.0
++ react-native-modal@13.0.1
++ react-native-reanimated@3.15.1
++ react-native-safe-area-context@4.11.0
++ react-native-screens@3.34.0
++ react-native-svg@15.6.0
++ react-native-toast-message@2.2.0
++ react-native-web@0.19.12
++ styled-components@6.1.13
++ yup@1.4.0
+
+1221 packages installed [4.71s]
+name onerror
+name onmessage
+close-from-reply fixture: 10 of 10 rounds reached the window
+あい {
+  encoding: "ucs2",
+}
+あい {
+  encoding: "ucs-2",
+}
+あい {
+  encoding: "utf16le",
+}
+あい {
+  encoding: "utf-16le",
+}
+あい {
+  encoding: "ucs2",
+}
+あい {
+  encoding: "ucs-2",
+}
+あい {
+  encoding: "utf16le",
+}
+あい {
+  encoding: "utf-16le",
+}
+[macro] call escapeHTML
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call escape
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStrings
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call addStringsUTF16
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call identity
+[macro] call default
+[macro] call default
+[macro] call identity
+[macro] call identity
+[macro] call escape
+[macro] call ireturnapromise
+1
+console.log("hello");
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at <anonymous> (/bun/test/regression/issue/013880-fixture.cjs:15:11)
+    at anonymous (unknown)
+    at require (native:51:24)
+    at require (unknown)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/013880.test.ts:4:53)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at onwrite (internal:streams/writable:427:7)
+    at onwrite (unknown)
+    at _write (node:net:2167:13)
+    at writeOrBuffer (internal:streams/writable:385:18)
+    at <anonymous> (internal:streams/writable:338:16)
+    at <anonymous> (/bun/test/regression/issue/23022-stack-trace-iterator.test.ts:12:10)
+    at <anonymous> (/bun/test/regression/issue/23022-stack-trace-iterator.test.ts:4:80)
+Query parameters order: [ "X-Amz-Acl", "X-Amz-Algorithm", "X-Amz-Credential", "X-Amz-Date",
+  "X-Amz-Expires", "X-Amz-Signature", "X-Amz-SignedHeaders"
+]
+bun only hash: md4
+bun only cipher: bf-cbc
+bun only cipher: bf-cfb
+bun only cipher: bf-ecb
+bun only cipher: des-cbc
+bun only cipher: des-ecb
+bun only cipher: rc2-cbc
+bun only cipher: rc4
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at partialDeepStrictEqual (node:assert:264:14)
+    at getActual (node:assert:421:7)
+    at throws (node:assert:526:33)
+    at <anonymous> (/bun/test/regression/issue/24338.test.ts:51:10)
+    at run (node:async_hooks:198:29)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at partialDeepStrictEqual (node:assert:264:14)
+    at getActual (node:assert:421:7)
+    at throws (node:assert:526:33)
+    at <anonymous> (/bun/test/regression/issue/24338.test.ts:51:10)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at partialDeepStrictEqual (node:assert:264:14)
+    at getActual (node:assert:421:7)
+    at throws (node:assert:526:33)
+    at <anonymous> (/bun/test/regression/issue/24338.test.ts:65:10)
+    at run (node:async_hooks:198:29)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at partialDeepStrictEqual (node:assert:264:14)
+    at getActual (node:assert:421:7)
+    at throws (node:assert:526:33)
+    at <anonymous> (/bun/test/regression/issue/24338.test.ts:65:10)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at partialDeepStrictEqual (node:assert:264:14)
+    at getActual (node:assert:421:7)
+    at throws (node:assert:526:33)
+    at <anonymous> (/bun/test/regression/issue/24338.test.ts:72:10)
+    at run (node:async_hooks:198:29)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at partialDeepStrictEqual (node:assert:264:14)
+    at getActual (node:assert:421:7)
+    at throws (node:assert:526:33)
+    at <anonymous> (/bun/test/regression/issue/24338.test.ts:72:10)
+bun install v1.4.1 (adc354d99)
+
++ vite@6.4.3 (v8.2.2 available)
+
+14 packages installed [1253.00ms]
+[String: "/tmp/nix-shell.Y2x5HH/ctrlc_dLAeZo"]
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at checkError (internal:streams/destroy:24:8)
+    at destroy (internal:streams/destroy:43:13)
+    at <anonymous> (internal:streams/writable:800:16)
+    at ondata (internal:streams/readable:682:19)
+    at emit (node:events:154:22)
+    at <anonymous> (internal:streams/readable:542:14)
+    at flow (internal:streams/readable:875:57)
+bun install v1.4.1 (adc354d99)
+
+make[1]: Entering directory '/bun/test/regression/issue/30205-napi-app/build'
+  CC(target) Debug/obj.target/nothing/node_modules/node-addon-api/nothing.o
+rm -f Debug/obj.target/node_modules/node-addon-api/nothing.a Debug/obj.target/node_modules/node-addon-api/nothing.a.ar-file-list; mkdir -p `dirname Debug/obj.target/node_modules/node-addon-api/nothing.a`
+/nix/store/dbfzdkyghh88s4siw6006c0hlipm5xjg-llvm-21.1.8/bin/llvm-ar crs Debug/obj.target/node_modules/node-addon-api/nothing.a @Debug/obj.target/node_modules/node-addon-api/nothing.a.ar-file-list
+  COPY Debug/nothing.a
+  CC(target) Debug/obj.target/isolate_finalizer_addon/isolate_finalizer_addon.o
+  SOLINK_MODULE(target) Debug/obj.target/isolate_finalizer_addon.node
+  COPY Debug/isolate_finalizer_addon.node
+make[1]: Leaving directory '/bun/test/regression/issue/30205-napi-app/build'
+
++ node-addon-api@8.0.0
++ node-api-headers@1.5.0
++ node-gyp@11.2.0
+
+94 packages installed [1119.00ms]
+Testing: color: ButtonFace
+Result: parsed
+Testing: background-color: Canvas
+Result: parsed
+Testing: border-color: WindowFrame
+Result: parsed
+Testing: color: color-mix(in srgb, ButtonFace, red)
+Result: parsed
+Testing: color: color-mix(in srgb, Canvas 50%, blue)
+Result: parsed
+Testing: color: color-mix(in oklch, AccentColor, white)
+Result: parsed
+Testing: color: hsl(from ButtonFace h s l)
+Result: parsed
+Testing: color: hsl(from Canvas h s l)
+Result: parsed
+Testing: color: hsl(from AccentColor h s l)
+Result: parsed
+Testing: color: rgb(from ButtonFace r g b)
+Result: parsed
+Testing: color: rgb(from Canvas r g b)
+Result: parsed
+Testing: color: hwb(from AccentColor h w b)
+Result: parsed
+Testing: color: oklch(from ButtonFace l c h)
+Result: parsed
+Testing: color: color(from Canvas srgb r g b)
+Result: parsed
+Testing: color: hsl(from ButtonFace calc(h + 10) s l)
+Result: parsed
+Testing: color: rgb(from Canvas calc(r * 0.5) g b)
+Result: parsed
+Testing: color: hwb(from AccentColor h calc(w + 10%) b)
+Result: parsed
+Testing: color: color(from ButtonFace srgb r g b / 0.5)
+Result: parsed
+Testing: color: hsl(from Canvas h s l / 0.8)
+Result: parsed
+Testing: color: rgb(from AccentColor r g b / 50%)
+Result: parsed
+Testing: background: linear-gradient(to right, ButtonFace, Canvas)
+Result: parsed
+Testing: background: radial-gradient(circle, AccentColor, WindowFrame)
+Result: parsed
+Testing: color: color-mix(in srgb, color-mix(in srgb, ButtonFace, red), Canvas)
+Result: parsed
+Testing: color: hsl(from color-mix(in srgb, ButtonFace, red) h s l)
+Result: parsed
+Testing: color: light-dark(ButtonFace, Canvas)
+Result: parsed
+Testing: color: light-dark(Canvas, ButtonFace)
+Result: parsed
+Testing: color: hsl(from light-dark(ButtonFace, Canvas) h s l)
+Result: parsed
+Bundled 1 module in 122ms
+
+  bundle.js  160 bytes  (entry point)
+
+test
+bun install v1.4.1 (adc354d99)
+
++ typescript@5.9.3 (v7.0.2 available)
+
+1 package installed [240.00ms]
+bun add v1.4.1 (adc354d99)
+
+installed typescript@7.0.2 with binaries:
+ - tsc
+
+2 packages installed [84.00ms]
+Building test addon...
+Build error: Executable not found in $PATH: "node-gyp"
+Skipping test - addon build failed
+ok
+
+====== stderr ======
+
+../../../bun/test/regression/issue/09041/09041-fixture.ts:
+(pass) 09041 [25772.25ms]
+
+ 1 pass
+ 0 fail
+ 20 expect() calls
+Ran 1 test across 1 file. [25.93s]
+
+====== stdout ======  
+bun test v1.4.1 (adc354d99)
+check  0
+===== STDERR =====
+
+=====
+check  1
+===== STDERR =====
+
+=====
+check  2
+===== STDERR =====
+
+=====
+check  3
+===== STDERR =====
+
+=====
+check  4
+===== STDERR =====
+
+=====
+
+====== exit code ======
+0
+
+l+4OZACNz1zqmKGXEfxkCx69bx7E9jCdJpjP6epptKM=
+Bundled 2 modules in 4053ms
+
+  huge-asset.js      159 bytes  (entry point)
+  huge-asset.js.map  406 bytes  (source map)
+  1-qgcx61bb.png     0.13 GB    (asset)
+
+trigger
+[Function: abc]
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:6:17)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at <anonymous> (/bun/test/regression/issue/prepare-stack-trace-crash.test.ts:7:26)
+undefined
+trigger
+[Function: abc]
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:6:17)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at <anonymous> (/bun/test/regression/issue/prepare-stack-trace-crash.test.ts:11:26)
+undefined
+trigger
+[Function: abc]
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:6:17)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at <anonymous> (/bun/test/regression/issue/prepare-stack-trace-crash.test.ts:15:26)
+undefined
+trigger
+[Function: abc]
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:6:17)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at <anonymous> (/bun/test/regression/issue/prepare-stack-trace-crash.test.ts:33:24)
+undefined
+trigger
+[Function: abc]
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:6:17)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at <anonymous> (/bun/test/regression/issue/prepare-stack-trace-crash.test.ts:41:24)
+undefined
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at <anonymous> (/bun/test/regression/issue/08794.test.ts:22:7)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:7:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:8:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:7:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:8:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:18:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:19:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:18:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:19:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:27:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:28:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:27:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:28:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:34:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:35:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:34:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:35:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:50:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:51:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:50:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:51:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:54:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:55:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:54:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:55:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:61:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:62:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:61:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:62:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:65:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:66:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:65:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:66:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:72:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:73:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:72:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:73:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:76:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:77:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:76:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:77:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:87:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:88:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:87:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:88:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at new AssertionError (internal:assert/assertion_error:336:21)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:103:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:104:6)
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at captureStackTrace (unknown)
+    at new AssertionError (internal:assert/assertion_error:339:31)
+    at innerFail (node:assert:83:27)
+    at deepStrictEqual (node:assert:203:14)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:103:12)
+    at toThrow (unknown)
+    at <anonymous> (/bun/test/regression/issue/24045.test.ts:104:6)
+bun install v1.4.1 (adc354d99)
+
++ bar@https://github.com/oven-sh/bun/raw/f7e4eb83694aa007a492ef66c28ffbe6a2dae791/test/cli/install/bar-0.0.2.tgz
++ bun-types@bun-types
++ hello@hello-0.3.2.tgz
++ install-test@git+ssh://git@bitbucket.org/dylan-conway/public-install-test.git#79265e2d9754c60b60f97cc8d859fb6da073b5d2
++ install-test1@git+ssh://git@github.com/dylan-conway/install-test.git#596234dab30564f37adae1e5c4d7123bcffce537
++ lines-and-columns@1.2.4 (v2.0.4 available)
++ public-install-test@git+ssh://git@gitlab.com/dylan-conway/public-install-test.git#93f3aa4ec9ca8a0bacc010776db48bfcd915c44c
++ svelte@4.1.2 (v5.56.10 available)
+
+175 packages installed [2.62s]
+Copied to: /tmp/nix-shell.Y2x5HH/bun.test.qB0u07
+bun install v1.4.1 (adc354d99)
+**INFO** Skipping downloading browsers as instructed.
+
++ @types/node@25.0.0
++ @types/react@19.2.14
++ @types/react-dom@19.2.3
++ autoprefixer@10.4.21
++ bun-types@1.2.19
++ eslint@9.33.0
++ eslint-config-next@16.1.6
++ next@16.1.6
++ postcss@8.5.6
++ puppeteer@24.16.0
++ react@19.2.4
++ react-dom@19.2.4
++ tailwindcss@3.4.17
++ typescript@5.9.2
+
+482 packages installed [4.35s]
+Temp dir: /tmp/nix-shell.Y2x5HH/next-184u5481ilo8xS6lT4w
+Temp dir: /tmp/nix-shell.Y2x5HH/next-184u9y1q0yfg0GkHwXD
+bun install v1.4.1 (adc354d99)
+bun install v1.4.1 (adc354d99)
+**INFO** Skipping downloading browsers as instructed.
+
++ @types/node@25.0.0
++ @types/react@19.2.14
++ @types/react-dom@19.2.3
++ autoprefixer@10.4.21
++ bun-types@1.2.19
++ eslint@9.33.0
++ eslint-config-next@16.1.6
++ next@16.1.6
++ postcss@8.5.6
++ puppeteer@24.16.0
++ react@19.2.4
++ react-dom@19.2.4
++ tailwindcss@3.4.17
++ typescript@5.9.2
+
+482 packages installed [7.20s]
+**INFO** Skipping downloading browsers as instructed.
+
++ @types/node@25.0.0
++ @types/react@19.2.14
++ @types/react-dom@19.2.3
++ autoprefixer@10.4.21
++ bun-types@1.2.19
++ eslint@9.33.0
++ eslint-config-next@16.1.6
++ next@16.1.6
++ postcss@8.5.6
++ puppeteer@24.16.0
++ react@19.2.4
++ react-dom@19.2.4
++ tailwindcss@3.4.17
++ typescript@5.9.2
+
+482 packages installed [7.22s]
+Bun Dir: /tmp/nix-shell.Y2x5HH/next-184u5481ilo8xS6lT4w
+Node Dir: /tmp/nix-shell.Y2x5HH/next-184u9y1q0yfg0GkHwXD
+bun ⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+▲ Next.js 16.1.6 (Turbopack)
+Running TypeScript ...
+Creating an optimized production build ...
+✓ Compiled successfully
+Collecting page data using 9 workers ...
+Generating static pages using 9 workers (0/3) ...
+✓ Generating static pages using 9 workers (3/3)
+Finalizing page optimization ...
+Route (pages)
+┌ ● /
+├   /_app
+├ ○ /404
+└ ƒ /api/hello
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+node ⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+▲ Next.js 16.1.6 (Turbopack)
+Running TypeScript ...
+Creating an optimized production build ...
+✓ Compiled successfully
+Collecting page data using 9 workers ...
+Generating static pages using 9 workers (0/3) ...
+✓ Generating static pages using 9 workers (3/3)
+Finalizing page optimization ...
+Route (pages)
+┌ ● /
+├   /_app
+├ ○ /404
+└ ƒ /api/hello
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+Hashing files...
+http://localhost:3000/
+trigger
+[Function: abc]
+Error: 1
+    at anonymous (file:///bun/test/regression/issue/013880-fixture.cjs:3:16)
+    at a (/bun/test/regression/issue/013880-fixture.cjs:3:38)
+    at abc (/bun/test/regression/issue/013880-fixture.cjs:12:3)
+    at error (/bun/test/integration/bun-types/fixture/serve-types.test.ts:216:53)
+<bun_crash_handler::draft::rust_panic_hook as core::ops::function::Fn<(&std::panic::PanicHookInfo,)>>::call
+/bun/.rustup/toolchains/nightly-2026-07-20-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:79:5
+
+<alloc::boxed::Box<dyn for<'a, 'b> core::ops::function::Fn<(&'a std::panic::PanicHookInfo<'b>,), Output = ()> + core::marker::Send + core::marker::Sync> as core::ops::function::Fn<(&std::panic::PanicHookInfo,)>>::call
+/rustc/9f36de775bc636c8e88c31a173c2bcb6995956a0/library/alloc/src/boxed.rs:2335:9
+std::panicking::panic_with_hook
+/rustc/9f36de775bc636c8e88c31a173c2bcb6995956a0/library/std/src/panicking.rs:823:13
+
+std::panicking::panic_handler::{closure#0}
+/rustc/9f36de775bc636c8e88c31a173c2bcb6995956a0/library/std/src/panicking.rs:681:13
+
+std::sys::backtrace::__rust_end_short_backtrace::<std::panicking::panic_handler::{closure#0}, !>
+/rustc/9f36de775bc636c8e88c31a173c2bcb6995956a0/library/std/src/sys/backtrace.rs:182:18
+
+__rustc::rust_begin_unwind
+/rustc/9f36de775bc636c8e88c31a173c2bcb6995956a0/library/std/src/panicking.rs:679:5
+
+core::panicking::panic_fmt
+/rustc/9f36de775bc636c8e88c31a173c2bcb6995956a0/library/core/src/panicking.rs:80:14
+
+core::panicking::panic
+/rustc/9f36de775bc636c8e88c31a173c2bcb6995956a0/library/core/src/panicking.rs:150:5
+
+<bun_runtime::bake::dev_server_body::DevServer>::relative_path
+/bun/src/runtime/bake/DevServer.rs:6006:9
+
+bun_runtime::bake::dev_server_body::finalize_bundle
+/bun/src/runtime/bake/DevServer.rs:4758:38
+
+__bun_dispatch__DevServerHandle__Bake__finalize_bundle
+/bun/src/runtime/bake/dev_server/mod.rs:1125:13
+
+<bun_bundler::DevServerHandle>::finalize_bundle
+/bun/src/bundler/lib.rs:330:1
+
+<bun_bundler::bundle_v2::BundleV2>::finish_from_bake_dev_server
+/bun/src/bundler/bundle_v2.rs:5657:18
+
+<bun_bundler::bundle_v2::BundleV2>::on_after_decrement_scan_counter
+/bun/src/bundler/bundle_v2.rs:3055:22
+
+<bun_bundler::bundle_v2::BundleV2>::on_parse_task_complete
+/bun/src/bundler/bundle_v2.rs:7461:22
+
+bun_bundler::parse_task::parse_worker::on_complete
+/bun/src/bundler/ParseTask.rs:2929:9
+
+bun_bundler::parse_task::parse_worker::run_from_thread_pool_impl::{closure#0}
+/bun/src/bundler/ParseTask.rs:2853:34
+
+<bun_bundler::parse_task::parse_worker::run_from_thread_pool_impl::{closure#0} as core::ops::function::FnOnce<(*mut bun_bundler::parse_task::Result,)>>::call_once
+/bun/.rustup/toolchains/nightly-2026-07-20-aarch64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250:5
+
