@@ -19,3 +19,5 @@ Who wrote this?
 
 Gemma 4 31B:
 This line was written by **Hermann Hesse**. It appears in his novel ***The Glass Bead Game*** (also known as *Magister Ludi*).
+
+![](IMG_2565.jpeg)
