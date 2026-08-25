@@ -8,7 +8,7 @@ https://github.com/oven-sh/bun
 
 ---
 
-https://ontouchstart.github.io/bun/Makefile
+https://ontouchstart.github.io/bun-review/Makefile
 
 ```Makefile
 bash:	build.log
@@ -25,7 +25,7 @@ clean:
 ```
 ---
 
-https://ontouchstart.github.io/bun/Dockerfile
+https://ontouchstart.github.io/bun-review/Dockerfile
 
 ```Dockerfile
 FROM nixos/nix
@@ -39,7 +39,7 @@ COPY flake.patch .
 ```
 ---
 
-https://ontouchstart.github.io/bun/compose.yml
+https://ontouchstart.github.io/bun-review/compose.yml
 
 ```yml
 services:
@@ -50,10 +50,10 @@ services:
 
 --- 
 
-https://ontouchstart.github.io/bun/build.log
+https://ontouchstart.github.io/bun-review/build.log
 
-https://ontouchstart.github.io/bun/dev.log
+https://ontouchstart.github.io/bun-review/dev.log
 
 ---
 
-https://ontouchstart.github.io/bun/flake.patch
+https://ontouchstart.github.io/bun-review/flake.patch
