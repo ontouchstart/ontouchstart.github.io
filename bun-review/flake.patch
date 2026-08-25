@@ -1,5 +1,5 @@
 diff --git a/flake.nix b/flake.nix
-index 38667c11..632d3e6e 100644
+index 38667c11df..c73888859c 100644
 --- a/flake.nix
 +++ b/flake.nix
 @@ -47,8 +47,7 @@
@@ -12,7 +12,47 @@ index 38667c11..632d3e6e 100644
            pkgs.go
  
            # Bun itself (for running build scripts via `bun bd`)
-@@ -151,9 +150,34 @@
+@@ -84,18 +83,18 @@
+ 
+           # Chromium dependencies for Puppeteer testing (from bootstrap.sh lines 1397-1483)
+           # X11 and graphics libraries
+-          pkgs.xorg.libX11
+-          pkgs.xorg.libxcb
+-          pkgs.xorg.libXcomposite
+-          pkgs.xorg.libXcursor
+-          pkgs.xorg.libXdamage
+-          pkgs.xorg.libXext
+-          pkgs.xorg.libXfixes
+-          pkgs.xorg.libXi
+-          pkgs.xorg.libXrandr
+-          pkgs.xorg.libXrender
+-          pkgs.xorg.libXScrnSaver
+-          pkgs.xorg.libXtst
++          pkgs.libX11
++          pkgs.libxcb
++          pkgs.libXcomposite
++          pkgs.libXcursor
++          pkgs.libXdamage
++          pkgs.libXext
++          pkgs.libXfixes
++          pkgs.libXi
++          pkgs.libXrandr
++          pkgs.libXrender
++          pkgs.libXScrnSaver
++          pkgs.libXtst
+           pkgs.libxkbcommon
+           pkgs.mesa
+           pkgs.nspr
+@@ -116,7 +115,7 @@
+           pkgs.liberation_ttf # fonts-liberation
+           pkgs.atk
+           pkgs.libdrm
+-          pkgs.xorg.libxshmfence
++          pkgs.libxshmfence
+           pkgs.gdk-pixbuf
+         ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
+           # macOS specific dependencies
+@@ -151,9 +150,35 @@
              export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath packages}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
            '' + ''
  
@@ -40,11 +80,12 @@ index 38667c11..632d3e6e 100644
 +            export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath packages}''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 +          '' + ''
 +            export NIX_CFLAGS_COMPILE="-Wno-error=debug-compression-unavailable -gz=none -DWTF_USE_ADDRESS_SANITIZER=0"
++            export BUN_DEBUG_QUIET_LOGS=1
 +
              # Print welcome message
              echo "====================================="
 -            echo "Bun Development Environment"
-+            echo "Bun Development Environment" Fixed
++            echo "Bun Development Environment Fixed    "
              echo "====================================="
              echo "Node.js: $(node --version 2>/dev/null || echo 'not found')"
              echo "Bun: $(bun --version 2>/dev/null || echo 'not found')"
