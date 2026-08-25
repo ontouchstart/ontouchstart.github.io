@@ -1,0 +1,848 @@
+git clone https://github.com/oven-sh/bun.git
+cd bun && git apply ../flake.patch && nix flake update && nix develop --command bash -c "RUSTC_BOOTSTRAP=1 BUN_DEBUG_QUIET_LOGS=1 bun scripts/build.ts --profile=debug --asan=off"
+Setting up required mutable Rust toolchain...
+
+  nightly-2026-07-20-aarch64-unknown-linux-gnu installed - rustc 1.99.0-nightly (9f36de775 2026-07-19)
+
+=====================================
+Bun Development Environment Fixed
+=====================================
+Node.js: v26.7.0
+Bun: 1.3.13
+Clang: clang version 21.1.8
+CMake: cmake version 4.3.4
+LLVM: 21.1.8
+
+Quick start:
+  bun bd                    # Build debug binary
+  bun bd test <test-file>   # Run tests
+=====================================
+ninja: Entering directory `/bun/build/debug'
+[1/1267] mkdir stamps
+[2/1267] mkdir codegen
+[3/1267] mkdir obj
+[4/1267] mkdir pch
+[5/1267] gen ErrorCode+*.h
+[6/1267] gen bindgenv2
+[7/1267] gen .bind.ts → GeneratedBindings.cpp
+[8/1267] gen bake.{client,server,error}.js
+-> bake.client.js, bake.server.js, bake.error.js
+[9/1267] gen JSBuffer.lut.h
+Generating /bun/build/debug/codegen/JSBuffer.lut.h from /bun/src/jsc/bindings/JSBuffer.cpp
+[10/1267] gen ProcessBindingBuffer.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingBuffer.lut.h from /bun/src/jsc/bindings/ProcessBindingBuffer.cpp
+[11/1267] fetch picohttpparser
+[picohttpparser] fetching h2o/picohttpparser@066d2b1e
+[picohttpparser] done → /bun/vendor/picohttpparser
+[12/1267] gen ZigGeneratedClasses.{cpp,h,rs}
+Found 2 classes from /bun/src/jsc/resolve_message.classes.ts
+  - ResolveMessage (15 fields)
+  - BuildMessage (10 fields)
+Found 1 classes from /bun/src/runtime/api/Archive.classes.ts
+  - Archive (4 fields, 1 class fields)
+Found 2 classes from /bun/src/runtime/api/BunObject.classes.ts
+  - ResourceUsage (8 fields)
+  - Subprocess (20 fields)
+Found 1 classes from /bun/src/runtime/api/cron.classes.ts
+  - CronJob (5 fields)
+Found 3 classes from /bun/src/runtime/api/filesystem_router.classes.ts
+  - FileSystemRouter (5 fields)
+  - FrameworkFileSystemRouter (2 fields)
+  - MatchedRoute (8 fields)
+Found 1 classes from /bun/src/runtime/api/Glob.classes.ts
+  - Glob (5 fields)
+Found 1 classes from /bun/src/runtime/api/h2.classes.ts
+  - H2FrameParser (32 fields)
+Found 9 classes from /bun/src/runtime/api/html_rewriter.classes.ts
+  - HTMLRewriter (3 fields)
+  - TextChunk (7 fields)
+  - DocType (5 fields)
+  - DocEnd (1 fields)
+  - Comment (6 fields)
+  - EndTag (4 fields)
+  - AttributeIterator (2 fields)
+  - Element (19 fields)
+  - HTMLRewriterTransform
+Found 2 classes from /bun/src/runtime/api/JSBundler.classes.ts
+  - Transpiler (4 fields)
+  - BuildArtifact (12 fields)
+Found 1 classes from /bun/src/runtime/api/ParsedShellScript.classes.ts
+  - ParsedShellScript (3 fields)
+Found 1 classes from /bun/src/runtime/api/S3Client.classes.ts
+  - S3Client (9 fields, 9 class fields)
+Found 1 classes from /bun/src/runtime/api/S3Stat.classes.ts
+  - S3Stat (4 fields)
+Found 1 classes from /bun/src/runtime/api/SecureContext.classes.ts
+  - SecureContext (2 fields, 3 class fields)
+Found 1 classes from /bun/src/runtime/api/Shell.classes.ts
+  - ShellInterpreter (3 fields)
+Found 1 classes from /bun/src/runtime/api/sourcemap.classes.ts
+  - SourceMap (4 fields)
+Found 4 classes from /bun/src/runtime/api/sql.classes.ts
+  - PostgresSQLConnection (9 fields)
+  - PostgresSQLQuery (5 fields)
+  - MySQLConnection (8 fields)
+  - MySQLQuery (5 fields)
+Found 3 classes from /bun/src/runtime/api/streams.classes.ts
+  - BlobInternalReadableStreamSource (13 fields)
+  - FileInternalReadableStreamSource (10 fields)
+  - BytesInternalReadableStreamSource (13 fields)
+Found 1 classes from /bun/src/runtime/api/Terminal.classes.ts
+  - Terminal (12 fields)
+Found 3 classes from /bun/src/runtime/api/zlib.classes.ts
+  - NativeZlib (7 fields)
+  - NativeBrotli (7 fields)
+  - NativeZstd (7 fields)
+Found 10 classes from /bun/src/runtime/crypto/crypto.classes.ts
+  - Crypto (3 fields)
+  - SHA1 (3 fields, 2 class fields)
+  - MD5 (3 fields, 2 class fields)
+  - MD4 (3 fields, 2 class fields)
+  - SHA224 (3 fields, 2 class fields)
+  - SHA512 (3 fields, 2 class fields)
+  - SHA384 (3 fields, 2 class fields)
+  - SHA256 (3 fields, 2 class fields)
+  - SHA512_256 (3 fields, 2 class fields)
+  - CryptoHasher (5 fields, 2 class fields)
+Found 1 classes from /bun/src/runtime/ffi/ffi.classes.ts
+  - FFI (2 fields)
+Found 1 classes from /bun/src/runtime/image/Image.classes.ts
+  - Image (21 fields, 4 class fields)
+Found 6 classes from /bun/src/runtime/node/node.classes.ts
+  - DNSResolver (16 fields)
+  - FSWatcher (3 fields)
+  - StatWatcher (3 fields)
+  - Timeout (12 fields)
+  - Immediate (6 fields)
+  - NodeJSFS (88 fields)
+Found 3 classes from /bun/src/runtime/node/quic/quic.classes.ts
+  - QuicEndpoint (7 fields)
+  - QuicSession (13 fields)
+  - QuicStream (14 fields)
+Found 7 classes from /bun/src/runtime/server/server.classes.ts
+  - HTTPServer (21 fields)
+  - DebugHTTPServer (21 fields)
+  - HTTPSServer (21 fields)
+  - DebugHTTPSServer (21 fields)
+  - NodeHTTPResponse (30 fields)
+  - ServerWebSocket (20 fields)
+  - HTMLBundle (1 fields)
+Found 6 classes from /bun/src/runtime/socket/sockets.classes.ts
+  - TLSSocket (57 fields)
+  - TCPSocket (55 fields)
+  - Listener (11 fields)
+  - UDPSocket (23 fields)
+  - SocketAddress (6 fields, 2 class fields)
+  - BlockList (5 fields, 1 class fields)
+Found 15 classes from /bun/src/runtime/test_runner/jest.classes.ts
+  - ExpectAnything
+  - ExpectAny
+  - ExpectCloseTo
+  - ExpectObjectContaining
+  - ExpectStringContaining
+  - ExpectStringMatching
+  - ExpectArrayContaining
+  - ExpectCustomAsymmetricMatcher (1 fields)
+  - ExpectMatcherContext (5 fields)
+  - ExpectMatcherUtils (6 fields)
+  - ExpectStatic (10 fields)
+  - Expect (89 fields, 15 class fields)
+  - ExpectTypeOf (38 fields)
+  - DoneCallback
+  - ScopeFunctions (13 fields)
+Found 1 classes from /bun/src/runtime/valkey_jsc/valkey.classes.ts
+  - RedisClient (212 fields)
+Found 1 classes from /bun/src/runtime/webcore/encoding.classes.ts
+  - TextDecoder (4 fields)
+Found 3 classes from /bun/src/runtime/webcore/response.classes.ts
+  - Request (22 fields)
+  - Response (17 fields, 3 class fields)
+  - Blob (18 fields)
+generated_classes.rs: 93 classes (79 resolved), 1527 exported symbols
+[13/1267] gen ProcessBindingConstants.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingConstants.lut.h from /bun/src/jsc/bindings/ProcessBindingConstants.cpp
+[14/1267] gen ZigGlobalObject.lut.h
+Generating /bun/build/debug/codegen/ZigGlobalObject.lut.h from /bun/src/jsc/bindings/ZigGlobalObject.lut.txt
+[15/1267] gen BunProcess.lut.h
+Generating /bun/build/debug/codegen/BunProcess.lut.h from /bun/src/jsc/bindings/BunProcess.cpp
+[16/1267] gen JSSink.{cpp,h,lut.h,rs}
+generated_jssink.rs: 8 sinks, 96 exported symbols
+Generating /bun/build/debug/codegen/JSSink.lut.h from /bun/build/debug/codegen/JSSink.lut.txt
+[17/1267] install /bun
+bun install v1.3.13 (bf2e2cec)
+
++ @lezer/common@1.3.0
++ @lezer/cpp@1.1.3
++ esbuild@0.21.5
++ mitata@0.1.14
++ oxlint@1.70.0
++ prettier@3.6.2
++ prettier-plugin-organize-imports@4.3.0
++ react@18.3.1
++ react-dom@18.3.1
++ source-map-js@1.2.1
++ typescript@6.0.2
+
+42 packages installed [653.00ms]
+[18/1267] gen ProcessBindingHTTPParser.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingHTTPParser.lut.h from /bun/src/jsc/bindings/ProcessBindingHTTPParser.cpp
+[19/1267] gen JSEvent.lut.h
+Generating /bun/build/debug/codegen/JSEvent.lut.h from /bun/src/jsc/bindings/webcore/JSEvent.cpp
+[20/1267] gen BunObject.lut.h
+Generating /bun/build/debug/codegen/BunObject.lut.h from /bun/src/jsc/bindings/BunObject.cpp
+[21/1267] esbuild runtime.out.js
+
+  build/debug/codegen/runtime.out.js  5.3kb
+
+⚡ Done in 6ms
+[22/1267] fetch tinycc
+[tinycc] fetching oven-sh/tinycc@05f0fafa
+[tinycc] applying tcc.h.patch
+[tinycc] done → /bun/vendor/tinycc
+[23/1267] fetch zlib
+[zlib] fetching zlib-ng/zlib-ng@12731092
+[zlib] applying clang-cl-arm64.patch
+[zlib] done → /bun/vendor/zlib
+[24/1267] gen string-map defines_table
+[25/1267] subst deps/zlib/zlib.h
+[26/1267] subst deps/zlib/zconf.h
+[27/1267] install /bun/packages/bun-error
+bun install v1.3.13 (bf2e2cec)
+
++ preact@10.27.2
+
+1 package installed [142.00ms]
+[28/1267] fetch libjpeg-turbo
+[libjpeg-turbo] fetching libjpeg-turbo/libjpeg-turbo@e352b02f
+[libjpeg-turbo] applying 8bit-only.patch
+[libjpeg-turbo] overlay jbun_stubs.c
+[libjpeg-turbo] done → /bun/vendor/libjpeg-turbo
+[29/1267] esbuild bun-error
+
+  ../../build/debug/codegen/bun-error/index.js       34.9kb
+  ../../build/debug/codegen/bun-error/bun-error.css  12.8kb
+
+⚡ Done in 30ms
+[30/1267] gen NodeModuleModule.lut.h
+Generating /bun/build/debug/codegen/NodeModuleModule.lut.h from /bun/src/jsc/modules/NodeModuleModule.cpp
+[31/1267] subst deps/libjpeg-turbo/jconfig.h
+[32/1267] gen ProcessBindingFs.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingFs.lut.h from /bun/src/jsc/bindings/ProcessBindingFs.cpp
+[33/1267] host-cc deps/tinycc/codegen-tool
+[34/1267] subst deps/libjpeg-turbo/jconfigint.h
+[35/1267] subst deps/libjpeg-turbo/jversion.h
+[36/1267] subst deps/libjpeg-turbo/neon-compat.h
+[37/1267] gen compressed/completions/bun.bash.zst
+[38/1267] gen compressed/completions/bun.fish.zst
+[39/1267] gen compressed/completions/bun.zsh.zst
+[40/1267] gen compressed/src/runtime/bake/bun-framework-react/client.tsx.zst
+[41/1267] gen compressed/codegen/bake.error.js.zst
+[42/1267] gen compressed/codegen/bun-error/index.js.zst
+[43/1267] gen compressed/codegen/bake.client.js.zst
+[44/1267] gen compressed/codegen/bun-error/bun-error.css.zst
+[45/1267] codegen tinycc
+[46/1267] install /bun/src/node-fallbacks
+bun install v1.3.13 (bf2e2cec)
+
++ assert@2.1.0
++ browserify-zlib@0.2.0
++ crypto-browserify@3.12.1
++ domain-browser@4.23.0
++ https-browserify@1.0.0
++ punycode@2.3.1
++ querystring-es3@1.0.0-0
++ react-refresh@0.17.0
++ readable-stream@4.7.0
++ stream-http@3.2.0
++ string_decoder@1.3.0
+
+103 packages installed [380.00ms]
+[47/1267] gen node-fallbacks/react-refresh.js
+Bundled 1 module in 4ms
+
+  react-refresh.js  4.81 KB  (entry point)
+
+[48/1267] cc obj/vendor/zlib/compress.c.o
+[49/1267] cc obj/vendor/zlib/adler32.c.o
+[50/1267] gen compressed/codegen/node-fallbacks/react-refresh.js.zst
+[51/1267] cc obj/vendor/zlib/crc32.c.o
+[52/1267] fetch brotli
+[brotli] fetching google/brotli@v1.1.0
+[brotli] done → /bun/vendor/brotli
+[53/1267] gen cpp.rs (cppbind)
+[54/1267] cc obj/vendor/zlib/crc32_braid_comb.c.o
+[55/1267] gen generated_host_exports.rs
+generated_host_exports.rs: 116 exports (host=5, lazy=10, generic=101, rust=0); 242 extern-C blocks audited
+[56/1267] cc obj/vendor/zlib/deflate.c.o
+[57/1267] gen ProcessBindingNatives.lut.h
+Generating /bun/build/debug/codegen/ProcessBindingNatives.lut.h from /bun/src/jsc/bindings/ProcessBindingNatives.cpp
+[58/1267] fetch libdeflate
+[libdeflate] fetching ebiggers/libdeflate@c8c56a20
+[libdeflate] done → /bun/vendor/libdeflate
+[59/1267] cc obj/vendor/zlib/deflate_fast.c.o
+[60/1267] cc obj/vendor/zlib/deflate_huff.c.o
+[61/1267] cc obj/vendor/zlib/deflate_medium.c.o
+[62/1267] cc obj/vendor/zlib/deflate_quick.c.o
+[63/1267] cc obj/vendor/zlib/deflate_rle.c.o
+[64/1267] cc obj/vendor/zlib/deflate_slow.c.o
+[65/1267] cc obj/vendor/zlib/deflate_stored.c.o
+[66/1267] fetch zstd
+[zstd] fetching facebook/zstd@f8745da6
+[zstd] done → /bun/vendor/zstd
+[67/1267] gen node-fallbacks/*.js
+[68/1267] cc obj/vendor/zlib/functable.c.o
+[69/1267] cc obj/vendor/zlib/inftrees.c.o
+[70/1267] cc obj/vendor/zlib/insert_string.c.o
+[71/1267] cc obj/vendor/zlib/infback.c.o
+[72/1267] cc obj/vendor/zlib/insert_string_roll.c.o
+[73/1267] cc obj/vendor/zlib/inflate.c.o
+[74/1267] cc obj/vendor/zlib/cpu_features.c.o
+[75/1267] cc obj/vendor/zlib/uncompr.c.o
+[76/1267] cc obj/vendor/zlib/zutil.c.o
+[77/1267] cc obj/vendor/zlib/gzlib.c.o
+[78/1267] cc obj/vendor/zlib/trees.c.o
+[79/1267] cc obj/vendor/zlib/gzwrite.c.o
+[80/1267] cc obj/vendor/zlib/gzread.c.o
+[81/1267] cc obj/vendor/zlib/arch/generic/adler32_c.c.o
+[82/1267] cc obj/vendor/zlib/arch/generic/adler32_fold_c.c.o
+[83/1267] fetch libspng
+[libspng] fetching randy408/libspng@fb768002
+[libspng] done → /bun/vendor/libspng
+[84/1267] cc obj/vendor/zlib/arch/generic/crc32_chorba_c.c.o
+[85/1267] cc obj/vendor/zlib/arch/generic/chunkset_c.c.o
+[86/1267] cc obj/vendor/zlib/arch/generic/compare256_c.c.o
+[87/1267] cc obj/vendor/zlib/arch/arm/arm_features.c.o
+[88/1267] cc obj/vendor/zlib/arch/generic/slide_hash_c.c.o
+[89/1267] cc obj/vendor/zlib/arch/generic/crc32_fold_c.c.o
+[90/1267] cc obj/vendor/zlib/arch/generic/crc32_braid_c.c.o
+[91/1267] cc obj/vendor/zstd/lib/common/debug.c.o
+[92/1267] cc obj/vendor/zlib/arch/arm/crc32_armv8.c.o
+[93/1267] fetch nodejs (prebuilt)
+[nodejs] fetching https://nodejs.org/dist/v26.3.0/node-v26.3.0-headers.tar.gz
+[nodejs] extracted to /root/.bun/build-cache/nodejs-headers-26.3.0
+[94/1267] cc obj/vendor/zlib/arch/arm/compare256_neon.c.o
+[95/1267] cc obj/vendor/zlib/arch/arm/chunkset_neon.c.o
+[96/1267] cc obj/vendor/zlib/arch/arm/slide_hash_neon.c.o
+[97/1267] cc obj/vendor/zstd/lib/common/entropy_common.c.o
+[98/1267] cc obj/vendor/zlib/arch/arm/adler32_neon.c.o
+[99/1267] cc obj/vendor/zstd/lib/common/error_private.c.o
+[100/1267] cc obj/vendor/zstd/lib/common/threading.c.o
+[101/1267] cc obj/vendor/zstd/lib/common/fse_decompress.c.o
+[102/1267] fetch cares
+[cares] fetching c-ares/c-ares@c7a3138d
+[cares] applying accept-rdata-compression.patch
+[cares] done → /bun/vendor/cares
+[103/1267] cc obj/vendor/zstd/lib/common/xxhash.c.o
+[104/1267] cc obj/vendor/zstd/lib/common/pool.c.o
+[105/1267] fetch libarchive
+[libarchive] fetching libarchive/libarchive@ded82291
+[libarchive] applying archive_write_add_filter_gzip.c.patch
+[libarchive] applying select-registered-only.patch
+[libarchive] applying nonblocking-read.patch
+[libarchive] applying archive_string-codepage-cache.patch
+[libarchive] done → /bun/vendor/libarchive
+[106/1267] cc obj/vendor/zstd/lib/common/zstd_common.c.o
+[107/1267] cc obj/vendor/zstd/lib/compress/hist.c.o
+[108/1267] cc obj/vendor/zstd/lib/compress/fse_compress.c.o
+[109/1267] cc obj/vendor/zstd/lib/compress/zstd_compress_literals.c.o
+[110/1267] cc obj/vendor/zstd/lib/compress/huf_compress.c.o
+[111/1267] cc obj/vendor/zstd/lib/compress/zstd_compress_sequences.c.o
+[112/1267] cc obj/vendor/zstd/lib/compress/zstd_compress_superblock.c.o
+[113/1267] fetch hdrhistogram
+[hdrhistogram] fetching HdrHistogram/HdrHistogram_c@be60a998
+[hdrhistogram] applying bitscan-type.patch
+[hdrhistogram] done → /bun/vendor/hdrhistogram
+[114/1267] cc obj/vendor/zstd/lib/compress/zstd_double_fast.c.o
+[115/1267] cc obj/vendor/zstd/lib/compress/zstd_compress.c.o
+[116/1267] cc obj/vendor/zstd/lib/compress/zstd_ldm.c.o
+[117/1267] cc obj/vendor/zstd/lib/compress/zstd_fast.c.o
+[118/1267] fetch lshpack
+[lshpack] fetching litespeedtech/ls-hpack@8905c024
+[lshpack] applying bss-huff-tables.patch
+[lshpack] done → /bun/vendor/lshpack
+[119/1267] fetch highway
+[highway] fetching google/highway@2607d3b5
+[highway] applying silence-warnings.patch
+[highway] done → /bun/vendor/highway
+[120/1267] cc obj/vendor/zstd/lib/compress/zstd_preSplit.c.o
+[121/1267] cc obj/vendor/zstd/lib/compress/zstd_opt.c.o
+[122/1267] cc obj/vendor/zstd/lib/decompress/zstd_ddict.c.o
+[123/1267] cc obj/vendor/zstd/lib/compress/zstdmt_compress.c.o
+[124/1267] cc obj/vendor/zstd/lib/decompress/zstd_decompress.c.o
+[125/1267] cc obj/vendor/zstd/lib/decompress/huf_decompress.c.o
+[126/1267] cc obj/vendor/zstd/lib/dictBuilder/divsufsort.c.o
+[127/1267] fetch mimalloc
+[mimalloc] fetching oven-sh/mimalloc@942b8342
+[mimalloc] done → /bun/vendor/mimalloc
+[128/1267] cc obj/vendor/brotli/c/common/constants.c.o
+[129/1267] cc obj/vendor/brotli/c/common/context.c.o
+[130/1267] cc obj/vendor/zstd/lib/dictBuilder/cover.c.o
+[131/1267] cc obj/vendor/brotli/c/common/platform.c.o
+[132/1267] cc obj/vendor/zstd/lib/decompress/zstd_decompress_block.c.o
+[133/1267] cc obj/vendor/brotli/c/common/shared_dictionary.c.o
+[134/1267] cc obj/vendor/zstd/lib/dictBuilder/fastcover.c.o
+[135/1267] cc obj/vendor/brotli/c/common/transform.c.o
+[136/1267] cc obj/vendor/brotli/c/dec/bit_reader.c.o
+[137/1267] cc obj/vendor/zstd/lib/dictBuilder/zdict.c.o
+[138/1267] cc obj/vendor/brotli/c/common/dictionary.c.o
+[139/1267] cc obj/vendor/brotli/c/dec/huffman.c.o
+[140/1267] cc obj/vendor/brotli/c/dec/state.c.o
+[141/1267] cc obj/vendor/brotli/c/enc/bit_cost.c.o
+[142/1267] cc obj/vendor/brotli/c/enc/backward_references_hq.c.o
+[143/1267] cc obj/vendor/brotli/c/dec/decode.c.o
+[144/1267] cc obj/vendor/brotli/c/enc/block_splitter.c.o
+[145/1267] cc obj/vendor/brotli/c/enc/brotli_bit_stream.c.o
+[146/1267] fetch lsquic
+[lsquic] fetching litespeedtech/lsquic@31819113
+[lsquic] applying versions-to-string.patch
+[lsquic] applying allow-no-sni.patch
+[lsquic] applying skip-priority-walk.patch
+[lsquic] applying hash-nested-iter.patch
+[lsquic] applying abort-error-tickable.patch
+[lsquic] applying disable-gquic.patch
+[lsquic] applying requeue-unsent-coalesced.patch
+[lsquic] applying node-quic-accessors.patch
+[lsquic] applying coalesce-batch-drop.patch
+[lsquic] applying connection-close-pns.patch
+[lsquic] done → /bun/vendor/lsquic
+[147/1267] fetch libwebp
+[libwebp] fetching webmproject/libwebp@b7e29b9d
+[libwebp] done → /bun/vendor/libwebp
+[148/1267] fetch lsqpack
+[lsqpack] fetching litespeedtech/ls-qpack@1e9c5b8e
+[lsqpack] applying bss-huff-tables.patch
+[lsqpack] done → /bun/vendor/lsqpack
+[149/1267] cc obj/vendor/brotli/c/enc/command.c.o
+[150/1267] cc obj/vendor/brotli/c/enc/cluster.c.o
+[151/1267] cc obj/vendor/brotli/c/enc/compound_dictionary.c.o
+[152/1267] cc obj/vendor/brotli/c/enc/backward_references.c.o
+[153/1267] cc obj/vendor/brotli/c/enc/dictionary_hash.c.o
+[154/1267] cc obj/vendor/brotli/c/enc/compress_fragment.c.o
+[155/1267] cc obj/vendor/brotli/c/enc/entropy_encode.c.o
+[156/1267] cc obj/vendor/brotli/c/enc/compress_fragment_two_pass.c.o
+[157/1267] cc obj/vendor/brotli/c/enc/fast_log.c.o
+[158/1267] cc obj/vendor/brotli/c/enc/memory.c.o
+[159/1267] cc obj/vendor/brotli/c/enc/literal_cost.c.o
+[160/1267] cc obj/vendor/brotli/c/enc/encode.c.o
+[161/1267] cc obj/vendor/brotli/c/enc/histogram.c.o
+[162/1267] cc obj/vendor/brotli/c/enc/encoder_dict.c.o
+[163/1267] fetch rust-argon2
+[rust-argon2] fetching sru-systems/rust-argon2@ed81866f
+[rust-argon2] applying legacy-low-memory.patch
+[rust-argon2] done → /bun/vendor/rust-argon2
+[164/1267] cc obj/vendor/zstd/lib/compress/zstd_lazy.c.o
+[165/1267] cc obj/vendor/brotli/c/enc/utf8_util.c.o
+[166/1267] cc obj/vendor/libdeflate/lib/utils.c.o
+[167/1267] cc obj/vendor/libdeflate/lib/x86/cpu_features.c.o
+[168/1267] fetch lolhtml
+[lolhtml] fetching oven-sh/lol-html@725ce499
+[lolhtml] done → /bun/vendor/lolhtml
+[169/1267] cc obj/vendor/libdeflate/lib/deflate_decompress.c.o
+[170/1267] cc obj/vendor/libdeflate/lib/zlib_compress.c.o
+[171/1267] cc obj/vendor/libdeflate/lib/zlib_decompress.c.o
+[172/1267] cc obj/vendor/libdeflate/lib/arm/cpu_features.c.o
+[173/1267] cc obj/vendor/libdeflate/lib/gzip_decompress.c.o
+[174/1267] cc obj/vendor/libdeflate/lib/gzip_compress.c.o
+[175/1267] cc obj/vendor/brotli/c/enc/metablock.c.o
+[176/1267] cc obj/vendor/brotli/c/enc/static_dict.c.o
+[177/1267] cc obj/vendor/libarchive/libarchive/archive_acl.c.o
+[178/1267] cc obj/vendor/libarchive/libarchive/archive_check_magic.c.o
+[179/1267] cc obj/vendor/libdeflate/lib/adler32.c.o
+[180/1267] cc obj/vendor/libarchive/libarchive/archive_cmdline.c.o
+[181/1267] cc obj/vendor/libarchive/libarchive/archive_cryptor.c.o
+[182/1267] cc obj/vendor/libarchive/libarchive/archive_digest.c.o
+[183/1267] cc obj/vendor/libarchive/libarchive/archive_entry_copy_stat.c.o
+[184/1267] cc obj/vendor/libarchive/libarchive/archive_entry.c.o
+[185/1267] cc obj/vendor/libdeflate/lib/deflate_compress.c.o
+[186/1267] cc obj/vendor/libarchive/libarchive/archive_entry_link_resolver.c.o
+[187/1267] cc obj/vendor/libarchive/libarchive/archive_entry_sparse.c.o
+[188/1267] cc obj/vendor/libarchive/libarchive/archive_entry_stat.c.o
+[189/1267] cc obj/vendor/libarchive/libarchive/archive_entry_strmode.c.o
+[190/1267] cc obj/vendor/libarchive/libarchive/archive_hmac.c.o
+[191/1267] cc obj/vendor/libdeflate/lib/crc32.c.o
+[192/1267] cc obj/vendor/libarchive/libarchive/archive_pack_dev.c.o
+[193/1267] cc obj/vendor/libarchive/libarchive/archive_pathmatch.c.o
+[194/1267] cc obj/vendor/libarchive/libarchive/archive_options.c.o
+[195/1267] cc obj/vendor/libarchive/libarchive/archive_match.c.o
+[196/1267] cc obj/vendor/libarchive/libarchive/archive_parse_date.c.o
+[197/1267] cc obj/vendor/libarchive/libarchive/archive_entry_xattr.c.o
+[198/1267] cc obj/vendor/libarchive/libarchive/archive_rb.c.o
+[199/1267] cc obj/vendor/libarchive/libarchive/archive_random.c.o
+[200/1267] cc obj/vendor/libarchive/libarchive/archive_ppmd7.c.o
+[201/1267] cc obj/vendor/libarchive/libarchive/archive_read_add_passphrase.c.o
+[202/1267] cc obj/vendor/libarchive/libarchive/archive_read_data_into_fd.c.o
+[203/1267] cc obj/vendor/libarchive/libarchive/archive_read_append_filter.c.o
+[204/1267] cc obj/vendor/libarchive/libarchive/archive_read.c.o
+[205/1267] cc obj/vendor/libarchive/libarchive/archive_read_disk_set_standard_lookup.c.o
+[206/1267] cc obj/vendor/libarchive/libarchive/archive_read_extract.c.o
+[207/1267] cc obj/vendor/libarchive/libarchive/archive_read_disk_entry_from_file.c.o
+[208/1267] cc obj/vendor/libarchive/libarchive/archive_read_extract2.c.o
+[209/1267] cc obj/vendor/libarchive/libarchive/archive_read_open_file.c.o
+[210/1267] cc obj/vendor/libarchive/libarchive/archive_read_disk_posix.c.o
+[211/1267] cc obj/vendor/libarchive/libarchive/archive_read_open_memory.c.o
+[212/1267] cc obj/vendor/libarchive/libarchive/archive_read_open_filename.c.o
+[213/1267] cc obj/vendor/libarchive/libarchive/archive_read_open_fd.c.o
+[214/1267] cc obj/vendor/libarchive/libarchive/archive_read_set_format.c.o
+[215/1267] cc obj/vendor/libarchive/libarchive/archive_read_set_options.c.o
+[216/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_filter_gzip.c.o
+[217/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_format_empty.c.o
+[218/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_filter_program.c.o
+[219/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_format_raw.c.o
+[220/1267] cc obj/vendor/libarchive/libarchive/archive_util.c.o
+[221/1267] cc obj/vendor/libarchive/libarchive/archive_string_sprintf.c.o
+[222/1267] cc obj/vendor/libarchive/libarchive/archive_time.c.o
+[223/1267] cc obj/vendor/libarchive/libarchive/archive_version_details.c.o
+[224/1267] cc obj/vendor/libarchive/libarchive/archive_read_support_format_tar.c.o
+[225/1267] cc obj/vendor/libarchive/libarchive/archive_string.c.o
+[226/1267] cc obj/vendor/libarchive/libarchive/archive_write.c.o
+[227/1267] cc obj/vendor/libarchive/libarchive/archive_write_open_file.c.o
+[228/1267] cc obj/vendor/libarchive/libarchive/archive_write_disk_set_standard_lookup.c.o
+[229/1267] cc obj/vendor/libarchive/libarchive/archive_write_open_fd.c.o
+[230/1267] cc obj/vendor/libarchive/libarchive/archive_write_open_filename.c.o
+[231/1267] cc obj/vendor/libarchive/libarchive/archive_write_disk_posix.c.o
+[232/1267] cc obj/vendor/libarchive/libarchive/archive_virtual.c.o
+[233/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter.c.o
+[234/1267] cc obj/vendor/libarchive/libarchive/archive_write_open_memory.c.o
+[235/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_b64encode.c.o
+[236/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_by_name.c.o
+[237/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_gzip.c.o
+[238/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_bzip2.c.o
+[239/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_grzip.c.o
+[240/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_compress.c.o
+[241/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lrzip.c.o
+[242/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_none.c.o
+[243/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_xz.c.o
+[244/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lz4.c.o
+[245/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_program.c.o
+[246/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_lzop.c.o
+[247/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_uuencode.c.o
+[248/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format.c.o
+[249/1267] cc obj/vendor/libarchive/libarchive/archive_write_add_filter_zstd.c.o
+[250/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_ar.c.o
+[251/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio.c.o
+[252/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_7zip.c.o
+[253/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_odc.c.o
+[254/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_by_name.c.o
+[255/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_binary.c.o
+[256/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_cpio_newc.c.o
+[257/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_filter_by_ext.c.o
+[258/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_gnutar.c.o
+[259/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_raw.c.o
+[260/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_warc.c.o
+[261/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_shar.c.o
+[262/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_ustar.c.o
+[263/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_mtree.c.o
+[264/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_pax.c.o
+[265/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_v7tar.c.o
+[266/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_xar.c.o
+[267/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_passphrase.c.o
+[268/1267] cc obj/vendor/libarchive/libarchive/xxhash.c.o
+[269/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_iso9660.c.o
+[270/1267] cc obj/vendor/libjpeg-turbo/src/jcapimin.c.o
+[271/1267] cc obj/vendor/libjpeg-turbo/src/jcapistd.c.o
+[272/1267] cc obj/vendor/libarchive/libarchive/filter_fork_posix.c.o
+[273/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_format_zip.c.o
+[274/1267] cc obj/vendor/libjpeg-turbo/src/jccoefct.c.o
+[275/1267] cc obj/vendor/libarchive/libarchive/archive_write_set_options.c.o
+[276/1267] cc obj/vendor/libjpeg-turbo/src/jccolor.c.o
+[277/1267] cc obj/vendor/libjpeg-turbo/src/jcdctmgr.c.o
+[278/1267] cc obj/vendor/libjpeg-turbo/src/jcinit.c.o
+[279/1267] cc obj/vendor/libjpeg-turbo/src/jcicc.c.o
+[280/1267] cc obj/vendor/libjpeg-turbo/src/jcdiffct.c.o
+[281/1267] cc obj/vendor/libjpeg-turbo/src/jcmainct.c.o
+[282/1267] cc obj/vendor/libjpeg-turbo/src/jclhuff.c.o
+[283/1267] cc obj/vendor/libjpeg-turbo/src/jclossls.c.o
+[284/1267] cc obj/vendor/libjpeg-turbo/src/jcmarker.c.o
+[285/1267] cc obj/vendor/libjpeg-turbo/src/jcmaster.c.o
+[286/1267] cc obj/vendor/libjpeg-turbo/src/jcomapi.c.o
+[287/1267] cc obj/vendor/libjpeg-turbo/src/jcparam.c.o
+[288/1267] cc obj/vendor/libjpeg-turbo/src/jcphuff.c.o
+[289/1267] cc obj/vendor/libjpeg-turbo/src/jcprepct.c.o
+[290/1267] cc obj/vendor/libjpeg-turbo/src/jctrans.c.o
+[291/1267] cc obj/vendor/libjpeg-turbo/src/jcsample.c.o
+[292/1267] cc obj/vendor/libjpeg-turbo/src/jdapimin.c.o
+[293/1267] cc obj/vendor/libjpeg-turbo/src/jdatadst.c.o
+[294/1267] cc obj/vendor/libjpeg-turbo/src/jdapistd.c.o
+[295/1267] cc obj/vendor/libjpeg-turbo/src/jdatasrc.c.o
+[296/1267] cc obj/vendor/libjpeg-turbo/src/jchuff.c.o
+[297/1267] cc obj/vendor/libjpeg-turbo/src/jddctmgr.c.o
+[298/1267] cc obj/vendor/libjpeg-turbo/src/jdcoefct.c.o
+[299/1267] cc obj/vendor/libjpeg-turbo/src/jdcolor.c.o
+[300/1267] cc obj/vendor/libjpeg-turbo/src/jddiffct.c.o
+[301/1267] cc obj/vendor/libjpeg-turbo/src/jdicc.c.o
+[302/1267] cc obj/vendor/libjpeg-turbo/src/jdhuff.c.o
+[303/1267] cc obj/vendor/libjpeg-turbo/src/jdlhuff.c.o
+[304/1267] cc obj/vendor/libjpeg-turbo/src/jdinput.c.o
+[305/1267] cc obj/vendor/libjpeg-turbo/src/jdmainct.c.o
+[306/1267] cc obj/vendor/libjpeg-turbo/src/jdlossls.c.o
+[307/1267] cc obj/vendor/libjpeg-turbo/src/jdmaster.c.o
+[308/1267] cc obj/vendor/libjpeg-turbo/src/jdpostct.c.o
+[309/1267] cc obj/vendor/libjpeg-turbo/src/jdphuff.c.o
+[310/1267] cc obj/vendor/libjpeg-turbo/src/jdmarker.c.o
+[311/1267] cc obj/vendor/libjpeg-turbo/src/jdmerge.c.o
+[312/1267] cc obj/vendor/libjpeg-turbo/src/jdtrans.c.o
+[313/1267] cc obj/vendor/libjpeg-turbo/src/jfdctflt.c.o
+[314/1267] cc obj/vendor/libjpeg-turbo/src/jdsample.c.o
+[315/1267] cc obj/vendor/libjpeg-turbo/src/jfdctfst.c.o
+[316/1267] cc obj/vendor/libjpeg-turbo/src/jfdctint.c.o
+[317/1267] cc obj/vendor/libjpeg-turbo/src/jidctfst.c.o
+[318/1267] cc obj/vendor/libjpeg-turbo/src/jidctflt.c.o
+[319/1267] cc obj/vendor/libjpeg-turbo/src/jidctred.c.o
+[320/1267] cc obj/vendor/libjpeg-turbo/src/jerror.c.o
+[321/1267] cc obj/vendor/libjpeg-turbo/src/jdarith.c.o
+[322/1267] cc obj/vendor/libjpeg-turbo/src/jaricom.c.o
+[323/1267] cc obj/vendor/libjpeg-turbo/src/jcarith.c.o
+[324/1267] cc obj/vendor/libjpeg-turbo/src/jidctint.c.o
+[325/1267] cc obj/vendor/libjpeg-turbo/src/jmemmgr.c.o
+[326/1267] cc obj/vendor/libjpeg-turbo/src/jmemnobs.c.o
+[327/1267] cc obj/vendor/libjpeg-turbo/src/jquant1.c.o
+[328/1267] cc obj/vendor/libjpeg-turbo/src/jpeg_nbits.c.o
+[329/1267] cc obj/vendor/libjpeg-turbo/src/jutils.c.o
+[330/1267] cc obj/vendor/libjpeg-turbo/src/jquant2.c.o
+[331/1267] cc obj/vendor/libjpeg-turbo/src/jdatadst-tj.c.o
+[332/1267] cc obj/vendor/libjpeg-turbo/src/jdatasrc-tj.c.o
+[333/1267] cc obj/vendor/libjpeg-turbo/src/transupp.c.o
+[334/1267] cc obj/vendor/libjpeg-turbo/jbun_stubs.c.o
+[335/1267] cc obj/vendor/libjpeg-turbo/src/turbojpeg.c.o
+[336/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jcgray-neon.c.o
+[337/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jcphuff-neon.c.o
+[338/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jdsample-neon.c.o
+[339/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jfdctfst-neon.c.o
+[340/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jcsample-neon.c.o
+[341/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jidctred-neon.c.o
+[342/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jquanti-neon.c.o
+[343/1267] cc obj/vendor/libjpeg-turbo/simd/arm/aarch64/jsimd.c.o
+[344/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jidctint-neon.c.o
+[345/1267] cc obj/vendor/libjpeg-turbo/simd/arm/aarch64/jchuff-neon.c.o
+[346/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jfdctint-neon.c.o
+[347/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jdmerge-neon.c.o
+[348/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jidctfst-neon.c.o
+[349/1267] cc obj/vendor/libwebp/src/dec/alpha_dec.c.o
+[350/1267] cc obj/vendor/libwebp/src/dec/buffer_dec.c.o
+[351/1267] cc obj/vendor/libwebp/src/dec/idec_dec.c.o
+[352/1267] cc obj/vendor/libwebp/src/dec/quant_dec.c.o
+[353/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jccolor-neon.c.o
+[354/1267] cc obj/vendor/libwebp/src/dec/frame_dec.c.o
+[355/1267] cc obj/vendor/libwebp/src/dec/io_dec.c.o
+[356/1267] cc obj/vendor/libwebp/src/dec/tree_dec.c.o
+[357/1267] cc obj/vendor/libjpeg-turbo/simd/arm/jdcolor-neon.c.o
+[358/1267] cc obj/vendor/libspng/spng/spng.c.o
+[359/1267] cc obj/vendor/libwebp/src/dec/vp8_dec.c.o
+[360/1267] cc obj/vendor/libwebp/src/enc/analysis_enc.c.o
+[361/1267] cc obj/vendor/libwebp/src/enc/alpha_enc.c.o
+[362/1267] cc obj/vendor/libwebp/src/enc/backward_references_cost_enc.c.o
+[363/1267] cc obj/vendor/libwebp/src/dec/webp_dec.c.o
+[364/1267] cc obj/vendor/libwebp/src/enc/config_enc.c.o
+[365/1267] cc obj/vendor/libwebp/src/dec/vp8l_dec.c.o
+[366/1267] cc obj/vendor/libwebp/src/enc/cost_enc.c.o
+[367/1267] cc obj/vendor/libwebp/src/enc/backward_references_enc.c.o
+[368/1267] cc obj/vendor/libwebp/src/enc/filter_enc.c.o
+[369/1267] cc obj/vendor/libwebp/src/enc/near_lossless_enc.c.o
+[370/1267] cc obj/vendor/libwebp/src/enc/picture_csp_enc.c.o
+[371/1267] cc obj/vendor/libwebp/src/enc/frame_enc.c.o
+[372/1267] cc obj/vendor/libwebp/src/enc/picture_psnr_enc.c.o
+[373/1267] cc obj/vendor/libwebp/src/enc/histogram_enc.c.o
+[374/1267] cc obj/vendor/libwebp/src/enc/picture_rescale_enc.c.o
+[375/1267] cc obj/vendor/libwebp/src/enc/picture_enc.c.o
+[376/1267] cc obj/vendor/libwebp/src/enc/iterator_enc.c.o
+[377/1267] cc obj/vendor/libwebp/src/enc/picture_tools_enc.c.o
+[378/1267] cc obj/vendor/libwebp/src/enc/token_enc.c.o
+[379/1267] cc obj/vendor/libwebp/src/enc/tree_enc.c.o
+[380/1267] cc obj/vendor/libwebp/src/enc/predictor_enc.c.o
+[381/1267] cc obj/vendor/libwebp/src/enc/syntax_enc.c.o
+[382/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing_mips_dsp_r2.c.o
+[383/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing.c.o
+[384/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing_sse2.c.o
+[385/1267] cc obj/vendor/libwebp/src/enc/webp_enc.c.o
+[386/1267] cc obj/vendor/libwebp/src/enc/vp8l_enc.c.o
+[387/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing_sse41.c.o
+[388/1267] cc obj/vendor/libwebp/src/dsp/cost_mips32.c.o
+[389/1267] cc obj/vendor/libwebp/src/dsp/cost_mips_dsp_r2.c.o
+[390/1267] cc obj/vendor/libwebp/src/dsp/cost.c.o
+[391/1267] cc obj/vendor/libwebp/src/dsp/cost_sse2.c.o
+[392/1267] cc obj/vendor/libwebp/src/dsp/cpu.c.o
+[393/1267] cc obj/vendor/libwebp/src/dsp/dec_clip_tables.c.o
+[394/1267] cc obj/vendor/libwebp/src/dsp/dec_mips32.c.o
+[395/1267] cc obj/vendor/libwebp/src/enc/quant_enc.c.o
+[396/1267] cc obj/vendor/libwebp/src/dsp/dec.c.o
+[397/1267] cc obj/vendor/libwebp/src/dsp/dec_mips_dsp_r2.c.o
+[398/1267] cc obj/vendor/libwebp/src/dsp/dec_msa.c.o
+[399/1267] cc obj/vendor/libwebp/src/dsp/dec_sse2.c.o
+[400/1267] cc obj/vendor/libwebp/src/dsp/alpha_processing_neon.c.o
+[401/1267] cc obj/vendor/libwebp/src/dsp/enc_mips32.c.o
+[402/1267] cc obj/vendor/libwebp/src/dsp/enc.c.o
+[403/1267] cc obj/vendor/libwebp/src/dsp/enc_msa.c.o
+[404/1267] cc obj/vendor/libwebp/src/dsp/dec_sse41.c.o
+[405/1267] cc obj/vendor/libwebp/src/dsp/enc_mips_dsp_r2.c.o
+[406/1267] cc obj/vendor/libwebp/src/dsp/cost_neon.c.o
+[407/1267] cc obj/vendor/libwebp/src/dsp/enc_sse2.c.o
+[408/1267] cc obj/vendor/libwebp/src/dsp/enc_sse41.c.o
+[409/1267] cc obj/vendor/libwebp/src/dsp/filters_msa.c.o
+[410/1267] cc obj/vendor/libwebp/src/dsp/filters_mips_dsp_r2.c.o
+[411/1267] cc obj/vendor/libwebp/src/dsp/filters_sse2.c.o
+[412/1267] cc obj/vendor/libwebp/src/dsp/filters.c.o
+[413/1267] cc obj/vendor/libwebp/src/dsp/lossless_avx2.c.o
+[414/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_avx2.c.o
+[415/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_mips32.c.o
+[416/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_mips_dsp_r2.c.o
+[417/1267] cc obj/vendor/libwebp/src/dsp/lossless.c.o
+[418/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc.c.o
+[419/1267] cc obj/vendor/libwebp/src/dsp/dec_neon.c.o
+[420/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_msa.c.o
+[421/1267] cc obj/vendor/libwebp/src/dsp/filters_neon.c.o
+[422/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_sse2.c.o
+[423/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_sse41.c.o
+[424/1267] cc obj/vendor/libwebp/src/dsp/lossless_mips_dsp_r2.c.o
+[425/1267] cc obj/vendor/libwebp/src/dsp/lossless_msa.c.o
+[426/1267] cc obj/vendor/libwebp/src/dsp/enc_neon.c.o
+[427/1267] cc obj/vendor/libwebp/src/dsp/lossless_sse2.c.o
+[428/1267] cc obj/vendor/libwebp/src/dsp/lossless_sse41.c.o
+[429/1267] cc obj/vendor/libwebp/src/dsp/rescaler_mips32.c.o
+[430/1267] cc obj/vendor/libwebp/src/dsp/rescaler.c.o
+[431/1267] cc obj/vendor/libwebp/src/dsp/rescaler_mips_dsp_r2.c.o
+[432/1267] cc obj/vendor/libwebp/src/dsp/rescaler_msa.c.o
+[433/1267] cc obj/vendor/libwebp/src/dsp/rescaler_sse2.c.o
+[434/1267] cc obj/vendor/libwebp/src/dsp/lossless_enc_neon.c.o
+[435/1267] cc obj/vendor/libwebp/src/dsp/ssim_sse2.c.o
+[436/1267] cc obj/vendor/libwebp/src/dsp/ssim.c.o
+[437/1267] cc obj/vendor/libwebp/src/dsp/upsampling.c.o
+[438/1267] cc obj/vendor/libwebp/src/dsp/upsampling_msa.c.o
+[439/1267] cc obj/vendor/libwebp/src/dsp/upsampling_mips_dsp_r2.c.o
+[440/1267] cc obj/vendor/libwebp/src/dsp/upsampling_sse41.c.o
+[441/1267] cc obj/vendor/libwebp/src/dsp/upsampling_sse2.c.o
+[442/1267] cc obj/vendor/libwebp/src/dsp/yuv.c.o
+[443/1267] cc obj/vendor/libwebp/src/dsp/lossless_neon.c.o
+[444/1267] cc obj/vendor/libwebp/src/dsp/yuv_mips_dsp_r2.c.o
+[445/1267] cc obj/vendor/libwebp/src/dsp/rescaler_neon.c.o
+[446/1267] cc obj/vendor/libwebp/src/dsp/yuv_sse2.c.o
+[447/1267] cc obj/vendor/libwebp/src/dsp/yuv_mips32.c.o
+[448/1267] cc obj/vendor/libwebp/src/dsp/yuv_sse41.c.o
+[449/1267] cc obj/vendor/libwebp/src/utils/bit_reader_utils.c.o
+[450/1267] cc obj/vendor/libwebp/src/utils/color_cache_utils.c.o
+[451/1267] cc obj/vendor/libwebp/src/utils/bit_writer_utils.c.o
+[452/1267] cc obj/vendor/libwebp/src/utils/filters_utils.c.o
+[453/1267] cc obj/vendor/libwebp/src/utils/huffman_utils.c.o
+[454/1267] cc obj/vendor/libwebp/src/utils/huffman_encode_utils.c.o
+[455/1267] cc obj/vendor/libwebp/src/utils/palette.c.o
+[456/1267] cc obj/vendor/libwebp/src/utils/quant_levels_utils.c.o
+[457/1267] cc obj/vendor/libwebp/src/utils/rescaler_utils.c.o
+[458/1267] cc obj/vendor/libwebp/src/dsp/upsampling_neon.c.o
+[459/1267] cc obj/vendor/libwebp/src/utils/quant_levels_dec_utils.c.o
+[460/1267] cc obj/vendor/libwebp/src/utils/thread_utils.c.o
+[461/1267] cc obj/vendor/libwebp/src/utils/utils.c.o
+[462/1267] cc obj/vendor/libwebp/src/dsp/yuv_neon.c.o
+[463/1267] cc obj/vendor/libwebp/src/utils/random_utils.c.o
+[464/1267] cc obj/vendor/libwebp/src/mux/muxedit.c.o
+[465/1267] cc obj/vendor/libwebp/src/demux/demux.c.o
+[466/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_cpu.c.o
+[467/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_dsp.c.o
+[468/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_csp.c.o
+[469/1267] cc obj/vendor/libwebp/src/mux/muxinternal.c.o
+[470/1267] cc obj/vendor/libwebp/src/mux/muxread.c.o
+[471/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_sse2.c.o
+[472/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_gamma.c.o
+[473/1267] cc obj/vendor/cares/src/lib/ares_android.c.o
+[474/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv.c.o
+[475/1267] cc obj/vendor/cares/src/lib/ares_addrinfo2hostent.c.o
+[476/1267] cc obj/vendor/cares/src/lib/ares_addrinfo_localhost.c.o
+[477/1267] cc obj/vendor/cares/src/lib/ares_cancel.c.o
+[478/1267] cc obj/vendor/cares/src/lib/ares_cookie.c.o
+[479/1267] cc obj/vendor/cares/src/lib/ares_close_sockets.c.o
+[480/1267] cc obj/vendor/cares/src/lib/ares_conn.c.o
+[481/1267] cc obj/vendor/libwebp/sharpyuv/sharpyuv_neon.c.o
+[482/1267] cc obj/vendor/cares/src/lib/ares_free_hostent.c.o
+[483/1267] cc obj/vendor/cares/src/lib/ares_data.c.o
+[484/1267] gen JS modules (bundle-modules)
+Preprocess modules (11053ms)
+Bundle modules (95ms)
+Postprocesss modules (79ms)
+Bundle Functions (543ms)
+Generate Code (27ms)
+
+[11.82s] Bundled "src/js" for development
+  2787 kb
+  197 internal modules
+  13 native modules
+  50 internal functions across 16 files
+[484/1267] cargo bun_runtime → libbun_runtime.a (--target aarch64-unknown-linux-gnu)
+
+  nightly-2026-07-20-aarch64-unknown-linux-gnu unchanged - rustc 1.99.0-nightly (9f36de775 2026-07-19)
+
+[518/1267] fetch boringssl
+[boringssl] fetching oven-sh/boringssl@2288897e
+[boringssl] done → /bun/vendor/boringssl
+[780/1267] fetch WebKit (prebuilt)
+[WebKit] fetching https://github.com/oven-sh/WebKit/releases/download/autobuild-cb61607f1a4bae79d7701965062634dee9efb349/bun-webkit-linux-arm64-debug.tar.gz
+[WebKit] extracted to /root/.bun/build-cache/webkit-cb61607f1a4bae79-arm64-debug
+[1196/1267] cxx obj/src/jsc/bindings/webcore/streams/CrossRealmTransform.cpp.o
+[1198/1267] cxx obj/src/jsc/bindings/sqlite/NodeSqlite.cpp.o
+[1199/1267] cxx obj/src/jsc/bindings/webcore/streams/JSByteLengthQueuingStrategy.cpp.o
+[1200/1267] cxx obj/src/jsc/bindings/webcore/streams/JSCompressionStream.cpp.o
+[1201/1267] cxx obj/src/jsc/bindings/webcore/streams/BunAsyncIterableSource.cpp.o
+[1202/1267] cxx obj/src/jsc/bindings/webcore/streams/JSCompressionStreamShared.cpp.o
+[1203/1267] cxx obj/src/jsc/bindings/webcore/streams/JSCrossRealmTransformState.cpp.o
+[1204/1267] cxx obj/src/jsc/bindings/webcore/streams/BunStreamSource.cpp.o
+[1205/1267] cxx obj/src/jsc/bindings/webcore/streams/JSCountQueuingStrategy.cpp.o
+[1206/1267] cxx obj/src/jsc/bindings/webcore/streams/JSDecompressionStream.cpp.o
+[1207/1267] cxx obj/src/jsc/bindings/webcore/streams/JSPullIntoDescriptor.cpp.o
+[1208/1267] cxx obj/src/jsc/bindings/webcore/streams/BunStreamConsumers.cpp.o
+[1209/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableByteStreamController.cpp.o
+[1210/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamBYOBReader.cpp.o
+[1211/1267] cxx obj/src/jsc/bindings/webcore/SerializedScriptValue.cpp.o
+[1212/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamAsyncIterator.cpp.o
+[1213/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamReaderBase.cpp.o
+[1214/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStream.cpp.o
+[1215/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamDefaultController.cpp.o
+[1216/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamBYOBRequest.cpp.o
+[1217/1267] cxx obj/src/jsc/bindings/webcore/streams/JSDirectStreamController.cpp.o
+[1218/1267] cxx obj/src/jsc/bindings/webcore/streams/JSStreamAlgorithmContexts.cpp.o
+[1219/1267] cxx obj/src/jsc/bindings/webcore/streams/JSStreamTeeState.cpp.o
+[1220/1267] cxx obj/src/jsc/bindings/webcore/streams/JSStreamsRuntime.cpp.o
+[1221/1267] cxx obj/src/jsc/bindings/webcore/streams/JSTransformStream.cpp.o
+[1222/1267] cxx obj/src/jsc/bindings/webcore/streams/JSTextEncoderStream.cpp.o
+[1223/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadableStreamDefaultReader.cpp.o
+[1224/1267] cxx obj/src/jsc/bindings/webcore/streams/JSStreamPipeToOperation.cpp.o
+[1225/1267] cxx obj/src/jsc/bindings/webcore/streams/JSTextDecoderStream.cpp.o
+[1226/1267] cxx obj/src/jsc/bindings/webcore/streams/JSReadRequest.cpp.o
+[1227/1267] cxx obj/src/jsc/bindings/webcore/streams/JSTransformStreamDefaultController.cpp.o
+[1228/1267] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStreamDefaultWriter.cpp.o
+[1229/1267] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStream.cpp.o
+[1230/1267] cxx obj/src/jsc/bindings/webcore/streams/TransformStreamOperations.cpp.o
+[1231/1267] cxx obj/src/jsc/bindings/webcore/streams/JSWritableStreamDefaultController.cpp.o
+[1232/1267] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsInspectCustom.cpp.o
+[1233/1267] cxx obj/src/jsc/bindings/webcore/streams/WritableStreamOperations.cpp.o
+[1234/1267] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsMisc.cpp.o
+[1235/1267] cxx obj/src/jsc/bindings/webcore/streams/WebStreamsExports.cpp.o
+[1236/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CBC.cpp.o
+[1237/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CBCOpenSSL.cpp.o
+[1238/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CFB.cpp.o
+[1239/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CFBOpenSSL.cpp.o
+[1240/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CTROpenSSL.cpp.o
+[1241/1267] cxx obj/src/jsc/bindings/webcore/streams/ReadableStreamOperations.cpp.o
+[1242/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_CTR.cpp.o
+[1243/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_GCMOpenSSL.cpp.o
+[1244/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_GCM.cpp.o
+[1245/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmAES_KW.cpp.o
+[1246/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmHMAC.cpp.o
+[1247/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmECDSA.cpp.o
+[1248/1267] cxx obj/src/jsc/bindings/workaround-missing-symbols.cpp.o
+[1249/1267] cxx obj/src/io/io_darwin.cpp.o
+[1250/1267] cxx obj/src/simdutf_sys/bun-simdutf.cpp.o
+[1251/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSA_OAEP.cpp.o
+[1252/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSA_PSS.cpp.o
+[1253/1267] cxx obj/src/jsc/bindings/webcrypto/CryptoAlgorithmRSASSA_PKCS1_v1_5.cpp.o
+[1254/1267] cxx obj/codegen/WebCoreJSBuiltins.cpp.o
+[1255/1267] cxx obj/codegen/GeneratedSocketConfigBinaryType.cpp.o
+[1256/1267] cxx obj/codegen/JSSink.cpp.o
+[1257/1267] cxx obj/codegen/GeneratedBindings.cpp.o
+[1258/1267] cxx obj/src/jsc/bindings/xxhash3.cpp.o
+[1259/1267] cxx obj/codegen/GeneratedSocketConfigHandlers.cpp.o
+[1260/1267] cxx obj/codegen/GeneratedFakeTimersConfig.cpp.o
+[1261/1267] cxx obj/codegen/GeneratedSocketConfig.cpp.o
+[1262/1267] cxx obj/codegen/GeneratedSSLConfig.cpp.o
+[1263/1267] cxx obj/src/jsc/bindings/webcrypto/SubtleCrypto.cpp.o
+[1264/1267] cxx obj/src/jsc/bindings/ZigGlobalObject.cpp.o
+[1265/1267] cxx obj/codegen/ZigGeneratedClasses.cpp.o
+[1265/1267] link bun-debug
+[1266/1267] bun-debug --revision
+1.4.1-debug+adc354d99
