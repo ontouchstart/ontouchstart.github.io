@@ -4,7 +4,7 @@ repo=llama.cpp
 release=v0.3.0
 llama=build/bin/llama
 
-prompt="Print random number of random Chinese characters in one line without spaces."
+prompt="Print random number of random Chinese characters in one line without spaces. Do not give me a program, I just need the result."
 version: build
 	$(llama) version 2> version.log
 chinese: build 
