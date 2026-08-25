@@ -1,7 +1,13 @@
 # bun
 
-1.4.0-debug+34cbb9a40
+https://github.com/oven-sh/bun
 
-https://github.com/oven-sh/bun/releases/tag/bun-v1.4.0
+https://ontouchstart.github.io/bun/Makefile
+
+https://ontouchstart.github.io/bun/Dockefile
+
+https://ontouchstart.github.io/bun/compose.yaml
 
 https://ontouchstart.github.io/bun/build.log
+
+https://ontouchstart.github.io/bun/flake.patch

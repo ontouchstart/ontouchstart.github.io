@@ -1,8 +1,8 @@
-version:
-	docker compose run  --remove-orphans --rm bun /bun/build/debug/bun-debug --version
-help:
-	docker compose run  --remove-orphans --rm bun /bun/build/debug/bun-debug --help
-repl:
-	docker compose run  --remove-orphans --rm bun /bun/build/debug/bun-debug repl
-build:
-	docker compose --progress=plain build --no-cache | tee build.log
+dev:	build.log
+	docker compose run --remove-orphans --rm dev bash
+
+build.log:
+	docker compose --progress=plain build | tee build.log
+
+clean:
+	rm build.log

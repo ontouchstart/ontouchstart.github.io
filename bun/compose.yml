@@ -1,4 +1,4 @@
 services:
-  bun:
+  dev:
     build:
       context: .
