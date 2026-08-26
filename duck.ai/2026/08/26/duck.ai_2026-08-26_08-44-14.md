@@ -87,7 +87,7 @@ User prompt 4 of 4 - 8/26/2026, 8:43:19 AM:
 Here are the details of the text.  Update your essays. 
 [Attached image 1]
 
-![](IMG_2572.jpeg)
+![](IMG_2572.png)
 
 Gemma 4 31B:
 The text is from Herman Hesse's *The Glass Bead Game*, specifically a passage from "The Circular Letter." It describes the "Glass Bead Game" as the ultimate expression of intellectuality and culture, while the narrator warns that in the face of "political upheavals" and "war," this fragile, highly cultivated world of pure art and science is doomed to vanish, much like the lost musical traditions of the 17th century.
