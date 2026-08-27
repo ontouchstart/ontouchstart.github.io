@@ -6,6 +6,8 @@ User prompt 1 of 2 - 8/27/2026, 9:21:25 AM:
 What does it mean without academic pedantry?
 [Attached image 1]
 
+![IMG_2585.jpeg)
+
 Gemma 4 31B:
 Essentially, the author is arguing that you can never truly "wrap up" or fully summarize a complex idea because the act of archiving or recording something actually changes it.
 
