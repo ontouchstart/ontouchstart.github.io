@@ -2,7 +2,7 @@
 
 $$e^{i\pi}+1=0$$
 
-[![](https://ontouchstart.github.io/duck.ai/2026/08/28/IMG_2596.jpeg)](https://ontouchstart.github.io/duck.ai/2026/08/26/duck.ai_2026-08-26_08-44-14)
+[![](https://ontouchstart.github.io/duck.ai/2026/08/28/IMG_2596.jpeg)](https://ontouchstart.github.io/duck.ai/2026/08/28/duck.ai_2026-08-28_14-26-50)
 
 
 
