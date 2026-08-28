@@ -3,381 +3,164 @@
 #1 DONE 0.0s
 
 #2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 339B done
+#2 transferring dockerfile: 525B done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/nixos/nix:latest
-#3 DONE 0.8s
+#3 DONE 0.4s
 
 #4 [internal] load .dockerignore
 #4 transferring context: 2B done
 #4 DONE 0.0s
 
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
+#5 [1/8] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
 #5 resolve docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c 0.0s done
-#5 DONE 0.6s
+#5 CACHED
 
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 sha256:9dbf2cea91b0acd30c394b974cc0783ee5e8db8254f3c2d8ec62f7de4eaca0cd 759.69kB / 759.69kB 0.1s done
-#5 sha256:36836656a81423c9b0f73188d3b95f82dde829919aa225d4da56baf2967c54f3 34.46kB / 34.46kB 0.1s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 0B / 55.58MB 0.2s
-#5 sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d 0B / 23.79MB 0.2s
-#5 sha256:20c3379a82cd6e6ee50afe48a390b8a4181bbdbfc3d02f247cf45d039d0a869a 659.66kB / 659.66kB 0.1s done
-#5 sha256:dd34b1beb664c71dadeabcf8c3db178fd89d3a4631998dfb4c8dc08e3f54ccac 0B / 1.42MB 0.2s
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 3.15MB / 55.58MB 0.3s
-#5 sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d 3.15MB / 23.79MB 0.3s
-#5 sha256:b4ef0b13ae93b59bdc247cd41dd2ea5ea8a9c54eb7f50d8980ce442938ef397f 2.42MB / 2.42MB 0.2s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 6.29MB / 55.58MB 0.5s
-#5 sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d 8.39MB / 23.79MB 0.5s
-#5 sha256:dd34b1beb664c71dadeabcf8c3db178fd89d3a4631998dfb4c8dc08e3f54ccac 1.42MB / 1.42MB 0.3s done
-#5 sha256:68e20130cf9d3f6c161bf6ae909a1b17c204d16def1943aa9dd22899a08000b8 336.19kB / 336.19kB 0.1s done
-#5 sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d 12.58MB / 23.79MB 0.6s
-#5 sha256:f6b06e11399c0f3fb8d9e3f848a1d31753f4069974e40f3ff5e1da3f48f34df3 1.32MB / 1.32MB 0.1s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 10.49MB / 55.58MB 0.8s
-#5 sha256:59d052a88fd1189b1f91cffa879bca4ac28a16061334cec858ad9a6e5fc56816 0B / 3.26MB 0.2s
-#5 sha256:d470c95ccdb4b6dba844e89ad9f622f826335b8b7320917c2a2d7c18da1b8ca9 0B / 550.80kB 0.2s
-#5 sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d 15.73MB / 23.79MB 0.8s
-#5 sha256:59d052a88fd1189b1f91cffa879bca4ac28a16061334cec858ad9a6e5fc56816 3.26MB / 3.26MB 0.3s done
-#5 sha256:d470c95ccdb4b6dba844e89ad9f622f826335b8b7320917c2a2d7c18da1b8ca9 550.80kB / 550.80kB 0.3s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 14.68MB / 55.58MB 1.1s
-#5 sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d 18.87MB / 23.79MB 0.9s
-#5 sha256:ac139420e589e4ec4fa4b0ba6009dba9d105956dbf7a6014679899b1bef4ca9c 0B / 5.81MB 0.2s
-#5 sha256:272a6e77084eaef4ffbdc245d57fceb064b49d0959bb8b723bef49f16b2f8976 0B / 1.79MB 0.2s
-#5 sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d 23.79MB / 23.79MB 1.1s done
-#5 sha256:ac139420e589e4ec4fa4b0ba6009dba9d105956dbf7a6014679899b1bef4ca9c 1.05MB / 5.81MB 0.3s
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 19.92MB / 55.58MB 1.4s
-#5 sha256:ac139420e589e4ec4fa4b0ba6009dba9d105956dbf7a6014679899b1bef4ca9c 4.19MB / 5.81MB 0.5s
-#5 sha256:272a6e77084eaef4ffbdc245d57fceb064b49d0959bb8b723bef49f16b2f8976 1.05MB / 1.79MB 0.5s
-#5 sha256:301473849ae3963c34faacb48db8c0c74d84f28dcaa8910de922717addb37bf4 1.05MB / 4.52MB 0.2s
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 23.07MB / 55.58MB 1.5s
-#5 sha256:ac139420e589e4ec4fa4b0ba6009dba9d105956dbf7a6014679899b1bef4ca9c 5.81MB / 5.81MB 0.6s done
-#5 sha256:272a6e77084eaef4ffbdc245d57fceb064b49d0959bb8b723bef49f16b2f8976 1.79MB / 1.79MB 0.6s done
-#5 sha256:301473849ae3963c34faacb48db8c0c74d84f28dcaa8910de922717addb37bf4 4.52MB / 4.52MB 0.3s done
-#5 sha256:b573c2c5a5ff0b60b9aa16091e508a1a19dc5df0fa020a0bb0266698a42f8ac2 892.82kB / 892.82kB 0.2s done
-#5 sha256:a983d6b13248a687f2c25fa7ce5adb8e5801593fd8c6d6c7596743817febf2e9 2.82MB / 2.82MB 0.2s done
-#5 sha256:c7fabe2b744c29435f330fdb49a921466f04dc57b9962d8e533c5126d37ee3f8 1.12MB / 1.12MB 0.1s done
-#5 sha256:e3ebe038ac7a55b00c535b8612904f9be409a5e2a6824fdd35f9f6dde9f53567 447.70kB / 447.70kB 0.1s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 26.21MB / 55.58MB 1.7s
-#5 sha256:15796ce222ebda518f7410d21919ceae3bce5cdbc8baaee449f980254cd54d15 715.57kB / 715.57kB 0.1s done
-#5 sha256:7fb94c58bbba6dcf60cfdcab108ec2178d1b6828ada44f938759f9ce9b10de68 1.42MB / 4.09MB 0.2s
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 29.36MB / 55.58MB 1.8s
-#5 sha256:7fb94c58bbba6dcf60cfdcab108ec2178d1b6828ada44f938759f9ce9b10de68 4.09MB / 4.09MB 0.2s done
-#5 sha256:bc923b96ca60626a4648588bc1bd36bbee2cc90fd382c113e2f7a699a629b264 1.05MB / 1.32MB 0.3s
-#5 sha256:17cf3601d171d6c44f3389a8d623c3a90e39e80722a44ccd60d5160d11640284 493.48kB / 493.48kB 0.1s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 32.51MB / 55.58MB 2.0s
-#5 sha256:bc923b96ca60626a4648588bc1bd36bbee2cc90fd382c113e2f7a699a629b264 1.32MB / 1.32MB 0.3s done
-#5 sha256:13fbdea40a2afe2d878de99d293c91edfaf1a8473c0c62d545e3430fb9980318 667.35kB / 667.35kB 0.2s done
-#5 sha256:f6e40632aa3379deb5b8a3b6030092c99ee1356d42ea5aa73cf65473a3d277f0 0B / 190.32kB 0.2s
-#5 sha256:f6e40632aa3379deb5b8a3b6030092c99ee1356d42ea5aa73cf65473a3d277f0 190.32kB / 190.32kB 0.2s done
-#5 sha256:378fb77f94a06390e2123abfabb9dc205e12674c894e43b89610890fb831a7b8 2.69MB / 2.69MB 0.1s done
-#5 sha256:d40d0598966f9e2deb4cd541b136885436b15dd17f74167d9f7aec71d0d3823b 440.88kB / 440.88kB 0.1s done
-#5 sha256:133f8478b58841c62b5e7e6bdaefa4db57de8b619b756665fe3242f065ce676a 705.40kB / 705.40kB 0.1s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 37.75MB / 55.58MB 2.3s
-#5 sha256:85aace6b93d730b13bb629a48791d7d753afc53b9de377563ac690763e4b212b 833.25kB / 833.25kB 0.1s done
-#5 sha256:3d95c9a4454b597f619fe08bbcb6e002d56462b4f459878d31fdd1c10cd64962 906.32kB / 906.32kB 0.2s done
-#5 sha256:f67b67791df55557c06d69418a5e9387ee86d48ed53d53ab006a9b6b55a90c65 228.48kB / 228.48kB 0.1s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 40.89MB / 55.58MB 2.4s
-#5 sha256:3284550c6bfbe38355e2eb7a86d70c0083e13067685b3e7a71707dee69b9bcb0 240.55kB / 240.55kB 0.0s done
-#5 sha256:324eabcf115d5689ae87038ec496aa51a9dd389d1fe491a7395ea9e7e6519c03 1.05MB / 1.70MB 0.2s
-#5 sha256:54d5b9d6b0a5552967249831449ac1d16afb9bfd757c4f73a0c741479762ba6b 1.18MB / 1.18MB 0.1s done
-#5 sha256:324eabcf115d5689ae87038ec496aa51a9dd389d1fe491a7395ea9e7e6519c03 1.70MB / 1.70MB 0.2s done
-#5 sha256:61b32723e6b5676429e6353b537457969e9904f25a61dd6df40201b039ee5032 801.75kB / 801.75kB 0.2s done
-#5 sha256:8a417f1d836f61e046be103754aa04f09e5a43f3cc76b3b3260a1255ed4d3c14 516.99kB / 516.99kB 0.1s done
-#5 sha256:8a326beff6e6121adcbda04c5b621ef48365fe03ed7abaa2a553109a59dcca62 381.20kB / 381.20kB 0.1s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 44.04MB / 55.58MB 2.6s
-#5 sha256:053340c90b445d1c54dcdba140693340d2e033e0e85a566f1782a7b44b9905c7 362.08kB / 362.08kB 0.1s done
-#5 sha256:fcd866a55694b6b92f61393ae409c9cc967dccd92220fdc4c2e3b11e535ecfcc 366.18kB / 366.18kB 0.1s done
-#5 sha256:bc014b78003c43bb490f5275a594cc39a4776024910330153af92caaa0aa7737 294.48kB / 294.48kB 0.1s done
-#5 sha256:6a8ca79d5c33deaff5efebe7e025ab4a7fee7bfc8fd717dfee96468c0bd1b727 294.48kB / 294.48kB 0.1s done
-#5 sha256:0f672272f4695dbc46ff413634c4d9ccb680e3bc30a8ded170e17e99a40ceb40 244.42kB / 244.42kB 0.1s done
-#5 sha256:e1c3ce236952af1176fee0a24027a671ebd37782642b4413c68ac47546d63ad9 143.97kB / 143.97kB 0.0s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 48.23MB / 55.58MB 2.7s
-#5 sha256:57689ae9714362baca9c9cd3f0e404c9cb752c6620ea6f74e22e28921d563e2a 3.42MB / 3.42MB 0.2s done
-#5 sha256:80dc758210e430d20a4b80b2f4030a045b62672845e905d4039af819c58ff237 2.10MB / 3.79MB 0.2s
-#5 sha256:80dc758210e430d20a4b80b2f4030a045b62672845e905d4039af819c58ff237 3.79MB / 3.79MB 0.2s done
-#5 sha256:413293a299767fab961f1327da944fd96f6e2df0ad2318b909b309849f375fac 0B / 2.84MB 0.2s
-#5 sha256:af61c90126ae28cc8fcd4c9860e416c8eae42327bc9cb9d6652f54ea8f4ac090 1.05MB / 1.80MB 0.2s
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 54.53MB / 55.58MB 3.0s
-#5 sha256:af61c90126ae28cc8fcd4c9860e416c8eae42327bc9cb9d6652f54ea8f4ac090 1.80MB / 1.80MB 0.2s done
-#5 sha256:b639326b416f4cfc67f00688b5fdd5db8e574ef76150354ce3b0f97d522610a8 843.93kB / 843.93kB 0.1s done
-#5 sha256:ddb36b5ebcc9246754480acdbd6244eb0d4c5c2b868f501b1fd69808aa14245b 724.65kB / 724.65kB 0.1s done
-#5 sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 55.58MB / 55.58MB 3.0s done
-#5 sha256:474a8b2f7692fd76e4808cef8cf7ad70fe9388f7de09fa68e1993fb8a9e3488c 1.12MB / 1.12MB 0.1s done
-#5 sha256:ce19a082514150cf424265d7eef35cce6d1f8ea99e3e115397b35a607fad5081 1.13MB / 1.13MB 0.1s done
-#5 sha256:90b9f965738b4dfbb6943873d426de85254438de23dbf0fa9d57da138f86b360 265.38kB / 265.38kB 0.1s done
-#5 sha256:1fe9ba8f5ddc2e0ff9fcf14f3dcdb4ba1d9ba6d0ce8e729a4e17fe4602d7318e 935.33kB / 935.33kB 0.1s done
-#5 sha256:413293a299767fab961f1327da944fd96f6e2df0ad2318b909b309849f375fac 1.05MB / 2.84MB 0.6s
-#5 sha256:6a3d135f7884e2f7c8ebcb727636fa33adafe50af35e11336b50abc1a391b4af 650.90kB / 650.90kB 0.1s done
-#5 sha256:6a7b09e47becefbc3bdded65867e13139da9b2cc448d87743a2b9b3b04a3c673 770.72kB / 770.72kB 0.1s done
-#5 sha256:067fc9c3bb585f7544747cfb7d824701c9de8d533d0f4fed1ab3b7c3103a779f 297.32kB / 297.32kB 0.0s done
-#5 sha256:6cc63f97292a60b8b7bcc258d2afd32ef733306e2f223a02ebc312f2f63226bf 278.98kB / 278.98kB 0.0s done
-#5 sha256:c425e106de4176258fb2923a8970f404dd286f55f225561a164f5264d4128b31 510.93kB / 510.93kB 0.1s done
-#5 sha256:a0d0c76812c30a606bc6e25d37c2c70a47290a6634a18d83df510cae2e97700b 209.31kB / 209.31kB 0.0s done
-#5 sha256:c825e7983f22ff9d11c793cbbb1a3e533a6a48acd4be83ab9d0d2cc25da8aa3b 265.72kB / 265.72kB 0.0s done
-#5 sha256:ac3ea39794babdfe9bc337d566be5a9c0fe3404c250e13c3ffec11ab7c0df2d4 145.31kB / 145.31kB 0.0s done
-#5 sha256:7a985925cdd81f422af1076c47a38f734e8d593ffc148197af42cf9f3e227d42 65.47kB / 65.47kB 0.0s done
-#5 sha256:c4e98292b1fa031344cc0016838e2bd10b39731e1d9e02b08a61c247d6098ddd 119.92kB / 119.92kB 0.0s done
-#5 sha256:9d3c925f77d5440db2b743460ec10982ecc8c8a6a91da05071812d58cf200ee9 55.79kB / 55.79kB 0.0s done
-#5 sha256:ec8613b65eebd5ad069ea684089a5b75354eb3d018d84483791c980778491405 72.63kB / 72.63kB 0.0s done
-#5 sha256:1f63c3ea4e2ea0315133022604499d7fb3cefce1b404da5f7c86db8f296b12fc 36.90kB / 36.90kB 0.0s done
-#5 sha256:acefc225d47b97278a22a6a5c8696a1738d53101e1b787032ca711fb58fa1989 816.95kB / 816.95kB 0.1s done
-#5 sha256:abc4c827fa890d30f859769cd78357c641432020d3b7f4c49c1f3959ec7df66b 262.06kB / 262.06kB 0.1s done
-#5 sha256:7bd88b4b644e2eac715c425ce34220e74a00debc5509ba0f2c2f6c5a62d5f737 3.15MB / 12.71MB 0.2s
-#5 sha256:dd4fc10d28da220fd3460a159b5552c1fff4a9b6cddb1335d8d5685eb1a7faec 141.52kB / 141.52kB 0.1s done
-#5 extracting sha256:dd4fc10d28da220fd3460a159b5552c1fff4a9b6cddb1335d8d5685eb1a7faec 0.0s done
-#5 extracting sha256:abc4c827fa890d30f859769cd78357c641432020d3b7f4c49c1f3959ec7df66b done
-#5 sha256:413293a299767fab961f1327da944fd96f6e2df0ad2318b909b309849f375fac 2.84MB / 2.84MB 0.9s done
-#5 sha256:7bd88b4b644e2eac715c425ce34220e74a00debc5509ba0f2c2f6c5a62d5f737 12.71MB / 12.71MB 0.4s done
-#5 extracting sha256:acefc225d47b97278a22a6a5c8696a1738d53101e1b787032ca711fb58fa1989 0.0s done
-#5 extracting sha256:7bd88b4b644e2eac715c425ce34220e74a00debc5509ba0f2c2f6c5a62d5f737
-#5 extracting sha256:7bd88b4b644e2eac715c425ce34220e74a00debc5509ba0f2c2f6c5a62d5f737 0.2s done
-#5 DONE 4.6s
+#6 [2/8] RUN nix-channel --update
+#6 1.495 unpacking 1 channels...
+#6 DONE 12.0s
 
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:1f63c3ea4e2ea0315133022604499d7fb3cefce1b404da5f7c86db8f296b12fc done
-#5 extracting sha256:ec8613b65eebd5ad069ea684089a5b75354eb3d018d84483791c980778491405 done
-#5 extracting sha256:9d3c925f77d5440db2b743460ec10982ecc8c8a6a91da05071812d58cf200ee9 0.0s done
-#5 extracting sha256:c4e98292b1fa031344cc0016838e2bd10b39731e1d9e02b08a61c247d6098ddd done
-#5 extracting sha256:7a985925cdd81f422af1076c47a38f734e8d593ffc148197af42cf9f3e227d42 done
-#5 extracting sha256:ac3ea39794babdfe9bc337d566be5a9c0fe3404c250e13c3ffec11ab7c0df2d4 0.0s done
-#5 extracting sha256:c825e7983f22ff9d11c793cbbb1a3e533a6a48acd4be83ab9d0d2cc25da8aa3b done
-#5 extracting sha256:a0d0c76812c30a606bc6e25d37c2c70a47290a6634a18d83df510cae2e97700b 0.0s done
-#5 extracting sha256:6cc63f97292a60b8b7bcc258d2afd32ef733306e2f223a02ebc312f2f63226bf 0.0s done
-#5 extracting sha256:c425e106de4176258fb2923a8970f404dd286f55f225561a164f5264d4128b31 0.0s done
-#5 extracting sha256:067fc9c3bb585f7544747cfb7d824701c9de8d533d0f4fed1ab3b7c3103a779f 0.0s done
-#5 DONE 4.7s
+#7 [3/8] RUN nix-env -iA nixpkgs.vim nixpkgs.gnumake nixpkgs.elan
+#7 0.663 installing 'vim-9.2.0782'
+#7 0.663 installing 'gnumake-4.4.1'
+#7 0.663 installing 'elan-4.2.4'
+#7 1.460 these 53 paths will be fetched (141.5 MiB download, 465.3 MiB unpacked):
+#7 1.460   /nix/store/d1yiaq7bi8vrypdz8zx89lvlvc8w7m9b-acl-2.4.0
+#7 1.460   /nix/store/jbj54csimxfzdysyikvyyakkiazahmy7-attr-2.6.0
+#7 1.460   /nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15
+#7 1.460   /nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15
+#7 1.460   /nix/store/bii425l899y52i6rv7zd1yq738rrha1m-binutils-2.46
+#7 1.460   /nix/store/9yv0mrlndlqr4ygcs100p8304rxka3ld-binutils-2.46-lib
+#7 1.460   /nix/store/k9v0hzrbc3i9d2qds2cbaqqf0i2990ck-binutils-wrapper-2.46
+#7 1.460   /nix/store/ix8ij52ljmbsk8p96k265flzp3lzadwa-brotli-1.2.0-lib
+#7 1.460   /nix/store/85k56vdxxb75xmgvxj4zhaawyafkchwh-coreutils-9.11
+#7 1.460   /nix/store/4m2zy0glpqrj0pl4hmycid216l7racp7-curl-8.21.0
+#7 1.460   /nix/store/pkf1isv8s8rjihy5fv3v336bqbk7l7y7-elan-4.2.4
+#7 1.460   /nix/store/y4iw5yjqj2l0wfx4myscs5apd7c9xs3x-expand-response-params
+#7 1.460   /nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1
+#7 1.460   /nix/store/pbhbzkcvlr4h63bh9w0hin5sbflqdg08-gcc-15.3.0
+#7 1.460   /nix/store/60afk5jlqmx8xh5pr76j7j8vdrhwzrmv-gcc-15.3.0-lib
+#7 1.460   /nix/store/w7dbq2jaa5r43k751jdfkfnwbas10vr8-gcc-15.3.0-libgcc
+#7 1.460   /nix/store/bv4iz5h4bsy9ivn45c71j78m8rq233ss-gcc-wrapper-15.3.0
+#7 1.460   /nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84
+#7 1.460   /nix/store/kq3smp43qn06743llcpzigbv6zh817jh-glibc-2.42-84-bin
+#7 1.460   /nix/store/fsm5ifr5khlqjj54j026c3akbhp1q0gj-glibc-2.42-84-dev
+#7 1.460   /nix/store/w64z5814n453zk85hvwpdvqr1ywyj5ya-gmp-6.3.0
+#7 1.460   /nix/store/35n0fkfxgps5l598q0ffim7531icsqr5-gmp-with-cxx-6.3.0
+#7 1.460   /nix/store/hzxxkxr2lmlphhybvmwc7v2gcs5cpvgf-gnugrep-3.12
+#7 1.460   /nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1
+#7 1.460   /nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug
+#7 1.460   /nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc
+#7 1.460   /nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info
+#7 1.460   /nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man
+#7 1.460   /nix/store/2h0dn3g9smwfywmax9kpy80g8k4h93z5-isl-0.20
+#7 1.460   /nix/store/3q2iy0705nk2w87f2kji7l3vzgv8992f-keyutils-1.6.3-lib
+#7 1.460   /nix/store/bh63g8kcpm12qxmm5l3jf3c62vbnfhhj-krb5-1.22.2-lib
+#7 1.460   /nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8
+#7 1.460   /nix/store/a2232fvjsnn1f9la5s12cnaqh23pz345-libmpc-1.4.1
+#7 1.460   /nix/store/zg9sk68biw0j0mhzd427hbk0p5w3vrf6-libpsl-0.21.5
+#7 1.460   /nix/store/xr4l4bakpsry84bh0gi0v14c2bx8p3j1-libssh2-1.11.1
+#7 1.460   /nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2
+#7 1.460   /nix/store/50lrpigm0k10lkmwsm04078fpa8arl38-linux-headers-7.1
+#7 1.460   /nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz
+#7 1.460   /nix/store/m5p664ybq6fmzacx9ifc38iw3wjbgwhd-mpfr-4.2.2
+#7 1.460   /nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6
+#7 1.460   /nix/store/iggjz5cp09f6ajzjpxsrif0ci4iwqd4k-nghttp2-1.70.0-lib
+#7 1.460   /nix/store/ipwhy6qh7p125nn2q0ww04afn4bgg449-nghttp3-1.16.0
+#7 1.460   /nix/store/66hkvrwyflx31i7r2dwfswc3dj4az658-ngtcp2-1.23.0
+#7 1.460   /nix/store/p1vfajlmwzkk8hrbdmb21gdp95kvds7r-openssl-3.6.3
+#7 1.460   /nix/store/0ilfyzqa907lj2bjg42qc30qr45nhwcn-patchelf-0.15.2
+#7 1.460   /nix/store/msplm30h8m9krlsxnjzb4654hcqfl5g5-pcre2-10.47
+#7 1.460   /nix/store/ah7c4r1q57f3n7z942klq2lvsc67rvdq-publicsuffix-list-0-unstable-2026-08-14
+#7 1.460   /nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3
+#7 1.460   /nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782
+#7 1.460   /nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd
+#7 1.460   /nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc
+#7 1.460   /nix/store/4my1cjkysivszznv4342x12r3z2pwdpl-zlib-1.3.2
+#7 1.460   /nix/store/n61nc0cr8qmrb4923k82a26qvixpk0b8-zstd-1.5.7
+#7 1.462 copying path '/nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc' from 'https://cache.nixos.org'...
+#7 1.463 copying path '/nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info' from 'https://cache.nixos.org'...
+#7 1.463 copying path '/nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man' from 'https://cache.nixos.org'...
+#7 1.464 copying path '/nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz' from 'https://cache.nixos.org'...
+#7 1.465 copying path '/nix/store/w7dbq2jaa5r43k751jdfkfnwbas10vr8-gcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#7 1.465 copying path '/nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#7 1.467 copying path '/nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2' from 'https://cache.nixos.org'...
+#7 1.467 copying path '/nix/store/50lrpigm0k10lkmwsm04078fpa8arl38-linux-headers-7.1' from 'https://cache.nixos.org'...
+#7 1.467 copying path '/nix/store/ah7c4r1q57f3n7z942klq2lvsc67rvdq-publicsuffix-list-0-unstable-2026-08-14' from 'https://cache.nixos.org'...
+#7 1.573 copying path '/nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8' from 'https://cache.nixos.org'...
+#7 1.643 copying path '/nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84' from 'https://cache.nixos.org'...
+#7 1.911 copying path '/nix/store/d1yiaq7bi8vrypdz8zx89lvlvc8w7m9b-acl-2.4.0' from 'https://cache.nixos.org'...
+#7 1.911 copying path '/nix/store/jbj54csimxfzdysyikvyyakkiazahmy7-attr-2.6.0' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/ix8ij52ljmbsk8p96k265flzp3lzadwa-brotli-1.2.0-lib' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/y4iw5yjqj2l0wfx4myscs5apd7c9xs3x-expand-response-params' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/w64z5814n453zk85hvwpdvqr1ywyj5ya-gmp-6.3.0' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/3q2iy0705nk2w87f2kji7l3vzgv8992f-keyutils-1.6.3-lib' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/60afk5jlqmx8xh5pr76j7j8vdrhwzrmv-gcc-15.3.0-lib' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/zg9sk68biw0j0mhzd427hbk0p5w3vrf6-libpsl-0.21.5' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/kq3smp43qn06743llcpzigbv6zh817jh-glibc-2.42-84-bin' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6' from 'https://cache.nixos.org'...
+#7 1.912 copying path '/nix/store/iggjz5cp09f6ajzjpxsrif0ci4iwqd4k-nghttp2-1.70.0-lib' from 'https://cache.nixos.org'...
+#7 1.913 copying path '/nix/store/ipwhy6qh7p125nn2q0ww04afn4bgg449-nghttp3-1.16.0' from 'https://cache.nixos.org'...
+#7 1.913 copying path '/nix/store/p1vfajlmwzkk8hrbdmb21gdp95kvds7r-openssl-3.6.3' from 'https://cache.nixos.org'...
+#7 1.924 copying path '/nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd' from 'https://cache.nixos.org'...
+#7 1.929 copying path '/nix/store/4my1cjkysivszznv4342x12r3z2pwdpl-zlib-1.3.2' from 'https://cache.nixos.org'...
+#7 1.955 copying path '/nix/store/msplm30h8m9krlsxnjzb4654hcqfl5g5-pcre2-10.47' from 'https://cache.nixos.org'...
+#7 1.991 copying path '/nix/store/2h0dn3g9smwfywmax9kpy80g8k4h93z5-isl-0.20' from 'https://cache.nixos.org'...
+#7 1.991 copying path '/nix/store/m5p664ybq6fmzacx9ifc38iw3wjbgwhd-mpfr-4.2.2' from 'https://cache.nixos.org'...
+#7 2.002 copying path '/nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3' from 'https://cache.nixos.org'...
+#7 2.061 copying path '/nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug' from 'https://cache.nixos.org'...
+#7 2.067 copying path '/nix/store/fsm5ifr5khlqjj54j026c3akbhp1q0gj-glibc-2.42-84-dev' from 'https://cache.nixos.org'...
+#7 2.081 copying path '/nix/store/9yv0mrlndlqr4ygcs100p8304rxka3ld-binutils-2.46-lib' from 'https://cache.nixos.org'...
+#7 2.127 copying path '/nix/store/hzxxkxr2lmlphhybvmwc7v2gcs5cpvgf-gnugrep-3.12' from 'https://cache.nixos.org'...
+#7 2.147 copying path '/nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15' from 'https://cache.nixos.org'...
+#7 2.158 copying path '/nix/store/a2232fvjsnn1f9la5s12cnaqh23pz345-libmpc-1.4.1' from 'https://cache.nixos.org'...
+#7 2.295 copying path '/nix/store/35n0fkfxgps5l598q0ffim7531icsqr5-gmp-with-cxx-6.3.0' from 'https://cache.nixos.org'...
+#7 2.295 copying path '/nix/store/0ilfyzqa907lj2bjg42qc30qr45nhwcn-patchelf-0.15.2' from 'https://cache.nixos.org'...
+#7 2.295 copying path '/nix/store/n61nc0cr8qmrb4923k82a26qvixpk0b8-zstd-1.5.7' from 'https://cache.nixos.org'...
+#7 2.296 copying path '/nix/store/pbhbzkcvlr4h63bh9w0hin5sbflqdg08-gcc-15.3.0' from 'https://cache.nixos.org'...
+#7 2.331 copying path '/nix/store/bii425l899y52i6rv7zd1yq738rrha1m-binutils-2.46' from 'https://cache.nixos.org'...
+#7 2.370 copying path '/nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782' from 'https://cache.nixos.org'...
+#7 2.376 copying path '/nix/store/bh63g8kcpm12qxmm5l3jf3c62vbnfhhj-krb5-1.22.2-lib' from 'https://cache.nixos.org'...
+#7 2.376 copying path '/nix/store/xr4l4bakpsry84bh0gi0v14c2bx8p3j1-libssh2-1.11.1' from 'https://cache.nixos.org'...
+#7 2.376 copying path '/nix/store/66hkvrwyflx31i7r2dwfswc3dj4az658-ngtcp2-1.23.0' from 'https://cache.nixos.org'...
+#7 2.400 copying path '/nix/store/85k56vdxxb75xmgvxj4zhaawyafkchwh-coreutils-9.11' from 'https://cache.nixos.org'...
+#7 2.643 copying path '/nix/store/4m2zy0glpqrj0pl4hmycid216l7racp7-curl-8.21.0' from 'https://cache.nixos.org'...
+#7 3.191 copying path '/nix/store/k9v0hzrbc3i9d2qds2cbaqqf0i2990ck-binutils-wrapper-2.46' from 'https://cache.nixos.org'...
+#7 5.240 copying path '/nix/store/bv4iz5h4bsy9ivn45c71j78m8rq233ss-gcc-wrapper-15.3.0' from 'https://cache.nixos.org'...
+#7 5.251 copying path '/nix/store/pkf1isv8s8rjihy5fv3v336bqbk7l7y7-elan-4.2.4' from 'https://cache.nixos.org'...
+#7 5.367 building '/nix/store/aqmvp36akky7n9s3izx2pnbmj8agvg8f-user-environment.drv'...
+#7 DONE 6.0s
 
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:6a3d135f7884e2f7c8ebcb727636fa33adafe50af35e11336b50abc1a391b4af 0.0s done
-#5 extracting sha256:6a7b09e47becefbc3bdded65867e13139da9b2cc448d87743a2b9b3b04a3c673 0.0s done
-#5 extracting sha256:1fe9ba8f5ddc2e0ff9fcf14f3dcdb4ba1d9ba6d0ce8e729a4e17fe4602d7318e 0.0s done
-#5 extracting sha256:90b9f965738b4dfbb6943873d426de85254438de23dbf0fa9d57da138f86b360 0.0s done
-#5 extracting sha256:ce19a082514150cf424265d7eef35cce6d1f8ea99e3e115397b35a607fad5081 0.0s done
-#5 extracting sha256:474a8b2f7692fd76e4808cef8cf7ad70fe9388f7de09fa68e1993fb8a9e3488c 0.0s done
-#5 DONE 4.8s
+#8 [4/8] RUN echo 'lean4lean:;git clone https://github.com/digama0/lean4lean.git' > Makefile
+#8 DONE 0.5s
 
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:ddb36b5ebcc9246754480acdbd6244eb0d4c5c2b868f501b1fd69808aa14245b 0.0s done
-#5 extracting sha256:b639326b416f4cfc67f00688b5fdd5db8e574ef76150354ce3b0f97d522610a8 0.1s done
-#5 DONE 4.9s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:af61c90126ae28cc8fcd4c9860e416c8eae42327bc9cb9d6652f54ea8f4ac090 0.0s done
-#5 extracting sha256:413293a299767fab961f1327da944fd96f6e2df0ad2318b909b309849f375fac 0.0s done
-#5 extracting sha256:80dc758210e430d20a4b80b2f4030a045b62672845e905d4039af819c58ff237 0.0s done
-#5 DONE 5.0s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:e1c3ce236952af1176fee0a24027a671ebd37782642b4413c68ac47546d63ad9 done
-#5 extracting sha256:57689ae9714362baca9c9cd3f0e404c9cb752c6620ea6f74e22e28921d563e2a 0.0s done
-#5 extracting sha256:0f672272f4695dbc46ff413634c4d9ccb680e3bc30a8ded170e17e99a40ceb40 done
-#5 extracting sha256:6a8ca79d5c33deaff5efebe7e025ab4a7fee7bfc8fd717dfee96468c0bd1b727 done
-#5 extracting sha256:bc014b78003c43bb490f5275a594cc39a4776024910330153af92caaa0aa7737 done
-#5 extracting sha256:fcd866a55694b6b92f61393ae409c9cc967dccd92220fdc4c2e3b11e535ecfcc done
-#5 extracting sha256:053340c90b445d1c54dcdba140693340d2e033e0e85a566f1782a7b44b9905c7 0.0s done
-#5 DONE 5.1s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:8a326beff6e6121adcbda04c5b621ef48365fe03ed7abaa2a553109a59dcca62 done
-#5 extracting sha256:8a417f1d836f61e046be103754aa04f09e5a43f3cc76b3b3260a1255ed4d3c14 0.0s done
-#5 extracting sha256:61b32723e6b5676429e6353b537457969e9904f25a61dd6df40201b039ee5032 0.0s done
-#5 extracting sha256:54d5b9d6b0a5552967249831449ac1d16afb9bfd757c4f73a0c741479762ba6b 0.0s done
-#5 extracting sha256:3284550c6bfbe38355e2eb7a86d70c0083e13067685b3e7a71707dee69b9bcb0 0.0s done
-#5 extracting sha256:324eabcf115d5689ae87038ec496aa51a9dd389d1fe491a7395ea9e7e6519c03 0.0s done
-#5 extracting sha256:f67b67791df55557c06d69418a5e9387ee86d48ed53d53ab006a9b6b55a90c65 done
-#5 DONE 5.2s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:85aace6b93d730b13bb629a48791d7d753afc53b9de377563ac690763e4b212b 0.0s done
-#5 extracting sha256:d40d0598966f9e2deb4cd541b136885436b15dd17f74167d9f7aec71d0d3823b 0.0s done
-#5 extracting sha256:378fb77f94a06390e2123abfabb9dc205e12674c894e43b89610890fb831a7b8 0.0s done
-#5 extracting sha256:f6e40632aa3379deb5b8a3b6030092c99ee1356d42ea5aa73cf65473a3d277f0 done
-#5 extracting sha256:13fbdea40a2afe2d878de99d293c91edfaf1a8473c0c62d545e3430fb9980318 0.0s done
-#5 DONE 5.3s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:17cf3601d171d6c44f3389a8d623c3a90e39e80722a44ccd60d5160d11640284 0.0s done
-#5 extracting sha256:7fb94c58bbba6dcf60cfdcab108ec2178d1b6828ada44f938759f9ce9b10de68 0.1s done
-#5 extracting sha256:bc923b96ca60626a4648588bc1bd36bbee2cc90fd382c113e2f7a699a629b264 0.0s done
-#5 DONE 5.4s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:15796ce222ebda518f7410d21919ceae3bce5cdbc8baaee449f980254cd54d15 0.0s done
-#5 extracting sha256:e3ebe038ac7a55b00c535b8612904f9be409a5e2a6824fdd35f9f6dde9f53567 0.0s done
-#5 extracting sha256:a983d6b13248a687f2c25fa7ce5adb8e5801593fd8c6d6c7596743817febf2e9 0.1s done
-#5 DONE 5.6s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:133f8478b58841c62b5e7e6bdaefa4db57de8b619b756665fe3242f065ce676a 0.0s done
-#5 extracting sha256:c7fabe2b744c29435f330fdb49a921466f04dc57b9962d8e533c5126d37ee3f8 0.0s done
-#5 extracting sha256:b573c2c5a5ff0b60b9aa16091e508a1a19dc5df0fa020a0bb0266698a42f8ac2 0.0s done
-#5 extracting sha256:301473849ae3963c34faacb48db8c0c74d84f28dcaa8910de922717addb37bf4 0.1s done
-#5 DONE 5.7s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:272a6e77084eaef4ffbdc245d57fceb064b49d0959bb8b723bef49f16b2f8976 0.0s done
-#5 extracting sha256:ac139420e589e4ec4fa4b0ba6009dba9d105956dbf7a6014679899b1bef4ca9c 0.1s done
-#5 extracting sha256:59d052a88fd1189b1f91cffa879bca4ac28a16061334cec858ad9a6e5fc56816
-#5 extracting sha256:59d052a88fd1189b1f91cffa879bca4ac28a16061334cec858ad9a6e5fc56816 0.0s done
-#5 extracting sha256:3d95c9a4454b597f619fe08bbcb6e002d56462b4f459878d31fdd1c10cd64962 0.0s done
-#5 extracting sha256:b4ef0b13ae93b59bdc247cd41dd2ea5ea8a9c54eb7f50d8980ce442938ef397f 0.0s done
-#5 DONE 5.9s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:d470c95ccdb4b6dba844e89ad9f622f826335b8b7320917c2a2d7c18da1b8ca9 0.0s done
-#5 extracting sha256:f6b06e11399c0f3fb8d9e3f848a1d31753f4069974e40f3ff5e1da3f48f34df3 0.0s done
-#5 extracting sha256:68e20130cf9d3f6c161bf6ae909a1b17c204d16def1943aa9dd22899a08000b8 0.0s done
-#5 extracting sha256:20c3379a82cd6e6ee50afe48a390b8a4181bbdbfc3d02f247cf45d039d0a869a 0.0s done
-#5 extracting sha256:dd34b1beb664c71dadeabcf8c3db178fd89d3a4631998dfb4c8dc08e3f54ccac 0.0s done
-#5 extracting sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d
-#5 extracting sha256:c46834362b74345a52dbf11aa700eab09280a0473f0eeba92e9b6b49c709243d 0.3s done
-#5 DONE 6.3s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81
-#5 extracting sha256:683ddd90644340f5fe39df753858cc93b482d7cc494f12ef1ceebca8ffa0dc81 7.6s done
-#5 DONE 13.9s
-
-#5 [1/5] FROM docker.io/nixos/nix:latest@sha256:7a007c766426c1877758ddc5cb87a965ac131fc78c582ce0083d922d51ae945c
-#5 extracting sha256:9dbf2cea91b0acd30c394b974cc0783ee5e8db8254f3c2d8ec62f7de4eaca0cd 0.1s done
-#5 extracting sha256:36836656a81423c9b0f73188d3b95f82dde829919aa225d4da56baf2967c54f3 0.0s done
-#5 DONE 14.0s
-
-#6 [2/5] RUN nix-channel --update
-#6 1.723 unpacking 1 channels...
-#6 DONE 12.8s
-
-#7 [3/5] RUN nix-env -iA nixpkgs.vim nixpkgs.gnumake nixpkgs.elan
-#7 1.010 installing 'vim-9.2.0782'
-#7 1.010 installing 'gnumake-4.4.1'
-#7 1.010 installing 'elan-4.2.4'
-#7 1.819 these 53 paths will be fetched (141.5 MiB download, 465.3 MiB unpacked):
-#7 1.819   /nix/store/d1yiaq7bi8vrypdz8zx89lvlvc8w7m9b-acl-2.4.0
-#7 1.819   /nix/store/jbj54csimxfzdysyikvyyakkiazahmy7-attr-2.6.0
-#7 1.819   /nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15
-#7 1.819   /nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15
-#7 1.819   /nix/store/bii425l899y52i6rv7zd1yq738rrha1m-binutils-2.46
-#7 1.819   /nix/store/9yv0mrlndlqr4ygcs100p8304rxka3ld-binutils-2.46-lib
-#7 1.819   /nix/store/k9v0hzrbc3i9d2qds2cbaqqf0i2990ck-binutils-wrapper-2.46
-#7 1.819   /nix/store/ix8ij52ljmbsk8p96k265flzp3lzadwa-brotli-1.2.0-lib
-#7 1.819   /nix/store/85k56vdxxb75xmgvxj4zhaawyafkchwh-coreutils-9.11
-#7 1.819   /nix/store/4m2zy0glpqrj0pl4hmycid216l7racp7-curl-8.21.0
-#7 1.819   /nix/store/pkf1isv8s8rjihy5fv3v336bqbk7l7y7-elan-4.2.4
-#7 1.819   /nix/store/y4iw5yjqj2l0wfx4myscs5apd7c9xs3x-expand-response-params
-#7 1.819   /nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1
-#7 1.819   /nix/store/pbhbzkcvlr4h63bh9w0hin5sbflqdg08-gcc-15.3.0
-#7 1.819   /nix/store/60afk5jlqmx8xh5pr76j7j8vdrhwzrmv-gcc-15.3.0-lib
-#7 1.819   /nix/store/w7dbq2jaa5r43k751jdfkfnwbas10vr8-gcc-15.3.0-libgcc
-#7 1.819   /nix/store/bv4iz5h4bsy9ivn45c71j78m8rq233ss-gcc-wrapper-15.3.0
-#7 1.819   /nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84
-#7 1.819   /nix/store/kq3smp43qn06743llcpzigbv6zh817jh-glibc-2.42-84-bin
-#7 1.819   /nix/store/fsm5ifr5khlqjj54j026c3akbhp1q0gj-glibc-2.42-84-dev
-#7 1.819   /nix/store/w64z5814n453zk85hvwpdvqr1ywyj5ya-gmp-6.3.0
-#7 1.819   /nix/store/35n0fkfxgps5l598q0ffim7531icsqr5-gmp-with-cxx-6.3.0
-#7 1.819   /nix/store/hzxxkxr2lmlphhybvmwc7v2gcs5cpvgf-gnugrep-3.12
-#7 1.819   /nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1
-#7 1.819   /nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug
-#7 1.819   /nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc
-#7 1.819   /nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info
-#7 1.819   /nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man
-#7 1.819   /nix/store/2h0dn3g9smwfywmax9kpy80g8k4h93z5-isl-0.20
-#7 1.819   /nix/store/3q2iy0705nk2w87f2kji7l3vzgv8992f-keyutils-1.6.3-lib
-#7 1.819   /nix/store/bh63g8kcpm12qxmm5l3jf3c62vbnfhhj-krb5-1.22.2-lib
-#7 1.819   /nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8
-#7 1.819   /nix/store/a2232fvjsnn1f9la5s12cnaqh23pz345-libmpc-1.4.1
-#7 1.819   /nix/store/zg9sk68biw0j0mhzd427hbk0p5w3vrf6-libpsl-0.21.5
-#7 1.819   /nix/store/xr4l4bakpsry84bh0gi0v14c2bx8p3j1-libssh2-1.11.1
-#7 1.819   /nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2
-#7 1.819   /nix/store/50lrpigm0k10lkmwsm04078fpa8arl38-linux-headers-7.1
-#7 1.819   /nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz
-#7 1.819   /nix/store/m5p664ybq6fmzacx9ifc38iw3wjbgwhd-mpfr-4.2.2
-#7 1.819   /nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6
-#7 1.819   /nix/store/iggjz5cp09f6ajzjpxsrif0ci4iwqd4k-nghttp2-1.70.0-lib
-#7 1.819   /nix/store/ipwhy6qh7p125nn2q0ww04afn4bgg449-nghttp3-1.16.0
-#7 1.819   /nix/store/66hkvrwyflx31i7r2dwfswc3dj4az658-ngtcp2-1.23.0
-#7 1.819   /nix/store/p1vfajlmwzkk8hrbdmb21gdp95kvds7r-openssl-3.6.3
-#7 1.819   /nix/store/0ilfyzqa907lj2bjg42qc30qr45nhwcn-patchelf-0.15.2
-#7 1.819   /nix/store/msplm30h8m9krlsxnjzb4654hcqfl5g5-pcre2-10.47
-#7 1.819   /nix/store/ah7c4r1q57f3n7z942klq2lvsc67rvdq-publicsuffix-list-0-unstable-2026-08-14
-#7 1.819   /nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3
-#7 1.819   /nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782
-#7 1.819   /nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd
-#7 1.819   /nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc
-#7 1.819   /nix/store/4my1cjkysivszznv4342x12r3z2pwdpl-zlib-1.3.2
-#7 1.819   /nix/store/n61nc0cr8qmrb4923k82a26qvixpk0b8-zstd-1.5.7
-#7 1.820 copying path '/nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc' from 'https://cache.nixos.org'...
-#7 1.820 copying path '/nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info' from 'https://cache.nixos.org'...
-#7 1.820 copying path '/nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man' from 'https://cache.nixos.org'...
-#7 1.822 copying path '/nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz' from 'https://cache.nixos.org'...
-#7 1.824 copying path '/nix/store/w7dbq2jaa5r43k751jdfkfnwbas10vr8-gcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
-#7 1.824 copying path '/nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
-#7 1.825 copying path '/nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2' from 'https://cache.nixos.org'...
-#7 1.825 copying path '/nix/store/50lrpigm0k10lkmwsm04078fpa8arl38-linux-headers-7.1' from 'https://cache.nixos.org'...
-#7 1.826 copying path '/nix/store/ah7c4r1q57f3n7z942klq2lvsc67rvdq-publicsuffix-list-0-unstable-2026-08-14' from 'https://cache.nixos.org'...
-#7 1.950 copying path '/nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8' from 'https://cache.nixos.org'...
-#7 1.984 copying path '/nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84' from 'https://cache.nixos.org'...
-#7 2.223 copying path '/nix/store/d1yiaq7bi8vrypdz8zx89lvlvc8w7m9b-acl-2.4.0' from 'https://cache.nixos.org'...
-#7 2.223 copying path '/nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15' from 'https://cache.nixos.org'...
-#7 2.223 copying path '/nix/store/jbj54csimxfzdysyikvyyakkiazahmy7-attr-2.6.0' from 'https://cache.nixos.org'...
-#7 2.223 copying path '/nix/store/ix8ij52ljmbsk8p96k265flzp3lzadwa-brotli-1.2.0-lib' from 'https://cache.nixos.org'...
-#7 2.223 copying path '/nix/store/y4iw5yjqj2l0wfx4myscs5apd7c9xs3x-expand-response-params' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/w64z5814n453zk85hvwpdvqr1ywyj5ya-gmp-6.3.0' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/3q2iy0705nk2w87f2kji7l3vzgv8992f-keyutils-1.6.3-lib' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/ipwhy6qh7p125nn2q0ww04afn4bgg449-nghttp3-1.16.0' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/60afk5jlqmx8xh5pr76j7j8vdrhwzrmv-gcc-15.3.0-lib' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/iggjz5cp09f6ajzjpxsrif0ci4iwqd4k-nghttp2-1.70.0-lib' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/p1vfajlmwzkk8hrbdmb21gdp95kvds7r-openssl-3.6.3' from 'https://cache.nixos.org'...
-#7 2.224 copying path '/nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6' from 'https://cache.nixos.org'...
-#7 2.225 copying path '/nix/store/kq3smp43qn06743llcpzigbv6zh817jh-glibc-2.42-84-bin' from 'https://cache.nixos.org'...
-#7 2.225 copying path '/nix/store/zg9sk68biw0j0mhzd427hbk0p5w3vrf6-libpsl-0.21.5' from 'https://cache.nixos.org'...
-#7 2.239 copying path '/nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd' from 'https://cache.nixos.org'...
-#7 2.250 copying path '/nix/store/4my1cjkysivszznv4342x12r3z2pwdpl-zlib-1.3.2' from 'https://cache.nixos.org'...
-#7 2.255 copying path '/nix/store/msplm30h8m9krlsxnjzb4654hcqfl5g5-pcre2-10.47' from 'https://cache.nixos.org'...
-#7 2.313 copying path '/nix/store/2h0dn3g9smwfywmax9kpy80g8k4h93z5-isl-0.20' from 'https://cache.nixos.org'...
-#7 2.313 copying path '/nix/store/m5p664ybq6fmzacx9ifc38iw3wjbgwhd-mpfr-4.2.2' from 'https://cache.nixos.org'...
-#7 2.356 copying path '/nix/store/9yv0mrlndlqr4ygcs100p8304rxka3ld-binutils-2.46-lib' from 'https://cache.nixos.org'...
-#7 2.369 copying path '/nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug' from 'https://cache.nixos.org'...
-#7 2.370 copying path '/nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3' from 'https://cache.nixos.org'...
-#7 2.378 copying path '/nix/store/fsm5ifr5khlqjj54j026c3akbhp1q0gj-glibc-2.42-84-dev' from 'https://cache.nixos.org'...
-#7 2.402 copying path '/nix/store/hzxxkxr2lmlphhybvmwc7v2gcs5cpvgf-gnugrep-3.12' from 'https://cache.nixos.org'...
-#7 2.443 copying path '/nix/store/a2232fvjsnn1f9la5s12cnaqh23pz345-libmpc-1.4.1' from 'https://cache.nixos.org'...
-#7 2.496 copying path '/nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15' from 'https://cache.nixos.org'...
-#7 2.572 copying path '/nix/store/pbhbzkcvlr4h63bh9w0hin5sbflqdg08-gcc-15.3.0' from 'https://cache.nixos.org'...
-#7 2.572 copying path '/nix/store/35n0fkfxgps5l598q0ffim7531icsqr5-gmp-with-cxx-6.3.0' from 'https://cache.nixos.org'...
-#7 2.572 copying path '/nix/store/0ilfyzqa907lj2bjg42qc30qr45nhwcn-patchelf-0.15.2' from 'https://cache.nixos.org'...
-#7 2.572 copying path '/nix/store/n61nc0cr8qmrb4923k82a26qvixpk0b8-zstd-1.5.7' from 'https://cache.nixos.org'...
-#7 2.572 copying path '/nix/store/bii425l899y52i6rv7zd1yq738rrha1m-binutils-2.46' from 'https://cache.nixos.org'...
-#7 2.601 copying path '/nix/store/bh63g8kcpm12qxmm5l3jf3c62vbnfhhj-krb5-1.22.2-lib' from 'https://cache.nixos.org'...
-#7 2.601 copying path '/nix/store/xr4l4bakpsry84bh0gi0v14c2bx8p3j1-libssh2-1.11.1' from 'https://cache.nixos.org'...
-#7 2.601 copying path '/nix/store/66hkvrwyflx31i7r2dwfswc3dj4az658-ngtcp2-1.23.0' from 'https://cache.nixos.org'...
-#7 2.635 copying path '/nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782' from 'https://cache.nixos.org'...
-#7 2.658 copying path '/nix/store/85k56vdxxb75xmgvxj4zhaawyafkchwh-coreutils-9.11' from 'https://cache.nixos.org'...
-#7 2.822 copying path '/nix/store/4m2zy0glpqrj0pl4hmycid216l7racp7-curl-8.21.0' from 'https://cache.nixos.org'...
-#7 3.307 copying path '/nix/store/k9v0hzrbc3i9d2qds2cbaqqf0i2990ck-binutils-wrapper-2.46' from 'https://cache.nixos.org'...
-#7 5.114 copying path '/nix/store/bv4iz5h4bsy9ivn45c71j78m8rq233ss-gcc-wrapper-15.3.0' from 'https://cache.nixos.org'...
-#7 5.126 copying path '/nix/store/pkf1isv8s8rjihy5fv3v336bqbk7l7y7-elan-4.2.4' from 'https://cache.nixos.org'...
-#7 5.233 building '/nix/store/aqmvp36akky7n9s3izx2pnbmj8agvg8f-user-environment.drv'...
-#7 DONE 5.5s
-
-#8 [4/5] RUN echo 'lean4lean:;git clone https://github.com/digama0/lean4lean.git' > Makefile
-#8 DONE 0.7s
-
-#9 [5/5] RUN echo 'lean4lean/.lake/build:lean4lean;cd lean4lean && lake build' >> Makefile
+#9 [5/8] RUN echo 'lean4lean/.lake/build:lean4lean;cd lean4lean && lake build' >> Makefile
 #9 DONE 0.2s
 
-#10 exporting to image
-#10 exporting layers
-#10 exporting layers 16.3s done
-#10 exporting manifest sha256:e7698dd0ce30a2d767917b4e360a9f80b6e81e1f9f50d62d154946dc37e91ab9 done
-#10 exporting config sha256:f776891a8e5c15137c52e27a9ed87744bbcfe8618f25fe767b809e90c363b3e1 done
-#10 exporting attestation manifest sha256:7eb949cae43d3a7c7ec433a3c9c80ed4d26e0efc882bc15ba7e1eb869dd482bb done
-#10 exporting manifest list sha256:f2ca862146d6626167584961df2f1bfe8fb5b0c04a0884c51c9f15e4ec41d27a done
-#10 naming to docker.io/library/lean4lean-review-dev:latest done
-#10 unpacking to docker.io/library/lean4lean-review-dev:latest
-#10 unpacking to docker.io/library/lean4lean-review-dev:latest 10.4s done
-#10 DONE 26.8s
+#10 [6/8] RUN echo 'make lean4lean/.lake/build' > theory.sh
+#10 DONE 0.1s
 
-#11 resolving provenance for metadata file
-#11 DONE 0.0s
+#11 [7/8] RUN echo 'cd /lean4lean/Lean4Lean/Verify/' >> theory.sh
+#11 DONE 0.2s
+
+#12 [8/8] RUN echo 'lake env /lean4lean/.lake/build/bin/lean4lean --verbose' >> theory.sh
+#12 DONE 0.1s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 16.3s done
+#13 exporting manifest sha256:697b5210f252a70b35207fe5bccec60831fabe17bebb7cf53abf464104c2cb87 done
+#13 exporting config sha256:ed21c25e443256a360aee5f69f31207021389dddd1ea247965d8e7323baf1b86 done
+#13 exporting attestation manifest sha256:c8cf0202e8b614807f98262ed040d2cef2a2ce20cbaed9c5cf350f16f6b8a067 done
+#13 exporting manifest list sha256:60ca35e3c11dcc87634cd7f4e2e014e0bc064bab4175dcbdfbadf852524b7bd8 done
+#13 naming to docker.io/library/lean4lean-review-dev:latest done
+#13 unpacking to docker.io/library/lean4lean-review-dev:latest
+#13 unpacking to docker.io/library/lean4lean-review-dev:latest 11.0s done
+#13 DONE 27.5s
+
+#14 resolving provenance for metadata file
+#14 DONE 0.0s

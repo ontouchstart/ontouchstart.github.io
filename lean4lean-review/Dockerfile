@@ -5,4 +5,7 @@ RUN nix-channel --update
 RUN nix-env -iA nixpkgs.vim nixpkgs.gnumake nixpkgs.elan
 RUN echo 'lean4lean:;git clone https://github.com/digama0/lean4lean.git' > Makefile
 RUN echo 'lean4lean/.lake/build:lean4lean;cd lean4lean && lake build' >> Makefile
+RUN echo 'make lean4lean/.lake/build' > theory.sh
+RUN echo 'cd /lean4lean/Lean4Lean/Verify/' >> theory.sh
+RUN echo 'lake env /lean4lean/.lake/build/bin/lean4lean --verbose' >> theory.sh
 
