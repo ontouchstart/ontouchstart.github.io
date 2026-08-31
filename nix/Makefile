@@ -6,3 +6,6 @@ repl:
 
 build:
 	docker compose --progress=plain build --no-cache | tee build.log
+
+install.sh:
+	curl -sL https://nixos.org/nix/install > install.sh
