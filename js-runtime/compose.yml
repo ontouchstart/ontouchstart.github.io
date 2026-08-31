@@ -2,3 +2,50 @@ services:
   dev:
     build:
       context: .
+    volumes:
+      - ./bun:/bun
+      - ./deno:/deno
+      - ./node:/node
+      - ./playwright:/playwright
+    networks:
+      - bun
+
+  bun-react:
+    build:
+      context: .
+    volumes:
+      - ./bun:/bun
+    working_dir: /bun/react
+    command: ["bun", "run", "start"]
+    ports:
+      - 3001:3000
+    networks:
+      - bun
+
+  bun-react-blank:
+    build:
+      context: .
+    volumes:
+      - ./bun:/bun
+    working_dir: /bun/react-blank
+    command: ["bun", "run", "start"]
+    ports:
+      - 3002:3000
+    networks:
+      - bun
+
+  bun-react-tailwind:
+    build:
+      context: .
+    volumes:
+      - ./bun:/bun
+    working_dir: /bun/react-tailwind
+    command: ["bun", "run", "start"]
+    ports:
+      - 3003:3000
+    networks:
+      - bun
+
+networks:
+  bun: 
+

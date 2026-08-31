@@ -1,0 +1,5 @@
+[serve.static]
+env = "BUN_PUBLIC_*"
+
+allowedHosts = ["bun", "bun:3000"]
+

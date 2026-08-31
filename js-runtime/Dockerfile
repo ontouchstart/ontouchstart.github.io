@@ -1,5 +1,8 @@
 FROM node
 ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y neovim
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
 
 RUN curl -fsSL https://deno.land/install.sh | sh
 RUN curl -fsSL https://bun.com/install | bash
