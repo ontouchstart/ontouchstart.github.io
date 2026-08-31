@@ -69,3 +69,5 @@ This dissertation examines the tension between structured synthesis and cyclical
 2.  **Drafting Chapters II & III (Months 7–12):** Establishing the individual analyses of the two novels.
 3.  **Comparative Analysis (Months 13–18):** Writing the core theoretical chapters (IV & V) where the two texts are synthesized.
 4.  **Revision and Synthesis (Months 19–24):** Refining the introduction and conclusion to ensure a cohesive argument; final peer review and defense preparation.
+
+https://ontouchstart.github.io/duck.ai/2026/08/30/duck.ai_2026-08-30_22-43-12
