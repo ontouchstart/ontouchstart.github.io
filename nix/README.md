@@ -148,3 +148,6 @@ cat -n install.sh
    128	
    129	} # End of wrapping
 ```
+
+[🤖](/llama.cpp/transcripts/firefox/2026/08/31/2026-08-31_13-43-56_conv_82693474.yml)
+
