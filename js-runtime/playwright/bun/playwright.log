@@ -1,0 +1,21 @@
+
+Running 3 tests using 3 workers
+
+[1/3] [chromium] › tests/bun.spec.ts:3:5 › h1
+[2/3] [firefox] › tests/bun.spec.ts:3:5 › h1
+[3/3] [webkit] › tests/bun.spec.ts:3:5 › h1
+[chromium] › tests/bun.spec.ts:3:5 › h1
+playwright Bun + React
+
+[webkit] › tests/bun.spec.ts:3:5 › h1
+playwright Bun + React
+
+[firefox] › tests/bun.spec.ts:3:5 › h1
+playwright Bun + React
+
+  3 passed (1.8s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

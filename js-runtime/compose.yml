@@ -19,6 +19,15 @@ services:
     ports:
       - 9323:9323
 
+  playwright-bun:
+    build: .
+    volumes:
+      - ./playwright:/playwright
+    working_dir: /playwright/bun
+    command: ["npx", "playwright", "show-report", "--host", "0.0.0.0"]
+    ports:
+      - 9324:9323
+
   bun-react:
     build: .
     volumes:
