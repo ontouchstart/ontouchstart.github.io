@@ -9,6 +9,7 @@ services:
       - ./playwright:/playwright
     networks:
       - bun
+      - deno
 
   bun-react:
     build:
@@ -46,6 +47,19 @@ services:
     networks:
       - bun
 
+  deno-react:
+    build:
+      context: .
+    volumes:
+      - ./deno:/deno
+    working_dir: /deno/deno-react
+    command: ["deno", "task", "dev"]
+    ports:
+      - 5173:5173
+    networks:
+      - deno
+
 networks:
   bun: 
+  deno: 
 
