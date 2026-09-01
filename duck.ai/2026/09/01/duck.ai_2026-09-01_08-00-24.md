@@ -8,6 +8,12 @@ Critical reading in the age of AI generated content
 These pictures are about a long form essay that also serves as a marketing material. Write a 500 word essay to elaborate the need for critical thinking in this context and how to use AI to help us think critically.
 [Attached image 1][Attached image 2][Attached image 3]
 
+![](IMG_2640.jpeg)
+
+![](IMG_2641.jpeg)
+
+![](IMG_2642.jpeg)
+
 Gemma 4 31B:
 The proliferation of AI-generated content has fundamentally altered our relationship with the written word. When a long-form essay also functions as marketing material, the stakes for the reader increase. We are no longer just consuming information; we are navigating a curated experience designed to persuade, often crafted by an intelligence that prioritizes probabilistic coherence over objective truth. In this landscape, critical reading is no longer an academic skill—it is a necessary survival mechanism for intellectual autonomy.
 
