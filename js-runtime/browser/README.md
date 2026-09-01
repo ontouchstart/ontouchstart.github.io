@@ -6,8 +6,9 @@
 
 ## appVersion
 
-<button onclick="() => {
+<button onclick="{
 document.getElementById('appname').innerHTML = navigator.appName;
 document.getElementById('appcodename').innerHTML = navigator.appCodeName;
 document.getElementById('appversion').innerHTML = navigator.appVersion;
+this.style.display = 'none';
 }">Get Values</button>
