@@ -1,5 +1,9 @@
 # JS Runtime
 
-[Browser](browser)
+[browser](browser)
 
-[Playwright Browser](playwright/browser)
+[playwright/browser](playwright/browser)
+
+[playwright/bun](playwright/bun)
+
+[playwright/deno](playwright/deno)
