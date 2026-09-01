@@ -1,17 +1,39 @@
 
-Running 6 tests using 5 workers
+Running 9 tests using 5 workers
 
-[1/6] [firefox] › tests/browser.spec.ts:12:5 › get values
-[2/6] [chromium] › tests/browser.spec.ts:3:5 › has title
-[3/6] [chromium] › tests/browser.spec.ts:12:5 › get values
-[4/6] [firefox] › tests/browser.spec.ts:3:5 › has title
-[5/6] [webkit] › tests/browser.spec.ts:3:5 › has title
-[chromium] › tests/browser.spec.ts:12:5 › get values
+[1/9] [chromium] › tests/browser.spec.ts:3:5 › has title
+[2/9] [chromium] › tests/browser.spec.ts:12:5 › get navigator
+[3/9] [firefox] › tests/browser.spec.ts:12:5 › get navigator
+[4/9] [chromium] › tests/browser.spec.ts:29:5 › get values
+[5/9] [firefox] › tests/browser.spec.ts:3:5 › has title
+[chromium] › tests/browser.spec.ts:12:5 › get navigator
+{
+  vendorSub: '',
+  productSub: '20030107',
+  vendor: 'Google Inc.',
+  maxTouchPoints: 0,
+  hardwareConcurrency: 10,
+  cookieEnabled: true,
+  appCodeName: 'Mozilla',
+  appName: 'Netscape',
+  appVersion: '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36',
+  platform: 'Linux x86_64',
+  product: 'Gecko',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36',
+  language: 'en-US',
+  onLine: true,
+  webdriver: true,
+  pdfViewerEnabled: false
+}
+
+[chromium] › tests/browser.spec.ts:29:5 › get values
 playwright appName
 
 playwright appCodeName
 
 playwright appVersion
+
+playwright GetValues
 
 playwright Netscape
 
@@ -19,57 +41,86 @@ playwright Mozilla
 
 playwright 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36
 
-browser {
-  appName: 'Netscape',
+[6/9] [firefox] › tests/browser.spec.ts:29:5 › get values
+[7/9] [webkit] › tests/browser.spec.ts:3:5 › has title
+[firefox] › tests/browser.spec.ts:12:5 › get navigator
+{
+  pdfViewerEnabled: false,
+  doNotTrack: 'unspecified',
+  maxTouchPoints: 0,
+  oscpu: 'Linux x86_64',
+  vendor: '',
+  vendorSub: '',
+  productSub: '20100101',
+  cookieEnabled: true,
+  buildID: '20181001000000',
+  globalPrivacyControl: false,
+  webdriver: true,
+  hardwareConcurrency: 10,
   appCodeName: 'Mozilla',
-  appVersion: '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36'
+  appName: 'Netscape',
+  appVersion: '5.0 (X11)',
+  platform: 'Linux x86_64',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0',
+  product: 'Gecko',
+  language: 'en-US',
+  onLine: true
 }
 
-[6/6] [webkit] › tests/browser.spec.ts:12:5 › get values
-[firefox] › tests/browser.spec.ts:12:5 › get values
+[8/9] [webkit] › tests/browser.spec.ts:12:5 › get navigator
+[webkit] › tests/browser.spec.ts:12:5 › get navigator
+{
+  hardwareConcurrency: 8,
+  webdriver: true,
+  maxTouchPoints: 0,
+  cookieEnabled: true,
+  globalPrivacyControl: false,
+  appCodeName: 'Mozilla',
+  appName: 'Netscape',
+  appVersion: '5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15',
+  platform: 'Linux aarch64',
+  product: 'Gecko',
+  productSub: '20030107',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15',
+  vendor: 'Apple Computer, Inc.',
+  vendorSub: '',
+  language: 'en-US',
+  onLine: true,
+  pdfViewerEnabled: true
+}
+
+[9/9] [webkit] › tests/browser.spec.ts:29:5 › get values
+[firefox] › tests/browser.spec.ts:29:5 › get values
 playwright appName
 
-[webkit] › tests/browser.spec.ts:12:5 › get values
-playwright appName
-
-[firefox] › tests/browser.spec.ts:12:5 › get values
-playwright appCodeName
-
-[webkit] › tests/browser.spec.ts:12:5 › get values
 playwright appCodeName
 
 playwright appVersion
 
-[firefox] › tests/browser.spec.ts:12:5 › get values
-playwright appVersion
+playwright GetValues
 
-[webkit] › tests/browser.spec.ts:12:5 › get values
-playwright Netscape
-
-playwright Mozilla
-
-playwright 5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
-
-browser {
-  appName: 'Netscape',
-  appCodeName: 'Mozilla',
-  appVersion: '5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15'
-}
-
-[firefox] › tests/browser.spec.ts:12:5 › get values
 playwright Netscape
 
 playwright Mozilla
 
 playwright 5.0 (X11)
 
-browser {
-  appName: 'Netscape',
-  appCodeName: 'Mozilla',
-  appVersion: '5.0 (X11)'
-}
+[webkit] › tests/browser.spec.ts:29:5 › get values
+playwright appName
 
-  6 passed (2.8s)
+playwright appCodeName
+
+playwright appVersion
+
+playwright GetValues
+
+playwright Netscape
+
+playwright Mozilla
+
+playwright 5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
+
+  9 passed (3.8s)
 
 To open last HTML report run:
 [36m[39m
