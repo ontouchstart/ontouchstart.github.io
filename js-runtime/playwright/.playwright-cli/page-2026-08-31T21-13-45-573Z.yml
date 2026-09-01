@@ -1,0 +1,17 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - img "Bun Logo" [ref=e5]
+    - img "React Logo" [ref=e6]
+  - heading "Bun + React" [level=1] [ref=e7]
+  - paragraph [ref=e8]:
+    - text: Edit
+    - code [ref=e9]: src/App.tsx
+    - text: and save to test HMR
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - combobox [ref=e12] [cursor=pointer]:
+        - option "GET" [selected]
+        - option "PUT"
+      - textbox "/api/hello" [ref=e13]
+      - button "Send" [ref=e14] [cursor=pointer]
+    - textbox "Response will appear here..." [ref=e15]

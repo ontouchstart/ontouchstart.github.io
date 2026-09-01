@@ -1,0 +1,328 @@
+### Browser `default` opened with pid 20.
+### Ran Playwright code
+```js
+await page.goto('https://dspy.ai');
+```
+### Page
+- Page URL: https://dspy.ai/
+- Page Title: DSPy
+### Snapshot
+- [Snapshot](tmp/.playwright-cli/page-2026-08-31T17-19-31-333Z.yml)
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Header" [ref=e3]:
+      - link "DSPy" [ref=e4] [cursor=pointer]:
+        - /url: .
+        - img "logo" [ref=e5]
+      - generic [ref=e7]:
+        - generic [ref=e8]: DSPy
+        - generic: Overview
+      - generic [ref=e10]:
+        - radio "Switch to dark mode"
+        - generic "Switch to dark mode" [ref=e11] [cursor=pointer]
+        - radio "Switch to light mode"
+      - dialog [ref=e14]:
+        - search [ref=e15]:
+          - generic [ref=e16]:
+            - textbox "Search" [ref=e17]
+            - navigation "Search":
+              - button "Clear"
+          - generic: Initializing search
+      - link [ref=e22] [cursor=pointer]:
+        - /url: https://github.com/stanfordnlp/dspy
+        - generic [ref=e26]:
+          - text: stanfordnlp/dspy
+          - list [ref=e27]:
+            - listitem [ref=e28]: 3.3.1
+            - listitem [ref=e29]: 37.7k
+            - listitem [ref=e30]: 3.3k
+  - generic [ref=e31]:
+    - navigation "Tabs" [ref=e32]:
+      - generic [ref=e33]:
+        - list [ref=e34]:
+          - listitem [ref=e35]:
+            - link "Community" [ref=e36] [cursor=pointer]:
+              - /url: /community/use-cases/
+          - listitem [ref=e37]:
+            - link "FAQ" [ref=e38] [cursor=pointer]:
+              - /url: /faqs/
+        - list [ref=e39]:
+          - listitem [ref=e40]:
+            - link "Overview" [ref=e41] [cursor=pointer]:
+              - /url: .
+          - listitem [ref=e42]:
+            - link "Getting Started" [ref=e43] [cursor=pointer]:
+              - /url: getting-started/program-dont-prompt/
+          - listitem [ref=e44]:
+            - link "Diving Deeper" [ref=e45] [cursor=pointer]:
+              - /url: diving-deeper/signatures-in-depth/
+          - listitem [ref=e46]:
+            - link "Tutorials" [ref=e47] [cursor=pointer]:
+              - /url: tutorials/
+          - listitem [ref=e48]:
+            - link "API Reference" [ref=e49] [cursor=pointer]:
+              - /url: api/
+    - main [ref=e50]:
+      - article [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - text: DSPy 3.3.1 — PythonInterpreter improvements, faster GEPA, and MCP v2 compatibility
+                - generic [ref=e60]: ·
+                - link "learn more →" [ref=e61] [cursor=pointer]:
+                  - /url: https://github.com/stanfordnlp/dspy/releases
+              - heading "Program, don’t prompt, your LLMs." [level=1] [ref=e62]: Program, don’t prompt,your LLMs.
+              - paragraph [ref=e63]: DSPy is a Python framework for building AI systems. Express your tasks as structured signatures, not prompts, to produce maintainable, modular, and optimizable programs.
+              - generic [ref=e64]:
+                - link "$ pip install -U dspy" [ref=e65] [cursor=pointer]:
+                  - /url: getting-started/installation/
+                  - generic [ref=e66]: $
+                  - text: pip install -U dspy
+                - link "Getting Started →" [ref=e67] [cursor=pointer]:
+                  - /url: getting-started/program-dont-prompt/
+              - generic [ref=e68]:
+                - generic [ref=e69]:
+                  - strong [ref=e70]: python
+                  - text: ≥ 3.10
+                - generic [ref=e71]: MIT license
+                - generic [ref=e72]: Stanford NLP
+                - link "github.com/stanfordnlp/dspy" [ref=e74] [cursor=pointer]:
+                  - /url: https://github.com/stanfordnlp/dspy
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - button "Change LLM" [ref=e77] [cursor=pointer]
+                - button "Add a Field" [ref=e78] [cursor=pointer]
+                - button "Make it an Agent" [ref=e79] [cursor=pointer]
+              - generic [ref=e80]:
+                - strong [ref=e83]: extract_events.py
+                - generic [ref=e84]:
+                  - generic [ref=e85]:
+                    - generic [ref=e86]: "1"
+                    - generic [ref=e87]: "2"
+                    - generic [ref=e88]: "3"
+                    - generic [ref=e89]: "4"
+                    - generic [ref=e90]: "5"
+                    - generic [ref=e91]: "6"
+                    - generic [ref=e92]: "7"
+                    - generic [ref=e93]: "8"
+                    - generic [ref=e94]: "9"
+                    - generic [ref=e95]: "10"
+                  - generic [ref=e96]:
+                    - generic [ref=e97]: lm = dspy.LM("openai/gpt-5.4-nano")
+                    - generic [ref=e99]: "class ExtractEvent(dspy.Signature):"
+                    - generic [ref=e100]: "\"\"\"Extract event details from an email.\"\"\""
+                    - generic [ref=e101]: "email: str = dspy.InputField()"
+                    - generic [ref=e102]: "event_name: str = dspy.OutputField()"
+                    - generic [ref=e103]: "date: str = dspy.OutputField()"
+                    - generic [ref=e105]: extract = dspy.Predict(ExtractEvent)
+                    - generic [ref=e106]: extract(email=inbox_message)
+                - generic [ref=e107]:
+                  - generic [ref=e108]: output
+                  - generic [ref=e109]: Prediction(
+                  - generic [ref=e110]: event_name="Team Offsite",
+                  - generic [ref=e111]: date="Thursday, June 5"
+                  - generic [ref=e112]: )
+          - generic [ref=e114]:
+            - generic [ref=e115]:
+              - generic [ref=e116]: 6.6M+
+              - generic [ref=e117]: monthly downloads
+            - generic [ref=e118]:
+              - generic [ref=e119]: 452+
+              - generic [ref=e120]: contributors
+            - generic [ref=e121]:
+              - generic [ref=e122]: 38k
+              - generic [ref=e123]: github stars
+            - generic [ref=e124]:
+              - generic [ref=e125]: in production at
+              - generic [ref=e126]:
+                - img "Databricks" [ref=e127]
+                - img "Shopify" [ref=e128]
+                - img "Dropbox" [ref=e129]
+          - generic [ref=e131]:
+            - heading "Compose programs with reusable primitives." [level=2] [ref=e132]
+            - generic [ref=e133]:
+              - generic [ref=e134]:
+                - heading "Signatures" [level=3] [ref=e135]
+                - generic [ref=e136]: Declare your task.
+                - paragraph [ref=e137]: Define your task as typed inputs and outputs instead of managing messy prompts. Portable, maintainable, and easy to iterate on.
+                - link "Learn about Signatures →" [ref=e139] [cursor=pointer]:
+                  - /url: getting-started/expanding-signatures/
+                - generic [ref=e140]:
+                  - generic [ref=e141]: "class Triage(dspy.Signature):"
+                  - generic [ref=e142]: "\"\"\"Route a support ticket.\"\"\""
+                  - generic [ref=e143]: "ticket: str = dspy.InputField()"
+                  - generic [ref=e144]: "urgency: Literal[\"low\", \"high\"] = dspy.OutputField()"
+                  - generic [ref=e145]: "team: str = dspy.OutputField()"
+              - generic [ref=e146]:
+                - heading "Modules" [level=3] [ref=e147]
+                - generic [ref=e148]: Same interface, different strategy.
+                - paragraph [ref=e149]: Modules control how your signature executes. Reason, run ensembles, use tools, add a REPL, and more without rewriting your task.
+                - link "Explore Modules →" [ref=e151] [cursor=pointer]:
+                  - /url: getting-started/changing-modules/
+                - generic [ref=e152]:
+                  - generic [ref=e153]: "# Direct completion"
+                  - generic [ref=e154]: classify = dspy.Predict(Triage)
+                  - generic [ref=e156]: "# Add step-by-step reasoning"
+                  - generic [ref=e157]: classify = dspy.ChainOfThought(Triage)
+                  - generic [ref=e159]: "# Add tools and a reasoning loop"
+                  - generic [ref=e160]: classify = dspy.ReAct(Triage, tools=[search])
+              - generic [ref=e161]:
+                - heading "Optimizers" [level=3] [ref=e162]
+                - generic [ref=e163]: Compile your program against a metric.
+                - paragraph [ref=e164]: Give DSPy examples and a scoring function. It tunes your prompts automatically until quality converges.
+                - link "Try Optimizers →" [ref=e166] [cursor=pointer]:
+                  - /url: getting-started/gepa-optimization/
+                - generic [ref=e167]:
+                  - generic [ref=e168]: tp = dspy.GEPA(
+                  - generic [ref=e169]: metric=semantic_f1,
+                  - generic [ref=e170]: auto="medium")
+                  - generic [ref=e171]: opt = tp.compile(rag, trainset)
+                  - generic [ref=e173]: "# Before: 0.41 F1"
+                  - generic [ref=e174]: "# After: 0.63 F1"
+                  - generic [ref=e176]: opt.save("rag.v2.json")
+          - generic [ref=e178]:
+            - heading "Define a task. Grow it into a system." [level=2] [ref=e180]
+            - generic [ref=e182]:
+              - generic [ref=e183]:
+                - generic [ref=e184] [cursor=pointer]: Extract
+                - generic [ref=e185] [cursor=pointer]: Agent
+                - generic [ref=e186] [cursor=pointer]: Pipeline
+                - generic [ref=e187] [cursor=pointer]: Multimodal
+                - generic [ref=e188] [cursor=pointer]: Optimize
+              - generic [ref=e190]:
+                - generic [ref=e191]:
+                  - generic [ref=e192]: "class Extract(dspy.Signature):"
+                  - generic [ref=e193]: "\"\"\"Extract contact info.\"\"\""
+                  - generic [ref=e194]: "message: str = dspy.InputField()"
+                  - generic [ref=e195]: "name: str = dspy.OutputField()"
+                  - generic [ref=e196]: "email: Optional[str] = dspy.OutputField()"
+                  - generic [ref=e197]: "intent: Literal["
+                  - generic [ref=e198]: "\"meeting\", \"intro\", \"follow-up\""
+                  - generic [ref=e199]: "] = dspy.OutputField()"
+                  - generic [ref=e201]: extract = dspy.Predict(Extract)
+                  - generic [ref=e202]: extract(message="I'm Sarah"
+                  - generic [ref=e203]: "\"(sarah@acme.co). Meet Thursday?\")"
+                - generic [ref=e204]:
+                  - generic [ref=e205]:
+                    - generic [ref=e206]: output
+                    - generic [ref=e207]: stdout
+                  - generic [ref=e208]: Prediction(
+                  - generic [ref=e209]: name="Sarah",
+                  - generic [ref=e210]: email="sarah@acme.co",
+                  - generic [ref=e211]: intent="meeting"
+                  - generic [ref=e212]: )
+              - generic [ref=e213]:
+                - generic [ref=e214]: Signatures define tasks and enforce output types
+                - link "Learn more about Signatures →" [ref=e216] [cursor=pointer]:
+                  - /url: getting-started/expanding-signatures/
+          - generic [ref=e219]:
+            - generic [ref=e220]:
+              - heading "Built in the open, since Dec 2022." [level=2] [ref=e221]
+              - paragraph [ref=e222]: DSPy started at Stanford NLP and grew into a research community. New optimizers and module types land here first — then show up in production systems at companies you’ve heard of.
+              - generic [ref=e223]:
+                - generic [ref=e224]: Dec 2025
+                - generic [ref=e225]: Recursive Language Models
+                - link "arxiv →" [ref=e227] [cursor=pointer]:
+                  - /url: https://arxiv.org/abs/2512.24601
+                - generic [ref=e228]: Jul 2025
+                - generic [ref=e229]: "GEPA: Reflective Prompt Evolution"
+                - link "arxiv →" [ref=e231] [cursor=pointer]:
+                  - /url: https://arxiv.org/abs/2507.19457
+                - generic [ref=e232]: Jul 2024
+                - generic [ref=e233]: "BetterTogether: Fine-Tuning + Prompt Opt."
+                - link "arxiv →" [ref=e235] [cursor=pointer]:
+                  - /url: https://arxiv.org/abs/2407.10930
+                - generic [ref=e236]: Jun 2024
+                - generic [ref=e237]: "MIPROv2: Optimizing Instructions & Demos"
+                - link "arxiv →" [ref=e239] [cursor=pointer]:
+                  - /url: https://arxiv.org/abs/2406.11695
+                - generic [ref=e240]: Feb 2024
+                - generic [ref=e241]: "STORM: Writing Wikipedia-like Articles"
+                - link "arxiv →" [ref=e243] [cursor=pointer]:
+                  - /url: https://arxiv.org/abs/2402.14207
+                - generic [ref=e244]: Oct 2023
+                - generic [ref=e245]: "DSPy: Compiling Declarative LM Calls"
+                - link "arxiv →" [ref=e247] [cursor=pointer]:
+                  - /url: https://arxiv.org/abs/2310.03714
+                - generic [ref=e248]: Dec 2022
+                - generic [ref=e249]: Demonstrate-Search-Predict
+                - link "arxiv →" [ref=e251] [cursor=pointer]:
+                  - /url: https://arxiv.org/abs/2212.14024
+            - generic [ref=e253]:
+              - heading "DSPy in production" [level=3] [ref=e254]
+              - generic [ref=e255]:
+                - generic [ref=e256]:
+                  - link "Shopify" [ref=e258] [cursor=pointer]:
+                    - /url: https://www.youtube.com/watch?v=bxToahwOVpY
+                  - generic [ref=e259]: Metadata extraction across all shops; ~550× cost reduction
+                - generic [ref=e260]:
+                  - link "Dropbox" [ref=e262] [cursor=pointer]:
+                    - /url: https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy
+                  - generic [ref=e263]: Optimized Dash relevance judge for ranking and evaluation
+                - generic [ref=e264]:
+                  - link "AWS" [ref=e266] [cursor=pointer]:
+                    - /url: https://aws.amazon.com/blogs/machine-learning/improve-amazon-nova-migration-performance-with-data-aware-prompt-optimization/
+                  - generic [ref=e267]: Prompt migration from larger to smaller models on Amazon Nova
+                - generic [ref=e268]:
+                  - link "JetBlue" [ref=e270] [cursor=pointer]:
+                    - /url: https://www.databricks.com/blog/optimizing-databricks-llm-pipelines-dspy
+                  - generic [ref=e271]: Multiple chatbot use cases on Databricks
+                - generic [ref=e272]:
+                  - link "Replit" [ref=e274] [cursor=pointer]:
+                    - /url: https://blog.replit.com/code-repair
+                  - generic [ref=e275]: Code repair pipeline using code LLMs to synthesize diffs
+                - generic [ref=e276]:
+                  - link "Databricks" [ref=e278] [cursor=pointer]:
+                    - /url: https://www.databricks.com/blog/dspy-databricks
+                  - generic [ref=e279]: LM judges, RAG, classification, and customer solutions
+                - generic [ref=e280]:
+                  - link "Nous Research" [ref=e282] [cursor=pointer]:
+                    - /url: https://github.com/NousResearch/hermes-agent-self-evolution
+                  - generic [ref=e283]: Evolutionary self-improvement for the Hermes agent
+                - generic [ref=e284]:
+                  - link "More →" [ref=e286] [cursor=pointer]:
+                    - /url: community/use-cases/
+                  - generic [ref=e287]: See all companies using DSPy in production
+              - generic [ref=e288]:
+                - generic [ref=e289]: Community
+                - generic [ref=e290]:
+                  - generic [ref=e291]:
+                    - generic [ref=e292]: 452+
+                    - generic [ref=e293]: contributors
+                  - generic [ref=e294]:
+                    - generic [ref=e295]: 8.4k
+                    - generic [ref=e296]: discord members
+                  - generic [ref=e297]:
+                    - generic [ref=e298]: 494+
+                    - generic [ref=e299]: merged PRs / yr
+                  - generic [ref=e300]:
+                    - generic [ref=e301]: 60+
+                    - generic [ref=e302]: tutorials & recipes
+                - generic [ref=e303]:
+                  - link "GitHub →" [ref=e304] [cursor=pointer]:
+                    - /url: https://github.com/stanfordnlp/dspy
+                  - link "Discord →" [ref=e305] [cursor=pointer]:
+                    - /url: https://discord.gg/XCGy2WDCQB
+      - button "Back to top"
+    - contentinfo [ref=e306]:
+      - navigation "Footer" [ref=e307]:
+        - 'link "Next: Program, don''t prompt" [ref=e308] [cursor=pointer]':
+          - /url: getting-started/program-dont-prompt/
+          - generic [ref=e309]:
+            - text: Next
+            - generic [ref=e310]: Program, don't prompt
+      - generic [ref=e315]:
+        - generic [ref=e316]:
+          - generic [ref=e317]:
+            - text: © 2026
+            - link "DSPy" [ref=e318] [cursor=pointer]:
+              - /url: https://github.com/stanfordnlp
+          - text: Made with
+          - link "Material for MkDocs" [ref=e319] [cursor=pointer]:
+            - /url: https://squidfunk.github.io/mkdocs-material/
+        - generic [ref=e320]:
+          - link "github.com" [ref=e321] [cursor=pointer]:
+            - /url: https://github.com/stanfordnlp/dspy
+          - link "discord.gg" [ref=e324] [cursor=pointer]:
+            - /url: https://discord.gg/XCGy2WDCQB

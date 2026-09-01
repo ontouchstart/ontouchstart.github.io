@@ -1,0 +1,11 @@
+[     347ms] [INFO] Download the React DevTools for a better development experience: https://react.dev/link/react-devtools @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:14335
+[     348ms] [TIMESTAMP] Blocking Track @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:8138
+[     348ms] [TIMESTAMP] Transition Track @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:8138
+[     348ms] [TIMESTAMP] Suspense Track @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:8138
+[     348ms] [TIMESTAMP] Idle Track @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:8138
+[     355ms] [TIMESTAMP] Render @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:2529
+[     357ms] [TIMESTAMP] Commit @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:8682
+[     371ms] [TIMESTAMP] Waiting for Paint @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:8797
+[     371ms] [TIMESTAMP] App @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:2468
+[     371ms] [TIMESTAMP] Remaining Effects @ http://deno-react:5173/node_modules/.vite/deps/react-dom_client.js?v=907b5378:8813
+[  178746ms] [LOG] [vite] server connection lost. Polling for restart... @ http://deno-react:5173/@vite/client:1002
