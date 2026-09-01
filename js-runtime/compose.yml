@@ -1,7 +1,6 @@
 services:
   dev:
-    build:
-      context: .
+    build: .
     volumes:
       - ./bun:/bun
       - ./deno:/deno
@@ -11,9 +10,17 @@ services:
       - bun
       - deno
 
+  playwright-browser:
+    build: .
+    volumes:
+      - ./playwright:/playwright
+    working_dir: /playwright/browser
+    command: ["npx", "playwright", "show-report", "--host", "0.0.0.0"] 
+    ports:
+      - 9323:9323
+
   bun-react:
-    build:
-      context: .
+    build: .
     volumes:
       - ./bun:/bun
     working_dir: /bun/react
@@ -24,8 +31,7 @@ services:
       - bun
 
   bun-react-blank:
-    build:
-      context: .
+    build: .
     volumes:
       - ./bun:/bun
     working_dir: /bun/react-blank
@@ -36,8 +42,7 @@ services:
       - bun
 
   bun-react-tailwind:
-    build:
-      context: .
+    build: .
     volumes:
       - ./bun:/bun
     working_dir: /bun/react-tailwind
@@ -48,8 +53,7 @@ services:
       - bun
 
   deno-react:
-    build:
-      context: .
+    build: .
     volumes:
       - ./deno:/deno
     working_dir: /deno/deno-react
