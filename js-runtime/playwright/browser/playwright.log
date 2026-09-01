@@ -1,52 +1,75 @@
 
 Running 6 tests using 5 workers
 
-[1/6] [webkit] › tests/browser.spec.ts:3:5 › has title
+[1/6] [firefox] › tests/browser.spec.ts:12:5 › get values
 [2/6] [chromium] › tests/browser.spec.ts:3:5 › has title
 [3/6] [chromium] › tests/browser.spec.ts:12:5 › get values
-[4/6] [firefox] › tests/browser.spec.ts:12:5 › get values
-[5/6] [firefox] › tests/browser.spec.ts:3:5 › has title
+[4/6] [firefox] › tests/browser.spec.ts:3:5 › has title
+[5/6] [webkit] › tests/browser.spec.ts:3:5 › has title
 [chromium] › tests/browser.spec.ts:12:5 › get values
-appName
+playwright appName
 
-appCodeName
+playwright appCodeName
 
-appVersion
+playwright appVersion
 
-Netscape
+playwright Netscape
 
-Mozilla
+playwright Mozilla
 
-5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36
+playwright 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36
+
+browser {
+  appName: 'Netscape',
+  appCodeName: 'Mozilla',
+  appVersion: '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.7922.34 Safari/537.36'
+}
 
 [6/6] [webkit] › tests/browser.spec.ts:12:5 › get values
 [firefox] › tests/browser.spec.ts:12:5 › get values
-appName
-
-appCodeName
-
-appVersion
-
-Netscape
-
-Mozilla
-
-5.0 (X11)
+playwright appName
 
 [webkit] › tests/browser.spec.ts:12:5 › get values
-appName
+playwright appName
 
-appCodeName
+[firefox] › tests/browser.spec.ts:12:5 › get values
+playwright appCodeName
 
-appVersion
+[webkit] › tests/browser.spec.ts:12:5 › get values
+playwright appCodeName
 
-Netscape
+playwright appVersion
 
-Mozilla
+[firefox] › tests/browser.spec.ts:12:5 › get values
+playwright appVersion
 
-5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
+[webkit] › tests/browser.spec.ts:12:5 › get values
+playwright Netscape
 
-  6 passed (2.7s)
+playwright Mozilla
+
+playwright 5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
+
+browser {
+  appName: 'Netscape',
+  appCodeName: 'Mozilla',
+  appVersion: '5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15'
+}
+
+[firefox] › tests/browser.spec.ts:12:5 › get values
+playwright Netscape
+
+playwright Mozilla
+
+playwright 5.0 (X11)
+
+browser {
+  appName: 'Netscape',
+  appCodeName: 'Mozilla',
+  appVersion: '5.0 (X11)'
+}
+
+  6 passed (2.8s)
 
 To open last HTML report run:
 [36m[39m
