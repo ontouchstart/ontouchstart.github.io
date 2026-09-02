@@ -6,6 +6,10 @@ User prompt 1 of 9 - 9/2/2026, 7:50:58 AM:
 Explain 
 [Attached image 1][Attached image 2]
 
+![](IMG_2652.jpeg)
+
+![](IMG_2653.jpeg)
+
 Gemma 4 31B:
 The images show a cafe setting on a light-colored wooden table. A tablet is positioned on the left, displaying a document with text. To the right of the tablet is a white cup of latte with heart-shaped latte art in the foam, sitting on a matching saucer. Behind the coffee is a golden-brown croissant served on a small, light-colored plate.
 
@@ -51,6 +55,8 @@ User prompt 5 of 9 - 9/2/2026, 7:54:39 AM:
 
 [Attached image 1]
 
+![](IMG_2654.jpeg)
+
 Gemma 4 31B:
 This image shows a tablet displaying a web page that identifies the browser's user agent string. Here is the text from the screen:
 
@@ -94,6 +100,8 @@ Developers use this information to "serve" different versions of a site dependin
 User prompt 7 of 9 - 9/2/2026, 7:56:22 AM:
 This is the screen before 
 [Attached image 1]
+
+![](IMG_2655.jpeg)
 
 Gemma 4 31B:
 This image shows the initial state of the webpage before the data is retrieved. 
