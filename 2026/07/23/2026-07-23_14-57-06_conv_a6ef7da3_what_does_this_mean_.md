@@ -232,3 +232,5 @@ Essentially, it shows a deep, underlying connection between trigonometry, comple
 ```
 
 [🤔](2026-07-23_20-00-04_conv_4db79611_what_does_this_mean_.html)
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
