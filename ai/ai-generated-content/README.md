@@ -6,3 +6,7 @@ In the case of Large Language Model, the data you see is nothing but patterns th
 The plausibility is just an _illusion_.
 
 [Always assume AI generated data are nonsense unless you’re convinced some of them make sense to you.](nonsense)
+
+[Critical reading in the age of AI generated content](https://ontouchstart.github.io/duck.ai/2026/09/01/duck.ai_2026-09-01_08-00-24)
+
+[Kindle browser detection](https://ontouchstart.github.io/duck.ai/2026/09/02/duck.ai_2026-09-02_07-58-12)
