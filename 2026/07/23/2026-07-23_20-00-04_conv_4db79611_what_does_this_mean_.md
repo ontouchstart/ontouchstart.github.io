@@ -1,3 +1,7 @@
+---
+layout: math
+---
+
 # What does this mean?
 
 [https://ontouchstart.github.io/2026/07/23/2026-07-23_14-57-06_conv_a6ef7da3_what_does_this_mean_.md](https://ontouchstart.github.io/2026/07/23/2026-07-23_14-57-06_conv_a6ef7da3_what_does_this_mean_.md)
@@ -358,5 +362,3 @@ While it looks like a beautiful piece of "math art," it is actually used in almo
   }
 }
 ```
-
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
