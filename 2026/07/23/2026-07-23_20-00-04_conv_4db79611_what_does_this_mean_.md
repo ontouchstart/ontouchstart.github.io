@@ -358,3 +358,5 @@ While it looks like a beautiful piece of "math art," it is actually used in almo
   }
 }
 ```
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
