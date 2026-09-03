@@ -10,3 +10,5 @@ The plausibility is just an _illusion_.
 [Critical reading in the age of AI generated content](https://ontouchstart.github.io/duck.ai/2026/09/01/duck.ai_2026-09-01_08-00-24)
 
 [Kindle browser detection](https://ontouchstart.github.io/duck.ai/2026/09/02/duck.ai_2026-09-02_07-58-12)
+
+[Do not mistake a sophisticated echo for the truth](https://ontouchstart.github.io/duck.ai/2026/09/03/duck.ai_2026-09-03_07-56-13)
