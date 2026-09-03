@@ -3,11 +3,11 @@
 #1 DONE 0.0s
 
 #2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 707B done
+#2 transferring dockerfile: 717B 0.0s done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/nixos/nix:latest
-#3 DONE 2.9s
+#3 DONE 0.6s
 
 #4 [internal] load .dockerignore
 #4 transferring context: 2B done
@@ -22,79 +22,79 @@
 #6 CACHED
 
 #7 [2/9] RUN nix-channel --update
-#7 1.512 unpacking 1 channels...
-#7 DONE 12.4s
+#7 3.055 unpacking 1 channels...
+#7 DONE 15.0s
 
 #8 [3/9] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
-#8 DONE 0.6s
+#8 DONE 0.7s
 
 #9 [4/9] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
-#9 DONE 0.8s
+#9 DONE 1.3s
 
 #10 [5/9] RUN nix-env -iA nixpkgs.vim nixpkgs.gnumake
-#10 0.295 installing 'vim-9.2.0782'
-#10 0.295 installing 'gnumake-4.4.1'
-#10 0.628 these 17 paths will be fetched (30.6 MiB download, 120.0 MiB unpacked):
-#10 0.628   /nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15
-#10 0.628   /nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15
-#10 0.628   /nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1
-#10 0.628   /nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84
-#10 0.628   /nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1
-#10 0.628   /nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug
-#10 0.628   /nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc
-#10 0.628   /nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info
-#10 0.628   /nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man
-#10 0.628   /nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8
-#10 0.628   /nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2
-#10 0.628   /nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz
-#10 0.628   /nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6
-#10 0.628   /nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3
-#10 0.628   /nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782
-#10 0.628   /nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd
-#10 0.628   /nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc
-#10 0.629 copying path '/nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc' from 'https://cache.nixos.org'...
-#10 0.629 copying path '/nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info' from 'https://cache.nixos.org'...
-#10 0.629 copying path '/nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man' from 'https://cache.nixos.org'...
-#10 0.630 copying path '/nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz' from 'https://cache.nixos.org'...
-#10 0.630 copying path '/nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
-#10 0.631 copying path '/nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2' from 'https://cache.nixos.org'...
-#10 0.747 copying path '/nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8' from 'https://cache.nixos.org'...
-#10 0.791 copying path '/nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84' from 'https://cache.nixos.org'...
-#10 1.142 copying path '/nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15' from 'https://cache.nixos.org'...
-#10 1.142 copying path '/nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1' from 'https://cache.nixos.org'...
-#10 1.142 copying path '/nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1' from 'https://cache.nixos.org'...
-#10 1.142 copying path '/nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6' from 'https://cache.nixos.org'...
-#10 1.142 copying path '/nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd' from 'https://cache.nixos.org'...
-#10 1.233 copying path '/nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug' from 'https://cache.nixos.org'...
-#10 1.263 copying path '/nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3' from 'https://cache.nixos.org'...
-#10 1.287 copying path '/nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15' from 'https://cache.nixos.org'...
-#10 1.347 copying path '/nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782' from 'https://cache.nixos.org'...
-#10 1.754 building '/nix/store/97s4fryzysbdnnz3xgz9qy0c420q3n8v-user-environment.drv'...
-#10 DONE 2.1s
+#10 0.291 installing 'vim-9.2.0782'
+#10 0.291 installing 'gnumake-4.4.1'
+#10 0.595 these 17 paths will be fetched (30.6 MiB download, 120.0 MiB unpacked):
+#10 0.595   /nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15
+#10 0.595   /nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15
+#10 0.595   /nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1
+#10 0.595   /nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84
+#10 0.595   /nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1
+#10 0.595   /nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug
+#10 0.595   /nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc
+#10 0.595   /nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info
+#10 0.595   /nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man
+#10 0.595   /nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8
+#10 0.595   /nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2
+#10 0.595   /nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz
+#10 0.595   /nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6
+#10 0.595   /nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3
+#10 0.595   /nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782
+#10 0.595   /nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd
+#10 0.595   /nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc
+#10 0.598 copying path '/nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc' from 'https://cache.nixos.org'...
+#10 0.600 copying path '/nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info' from 'https://cache.nixos.org'...
+#10 0.600 copying path '/nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man' from 'https://cache.nixos.org'...
+#10 0.600 copying path '/nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz' from 'https://cache.nixos.org'...
+#10 0.600 copying path '/nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#10 0.601 copying path '/nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2' from 'https://cache.nixos.org'...
+#10 0.681 copying path '/nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8' from 'https://cache.nixos.org'...
+#10 0.722 copying path '/nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84' from 'https://cache.nixos.org'...
+#10 0.983 copying path '/nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15' from 'https://cache.nixos.org'...
+#10 0.983 copying path '/nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6' from 'https://cache.nixos.org'...
+#10 0.983 copying path '/nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1' from 'https://cache.nixos.org'...
+#10 0.983 copying path '/nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd' from 'https://cache.nixos.org'...
+#10 0.984 copying path '/nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1' from 'https://cache.nixos.org'...
+#10 1.047 copying path '/nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug' from 'https://cache.nixos.org'...
+#10 1.101 copying path '/nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3' from 'https://cache.nixos.org'...
+#10 1.122 copying path '/nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15' from 'https://cache.nixos.org'...
+#10 1.171 copying path '/nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782' from 'https://cache.nixos.org'...
+#10 1.533 building '/nix/store/isrr9v6n5dpyfhxd6a39hgl2fd3z5nv3-user-environment.drv'...
+#10 DONE 2.4s
 
-#11 [6/9] RUN echo 'bun:;git clone https://github.com/oven-sh/bun.git && cd bun && git apply ../flake.patch && nix flake update' > Makefile
-#11 DONE 0.1s
+#11 [6/9] RUN echo 'bun:;git clone --depth=1 https://github.com/oven-sh/bun.git && cd bun && git apply ../flake.patch && nix flake update' > Makefile
+#11 DONE 0.2s
 
 #12 [7/9] RUN echo 'dev:bun;cd bun && nix develop --command bash -c "bun scripts/build.ts --profile=debug --asan=off"' >> Makefile
-#12 DONE 0.1s
+#12 DONE 0.2s
 
 #13 [8/9] RUN echo 'test:bun;cd bun && nix develop --command bash -c "bun scripts/build.ts --profile=debug --asan=off test"' >> Makefile
 #13 DONE 0.2s
 
 #14 [9/9] COPY flake.patch .
-#14 DONE 0.0s
+#14 DONE 0.1s
 
 #15 exporting to image
 #15 exporting layers
-#15 exporting layers 7.3s done
-#15 exporting manifest sha256:78f864a3e5baf1025235e0312591447e3c8b37e59ceaf68ced1e700ee734b928 done
-#15 exporting config sha256:954215670ac78c14bf8a1fc995df70a7b0c88435b4bf3e863306eeaa9d78541b done
-#15 exporting attestation manifest sha256:791b2dbfb1ab3b74e5562939c928af220c18af31f9ef3b6864f71985c36520d5 done
-#15 exporting manifest list sha256:d5adb5f56cf96ea89aa7cb79c9f8e4b250d5ec83e2389e1758e14db16317d3c8 done
+#15 exporting layers 7.5s done
+#15 exporting manifest sha256:3a2b0f2f381ec26af91af05a36152967e7ce22d4d769fabb9f97e1e2525363b9 done
+#15 exporting config sha256:2f5e7194894d74ea9e2b3a1165417d4629adcde4fd4100cfb402da252e1a35ef done
+#15 exporting attestation manifest sha256:84a724a589d0c619d4250b3cc38b8b33e05e05135fcba66db096d1265a9961ec 0.0s done
+#15 exporting manifest list sha256:7024335147cff4874963c22596093b7c1014979a11a2d7850bf45718f1523bef done
 #15 naming to docker.io/library/bun-review-dev:latest done
 #15 unpacking to docker.io/library/bun-review-dev:latest
 #15 unpacking to docker.io/library/bun-review-dev:latest 9.2s done
-#15 DONE 16.5s
+#15 DONE 16.9s
 
 #16 resolving provenance for metadata file
 #16 DONE 0.0s
