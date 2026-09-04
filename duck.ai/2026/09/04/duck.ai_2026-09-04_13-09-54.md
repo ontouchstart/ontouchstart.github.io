@@ -56,3 +56,5 @@ Burnout occurs when the "future pleasures" promised by AI efficiency fail to mat
 This burnout is a crisis of prudence. The enthusiast ignores the long-term cost of their acceleration, trading their mental well-being for short-term gains in output. They operate on a "direct impulse" to produce more and faster, forgetting that human cognition—unlike a model—requires periods of stillness and "present pain" (rest and reflection) to remain healthy.
 
 To avoid this, one must apply the "self-administered check" mentioned in the text. This means setting boundaries that intentionally reintroduce slowness into the work process. By consciously deciding when to disconnect from the AI's speed, a person reclaims their agency over their time. Prudence in the AI age is the ability to recognize that while the machine can work at infinite speed, the human mind requires a slower, more reasoned pace to avoid exhaustion and maintain meaning.
+
+[🤔](https://ontouchstart.github.io/duck.ai/2026/09/04/duck.ai_2026-09-04_18-22-15)
