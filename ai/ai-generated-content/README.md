@@ -16,3 +16,5 @@ The plausibility is just an _illusion_.
 [Sense, nonsense, and common sense](https://ontouchstart.github.io/duck.ai/2026/09/03/duck.ai_2026-09-03_11-49-21)
 
 [AI and mental health](https://ontouchstart.github.io/duck.ai/2026/09/03/duck.ai_2026-09-03_14-35-36)
+
+[Forethought](https://ontouchstart.github.io/duck.ai/2026/09/04/duck.ai_2026-09-04_12-29-59)
