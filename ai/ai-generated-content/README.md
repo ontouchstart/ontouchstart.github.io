@@ -20,3 +20,5 @@ The plausibility is just an _illusion_.
 [Forethought](https://ontouchstart.github.io/duck.ai/2026/09/04/duck.ai_2026-09-04_12-29-59)
 
 [Prudence in the AI age](https://ontouchstart.github.io/duck.ai/2026/09/04/duck.ai_2026-09-04_13-09-54)
+
+[Who is Mrs. Eddy?](https://ontouchstart.github.io/duck.ai/2026/09/04/duck.ai_2026-09-04_20-49-43)
