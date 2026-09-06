@@ -24,3 +24,5 @@ The plausibility is just an _illusion_.
 [Who is Mrs. Eddy?](https://ontouchstart.github.io/duck.ai/2026/09/04/duck.ai_2026-09-04_20-49-43)
 
 [Passionate sympathetic contemplation](https://ontouchstart.github.io/duck.ai/2026/09/04/duck.ai_2026-09-04_22-37-25)
+
+[Who is Theodore Ziolkowski?](https://ontouchstart.github.io/duck.ai/2026/09/06/duck.ai_2026-09-06_09-57-11)
