@@ -1,0 +1,47 @@
+Name:               [1mbash-interactive[0m
+Store paths:        /nix/store/q1nq6fylbczrsj7k9bqc9dzf660q63v3-bash-interactive-5.3p9
+
+Name:               [1mcoreutils-full[0m
+Store paths:        /nix/store/k3spppdnjvj3cp9fg2904ylm7gf68hls-coreutils-full-9.11
+
+Name:               [1mcurl[0m
+Store paths:        /nix/store/8gdgwydsf6gia9j178nymxwm2bl0z3m3-curl-8.20.0-bin
+
+Name:               [1mfindutils[0m
+Store paths:        /nix/store/8z92qzl5h4dx7y6j5ks9zlpgy1rqi10v-findutils-4.10.0
+
+Name:               [1mgit-minimal[0m
+Store paths:        /nix/store/c69q6gbxdzcpybzzdhpw28ppkfapsdsx-git-minimal-2.54.0
+
+Name:               [1mgnugrep[0m
+Store paths:        /nix/store/srk76h64a1ja4z7njh5lxcds7m9hnc7y-gnugrep-3.12
+
+Name:               [1mgnutar[0m
+Store paths:        /nix/store/r4c3r48fn312jmjls34nwz41b9y4xsvs-gnutar-1.35
+
+Name:               [1mgzip[0m
+Store paths:        /nix/store/j5l2p9aa8jiqx94fn3f3bdigbdbjdjz8-gzip-1.14
+
+Name:               [1miana-etc[0m
+Store paths:        /nix/store/bjwcdygzs2gsbxqh9jyisisafqw7xlpd-iana-etc-20251215
+
+Name:               [1mless[0m
+Store paths:        /nix/store/41fn8cwswjkg8vjkibya14z2yc2ypfgf-less-692
+
+Name:               [1mman-db[0m
+Store paths:        /nix/store/8nwg9168q5xyxqmhvx2cjb2g09mxmi35-man-db-2.13.1
+
+Name:               [1mnix[0m
+Store paths:        /nix/store/fw98swa1g4ysvmv6p6m6xf51kzhvpp6p-nix-2.35.2
+
+Name:               [1mnss-cacert[0m
+Store paths:        /nix/store/07xdbx75iszxrf8p2fshxld6xgmmp3wp-nss-cacert-3.123
+
+Name:               [1mopenssh[0m
+Store paths:        /nix/store/mk6ngc1zz5by9qycq2g187k324s0q3vb-openssh-10.3p1
+
+Name:               [1mwget[0m
+Store paths:        /nix/store/slvgbnffjqr2sd5pj9wbd6xg5kcc6dcd-wget-1.25.0
+
+Name:               [1mwhich[0m
+Store paths:        /nix/store/4r6xx6jax35ybxckn2c8iyjh4rgiz36p-which-2.23
