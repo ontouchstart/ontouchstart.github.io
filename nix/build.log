@@ -7,7 +7,7 @@
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/nixos/nix:2.35.2-arm64
-#3 DONE 0.3s
+#3 DONE 0.4s
 
 #4 [internal] load .dockerignore
 #4 transferring context: 2B done
@@ -18,23 +18,23 @@
 #5 CACHED
 
 #6 [2/3] RUN nix-channel --update
-#6 1.276 unpacking 1 channels...
-#6 DONE 12.2s
+#6 1.475 unpacking 1 channels...
+#6 DONE 12.3s
 
 #7 [3/3] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
 #7 DONE 0.5s
 
 #8 exporting to image
 #8 exporting layers
-#8 exporting layers 7.6s done
-#8 exporting manifest sha256:f75c00237d4f7bb67e5cc31694732467acda7e5f31cbfa5e3e94af1de6770af7 done
-#8 exporting config sha256:f5a5a7c5b4fce3141867255bb6a41a59fcf87b7a546aac9211ec2f93cb9c71fa done
-#8 exporting attestation manifest sha256:89e5987ba2a4ea22e3b04ff9436e603e02ca7d42dea5421892fd72830dcaeffa done
-#8 exporting manifest list sha256:1892f934fa71656e2866dfe258459285f84b03dccc3bb261955c7a1c6cd543ea done
+#8 exporting layers 7.5s done
+#8 exporting manifest sha256:e0ae48705c77206900e92e155a171a132a88c5b5530f40b11c955bab1c1b6482 done
+#8 exporting config sha256:5e55dd153cc644cdd02044f95c88fd84fcc828770e9b50ed3bddb9173d4fb8e1 done
+#8 exporting attestation manifest sha256:61aac6df8eb80770c437f3f4a86bb236590bd53483fdb34bdc781eba72618817 done
+#8 exporting manifest list sha256:814040ed9c30b76cc8c89b1007c7ccf54859c5d7bb855278f07d3c39165e6cba done
 #8 naming to docker.io/library/nix-dev:latest done
 #8 unpacking to docker.io/library/nix-dev:latest
-#8 unpacking to docker.io/library/nix-dev:latest 7.7s done
-#8 DONE 15.3s
+#8 unpacking to docker.io/library/nix-dev:latest 8.3s done
+#8 DONE 15.9s
 
 #9 resolving provenance for metadata file
 #9 DONE 0.0s

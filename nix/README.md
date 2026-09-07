@@ -10,14 +10,16 @@ https://mitchellh.com/writing/nix-with-dockerfiles
 
 https://ontouchstart.github.io/nix/build.log
 
+https://ontouchstart.github.io/nix/profile-list.log
 
-# Installation
+https://ontouchstart.github.io/nix/version.log
+
+## Installation
 
 RTMF: https://nix.dev/manual/nix/2.35/installation/
 
 ```
 curl -sL https://nixos.org/nix/install > install.sh
-cat -n install.sh
      1	#!/bin/sh
      2	
      3	# This script installs the Nix package manager on your system by
@@ -149,5 +151,45 @@ cat -n install.sh
    129	} # End of wrapping
 ```
 
-[🤖](/llama.cpp/transcripts/firefox/2026/08/31/2026-08-31_13-43-56_conv_82693474.yml)
+## Dockerfile
 
+```dockerfile
+FROM nixos/nix:2.35.2-arm64
+RUN nix-channel --update
+RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
+```
+
+## Makefile
+
+```Makefile
+all:	build.log profile-list.log version.log
+
+build.log:
+	docker compose --progress=plain build --no-cache | tee build.log
+
+profile-list.log:
+	docker compose run  --remove-orphans --rm dev nix profile list | tee profile-list.log
+
+version.log:
+	docker compose run  --remove-orphans --rm dev nix --version | tee version.log
+
+dev:	build.log
+	docker compose run  --remove-orphans --rm dev bash
+
+repl:	build.log
+	docker compose run  --remove-orphans --rm dev nix repl
+
+install.sh:
+	curl -sL https://nixos.org/nix/install > install.sh
+
+clean:
+	rm -rf *.log
+```
+
+## compose.yml
+
+```yml
+services:
+  dev:
+    build: .
+```
