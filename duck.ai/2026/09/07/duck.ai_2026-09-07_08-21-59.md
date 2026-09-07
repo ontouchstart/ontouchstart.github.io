@@ -1,10 +1,14 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+# Fiction is harder than nonfiction 
+ 
+This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
 User prompt 1 of 9 - 9/7/2026, 8:07:48 AM:
 
 [Attached image 1]
+
+![](IMG_2755.jpeg)
 
 Gemma 4 31B:
 The image contains the following handwritten text:
