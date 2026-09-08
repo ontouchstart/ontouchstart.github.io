@@ -1,0 +1,428 @@
+# Portuguese (Portugal)translation of the hello package
+# Copyright (C) 1995 Free Software Foundation, Inc.
+# This file is distributed under the same license as the hello package.
+# Antï¿½nio Joï¿½o Rendas <arendas@telepac.pt>, 1996.
+# Pedro Albuquerque <pmra@protonmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hello 2.12\n"
+"Report-Msgid-Bugs-To: bug-hello@gnu.org\n"
+"POT-Creation-Date: 2026-03-17 20:24-0700\n"
+"PO-Revision-Date: 2025-03-23 10:55+0000\n"
+"Last-Translator: Pedro Albuquerque <pmra@protonmail.com>\n"
+"Language-Team: Portuguese <translation-team-pt@lists.sourceforge.net>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Generator: Poedit 3.5\n"
+
+#. This is a proper name. See the gettext manual, section Names.
+#: src/hello.c:40
+msgid "Karl Berry"
+msgstr "Karl Berry"
+
+#. This is a proper name. See the gettext manual, section Names.
+#: src/hello.c:41
+msgid "Sami Kerola"
+msgstr "Sami Kerola"
+
+#. This is a proper name. See the gettext manual, section Names.
+#: src/hello.c:42
+msgid "Jim Meyering"
+msgstr "Jim Meyering"
+
+#. This is a proper name. See the gettext manual, section Names.
+#: src/hello.c:43
+msgid "Reuben Thomas"
+msgstr "Reuben Thomas"
+
+#. TRANSLATORS: --help output 1 (synopsis)
+#. no-wrap
+#: src/hello.c:54
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "Uso: %s [OPÇÃO]...\n"
+
+#. TRANSLATORS: --help output 2 (brief description)
+#. no-wrap
+#: src/hello.c:57
+msgid "Print a friendly, customizable greeting.\n"
+msgstr "Imprimir uma saudação pessoal amigável.\n"
+
+#. TRANSLATORS: --help output 3: options
+#. no-wrap
+#: src/hello.c:61
+msgid "  -t, --traditional       use traditional greeting\n"
+msgstr "  -t, --traditional       usa a saudação tradicional\n"
+
+#: src/hello.c:62
+msgid "  -g, --greeting=TEXT     use TEXT as the greeting message\n"
+msgstr "  -g, --greeting=TEXTO    usa TEXTO como mensagem de saudação\n"
+
+#: src/hello.c:65
+msgid "      --help     display this help and exit\n"
+msgstr "      --help     mostra esta mensagem e sai\n"
+
+#: src/hello.c:66
+msgid "      --version  output version information and exit\n"
+msgstr "      --version  mostra informação de versão e sai\n"
+
+#. TRANSLATORS: Replace LANG_CODE in this URL with your language code
+#. <https://translationproject.org/team/LANG_CODE.html> to form one of
+#. the URLs at https://translationproject.org/team/.  Otherwise, replace
+#. the entire URL with your translation team's email address.
+#: src/hello.c:76
+#, c-format
+msgid "Report %s translation bugs to <https://translationproject.org/team/>\n"
+msgstr ""
+"Relate erros de tradução para %s em <https://translationproject.org/team/>\n"
+
+#: src/hello.c:111
+msgid "hello, world"
+msgstr "olá mundo"
+
+#: src/hello.c:122
+msgid "extra operand"
+msgstr "operando extra"
+
+#: src/hello.c:148
+msgid "Hello, world!"
+msgstr "Olá mundo!"
+
+#: src/hello.c:162
+#, c-format
+msgid "conversion to a multibyte string failed"
+msgstr "falha ao converter para cadeia multi-byte"
+
+#: src/system.h:57
+#, c-format
+msgid "Try '%s --help' for more information.\n"
+msgstr "Tente \"%s --help\" para mais informação.\n"
+
+#: lib/error.c:208
+msgid "Unknown system error"
+msgstr "Erro de sistema desconhecido"
+
+#: lib/getopt.c:283
+#, c-format
+msgid "%s: option '%s%s' is ambiguous\n"
+msgstr "%s: a opção \"%s%s\" é ambígua\n"
+
+#: lib/getopt.c:289
+#, c-format
+msgid "%s: option '%s%s' is ambiguous; possibilities:"
+msgstr "%s: a opção \"%s%s\" é ambígua; possibilidades:"
+
+#: lib/getopt.c:323
+#, c-format
+msgid "%s: unrecognized option '%s%s'\n"
+msgstr "%s: opção não reconhecida \"%s%s\"\n"
+
+#: lib/getopt.c:349
+#, c-format
+msgid "%s: option '%s%s' doesn't allow an argument\n"
+msgstr "%s: a opção \"%s%s\" não permite um argumento\n"
+
+#: lib/getopt.c:364
+#, c-format
+msgid "%s: option '%s%s' requires an argument\n"
+msgstr "%s: a opção \"%s%s\" requer um argumento\n"
+
+#: lib/getopt.c:624
+#, c-format
+msgid "%s: invalid option -- '%c'\n"
+msgstr "%s: opção inválida -- \"%c\"\n"
+
+#: lib/getopt.c:639 lib/getopt.c:685
+#, c-format
+msgid "%s: option requires an argument -- '%c'\n"
+msgstr "%s: opção requer um argumento -- \"%c\"\n"
+
+#: lib/closeout.c:121
+msgid "write error"
+msgstr "erro de escrita"
+
+#. TRANSLATORS:
+#. Get translations for open and closing quotation marks.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  For example, a French Unicode local should translate
+#. these to U+00AB (LEFT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), and U+00BB (RIGHT-POINTING DOUBLE ANGLE
+#. QUOTATION MARK), respectively.
+#.
+#. If the catalog has no translation, we will try to
+#. use Unicode U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. Unicode U+2019 (RIGHT SINGLE QUOTATION MARK).  If the
+#. current locale is not Unicode, locale_quoting_style
+#. will quote 'like this', and clocale_quoting_style will
+#. quote "like this".  You should always include translations
+#. for "`" and "'" even if U+2018 and U+2019 are appropriate
+#. for your locale.
+#.
+#. If you don't know what to put here, please see
+#. <https://en.wikipedia.org/wiki/Quotation_marks_in_other_languages>
+#. and use glyphs suitable for your language.
+#: lib/quotearg.c:357
+msgid "`"
+msgstr "`"
+
+#: lib/quotearg.c:358
+msgid "'"
+msgstr "'"
+
+#: lib/version-etc.c:73
+#, c-format
+msgid "Packaged by %s (%s)\n"
+msgstr "Empacotado por %s (%s)\n"
+
+#: lib/version-etc.c:76
+#, c-format
+msgid "Packaged by %s\n"
+msgstr "Empacotado por %s\n"
+
+#. TRANSLATORS: Translate "(C)" to the copyright symbol
+#. (C-in-a-circle), if this symbol is available in the user's
+#. locale.  Otherwise, do not translate "(C)"; leave it as-is.
+#: lib/version-etc.c:83
+msgid "(C)"
+msgstr "(C)"
+
+#. TRANSLATORS: The %s placeholder is the web address of the GPL license.
+#: lib/version-etc.c:88
+#, c-format
+msgid ""
+"License GPLv3+: GNU GPL version 3 or later <%s>.\n"
+"This is free software: you are free to change and redistribute it.\n"
+"There is NO WARRANTY, to the extent permitted by law.\n"
+msgstr ""
+"Licença GPLv3+: GNU GPL versão 3 ou posterior <%s>.\n"
+"Este programa é livre: pode alterá-lo e redistribuí-lo.\n"
+"Não há QUALQUER GARANTIA, até ao limite permitido pela lei.\n"
+
+#. TRANSLATORS: %s denotes an author name.
+#: lib/version-etc.c:105
+#, c-format
+msgid "Written by %s.\n"
+msgstr "Escrito por %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: lib/version-etc.c:109
+#, c-format
+msgid "Written by %s and %s.\n"
+msgstr "Escrito por %s e %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#: lib/version-etc.c:113
+#, c-format
+msgid "Written by %s, %s, and %s.\n"
+msgstr "Escrito por %s, %s e %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:120
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"and %s.\n"
+msgstr ""
+"Escrito por %s, %s, %s\n"
+"e %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:127
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr ""
+"Escrito por %s, %s, %s,\n"
+"%s e %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:134
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, and %s.\n"
+msgstr ""
+"Escrito por %s, %s, %s,\n"
+"%s, %s e %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:142
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, and %s.\n"
+msgstr ""
+"Escrito por %s, %s, %s,\n"
+"%s, %s, %s e %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:150
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"and %s.\n"
+msgstr ""
+"Escrito por %s, %s, %s,\n"
+"%s, %s, %s, %s\n"
+"e %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:159
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, and %s.\n"
+msgstr ""
+"Escrito por %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s e %s.\n"
+
+#. TRANSLATORS: Each %s denotes an author name.
+#. You can use line breaks, estimating that each author name occupies
+#. ca. 16 screen columns and that a screen line has ca. 80 columns.
+#: lib/version-etc.c:170
+#, c-format
+msgid ""
+"Written by %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, %s, and others.\n"
+msgstr ""
+"Escrito por %s, %s, %s,\n"
+"%s, %s, %s, %s,\n"
+"%s, %s e outros.\n"
+
+#. TRANSLATORS: The placeholder indicates the bug-reporting address
+#. for this package.  Please add _another line_ saying
+#. "Report translation bugs to <...>\n" with the address for translation
+#. bugs (typically your translation team's web or email address).
+#: lib/version-etc.c:248
+#, c-format
+msgid "Report bugs to: %s\n"
+msgstr "Relatar erros a: %s\n"
+
+#: lib/version-etc.c:250
+#, c-format
+msgid "Report %s bugs to: %s\n"
+msgstr "Reportar %s erros a: %s\n"
+
+#: lib/version-etc.c:254 lib/version-etc.c:256
+#, c-format
+msgid "%s home page: <%s>\n"
+msgstr "Página inicial %s: <%s>\n"
+
+#: lib/version-etc.c:259
+#, c-format
+msgid "General help using GNU software: <%s>\n"
+msgstr "Ajuda geral para usar programas GNU: <%s>\n"
+
+#: lib/xalloc-die.c:34
+msgid "memory exhausted"
+msgstr "memória esgotada"
+
+#~ msgid "%s: option `--%s' doesn't allow an argument\n"
+#~ msgstr "%s: a opï¿½ï¿½o `--%s' nï¿½o admite um argumento\n"
+
+#~ msgid "%s: unrecognized option `--%s'\n"
+#~ msgstr "%s: opï¿½ï¿½o desconhecida `--%s'\n"
+
+#~ msgid "%s: illegal option -- %c\n"
+#~ msgstr "%s: opï¿½ï¿½o ilegal -- %c\n"
+
+#, fuzzy
+#~ msgid "%s: option `-W %s' is ambiguous\n"
+#~ msgstr "%s: a opï¿½ï¿½o `%s' ï¿½ ambï¿½gua\n"
+
+#, fuzzy
+#~ msgid "%s: option `-W %s' doesn't allow an argument\n"
+#~ msgstr "%s: a opï¿½ï¿½o `--%s' nï¿½o admite um argumento\n"
+
+#~ msgid "Too many arguments\n"
+#~ msgstr "Demasiados argumentos\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is GNU Hello, THE greeting printing program.\n"
+#~ "Usage: %s [OPTION]\n"
+#~ "  -h, --help          display this help and exit\n"
+#~ "  -v, --version       display version information and exit\n"
+#~ "  -t, --traditional   use traditional greeting format\n"
+#~ "  -m, --mail          print your mail\n"
+#~ "\n"
+#~ "Report bugs to bug-gnu-hello@prep.ai.mit.edu.\n"
+#~ msgstr ""
+#~ "Isto ï¿½ o GNU Hello, O programa de saudaï¿½ï¿½es.\n"
+#~ "\n"
+#~ "Utilizaï¿½ï¿½o:\n"
+#~ "\n"
+#~ "    %s [-htvm] [--help] [--version] [--traditional] [--mail]\n"
+#~ "\n"
+#~ "  -h, --help          mostrar esta ajuda e sair\n"
+#~ "  -v, --version       mostrar informaï¿½ï¿½o sobre a versï¿½o e sair\n"
+#~ "\n"
+#~ "  -t, --traditional   usar o formato de saudaï¿½ï¿½o tradicional\n"
+#~ "  -m, --mail          imprimir o teu correio\n"
+
+#~ msgid "%s: Who are you?\n"
+#~ msgstr "%s: Quem ï¿½s tu?\n"
+
+#~ msgid "Nothing happens here."
+#~ msgstr "Aqui nï¿½o se passa nada."
+
+#~ msgid "%s: unrecognized option, character code 0%o\n"
+#~ msgstr "%s: opï¿½ï¿½o desconhecida, cï¿½digo caracter 0%o\n"
+
+#~ msgid "%s: unrecognized option `-%c'\n"
+#~ msgstr "%s: opï¿½ï¿½o desconhecida `-%c'\n"
+
+#~ msgid "%s: option `-%c' requires an argument\n"
+#~ msgstr "%s: a opï¿½ï¿½o `-%c' requer um argumento\n"
+
+#~ msgid "digits occur in two different argv-elements.\n"
+#~ msgstr "ocorrem dï¿½gitos em dois elementos diferentes de argv\n"
+
+#~ msgid "option %c\n"
+#~ msgstr "opï¿½ï¿½o %c\n"
+
+#~ msgid "option a\n"
+#~ msgstr "opï¿½ï¿½o a\n"
+
+#~ msgid "option b\n"
+#~ msgstr "opï¿½ï¿½o b\n"
+
+#~ msgid "option c with value `%s'\n"
+#~ msgstr "opï¿½ï¿½o c com valor `%s'\n"
+
+#~ msgid "?? getopt returned character code 0%o ??\n"
+#~ msgstr "?? getopt retornou cï¿½digo caracter 0%o ??\n"
+
+#~ msgid "non-option ARGV-elements: "
+#~ msgstr "elementos de ARGV que nï¿½o sï¿½o opï¿½ï¿½es: "
+
+#~ msgid "option %s"
+#~ msgstr "opï¿½ï¿½o %s"
+
+#~ msgid " with arg %s"
+#~ msgstr "com argumento %s"
+
+#~ msgid "option d with value `%s'\n"
+#~ msgstr "opï¿½ï¿½o d com valor `%s'\n"
