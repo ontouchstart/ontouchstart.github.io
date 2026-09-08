@@ -1,5 +1,7 @@
-  │ Warning 
-  │ This program is experimental and its interface is subject to change.
+```bash
+Warning 
+This program is experimental and its interface is subject to change.
+```
 
 Name
 
@@ -67,32 +69,40 @@ Examples
 
   · Create a new flake:
     
-      │ # nix flake new hello
-      │ # cd hello
+```bash
+# nix flake new hello
+# cd hello
+```
 
   · Build the flake in the current directory:
     
-      │ # nix build
-      │ # ./result/bin/hello
-      │ Hello, world!
+```bash
+# nix build
+# ./result/bin/hello
+Hello, world!
+```
 
   · Run the flake in the current directory:
     
-      │ # nix run
-      │ Hello, world!
+```bash
+# nix run
+Hello, world!
+```
 
   · Start a development shell for hacking on this flake:
     
-      │ # nix develop
-      │ # unpackPhase
-      │ # cd hello-*
-      │ # configurePhase
-      │ # buildPhase
-      │ # ./hello
-      │ Hello, world!
-      │ # installPhase
-      │ # ../outputs/out/bin/hello
-      │ Hello, world!
+```bash
+# nix develop
+# unpackPhase
+# cd hello-*
+# configurePhase
+# buildPhase
+# ./hello
+Hello, world!
+# installPhase
+# ../outputs/out/bin/hello
+Hello, world!
+```
 
 Description
 
@@ -102,9 +112,11 @@ https://nixos.org/ or the Nix manual https://nix.dev/manual/nix/stable/.
 
 Installables
 
-  │ Warning 
-  │ Installables are part of the unstable nix-command experimental feature, and
-  │ subject to change without notice.
+```bash
+Warning 
+Installables are part of the unstable nix-command experimental feature, and
+subject to change without notice.
+```
 
 Many nix subcommands operate on one or more installables. These are command
 line arguments that represent something that can be realised in the Nix store.
@@ -127,9 +139,11 @@ directory.
 
 ### Flake output attribute
 
-  │ Warning 
-  │ Flake output attribute installables depend on both the flakes and 
-  │ nix-command experimental features, and subject to change without notice.
+```bash
+Warning 
+Flake output attribute installables depend on both the flakes and 
+nix-command experimental features, and subject to change without notice.
+```
 
 Example: nixpkgs#hello
 
@@ -157,11 +171,13 @@ interpreted as a path: or git+file: url in the following way:
     
     For example, if /foo/bar is a git repository with the following structure:
     
-      │ .
-      │ └── baz
-      │   ├── blah
-      │   │   └── file.txt
-      │   └── flake.nix
+```bash
+.
+└── baz
+  ├── blah
+  │   └── file.txt
+  └── flake.nix
+```
     
     Then /foo/bar/baz/blah will resolve to git+file:///foo/bar?dir=baz
 
@@ -244,47 +260,61 @@ outputs on which nix commands operate are determined as follows:
     For example, you can obtain the dev and static outputs of the glibc
     package:
     
-      │ # nix build 'nixpkgs#glibc^dev,static'
-      │ # ls ./result-dev/include/ ./result-static/lib/
-      │ …
+```bash
+# nix build 'nixpkgs#glibc^dev,static'
+# ls ./result-dev/include/ ./result-static/lib/
+…
+```
     
     and likewise, using a store path to a "drv" file to specify the derivation:
     
-      │ # nix build '/nix/store/fpq78s2h8ffh66v2iy0q1838mhff06y8-glibc-2.33-78.drv^dev,static'
-      │ …
+```bash
+# nix build '/nix/store/fpq78s2h8ffh66v2iy0q1838mhff06y8-glibc-2.33-78.drv^dev,static'
+…
+```
     
     For --expr and -f/--file, the derivation output is specified as part of the
     attribute path:
     
-      │ $ nix build -f '<nixpkgs>' 'glibc^dev,static'
-      │ $ nix build --impure --expr 'import <nixpkgs> { }' 'glibc^dev,static'
+```bash
+$ nix build -f '<nixpkgs>' 'glibc^dev,static'
+$ nix build --impure --expr 'import <nixpkgs> { }' 'glibc^dev,static'
+```
     
     This syntax is the same even if the actual attribute path is empty:
     
-      │ $ nix build --impure --expr 'let pkgs = import <nixpkgs> { }; in pkgs.glibc' '^dev,static'
+```bash
+$ nix build --impure --expr 'let pkgs = import <nixpkgs> { }; in pkgs.glibc' '^dev,static'
+```
 
   · You can also specify that all outputs should be used using the syntax 
     installable^*. For example, the following shows the size of all outputs of
     the glibc package in the binary cache:
     
-      │ # nix path-info --closure-size --eval-store auto --store https://cache.nixos.org 'nixpkgs#glibc^*'
-      │ /nix/store/i2fn2mjgihz960bwa7ldab5ra5fhxznh-glibc-2.33-123                 33208200
-      │ /nix/store/n2wnn3i47w6dbylh64hdjzgd5rrprdn8-glibc-2.33-123-bin             36142896
-      │ /nix/store/v7dyz518sbkzl8x2a1sgk1lwsfd3d6gm-glibc-2.33-123-debug          155787312
-      │ /nix/store/z4hv6ybyinqw9a3dwyl5k66a91aggylj-glibc-2.33-123-static          42488328
-      │ /nix/store/lrjirf0j1rjnvif6amyp9pfcqr2km385-glibc-2.33-123-dev             44200560
+```bash
+# nix path-info --closure-size --eval-store auto --store https://cache.nixos.org 'nixpkgs#glibc^*'
+/nix/store/i2fn2mjgihz960bwa7ldab5ra5fhxznh-glibc-2.33-123                 33208200
+/nix/store/n2wnn3i47w6dbylh64hdjzgd5rrprdn8-glibc-2.33-123-bin             36142896
+/nix/store/v7dyz518sbkzl8x2a1sgk1lwsfd3d6gm-glibc-2.33-123-debug          155787312
+/nix/store/z4hv6ybyinqw9a3dwyl5k66a91aggylj-glibc-2.33-123-static          42488328
+/nix/store/lrjirf0j1rjnvif6amyp9pfcqr2km385-glibc-2.33-123-dev             44200560
+```
     
     and likewise, using a store path to a "drv" file to specify the derivation:
     
-      │ # nix path-info --closure-size '/nix/store/fpq78s2h8ffh66v2iy0q1838mhff06y8-glibc-2.33-78.drv^*'
-      │ …
+```bash
+# nix path-info --closure-size '/nix/store/fpq78s2h8ffh66v2iy0q1838mhff06y8-glibc-2.33-78.drv^*'
+…
+```
 
   · If you didn't specify the desired outputs, but the derivation has an
     attribute meta.outputsToInstall, Nix will use those outputs. For example,
     since the package nixpkgs#libxml2 has this attribute:
     
-      │ # nix eval 'nixpkgs#libxml2.meta.outputsToInstall'
-      │ [ "bin" "man" ]
+```bash
+# nix eval 'nixpkgs#libxml2.meta.outputsToInstall'
+[ "bin" "man" ]
+```
     
     a command like nix shell nixpkgs#libxml2 will provide only those two
     outputs by default.
@@ -315,48 +345,56 @@ longer are parsed as n-1 literal backticks. A single space before the closing
 
 Examples:
 
-  │ #!/usr/bin/env nix
-  │ #! nix shell --file ``<nixpkgs>`` hello cowsay --command bash
-  │ 
-  │ hello | cowsay
+```bash
+#!/usr/bin/env nix
+#! nix shell --file ``<nixpkgs>`` hello cowsay --command bash
+
+hello | cowsay
+```
 
 or with flakes:
 
-  │ #!/usr/bin/env nix
-  │ #! nix shell nixpkgs#bash nixpkgs#hello nixpkgs#cowsay --command bash
-  │ 
-  │ hello | cowsay
+```bash
+#!/usr/bin/env nix
+#! nix shell nixpkgs#bash nixpkgs#hello nixpkgs#cowsay --command bash
+
+hello | cowsay
+```
 
 or with an expression:
 
-  │ #! /usr/bin/env nix
-  │ #! nix shell --impure --expr ``
-  │ #! nix with (import (builtins.getFlake "nixpkgs") {});
-  │ #! nix terraform.withPlugins (plugins: [ plugins.openstack ])
-  │ #! nix ``
-  │ #! nix --command bash
-  │ 
-  │ terraform "$@"
+```bash
+#! /usr/bin/env nix
+#! nix shell --impure --expr ``
+#! nix with (import (builtins.getFlake "nixpkgs") {});
+#! nix terraform.withPlugins (plugins: [ plugins.openstack ])
+#! nix ``
+#! nix --command bash
+
+terraform "$@"
+```
 
 or with cascading interpreters. Note that the #! nix lines don't need to follow
 after the first line, to accommodate other interpreters.
 
-  │ #!/usr/bin/env nix
-  │ //! ```cargo
-  │ //! [dependencies]
-  │ //! time = "0.1.25"
-  │ //! ```
-  │ /*
-  │ #!nix shell nixpkgs#rustc nixpkgs#rust-script nixpkgs#cargo --command rust-script
-  │ */
-  │ fn main() {
-  │     for argument in std::env::args().skip(1) {
-  │         println!("{}", argument);
-  │     };
-  │     println!("{}", std::env::var("HOME").expect(""));
-  │     println!("{}", time::now().rfc822z());
-  │ }
-  │ // vim: ft=rust
+```bash
+#!/usr/bin/env nix
+//! ```cargo
+//! [dependencies]
+//! time = "0.1.25"
+//! ```
+/*
+#!nix shell nixpkgs#rustc nixpkgs#rust-script nixpkgs#cargo --command rust-script
+*/
+fn main() {
+    for argument in std::env::args().skip(1) {
+        println!("{}", argument);
+    };
+    println!("{}", std::env::var("HOME").expect(""));
+    println!("{}", time::now().rfc822z());
+}
+// vim: ft=rust
+```
 
 Options
 
@@ -406,8 +444,11 @@ Options
     
     Show version information.
 
-  │ Note
-  │ 
-  │ See man nix.conf for overriding configuration settings with command line
-  │ flags.
+```bash
+Note
+
+See man nix.conf for overriding configuration settings with command line
+flags.
+```
+
 
