@@ -32,3 +32,5 @@ The plausibility is just an _illusion_.
 [Degenerate learning](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_08-33-09)
 
 [Why is Nix so complicated?](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_11-09-15)
+
+[How can we improve Nix in the age of LLM?](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_15-28-43)
