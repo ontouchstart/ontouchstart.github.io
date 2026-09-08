@@ -1,4 +1,8 @@
 services:
   dev:
-    build:
-      context: .
+    build: .
+  bun:
+    build: .
+    volumes:
+      - ./home/bun:/home
+    working_dir: /home
