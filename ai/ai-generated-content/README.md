@@ -28,3 +28,5 @@ The plausibility is just an _illusion_.
 [Who is Theodore Ziolkowski?](https://ontouchstart.github.io/duck.ai/2026/09/06/duck.ai_2026-09-06_09-57-11)
 
 [Fiction is harder than nonfiction](https://ontouchstart.github.io/duck.ai/2026/09/07/duck.ai_2026-09-07_08-21-59)
+
+[Why is Nix so complicated?](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_11-09-15)
