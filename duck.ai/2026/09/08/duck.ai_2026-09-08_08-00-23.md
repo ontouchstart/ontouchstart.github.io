@@ -1,10 +1,14 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+# Philosophy in the age of compute
+
+This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
 User prompt 1 of 7 - 9/8/2026, 7:44:30 AM:
 The Kingdome of Darknesse
 [Attached image 1]
+
+![](IMG_2764.jpeg)
 
 Gemma 4 31B:
 It looks like you're settling in for a cozy reading session with a latte and a pastry. Are you writing a story called "The Kingdome of Darknesse," or is that the title of the piece on your e-reader?
@@ -39,6 +43,8 @@ If the story is told through a first-person narrator who is uneducated, from a d
 User prompt 4 of 7 - 9/8/2026, 7:47:04 AM:
 
 [Attached image 1]
+
+![](IMG_2765.jpeg)
 
 Gemma 4 31B:
 Looking at the table of contents, this is a book about the **Enlightenment** and the philosophers of that era (such as Descartes, Hobbes, Spinoza, Locke, and Hume).
