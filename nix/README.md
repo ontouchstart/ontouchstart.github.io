@@ -192,4 +192,7 @@ clean:
 services:
   dev:
     build: .
+    volumes:
+      - ./home:/home
+    working_dir: /home
 ```
