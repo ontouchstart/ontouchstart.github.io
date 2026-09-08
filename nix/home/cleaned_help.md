@@ -15,66 +15,66 @@ where subcommand is one of the following:
 
 Help commands:
 
-  · nix help - show help about nix or a particular subcommand 
-  · nix help-stores - show help about store types and their settings 
+- nix help - show help about nix or a particular subcommand 
+- nix help-stores - show help about store types and their settings 
 
 Main commands:
 
-  · nix build - build a derivation or fetch a store path 
-  · nix develop - run a bash shell that provides the build environment of a
+- nix build - build a derivation or fetch a store path 
+- nix develop - run a bash shell that provides the build environment of a
     derivation 
-  · nix flake - manage Nix flakes 
-  · nix profile - manage Nix profiles 
-  · nix run - run a Nix application 
-  · nix search - search for packages 
+- nix flake - manage Nix flakes 
+- nix profile - manage Nix profiles 
+- nix run - run a Nix application 
+- nix search - search for packages 
 
 Main commands:
 
-  · nix repl - start an interactive environment for evaluating Nix expressions 
+- nix repl - start an interactive environment for evaluating Nix expressions 
 
 Infrequently used commands:
 
-  · nix bundle - bundle an application so that it works outside of the Nix
+- nix bundle - bundle an application so that it works outside of the Nix
     store 
-  · nix copy - copy paths between Nix stores 
-  · nix edit - open the Nix expression of a Nix package in $EDITOR 
-  · nix eval - evaluate a Nix expression 
-  · nix fmt - reformat your code in the standard style 
-  · nix formatter - build or run the formatter 
-  · nix log - show the build log of the specified packages or paths, if
+- nix copy - copy paths between Nix stores 
+- nix edit - open the Nix expression of a Nix package in $EDITOR 
+- nix eval - evaluate a Nix expression 
+- nix fmt - reformat your code in the standard style 
+- nix formatter - build or run the formatter 
+- nix log - show the build log of the specified packages or paths, if
     available 
-  · nix path-info - query information about store paths 
-  · nix registry - manage the flake registry 
-  · nix why-depends - show why a package has another package in its closure 
+- nix path-info - query information about store paths 
+- nix registry - manage the flake registry 
+- nix why-depends - show why a package has another package in its closure 
 
 Utility/scripting commands:
 
-  · nix config - manipulate the Nix configuration 
-  · nix daemon - daemon to perform store operations on behalf of non-root
+- nix config - manipulate the Nix configuration 
+- nix daemon - daemon to perform store operations on behalf of non-root
     clients 
-  · nix derivation - work with derivations 
-  · nix env - manipulate the process environment 
-  · nix hash - compute and convert cryptographic hashes 
-  · nix key - generate and convert Nix signing keys 
-  · nix nar - create or inspect NAR files 
-  · nix print-dev-env - print shell code that can be sourced by bash to
+- nix derivation - work with derivations 
+- nix env - manipulate the process environment 
+- nix hash - compute and convert cryptographic hashes 
+- nix key - generate and convert Nix signing keys 
+- nix nar - create or inspect NAR files 
+- nix print-dev-env - print shell code that can be sourced by bash to
     reproduce the build environment of a derivation 
-  · nix store - manipulate a Nix store 
+- nix store - manipulate a Nix store 
 
 Commands for upgrading or troubleshooting your Nix installation:
 
-  · nix upgrade-nix - upgrade Nix to the latest stable version 
+- nix upgrade-nix - upgrade Nix to the latest stable version 
 
 Examples
 
-  · Create a new flake:
+- Create a new flake:
     
 ```bash
 # nix flake new hello
 # cd hello
 ```
 
-  · Build the flake in the current directory:
+- Build the flake in the current directory:
     
 ```bash
 # nix build
@@ -82,14 +82,14 @@ Examples
 Hello, world!
 ```
 
-  · Run the flake in the current directory:
+- Run the flake in the current directory:
     
 ```bash
 # nix run
 Hello, world!
 ```
 
-  · Start a development shell for hacking on this flake:
+- Start a development shell for hacking on this flake:
     
 ```bash
 # nix develop
@@ -123,15 +123,15 @@ line arguments that represent something that can be realised in the Nix store.
 
 The following types of installable are supported by most commands:
 
-  · Flake output attribute (experimental) 
-      · This is the default 
-  · Store path 
-      · This is assumed if the argument is a Nix store path or a symlink to a
+- Flake output attribute (experimental) 
+- This is the default 
+- Store path 
+- This is assumed if the argument is a Nix store path or a symlink to a
         Nix store path 
-  · Nix file, optionally qualified by an attribute path 
-      · Specified with --file/-f 
-  · Nix expression, optionally qualified by an attribute path 
-      · Specified with --expr 
+- Nix file, optionally qualified by an attribute path 
+- Specified with --file/-f 
+- Nix expression, optionally qualified by an attribute path 
+- Specified with --expr 
 
 For most commands, if no installable is specified, . is assumed. That is, Nix
 will operate on the default flake output attribute of the flake in the current
@@ -157,7 +157,7 @@ path:.)
 When the flake reference is a raw path (a path without any URL scheme), it is
 interpreted as a path: or git+file: url in the following way:
 
-  · If the path is within a Git repository, then the url will be of the form 
+- If the path is within a Git repository, then the url will be of the form 
     git+file://[GIT_REPO_ROOT]?dir=[RELATIVE_FLAKE_DIR_PATH] where 
     GIT_REPO_ROOT is the path to the root of the git repository, and 
     RELATIVE_FLAKE_DIR_PATH is the path (relative to the directory root) of the
@@ -181,7 +181,7 @@ interpreted as a path: or git+file: url in the following way:
     
     Then /foo/bar/baz/blah will resolve to git+file:///foo/bar?dir=baz
 
-  · If the supplied path is not a git repository, then the url will have the
+- If the supplied path is not a git repository, then the url will have the
     form path:FLAKE_DIR_PATH where FLAKE_DIR_PATH is the closest parent of the
     supplied path that contains a flake.nix file (within the same file-system).
     If no such directory exists, then Nix will error-out.
@@ -252,7 +252,7 @@ path. For instance, a package can have a bin output that contains programs, and
 a dev output that provides development artifacts like C/C++ header files. The
 outputs on which nix commands operate are determined as follows:
 
-  · You can explicitly specify the desired outputs using the syntax installable^output1,...,outputN
+- You can explicitly specify the desired outputs using the syntax installable^output1,...,outputN
     — that is, a caret followed immediately by a comma-separated list of
     derivation outputs to select. For installables specified as Flake output
     attributes or Store paths, the output is specified in the same argument:
@@ -287,7 +287,7 @@ $ nix build --impure --expr 'import <nixpkgs> { }' 'glibc^dev,static'
 $ nix build --impure --expr 'let pkgs = import <nixpkgs> { }; in pkgs.glibc' '^dev,static'
 ```
 
-  · You can also specify that all outputs should be used using the syntax 
+- You can also specify that all outputs should be used using the syntax 
     installable^*. For example, the following shows the size of all outputs of
     the glibc package in the binary cache:
     
@@ -307,7 +307,7 @@ $ nix build --impure --expr 'let pkgs = import <nixpkgs> { }; in pkgs.glibc' '^d
 …
 ```
 
-  · If you didn't specify the desired outputs, but the derivation has an
+- If you didn't specify the desired outputs, but the derivation has an
     attribute meta.outputsToInstall, Nix will use those outputs. For example,
     since the package nixpkgs#libxml2 has this attribute:
     
@@ -322,7 +322,7 @@ $ nix build --impure --expr 'let pkgs = import <nixpkgs> { }; in pkgs.glibc' '^d
     Note that a store derivation doesn't have any attributes like meta, and
     thus this case doesn't apply to it.
 
-  · Otherwise, Nix will use all outputs of the derivation.
+- Otherwise, Nix will use all outputs of the derivation.
 
 Nix stores
 
@@ -400,47 +400,47 @@ Options
 
 ## Logging-related options
 
-  · --debug
+- --debug
     
     Set the logging verbosity level to 'debug'.
 
-  · --log-format format
+- --log-format format
     
     Set the format of log output; one of raw, internal-json, bar or 
     bar-with-logs.
 
-  · --print-build-logs / -L
+- --print-build-logs / -L
     
     Print full build logs on standard error.
 
-  · --quiet
+- --quiet
     
     Decrease the logging verbosity level.
 
-  · --verbose / -v
+- --verbose / -v
     
     Increase the logging verbosity level.
 
 ## Miscellaneous global options
 
-  · --help
+- --help
     
     Show usage information.
 
-  · --offline
+- --offline
     
     Disable substituters and consider all previously downloaded files
     up-to-date.
 
-  · --option name value
+- --option name value
     
     Set the Nix configuration setting name to value (overriding nix.conf).
 
-  · --refresh
+- --refresh
     
     Consider all previously downloaded files out-of-date.
 
-  · --version
+- --version
     
     Show version information.
 

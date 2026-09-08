@@ -3,7 +3,7 @@ const fs = require('fs');
 function cleanNixHelp() {
     const inputFile = 'help.md';
     const outputFile = 'cleaned_help.md';
-    let content = ''; // Declare outside the try block to make it accessible
+    let content = '';
 
     try {
         content = fs.readFileSync(inputFile, 'utf8');
@@ -17,11 +17,13 @@ function cleanNixHelp() {
     const oscHyperlink = /\x1B\]8;;.*?\x1B\\/g;
     const leadingBar = /^\s*│\s?/;
     const escapedUnderscore = /\\+_/g;
+    // New regex to match the custom dot bullets (·)
+    const customBullet = /^\s*·\s?/;
 
     // Step 1: Global removal of ANSI and Hyperlinks
     let cleanedText = content.replace(ansiEscape, '').replace(oscHyperlink, '');
 
-    // Step 2: Process lines for Markdown blocks
+    // Step 2: Process lines for Markdown blocks and Lists
     const lines = cleanedText.split(/\r?\n/);
     const finalLines = [];
     let isInBlock = false;
@@ -39,6 +41,12 @@ function cleanNixHelp() {
                 finalLines.push("```");
                 isInBlock = false;
             }
+            
+            // FIX: Convert custom middle-dot bullets (·) to standard Markdown bullets (-)
+            if (customBullet.test(line)) {
+                line = line.replace(customBullet, '- ');
+            }
+            
             finalLines.push(line);
         }
     }
