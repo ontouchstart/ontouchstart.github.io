@@ -3,38 +3,124 @@
 #1 DONE 0.0s
 
 #2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 203B done
+#2 transferring dockerfile: 262B done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/nixos/nix:2.35.2-arm64
-#3 DONE 3.3s
+#3 DONE 3.1s
 
 #4 [internal] load .dockerignore
 #4 transferring context: 2B done
 #4 DONE 0.0s
 
-#5 [1/3] FROM docker.io/nixos/nix:2.35.2-arm64@sha256:a326ac1ed46069ead5cdcba3a3a1e7255ebf72300c8319bf2c12cacfe9ab2787
-#5 resolve docker.io/nixos/nix:2.35.2-arm64@sha256:a326ac1ed46069ead5cdcba3a3a1e7255ebf72300c8319bf2c12cacfe9ab2787 0.0s done
+#5 [1/4] FROM docker.io/nixos/nix:2.35.2-arm64@sha256:a326ac1ed46069ead5cdcba3a3a1e7255ebf72300c8319bf2c12cacfe9ab2787
+#5 resolve docker.io/nixos/nix:2.35.2-arm64@sha256:a326ac1ed46069ead5cdcba3a3a1e7255ebf72300c8319bf2c12cacfe9ab2787 done
 #5 CACHED
 
-#6 [2/3] RUN nix-channel --update
-#6 1.503 unpacking 1 channels...
-#6 DONE 12.3s
+#6 [2/4] RUN nix-channel --update
+#6 60.54 unpacking 1 channels...
+#6 DONE 71.6s
 
-#7 [3/3] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
+#7 [3/4] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
 #7 DONE 0.5s
 
-#8 exporting to image
-#8 exporting layers
-#8 exporting layers 7.3s done
-#8 exporting manifest sha256:f95fef90bbecf19de01709487c68ef9276f66d2e64d1d9e6ea600b68927d67b5 done
-#8 exporting config sha256:6dc56a1d0198833acff0c9ab7c0968c011038d80e0ec29d2599ca90d663d946a done
-#8 exporting attestation manifest sha256:5ff8501c46c93da05452f5c10ae3933c4305fc1a975b8947cfcf8160f3573ee3 done
-#8 exporting manifest list sha256:32ac77b5245fcfede245439d33789a6feeb1be97607dc5a91838bd92becd4498 done
-#8 naming to docker.io/library/nix-dev:latest done
-#8 unpacking to docker.io/library/nix-dev:latest
-#8 unpacking to docker.io/library/nix-dev:latest 8.2s done
-#8 DONE 15.7s
+#8 [4/4] RUN nix-env -iA nixpkgs.vim nixpkgs.gnumake nixpkgs.rustup
+#8 0.916 installing 'vim-9.2.0782'
+#8 0.916 installing 'gnumake-4.4.1'
+#8 0.916 installing 'rustup-1.29.0'
+#8 1.694 these 39 paths will be fetched (46.2 MiB download, 163.2 MiB unpacked):
+#8 1.694   /nix/store/d1yiaq7bi8vrypdz8zx89lvlvc8w7m9b-acl-2.4.0
+#8 1.694   /nix/store/jbj54csimxfzdysyikvyyakkiazahmy7-attr-2.6.0
+#8 1.694   /nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15
+#8 1.694   /nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15
+#8 1.694   /nix/store/ix8ij52ljmbsk8p96k265flzp3lzadwa-brotli-1.2.0-lib
+#8 1.694   /nix/store/85k56vdxxb75xmgvxj4zhaawyafkchwh-coreutils-9.11
+#8 1.694   /nix/store/4m2zy0glpqrj0pl4hmycid216l7racp7-curl-8.21.0
+#8 1.694   /nix/store/y4iw5yjqj2l0wfx4myscs5apd7c9xs3x-expand-response-params
+#8 1.694   /nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1
+#8 1.694   /nix/store/60afk5jlqmx8xh5pr76j7j8vdrhwzrmv-gcc-15.3.0-lib
+#8 1.694   /nix/store/w7dbq2jaa5r43k751jdfkfnwbas10vr8-gcc-15.3.0-libgcc
+#8 1.694   /nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84
+#8 1.694   /nix/store/35n0fkfxgps5l598q0ffim7531icsqr5-gmp-with-cxx-6.3.0
+#8 1.694   /nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1
+#8 1.694   /nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug
+#8 1.694   /nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc
+#8 1.694   /nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info
+#8 1.694   /nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man
+#8 1.694   /nix/store/3q2iy0705nk2w87f2kji7l3vzgv8992f-keyutils-1.6.3-lib
+#8 1.694   /nix/store/bh63g8kcpm12qxmm5l3jf3c62vbnfhhj-krb5-1.22.2-lib
+#8 1.694   /nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8
+#8 1.694   /nix/store/zg9sk68biw0j0mhzd427hbk0p5w3vrf6-libpsl-0.21.5
+#8 1.694   /nix/store/xr4l4bakpsry84bh0gi0v14c2bx8p3j1-libssh2-1.11.1
+#8 1.694   /nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2
+#8 1.694   /nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz
+#8 1.694   /nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6
+#8 1.694   /nix/store/iggjz5cp09f6ajzjpxsrif0ci4iwqd4k-nghttp2-1.70.0-lib
+#8 1.694   /nix/store/ipwhy6qh7p125nn2q0ww04afn4bgg449-nghttp3-1.16.0
+#8 1.694   /nix/store/66hkvrwyflx31i7r2dwfswc3dj4az658-ngtcp2-1.23.0
+#8 1.694   /nix/store/p1vfajlmwzkk8hrbdmb21gdp95kvds7r-openssl-3.6.3
+#8 1.694   /nix/store/0ilfyzqa907lj2bjg42qc30qr45nhwcn-patchelf-0.15.2
+#8 1.694   /nix/store/ah7c4r1q57f3n7z942klq2lvsc67rvdq-publicsuffix-list-0-unstable-2026-08-14
+#8 1.694   /nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3
+#8 1.694   /nix/store/iwq43bwclkay14x5x5bfj955ffphaqff-rustup-1.29.0
+#8 1.694   /nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782
+#8 1.694   /nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd
+#8 1.694   /nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc
+#8 1.694   /nix/store/4my1cjkysivszznv4342x12r3z2pwdpl-zlib-1.3.2
+#8 1.694   /nix/store/n61nc0cr8qmrb4923k82a26qvixpk0b8-zstd-1.5.7
+#8 1.695 copying path '/nix/store/r1a35igf2l6b6r02qvpiayfsw3nssi2w-gnumake-4.4.1-doc' from 'https://cache.nixos.org'...
+#8 1.696 copying path '/nix/store/mvl7q4ww27zhlcbgq4fbn68h3ms76isa-gnumake-4.4.1-info' from 'https://cache.nixos.org'...
+#8 1.696 copying path '/nix/store/aqbbbk5k348k0g1nfv15153rvdmml3dh-gnumake-4.4.1-man' from 'https://cache.nixos.org'...
+#8 1.697 copying path '/nix/store/0avnvyc7pkcr4pjqws7hwpy87m6wlnjc-make-4.4.1.tar.gz' from 'https://cache.nixos.org'...
+#8 1.698 copying path '/nix/store/w7dbq2jaa5r43k751jdfkfnwbas10vr8-gcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#8 1.698 copying path '/nix/store/h46id9241lp1g4zprx23fg6489x14lqb-xgcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#8 1.698 copying path '/nix/store/q7mfklgx6r8bm2ybkv0rj3vsgl71b1hf-libunistring-1.4.2' from 'https://cache.nixos.org'...
+#8 1.698 copying path '/nix/store/ah7c4r1q57f3n7z942klq2lvsc67rvdq-publicsuffix-list-0-unstable-2026-08-14' from 'https://cache.nixos.org'...
+#8 3.983 copying path '/nix/store/lq5dy7clx12d63rp6yz8zwwpk8qdf736-libidn2-2.3.8' from 'https://cache.nixos.org'...
+#8 6.694 copying path '/nix/store/6wjykzqf6w3kzfhjc4z7dcd84j0dzsgm-glibc-2.42-84' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/d1yiaq7bi8vrypdz8zx89lvlvc8w7m9b-acl-2.4.0' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/jbj54csimxfzdysyikvyyakkiazahmy7-attr-2.6.0' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/z3x2qxagi8wqfx9n59frhdyml7njr9z2-bash-5.3p15' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/ix8ij52ljmbsk8p96k265flzp3lzadwa-brotli-1.2.0-lib' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/nvqk2byynxb9gqnbrp49cgv2ym7ridd5-gawk-5.4.1' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/y4iw5yjqj2l0wfx4myscs5apd7c9xs3x-expand-response-params' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/60afk5jlqmx8xh5pr76j7j8vdrhwzrmv-gcc-15.3.0-lib' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1' from 'https://cache.nixos.org'...
+#8 22.57 copying path '/nix/store/3q2iy0705nk2w87f2kji7l3vzgv8992f-keyutils-1.6.3-lib' from 'https://cache.nixos.org'...
+#8 22.58 copying path '/nix/store/zg9sk68biw0j0mhzd427hbk0p5w3vrf6-libpsl-0.21.5' from 'https://cache.nixos.org'...
+#8 22.58 copying path '/nix/store/s2a5cmk71qpzk4lj4dcfzcz1qk62fnkq-ncurses-6.6' from 'https://cache.nixos.org'...
+#8 22.58 copying path '/nix/store/iggjz5cp09f6ajzjpxsrif0ci4iwqd4k-nghttp2-1.70.0-lib' from 'https://cache.nixos.org'...
+#8 22.58 copying path '/nix/store/ipwhy6qh7p125nn2q0ww04afn4bgg449-nghttp3-1.16.0' from 'https://cache.nixos.org'...
+#8 22.58 copying path '/nix/store/89fnxqb797sy5plwix903gd79936p11k-vim-9.2.0782-xxd' from 'https://cache.nixos.org'...
+#8 22.58 copying path '/nix/store/p1vfajlmwzkk8hrbdmb21gdp95kvds7r-openssl-3.6.3' from 'https://cache.nixos.org'...
+#8 22.58 copying path '/nix/store/4my1cjkysivszznv4342x12r3z2pwdpl-zlib-1.3.2' from 'https://cache.nixos.org'...
+#8 30.16 copying path '/nix/store/6ay3jj11iqkbab7309vssz67r6mr0c0p-gnumake-4.4.1-debug' from 'https://cache.nixos.org'...
+#8 31.43 copying path '/nix/store/q8y3nbbg1qa25x6mlaww9nkmqji76d7l-readline-8.3p3' from 'https://cache.nixos.org'...
+#8 35.83 copying path '/nix/store/2v6yfrj5kcq2f5vqw63cr6c3d6i898qc-bash-interactive-5.3p15' from 'https://cache.nixos.org'...
+#8 38.19 copying path '/nix/store/35n0fkfxgps5l598q0ffim7531icsqr5-gmp-with-cxx-6.3.0' from 'https://cache.nixos.org'...
+#8 38.19 copying path '/nix/store/0ilfyzqa907lj2bjg42qc30qr45nhwcn-patchelf-0.15.2' from 'https://cache.nixos.org'...
+#8 38.19 copying path '/nix/store/n61nc0cr8qmrb4923k82a26qvixpk0b8-zstd-1.5.7' from 'https://cache.nixos.org'...
+#8 43.12 copying path '/nix/store/85k56vdxxb75xmgvxj4zhaawyafkchwh-coreutils-9.11' from 'https://cache.nixos.org'...
+#8 43.12 copying path '/nix/store/xr4l4bakpsry84bh0gi0v14c2bx8p3j1-libssh2-1.11.1' from 'https://cache.nixos.org'...
+#8 43.12 copying path '/nix/store/66hkvrwyflx31i7r2dwfswc3dj4az658-ngtcp2-1.23.0' from 'https://cache.nixos.org'...
+#8 43.12 copying path '/nix/store/bh63g8kcpm12qxmm5l3jf3c62vbnfhhj-krb5-1.22.2-lib' from 'https://cache.nixos.org'...
+#8 44.50 copying path '/nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782' from 'https://cache.nixos.org'...
+#8 48.55 copying path '/nix/store/4m2zy0glpqrj0pl4hmycid216l7racp7-curl-8.21.0' from 'https://cache.nixos.org'...
+#8 53.32 copying path '/nix/store/iwq43bwclkay14x5x5bfj955ffphaqff-rustup-1.29.0' from 'https://cache.nixos.org'...
+#8 77.47 building '/nix/store/3z63l256bp7f10bkpkjh39w6hpv12k7h-user-environment.drv'...
+#8 DONE 77.7s
 
-#9 resolving provenance for metadata file
-#9 DONE 0.0s
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 7.2s done
+#9 exporting manifest sha256:a3304fd3a33d523206a42251397d813c83c9c898a30438d316e01825d45fdeea done
+#9 exporting config sha256:4ee796a24d13a8a645f430d993fbd692e76fb847088e5bb47b9894d5529dc082 done
+#9 exporting attestation manifest sha256:7ad91ddd7c63a868e6dae262048038b9ad92e49e0ceb158109296fa26d54f35f done
+#9 exporting manifest list sha256:19d8967c570fed853b0338b6c5c516f1a8df905fd7b05efbeb06d6451a6c3ca2 done
+#9 naming to docker.io/library/nix-dev:latest done
+#9 unpacking to docker.io/library/nix-dev:latest
+#9 unpacking to docker.io/library/nix-dev:latest 9.4s done
+#9 DONE 16.7s
+
+#10 resolving provenance for metadata file
+#10 DONE 0.0s

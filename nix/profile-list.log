@@ -16,6 +16,9 @@ Store paths:        /nix/store/c69q6gbxdzcpybzzdhpw28ppkfapsdsx-git-minimal-2.54
 Name:               [1mgnugrep[0m
 Store paths:        /nix/store/srk76h64a1ja4z7njh5lxcds7m9hnc7y-gnugrep-3.12
 
+Name:               [1mgnumake[0m
+Store paths:        /nix/store/clk5g7jn42zc3ydwz2xrv50wjvswh2j7-gnumake-4.4.1
+
 Name:               [1mgnutar[0m
 Store paths:        /nix/store/r4c3r48fn312jmjls34nwz41b9y4xsvs-gnutar-1.35
 
@@ -39,6 +42,12 @@ Store paths:        /nix/store/07xdbx75iszxrf8p2fshxld6xgmmp3wp-nss-cacert-3.123
 
 Name:               [1mopenssh[0m
 Store paths:        /nix/store/mk6ngc1zz5by9qycq2g187k324s0q3vb-openssh-10.3p1
+
+Name:               [1mrustup[0m
+Store paths:        /nix/store/iwq43bwclkay14x5x5bfj955ffphaqff-rustup-1.29.0
+
+Name:               [1mvim[0m
+Store paths:        /nix/store/z3g1dc5ldspc5ychmxcv7cnprfqza8p6-vim-9.2.0782
 
 Name:               [1mwget[0m
 Store paths:        /nix/store/slvgbnffjqr2sd5pj9wbd6xg5kcc6dcd-wget-1.25.0
