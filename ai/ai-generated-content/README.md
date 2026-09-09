@@ -38,3 +38,5 @@ The plausibility is just an _illusion_.
 [How can we improve Nix in the age of LLM?](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_15-28-43)
 
 [Intensional vs extensional](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_21-18-46)
+
+[Nix in Data-Centric CI](https://ontouchstart.github.io/duck.ai/2026/09/09/duck.ai_2026-09-09_07-58-54)
