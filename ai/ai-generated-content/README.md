@@ -29,6 +29,8 @@ The plausibility is just an _illusion_.
 
 [Fiction is harder than nonfiction](https://ontouchstart.github.io/duck.ai/2026/09/07/duck.ai_2026-09-07_08-21-59)
 
+[Philosophy in the age of compute](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_08-00-23)
+
 [Degenerate learning](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_08-33-09)
 
 [Why is Nix so complicated?](https://ontouchstart.github.io/duck.ai/2026/09/08/duck.ai_2026-09-08_11-09-15)
