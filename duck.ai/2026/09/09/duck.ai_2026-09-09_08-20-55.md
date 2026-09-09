@@ -8,6 +8,10 @@ User prompt 1 of 5 - 9/9/2026, 7:53:09 AM:
 
 [Attached image 1][Attached image 2]
 
+![](IMG_2778.jpeg)
+
+![](IMG_2779.jpeg)
+
 Gemma 4 31B:
 The text on the screen discusses the application of the Nix system to continuous integration (CI) and release management. It explains that a build farm can be used to automate the building and testing of software revisions (CI) and the subsequent production of downloadable components for users (release management). The "Motivation" section describes CI as a software engineering practice where a fully automated build system continuously produces the most recent version of the software, triggering a build and generating a report every time a developer commits a change to the version management system.
 
