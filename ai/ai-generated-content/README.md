@@ -42,3 +42,5 @@ The plausibility is just an _illusion_.
 [Nix in Data-Centric CI](https://ontouchstart.github.io/duck.ai/2026/09/09/duck.ai_2026-09-09_07-58-54)
 
 [Scaling curve of resource utilization](https://ontouchstart.github.io/duck.ai/2026/09/09/duck.ai_2026-09-09_08-20-55)
+
+[Skill: Nix Flake Migration Engineer](https://ontouchstart.github.io/duck.ai/2026/09/09/duck.ai_2026-09-09_12-08-11)
