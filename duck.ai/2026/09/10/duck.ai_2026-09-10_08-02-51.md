@@ -111,3 +111,5 @@ The Greeks believed that these two were interdependent:
 2.  **Praxis tests Theoria:** Action provides the arena where theoretical ideas are tested against reality.
 
 In the context of your reading on the Pythagoreans, the tension is clear: the "practically minded" Greeks lived in the realm of **praxis** (using math to measure land), while the Pythagoreans lived in the realm of **theoria** (seeing math as a window into the divine order of the universe).
+
+[🤔](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_08-38-19)
