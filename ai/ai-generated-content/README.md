@@ -46,3 +46,5 @@ The plausibility is just an _illusion_.
 [Skill: Nix Flake Migration Engineer](https://ontouchstart.github.io/duck.ai/2026/09/09/duck.ai_2026-09-09_12-08-11)
 
 [θεωρία and πρᾶξις](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_08-02-51)
+
+[Can a "Less Powerful" Model Analyze a "Superior" One?](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_13-14-32)
