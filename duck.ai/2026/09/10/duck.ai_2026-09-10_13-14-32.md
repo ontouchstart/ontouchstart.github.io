@@ -1,10 +1,14 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+﻿# Operational Power $\neq$ Analytical Power
+
+This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
 User prompt 1 of 11 - 9/10/2026, 1:01:17 PM:
 
 [Attached image 1]
+
+![](IMG_2805.png)
 
 Gemma 4 31B:
 This image is a screenshot of a YouTube video from the Dwarkesh Podcast featuring Ajeya Cotra. The video is titled "Ajeya Cotra – 'This might be the clearest warning shot we ever get'".
