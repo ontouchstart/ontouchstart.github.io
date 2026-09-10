@@ -48,3 +48,5 @@ The plausibility is just an _illusion_.
 [θεωρία and πρᾶξις](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_08-02-51)
 
 [Can a "Less Powerful" Model Analyze a "Superior" One?](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_13-14-32)
+
+[Theoria vs. Praxis: The Role of Contemplation in the Age of AGI](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_15-05-16)
