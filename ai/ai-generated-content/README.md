@@ -57,4 +57,6 @@ The plausibility is just an _illusion_.
 
 [Perfectly Polished, Completely Empty 光鲜之壳，空洞之芯](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_16-55-37)
 
+[Baader–Meinhof phenomenon](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_17-19-15)
+
 [The Spleen Algorithm | L'Algorithme du Spleen | 忧郁算法](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_17-40-57)
