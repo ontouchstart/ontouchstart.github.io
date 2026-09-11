@@ -51,6 +51,10 @@ The plausibility is just an _illusion_.
 
 [The Architecture of Insight: Optimizing AI for Theory over Action](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_15-05-16)
 
+[Duck](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_10-05-56)
+
+[The Watchman and the Actor: Synthesis, Semantics, and the Architecture of Insight](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_10-33-07)
+
 [Perfectly Polished, Completely Empty 光鲜之壳，空洞之芯](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_16-55-37)
 
 [The Spleen Algorithm | L'Algorithme du Spleen | 忧郁算法](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_17-40-57)
