@@ -50,3 +50,5 @@ The plausibility is just an _illusion_.
 [Can a "Less Powerful" Model Analyze a "Superior" One?](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_13-14-32)
 
 [The Architecture of Insight: Optimizing AI for Theory over Action](https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_15-05-16)
+
+[Perfectly Polished, Completely Empty 光鲜之壳，空洞之芯](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_16-55-37)
