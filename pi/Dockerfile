@@ -1,5 +1,5 @@
 FROM node
-RUN git clone -b v0.84.3 https://github.com/earendil-works/pi
+RUN git clone -b v0.85.1 https://github.com/earendil-works/pi
 WORKDIR /pi
 RUN npm install
 RUN npm run build
