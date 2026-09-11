@@ -1,10 +1,14 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+# Duck 
+
+This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
 User prompt 1 of 15 - 9/11/2026, 9:57:13 AM:
 Confirm the source is from this essay: https://ontouchstart.github.io/duck.ai/2026/09/10/duck.ai_2026-09-10_15-05-16
 [Attached image 1]
+
+![](IMG_2820.png)
 
 Gemma 4 31B:
 No, the source is not from that essay. 
