@@ -1,0 +1,1 @@
+git clone https://github.com/oven-sh/bun.git && cd bun && git apply ../flake.patch && nix flake update
