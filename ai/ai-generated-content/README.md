@@ -62,3 +62,5 @@ The plausibility is just an _illusion_.
 [The Spleen Algorithm | L'Algorithme du Spleen | 忧郁算法](https://ontouchstart.github.io/duck.ai/2026/09/11/duck.ai_2026-09-11_17-40-57)
 
 [The Feedback Loop: On AI and the Machinery of Hype](https://ontouchstart.github.io/duck.ai/2026/09/12/duck.ai_2026-09-12_07-52-38)
+
+[The Sieve of Substance](https://ontouchstart.github.io/duck.ai/2026/09/12/duck.ai_2026-09-12_13-06-46)
