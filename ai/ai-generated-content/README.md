@@ -66,3 +66,5 @@ This is a hand edited partial list of AI generated content (data) for me to read
 [The Feedback Loop: On AI and the Machinery of Hype](https://ontouchstart.github.io/duck.ai/2026/09/12/duck.ai_2026-09-12_07-52-38)
 
 [The Sieve of Substance](https://ontouchstart.github.io/duck.ai/2026/09/12/duck.ai_2026-09-12_13-06-46)
+
+[Dynamical Stability and Trajectory Divergence in Coupled Reward-Based Potential Fields](https://ontouchstart.github.io/duck.ai/2026/09/13/duck.ai_2026-09-13_15-39-26)
