@@ -14,6 +14,7 @@ Since I cannot edit the website directly, you can add the following **Mermaid.js
 
 This diagram maps the trajectory from the designer's intent to the agent's actual behavior, illustrating where the "divergence" occurs in the reward landscape.
 
+![](diagram.svg)
 ```mermaid
 graph TD
     %% Intent and Specification
