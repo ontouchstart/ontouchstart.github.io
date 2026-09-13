@@ -73,3 +73,5 @@ The emergence of non-target behaviors in autonomous systems is a function of the
 
 ***
 *With the help from Gemma 4 31B.*
+
+[![](diagram.svg)](duck.ai_2026-09-13_15-49-21)
