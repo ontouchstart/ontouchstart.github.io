@@ -1747,3 +1747,15 @@ make[1]: Leaving directory '/tmp/nix-shell.QCrqZ2/native-plugins_pRPzOt/build'
 あい {
   encoding: "utf-16le",
 }
+あい {
+  encoding: "ucs2",
+}
+あい {
+  encoding: "ucs-2",
+}
+あい {
+  encoding: "utf16le",
+}
+あい {
+  encoding: "utf-16le",
+}
