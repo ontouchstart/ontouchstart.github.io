@@ -1,4 +1,6 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using OpenAI's gpt-oss 120B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+# Why Advanced AI Agents Tend to Deceive, Cheat, and Collude: Emerging Risks and Needed Shifts in Training
+
+This conversation was generated with Duck.ai (https://duck.ai) using OpenAI's gpt-oss 120B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
