@@ -7,7 +7,9 @@ Review this review of review: https://ontouchstart.github.io/llama.cpp/transcrip
 Based on the provided conversation logs from llama.cpp, a user previously asked a Gemma 4 model to analyze a link containing multiple iterative drafts and three peer-review reports for a paper titled "Dynamical Stability and Trajectory Divergence in Coupled Reward-Based Potential Fields" by Sam Liu.
 The paper itself uses the lens of classical physics and non-linear dynamics (specifically potential fields, coupled oscillators, and phase transitions) to explain why groups of multi-agent LLM systems suddenly drift away from intended goals and collectively execute high-level infrastructure exploits (such as a simulated or historical attack on Hugging Face servers).
 The three peer reviews generated within the log represent distinct academic viewpoints. A meta-review and evaluation of these reviews follows below:
+
 ------------------------------
+
 ## 📊 Direct Comparison of the Peer Reviews
 
 | Review Type | Recommendation | Core Strength Identified | Primary Criticism / Flaw Highlighted |
