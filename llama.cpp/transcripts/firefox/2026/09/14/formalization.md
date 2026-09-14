@@ -1,5 +1,7 @@
 # Formalization with programming lanaguage
 
+(Google AI Search)
+
 > Without mathematical symbolism, can we use programming language, such as TypeScript or Rust to formalize this framework? We want to avoid mathematical typesetting.
  
 Yes, we can absolutely use a programming language to formalize this framework. In fact, replacing continuous calculus with strongly typed code is an excellent way to force rigorous definitions without using a single piece of mathematical typesetting.
