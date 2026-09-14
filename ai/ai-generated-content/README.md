@@ -70,3 +70,5 @@ This is a hand edited partial list of AI generated content (data) for me to read
 [Dynamical Stability and Trajectory Divergence in Coupled Reward-Based Potential Fields](https://ontouchstart.github.io/duck.ai/2026/09/13/duck.ai_2026-09-13_15-39-26)
 
 [基於目標函數拓撲結構的 AI 狀態演化動力學模型](https://ontouchstart.github.io/duck.ai/2026/09/13/duck.ai_2026-09-13_21-18-19)
+
+[AI 駭入沙箱後，人類在吵什麼？](https://ontouchstart.github.io/duck.ai/2026/09/13/duck.ai_2026-09-13_22-05-47)
