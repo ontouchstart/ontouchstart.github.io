@@ -1,0 +1,165 @@
+ls -lR src
+total 0
+drwxr-xr-x  8 sam  staff  256 Sep 15 17:22 hi
+drwxr-xr-x  9 sam  staff  288 Sep 15 17:22 nix-docker-say-hi
+drwxr-xr-x  8 sam  staff  256 Sep 15 17:22 say-hi
+drwxr-xr-x  7 sam  staff  224 Sep 15 17:22 scratch
+
+src/hi:
+total 0
+drwxr-xr-x  5 sam  staff  160 Sep 15 17:22 dev
+drwxr-xr-x  6 sam  staff  192 Sep 15 17:22 etc
+drwxr-xr-x  2 sam  staff   64 Sep 15 10:16 hi
+drwxr-xr-x  2 sam  staff   64 Sep 15 17:22 proc
+drwxr-xr-x  2 sam  staff   64 Sep 15 17:22 sys
+
+src/hi/dev:
+total 0
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 console
+drwxr-xr-x  2 sam  staff  64 Sep 15 17:22 pts
+drwxr-xr-x  2 sam  staff  64 Sep 15 17:22 shm
+
+src/hi/dev/pts:
+total 0
+
+src/hi/dev/shm:
+total 0
+
+src/hi/etc:
+total 0
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 hostname
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 hosts
+lrwxr-xr-x  1 sam  staff  12 Sep 15 17:22 mtab -> /proc/mounts
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 resolv.conf
+
+src/hi/hi:
+total 0
+
+src/hi/proc:
+total 0
+
+src/hi/sys:
+total 0
+
+src/nix-docker-say-hi:
+total 0
+dr-xr-xr-x  3 sam  staff   96 Dec 31  1979 bin
+drwxr-xr-x  5 sam  staff  160 Sep 15 17:22 dev
+drwxr-xr-x  6 sam  staff  192 Sep 15 17:22 etc
+dr-xr-xr-x  3 sam  staff   96 Dec 31  1979 nix
+drwxr-xr-x  2 sam  staff   64 Sep 15 17:22 proc
+drwxr-xr-x  2 sam  staff   64 Sep 15 17:22 sys
+
+src/nix-docker-say-hi/bin:
+total 3272
+-r-xr-xr-x  1 sam  staff  1671640 Dec 31  1979 hi
+
+src/nix-docker-say-hi/dev:
+total 0
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 console
+drwxr-xr-x  2 sam  staff  64 Sep 15 17:22 pts
+drwxr-xr-x  2 sam  staff  64 Sep 15 17:22 shm
+
+src/nix-docker-say-hi/dev/pts:
+total 0
+
+src/nix-docker-say-hi/dev/shm:
+total 0
+
+src/nix-docker-say-hi/etc:
+total 0
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 hostname
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 hosts
+lrwxr-xr-x  1 sam  staff  12 Sep 15 17:22 mtab -> /proc/mounts
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 resolv.conf
+
+src/nix-docker-say-hi/nix:
+total 0
+dr-xr-xr-x  3 sam  staff  96 Dec 31  1979 store
+
+src/nix-docker-say-hi/nix/store:
+total 0
+dr-xr-xr-x  3 sam  staff  96 Dec 31  1979 h7g7lzhklnng2vb03zlgj7wbycsp31zs-hi-0.1.0
+
+src/nix-docker-say-hi/nix/store/h7g7lzhklnng2vb03zlgj7wbycsp31zs-hi-0.1.0:
+total 0
+dr-xr-xr-x  3 sam  staff  96 Dec 31  1979 bin
+
+src/nix-docker-say-hi/nix/store/h7g7lzhklnng2vb03zlgj7wbycsp31zs-hi-0.1.0/bin:
+total 3272
+-r-xr-xr-x  1 sam  staff  1671640 Dec 31  1979 hi
+
+src/nix-docker-say-hi/proc:
+total 0
+
+src/nix-docker-say-hi/sys:
+total 0
+
+src/say-hi:
+total 3400
+drwxr-xr-x  5 sam  staff      160 Sep 15 17:22 dev
+drwxr-xr-x  6 sam  staff      192 Sep 15 17:22 etc
+-r-xr-xr-x  1 sam  staff  1737352 Dec 31  1969 hi
+drwxr-xr-x  2 sam  staff       64 Sep 15 17:22 proc
+drwxr-xr-x  2 sam  staff       64 Sep 15 17:22 sys
+
+src/say-hi/dev:
+total 0
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 console
+drwxr-xr-x  2 sam  staff  64 Sep 15 17:22 pts
+drwxr-xr-x  2 sam  staff  64 Sep 15 17:22 shm
+
+src/say-hi/dev/pts:
+total 0
+
+src/say-hi/dev/shm:
+total 0
+
+src/say-hi/etc:
+total 0
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 hostname
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 hosts
+lrwxr-xr-x  1 sam  staff  12 Sep 15 17:22 mtab -> /proc/mounts
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 resolv.conf
+
+src/say-hi/proc:
+total 0
+
+src/say-hi/sys:
+total 0
+
+src/scratch:
+total 0
+drwxr-xr-x  5 sam  staff  160 Sep 15 17:22 dev
+drwxr-xr-x  6 sam  staff  192 Sep 15 17:22 etc
+drwxr-xr-x  2 sam  staff   64 Sep 15 17:22 proc
+drwxr-xr-x  2 sam  staff   64 Sep 15 17:22 sys
+
+src/scratch/dev:
+total 0
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 console
+drwxr-xr-x  2 sam  staff  64 Sep 15 17:22 pts
+drwxr-xr-x  2 sam  staff  64 Sep 15 17:22 shm
+
+src/scratch/dev/pts:
+total 0
+
+src/scratch/dev/shm:
+total 0
+
+src/scratch/etc:
+total 0
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 hostname
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 hosts
+lrwxr-xr-x  1 sam  staff  12 Sep 15 17:22 mtab -> /proc/mounts
+-rwxr-xr-x  1 sam  staff   0 Sep 15 17:22 resolv.conf
+
+src/scratch/proc:
+total 0
+
+src/scratch/sys:
+total 0
+docker compose run --rm --remove-orphans say-hi
+hi
+docker run --rm nix-docker-say-hi
+hi
