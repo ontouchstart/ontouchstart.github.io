@@ -1,0 +1,5 @@
+services:
+  scratch:
+    build: ./scratch
+  hi: 
+    build: ./hi
