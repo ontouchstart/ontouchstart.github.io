@@ -1,10 +1,14 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+# From Notions to Networks: The Architecture of Understanding
+
+This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
 User prompt 1 of 11 - 9/15/2026, 8:02:30 AM:
 
 [Attached image 1]
+
+![](IMG_2850.jpeg)
 
 Gemma 4 31B:
 An e-reader, a cup of coffee with latte art, and a small pumpkin are arranged on a light-colored wooden surface.
@@ -22,6 +26,8 @@ The text on the e-reader is too blurry to be read accurately. It appears to be a
 User prompt 3 of 11 - 9/15/2026, 8:03:39 AM:
 
 [Attached image 1]
+
+![](IMG_2851.jpeg)
 
 Gemma 4 31B:
 The text in the image reads:
