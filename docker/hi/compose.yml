@@ -5,3 +5,10 @@ services:
     build: ./hi
   say-hi:
     build: ./say-hi
+  build-nix-docker-say-hi:
+    build: ./build-nix-docker-say-hi
+    volumes:
+      - ./build-nix-docker-say-hi/app:/app
+      - ./build-nix-docker-say-hi/output:/output
+    command: ["sh", "-c", "nix build .#container&&cp -L result /output/image.tar.gz&&rm result"]
+
