@@ -3,3 +3,5 @@ services:
     build: ./scratch
   hi: 
     build: ./hi
+  say-hi:
+    build: ./say-hi
