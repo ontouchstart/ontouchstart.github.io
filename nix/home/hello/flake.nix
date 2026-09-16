@@ -5,11 +5,15 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = inputs: {
-    packages = builtins.mapAttrs (system: pkgs: {
-      hello = pkgs.hello;
-
-      default = inputs.self.packages.${system}.hello;
-    }) inputs.nixpkgs.legacyPackages;
-  };
+  outputs = inputs:
+    let
+      system = "aarch64-linux";
+      pkgs = inputs.nixpkgs.legacyPackages.${system};
+    in {
+      packages.${system} = {
+        hello = pkgs.hello;
+        default = pkgs.hello;
+      };
+    };
 }
+
