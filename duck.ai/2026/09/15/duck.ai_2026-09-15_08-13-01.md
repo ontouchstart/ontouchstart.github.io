@@ -203,3 +203,5 @@ Today we explored the transition from human conceptual understanding to the math
 We then shifted to how Large Language Models (LLMs) capture these notions. We discussed how LLMs bypass specific human languages by mapping concepts into a high-dimensional **latent space**, where notions exist as geometric relationships (vectors) rather than words. 
 
 Finally, we examined the interplay between **precision and stochasticity**. We concluded that while the output of an AI is probabilistic (stochastic), the model can still maintain a "precise capture" of those probabilities. We defined this as the difference between predicting a single certain outcome and precisely defining the probability distribution of all possible outcomes.
+
+[From Latent Space to Embodied Notion: The Evolution of Representation](https://ontouchstart.github.io/duck.ai/2026/09/16/duck.ai_2026-09-16_07-53-51)
