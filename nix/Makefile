@@ -1,4 +1,5 @@
-all:	build.log profile-list.log version.log
+dev:	build.log profile-list.log version.log
+	docker compose run  --remove-orphans --rm dev bash
 
 build.log:
 	docker compose --progress=plain build --no-cache | tee build.log
@@ -8,12 +9,6 @@ profile-list.log:
 
 version.log:
 	docker compose run  --remove-orphans --rm dev nix --version | tee version.log
-
-dev:	build.log
-	docker compose run  --remove-orphans --rm dev bash
-
-repl:	build.log
-	docker compose run  --remove-orphans --rm dev nix repl
 
 install.sh:
 	curl -sL https://nixos.org/nix/install > install.sh
