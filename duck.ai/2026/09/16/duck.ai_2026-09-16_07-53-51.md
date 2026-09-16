@@ -110,3 +110,6 @@ The discussion then expanded into the **history and future of mathematical and p
 Finally, we analyzed the **divergence between human and machine comprehension**. We concluded that while humans possess **embodied notions** (rooted in sensory experience and emotion), machines possess **relational notions** (rooted in high-dimensional statistical vectors). This creates a fundamental gap between the human "simulation of experience" and the machine "simulation of language."
 
 **Picking up tomorrow:** We can dive deeper into how these two different types of "comprehension" can be bridged, or explore the implications of a world where humans provide the *notions* and AI manages the *notation* entirely.
+
+
+[The Semantic Bridge: From Notational Complexity to Intent-Based Computing](https://ontouchstart.github.io/duck.ai/2026/09/16/duck.ai_2026-09-16_10-58-24)
