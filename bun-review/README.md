@@ -8,5 +8,7 @@ See root level [Makefile](Makefile), [Dockerfile](Dockerfile) and [compose.yml](
 
 To start from scractch
 ```
-make clean dev-test.log
+make clean dev.log
 ```
+
+[dev.log](dev.log)
