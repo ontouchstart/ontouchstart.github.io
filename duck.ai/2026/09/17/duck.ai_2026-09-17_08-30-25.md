@@ -1,10 +1,13 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+# Postel’s law
+This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
 User prompt 1 of 1 - 9/17/2026, 8:29:40 AM:
 Apply this to LLM and  agentic AI.
 [Attached image 1]
+
+![](IMG_2861.jpeg)
 
 Gemma 4 31B:
 Applying Postel's law to large language models means balancing the flexibility of human communication with the rigidity required for machine interoperability. LLMs already embody the liberal side of the principle in their input processing; they are remarkably robust at interpreting misspelled words, fragmented grammar, and ambiguous prompts to infer a user's intent. This flexibility allows them to function as an intuitive interface between unstructured human thought and structured digital data.
