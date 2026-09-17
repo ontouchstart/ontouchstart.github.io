@@ -1,7 +1,7 @@
 github=https://github.com
 owner=ggml-org
 repo=llama.cpp
-release=v0.4.0
+release=v0.4.1
 llama=build/bin/llama
 
 prompt="Print random number of random Chinese characters in one line without spaces. Do not give me a program, I just need the result."
