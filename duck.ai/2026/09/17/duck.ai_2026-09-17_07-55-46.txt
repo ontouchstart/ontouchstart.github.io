@@ -1,10 +1,15 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+# Beyond the Corner: Bridging Notion and Notation
+This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
 User prompt 1 of 3 - 9/17/2026, 7:50:58 AM:
 Read the book and find more information about it.
 [Attached image 1][Attached image 2]
+
+![](IMG_2856.jpeg)
+
+![](IMG_2857.jpeg)
 
 Gemma 4 31B:
 Based on the images provided, the book is titled **"Software Design for Flexibility: How to Avoid Programming Yourself into a Corner."**
