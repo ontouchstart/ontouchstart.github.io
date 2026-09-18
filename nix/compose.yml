@@ -3,7 +3,4 @@ services:
     build: .
     volumes:
       - ./home:/home
-      - nix:/nix
     working_dir: /home
-volumes:
-  nix:
