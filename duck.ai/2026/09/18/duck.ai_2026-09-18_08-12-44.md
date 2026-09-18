@@ -7,6 +7,12 @@ User prompt 1 of 6 - 9/18/2026, 8:05:58 AM:
 
 [Attached image 1][Attached image 2][Attached image 3]
 
+![](IMG_2870.jpeg)
+
+![](IMG_2873.jpeg)
+
+![](IMG_2874.jpeg)
+
 Gemma 4 31B:
 The text on the e-reader discusses the tension between the requirement for formal proofs in system design and the need for robustness. The author argues that while proofs are essential for critical components (giving the example of garbage collectors or ribosomes), a rigid discipline of requiring proofs for everything can make a system "brittle." 
 
@@ -17,6 +23,8 @@ Specifically, the author suggests that for safety-critical systems like autopilo
 User prompt 2 of 6 - 9/18/2026, 8:06:28 AM:
 
 [Attached image 1]
+
+![](IMG_2875.jpeg)
 
 Gemma 4 31B:
 This text provides the detailed footnotes for the points made in the previous passages:
