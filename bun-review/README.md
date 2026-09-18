@@ -11,4 +11,6 @@ To start from scractch
 make clean dev.log
 ```
 
-[dev.log](dev.log)
+[dev.1.log](dev.1.log)
+
+[dev.2.log](dev.2.log)
