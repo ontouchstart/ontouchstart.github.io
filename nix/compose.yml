@@ -1,4 +1,8 @@
 services:
+  nixos:
+    build: ./nixos
+    environment:
+      LANG: "C.UTF-8"
   dev:
     build: .
     volumes:
