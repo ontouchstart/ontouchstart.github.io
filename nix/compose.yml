@@ -8,3 +8,10 @@ services:
     volumes:
       - ./home:/home
     working_dir: /home
+  duck:
+    build: ./duck
+    environment:
+      LANG: "C.UTF-8"
+    volumes:
+      - ../duck.ai:/home
+    working_dir: /home
