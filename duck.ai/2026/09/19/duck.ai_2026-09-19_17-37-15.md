@@ -141,7 +141,6 @@ nix develop -c hello
 
 User prompt 6 of 11 - 9/19/2026, 5:28:38 PM:
 It works! 
-```
 
 Gemma 4 31B:
 Glad to hear it. Since we've verified the Nix toolchain is behaving as expected, are we ready to expand the `flake.nix` with more tools, or do you have something else in mind?
