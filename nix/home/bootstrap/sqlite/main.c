@@ -20,7 +20,8 @@ int main() {
 
     const char *sql = "CREATE TABLE hello(msg TEXT);"
                       "INSERT INTO hello VALUES('Hello, sqlite!');"
-                      "SELECT msg FROM hello;";
+                      "SELECT msg FROM hello;"
+                      "SELECT sqlite_version();";
 
     rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
 
