@@ -1,0 +1,242 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 540B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 256B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:latest
+#3 DONE 0.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/node:latest@sha256:a723b54c35a76e947095a20a67d39585bb09c862e6b1adeb8a9f518f95e34fb0
+#5 resolve docker.io/library/node:latest@sha256:a723b54c35a76e947095a20a67d39585bb09c862e6b1adeb8a9f518f95e34fb0 done
+#5 CACHED
+
+#6 [2/8] RUN git clone -b v0.87.1 https://github.com/earendil-works/pi
+#6 0.079 Cloning into 'pi'...
+#6 22.70 Note: switching to 'f07218c4d4bbc12bef056a7058c3dd49dfe41abe'.
+#6 22.70 
+#6 22.70 You are in 'detached HEAD' state. You can look around, make experimental
+#6 22.70 changes and commit them, and you can discard any commits you make in this
+#6 22.70 state without impacting any branches by switching back to a branch.
+#6 22.70 
+#6 22.70 If you want to create a new branch to retain commits you create, you may
+#6 22.70 do so (now or later) by using -c with the switch command. Example:
+#6 22.70 
+#6 22.70   git switch -c <new-branch-name>
+#6 22.70 
+#6 22.70 Or undo this operation with:
+#6 22.70 
+#6 22.70   git switch -
+#6 22.70 
+#6 22.70 Turn off this advice by setting config variable advice.detachedHead to false
+#6 22.70 
+#6 DONE 22.9s
+
+#7 [3/8] WORKDIR /pi
+#7 DONE 0.0s
+
+#8 [4/8] RUN npm install
+#8 0.366 npm warn EBADENGINE Unsupported engine {
+#8 0.366 npm warn EBADENGINE   package: 'autoevals@0.3.0',
+#8 0.366 npm warn EBADENGINE   required: {
+#8 0.366 npm warn EBADENGINE     npm: 'please-use-pnpm',
+#8 0.366 npm warn EBADENGINE     pnpm: '>=10.27.0',
+#8 0.366 npm warn EBADENGINE     yarn: 'please-use-pnpm'
+#8 0.366 npm warn EBADENGINE   },
+#8 0.366 npm warn EBADENGINE   current: { node: 'v26.10.0', npm: '11.19.1' }
+#8 0.366 npm warn EBADENGINE }
+#8 2.884 npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+#8 2.927 npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+#8 28.88 
+#8 28.88 > pi-monorepo@0.0.3 prepare
+#8 28.88 > husky
+#8 28.88 
+#8 28.93 
+#8 28.93 added 339 packages, and audited 361 packages in 29s
+#8 28.93 
+#8 28.93 51 packages are looking for funding
+#8 28.93   run `npm fund` for details
+#8 28.93 
+#8 28.93 3 moderate severity vulnerabilities
+#8 28.93 
+#8 28.93 To address all issues, run:
+#8 28.93   npm audit fix --force
+#8 28.93 
+#8 28.93 Run `npm audit` for details.
+#8 28.93 npm warn install-scripts 7 packages have install scripts not yet covered by allowScripts:
+#8 28.93 npm warn install-scripts   @google/genai@2.21.0 (preinstall: echo 'preinstall: no-op')
+#8 28.93 npm warn install-scripts   autoevals@0.3.0 (preinstall: node -e "const userAgent = process.env.npm_config_user_agent || ''; if (process.env.INIT_CWD === process.cwd() && !userAgent.includes('pnpm/')) { console.error('Use pnpm in this repo.'); process.exit(1); }")
+#8 28.93 npm warn install-scripts   canvas@3.2.3 (install: prebuild-install -r napi || node-gyp rebuild)
+#8 28.93 npm warn install-scripts   cpu-features@0.0.10 (install: node buildcheck.js > buildcheck.gypi && node-gyp rebuild)
+#8 28.93 npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+#8 28.93 npm warn install-scripts   protobufjs@7.6.6 (postinstall: node scripts/postinstall)
+#8 28.93 npm warn install-scripts   ssh2@1.17.0 (install: node install.js)
+#8 28.93 npm warn install-scripts
+#8 28.93 npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+#8 28.94 npm notice
+#8 28.94 npm notice New major version of npm available! 11.19.1 -> 12.0.2
+#8 28.94 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+#8 28.94 npm notice To update run: npm install -g npm@12.0.2
+#8 28.94 npm notice
+#8 DONE 29.2s
+
+#9 [5/8] RUN npm run build
+#9 0.240 
+#9 0.240 > pi-monorepo@0.0.3 build
+#9 0.240 > cd packages/chord && npm run build && cd ../tui && npm run build && cd ../telemetry && npm run build && cd ../ai && npm run build && cd ../durable && npm run build && cd ../agent && npm run build && cd ../session-backends/sqlite-node && npm run build && cd ../../protocol && npm run build && cd ../client && npm run build && cd ../server && npm run build && cd ../coding-agent && npm run build
+#9 0.240 
+#9 0.336 
+#9 0.336 > @earendil-works/chord@0.87.1 build
+#9 0.336 > tsgo -p tsconfig.build.json
+#9 0.336 
+#9 0.564 
+#9 0.564 > @earendil-works/pi-tui@0.87.1 build
+#9 0.564 > tsgo -p tsconfig.build.json
+#9 0.564 
+#9 0.828 
+#9 0.828 > @earendil-works/pi-telemetry@0.87.1 build
+#9 0.828 > tsgo -p tsconfig.build.json
+#9 0.828 
+#9 0.996 
+#9 0.996 > @earendil-works/pi-ai@0.87.1 build
+#9 0.996 > npm run generate-models && npm run build:offline
+#9 0.996 
+#9 1.095 
+#9 1.095 > @earendil-works/pi-ai@0.87.1 generate-models
+#9 1.095 > node scripts/generate-models.ts --strict
+#9 1.095 
+#9 1.172 Fetching models from models.dev API...
+#9 1.483 Fetching models from NVIDIA NIM API...
+#9 1.596 Fetched 82 model IDs from NVIDIA NIM
+#9 1.600 Loaded 796 tool-capable models from models.dev
+#9 1.600 Fetching models from OpenRouter API...
+#9 1.794 Fetched 386 tool-capable models from OpenRouter
+#9 1.794 Fetching models from Vercel AI Gateway API...
+#9 1.996 Fetched 246 tool-capable models from Vercel AI Gateway
+#9 1.996 Fetching models from Radius API...
+#9 2.158 Fetched 30 models from Radius
+#9 2.200 Generated provider catalogs and src/models.generated.ts
+#9 2.213 Generated JSON model values under src/providers/data/
+#9 2.213 
+#9 2.213 Model Statistics:
+#9 2.214   Total tool-capable models: 1504
+#9 2.214   Reasoning-capable models: 1241
+#9 2.214   amazon-bedrock: 171 models
+#9 2.214   anthropic: 15 models
+#9 2.214   google: 22 models
+#9 2.214   google-vertex: 14 models
+#9 2.214   openai: 41 models
+#9 2.214   groq: 7 models
+#9 2.214   cerebras: 2 models
+#9 2.214   cloudflare-workers-ai: 18 models
+#9 2.214   cloudflare-ai-gateway: 51 models
+#9 2.214   xai: 4 models
+#9 2.214   meta: 5 models
+#9 2.214   zai: 7 models
+#9 2.214   zai-coding-cn: 4 models
+#9 2.214   mistral: 33 models
+#9 2.214   huggingface: 76 models
+#9 2.214   fireworks: 33 models
+#9 2.214   nvidia: 19 models
+#9 2.214   together: 22 models
+#9 2.214   baseten: 21 models
+#9 2.214   opencode: 74 models
+#9 2.214   opencode-go: 30 models
+#9 2.214   github-copilot: 32 models
+#9 2.214   minimax: 3 models
+#9 2.214   minimax-cn: 3 models
+#9 2.214   kimi-coding: 4 models
+#9 2.214   moonshotai: 4 models
+#9 2.214   moonshotai-cn: 4 models
+#9 2.214   xiaomi: 6 models
+#9 2.214   xiaomi-token-plan-cn: 4 models
+#9 2.214   xiaomi-token-plan-ams: 4 models
+#9 2.214   xiaomi-token-plan-sgp: 4 models
+#9 2.214   qwen-token-plan: 20 models
+#9 2.214   qwen-token-plan-individual: 9 models
+#9 2.214   qwen-token-plan-cn: 20 models
+#9 2.214   openrouter: 388 models
+#9 2.214   vercel-ai-gateway: 246 models
+#9 2.214   radius: 30 models
+#9 2.214   deepseek: 2 models
+#9 2.214   ant-ling: 3 models
+#9 2.214   openai-codex: 8 models
+#9 2.214   azure-openai-responses: 41 models
+#9 2.321 
+#9 2.321 > @earendil-works/pi-ai@0.87.1 build:offline
+#9 2.321 > npm run check:model-data && tsgo -p tsconfig.build.json && shx rm -rf dist/providers/data && shx cp -r src/providers/data dist/providers/data
+#9 2.321 
+#9 2.414 
+#9 2.414 > @earendil-works/pi-ai@0.87.1 check:model-data
+#9 2.414 > node scripts/check-model-data.ts
+#9 2.414 
+#9 2.492 Generated model data is valid.
+#9 3.063 
+#9 3.063 > @earendil-works/pi-durable@0.87.1 build
+#9 3.063 > tsgo -p tsconfig.build.json
+#9 3.063 
+#9 3.272 
+#9 3.272 > @earendil-works/pi-agent-core@0.87.1 build
+#9 3.272 > tsgo -p tsconfig.build.json
+#9 3.272 
+#9 4.195 
+#9 4.195 > @earendil-works/pi-session-backend-sqlite-node@0.87.1 build
+#9 4.195 > tsgo -p tsconfig.build.json && node scripts/copy-migrations.mjs
+#9 4.195 
+#9 4.419 
+#9 4.419 > @earendil-works/pi-protocol@0.87.1 build
+#9 4.419 > tsgo -p tsconfig.build.json
+#9 4.419 
+#9 4.614 
+#9 4.614 > @earendil-works/pi-client@0.87.1 build
+#9 4.614 > tsgo -p tsconfig.build.json
+#9 4.614 
+#9 4.802 
+#9 4.802 > @earendil-works/pi-server@0.87.1 build
+#9 4.802 > tsgo -p tsconfig.build.json
+#9 4.802 
+#9 5.032 
+#9 5.032 > @earendil-works/pi-coding-agent@0.87.1 build
+#9 5.032 > npm run build:unbundled && node ../../scripts/build-coding-agent-bundle.mjs
+#9 5.032 
+#9 5.128 
+#9 5.128 > @earendil-works/pi-coding-agent@0.87.1 build:unbundled
+#9 5.128 > tsgo -p tsconfig.build.json && shx chmod +x dist/cli.js dist/rpc-entry.js && npm run copy-assets
+#9 5.128 
+#9 6.333 
+#9 6.333 > @earendil-works/pi-coding-agent@0.87.1 copy-assets
+#9 6.333 > shx mkdir -p dist/modes/interactive/theme && shx cp src/modes/interactive/theme/*.json dist/modes/interactive/theme/ && shx mkdir -p dist/modes/interactive/assets && shx cp src/modes/interactive/assets/*.png dist/modes/interactive/assets/ && shx mkdir -p dist/core/export-html/vendor && shx cp src/core/export-html/template.html src/core/export-html/template.css src/core/export-html/template.js dist/core/export-html/ && shx cp src/core/export-html/vendor/*.js dist/core/export-html/vendor/
+#9 6.333 
+#9 7.022 Built packages/coding-agent/dist/bundle (56 files, 8.2 MiB)
+#9 DONE 7.1s
+
+#10 [6/8] RUN npm install -g /pi/packages/coding-agent/
+#10 0.294 
+#10 0.294 added 1 package in 124ms
+#10 DONE 0.3s
+
+#11 [7/8] RUN npm install -g --allow-scripts=bun bun
+#11 7.721 
+#11 7.721 added 2 packages in 8s
+#11 DONE 7.8s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 14.3s done
+#12 exporting manifest sha256:0eb8c4ca62959f6b171f59be7b00916724f17c43cdfae3b057fe1d5d31d5830a done
+#12 exporting config sha256:0e7df581d99f01e83dd02e9bf40cb9f25ab6d68e1a7b914833d43f6b9fbe969c done
+#12 exporting attestation manifest sha256:54801395c592860c571061d7b59a14a327aa9cce96de5031cae2677753fed1cd done
+#12 exporting manifest list sha256:424c52101ee096de7e7e66c70c0412acd466f3a02e3c54e3463bf51fb9212890 done
+#12 naming to docker.io/library/pi-dev:latest done
+#12 unpacking to docker.io/library/pi-dev:latest
+#12 unpacking to docker.io/library/pi-dev:latest 5.0s done
+#12 DONE 19.3s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s

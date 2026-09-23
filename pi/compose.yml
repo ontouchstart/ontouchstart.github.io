@@ -1,7 +1,6 @@
 services:
   dev:
-    build:
-      context: .
+    build: .
     volumes:
       - ../home:/home
       - ../agent:/root/.pi/agent
