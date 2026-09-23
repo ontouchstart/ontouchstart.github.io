@@ -1,14 +1,14 @@
 github=https://github.com
 owner=ggml-org
 repo=llama.cpp
-release=v0.4.1
+release=v0.5.0
 llama=build/bin/llama
 
 version: build
 	$(llama) version 1> version.1.log 2> version.2.log
 
 server:	build
-	$(llama) server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf --ui-mcp-proxy
+	$(llama) server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf
 
 build:	$(repo)
 	cmake -B build -S $(repo)
