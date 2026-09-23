@@ -1,0 +1,34 @@
+/Users/sam/github/ontouchstart.github.io/llama.cpp/llama.cpp/ggml/src/ggml-metal/ggml-metal-device.m:1258:67: warning: 'location' is deprecated: first deprecated in macOS 27.0 - Not applicable on Apple Silicon [-Wdeprecated-declarations]
+ 1258 |                 dev->props.use_shared_buffers |= [dev->mtl_device location] == MTLDeviceLocationExternal;
+      |                                                                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDevice.h:530:40: note: property 'location' is declared deprecated here
+  530 | @property (readonly) MTLDeviceLocation location API_DEPRECATED("Not applicable on Apple Silicon", macos(10.15, 27.0)) API_UNAVAILABLE(ios);
+      |                                        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDevice.h:530:40: note: 'location' has been explicitly marked deprecated here
+/Users/sam/github/ontouchstart.github.io/llama.cpp/llama.cpp/ggml/src/ggml-metal/ggml-metal-device.m:1258:80: warning: 'MTLDeviceLocationExternal' is deprecated: first deprecated in macOS 27.0 - Not applicable on Apple Silicon [-Wdeprecated-declarations]
+ 1258 |                 dev->props.use_shared_buffers |= [dev->mtl_device location] == MTLDeviceLocationExternal;
+      |                                                                                ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDevice.h:263:29: note: 'MTLDeviceLocation' has been explicitly marked deprecated here
+  263 | typedef NS_ENUM(NSUInteger, MTLDeviceLocation)
+      |                             ^
+/Users/sam/github/ontouchstart.github.io/llama.cpp/llama.cpp/ggml/src/ggml-metal/ggml-metal-device.m:1323:34: warning: 'MTLGPUFamilyCommon1' is deprecated: first deprecated in macOS 27.0 [-Wdeprecated-declarations]
+ 1323 |                     for (int i = MTLGPUFamilyCommon1 + 5; i >= MTLGPUFamilyCommon1; --i) {
+      |                                  ^~~~~~~~~~~~~~~~~~~
+      |                                  MTLGPUFamilyApple1
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDevice.h:248:5: note: 'MTLGPUFamilyCommon1' has been explicitly marked deprecated here
+  248 |     MTLGPUFamilyCommon1 API_DEPRECATED_WITH_REPLACEMENT("MTLGPUFamilyApple1", macos(10.15, 27.0), ios(13.0, 27.0)) = 3001,
+      |     ^
+/Users/sam/github/ontouchstart.github.io/llama.cpp/llama.cpp/ggml/src/ggml-metal/ggml-metal-device.m:1323:64: warning: 'MTLGPUFamilyCommon1' is deprecated: first deprecated in macOS 27.0 [-Wdeprecated-declarations]
+ 1323 |                     for (int i = MTLGPUFamilyCommon1 + 5; i >= MTLGPUFamilyCommon1; --i) {
+      |                                                                ^~~~~~~~~~~~~~~~~~~
+      |                                                                MTLGPUFamilyApple1
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDevice.h:248:5: note: 'MTLGPUFamilyCommon1' has been explicitly marked deprecated here
+  248 |     MTLGPUFamilyCommon1 API_DEPRECATED_WITH_REPLACEMENT("MTLGPUFamilyApple1", macos(10.15, 27.0), ios(13.0, 27.0)) = 3001,
+      |     ^
+/Users/sam/github/ontouchstart.github.io/llama.cpp/llama.cpp/ggml/src/ggml-metal/ggml-metal-device.m:1325:110: warning: 'MTLGPUFamilyCommon1' is deprecated: first deprecated in macOS 27.0 [-Wdeprecated-declarations]
+ 1325 |                             GGML_LOG_INFO("%s: GPU family: MTLGPUFamilyCommon%d (%d)\n", __func__, i - (int) MTLGPUFamilyCommon1 + 1, i);
+      |                                                                                                              ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDevice.h:248:5: note: 'MTLGPUFamilyCommon1' has been explicitly marked deprecated here
+  248 |     MTLGPUFamilyCommon1 API_DEPRECATED_WITH_REPLACEMENT("MTLGPUFamilyApple1", macos(10.15, 27.0), ios(13.0, 27.0)) = 3001,
+      |     ^
+5 warnings generated.

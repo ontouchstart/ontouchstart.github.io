@@ -4,20 +4,15 @@ repo=llama.cpp
 release=v0.4.1
 llama=build/bin/llama
 
-prompt="Print random number of random Chinese characters in one line without spaces. Do not give me a program, I just need the result."
 version: build
-	$(llama) version |tee version.log
-chinese: build 
-	$(llama) cli --model models/gemma-4-E2B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-E2B-it.md
-	$(llama) cli --model models/gemma-4-E4B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-E4B-it.md
-	$(llama) cli --model models/gemma-4-12B-it-Q8_0.gguf --prompt $(prompt) --single-turn --output chinese-gemma-4-12B-it.md
+	$(llama) version 1> version.1.log 2> version.2.log
 
 server:	build
 	$(llama) server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf --ui-mcp-proxy
 
 build:	$(repo)
 	cmake -B build -S $(repo)
-	cmake --build build --config Release
+	cmake --build build --config Release 1> build.1.log 2> build.2.log
 
 $(repo):
 	git clone -b $(release) $(github)/$(owner)/$(repo).git
