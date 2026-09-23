@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.2",
+  "lastChangelogVersion": "0.87.1",
   "theme": "dark",
   "defaultProvider": "llama.cpp",
   "defaultModel": "ggml-org/gemma-4-12B-it-GGUF:Q8_0"
