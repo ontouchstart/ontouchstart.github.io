@@ -1,0 +1,3 @@
+{"id": 1, "user": "Alice", "message": "Hello! *This is bold* and **this is also bold**.", "timestamp": "2023-10-27T10:00:00Z", "metadata": {"source": "web", "priority": "high"}}
+{"id": 2, "user": "Bob", "message": "Check out this [link](https://example.com).", "timestamp": "2023-10-27T10:01:00Z", "metadata": {"source": "mobile", "priority": "low"}}
+{"id": 3, "user": "Charlie", "message": "List items:\n- Item 1\n- Item 2\n- Item 3", "timestamp": "2023-10-27T10:02:00Z", "metadata": {"source": "api", "priority": "medium"}}
