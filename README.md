@@ -1,6 +1,6 @@
 # Carpe Diem
 
-![](IMG_3048.jpeg)
+[![](IMG_3048.jpeg)](https://ontouchstart.github.io/duck.ai/2026/09/26/duck.ai_2026-09-26_09-20-48)
 
 This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
