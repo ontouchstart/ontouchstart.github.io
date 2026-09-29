@@ -1,0 +1,16 @@
+graph TD
+    subgraph Stage1 [Stage 1: Source Exploration - Sept 28]
+        A["React Repository Analysis <br/>(ID: 64e18e73)"] --> B["Map Directory Structure <br/>(ID: 44c82ebb)"]
+        B --> C["Identify Core Packages <br/>(ID: 484dc0ad)"]
+        C --> D["Artifact: .jsonl Session Log <br/>(ID: 75b83774)"]
+    end
+
+    D -->|Input Data| E
+
+    subgraph Stage2 [Stage 2: Tool Development - Sept 29]
+        E["Develop jsonl2md.ts <br/>(Session: 01a0ecf6)"] --> F["Code Review & Optimization"]
+        F --> G["Execution: bun jsonl2md.ts"]
+        G --> H["Validation/Analysis <br/>(ID: 694fe07e)"]
+        H --> I["Result: Markdown Source Map"]
+        I --> J["Final Test Summary <br/>(ID: e352330d)"]
+    end
