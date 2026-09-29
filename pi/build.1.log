@@ -3,271 +3,177 @@
 #1 DONE 0.0s
 
 #2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 429B done
+#2 transferring dockerfile: 266B done
 #2 DONE 0.0s
 
-#3 [internal] load metadata for docker.io/library/node:lts
-#3 DONE 1.8s
+#3 [internal] load metadata for docker.io/nixos/nix:2.35.2-arm64
+#3 DONE 0.1s
 
 #4 [internal] load .dockerignore
 #4 transferring context: 2B done
 #4 DONE 0.0s
 
-#5 [1/9] FROM docker.io/library/node:lts@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c63b4
-#5 resolve docker.io/library/node:lts@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c63b4 done
+#5 [1/5] FROM docker.io/nixos/nix:2.35.2-arm64@sha256:a326ac1ed46069ead5cdcba3a3a1e7255ebf72300c8319bf2c12cacfe9ab2787
+#5 resolve docker.io/nixos/nix:2.35.2-arm64@sha256:a326ac1ed46069ead5cdcba3a3a1e7255ebf72300c8319bf2c12cacfe9ab2787 0.0s done
 #5 CACHED
 
-#6 [2/9] RUN apt-get update && apt-get install -y   python3   make   g++   build-essential   && rm -rf /var/lib/apt/lists/*
-#6 0.230 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
-#6 0.611 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
-#6 1.323 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
-#6 1.432 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8689 kB]
-#6 6.321 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
-#6 6.343 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [339 kB]
-#6 7.285 Fetched 9277 kB in 7s (1293 kB/s)
-#6 7.285 Reading package lists...
-#6 7.652 Reading package lists...
-#6 8.021 Building dependency tree...
-#6 8.113 Reading state information...
-#6 8.244 python3 is already the newest version (3.11.2-1+b1).
-#6 8.244 python3 set to manually installed.
-#6 8.244 make is already the newest version (4.3-4.1).
-#6 8.244 g++ is already the newest version (4:12.2.0-3).
-#6 8.244 The following NEW packages will be installed:
-#6 8.244   build-essential
-#6 8.298 0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
-#6 8.298 Need to get 7704 B of archives.
-#6 8.298 After this operation, 20.5 kB of additional disk space will be used.
-#6 8.298 Get:1 http://deb.debian.org/debian bookworm/main arm64 build-essential arm64 12.9 [7704 B]
-#6 8.419 debconf: delaying package configuration, since apt-utils is not installed
-#6 8.435 Fetched 7704 B in 0s (153 kB/s)
-#6 8.449 Selecting previously unselected package build-essential.
-#6 8.449 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23286 files and directories currently installed.)
-#6 8.511 Preparing to unpack .../build-essential_12.9_arm64.deb ...
-#6 8.512 Unpacking build-essential (12.9) ...
-#6 8.531 Setting up build-essential (12.9) ...
-#6 DONE 8.6s
+#6 [2/5] RUN nix-channel --update
+#6 9.059 unpacking 1 channels...
+#6 DONE 24.1s
 
-#7 [3/9] RUN git clone -b v0.87.1 https://github.com/earendil-works/pi
-#7 0.122 Cloning into 'pi'...
-#7 48.19 Note: switching to 'f07218c4d4bbc12bef056a7058c3dd49dfe41abe'.
-#7 48.19 
-#7 48.19 You are in 'detached HEAD' state. You can look around, make experimental
-#7 48.19 changes and commit them, and you can discard any commits you make in this
-#7 48.19 state without impacting any branches by switching back to a branch.
-#7 48.19 
-#7 48.19 If you want to create a new branch to retain commits you create, you may
-#7 48.19 do so (now or later) by using -c with the switch command. Example:
-#7 48.19 
-#7 48.19   git switch -c <new-branch-name>
-#7 48.19 
-#7 48.19 Or undo this operation with:
-#7 48.19 
-#7 48.19   git switch -
-#7 48.19 
-#7 48.19 Turn off this advice by setting config variable advice.detachedHead to false
-#7 48.19 
-#7 DONE 48.4s
+#7 [3/5] RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
+#7 DONE 0.6s
 
-#8 [4/9] WORKDIR /pi
-#8 DONE 0.0s
+#8 [4/5] RUN nix-env -iA nixpkgs.pi-coding-agent nixpkgs.bun
+#8 1.046 installing 'pi-coding-agent-0.87.1'
+#8 1.046 installing 'bun-1.4.2'
+#8 2.289 these 66 paths will be fetched (136.6 MiB download, 497.4 MiB unpacked):
+#8 2.289   /nix/store/mmi5xn7d09niakcwn9ni5389p04rk944-acl-2.4.0
+#8 2.289   /nix/store/adrkcplbsaxnvj2w751xsvzhm4cfar8g-ada-4.0.0
+#8 2.289   /nix/store/fz3swsp25dqnx89i17b73ipjp668nmlk-attr-2.6.0
+#8 2.289   /nix/store/idnyqaaix26szkvhs1mjgi7990jajz9a-bash-5.3p15
+#8 2.289   /nix/store/z9nkwcylvgcrn4dvvd91jp8blv3mx38v-bash-interactive-5.3p15
+#8 2.289   /nix/store/gm11h422jsfx7s8nn0379n4n1sm9zv2f-brotli-1.2.0
+#8 2.289   /nix/store/lbw2240l13z6jqpwp6bk3aixd501fz69-brotli-1.2.0-dev
+#8 2.289   /nix/store/0glklzmdllhkd17qkq1269njhngvbgwd-brotli-1.2.0-lib
+#8 2.289   /nix/store/xjvj5vi8qrhdy5miayc2gzdbxd968vsx-bun-1.4.2
+#8 2.289   /nix/store/5bqhcaczahrrbczlr1n5lgvz8rcv2ghd-c-ares-1.34.8
+#8 2.289   /nix/store/m8v2h4gzaf2i7z9kjs8byxqddl4am6lh-c-ares-1.34.8
+#8 2.289   /nix/store/s834lvsxrjlg33f839fg2all3h545c81-c-ares-1.34.8-dev
+#8 2.289   /nix/store/p7xdvcvl4aw7m229qzlq601aq0w0nb9n-coreutils-9.11
+#8 2.289   /nix/store/y2dmkx58cfmz96pq8z7s7skkllb1fk7b-fd-10.5.0
+#8 2.289   /nix/store/n65q2br81z7a9g3hcvskd2pvr8s6a7ms-gcc-15.3.0-lib
+#8 2.289   /nix/store/ahg79xbgc81hkhj3xl8524i8pjp3sxkx-gcc-15.3.0-libgcc
+#8 2.289   /nix/store/m54cs0m994hc3n9lax7sg98sgy729qsa-glibc-2.42-84
+#8 2.289   /nix/store/2idxnbd69vsh9dfg0zqx0q6pn4x5nsrn-gmp-with-cxx-6.3.0
+#8 2.289   /nix/store/3b3k72bbr01bgff7bdkiz6r05gmlx5s9-gnugrep-3.12
+#8 2.289   /nix/store/q37k767ll7cc22x0hh5fbb760bqdw317-gtest-1.18.0
+#8 2.289   /nix/store/kpk1qrs2z8f5py20w03p0s7nvyhbvngm-gtest-1.18.0-dev
+#8 2.289   /nix/store/2c3bix9p476qx35vwzk2k2h93wiwf90f-hdrhistogram_c-0.11.10
+#8 2.289   /nix/store/pbjxkqc52xj55jmrq367kzjz5zjs6gqw-icu4c-78.3
+#8 2.289   /nix/store/jfkjagqv9n8ra40y82immkzs08vwk8js-icu4c-78.3-dev
+#8 2.289   /nix/store/6mpnq8xc1mj1h67b73v4fghra1bj5a5i-libev-4.33
+#8 2.289   /nix/store/0s40b0an0cz4vypbji92cb7qbr65icl4-libidn2-2.3.8
+#8 2.289   /nix/store/h0hd048jzxs7fx9a6g75jwrrhbg50bp8-libunistring-1.4.2
+#8 2.289   /nix/store/xzxbps3rn5d2m8cp8shfin3w7lbvrdj1-libuv-1.52.1
+#8 2.289   /nix/store/gp66wsz3riai0n65cdyi5m0y35gh6fq8-libuv-1.52.1-dev
+#8 2.289   /nix/store/60fmiv4q0i02alhsr9l3giwkaryn56ic-llhttp-9.4.3
+#8 2.289   /nix/store/hzy8s88g3acmxy430dj9lybkf444k9w1-llhttp-9.4.3-dev
+#8 2.289   /nix/store/bkz5n3msppz1awhhbiin31k7c0bsbf9g-merve-1.2.2
+#8 2.289   /nix/store/33qw58z7kdlniv51g75a4sr9m15kk2jx-nbytes-0.1.4
+#8 2.289   /nix/store/xplind4h97x3aq0xy1c9nm48rs7hm55z-ncurses-6.6
+#8 2.289   /nix/store/535wblsj3cmv5p2xq720mi6c9gpj9h5p-nghttp2-1.70.0
+#8 2.289   /nix/store/yda4b60ylx3chqg1pnk1508cj4q3mh42-nghttp2-1.70.0-dev
+#8 2.289   /nix/store/717hhzngx3cd36rnw5d3mv2ia0vzr87r-nghttp2-1.70.0-lib
+#8 2.289   /nix/store/2n3j3j85n60axyib6h4kxk7zsjm4a7y0-nghttp3-1.16.0
+#8 2.289   /nix/store/pbplyb609ih8wijia5qba5cd29wryb20-nghttp3-1.16.0-dev
+#8 2.289   /nix/store/5731mwd8sb24ls072pv05m7skfrxjzia-ngtcp2-1.23.0
+#8 2.289   /nix/store/wpivvwwr6dhi0fg4jkz1crzjk9dvvkg6-ngtcp2-1.23.0-dev
+#8 2.289   /nix/store/hnizp3p9k7gix8iqlip1pai9fy417ygy-nodejs-24.20.0
+#8 2.289   /nix/store/29zcshmp5hid6l4ckl2vg9bvnnrdr0sw-nodejs-slim-24.20.0
+#8 2.289   /nix/store/2p46k13943c43x9fzh4x3i1f4h3i9w34-nodejs-slim-24.20.0-corepack
+#8 2.289   /nix/store/dhi1wkiax2xgf59vxhgmlsgvwmj69312-nodejs-slim-24.20.0-npm
+#8 2.289   /nix/store/v89yca35zsb13k51ibz0mcz2rrzjwwrj-openssl-3.6.4
+#8 2.289   /nix/store/ai0jh6nymysikgd4liv2k8iv9kmipcva-openssl-3.6.4-bin
+#8 2.289   /nix/store/ik15agzk82h1sbazhalg11y8zw1xvl8n-openssl-3.6.4-dev
+#8 2.289   /nix/store/xg8r53g4y7n6d237a54yqrvwmy66ckid-pcre2-10.48
+#8 2.289   /nix/store/aqyc1liv99qfahfngnm3s9n7i957s4h4-pi-coding-agent-0.87.1
+#8 2.289   /nix/store/h1gj99bqwwhin6ykpm6aipszmx9qjmzz-readline-8.3p3
+#8 2.289   /nix/store/6z0x460fggf3yclppp911w5n2awrf6a3-ripgrep-15.2.0
+#8 2.289   /nix/store/4kg2ikzp03l897y89m99ayrrqhq999r9-simdjson-4.6.8
+#8 2.289   /nix/store/vwhidw8gdqym8pgzrdvsdc18xh9f17bw-simdutf-6.5.0
+#8 2.289   /nix/store/m37cwyj66cj9w35p43a702dlv6ggyfrk-simdutf-9.1.0
+#8 2.289   /nix/store/1z13nb8zh15n25d3ym19079kd3qb0yyl-sqlite-3.53.3
+#8 2.289   /nix/store/1ag9nx63cvsq8144696shw1yx7xclk6b-sqlite-3.53.3-bin
+#8 2.289   /nix/store/5q261wj3mn5z5q45xjx8yjx8z7ak49vm-sqlite-3.53.3-dev
+#8 2.289   /nix/store/v97c955w6axf4vafwj0n8yrb31blyz5p-uvwasi-0.0.23
+#8 2.289   /nix/store/waax852balprvsvdziyaf1h7r3ldvakg-xgcc-15.3.0-libgcc
+#8 2.289   /nix/store/8m1ckjz4k9v5ly0dkbyqpaw02kaxrp33-zlib-1.3.2
+#8 2.289   /nix/store/c9zby8d22dn9x661qrlxy0553h1ljcsg-zlib-1.3.2-dev
+#8 2.289   /nix/store/in0l4c78bzfr61v269qnva8ljpszsa6j-zlib-1.3.2-static
+#8 2.289   /nix/store/zf5kl4x0zjkf6zl5d84ac0xahpp0las8-zstd-1.5.7
+#8 2.289   /nix/store/2335pbhqhn45p253dz1jkabw8ry6avxj-zstd-1.5.7-bin
+#8 2.289   /nix/store/inzvxx780z6lzmg7rnx31mg1fza6jn4i-zstd-1.5.7-dev
+#8 2.293 copying path '/nix/store/waax852balprvsvdziyaf1h7r3ldvakg-xgcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#8 2.298 copying path '/nix/store/ahg79xbgc81hkhj3xl8524i8pjp3sxkx-gcc-15.3.0-libgcc' from 'https://cache.nixos.org'...
+#8 2.298 copying path '/nix/store/h0hd048jzxs7fx9a6g75jwrrhbg50bp8-libunistring-1.4.2' from 'https://cache.nixos.org'...
+#8 2.300 copying path '/nix/store/in0l4c78bzfr61v269qnva8ljpszsa6j-zlib-1.3.2-static' from 'https://cache.nixos.org'...
+#8 2.518 copying path '/nix/store/0s40b0an0cz4vypbji92cb7qbr65icl4-libidn2-2.3.8' from 'https://cache.nixos.org'...
+#8 2.611 copying path '/nix/store/m54cs0m994hc3n9lax7sg98sgy729qsa-glibc-2.42-84' from 'https://cache.nixos.org'...
+#8 4.511 copying path '/nix/store/mmi5xn7d09niakcwn9ni5389p04rk944-acl-2.4.0' from 'https://cache.nixos.org'...
+#8 4.511 copying path '/nix/store/fz3swsp25dqnx89i17b73ipjp668nmlk-attr-2.6.0' from 'https://cache.nixos.org'...
+#8 4.511 copying path '/nix/store/idnyqaaix26szkvhs1mjgi7990jajz9a-bash-5.3p15' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/0glklzmdllhkd17qkq1269njhngvbgwd-brotli-1.2.0-lib' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/5bqhcaczahrrbczlr1n5lgvz8rcv2ghd-c-ares-1.34.8' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/xjvj5vi8qrhdy5miayc2gzdbxd968vsx-bun-1.4.2' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/717hhzngx3cd36rnw5d3mv2ia0vzr87r-nghttp2-1.70.0-lib' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/6mpnq8xc1mj1h67b73v4fghra1bj5a5i-libev-4.33' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/n65q2br81z7a9g3hcvskd2pvr8s6a7ms-gcc-15.3.0-lib' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/xzxbps3rn5d2m8cp8shfin3w7lbvrdj1-libuv-1.52.1' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/v89yca35zsb13k51ibz0mcz2rrzjwwrj-openssl-3.6.4' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/60fmiv4q0i02alhsr9l3giwkaryn56ic-llhttp-9.4.3' from 'https://cache.nixos.org'...
+#8 4.513 copying path '/nix/store/xplind4h97x3aq0xy1c9nm48rs7hm55z-ncurses-6.6' from 'https://cache.nixos.org'...
+#8 4.514 copying path '/nix/store/m8v2h4gzaf2i7z9kjs8byxqddl4am6lh-c-ares-1.34.8' from 'https://cache.nixos.org'...
+#8 4.516 copying path '/nix/store/2n3j3j85n60axyib6h4kxk7zsjm4a7y0-nghttp3-1.16.0' from 'https://cache.nixos.org'...
+#8 4.516 copying path '/nix/store/xg8r53g4y7n6d237a54yqrvwmy66ckid-pcre2-10.48' from 'https://cache.nixos.org'...
+#8 4.615 copying path '/nix/store/8m1ckjz4k9v5ly0dkbyqpaw02kaxrp33-zlib-1.3.2' from 'https://cache.nixos.org'...
+#8 4.772 copying path '/nix/store/pbplyb609ih8wijia5qba5cd29wryb20-nghttp3-1.16.0-dev' from 'https://cache.nixos.org'...
+#8 4.791 copying path '/nix/store/hzy8s88g3acmxy430dj9lybkf444k9w1-llhttp-9.4.3-dev' from 'https://cache.nixos.org'...
+#8 4.979 copying path '/nix/store/s834lvsxrjlg33f839fg2all3h545c81-c-ares-1.34.8-dev' from 'https://cache.nixos.org'...
+#8 4.983 copying path '/nix/store/gp66wsz3riai0n65cdyi5m0y35gh6fq8-libuv-1.52.1-dev' from 'https://cache.nixos.org'...
+#8 5.304 copying path '/nix/store/2c3bix9p476qx35vwzk2k2h93wiwf90f-hdrhistogram_c-0.11.10' from 'https://cache.nixos.org'...
+#8 5.304 copying path '/nix/store/1z13nb8zh15n25d3ym19079kd3qb0yyl-sqlite-3.53.3' from 'https://cache.nixos.org'...
+#8 5.304 copying path '/nix/store/1ag9nx63cvsq8144696shw1yx7xclk6b-sqlite-3.53.3-bin' from 'https://cache.nixos.org'...
+#8 5.305 copying path '/nix/store/c9zby8d22dn9x661qrlxy0553h1ljcsg-zlib-1.3.2-dev' from 'https://cache.nixos.org'...
+#8 5.404 copying path '/nix/store/gm11h422jsfx7s8nn0379n4n1sm9zv2f-brotli-1.2.0' from 'https://cache.nixos.org'...
+#8 5.551 copying path '/nix/store/v97c955w6axf4vafwj0n8yrb31blyz5p-uvwasi-0.0.23' from 'https://cache.nixos.org'...
+#8 5.635 copying path '/nix/store/3b3k72bbr01bgff7bdkiz6r05gmlx5s9-gnugrep-3.12' from 'https://cache.nixos.org'...
+#8 5.780 copying path '/nix/store/h1gj99bqwwhin6ykpm6aipszmx9qjmzz-readline-8.3p3' from 'https://cache.nixos.org'...
+#8 5.878 copying path '/nix/store/lbw2240l13z6jqpwp6bk3aixd501fz69-brotli-1.2.0-dev' from 'https://cache.nixos.org'...
+#8 6.570 copying path '/nix/store/z9nkwcylvgcrn4dvvd91jp8blv3mx38v-bash-interactive-5.3p15' from 'https://cache.nixos.org'...
+#8 7.477 copying path '/nix/store/y2dmkx58cfmz96pq8z7s7skkllb1fk7b-fd-10.5.0' from 'https://cache.nixos.org'...
+#8 7.477 copying path '/nix/store/2idxnbd69vsh9dfg0zqx0q6pn4x5nsrn-gmp-with-cxx-6.3.0' from 'https://cache.nixos.org'...
+#8 7.478 copying path '/nix/store/q37k767ll7cc22x0hh5fbb760bqdw317-gtest-1.18.0' from 'https://cache.nixos.org'...
+#8 7.478 copying path '/nix/store/pbjxkqc52xj55jmrq367kzjz5zjs6gqw-icu4c-78.3' from 'https://cache.nixos.org'...
+#8 7.478 copying path '/nix/store/33qw58z7kdlniv51g75a4sr9m15kk2jx-nbytes-0.1.4' from 'https://cache.nixos.org'...
+#8 7.478 copying path '/nix/store/6z0x460fggf3yclppp911w5n2awrf6a3-ripgrep-15.2.0' from 'https://cache.nixos.org'...
+#8 7.478 copying path '/nix/store/4kg2ikzp03l897y89m99ayrrqhq999r9-simdjson-4.6.8' from 'https://cache.nixos.org'...
+#8 7.478 copying path '/nix/store/vwhidw8gdqym8pgzrdvsdc18xh9f17bw-simdutf-6.5.0' from 'https://cache.nixos.org'...
+#8 7.478 copying path '/nix/store/m37cwyj66cj9w35p43a702dlv6ggyfrk-simdutf-9.1.0' from 'https://cache.nixos.org'...
+#8 7.478 copying path '/nix/store/bkz5n3msppz1awhhbiin31k7c0bsbf9g-merve-1.2.2' from 'https://cache.nixos.org'...
+#8 7.479 copying path '/nix/store/zf5kl4x0zjkf6zl5d84ac0xahpp0las8-zstd-1.5.7' from 'https://cache.nixos.org'...
+#8 8.027 copying path '/nix/store/5q261wj3mn5z5q45xjx8yjx8z7ak49vm-sqlite-3.53.3-dev' from 'https://cache.nixos.org'...
+#8 8.669 copying path '/nix/store/535wblsj3cmv5p2xq720mi6c9gpj9h5p-nghttp2-1.70.0' from 'https://cache.nixos.org'...
+#8 8.669 copying path '/nix/store/5731mwd8sb24ls072pv05m7skfrxjzia-ngtcp2-1.23.0' from 'https://cache.nixos.org'...
+#8 8.669 copying path '/nix/store/ai0jh6nymysikgd4liv2k8iv9kmipcva-openssl-3.6.4-bin' from 'https://cache.nixos.org'...
+#8 8.801 copying path '/nix/store/p7xdvcvl4aw7m229qzlq601aq0w0nb9n-coreutils-9.11' from 'https://cache.nixos.org'...
+#8 8.802 copying path '/nix/store/kpk1qrs2z8f5py20w03p0s7nvyhbvngm-gtest-1.18.0-dev' from 'https://cache.nixos.org'...
+#8 8.824 copying path '/nix/store/adrkcplbsaxnvj2w751xsvzhm4cfar8g-ada-4.0.0' from 'https://cache.nixos.org'...
+#8 9.093 copying path '/nix/store/2335pbhqhn45p253dz1jkabw8ry6avxj-zstd-1.5.7-bin' from 'https://cache.nixos.org'...
+#8 9.832 copying path '/nix/store/wpivvwwr6dhi0fg4jkz1crzjk9dvvkg6-ngtcp2-1.23.0-dev' from 'https://cache.nixos.org'...
+#8 10.76 copying path '/nix/store/inzvxx780z6lzmg7rnx31mg1fza6jn4i-zstd-1.5.7-dev' from 'https://cache.nixos.org'...
+#8 10.76 copying path '/nix/store/ik15agzk82h1sbazhalg11y8zw1xvl8n-openssl-3.6.4-dev' from 'https://cache.nixos.org'...
+#8 10.94 copying path '/nix/store/yda4b60ylx3chqg1pnk1508cj4q3mh42-nghttp2-1.70.0-dev' from 'https://cache.nixos.org'...
+#8 16.21 copying path '/nix/store/jfkjagqv9n8ra40y82immkzs08vwk8js-icu4c-78.3-dev' from 'https://cache.nixos.org'...
+#8 17.88 copying path '/nix/store/29zcshmp5hid6l4ckl2vg9bvnnrdr0sw-nodejs-slim-24.20.0' from 'https://cache.nixos.org'...
+#8 23.51 copying path '/nix/store/2p46k13943c43x9fzh4x3i1f4h3i9w34-nodejs-slim-24.20.0-corepack' from 'https://cache.nixos.org'...
+#8 23.51 copying path '/nix/store/dhi1wkiax2xgf59vxhgmlsgvwmj69312-nodejs-slim-24.20.0-npm' from 'https://cache.nixos.org'...
+#8 23.90 copying path '/nix/store/hnizp3p9k7gix8iqlip1pai9fy417ygy-nodejs-24.20.0' from 'https://cache.nixos.org'...
+#8 24.31 copying path '/nix/store/aqyc1liv99qfahfngnm3s9n7i957s4h4-pi-coding-agent-0.87.1' from 'https://cache.nixos.org'...
+#8 28.77 building '/nix/store/7ih1hw855lam869fx9kjqw1afqz6gifb-user-environment.drv'...
+#8 DONE 29.5s
 
-#9 [5/9] RUN npm install
-#9 0.388 npm warn EBADENGINE Unsupported engine {
-#9 0.388 npm warn EBADENGINE   package: 'autoevals@0.3.0',
-#9 0.388 npm warn EBADENGINE   required: {
-#9 0.388 npm warn EBADENGINE     npm: 'please-use-pnpm',
-#9 0.388 npm warn EBADENGINE     pnpm: '>=10.27.0',
-#9 0.388 npm warn EBADENGINE     yarn: 'please-use-pnpm'
-#9 0.388 npm warn EBADENGINE   },
-#9 0.388 npm warn EBADENGINE   current: { node: 'v24.21.0', npm: '11.19.0' }
-#9 0.388 npm warn EBADENGINE }
-#9 3.342 npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
-#9 3.636 npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
-#9 61.26 
-#9 61.26 > pi-monorepo@0.0.3 prepare
-#9 61.26 > husky
-#9 61.26 
-#9 61.32 
-#9 61.32 added 339 packages, and audited 361 packages in 1m
-#9 61.32 
-#9 61.32 51 packages are looking for funding
-#9 61.32   run `npm fund` for details
-#9 61.32 
-#9 61.32 3 moderate severity vulnerabilities
-#9 61.32 
-#9 61.32 To address all issues, run:
-#9 61.32   npm audit fix --force
-#9 61.32 
-#9 61.32 Run `npm audit` for details.
-#9 61.32 npm warn install-scripts 7 packages have install scripts not yet covered by allowScripts:
-#9 61.32 npm warn install-scripts   @google/genai@2.21.0 (preinstall: echo 'preinstall: no-op')
-#9 61.32 npm warn install-scripts   autoevals@0.3.0 (preinstall: node -e "const userAgent = process.env.npm_config_user_agent || ''; if (process.env.INIT_CWD === process.cwd() && !userAgent.includes('pnpm/')) { console.error('Use pnpm in this repo.'); process.exit(1); }")
-#9 61.32 npm warn install-scripts   canvas@3.2.3 (install: prebuild-install -r napi || node-gyp rebuild)
-#9 61.32 npm warn install-scripts   cpu-features@0.0.10 (install: node buildcheck.js > buildcheck.gypi && node-gyp rebuild)
-#9 61.32 npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
-#9 61.32 npm warn install-scripts   protobufjs@7.6.6 (postinstall: node scripts/postinstall)
-#9 61.32 npm warn install-scripts   ssh2@1.17.0 (install: node install.js)
-#9 61.32 npm warn install-scripts
-#9 61.32 npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
-#9 61.32 npm notice
-#9 61.32 npm notice New major version of npm available! 11.19.0 -> 12.1.0
-#9 61.32 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.1.0
-#9 61.32 npm notice To update run: npm install -g npm@12.1.0
-#9 61.32 npm notice
-#9 DONE 61.4s
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 18.2s done
+#9 exporting manifest sha256:8439ea28f8a067cd2152bb0db5e631ac58f1cec439ae89fd29cdb372552d65b7 done
+#9 exporting config sha256:e260556272540f35b42f333249e99e858967bb43c7c349099aa49dc0ed7fbe0e done
+#9 exporting attestation manifest sha256:9698bd8f07d10ccd6209092ae5838fba5e02bc2ba2a5c2435cdd0b226873a5ab done
+#9 exporting manifest list sha256:4fa3475900069a0024343a3a854b422700b9f24a856f29d059d510308e150d4b done
+#9 naming to docker.io/library/pi-dev:latest done
+#9 unpacking to docker.io/library/pi-dev:latest
+#9 unpacking to docker.io/library/pi-dev:latest 16.8s done
+#9 DONE 35.1s
 
-#10 [6/9] RUN npm run build
-#10 0.226 
-#10 0.226 > pi-monorepo@0.0.3 build
-#10 0.226 > cd packages/chord && npm run build && cd ../tui && npm run build && cd ../telemetry && npm run build && cd ../ai && npm run build && cd ../durable && npm run build && cd ../agent && npm run build && cd ../session-backends/sqlite-node && npm run build && cd ../../protocol && npm run build && cd ../client && npm run build && cd ../server && npm run build && cd ../coding-agent && npm run build
-#10 0.226 
-#10 0.335 
-#10 0.335 > @earendil-works/chord@0.87.1 build
-#10 0.335 > tsgo -p tsconfig.build.json
-#10 0.335 
-#10 0.553 
-#10 0.553 > @earendil-works/pi-tui@0.87.1 build
-#10 0.553 > tsgo -p tsconfig.build.json
-#10 0.553 
-#10 0.820 
-#10 0.820 > @earendil-works/pi-telemetry@0.87.1 build
-#10 0.820 > tsgo -p tsconfig.build.json
-#10 0.820 
-#10 0.994 
-#10 0.994 > @earendil-works/pi-ai@0.87.1 build
-#10 0.994 > npm run generate-models && npm run build:offline
-#10 0.994 
-#10 1.095 
-#10 1.095 > @earendil-works/pi-ai@0.87.1 generate-models
-#10 1.095 > node scripts/generate-models.ts --strict
-#10 1.095 
-#10 1.175 Fetching models from models.dev API...
-#10 1.568 Fetching models from NVIDIA NIM API...
-#10 1.684 Fetched 82 model IDs from NVIDIA NIM
-#10 1.689 Loaded 805 tool-capable models from models.dev
-#10 1.689 Fetching models from OpenRouter API...
-#10 1.913 Fetched 392 tool-capable models from OpenRouter
-#10 1.913 Fetching models from Vercel AI Gateway API...
-#10 2.307 Fetched 247 tool-capable models from Vercel AI Gateway
-#10 2.307 Fetching models from Radius API...
-#10 2.398 Fetched 26 models from Radius
-#10 2.437 Generated provider catalogs and src/models.generated.ts
-#10 2.451 Generated JSON model values under src/providers/data/
-#10 2.451 
-#10 2.451 Model Statistics:
-#10 2.451   Total tool-capable models: 1516
-#10 2.451   Reasoning-capable models: 1252
-#10 2.451   amazon-bedrock: 173 models
-#10 2.451   anthropic: 15 models
-#10 2.451   google: 22 models
-#10 2.451   google-vertex: 14 models
-#10 2.451   openai: 41 models
-#10 2.451   groq: 7 models
-#10 2.451   cerebras: 2 models
-#10 2.451   cloudflare-workers-ai: 18 models
-#10 2.451   cloudflare-ai-gateway: 54 models
-#10 2.451   xai: 4 models
-#10 2.451   meta: 5 models
-#10 2.451   zai: 7 models
-#10 2.451   zai-coding-cn: 4 models
-#10 2.451   mistral: 33 models
-#10 2.451   huggingface: 76 models
-#10 2.451   fireworks: 34 models
-#10 2.451   nvidia: 19 models
-#10 2.451   together: 22 models
-#10 2.451   baseten: 21 models
-#10 2.451   opencode: 75 models
-#10 2.451   opencode-go: 32 models
-#10 2.451   github-copilot: 32 models
-#10 2.452   minimax: 3 models
-#10 2.452   minimax-cn: 3 models
-#10 2.452   kimi-coding: 4 models
-#10 2.452   moonshotai: 4 models
-#10 2.452   moonshotai-cn: 4 models
-#10 2.452   xiaomi: 6 models
-#10 2.452   xiaomi-token-plan-cn: 4 models
-#10 2.452   xiaomi-token-plan-ams: 4 models
-#10 2.452   xiaomi-token-plan-sgp: 4 models
-#10 2.452   qwen-token-plan: 20 models
-#10 2.452   qwen-token-plan-individual: 9 models
-#10 2.452   qwen-token-plan-cn: 20 models
-#10 2.452   openrouter: 394 models
-#10 2.452   vercel-ai-gateway: 247 models
-#10 2.452   radius: 26 models
-#10 2.452   deepseek: 2 models
-#10 2.452   ant-ling: 3 models
-#10 2.452   openai-codex: 8 models
-#10 2.452   azure-openai-responses: 41 models
-#10 2.562 
-#10 2.562 > @earendil-works/pi-ai@0.87.1 build:offline
-#10 2.562 > npm run check:model-data && tsgo -p tsconfig.build.json && shx rm -rf dist/providers/data && shx cp -r src/providers/data dist/providers/data
-#10 2.562 
-#10 2.661 
-#10 2.661 > @earendil-works/pi-ai@0.87.1 check:model-data
-#10 2.661 > node scripts/check-model-data.ts
-#10 2.661 
-#10 2.745 Generated model data is valid.
-#10 3.314 
-#10 3.314 > @earendil-works/pi-durable@0.87.1 build
-#10 3.314 > tsgo -p tsconfig.build.json
-#10 3.314 
-#10 3.529 
-#10 3.529 > @earendil-works/pi-agent-core@0.87.1 build
-#10 3.529 > tsgo -p tsconfig.build.json
-#10 3.529 
-#10 4.436 
-#10 4.436 > @earendil-works/pi-session-backend-sqlite-node@0.87.1 build
-#10 4.436 > tsgo -p tsconfig.build.json && node scripts/copy-migrations.mjs
-#10 4.436 
-#10 4.674 
-#10 4.674 > @earendil-works/pi-protocol@0.87.1 build
-#10 4.674 > tsgo -p tsconfig.build.json
-#10 4.674 
-#10 4.861 
-#10 4.861 > @earendil-works/pi-client@0.87.1 build
-#10 4.861 > tsgo -p tsconfig.build.json
-#10 4.861 
-#10 5.050 
-#10 5.050 > @earendil-works/pi-server@0.87.1 build
-#10 5.050 > tsgo -p tsconfig.build.json
-#10 5.050 
-#10 5.284 
-#10 5.284 > @earendil-works/pi-coding-agent@0.87.1 build
-#10 5.284 > npm run build:unbundled && node ../../scripts/build-coding-agent-bundle.mjs
-#10 5.284 
-#10 5.386 
-#10 5.386 > @earendil-works/pi-coding-agent@0.87.1 build:unbundled
-#10 5.386 > tsgo -p tsconfig.build.json && shx chmod +x dist/cli.js dist/rpc-entry.js && npm run copy-assets
-#10 5.386 
-#10 6.565 
-#10 6.565 > @earendil-works/pi-coding-agent@0.87.1 copy-assets
-#10 6.565 > shx mkdir -p dist/modes/interactive/theme && shx cp src/modes/interactive/theme/*.json dist/modes/interactive/theme/ && shx mkdir -p dist/modes/interactive/assets && shx cp src/modes/interactive/assets/*.png dist/modes/interactive/assets/ && shx mkdir -p dist/core/export-html/vendor && shx cp src/core/export-html/template.html src/core/export-html/template.css src/core/export-html/template.js dist/core/export-html/ && shx cp src/core/export-html/vendor/*.js dist/core/export-html/vendor/
-#10 6.565 
-#10 7.259 Built packages/coding-agent/dist/bundle (56 files, 8.2 MiB)
-#10 DONE 7.3s
-
-#11 [7/9] RUN npm install -g /pi/packages/coding-agent/
-#11 0.371 
-#11 0.371 added 1 package in 127ms
-#11 DONE 0.4s
-
-#12 [8/9] RUN npm install -g --allow-scripts=bun bun
-#12 16.17 
-#12 16.17 added 2 packages in 16s
-#12 DONE 16.2s
-
-#13 exporting to image
-#13 exporting layers
-#13 exporting layers 14.1s done
-#13 exporting manifest sha256:fb3427759b2dcd3d51d4d42d2030894c2ffead534bb9bcdc145cd083be117ab6 done
-#13 exporting config sha256:467215e3681a82f9d80640c933a9711b0cc6ce34a3e849f9b605b46f37c91ab6 done
-#13 exporting attestation manifest sha256:eeb79613fa5cd933c96381869fe31d695775848d424864b56dee42f2ab7d472a done
-#13 exporting manifest list sha256:6beeffd8f2eaa08162ffed8cad7c2e00cc8087b8a254c386098d586544019942 done
-#13 naming to docker.io/library/pi-dev:latest done
-#13 unpacking to docker.io/library/pi-dev:latest
-#13 unpacking to docker.io/library/pi-dev:latest 4.7s done
-#13 DONE 18.9s
-
-#14 resolving provenance for metadata file
-#14 DONE 0.0s
+#10 resolving provenance for metadata file
+#10 DONE 0.1s

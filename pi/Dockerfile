@@ -1,15 +1,8 @@
-FROM node:lts
-# Install build dependencies for node-gpy
-RUN apt-get update && apt-get install -y \
-  python3 \
-  make \
-  g++ \
-  build-essential \
-  && rm -rf /var/lib/apt/lists/*  
-RUN git clone -b v0.87.1 https://github.com/earendil-works/pi
-WORKDIR /pi
-RUN npm install
-RUN npm run build
-RUN npm install -g /pi/packages/coding-agent/
-RUN npm install -g --allow-scripts=bun bun
+FROM nixos/nix:2.35.2-arm64
+RUN nix-channel --update
+RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
+
+RUN nix-env -iA nixpkgs.pi-coding-agent nixpkgs.bun
 WORKDIR /
