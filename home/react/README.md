@@ -802,3 +802,413 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 bash-5.3# 
 
 ```
+
+```
+bash-5.3# nix develop --command yarn test
+warning: Git tree '/react' is dirty
+yarn run v1.22.22
+$ node ./scripts/jest/jest-cli.js
+$ NODE_ENV=development RELEASE_CHANNEL=experimental compactConsole=false node ./scripts/jest/jest.js --config ./scripts/jest/config.source.js
+
+Running tests for default (experimental)...
+ PASS  packages/react-reconciler/src/__tests__/ReactHooksWithNoopRenderer-test.js (10.175 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMFragmentRefs-test.js (10.406 s)
+ PASS  packages/react-client/src/__tests__/ReactFlight-test.js (11.278 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerPartialHydration-test.internal.js (11.469 s)
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseEffectsSemantics-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseWithNoopRenderer-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMComponent-test.js (12.981 s)
+ PASS  packages/react-refresh/src/__tests__/ReactFresh-test.js (13.068 s)
+ PASS  packages/react-server/src/__tests__/ReactFlightAsyncDebugInfo-test.js
+ PASS  packages/react-dom/src/events/__tests__/DOMPluginEventSystem-test.internal.js (15.178 s)
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseList-test.js
+ PASS  packages/react-dom/src/__tests__/ReactErrorBoundaries-test.internal.js
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMBrowser-test.js
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMEdge-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncremental-test.js
+ FAIL  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMNode-test.js
+  ● ReactFlightDOMNode › should not corrupt the Node.js Buffer pool by detaching ArrayBuffers when using Web Streams
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8192
+    Received: 65536
+
+      1415 |
+      1416 |     // Verify this chunk uses the Buffer pool (8192 bytes for files < 4KB).
+    > 1417 |     expect(fileChunk.buffer.byteLength).toBe(8192);
+           |                                         ^
+      1418 |
+      1419 |     const readable = await serverAct(() =>
+      1420 |       ReactServerDOMServer.renderToReadableStream(fileChunk, webpackMap),
+
+      at Object.<anonymous> (packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMNode-test.js:1417:41)
+
+  ● ReactFlightDOMNode › detaches the abort listener from a composite signal once the prerender completes
+
+    TypeError: signals[0] is not of type AbortSignal.
+
+      2490 |     const outer = new AbortController();
+      2491 |     const timeout = new AbortController();
+    > 2492 |     const composite = AbortSignal.any([outer.signal, timeout.signal]);
+           |                                 ^
+      2493 |
+      2494 |     function App() {
+      2495 |       return <div>hello world</div>;
+
+      at Object.<anonymous> (packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMNode-test.js:2492:33)
+
+ PASS  packages/react-dom/src/__tests__/ReactDOMInput-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerPartialHydrationActivity-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactTransitionTracing-test.js
+ PASS  packages/react-dom/src/__tests__/ReactLegacyErrorBoundaries-test.internal.js
+ PASS  packages/internal-test-utils/__tests__/ReactInternalTestUtils-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactUse-test.js
+ PASS  packages/react/src/__tests__/ReactProfiler-test.internal.js
+ PASS  packages/react-debug-tools/src/__tests__/ReactHooksInspectionIntegration-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMForm-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMHydrationDiff-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactHooks-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMSelect-test.js
+ PASS  packages/react-dom/src/__tests__/DOMPropertyOperations-test.js
+ PASS  packages/react-dom/src/__tests__/ReactComponentLifeCycle-test.js
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOM-test.js (9.612 s)
+ PASS  packages/react-dom/src/__tests__/ReactUpdates-test.js
+ PASS  packages/react-native-renderer/src/__tests__/ResponderEventPlugin-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactAsyncActions-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorHandling-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerSelectiveHydration-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactLazy-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/Activity-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMLegacyFiber-test.js
+ PASS  packages/react-dom/src/__tests__/ReactLegacyUpdates-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMEventPropagation-test.js (9.641 s)
+ PASS  packages/react-native-renderer/src/__tests__/ReactFabric-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactNewContext-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspense-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMEventListener-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerSelectiveHydrationActivity-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactCompositeComponent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMTestSelectors-test.js
+ PASS  packages/react/src/__tests__/ReactStrictMode-test.js
+ PASS  packages/react-reconciler/src/__tests__/useEffectEvent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMViewTransition-test.js
+ PASS  packages/react/src/__tests__/ReactChildren-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzStaticBrowser-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactDeferredValue-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactTransition-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMTextarea-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalSideEffects-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMSingletonComponents-test.js
+ PASS  packages/use-sync-external-store/src/__tests__/useSyncExternalStoreShared-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactContextPropagation-test.js
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMForm-test.js
+ PASS  packages/react-dom/src/__tests__/ReactServerRendering-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOM-test.js
+ PASS  packages/react-test-renderer/src/__tests__/ReactTestRenderer-test.internal.js
+ PASS  packages/react-dom/src/events/plugins/__tests__/BeforeInputEventPlugin-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFiber-test.js (5.794 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMFiberAsync-test.js
+ PASS  packages/react/src/__tests__/createReactClassIntegration-test.js
+ PASS  packages/react-dom/src/__tests__/ReactServerRenderingHydration-test.js
+ PASS  packages/react-dom/src/__tests__/ReactLegacyCompositeComponent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactMultiChildReconcile-test.js
+ PASS  packages/react-dom/src/events/plugins/__tests__/ChangeEventPlugin-test.js
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMReply-test.js
+ PASS  packages/react-debug-tools/src/__tests__/ReactHooksInspection-test.js
+ PASS  packages/react-refresh/src/__tests__/ReactFreshIntegration-test.js (16.551 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzForm-test.js
+ PASS  packages/react-reconciler/src/__tests__/StrictEffectsMode-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactFragment-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFloat-test.js (36.878 s)
+ PASS  packages/react-reconciler/src/__tests__/ReactExpiration-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMUseId-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzServerNode-test.js
+ PASS  packages/react/src/__tests__/ReactTypeScriptClass-test.ts
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzShellHydration-test.js
+ PASS  packages/scheduler/src/__tests__/SchedulerMock-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzSuspenseList-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationHooks-test.js (7.117 s)
+ PASS  packages/react/src/__tests__/ReactES6Class-test.js
+ PASS  packages/react/src/__tests__/ReactContextValidator-test.js
+ PASS  packages/react-reconciler/src/__tests__/StrictEffectsModeDefaults-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactComponent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMImageLoad-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspensePlaceholder-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactTestUtilsAct-test.js
+ PASS  packages/react/src/__tests__/ReactCoffeeScriptClass-test.coffee
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalUpdates-test.js
+ PASS  packages/react-reconciler/src/__tests__/useMemoCache-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzViewTransition-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzServerBrowser-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseyCommitPhase-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactScope-test.internal.js
+ PASS  packages/react/src/__tests__/ReactElementValidator-test.internal.js
+ PASS  packages/react-dom/src/events/plugins/__tests__/SimpleEventPlugin-test.js
+ PASS  packages/react-dom/src/__tests__/ReactCompositeComponentState-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMConsoleErrorReportingLegacy-test.js
+ PASS  packages/react-reconciler/src/__tests__/useSyncExternalStore-test.js
+ PASS  packages/scheduler/src/__tests__/SchedulerProfiling-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactMemo-test.js
+ PASS  packages/react-dom/src/events/__tests__/SyntheticKeyboardEvent-test.js
+ PASS  packages/internal-test-utils/__tests__/ReactInternalTestUtilsDOM-test.js
+ PASS  packages/use-subscription/src/__tests__/useSubscription-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSiblingPrerendering-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzSuppressHydrationWarning-test.js
+ PASS  packages/react-reconciler/src/__tests__/ActivityLegacySuspense-test.js
+ PASS  packages/react-reconciler/src/__tests__/ActivitySuspense-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationElements-test.js (14.425 s)
+ PASS  packages/react-dom/src/__tests__/refs-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMActivity-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseEffectsSemanticsDOM-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzStaticNode-test.js
+ PASS  packages/react-dom/src/__tests__/ReactMultiChild-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactPerformanceTrack-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMConsoleErrorReporting-test.js
+ PASS  packages/react-refresh/src/__tests__/ReactFreshBabelPlugin-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactUpdaters-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactLegacyMount-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactActWarnings-test.js
+ PASS  packages/react-art/src/__tests__/ReactART-test.js
+ PASS  packages/react/src/__tests__/ReactCreateElement-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactConcurrentErrorRecovery-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMRoot-test.js
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMReplyEdge-test.js
+ PASS  packages/react-dom/src/__tests__/ReactRenderDocument-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationUserInteraction-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMNativeEventHeuristic-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSchedulerIntegration-test.js
+ PASS  packages/react/src/__tests__/forwardRef-test.js
+ PASS  packages/react-cache/src/__tests__/ReactCacheOld-test.internal.js
+ PASS  packages/scheduler/src/__tests__/SchedulerPostTask-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzServer-test.js (45.448 s)
+ PASS  packages/react/src/__tests__/ReactJSXRuntime-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerLifecycles-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactDefaultTransitionIndicator-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactOwnerStacks-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationLegacyContext-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseFuzz-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFragmentRefsDocument-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorLogging-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactFlushSync-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIsomorphicAct-test.js
+ PASS  packages/react-debug-tools/src/__tests__/ReactDevToolsHooksIntegration-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalScheduling-test.js
+ PASS  packages/react/src/__tests__/ReactElementClone-test.js
+ PASS  packages/react-test-renderer/src/__tests__/ReactTestRendererTraversal-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzStatic-test.js
+ PASS  packages/react-dom/src/__tests__/ReactEmptyComponent-test.js
+ PASS  packages/dom-event-testing-library/__tests__/index-test.internal.js
+ PASS  packages/scheduler/src/__tests__/Scheduler-test.js
+ PASS  packages/react-dom/src/client/__tests__/trustedTypes-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactBrowserEventEmitter-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactErrorStacks-test.js
+ PASS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMEdge-test.js
+ PASS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMNode-test.js
+ PASS  packages/scheduler/src/__tests__/SchedulerSetImmediate-test.js
+ PASS  packages/react-dom/src/__tests__/ReactIdentity-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMSuspensePlaceholder-test.js
+ PASS  packages/react-dom/src/__tests__/ReactTreeTraversal-test.js
+ PASS  packages/react/src/__tests__/ReactJSXElementValidator-test.js
+ PASS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOM-test.js
+ PASS  packages/react-is/src/__tests__/ReactIs-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationReconnecting-test.js
+ PASS  packages/react-dom/src/__tests__/CSSPropertyOperations-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMTextComponent-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactCache-test.js
+ PASS  packages/react-dom/src/events/plugins/__tests__/EnterLeaveEventPlugin-test.js
+ PASS  packages/react-reconciler/src/__tests__/ActivityStrictMode-test.js
+ PASS  packages/react-markup/src/__tests__/ReactMarkupServer-test.js
+ PASS  packages/react-dom/src/__tests__/ReactFunctionComponent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMOption-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationNewContext-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerSuspense-test.internal.js
+ PASS  packages/react/src/__tests__/ReactJSXTransformIntegration-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMSVG-test.js
+ PASS  packages/react-native-renderer/src/__tests__/EventPluginRegistry-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactLegacyContextDisabled-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMAttribute-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMSrcObject-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationClassContextType-test.js
+ PASS  scripts/eslint-rules/__tests__/safe-string-coercion-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactCPUSuspense-test.js
+ PASS  packages/react-dom/src/__tests__/validateDOMNesting-test.js
+ PASS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMBrowser-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseCallback-test.js
+ PASS  packages/react-dom/src/events/plugins/__tests__/SelectEventPlugin-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactPersistent-test.js
+ PASS  packages/react-markup/src/__tests__/ReactMarkupClient-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMShorthandCSSPropertyCollision-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSuspenseFallback-test.js
+ PASS  packages/react-dom/src/__tests__/ReactChildReconciler-test.js
+ PASS  packages/react/src/__tests__/ReactProfilerDevToolsIntegration-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactConfigurableErrorLogging-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzServerEdge-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMComponentTree-test.js
+ PASS  packages/react-server/src/__tests__/ReactFlightServer-test.js
+ PASS  packages/react-reconciler/src/__tests__/useRef-test.internal.js
+ PASS  packages/react/src/__tests__/ReactMismatchedVersions-test.js
+ PASS  packages/react/src/__tests__/forwardRef-test.internal.js
+ PASS  scripts/babel/__tests__/transform-test-gate-pragma-test.js
+ PASS  scripts/eslint-rules/__tests__/no-production-logging-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalReflection-test.js
+ PASS  packages/react-dom/src/__tests__/findDOMNodeFB-test.js
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMReplyNode-test.js
+ PASS  packages/react-server-dom-fb/src/__tests__/ReactDOMServerFB-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMFizzDeferredValue-test.js
+ PASS  packages/react-dom/src/__tests__/ReactWrongReturnPointer-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMHooks-test.js
+ PASS  packages/react-server/src/__tests__/ReactServer-test.js
+ PASS  packages/use-sync-external-store/src/__tests__/useSyncExternalStoreNative-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationUntrustedURL-test.js
+ PASS  packages/react-dom/src/events/__tests__/getEventKey-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMSelection-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactSubtreeFlagsWarning-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactFiberRefs-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactFlushSyncNoAggregateError-test.js
+ PASS  packages/react-test-renderer/src/__tests__/ReactTestRenderer-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactBatching-test.internal.js
+ PASS  packages/react-dom/src/__tests__/refs-destruction-test.js
+ PASS  packages/react/src/__tests__/ReactStrictMode-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactUpdatePriority-test.js
+ PASS  packages/react-dom/src/__tests__/ReactStartTransitionMultipleRenderers-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactConditionalUseWarning-test.js
+ PASS  packages/react/src/__tests__/ReactPureComponent-test.js
+ PASS  packages/react/src/__tests__/ReactProfilerComponent-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationLegacyContextDisabled-test.internal.js
+ PASS  packages/react-test-renderer/src/__tests__/ReactTestRendererAsync-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactPersistentUpdatesMinimalism-test.js
+ PASS  scripts/error-codes/__tests__/transform-error-messages.js
+ PASS  packages/react-reconciler/src/__tests__/ReactTopLevelFragment-test.js
+ PASS  packages/react-dom/src/events/__tests__/SyntheticMouseEvent-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactFiberHostContext-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactTestUtilsActUnmockedScheduler-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactClassComponentPropResolution-test.js
+ PASS  packages/react-debug-tools/src/__tests__/ReactHooksInspectionIntegrationDOM-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMHostComponentTransitions-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalUpdatesMinimalism-test.js
+ PASS  packages/react-dom/src/__tests__/ReactCompositeComponentNestedState-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactInterleavedUpdates-test.js
+ PASS  packages/react-dom/src/events/__tests__/SyntheticClipboardEvent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactMountDestruction-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMInvalidARIAHook-test.js
+ PASS  packages/scheduler/src/__tests__/SchedulerSetTimeout-test.js
+ PASS  packages/react-native-renderer/src/__tests__/ReactFabricFragmentRefs-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationSelect-test.js
+ PASS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReply-test.js
+ PASS  packages/react-dom/src/events/__tests__/SyntheticEvent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMSafariMicrotaskBug-test.js
+ PASS  packages/react-refresh/src/__tests__/ReactFreshMultipleRenderer-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationSpecialTypes-test.js
+ PASS  packages/react-test-renderer/src/__tests__/ReactTestRendererAct-test.js
+ PASS  packages/react-dom/src/events/__tests__/SyntheticWheelEvent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationBasic-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationModes-test.js
+ PASS  packages/react-dom/src/__tests__/refsLegacy-test.js
+ PASS  packages/react-client/src/__tests__/ReactFlightDebugChannel-test.js
+ PASS  packages/react-dom/src/__tests__/ReactClassComponentPropResolutionFizz-test.js
+ PASS  packages/react-dom/src/__tests__/InvalidEventListeners-test.js
+ PASS  packages/react-dom/src/__tests__/ReactCompositeComponentDOMMinimalism-test.js
+ PASS  packages/use-sync-external-store/src/__tests__/useSyncExternalStoreShimServer-test.js
+ PASS  packages/react-reconciler/src/__tests__/ErrorBoundaryReconciliation-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ActivityErrorHandling-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationCheckbox-test.js
+ PASS  packages/react-dom/src/client/__tests__/getNodeForCharacterOffset-test.js
+ PASS  packages/react-dom/src/__tests__/quoteAttributeValueForBrowser-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationRefs-test.js
+ PASS  packages/react-dom/src/__tests__/ReactEventIndependence-test.js
+ PASS  packages/react/src/__tests__/ReactStartTransition-test.js
+ PASS  packages/shared/__tests__/ReactError-test.internal.js
+ PASS  scripts/eslint-rules/__tests__/warning-args-test.internal.js
+ PASS  scripts/eslint-rules/__tests__/prod-error-codes-test.internal.js
+ PASS  packages/react-dom/src/__tests__/escapeTextForBrowser-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMNestedEvents-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationFragment-test.js
+ PASS  packages/react-dom/src/__tests__/ReactMultiChildText-test.js (7.075 s)
+ PASS  packages/react-dom/src/__tests__/ReactDOMLegacyComponentTree-test.internal.js
+ PASS  packages/react-reconciler/src/__tests__/ReactEffectOrdering-test.js
+ PASS  packages/react/src/__tests__/onlyChild-test.js
+ PASS  packages/react-dom/src/events/__tests__/SyntheticFocusEvent-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationTextarea-test.js
+ PASS  packages/react-server-dom-webpack/src/__tests__/ReactFlightNonWritablePromiseThen-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactNoopRendererAct-test.js
+ PASS  packages/react-reconciler/src/__tests__/ViewTransitionReactServer-test.js
+ PASS  packages/react-dom/src/__tests__/ReactErrorLoggingRecovery-test.js
+ PASS  packages/react-dom/src/__tests__/ReactErrorBoundariesHooks-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactMockedComponent-test.js
+ PASS  packages/react-reconciler/src/__tests__/ActivityReactServer-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactIncrementalErrorReplay-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactTopLevelText-test.js
+ PASS  packages/shared/__tests__/ReactErrorProd-test.internal.js
+ PASS  packages/shared/__tests__/normalizeConsoleFormat-test.internal.js
+ PASS  packages/react/src/__tests__/ReactCreateRef-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMBrowser-test.js
+ PASS  packages/react-dom/src/__tests__/ReactServerRenderingBrowser-test.js
+ PASS  packages/react-server-dom-turbopack/src/__tests__/ReactFlightTurbopackDOMReplyEdge-test.js
+ PASS  scripts/babel/__tests__/transform-prevent-infinite-loops-test.js
+ PASS  scripts/error-codes/__tests__/invertObject-test.js
+ PASS  packages/react-reconciler/src/__tests__/ReactClassSetStateCallback-test.js
+ PASS  scripts/shared/__tests__/evalToString-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMIframe-test.js
+ PASS  packages/react/src/__tests__/ReactVersion-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationObject-test.js
+ PASS  scripts/eslint-rules/__tests__/no-primitive-constructors-test.internal.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMserverIntegrationProgress-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMLegacyFloat-test.js
+ PASS  packages/react-native-renderer/src/__tests__/ReactNativeError-test.internal.js
+ PASS  packages/react-dom/src/client/__tests__/dangerouslySetInnerHTML-test.js
+ PASS  packages/react-dom/src/__tests__/ReactLegacyRootWarnings-test.js
+ PASS  packages/shared/__tests__/ReactDOMFrameScheduling-test.js
+ PASS  scripts/babel/__tests__/transform-lazy-jsx-import-test.js
+ PASS  packages/react-test-renderer/__tests__/shallow-test.js
+ PASS  packages/shared/__tests__/ReactSymbols-test.internal.js
+ PASS  packages/react/src/__tests__/React-hooks-arity.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMInReactServer-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationInput-test.js
+ PASS  packages/react-dom/src/__tests__/ReactDOMServerIntegrationAttributes-test.js (25.248 s)
+ PASS  packages/react/src/__tests__/ReactClassEquivalence-test.js (11.105 s)
+
+Summary of all failing tests
+ FAIL  packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMNode-test.js
+  ● ReactFlightDOMNode › should not corrupt the Node.js Buffer pool by detaching ArrayBuffers when using Web Streams
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8192
+    Received: 65536
+
+      1415 |
+      1416 |     // Verify this chunk uses the Buffer pool (8192 bytes for files < 4KB).
+    > 1417 |     expect(fileChunk.buffer.byteLength).toBe(8192);
+           |                                         ^
+      1418 |
+      1419 |     const readable = await serverAct(() =>
+      1420 |       ReactServerDOMServer.renderToReadableStream(fileChunk, webpackMap),
+
+      at Object.<anonymous> (packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMNode-test.js:1417:41)
+
+  ● ReactFlightDOMNode › detaches the abort listener from a composite signal once the prerender completes
+
+    TypeError: signals[0] is not of type AbortSignal.
+
+      2490 |     const outer = new AbortController();
+      2491 |     const timeout = new AbortController();
+    > 2492 |     const composite = AbortSignal.any([outer.signal, timeout.signal]);
+           |                                 ^
+      2493 |
+      2494 |     function App() {
+      2495 |       return <div>hello world</div>;
+
+      at Object.<anonymous> (packages/react-server-dom-webpack/src/__tests__/ReactFlightDOMNode-test.js:2492:33)
+
+
+Test Suites: 1 failed, 324 passed, 325 total
+Tests:       2 failed, 23 skipped, 6947 passed, 6972 total
+Snapshots:   302 passed, 302 total
+Time:        67.016 s
+Ran all test suites.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+bash-5.3# 
+
+```
