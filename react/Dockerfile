@@ -5,5 +5,5 @@ ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
 RUN nix-env -iA nixpkgs.pi-coding-agent
-RUN git clone -b v19.3.0 https://github.com/react/react.git
+RUN git clone https://github.com/nix-ontouchstart/react.git
 WORKDIR /react
