@@ -12,73 +12,9 @@ https://ontouchstart.github.io/home/react/2026-09-30T13-53-41-342Z_01a0f297-abdd
 
 https://ontouchstart.github.io/home/react/2026-09-29T19-53-16-272Z_01a0eeba-84f0-7455-bdeb-4deda7f9dcfb
 
-`flake.nix`
-
-```nix
-{
-  description = "React repository";
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  };
-  outputs = { self, nixpkgs }:
-    let
-      system = "aarch64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-      shell = pkgs.mkShell {
-        buildInputs = with pkgs; [
-          nodejs
-          yarn
-          git
-          bash
-          pkg-config
-          python3
-          cmake
-          libgcc
-          autoconf
-          automake
-          libtool
-          zlib
-          libpng
-          openjdk
-        ];
-      };
-    in
-    {
-      devShells.default = shell;
-      devShells.aarch64-linux.default = shell;
-    };
-}
-```
-
-```
-nix develop --command yarn install --ignore-scripts
-```
-
-```
-nix develop --command yarn build
-```
-
-```
-nix develop --command yarn test
-```
+[changes.patch](changes.patch)
 
 ```patch
-diff --git a/flake.nix b/flake.nix
-index e549d69295..400c0534ec 100644
---- a/flake.nix
-+++ b/flake.nix
-@@ -25,6 +25,8 @@
-           libtool
-           zlib
-           libpng
-+          optipng
-+          gifsicle
-           openjdk
-         ];
-       };
 diff --git a/package.json b/package.json
 index 24c65a60b1..a27218fdf8 100644
 --- a/package.json
@@ -373,6 +309,13 @@ index 8161186e1b..5750f59cdb 100644
  wrap-ansi@^8.1.0:
    version "8.1.0"
    resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-8.1.0.tgz#56dc22368ee570face1b49819975d9b9a5ead214"
+```
+
+```
+git clone https://github.com/react/react
+cd react
+git apply < /home/react/changes.patch 
+nix develop "git+https://github.com/nix-ontouchstart/react" --command bash -c "yarn install && yarn build"
 ```
 
 ```
