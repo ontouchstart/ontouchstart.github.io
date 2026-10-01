@@ -374,3 +374,165 @@ index 8161186e1b..5750f59cdb 100644
    version "8.1.0"
    resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-8.1.0.tgz#56dc22368ee570face1b49819975d9b9a5ead214"
 ```
+
+```
+bash-5.3# git clone https://github.com/react/react
+Cloning into 'react'...
+remote: Enumerating objects: 462918, done.
+remote: Counting objects: 100% (1033/1033), done.
+remote: Compressing objects: 100% (421/421), done.
+remote: Total 462918 (delta 857), reused 612 (delta 612), pack-reused 461885 (from 5)
+Receiving objects: 100% (462918/462918), 1.03 GiB | 5.21 MiB/s, done.
+Resolving deltas: 100% (337870/337870), done.
+bash-5.3# ls
+bin  dev  etc  home  nix  proc	react  root  sys  tmp  usr  var
+bash-5.3# cd react/compiler/
+bash-5.3# nix develop "git+https://github.com/nix-ontouchstart/react?dir=compiler" --command bash -c "yarn install && yarn build"
+remote: Enumerating objects: 263458, done.
+remote: Counting objects: 100% (300/300), done.
+remote: Compressing objects: 100% (226/226), done.
+remote: Total 263458 (delta 181), reused 74 (delta 74), pack-reused 263158 (from 4)
+Receiving objects: 100% (263458/263458), 131.73 MiB | 5.95 MiB/s, done.
+Resolving deltas: 100% (207132/207132), done.
+From https://github.com/nix-ontouchstart/react
+ * [new branch]            main       -> main
+yarn install v1.22.22
+(node:511) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[1/4] Resolving packages...
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.0"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.26.10"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.28.6"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.0"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.0"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.0"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.0"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.28.6"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+warning Resolution field "@babel/types@7.26.3" is incompatible with requested version "@babel/types@^7.27.1"
+[2/4] Fetching packages...
+warning react-forgive@0.0.0: The engine "vscode" appears to be invalid.
+warning bare-fs@4.1.3: The engine "bare" appears to be invalid.
+warning bare-os@3.6.1: The engine "bare" appears to be invalid.
+[3/4] Linking dependencies...
+warning " > eslint-plugin-react-compiler@0.0.0-experimental-9ed098e-20240725" has unmet peer dependency "eslint@>=7".
+warning " > react-compiler-runtime@0.0.1" has unmet peer dependency "react@^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > babel-plugin-react-compiler > @testing-library/react@13.4.0" has incorrect peer dependency "react@^18.0.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > babel-plugin-react-compiler > @testing-library/react@13.4.0" has incorrect peer dependency "react-dom@^18.0.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > babel-plugin-react-compiler > babel-jest@29.0.3" has incorrect peer dependency "@babel/core@^7.8.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > babel-plugin-react-compiler > babel-plugin-fbt@1.0.0" has unmet peer dependency "@fbtjs/default-collection-transform@^1.0.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > snap > fbt@1.0.2" has unmet peer dependency "babel-plugin-fbt@^1.0.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > snap > fbt@1.0.2" has unmet peer dependency "babel-plugin-fbt-runtime@^1.0.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > snap > fbt@1.0.2" has incorrect peer dependency "react@>=0.12.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > snap > @typescript-eslint/eslint-plugin@7.4.0" has unmet peer dependency "eslint@^8.56.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > snap > @typescript-eslint/parser@7.4.0" has unmet peer dependency "eslint@^8.56.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > snap > @typescript-eslint/eslint-plugin > @typescript-eslint/type-utils@7.4.0" has unmet peer dependency "eslint@^8.56.0".
+warning "workspace-aggregator-c914a8c1-faa6-4422-b4cf-ed3cd0ea8f5c > snap > @typescript-eslint/eslint-plugin > @typescript-eslint/utils@7.4.0" has unmet peer dependency "eslint@^8.56.0".
+[4/4] Building fresh packages...
+Done in 120.50s.
+yarn run v1.22.22
+$ yarn workspaces run build
+
+> babel-plugin-react-compiler-rust
+$ tsc
+
+> babel-plugin-react-compiler
+$ rimraf dist && tsup
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.4.0
+CLI Using tsup config: /react/compiler/packages/babel-plugin-react-compiler/tsup.config.ts
+CLI Target: es2015
+CJS Build start
+CJS dist/index.js 3.60 MB
+CJS ⚡️ Build success in 154ms
+
+> eslint-plugin-react-compiler
+$ rimraf dist && tsup
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.4.0
+CLI Using tsup config: /react/compiler/packages/eslint-plugin-react-compiler/tsup.config.ts
+CLI Target: es2015
+CJS Build start
+CJS dist/index.js 1.71 MB
+CJS ⚡️ Build success in 88ms
+
+> make-read-only-util
+$ rimraf dist && tsup
+CLI Building entry: src/makeReadOnly.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.4.0
+CLI Using tsup config: /react/compiler/packages/make-read-only-util/tsup.config.ts
+CLI Target: es2015
+CJS Build start
+CJS dist/makeReadOnly.js     3.78 KB
+CJS dist/makeReadOnly.js.map 6.35 KB
+CJS ⚡️ Build success in 8ms
+
+> react-compiler-healthcheck
+$ rimraf dist && tsup
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.4.0
+CLI Using tsup config: /react/compiler/packages/react-compiler-healthcheck/tsup.config.ts
+CLI Target: es2015
+CJS Build start
+CJS dist/index.js 1.70 MB
+CJS ⚡️ Build success in 97ms
+
+> react-compiler-runtime
+$ rimraf dist && tsup
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.4.0
+CLI Using tsup config: /react/compiler/packages/react-compiler-runtime/tsup.config.ts
+CLI Target: es2015
+CJS Build start
+CJS dist/index.js     12.04 KB
+CJS dist/index.js.map 18.81 KB
+CJS ⚡️ Build success in 8ms
+
+> react-forgive
+$ yarn run compile
+$ rimraf dist && concurrently -n server,client "scripts/build.mjs -t server" "scripts/build.mjs -t client"
+[client] scripts/build.mjs -t client exited with code 0
+[server] scripts/build.mjs -t server exited with code 0
+
+> react-mcp-server
+$ rimraf dist && tsup
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.4.0
+CLI Using tsup config: /react/compiler/packages/react-mcp-server/tsup.config.ts
+CLI Target: es2022
+CJS Build start
+CJS dist/index.js 1.71 MB
+CJS ⚡️ Build success in 95ms
+
+> snap
+$ rimraf dist && concurrently -n snap,runtime "tsc --build" "yarn --silent workspace react-compiler-runtime build"
+$ rimraf dist && tsup
+[runtime] CLI Building entry: src/index.ts
+[runtime] CLI Using tsconfig: tsconfig.json
+[runtime] CLI tsup v8.4.0
+[runtime] CLI Using tsup config: /react/compiler/packages/react-compiler-runtime/tsup.config.ts
+[runtime] CLI Target: es2015
+[runtime] CJS Build start
+[runtime] CJS dist/index.js     12.04 KB
+[runtime] CJS dist/index.js.map 18.81 KB
+[runtime] CJS ⚡️ Build success in 9ms
+[runtime] yarn --silent workspace react-compiler-runtime build exited with code 0
+[snap] tsc --build exited with code 0
+Done in 9.22s.
+bash-5.3# 
+```
