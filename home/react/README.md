@@ -1,3 +1,5 @@
+https://ontouchstart.github.io/home/react/2026-09-30T20-43-52-222Z_01a0f40f-341e-771c-90cd-5e37562fda39
+
 https://ontouchstart.github.io/home/react/2026-09-30T13-53-41-342Z_01a0f297-abdd-76ac-81cb-438bbd5d59f8
 
 https://ontouchstart.github.io/home/react/2026-09-29T19-53-16-272Z_01a0eeba-84f0-7455-bdeb-4deda7f9dcfb
@@ -56,6 +58,19 @@ nix develop --command yarn test
 ```
 
 ```patch
+diff --git a/flake.nix b/flake.nix
+index e549d69295..400c0534ec 100644
+--- a/flake.nix
++++ b/flake.nix
+@@ -25,6 +25,8 @@
+           libtool
+           zlib
+           libpng
++          optipng
++          gifsicle
+           openjdk
+         ];
+       };
 diff --git a/package.json b/package.json
 index 24c65a60b1..a27218fdf8 100644
 --- a/package.json
@@ -68,6 +83,38 @@ index 24c65a60b1..a27218fdf8 100644
      "@types/invariant": "^2.2.35",
      "@typescript-eslint/eslint-plugin": "^6.21.0",
      "@typescript-eslint/parser": "^6.21.0",
+diff --git a/packages/react-devtools-extensions/improveImages.mjs b/packages/react-devtools-extensions/improveImages.mjs
+index 385624a26b..20977f359c 100644
+--- a/packages/react-devtools-extensions/improveImages.mjs
++++ b/packages/react-devtools-extensions/improveImages.mjs
+@@ -4,7 +4,6 @@ import filesize from 'filesize'
+ import imagemin from 'imagemin'
+ import imageminGifsicle from 'imagemin-gifsicle'
+ import imageminJpegtran from 'imagemin-jpegtran'
+-import imageminOptipng from 'imagemin-optipng'
+ import imageminSvgo from 'imagemin-svgo'
+ import parseFilepath from 'parse-filepath'
+ import chalk from 'chalk'
+@@ -12,7 +11,6 @@ import chalk from 'chalk'
+ const plugins = [
+   imageminGifsicle({}),
+   imageminJpegtran({}),
+-  imageminOptipng({}),
+   imageminSvgo({})
+ ]
+ 
+diff --git a/packages/react-devtools-extensions/package.json b/packages/react-devtools-extensions/package.json
+index 9dfceea840..3711d141c7 100644
+--- a/packages/react-devtools-extensions/package.json
++++ b/packages/react-devtools-extensions/package.json
+@@ -49,7 +49,6 @@
+     "imagemin": "^8.0.0",
+     "imagemin-gifsicle": "^7.0.0",
+     "imagemin-jpegtran": "^6.0.0",
+-    "imagemin-optipng": "^7.0.0",
+     "imagemin-svgo": "^7.0.0",
+     "jest-fetch-mock": "^3.0.3",
+     "node-libs-browser": "0.5.3",
 diff --git a/packages/shared/ReactVersion.js b/packages/shared/ReactVersion.js
 index bd5fa23ca2..1a733fd7ce 100644
 --- a/packages/shared/ReactVersion.js
@@ -103,7 +150,7 @@ index acd1846b39..e48831f132 100644
      tsconfig: './packages/eslint-plugin-react-hooks/tsconfig.json',
      prebuild: `mkdir -p ./compiler/packages/babel-plugin-react-compiler/dist && echo "module.exports = require('../src/index.ts');" > ./compiler/packages/babel-plugin-react-compiler/dist/index.js`,
 diff --git a/yarn.lock b/yarn.lock
-index 8161186e1b..70418a6388 100644
+index 8161186e1b..5750f59cdb 100644
 --- a/yarn.lock
 +++ b/yarn.lock
 @@ -4058,6 +4058,11 @@
@@ -180,7 +227,51 @@ index 8161186e1b..70418a6388 100644
  espree@10.0.1, espree@^10.0.1:
    version "10.0.1"
    resolved "https://registry.yarnpkg.com/espree/-/espree-10.0.1.tgz#600e60404157412751ba4a6f3a2ee1a42433139f"
-@@ -14364,7 +14415,7 @@ rc@1.2.8, rc@^1.2.8:
+@@ -10477,15 +10528,6 @@ imagemin-jpegtran@^6.0.0:
+     is-jpg "^2.0.0"
+     jpegtran-bin "^4.0.0"
+ 
+-imagemin-optipng@^7.0.0:
+-  version "7.1.0"
+-  resolved "https://registry.yarnpkg.com/imagemin-optipng/-/imagemin-optipng-7.1.0.tgz#2225c82c35e5c29b7fa98d4f9ecee1161a68e888"
+-  integrity sha512-JNORTZ6j6untH7e5gF4aWdhDCxe3ODsSLKs/f7Grewy3ebZpl1ZsU+VUTPY4rzeHgaFA8GSWOoA8V2M3OixWZQ==
+-  dependencies:
+-    exec-buffer "^3.0.0"
+-    is-png "^2.0.0"
+-    optipng-bin "^6.0.0"
+-
+ imagemin-svgo@^7.0.0:
+   version "7.1.0"
+   resolved "https://registry.yarnpkg.com/imagemin-svgo/-/imagemin-svgo-7.1.0.tgz#528a42fd3d55eff5d4af8fd1113f25fb61ad6d9a"
+@@ -11041,11 +11083,6 @@ is-plain-object@^5.0.0:
+   resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-5.0.0.tgz#4427f50ab3429e9025ea7d52e9043a9ef4159344"
+   integrity sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==
+ 
+-is-png@^2.0.0:
+-  version "2.0.0"
+-  resolved "https://registry.yarnpkg.com/is-png/-/is-png-2.0.0.tgz#ee8cbc9e9b050425cedeeb4a6fb74a649b0a4a8d"
+-  integrity sha512-4KPGizaVGj2LK7xwJIz8o5B2ubu1D/vcQsgOGFEDlpcvgZHto4gBnyd0ig7Ws+67ixmwKoNmu0hYnpo6AaKb5g==
+-
+ is-potential-custom-element-name@^1.0.1:
+   version "1.0.1"
+   resolved "https://registry.yarnpkg.com/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.1.tgz#171ed6f19e3ac554394edf78caa05784a45bebb5"
+@@ -13271,15 +13308,6 @@ optionator@^0.9.3:
+     prelude-ls "^1.2.1"
+     type-check "^0.4.0"
+ 
+-optipng-bin@^6.0.0:
+-  version "6.0.0"
+-  resolved "https://registry.yarnpkg.com/optipng-bin/-/optipng-bin-6.0.0.tgz#376120fa79d5e71eee2f524176efdd3a5eabd316"
+-  integrity sha512-95bB4y8IaTsa/8x6QH4bLUuyvyOoGBCLDA7wOgDL8UFqJpSUh1Hob8JRJhit+wC1ZLN3tQ7mFt7KuBj0x8F2Wg==
+-  dependencies:
+-    bin-build "^3.0.0"
+-    bin-wrapper "^4.0.0"
+-    logalot "^2.0.0"
+-
+ ordered-read-streams@^1.0.0:
+   version "1.0.0"
+   resolved "https://registry.yarnpkg.com/ordered-read-streams/-/ordered-read-streams-1.0.0.tgz#d674a86ffcedf83d0ae06afa2918855e96d4033a"
+@@ -14364,7 +14392,7 @@ rc@1.2.8, rc@^1.2.8:
      object-assign "^4.1.1"
      scheduler "^0.20.2"
  
@@ -189,7 +280,7 @@ index 8161186e1b..70418a6388 100644
    version "18.3.1"
    resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
    integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
-@@ -14374,6 +14425,11 @@ rc@1.2.8, rc@^1.2.8:
+@@ -14374,6 +14402,11 @@ rc@1.2.8, rc@^1.2.8:
    resolved "https://registry.yarnpkg.com/react-is/-/react-is-19.2.8.tgz#09826f9fbc187bc668e3e5c62edc001f804d5018"
    integrity sha512-s5un28nYxKJw5gvUHyW5PCC28CvBqLu9r3cWgzHT4Vo/5fqqkFcdRYsGcKf50WMPpjjFZS5d76fn3YCo2njKwQ==
  
@@ -201,7 +292,7 @@ index 8161186e1b..70418a6388 100644
  react-lifecycles-compat@^3.0.4:
    version "3.0.4"
    resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
-@@ -15798,7 +15854,7 @@ string-natural-compare@^3.0.1:
+@@ -15798,7 +15831,7 @@ string-natural-compare@^3.0.1:
    resolved "https://registry.yarnpkg.com/string-natural-compare/-/string-natural-compare-3.0.1.tgz#7a42d58474454963759e8e8b7ae63d71c1e7fdf4"
    integrity sha512-n3sPwynL1nwKi3WJ6AIsClwBMa0zTi54fn2oLU6ndfTSIO05xaznjSf15PcBZU6FNWbmN5Q6cxT4V5hGvB4taw==
  
@@ -210,7 +301,7 @@ index 8161186e1b..70418a6388 100644
    version "4.2.3"
    resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
    integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
-@@ -15825,6 +15881,15 @@ string-width@^4.0.0:
+@@ -15825,6 +15858,15 @@ string-width@^4.0.0:
      is-fullwidth-code-point "^3.0.0"
      strip-ansi "^6.0.0"
  
@@ -226,7 +317,7 @@ index 8161186e1b..70418a6388 100644
  string-width@^5.0.1, string-width@^5.1.2:
    version "5.1.2"
    resolved "https://registry.yarnpkg.com/string-width/-/string-width-5.1.2.tgz#14f8daec6d81e7221d2a357e668cab73bdbca794"
-@@ -15885,7 +15950,7 @@ string_decoder@~1.1.1:
+@@ -15885,7 +15927,7 @@ string_decoder@~1.1.1:
    dependencies:
      safe-buffer "~5.1.0"
  
@@ -235,7 +326,7 @@ index 8161186e1b..70418a6388 100644
    version "6.0.1"
    resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
    integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
-@@ -15906,6 +15971,13 @@ strip-ansi@^5.1.0:
+@@ -15906,6 +15948,13 @@ strip-ansi@^5.1.0:
    dependencies:
      ansi-regex "^4.1.0"
  
@@ -249,7 +340,7 @@ index 8161186e1b..70418a6388 100644
  strip-ansi@^7.0.1:
    version "7.1.0"
    resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-7.1.0.tgz#d5b6568ca689d8561370b0707685d22434faff45"
-@@ -17441,7 +17513,7 @@ workerize-loader@^2.0.2:
+@@ -17441,7 +17490,7 @@ workerize-loader@^2.0.2:
    dependencies:
      loader-utils "^2.0.0"
  
@@ -258,7 +349,7 @@ index 8161186e1b..70418a6388 100644
    version "7.0.0"
    resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
    integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
-@@ -17459,6 +17531,15 @@ wrap-ansi@^6.2.0:
+@@ -17459,6 +17508,15 @@ wrap-ansi@^6.2.0:
      string-width "^4.1.0"
      strip-ansi "^6.0.0"
  
