@@ -1,0 +1,68 @@
+﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+
+====================
+
+User prompt 1 of 1 - 10/1/2026, 3:01:05 PM:
+Continue from https://ontouchstart.github.io/home/react/duck.ai_2026-10-01_13-56-52 make a plan  a test  focused on project within the narrow scope of MCP 
+
+Gemma 4 31B:
+Since the `react-mcp-server` is the bridge between the React Compiler's internal logic and an AI model, the "narrow scope" involves treating the compiler not just as a build tool, but as a set of **queryable services**.
+
+## MCP Integration Plan
+
+This plan focuses on transforming the compiler's analysis passes into an MCP toolset, ensuring the server remains part of the deterministic bootstrapper.
+
+### Phase 1: Tool Definition (The API)
+Define the specific primitives the MCP server will expose to the LLM. Instead of a single "compile" button, the server should expose the compiler's internal stages as discrete tools:
+*   `analyze_stability`: Takes a JS snippet and returns a map of variables identified as stable vs. dynamic.
+*   `get_slot_allocation`: Returns how the compiler intends to map values to `useMemoCache` slots.
+*   `compile_to_ir`: Returns the Intermediate Representation (IR) of the code, allowing the LLM to "see" the data flow.
+*   `validate_health`: Runs the healthcheck validator on a piece of code and returns a list of safety violations.
+
+### Phase 2: Backend Integration
+Connect the MCP server wrapper to the compiler core. 
+*   **Interface Layer**: Create a thin TypeScript or Rust wrapper (depending on the port status) that invokes the compiler's analysis passes without running a full Babel transform.
+*   **Context Window Optimization**: Since ASTs and IRs are verbose, implement a "summarizer" that prunes irrelevant nodes before sending the data back to the LLM to avoid token overflow.
+*   **State Management**: Ensure the server is stateless, treating each MCP request as a fresh compilation unit to maintain determinism.
+
+### Phase 3: Deterministic Deployment
+Integrate the MCP server into the `generate.sh` bootstrapper so the entire AI-toolchain can be recreated from a single commit hash.
+*   **Build Pipeline**: Add a step to `generate.sh` that builds the `react-mcp-server` binary/bundle after the compiler core is built.
+*   **Configuration Pinning**: Include the MCP server's version and the target LLM's context specifications in the `config.toml`.
+*   **Automated Wiring**: Generate a `config.json` for the MCP client (e.g., Claude Desktop) automatically during the boot process.
+
+### Phase 4: Evaluation Loop
+Establish a feedback loop where the LLM uses the tools to suggest optimizations, which are then verified by the compiler's own healthcheck.
+*   **The Cycle**: LLM $\rightarrow$ `analyze_stability` $\rightarrow$ Suggested Refactor $\rightarrow$ `validate_health` $\rightarrow$ Final Code.
+
+***
+
+## MCP Deterministic Test Suite
+
+To verify the MCP server, you need a test that ensures the AI receives the exact same analysis for the same code, regardless of when the environment was bootstrapped.
+
+### Test Case: Memoization Stability Verification
+**Goal**: Verify that the `analyze_stability` tool correctly identifies a "leaky" dependency in a React component.
+
+**1. Input Setup**
+Create a test file `tests/mcp/stability_leak.js`:
+```javascript
+function MyComponent({ props }) {
+  const value = props.data || "default"; 
+  const derived = expensiveCall(value); // Should be stable if props.data is stable
+  return <div>{derived}</div>;
+}
+```
+
+**2. Execution Procedure**
+1.  **Invoke Tool**: Send a request to the MCP server: `call_tool("analyze_stability", { code: "..." })`.
+2.  **Capture Output**: The server should return a JSON object identifying `value` and `derived` as "dynamic" or "stable" based on the current compiler logic.
+3.  **Compare to Gold Set**: Compare the JSON response against a pre-calculated "Gold Set" (a snapshot of the original JS compiler's analysis of the same snippet).
+
+**3. Success Criteria**
+*   **Logical Parity**: The Rust-backed MCP server returns the same stability markers as the original JS implementation.
+*   **Structural Determinism**: The JSON schema of the response is identical across different runs of the `generate.sh` script.
+*   **Latency Threshold**: The round-trip from MCP request to compiler analysis is $< 200\text{ms}$ to ensure the AI agent doesn't timeout.
+
+Read More
+- https://ontouchstart.github.io/home/react/duck.ai_2026-10-01_13-56-52
