@@ -1,3 +1,7 @@
+# home/react
+
+https://ontouchstart.github.io/home/react/duck.ai_2026-09-30_22-03-59
+
 https://ontouchstart.github.io/home/react/2026-09-30T20-43-52-222Z_01a0f40f-341e-771c-90cd-5e37562fda39
 
 https://ontouchstart.github.io/home/react/2026-09-30T13-53-41-342Z_01a0f297-abdd-76ac-81cb-438bbd5d59f8
