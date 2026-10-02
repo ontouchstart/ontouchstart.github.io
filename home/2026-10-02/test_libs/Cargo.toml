@@ -1,0 +1,9 @@
+[package]
+name = "test_libs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rusqlite = "0.31.0"
+curl = "0.4.0"
+openssl = "0.10"

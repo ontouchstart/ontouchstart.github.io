@@ -19,6 +19,8 @@
           pkgs.curl
           pkgs.sqlite
           pkgs.fossil
+          pkgs.pkg-config
+          pkgs.openssl
         ];
       };
     in
