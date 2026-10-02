@@ -25,3 +25,8 @@ https://ontouchstart.github.io/home/2026-10-02/2026-10-02T16-04-11-730Z_01a0fd5b
 nix develop --command sh -c 'cargo run --manifest-path jsonl2md/Cargo.toml < 2026-10-02T16-44-21-106Z_01a0fd80-a2f1-7313-bba7-ef11140d65b9.jsonl' > 2026-10-02T16-44-21-106Z_01a0fd80-a2f1-7313-bba7-ef11140d65b9.md
 ```
 https://ontouchstart.github.io/home/2026-10-02/2026-10-02T16-44-21-106Z_01a0fd80-a2f1-7313-bba7-ef11140d65b9
+
+```
+nix develop --command sh -c 'cargo run --manifest-path jsonl2md/Cargo.toml < 2026-10-02T17-22-32-793Z_01a0fda3-9ad8-71ac-9535-0e3111e2158a.jsonl' > 2026-10-02T17-22-32-793Z_01a0fda3-9ad8-71ac-9535-0e3111e2158a.md
+```
+https://ontouchstart.github.io/home/2026-10-02/2026-10-02T17-22-32-793Z_01a0fda3-9ad8-71ac-9535-0e3111e2158a
