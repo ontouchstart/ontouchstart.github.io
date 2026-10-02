@@ -22,6 +22,9 @@
           pkgs.pkg-config
           pkgs.openssl
         ];
+        shellHook = ''
+          export CARGO_TARGET_DIR=/tmp/cargo-target
+        '';
       };
     in
     {
