@@ -24,6 +24,8 @@
         ];
         shellHook = ''
           export CARGO_TARGET_DIR=/tmp/cargo-target
+          export CARGO_HOME=/tmp/cargo-home
+          mkdir -p $CARGO_HOME
         '';
       };
     in
