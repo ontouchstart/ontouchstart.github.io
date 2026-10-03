@@ -1,4 +1,6 @@
-﻿This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+﻿# Filesystem-as-Documentation: Autonomous API Discovery and Forensic Debugging in an Isolated Rust/Nix Environment
+ 
+This conversation was generated with Duck.ai (https://duck.ai) using Google's Gemma 4 31B Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
 
 ====================
 
