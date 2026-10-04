@@ -1,6 +1,8 @@
 # pi
 
-https://github.com/earendil-works/pi/releases/tag/v0.87.1
+https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/pi/pi-coding-agent/package.nix
+
+https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/bu/bun/package.nix
 
 ```
 make build
@@ -14,9 +16,13 @@ https://ontouchstart.github.io/pi/build.2.log
 make version
 ```
 
-https://ontouchstart.github.io/pi/version.1.log
+https://ontouchstart.github.io/pi/pi.version.1.log
 
-https://ontouchstart.github.io/pi/version.2.log
+https://ontouchstart.github.io/pi/pi.version.2.log
+
+https://ontouchstart.github.io/pi/bun.version.1.log
+
+https://ontouchstart.github.io/pi/bun.version.2.log
 
 ```
 make dev
