@@ -1,5 +1,19 @@
 # 2026-10-05
 
+https://ontouchstart.github.io/home/2026-10-05/
+
+https://ontouchstart.github.io/home/2026-10-05/2026-10-05T13-05-48-683Z_01a10c2b-a28b-7312-9fd4-88a8d0736b3f
+
+https://ontouchstart.github.io/home/2026-10-05/2026-10-05T14-25-41-571Z_01a10c74-c4c2-731b-a33d-97785c4a069e
+
+[Use tools to build tools](https://ontouchstart.github.io/home/2026-10-05/duck.ai_2026-10-05_12-27-44)
+
+https://ontouchstart.github.io/home/2026-10-05/2026-10-05T17-17-57-108Z_01a10d12-79f3-7064-a459-ca8cbb702f70
+
+https://ontouchstart.github.io/home/2026-10-05/2026-10-05T19-08-35-939Z_01a10d77-c6e1-7357-bc1a-62be08e28419
+
+https://ontouchstart.github.io/home/2026-10-05/2026-10-05T19-54-05-042Z_01a10da1-6b71-722a-a6ef-debde6622d0f
+
 ```
 bash-5.3# jq -s 'sort_by(.timestamp) | last' *.jsonl
 {
@@ -49,17 +63,5 @@ bash-5.3# jq -s 'sort_by(.timestamp) | last' *.jsonl
 bash-5.3# 
 ```
 
-https://ontouchstart.github.io/home/2026-10-05/
-
-https://ontouchstart.github.io/home/2026-10-05/2026-10-05T13-05-48-683Z_01a10c2b-a28b-7312-9fd4-88a8d0736b3f
-
-https://ontouchstart.github.io/home/2026-10-05/2026-10-05T14-25-41-571Z_01a10c74-c4c2-731b-a33d-97785c4a069e
-
-https://ontouchstart.github.io/home/2026-10-05/2026-10-05T17-17-57-108Z_01a10d12-79f3-7064-a459-ca8cbb702f70
-
-https://ontouchstart.github.io/home/2026-10-05/2026-10-05T19-08-35-939Z_01a10d77-c6e1-7357-bc1a-62be08e28419
-
-https://ontouchstart.github.io/home/2026-10-05/2026-10-05T19-54-05-042Z_01a10da1-6b71-722a-a6ef-debde6622d0f
-
-[Use tools to build tools](https://ontouchstart.github.io/home/2026-10-05/duck.ai_2026-10-05_12-27-44)
+[Why the session was frustrating](https://ontouchstart.github.io/home/2026-10-05/duck.ai_2026-10-05_18-10-49)
 
