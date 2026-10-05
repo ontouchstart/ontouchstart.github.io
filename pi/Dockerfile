@@ -6,4 +6,5 @@ ENV LC_ALL=C.UTF-8
 
 RUN nix profile add github:NixOS/nixpkgs/master#pi-coding-agent
 RUN nix profile add github:NixOS/nixpkgs/master#bun
+RUN nix profile add github:NixOS/nixpkgs/master#jq
 WORKDIR /

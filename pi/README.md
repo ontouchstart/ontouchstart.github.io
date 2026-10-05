@@ -4,6 +4,8 @@ https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/pi/pi-coding-agent/pac
 
 https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/bu/bun/package.nix
 
+https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/jq/jq/package.nix
+
 ```
 make build
 ```
@@ -18,11 +20,9 @@ make version
 
 https://ontouchstart.github.io/pi/pi.version.1.log
 
-https://ontouchstart.github.io/pi/pi.version.2.log
-
 https://ontouchstart.github.io/pi/bun.version.1.log
 
-https://ontouchstart.github.io/pi/bun.version.2.log
+https://ontouchstart.github.io/pi/jq.version.1.log
 
 ```
 make dev
