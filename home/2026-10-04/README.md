@@ -7,3 +7,5 @@
 [SKILL: Inspecting Immutable NixOS Environment Source](https://ontouchstart.github.io/home/2026-10-04/duck.ai_2026-10-04_15-33-02)
 
 [Source-Anchoring: Eliminating Documentation Drift via Implementation Ground-Truth](https://ontouchstart.github.io/home/2026-10-04/duck.ai_2026-10-04_19-27-58)
+
+https://ontouchstart.github.io/home/2026-10-04/2026-10-04T23-55-51-317Z_01a10958-6895-7178-aa80-ca25c7e6848e
