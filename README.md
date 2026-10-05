@@ -1,1 +1,1 @@
-# Carpe Diem
+# Cogito, ergo sum
