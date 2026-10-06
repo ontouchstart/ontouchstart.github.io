@@ -1,5 +1,5 @@
 {
-  description = "2026-10-05";
+  description = "2026-10-06-bun";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/master";
