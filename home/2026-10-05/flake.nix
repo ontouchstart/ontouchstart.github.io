@@ -26,7 +26,6 @@
       };
     in
     {
-      devShells.default = shell;
       devShells.aarch64-linux.default = shell;
     };
 }

@@ -1,5 +1,5 @@
 {
-  description = "2026-10-05";
+  description = "2026-10-06";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -26,7 +26,6 @@
       };
     in
     {
-      devShells.default = shell;
       devShells.aarch64-linux.default = shell;
     };
 }

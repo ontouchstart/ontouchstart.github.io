@@ -1,5 +1,5 @@
 {
-  description = "Minimum development shell for Rust, libcurl, and libsqlite3";
+  description = "2026-10-02";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -30,7 +30,6 @@
       };
     in
     {
-      devShells.default = shell;
       devShells.aarch64-linux.default = shell;
     };
 }
