@@ -1,5 +1,8 @@
 # 2026-10-05
 
+[Using Tools to Build Tools: A Study in Deterministic Agent Development](https://ontouchstart.github.io/home/2026-10-05/duck.ai_2026-10-05_20-59-22)
+
+
 https://ontouchstart.github.io/home/2026-10-05/
 
 https://ontouchstart.github.io/home/2026-10-05/2026-10-05T13-05-48-683Z_01a10c2b-a28b-7312-9fd4-88a8d0736b3f
