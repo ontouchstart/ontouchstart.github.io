@@ -6,3 +6,4 @@ https://ontouchstart.github.io/home/2026-10-06/2026-10-06T10-43-44-791Z_01a110cf
 
 https://ontouchstart.github.io/home/2026-10-06/2026-10-06T12-42-11-924Z_01a1113c-6053-72cb-b0dc-2f603756b7c3
 
+[Engineering Determinism: Analysis of the Bun Runtime Reliability Suite](https://ontouchstart.github.io/home/2026-10-06/duck.ai_2026-10-06_09-47-39)
