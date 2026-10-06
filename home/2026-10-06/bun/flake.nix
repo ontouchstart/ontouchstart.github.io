@@ -12,14 +12,11 @@
         inherit system;
         config.allowUnfree = true;
       };
-      shell = pkgs.mkShell {
-        buildInputs = [ pkgs.bun ];
-        shellHook = ''
-          export PATH="${pkgs.bun}/bin:${pkgs.coreutils}/bin"
-        '';
-      };
     in
     {
-      devShells.aarch64-linux.default = shell;
+      devShells.${system}.default = pkgs.mkShell {
+        buildInputs = [ pkgs.bun ];
+      };
     };
 }
+
