@@ -4,7 +4,9 @@ RUN echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
-RUN nix profile add github:NixOS/nixpkgs/master#pi-coding-agent
-RUN nix profile add github:NixOS/nixpkgs/master#bun
-RUN nix profile add github:NixOS/nixpkgs/master#jq
-WORKDIR /
+RUN nix profile add \
+  github:NixOS/nixpkgs/master#pi-coding-agent \
+  github:NixOS/nixpkgs/master#bun \
+  github:NixOS/nixpkgs/master#jq \
+  github:NixOS/nixpkgs/master#gnumake
+WORKDIR /workspace

@@ -4,3 +4,6 @@ services:
     volumes:
       - ../home:/home
       - ../agent:/root/.pi/agent
+      - ../github:/github
+    tmpfs:
+      - /workspace
