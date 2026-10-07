@@ -1,3 +1,7 @@
+https://ontouchstart.github.io/home/2026-10-06/bun/tests/bun
+
+https://ontouchstart.github.io/home/2026-10-06/bun/tests/bun/2026-10-07T00-13-55-011Z_01a113b5-a9c1-7370-8050-b21a65f8d2bb
+
 ```
 bash-5.3# nix develop --command bun test
 path "/home/2026-10-06/bun/tests/bun" does not contain a 'flake.nix', searching up
@@ -242,5 +246,4 @@ Why: Offload heavy tasks to background threads.
  0 fail
 Ran 20 tests across 21 files. [1.85s]
 bash-5.3# 
-
 ```
