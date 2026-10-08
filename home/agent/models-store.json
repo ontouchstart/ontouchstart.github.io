@@ -1,0 +1,35 @@
+{
+  "llama.cpp": {
+    "models": [
+      {
+        "id": "ggml-org/gemma-4-12B-it-GGUF:Q8_0",
+        "name": "ggml-org/gemma-4-12B-it-GGUF:Q8_0",
+        "api": "openai-completions",
+        "provider": "llama.cpp",
+        "baseUrl": "http://host.docker.internal:8080/v1",
+        "reasoning": false,
+        "input": [
+          "text",
+          "image"
+        ],
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0
+        },
+        "contextWindow": 196096,
+        "maxTokens": 196096,
+        "compat": {
+          "supportsStore": false,
+          "supportsDeveloperRole": false,
+          "supportsReasoningEffort": false,
+          "supportsUsageInStreaming": true,
+          "supportsStrictMode": false,
+          "maxTokensField": "max_tokens"
+        }
+      }
+    ],
+    "checkedAt": 1785984902974
+  }
+}
