@@ -1,6 +1,6 @@
 # 2026-10-07
 
-
+https://ontouchstart.github.io/home/2026-10-07/2026-10-07T22-56-25-692Z_01a11895-145b-73f4-9249-182259271184
 
 ```
 bash-5.3# nix develop --command bun test
