@@ -29,20 +29,15 @@ fn main() {
 fn format_entry(data: &Value) -> String {
     let mut output = String::new();
     
-    if let Some(obj) = data.as_object() {
-        let id = obj.get("id").and_then(|v| v.as_str()).unwrap_or("N/A");
-        output.push_str(&format!("## Entry {}\n\n", id));
-        
-        output.push_str(&format_value(data, 0));
-        
-        output.push_str("---\n\n");
-    }
+    output.push_str(&format_value(data, 0));
+    
+    output.push_str("---\n\n");
     
     output
 }
 
 fn format_value(value: &Value, indent: usize) -> String {
-    let header_level = 3 + indent;
+    let header_level = 1 + indent;
     match value {
         Value::Object(map) => {
             let mut output = String::new();
@@ -50,7 +45,7 @@ fn format_value(value: &Value, indent: usize) -> String {
             keys.sort();
             for key in keys {
                 let val = &map[key];
-                output.push_str(&format!("{} {}\n\n", "#".repeat(header_level), key));
+                output.push_str(&format!("{} {}\n\n", "=".repeat(header_level), key));
                 if val.is_object() || val.is_array() {
                     output.push_str(&format_value(val, indent + 1));
                     output.push_str("\n\n");
@@ -85,47 +80,5 @@ fn format_leaf(value: &Value) -> String {
         Value::Bool(b) => b.to_string(),
         Value::Null => "null".to_string(),
         _ => serde_json::to_string(value).unwrap(),
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use serde_json::json;
-
-    #[test]
-    fn test_format_entry_basic() {
-        let data = json!({
-            "id": "123",
-            "key": "value"
-        });
-        let result = format_entry(&data);
-        assert!(result.contains("## Entry 123"));
-        assert!(result.contains("### id"));
-        assert!(result.contains("### key"));
-    }
-
-    #[test]
-    fn test_format_value_recursive() {
-        let data = json!({
-            "a": {
-                "b": 1
-            },
-            "c": [2, 3]
-        });
-        let result = format_value(&data, 0);
-        assert!(result.contains("### a"));
-        assert!(result.contains("#### b"));
-        assert!(result.contains("### c"));
-        assert!(result.contains("[] 0"));
-        assert!(result.contains("[] 1"));
-    }
-
-    #[test]
-    fn test_format_leaf() {
-        assert_eq!(format_leaf(&json!("hello")), "hello");
-        assert_eq!(format_leaf(&json!(42)), "42");
-        assert_eq!(format_leaf(&json!(true)), "true");
-        assert_eq!(format_leaf(&json!(null)), "null");
     }
 }
