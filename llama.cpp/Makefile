@@ -4,11 +4,11 @@ repo=llama.cpp
 release=v0.6.0
 llama=build/bin/llama
 
-version: build
-	$(llama) version 1> version.1.log 2> version.2.log
-
 server:	build
 	$(llama) server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf
+
+version: build
+	$(llama) version 1> version.1.log 2> version.2.log
 
 build:	$(repo)
 	cmake -B build -S $(repo)
