@@ -1,0 +1,1 @@
+const sum = 10 + 20; console.log('Sum is:', sum);
