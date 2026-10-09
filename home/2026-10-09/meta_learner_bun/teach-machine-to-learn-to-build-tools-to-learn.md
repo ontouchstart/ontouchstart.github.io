@@ -28,3 +28,5 @@ By the end of this session, we successfully demonstrated a machine-driven loop w
 
 ## What's Next?
 The next step is the **Correction Loop**. We will move from a system that simply "builds and checks" to one that "builds, fails, reads the error, and fixes." This is the leap from simple automation to true autonomous self-improvement.
+
+[The Leap to Self-Correction: From Automation to Autonomous Improvement](https://ontouchstart.github.io/home/2026-10-09/meta_learner_bun/blog_post_correction_loop)
