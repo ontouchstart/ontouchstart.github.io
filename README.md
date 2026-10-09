@@ -1,3 +1,2 @@
-# Cogito, ergo sum
+# Teach machine to learn to build tools to learn to ...
 
-[🤔](https://ontouchstart.GitHub.io/duck.ai/duck.ai_2026-10-05_12-39-14)
