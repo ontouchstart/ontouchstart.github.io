@@ -2,31 +2,31 @@
 We are building a "Meta-Learner" system using the Bun runtime. The goal is to create a machine that can autonomously learn to build its own tools.
 
 ## Current Progress
-We have successfully established the "Action -> Observation" loop:
-1.  **Maker (Synthesis)**: A script (`maker.ts`) that generates other TypeScript scripts.
-2.  **Executor (Validation)**: A script (`executor.ts`) that runs a script and reports success or failure.
-3.  **Artifacts**: We have verified that `maker.ts` can create a script (e.g., `add_numbers.ts`) and `executor.ts` can confirm its success.
+We have successfully established the **Self-Correction Loop**:
+1.  **Maker (Synthesis)**: Generates tools and can now attempt to rewrite them based on error feedback.
+2.  **Executor (Validation)**: Runs tools and provides structured error messages on failure.
+3.  **The Loop**: The machine can now cycle through "Action -> Observation -> Correction -> Action".
 
 ## Current Files
-- `maker.ts`: Handles tool synthesis.
-- `executor.ts`: Handles tool execution and basic success/failure reporting.
-- `capabilities.json`: (Planned) A registry of successfully verified tools.
-- `tools/`: Directory where scripts are stored.
+- `maker.ts`: Handles tool synthesis and repair.
+- `executor.ts`: Handles tool execution and captures error messages.
+- `meta_learner_bun/blog_post_correction_loop.md`: Documenting our progress.
 
-## Next Objective: The Self-Correction Loop
-The current system can create a tool, but it cannot "fix" a tool if it fails. We need to move from "Action -> Observation" to **"Action -> Observation -> Correction -> Action"**.
+## Next Objective: Persistent Memory & Capability Registry
+The machine currently has no "memory" of what it has successfully built. Every time it wants to build a tool, it starts from scratch. We need to implement a **Capability Registry** to track successfully verified tools.
 
 ### Task for this session:
-Implement a **Self-Correction Loop**. 
-1.  **Modify `executor.ts`**: Ensure it captures the specific error message (stdout/stderr) from a failed script execution.
-2.  **Modify `maker.ts`**: Update it to accept an "error" argument. If an error is passed, it should attempt to rewrite the script to fix that specific error.
-3.  **Verification**: Create a "broken" script (e.g., one with a syntax error or a missing variable). Run the loop and verify that the machine can:
-    - Detect the error.
-    - Receive the error message.
-    - Rewrite the script.
-    - Successfully run the rewritten script.
+Implement a **Capability Registry**.
+1.  **Create `capabilities.json`**: A registry to store the names and metadata (e.g., success status) of verified tools.
+2.  **Modify `executor.ts`**: When a tool execution succeeds, automatically record that tool in `capabilities.json`.
+3.  **Modify `maker.ts`**: Before creating a tool, it should check `capabilities.json`. If the tool already exists in the registry, it should report that the tool is already available instead of attempting to build it.
+4.  **Verification**:
+    - Build a tool (e.g., `sum.ts`).
+    - Run it successfully.
+    - Verify it appears in `capabilities.json`.
+    - Try to build `sum.ts` again and verify that `maker.ts` detects it already exists in the registry.
 
 ### Constraints:
-- Stay **bottom-up**. Do not build a full recursive manager yet.
-- Focus on the logic of passing the error string from `executor` back to `maker`.
-- Use Bun for all execution.
+- Keep the registry simple (JSON file).
+- Ensure thread-safety (or simple file locking) if possible, though for now, a simple overwrite is fine.
+- Focus on the "Memory" aspect—the machine should know its own capabilities.

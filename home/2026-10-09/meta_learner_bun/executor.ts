@@ -14,6 +14,8 @@ try {
   console.log(`[RESULT] ${toolName} succeeded.`);
 } catch (error) {
   console.error(`[RESULT] ${toolName} failed.`);
-  console.error(error.message);
+  // Capture the error message from the child process
+  const errorMessage = error.stderr ? error.stderr.toString() : error.message;
+  console.error(`ERROR: ${errorMessage}`);
   process.exit(1);
 }
