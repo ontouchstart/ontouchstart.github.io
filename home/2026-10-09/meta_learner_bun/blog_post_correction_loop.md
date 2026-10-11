@@ -25,3 +25,5 @@ This is the fundamental requirement for **Recursive Self-Improvement**. For a ma
 
 ## What's Next?
 Now that the machine can fix itself, it needs a **Memory**. It needs to know what it has already built so it doesn't waste time reinventing the wheel. Our next step is building a **Capability Registry**.
+
+[Beyond the Agentic Illusion: Towards True Recursive Self-Improvement](https://ontouchstart.github.io/home/2026-10-11/beyond-the-agentic-illusion)
