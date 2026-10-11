@@ -1,6 +1,6 @@
 # Sam Liu
 
-https://linkedin.com/in/samliu
+<ontouchstart@gmail.com>
 
 ---
 
@@ -133,3 +133,6 @@ New York, NY
 
 ### B.S. in Physics (1991)
 
+---
+
+https://linkedin.com/in/samliu
