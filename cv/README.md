@@ -2,6 +2,14 @@
 
 https://linkedin.com/in/samliu
 
+---
+
+- Three decades of programming and software experience in academic and industry. 
+- Use local LLM to teach machine to learn to build tools.
+- Open to new opportunities in agentic AI.
+
+---
+
 ## Hearst Magazines
 New York, NY 
 
