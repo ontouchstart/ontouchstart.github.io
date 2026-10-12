@@ -10,10 +10,11 @@
         rev = "bun-v1.4.2";
         hash = "sha256-N+4Dcac5aUmL+SMvCrMl3NRBvx0F/uFc7Ip3tRvoy6w=";
       };
+      sandbox = false;
       buildInputs = [ 
        nixpkgs.legacyPackages.${system}.git 
        nixpkgs.legacyPackages.${system}.cacert
-       # nixpkgs.legacyPackages.${system}.cmake
+       nixpkgs.legacyPackages.${system}.cmake
        nixpkgs.legacyPackages.${system}.ninja
        nixpkgs.legacyPackages.${system}.pkg-config
        nixpkgs.legacyPackages.${system}.ccache
@@ -73,19 +74,39 @@
        nixpkgs.legacyPackages.${system}.libxshmfence
        nixpkgs.legacyPackages.${system}.gdk-pixbuf
       ];
-      configurePhase = "";
+
+      phases = [ "unpackPhase" "patchPhase" "buildPhase" "installPhase" ];
+      SSL_CERT_FILE = "${nixpkgs.legacyPackages.${system}.cacert}/etc/ssl/certs/ca-bundle.crt";
+
       buildPhase = ''
+        export HOME=$PWD
+
         echo '#!/bin/env sh' > bun-v1.4.2-debug 
         echo 'echo "bun-v1.4.2-debug works!"' >> bun-v1.4.2-debug
 
+        # Provide a fully mutable, local Rustup stack inside the project directory
+        export RUSTUP_HOME="$PWD/.rustup"
+        export CARGO_HOME="$PWD/.cargo-home"
+        export PATH="$CARGO_HOME/bin:$PATH"
+
+        # FIX 2: Bypass Clang's missing ZSTD debug compression capability
+        export RUSTFLAGS="-C link-arg=-gz=none"
+        export CFLAGS="-Wno-error=debug-compression-unavailable"
+        export CXXFLAGS="-Wno-error=debug-compression-unavailable"
+        export NIX_CFLAGS_LINK="-fuse-ld=lld"
+
+        # Bun build configuration
+        export BUN_DEBUG_QUIET_LOGS=1
+        export CMAKE_BUILD_TYPE="Debug"
+        export ENABLE_CCACHE="1"
+
         # Bun source is already here from fetchgit
-#        BUN_DEBUG_QUIET_LOGS=1 bun scripts/build.ts --profile=debug --asan=off
+        bun scripts/build.ts --profile=debug --asan=off
       '';
 
       installPhase = ''
         mkdir -p $out/bin
-#        cp build/debug/bun-debug $out/bin/bun-v1.4.2-debug
-        cp bun-v1.4.2-debug $out/bin/bun-v1.4.2-debug
+        cp build/debug/bun-debug $out/bin/bun-v1.4.2-debug
         chmod +x $out/bin/bun-v1.4.2-debug
       '';
       };
