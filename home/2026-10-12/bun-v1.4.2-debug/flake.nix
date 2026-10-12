@@ -91,8 +91,8 @@
 
         # FIX 2: Bypass Clang's missing ZSTD debug compression capability
         export RUSTFLAGS="-C link-arg=-gz=none"
-        export CFLAGS="-Wno-error=debug-compression-unavailable"
-        export CXXFLAGS="-Wno-error=debug-compression-unavailable"
+        export CFLAGS="-Wno-error=debug-compression-unavailable -gz=none"
+        export CXXFLAGS="-Wno-error=debug-compression-unavailable -gz=none"
         export NIX_CFLAGS_LINK="-fuse-ld=lld"
 
         # Bun build configuration
