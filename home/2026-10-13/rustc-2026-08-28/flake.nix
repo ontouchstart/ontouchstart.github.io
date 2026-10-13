@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/master";
     rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
@@ -12,7 +12,6 @@
         overlays = [ (import rust-overlay) ];
       };
       
-      # Pull the toolchain that integrated LLVM 23
       rustToolchain = pkgs.rust-bin.nightly."2026-08-28".default;
     in {
       devShells.${system}.default = pkgs.mkShell {
