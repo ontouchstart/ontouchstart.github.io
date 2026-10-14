@@ -4,6 +4,57 @@ https://www.anthropic.com/engineering/redesigning-source-control
 
 https://news.ycombinator.com/item?id=50073633
 
+
+==== thinking
+
+The `item.md` file is a Hacker News thread about the Anthropic blog post "Redesigning source control at Anthropic".
+The user wants me to review `engineering_redesigning-source-control.md` and `item.md`.
+
+`engineering_redesigning-source-control.md` is the blog post.
+`item.md` is the community reaction to it.
+
+I should look for:
+1.  Key points from the blog post.
+2.  Main themes of the discussion in `item.md`.
+3.  Any interesting connections or contradictions between the two.
+
+I have read the blog post.
+I have read the first 50KB of `item.md`. It seems to be a long thread. I might need to read more of it if I want a full picture, but the first 50KB already gives a lot of insight into the initial reactions.
+
+Key points from blog post:
+- Anthropic merged 30,000 code changes per day in Sept 2026 (up from 2,500 in May 2026).
+- Git's decentralized design (full clone) became a bottleneck.
+- They built Scion, an in-house version control system.
+- Principles of Scion:
+    - Clients are always online (agents are online).
+    - Client-server asymmetry (server does the heavy lifting like merge/rebase/blame).
+    - Horizontally scalable (distributed data, no packfiles).
+    - Cheap, incremental, lock-free commits (server-side).
+    - Sparse and virtualized checkouts.
+- Scion uses a write-ahead log (changesets) and derived data structures for blame/history.
+- Scion is much faster (seconds vs minutes) and has a smaller infrastructure footprint.
+- They also built "Antique", a code review surface.
+- They mention the role of Claude in building Scion (rewriting parts of it 20x faster).
+- They don't plan to release Scion because it's highly bespoke and diverges from Git.
+
+Themes in `item.md`:
+- Skepticism about why they need such a radical change (some say Git is fine, others say they are pushing limits).
+- Comparisons to Google's Piper and Meta's Sapling.
+- Discussions on whether Git is actually the problem or if it's the way they use it.
+- Curiosity about "Antique" and the "superfan" agents.
+- Concerns about the "vibe coding" and "slop" of AI-generated code.
+- Some people are excited about the "agent-first" source control.
+- Questions about the "superfan" agents and whether they are really "superfans" or just scripts.
+- Discussion about the cost of tokens and the "infinity" of code production.
+- Some people think it's just a "vaguepost" because no source code was shared.
+- Comparisons to other systems like Jujutsu (jj) and Pijul.
+
+I will summarize my review.
+
+
+==== thinkingSignature
+
+
 The review of `engineering_redesigning-source-control.md` (the Anthropic blog post) and `item.md` (the Hacker News discussion) reveals a fascinating look into the infrastructure challenges of "agentic" software development.
 
 ### **Key Findings from `engineering_redesigning-source-control.md`**
