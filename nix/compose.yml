@@ -1,17 +1,10 @@
 services:
-  nixos:
-    build: ./nixos
-    environment:
-      LANG: "C.UTF-8"
   dev:
     build: .
+    tty: true
+    stdin_open: true
     volumes:
-      - ./home:/home
-    working_dir: /home
-  duck:
-    build: ./duck
-    environment:
-      LANG: "C.UTF-8"
-    volumes:
-      - ../duck.ai:/home
-    working_dir: /home
+      - ../home:/home
+      - ../github:/github
+    tmpfs:
+      - /workspace

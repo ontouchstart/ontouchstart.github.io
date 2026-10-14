@@ -1,9 +1,0 @@
-[1mgithub:ontouchstart/ontouchstart.github.io/2e797bbbbf21b6332200ee4010c206015fe60ed1?dir=nix/home/bootstrap/sqlite&narHash=sha256-PxpZU8wSTCnCY9RJa97BKyC7LDeKHI39xPr9LuRngIs%3D[0m
-[32;1m├───[0m[1mdevShells[0m
-[32;1m│   └───[0m[1maarch64-linux[0m
-[32;1m│       └───[0m[1mdefault[0m: development environment 'nix-shell'
-[32;1m└───[0m[1mpackages[0m
-[32;1m    └───[0m[1maarch64-linux[0m
-[32;1m        └───[0m[1mdefault[0m: package 'bootstrap-sqlite-0.1'
-msg = Hello, sqlite!
-sqlite_version() = 3.53.3
