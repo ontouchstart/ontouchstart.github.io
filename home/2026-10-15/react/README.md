@@ -8,3 +8,8 @@ https://ontouchstart.github.io/home/2026-10-15/react/bug_report
 
 https://ontouchstart.github.io/home/2026-10-15/react/2026-10-15T16-05-22-048Z_01a1404f-9dfe-70b8-89f3-3d27468bef6e
 
+https://ontouchstart.github.io/home/2026-10-15/react/root_cause_report
+
+https://ontouchstart.github.io/home/2026-10-15/react/2026-10-15T17-17-45-368Z_01a14091-e417-754a-9754-0e33aaad4d10
+
+
