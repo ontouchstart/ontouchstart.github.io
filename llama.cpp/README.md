@@ -1,6 +1,6 @@
 # llama.app
 
-https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0
+https://github.com/ggml-org/llama.cpp/releases/tag/v0.7.0
 
 ```
 make clean
