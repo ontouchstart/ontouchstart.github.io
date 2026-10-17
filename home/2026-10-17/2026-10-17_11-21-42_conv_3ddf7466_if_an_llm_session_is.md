@@ -1,3 +1,5 @@
+# If an LLM session is a nonlinear dynamic process, what is the phase space?
+
 = currNode
 
 0e053bd1-9473-4874-b9b0-c44127cf47e1
