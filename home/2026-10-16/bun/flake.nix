@@ -2,7 +2,7 @@
   description = "Bun - A fast all-in-one JavaScript runtime";
 
   inputs = {
-    nixpkgs.url = "/home/nix/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     rust-overlay.url = "github:oxalica/rust-overlay";
   };
