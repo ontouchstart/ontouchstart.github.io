@@ -9,3 +9,5 @@
 🤖 [Automated Content Extraction Tooling and Agentic-Scale Source Control Systems](https://ontouchstart.github.io/home/2026-10-14/content_extraction_and_agentic_source_control)
 
 🤖 [Review of an Anthropic blog post and Hacker News discussion](https://ontouchstart.github.io/home/2026-10-14/review_of_an_Anthropic_blog_post_and_Hacker_News_discussion)
+
+👨🏻‍💻 [Nix, Rust and WASM](https://nix-ontouchstart.github.io)
