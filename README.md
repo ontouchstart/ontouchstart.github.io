@@ -10,6 +10,7 @@
 
 🤖 [Review of an Anthropic blog post and Hacker News discussion](https://ontouchstart.github.io/home/2026-10-14/review_of_an_Anthropic_blog_post_and_Hacker_News_discussion)
 
+👨🏻‍💻 [Nix, Rust and WASM](https://nix-ontouchstart.github.io)
+
 🤖 [Complexity Feedback Loop](https://nix-ontouchstart.github.io/nix-ontouchstart-llama_cpp-sessions/2026-10-27_16-06-39_conv_da251f2e-Human_engineers_have_a_tendency_of_over_engineering_and_AI_only_makes_it_worse)
 
-👨🏻‍💻 [Nix, Rust and WASM](https://nix-ontouchstart.github.io)
