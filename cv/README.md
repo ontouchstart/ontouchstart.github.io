@@ -56,7 +56,7 @@ New York, NY
 
 Open source project hosted on GitHub built with D3 visualization and innovative CI/CD node.js pipeline in GitHub Actions
 
-## HXBG Chinese Schoo
+## HXBG Chinese School
 Paramus, NJ
 
 2013-2016
