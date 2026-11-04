@@ -1,7 +1,7 @@
 github=https://github.com
 owner=ggml-org
 repo=llama.cpp
-release=v0.8.0
+release=v0.9.0
 llama=build/bin/llama
 
 server:	build
