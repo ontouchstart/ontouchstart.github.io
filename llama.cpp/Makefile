@@ -5,7 +5,8 @@ release=v0.9.0
 llama=build/bin/llama
 
 nix-server:
-	nix run nixpkgs#llama-cpp -- server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf --port 8080
+	# nix run nixpkgs#llama-cpp -- server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf --port 8080
+	nix run nixpkgs#llama-cpp -- server -hf ggml-org/gemma-4-12B-it-GGUF:Q8_0 --port 8080
 
 server:	build
 	$(llama) server --models-dir models -m models/gemma-4-12B-it-Q8_0.gguf --port 8080
