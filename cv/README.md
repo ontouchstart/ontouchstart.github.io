@@ -138,6 +138,3 @@ New York, NY
 ---
 
 https://linkedin.com/in/samliu
-
-https://news.ycombinator.com/user?id=ontouchstart
-
