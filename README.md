@@ -1,1 +1,1 @@
-# 🤔 with a [👨🏻‍💻](https://flakehub.com/flake/BaseLayer-AI/ex-nihilo-fragmenta-mentis-aarch64-darwin-llama-cpp?view=readme)
+# 🤔[👨🏻‍💻](https://flakehub.com/flake/BaseLayer-AI/ex-nihilo-fragmenta-mentis-aarch64-darwin-llama-cpp?view=readme)
