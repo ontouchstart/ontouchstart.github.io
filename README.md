@@ -1,1 +1,1 @@
-# Thinking 🤔 with a computer 👨🏻‍💻
+# Thinking 🤔 with a computer [👨🏻‍💻](https://flakehub.com/flake/BaseLayer-AI/ex-nihilo-fragmenta-mentis-aarch64-darwin-llama-cpp?view=readme)
