@@ -1,7 +1,5 @@
 # Sam Liu
 
-<ontouchstart@gmail.com>
-
 ---
 
 - Three decades of programming and software experience in academic and industry. 
