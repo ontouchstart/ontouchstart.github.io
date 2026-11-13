@@ -4,14 +4,14 @@ repo=llama.cpp
 release=v1.0.0
 llama=build/bin/llama
 
-server:	build
-	$(llama) server -hf ggml-org/gemma-4-12B-it-GGUF:Q8_0 --port 8080
+serve:	build
+	$(llama) serve -hf ggml-org/gemma-4-12B-it-GGUF:Q8_0 --port 8080
 
 cli:	build
 	$(llama) cli -hf ggml-org/gemma-4-12B-it-GGUF:Q8_0
 
 version: build
-	$(llama) version 1> version.1.log 2> version.2.log
+	$(llama) version
 
 build:	$(repo)
 	cmake -B build -S $(repo)
