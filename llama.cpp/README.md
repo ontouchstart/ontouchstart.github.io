@@ -1,4 +1,4 @@
-# llama.app
+# llama.app 1.0.0
 
 ## The source
 
