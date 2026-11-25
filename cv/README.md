@@ -1,10 +1,8 @@
 # Sam Liu
 
----
-
-- Three decades of programming and software experience in academic and industry. 
-- Use local LLM to teach machine to learn to build tools.
-- Open to new opportunities in agentic AI.
+- Decades of software development experience in academic and industry. 
+- Use local LLM to [create problem-solving software and solve software problems](https://ontouchstart.github.io/engineering).
+- Open to new opportunities in AI.
 
 ---
 
