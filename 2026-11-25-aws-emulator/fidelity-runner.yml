@@ -1,0 +1,20 @@
+services:
+  fidelity-runner:
+    build:
+      context: .
+      dockerfile: fidelity-runner.dockerfile
+    network_mode: "host" 
+    depends_on:
+      - aws-emulator
+    environment:
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_ENDPOINT_URL=https://127.0.0.1:9297
+      - AWS_SHARED_CREDENTIALS_FILE=/home/emulator/.aws/emulator/9297/emulator_credentials
+      - HOME=/home/emulator
+      - PYTHONWARNINGS=ignore:Unverified HTTPS request
+    volumes:
+      - emulator_data:/home/emulator/.aws/emulator
+    # command: ["run", "behavioral/dynamodb/check_update_item_set_list_preserves_element_order.py", "--endpoint", "https://127.0.0.1:9297", "--emulator-home", "/home/emulator/.aws/emulator", "--credentials-file", "/home/emulator/.aws/emulator/9297/emulator_credentials", "--no-verify-ssl", "--report", "report.json"]
+    command: ["run", "behavioral/dynamodb/check_update_item_set_list_preserves_element_order.py", "--endpoint", "https://127.0.0.1:9297", "--emulator-home", "/home/emulator/.aws/emulator", "--credentials-file", "/home/emulator/.aws/emulator/9297/emulator_credentials", "--ca-bundle", "/home/emulator/.aws/emulator/9297/ca.pem", "--report", "report.json"]
+volumes:
+  emulator_data:

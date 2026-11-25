@@ -1,0 +1,19 @@
+services:
+  aws-emulator:
+    build:
+      context: .
+      dockerfile: aws-emulator.dockerfile
+    ports:
+      - "127.0.0.1:9297:9297"
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+    entrypoint: ["aws-emulator", "-b", "0.0.0.0"]
+    command: ["-p", "9297", "-a", "on", "--telemetry", "off"]
+    volumes:
+      - emulator_data:/home/emulator/.aws/emulator
+
+volumes:
+  emulator_data:
+
